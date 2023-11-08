@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "fodt"
+version = "0.1.0"
+description = ""
+authors = ["Håkon Hægland <hakon.hagland@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fodt", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+fodt-add-keyword = "fodt.add_keyword:add_keyword"
+fodt-splitter = "fodt.splitter:main"
+fodt-extract-chapters = "fodt.splitter:extract_chapters"
+fodt-extract-document-attrs = "fodt.splitter:extract_document_attributes"
+fodt-extract-section = "fodt.splitter:extract_section"
+fodt-extract-metadata = "fodt.splitter:extract_metadata"
+fodt-create-subdocument = "fodt.splitter:create_subdocument"
+fodt-remove-chapters = "fodt.splitter:remove_chapters"
+fodt-remove-elements = "fodt.splitter:remove_elements"
+fodt-split-all = "fodt.split_all:split_all"
+fodt-split-main = "fodt.split_main:split_main"
+fodt-split-subdocument = "fodt.split_subdocument:split_subdocument"
+fodt-set-font-decls = "fodt.set_fonts:set_font_decls"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
