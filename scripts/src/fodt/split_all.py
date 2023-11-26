@@ -10,25 +10,57 @@ from fodt.constants import ClickOptions, Directories, FileNames
 from fodt.remove_chapters import RemoveChapters
 
 class Splitter():
-    def __init__(self, maindir: str, filename: str) -> None:
+    def __init__(
+        self,
+        maindir: str,
+        filename: str,
+        fontdir: str | None,
+        keyword_dir: str | None,
+    ) -> None:
         self.filename = filename
+        self.fontdir = fontdir
+        self.keyword_dir = keyword_dir
         self.maindir = Path(maindir)
         if self.maindir.exists():
             raise FileExistsError(f"Directory {self.maindir} already exists.")
-        self.keyword_names_dir = Path('keyword-names')
-        if not self.keyword_names_dir.exists():
-            raise FileNotFoundError(f"Keyword names directory {self.keyword_names_dir} not found.") 
-        self.font_decl_dir = Path('fonts') / 'font-face-decls'
+        if self.keyword_dir is None:
+            try_path = Path('keyword-names')
+            if try_path.exists():
+                self.keyword_dir = try_path
+            else:
+                raise FileNotFoundError(f"Keyword names directory not found.")
+        # TODO: Create a script that can create the font decls directory
+        #       currently, you have to create it manually by running:
+        #
+        #  fodt-extract-metadata --maindir=temp --filename=original.fodt
+        #
+        #  and then copying the font-face-decls.xml file to the font-decls inside the
+        #  self.fontdir directory.
+        #
+        if self.fontdir is None:
+            try_path = Path('fonts')
+            if try_path.exists():
+                self.fontdir = try_path
+            else:
+                logging.info(
+                     f"Font decls directory not specified. To reduce the size of the "
+                     f"subdocuments, you should specify a directory containing the font "
+                     f"declarations with the --font-decl-dir option. The full font "
+                     f"declarations will be included in the main document, but not in the "
+                     f"not in the subdocuments."
+                )
+                raise FileNotFoundError(f"Font decls directory not specified.")
+        self.font_decl_dir = Path(self.fontdir) / 'font-face-decls'
         if not self.font_decl_dir.exists():
             raise FileNotFoundError(f"Font decls directory {self.font_decl_dir} not found.")
         self.maindir.mkdir(parents=True, exist_ok=True)
         self.chapters = "1-12"
 
     def copy_keyword_names(self) -> None:
-        if self.keyword_names_dir is None:
+        if self.keyword_dir is None:
             return
-        logging.info(f"Copying keyword names from {self.keyword_names_dir}.")
-        src = Path(self.keyword_names_dir)
+        logging.info(f"Copying keyword names from {self.keyword_dir}.")
+        src = Path(self.keyword_dir)
         dest = (self.maindir / Directories.chapters / Directories.info
                 / Directories.keywords)
         if not dest.exists():
@@ -102,11 +134,19 @@ class Splitter():
 @click.command()
 @ClickOptions.maindir
 @ClickOptions.filename
+@click.option(
+    '--font-decl-dir', type=str, required=False,
+    help='Name of the directory containing the font declarations.'
+)
+@click.option(
+    '--keyword-dir', type=str, required=False,
+    help='Name of the directory containing the keyword names.'
+)
 def split_all(
-    maindir: str, filename: str
+    maindir: str, filename: str, font_decl_dir: str | None, keyword_dir: str | None
 ) -> None:
     logging.basicConfig(level=logging.INFO)
-    splitter = Splitter(maindir, filename)
+    splitter = Splitter(maindir, filename, font_decl_dir, keyword_dir)
     splitter.split()
 
 if __name__ == "__main__":
