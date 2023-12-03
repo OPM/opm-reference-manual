@@ -3,10 +3,22 @@ import shutil
 import xml.sax.saxutils
 
 from pathlib import Path
-from fodt.constants import Directories, FileNames
+from fodt.constants import Directories, FileExtensions, FileNames
 from fodt.exceptions import InputException
 
 class Helpers:
+
+    @staticmethod
+    def chapter_fodt_file_path(
+        outputdir: str,
+        chapter: str,
+    ) -> Path:
+        filename = (
+            Path(outputdir) /
+            Directories.chapters /
+            f"{chapter}.{FileExtensions.fodt}"
+        )
+        return filename
 
     @staticmethod
     def create_backup_document(filename) -> None:
@@ -24,6 +36,23 @@ class Helpers:
         dir_ = outputdir / Directories.info / Directories.keywords / directory
         file = dir_ / filename
         return file
+
+    @staticmethod
+    def keyword_fodt_file_path(
+        outputdir: str,
+        chapter: str,
+        section: str,
+        keyword_name: str
+    ) -> Path:
+        directory = f"{chapter}.{section}"
+        filename = (
+            Path(outputdir) /
+            Directories.chapters /
+            Directories.subsections /
+            directory /
+            f"{keyword_name}.{FileExtensions.fodt}"
+        )
+        return filename
 
     @staticmethod
     def keywords_inverse_map(keyw_list: list[str]) -> dict[str, int]:

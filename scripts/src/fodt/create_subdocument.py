@@ -83,7 +83,7 @@ class CreateSubDocument():
                     dir_ = self.stylesdir
                 else:
                     dir_ = self.stylesdir / f"{self.chapter}.{self.section}"
-                filter = AutomaticStylesFilter(dir_, content, part)
+                filter = AutomaticStylesFilter(self.metadir, dir_, content, part)
                 content = filter.get_filtered_content()
             elif section_name == "styles":
                 if not self.is_chapter:

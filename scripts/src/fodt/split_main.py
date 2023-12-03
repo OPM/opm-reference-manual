@@ -1,6 +1,11 @@
+import io
 import logging
 import shutil
 import subprocess
+import xml.sax
+import xml.sax.handler
+import xml.sax.xmlreader
+import xml.sax.saxutils
 
 import click
 
@@ -8,6 +13,67 @@ from pathlib import Path
 import fodt.string_functions
 from fodt.constants import ClickOptions, Directories, FileNames
 from fodt.remove_chapters import RemoveChapters
+from fodt.xml_helpers import XMLHelper
+
+class ElementHandler(xml.sax.handler.ContentHandler):
+    def __init__(self) -> None:
+        self.content = io.StringIO()
+        self.in_table = False
+        self.current_tag_name = None
+        self.nesting = 0
+
+    def characters(self, content: str):
+        self.content.write(xml.sax.saxutils.escape(content))
+
+    def check_correct_table(self, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
+        keys = attrs.keys()
+        if "table:name" in keys and "table:style-name" in keys:
+            if (attrs.get("table:name") == "Table109" and
+                    attrs.get("table:style-name") == "Table109"):
+                return True
+        return False
+
+    def endElement(self, name: str):
+        if self.in_table:
+            if name == "table:table":
+                self.in_table = False
+            elif name == "text:bookmark-ref":
+                # remove this tag
+                return
+        self.content.write(XMLHelper.endtag(name))
+
+    def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
+        # logging.info(f"startElement: {name}")
+        if (not self.in_table) and name == "table:table":
+            if self.check_correct_table(attrs):
+                self.in_table = True
+        if self.in_table and name == "text:bookmark-ref":
+            # remove this tag
+            return
+        self.content.write(XMLHelper.starttag(name, attrs))
+
+
+class FixupMasterStyles():
+    def __init__(self, maindir: str) -> None:
+        self.maindir = Path(maindir)
+
+    def fixup(self) -> None:
+        self.filename = (
+            self.maindir /
+            Directories.meta /
+            Directories.meta_sections /
+            FileNames.master_styles_fn
+        )
+        if not self.filename.exists():
+            raise FileNotFoundError(f"Master styles file {self.filename} not found!.")
+        bak_file = f"{self.filename}.bak"
+        shutil.copy(self.filename, bak_file)
+        parser = xml.sax.make_parser()
+        self.handler = ElementHandler()
+        parser.setContentHandler(self.handler)
+        parser.parse(bak_file)
+        with open(self.filename, "w") as f:
+            f.write(self.handler.content.getvalue())
 
 class Splitter():
     def __init__(self, maindir: str, filename: str) -> None:
@@ -49,6 +115,13 @@ class Splitter():
             f"--filename={self.filename}",
         ])
 
+    def extract_style_info(self) -> None:
+        logging.info(f"Extracting style info..")
+        subprocess.run([
+            "fodt-extract-style-info",
+            f"--maindir={self.maindir}",
+        ])
+
     def extract_chapters(self) -> None:
         logging.info(f"Extracting chapters {self.chapters}..")
         subprocess.run([
@@ -57,6 +130,10 @@ class Splitter():
             f"--chapters={self.chapters}",
             f"--filename={self.filename}",
         ])
+
+    def fixup_master_styles(self) -> None:
+        logging.info(f"Fixing up master styles..")
+        FixupMasterStyles(self.maindir).fixup()
 
     def replace_section_callback(self, section_number: int) -> str:
         return (f"""<text:section text:style-name="Sect1" text:name="Section{section_number}" """
@@ -69,6 +146,8 @@ class Splitter():
 
     def split(self) -> None:
         self.extract_metadata()
+        self.fixup_master_styles()
+        self.extract_style_info()
         self.extract_document_attrs()
         self.extract_chapters()
         self.create_subdocuments()

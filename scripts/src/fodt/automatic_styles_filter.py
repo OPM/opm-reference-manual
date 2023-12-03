@@ -7,7 +7,7 @@ import xml.sax.xmlreader
 import xml.sax.saxutils
 
 from pathlib import Path
-from fodt.constants import AutomaticStyles, FileNames, FileExtensions
+from fodt.constants import AutomaticStyles, FileExtensions, FileNames
 from fodt.xml_helpers import XMLHelper
 
 class ElementHandler(xml.sax.handler.ContentHandler):
@@ -34,6 +34,9 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             if found:
                 self.nesting = 1
             else:
+                # include all elements that do not have an attribute name listed in
+                # self.style_attrs_names. We are only filtering out elements that have
+                # one of these attributes.
                 self.include = True
         if self.include:
             self.content.write(XMLHelper.starttag(name, attrs))
@@ -52,15 +55,31 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             self.content.write(xml.sax.saxutils.escape(content))
 
 class AutomaticStylesFilter:
-    def __init__(self, stylesdir: Path, content: str, part: str) -> None:
+    def __init__(self, metadir: Path, stylesdir: Path, content: str, part: str) -> None:
+        self.metadir = metadir
         styles = self.read_styles(stylesdir, part)
+        self.add_extra_styles(styles)
+        self.add_extra_styles2(styles)
         self.handler = ElementHandler(styles)
         xml.sax.parseString(content, self.handler)
+
+    def add_extra_styles(self, styles: set[str]) -> None:
+        """These styles are not used directly in the text, but are used by the other styles."""
+        filename = self.metadir / FileNames.styles_info_fn
+        with open(filename, "r", encoding='utf8') as f:
+            for line in f:
+                styles.add(line.strip())
+
+    def add_extra_styles2(self, styles: set[str]) -> None:
+        """These styles are used in the beginning of office:body section but before the
+        text:section elements"""
+        for item in ['Sect1', 'P18776']:
+            styles.add(item)
 
     def get_filtered_content(self) -> str:
         return self.handler.content.getvalue()
 
-    def read_styles(self, stylesdir: Path, part: str) -> list[str]:
+    def read_styles(self, stylesdir: Path, part: str) -> set[str]:
         filename = stylesdir / f"{part}.{FileExtensions.txt}"
         styles = set()
         with open(filename, "r", encoding='utf8') as f:

@@ -32,12 +32,15 @@ class FileExtensions():
     xml = "xml"
     fodt = "fodt"
     txt = "txt"
+    bak = "bak"
 
 class FileNames():
     keywords = "keywords.txt"
     main_document = "main.fodt"
+    master_styles_fn = "master-styles.xml"
     office_attr_fn = "office_attrs.txt"
     styles = "styles"
+    styles_info_fn = "styles_info.txt"
     subsection = "section"
     subdocument = "section"
 
