@@ -158,7 +158,7 @@ def validate(ctx: click.Context, maindir: str, quiet: bool) -> None:
 @click.argument("keyword", type=str, required=True)
 @click.pass_context
 def subsection(ctx: click.Context, section: str, keyword: str) -> None:
-    (chapter, section) = split_section(section)
+    (chapter, section) = Helpers.split_section(section)
     maindir = ctx.obj["MAIN_DIR"]
     filename = Helpers.keyword_fodt_file_path(maindir, chapter, section, keyword)
     Validator(filename).validate()
@@ -172,19 +172,6 @@ def chapter(ctx: click.Context, chapter: str) -> None:
     filename = Helpers.chapter_fodt_file_path(maindir, chapter)
     Validator(filename).validate()
 
-
-def split_section(section: str) -> tuple[str, str]:
-    parts = section.split(".")
-    if len(parts) != 2:
-        raise ValueError(f"Section must be of the form <chapter>.<section>, but got {section}")
-    # check that chapter and section are integers
-    try:
-        int(parts[0])
-        int(parts[1])
-    except ValueError as e:
-        raise ValueError(f"Section must be of the form <chapter>.<section>, "
-                         f"where <chapter> and <section> are integers, but got {section}")
-    return (parts[0], parts[1])
 
 if __name__ == "__main__":
     validate()

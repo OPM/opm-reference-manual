@@ -24,7 +24,7 @@ class Splitter():
         if self.maindir.exists():
             raise FileExistsError(f"Directory {self.maindir} already exists.")
         if self.keyword_dir is None:
-            try_path = Path('keyword-names')
+            try_path = Path('../keyword-names')
             if try_path.exists():
                 self.keyword_dir = try_path
             else:
@@ -138,10 +138,7 @@ class Splitter():
     '--font-decl-dir', type=str, required=False,
     help='Name of the directory containing the font declarations.'
 )
-@click.option(
-    '--keyword-dir', type=str, required=False,
-    help='Name of the directory containing the keyword names.'
-)
+@ClickOptions.keyword_dir
 def split_all(
     maindir: str, filename: str, font_decl_dir: str | None, keyword_dir: str | None
 ) -> None:

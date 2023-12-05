@@ -99,11 +99,12 @@ class SectionHandler(xml.sax.handler.ContentHandler):
         dir_.mkdir(parents=True, exist_ok=True)
         path = dir_ / filename
         if path.exists():
-            logging.info(f"Section {self.current_section} : File {filename} already exists, skipping.")
-        else:
-            with open(path, "w", encoding='utf-8') as f:
-                f.write(self.section.getvalue())
-            logging.info(f"Wrote section {self.current_section} to file {filename}.")
+            logging.info(
+                f"Warning: Section {self.current_section} : "
+                f"File {filename} already exists, will overwrite..")
+        with open(path, "w", encoding='utf-8') as f:
+            f.write(self.section.getvalue())
+        logging.info(f"Wrote section {self.current_section} to file {filename}.")
         self.section = None
 
 class ExtractMetaData():

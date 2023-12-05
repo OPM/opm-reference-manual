@@ -129,13 +129,14 @@ class RemoveSubSections():
         self,
         filename: str,
         outputfn: str,
+        keyword_dir: str,
         chapter: int,
         section: int,
         replace_callback: Callable[[str], str] | None = None,
     ) -> None:
         logging.info(f"Removing parts from {filename}.")
         outputdir = Path(outputfn).parent
-        keywords = Helpers.read_keyword_order(outputdir, chapter, section)
+        keywords = Helpers.read_keyword_order_v2(keyword_dir, chapter, section)
         parser = xml.sax.make_parser()
         handler = PartsHandler(outputfn, chapter, section, keywords, replace_callback)
         parser.setContentHandler(handler)

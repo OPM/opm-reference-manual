@@ -54,13 +54,13 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         if self.include:
             self.content.write(xml.sax.saxutils.escape(content))
 
+
 class AutomaticStylesFilter:
-    def __init__(self, metadir: Path, stylesdir: Path, content: str, part: str) -> None:
+    def __init__(self, metadir: Path, content: str, part: str) -> None:
         self.metadir = metadir
-        styles = self.read_styles(stylesdir, part)
-        self.add_extra_styles(styles)
-        self.add_extra_styles2(styles)
-        self.handler = ElementHandler(styles)
+        self.add_extra_styles(self.styles)
+        self.add_extra_styles2(self.styles)
+        self.handler = ElementHandler(self.styles)
         xml.sax.parseString(content, self.handler)
 
     def add_extra_styles(self, styles: set[str]) -> None:
@@ -79,6 +79,12 @@ class AutomaticStylesFilter:
     def get_filtered_content(self) -> str:
         return self.handler.content.getvalue()
 
+
+class AutomaticStylesFilter2(AutomaticStylesFilter):
+    def __init__(self, metadir: Path, stylesdir: Path, content: str, part: str) -> None:
+        self.styles = self.read_styles(stylesdir, part)
+        super().__init__(metadir, content, part)
+
     def read_styles(self, stylesdir: Path, part: str) -> set[str]:
         filename = stylesdir / f"{part}.{FileExtensions.txt}"
         styles = set()
@@ -86,3 +92,14 @@ class AutomaticStylesFilter:
             for line in f:
                 styles.add(line.strip())
         return styles
+
+class AutomaticStylesFilter3(AutomaticStylesFilter):
+    def __init__(self, metadir: Path, content: str, part: str) -> None:
+        # NOTE: These styles were taken from the COLUMNS keyword in section 4.3 since that keyword
+        #       was also used for new the keyword template, see create_subsection_template() in
+        #       src/fodt/create_subdocument.py
+        self.styles = {
+            'Internet_20_link', 'P18335', 'P18345', 'P6057', 'P6690', 'T1', 'Table990', 'Table990.1',
+            'Table990.A', 'Table990.A1', 'Table990.E', 'Table990.F', 'Table990.H1', '_40_TextBody'
+        }
+        super().__init__(metadir, content, part)

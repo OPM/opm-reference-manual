@@ -48,10 +48,11 @@ class ExtractDocAttrs():
         outputdir.mkdir(parents=True, exist_ok=True)
         filename = outputdir / FileNames.office_attr_fn
         if filename.exists():
-            logging.info(f"Document attributes file {filename} already exists, skipping.")
-        else:
-            with open(filename, "w", encoding='utf-8') as f:
-                for (key, value) in attrs.items():
-                    evalue = xml.sax.saxutils.escape(value)
-                    f.write(f'{key}="{evalue}"\n')
-            logging.info(f"Wrote document attributes to {filename}.")
+            logging.info(
+                f"Warning: Document attributes file {filename} already exists, "
+                f"will overwrite...")
+        with open(filename, "w", encoding='utf-8') as f:
+            for (key, value) in attrs.items():
+                evalue = xml.sax.saxutils.escape(value)
+                f.write(f'{key}="{evalue}"\n')
+        logging.info(f"Wrote document attributes to {filename}.")

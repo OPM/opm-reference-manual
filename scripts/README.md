@@ -59,7 +59,7 @@ $ pip install .
 Run the command:
 
 ```
-fodt-split-all --maindir=out --filename=manual.fodt
+$ fodt-split-all --maindir=out --filename=../OPM_Flow_Reference_Manual.fodt
 ```
 
 This will create a new main document in directory `out/main.fodt` and sub documents for each chapter
@@ -79,13 +79,13 @@ only be used for exporting the manual to PDF format. Rather, edit the generated 
 After having split the main document into subsections, you can create a new subsection document by
 using the `fodt-add-keyword` command, for example
 ```
-$ fodt-add-keyword --maindir=out --keyword=HELLO --chapter=4 --section=3
+$ fodt-add-keyword --maindir=../parts --keyword=HELLO --section=4.3
 ```
 will add a keyword `HELLO` to section 4.3. It will be assumed that the keywords are sorted alphabetically
 in the subsection which is used to determine the position of the keyword within the section.
 
-For the above example, adding the keyword involves updating the sub document `out/chapters/4.fodt`
-to include the new file `out/chapters/subsections/4.3/HELLO.fodt`.
+For the above example, adding the keyword involves updating the sub document `parts/chapters/4.fodt`
+to include the new file `parts/chapters/subsections/4.3/HELLO.fodt`.
 The generated file `HELLO.fodt` is created from a template such that it initially contains just
 the heading with the keyword name.
 
@@ -98,5 +98,18 @@ You may have to wait a minute for the update to complete.
 You can now export the manual to PDF. From the `File` menu, select "Export As" → "Export as PDF…",
 and click the "Export" button in the dialog, then choose a filename for the PDF file.
 
+## If the main document is modified
 
+As noted above, the main document `main.fodt` would generally not be edited (or resaved). It is
+mainly used for exporting the manual to PDF format. If it needs to be modified, data that was
+extracted from it may need to be re-extracted. From the ``scripts`` folder we can run the following commands
+to re-extract (update) metadata:
+
+```
+$ fodt-extract-metadata --maindir=../parts --filename=../OPM_Flow_Reference_Manual.fodt
+$ fodt-extract-document-attrs --maindir=../parts --filename=../OPM_Flow_Reference_Manual.fodt
+$ fodt-extract-style-info --maindir=../parts
+```
+
+Further, depending on the nature of the modification, all sub documents may also need to be updated.
 

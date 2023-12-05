@@ -11,10 +11,11 @@ from fodt.helpers import Helpers
 from fodt.remove_subsections import RemoveSubSections
 
 class Splitter():
-    def __init__(self, maindir: str, chapter: int, section: int) -> None:
+    def __init__(self, maindir: str, keyword_dir: str, chapter: int, section: int) -> None:
         self.chapter = chapter
         self.section = section
         self.maindir = Path(maindir)
+        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir)
         self.metadata_dir = self.maindir / Directories.meta
         assert self.maindir.is_dir()
 
@@ -29,6 +30,7 @@ class Splitter():
         remover = RemoveSubSections(
             self.source_file,
             self.destfile,
+            self.keyword_dir,
             self.chapter,
             self.section,
             replace_callback
@@ -66,12 +68,13 @@ class Splitter():
 #
 @click.command()
 @ClickOptions.maindir
+@ClickOptions.keyword_dir
 @click.option('--chapter', type=int, required=True, help='Number of the chapter to split.')
 @click.option('--section', type=int, required=True,
                help='Number of the section within the chapter to split.')
-def split_subdocument(maindir: str, chapter: int, section: int) -> None:
+def split_subdocument(maindir: str, keyword_dir: str, chapter: int, section: int) -> None:
     logging.basicConfig(level=logging.INFO)
-    splitter = Splitter(maindir, chapter, section)
+    splitter = Splitter(maindir, keyword_dir, chapter, section)
     splitter.split()
 
 if __name__ == "__main__":

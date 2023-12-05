@@ -3,7 +3,7 @@ import re
 
 from pathlib import Path
 
-from fodt.automatic_styles_filter import AutomaticStylesFilter
+from fodt.automatic_styles_filter import AutomaticStylesFilter2, AutomaticStylesFilter3
 from fodt.constants import Directories, FileExtensions, FileNames, MetaSections
 from fodt.exceptions import InputException
 from fodt.helpers import Helpers
@@ -79,11 +79,15 @@ class CreateSubDocument():
         with open(section_file, "r", encoding='utf-8') as f:
             content = f.read()
             if section_name == "automatic-styles":
-                if self.is_chapter:
-                    dir_ = self.stylesdir
+                if self.add_keyword:
+                    filter = AutomaticStylesFilter3(self.metadir, content, part)
+                    pass
                 else:
-                    dir_ = self.stylesdir / f"{self.chapter}.{self.section}"
-                filter = AutomaticStylesFilter(self.metadir, dir_, content, part)
+                    if self.is_chapter:
+                        dir_ = self.stylesdir
+                    else:
+                        dir_ = self.stylesdir / f"{self.chapter}.{self.section}"
+                    filter = AutomaticStylesFilter2(self.metadir, dir_, content, part)
                 content = filter.get_filtered_content()
             elif section_name == "styles":
                 if not self.is_chapter:
@@ -137,6 +141,7 @@ class CreateSubDocument1(CreateSubDocument):
         self.outputdir = self.main_dir / Directories.chapters
         self.is_chapter = True
         parts = [str(item) for item in chapters]
+        self.add_keyword = False
         self.create_documents(parts)
 
 
@@ -154,6 +159,7 @@ class CreateSubDocument2(CreateSubDocument):
         parts = self.get_parts()
         keyw_list = Helpers.read_keyword_order(self.documentdir, chapter, section)
         self.keywords = Helpers.keywords_inverse_map(keyw_list)
+        self.add_keyword = False
         self.create_documents(parts)
 
     def get_parts(self) -> list[str]:
@@ -165,8 +171,11 @@ class CreateSubDocument2(CreateSubDocument):
         return parts
 
 class CreateSubDocument3(CreateSubDocument):
-    def __init__(self, maindir: str, chapter: str, section: str, keyword: str) -> None:
+    def __init__(
+            self, maindir: str, keyword_dir: str, chapter: str, section: str, keyword: str
+    ) -> None:
         self.maindir = Path(maindir)
+        self.keyword_dir = keyword_dir
         self.chapter = chapter
         self.section = section
         self.keyword = keyword
@@ -177,6 +186,7 @@ class CreateSubDocument3(CreateSubDocument):
         self.outputdir = self.documentdir / Directories.subsections
         self.is_chapter = False
         parts = [self.keyword]
-        keyw_list = Helpers.read_keyword_order(self.documentdir, chapter, section)
+        keyw_list = Helpers.read_keyword_order_v2(self.keyword_dir, chapter, section)
         self.keywords = Helpers.keywords_inverse_map(keyw_list)
+        self.add_keyword = True
         self.create_documents(parts)

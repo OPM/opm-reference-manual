@@ -10,6 +10,12 @@ class ClickOptions():
         required=True,
         help='Name of the FODT file to extract from.'
     )(func)
+    keyword_dir = lambda func: click.option(
+        '--keyword-dir',
+        type=str,
+        required=False,
+        help='Name of the directory containing the keyword names.'
+    )(func)
     maindir = lambda func: click.option(
         '--maindir',
         envvar='FODT_MAIN_DIR',
