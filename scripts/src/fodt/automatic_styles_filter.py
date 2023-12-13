@@ -56,8 +56,10 @@ class ElementHandler(xml.sax.handler.ContentHandler):
 
 
 class AutomaticStylesFilter:
-    def __init__(self, metadir: Path, content: str, part: str) -> None:
+    def __init__(self, metadir: Path, content: str, is_appendix: bool = False) -> None:
+        # self.styles is assigned in the constructor of the subclass
         self.metadir = metadir
+        self.is_appendix = is_appendix
         self.add_extra_styles(self.styles)
         self.add_extra_styles2(self.styles)
         self.handler = ElementHandler(self.styles)
@@ -73,7 +75,11 @@ class AutomaticStylesFilter:
     def add_extra_styles2(self, styles: set[str]) -> None:
         """These styles are used in the beginning of office:body section but before the
         text:section elements"""
-        for item in ['Sect1', 'P18776']:
+        if self.is_appendix:
+            styles_to_add = ['_40_Appendix_20_Heading_20_Numbering', 'P17379']
+        else:
+            styles_to_add = ['Sect1', 'P18776']
+        for item in styles_to_add:
             styles.add(item)
 
     def get_filtered_content(self) -> str:
@@ -83,7 +89,7 @@ class AutomaticStylesFilter:
 class AutomaticStylesFilter2(AutomaticStylesFilter):
     def __init__(self, metadir: Path, stylesdir: Path, content: str, part: str) -> None:
         self.styles = self.read_styles(stylesdir, part)
-        super().__init__(metadir, content, part)
+        super().__init__(metadir, content)
 
     def read_styles(self, stylesdir: Path, part: str) -> set[str]:
         filename = stylesdir / f"{part}.{FileExtensions.txt}"
@@ -102,4 +108,9 @@ class AutomaticStylesFilter3(AutomaticStylesFilter):
             'Internet_20_link', 'P18335', 'P18345', 'P6057', 'P6690', 'T1', 'Table990', 'Table990.1',
             'Table990.A', 'Table990.A1', 'Table990.E', 'Table990.F', 'Table990.H1', '_40_TextBody'
         }
-        super().__init__(metadir, content, part)
+        super().__init__(metadir, content)
+
+class AutomaticStylesFilter4(AutomaticStylesFilter):
+    def __init__(self, metadir: Path, content: str, styles: set[str]) -> None:
+        self.styles = styles
+        super().__init__(metadir, content, is_appendix=True)
