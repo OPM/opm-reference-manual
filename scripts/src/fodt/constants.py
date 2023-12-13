@@ -25,6 +25,7 @@ class ClickOptions():
     )(func)
 
 class Directories():
+    appendices = "appendices"
     backup = "backup"
     info = "info"
     keywords = "keywords"

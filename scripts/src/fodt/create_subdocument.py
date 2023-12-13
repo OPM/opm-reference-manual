@@ -62,11 +62,8 @@ class CreateSubDocument():
 """)
 
     def write_office_document_start_tag(self) -> None:
-        fn = self.metadir / FileNames.office_attr_fn
-        with open(fn, "r", encoding='utf-8') as f:
-            attrs = f.read()
-        attrs = attrs.replace("\n", " ")
-        self.outputfile.write("<office:document " + attrs + ">\n")
+        tag = XMLHelper.get_office_document_start_tag(self.metadir)
+        self.outputfile.write(tag)
 
     def write_meta(self, part: str) -> None:
         section_names = MetaSections.names
