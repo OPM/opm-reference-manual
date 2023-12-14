@@ -219,7 +219,7 @@ class ExtractAppendix:
 # USAGE: fodt-extract-appendix --maindir=<main_dir> --appendix=<appendix_number>
 
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @click.option('--appendix', type=str, required=True, help='Number of the appendix to extract.')
 def extract_appendix(maindir: str, appendix: int) -> None:
     """Extract the appendix from a FODT file."""

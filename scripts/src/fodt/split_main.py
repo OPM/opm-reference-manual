@@ -155,7 +155,7 @@ class Splitter():
 
 
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @ClickOptions.filename
 def split_main(maindir: str, filename: str) -> None:
     logging.basicConfig(level=logging.INFO)
