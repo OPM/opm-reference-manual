@@ -43,7 +43,7 @@ class CreateAppendixFile():
         self.outputfile.write(self.appendix_txt)
 
     def write_office_body_start_tag(self) -> None:
-        section_name = "AppendixA"
+        section_name = f"Appendix{self.appendix}"
         self.outputfile.write("\n <office:body>")
         self.outputfile.write(f"""
   <office:text text:use-soft-page-breaks="true">
@@ -109,7 +109,10 @@ class CreateAppendixFile():
 #  </text:section>
 #
 class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
-    def __init__(self) -> None:
+    def __init__(self, appendix_number: str, start_id: str, end_id: str) -> None:
+        self.start_id = f"list{start_id}"
+        self.end_id = f"list{end_id}"
+        self.appendix_number = appendix_number
         self.in_appendix = False
         self.appendix = None
         self.doc = io.StringIO()
@@ -144,11 +147,11 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
 
     def insert_section_link_into_doc(self) -> None:
         self.doc.write(f"""<text:section text:style-name="Sect1" """
-                       f"""text:name="SectionA" text-protected="true">\n"""
+                       f"""text:name="Section{self.appendix_number}" text-protected="true">\n"""
                        f""" <text:section-source text:link-type="simple" """
-                       f"""xlink:href="appendices/A.fodt" """
+                       f"""xlink:href="appendices/{self.appendix_number}.fodt" """
                        f"""text:filter-name="OpenDocument Text Flat XML" """
-                       f"""text:section-name="AppendixA">\n"""
+                       f"""text:section-name="Appendix{self.appendix_number}">\n"""
                        f""" </text:section-source>\n"""
                        f"""</text:section>\n"""
         )
@@ -160,14 +163,14 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
         if (not self.in_appendix) and (name == "text:list"):
             if "xml:id" in attrs.getNames():
                 xml_id = attrs.getValue("xml:id")
-                if xml_id == "list3623483562":
+                if xml_id == self.start_id:
                     self.in_appendix = True
                     self.appendix = io.StringIO()
                     self.insert_section_link_into_doc()
         elif self.in_appendix and (name == "text:list"):
             if "xml:id" in attrs.getNames():
                 xml_id = attrs.getValue("xml:id")
-                if xml_id == "list105923873468832":
+                if xml_id == self.end_id:
                     self.in_appendix = False
                     self.doc.write(XMLHelper.starttag(name, attrs))
                     return
@@ -178,12 +181,22 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
             self.doc.write(XMLHelper.starttag(name, attrs))
 
 class ExtractAndRemoveAppendixFromMain:
-    def __init__(self, main_file: Path) -> None:
+    def __init__(self, main_file: Path, appendix_number: str) -> None:
         self.main_file = main_file
+        self.appendix_number = appendix_number
 
     def extract(self) -> tuple[str, str, set[str]]:
         parser = xml.sax.make_parser()
-        handler = ExtractAndRemoveHandler()
+        if self.appendix_number == "A":
+            handler = ExtractAndRemoveHandler(
+                appendix_number="A", start_id="3623483562", end_id="105923873468832"
+            )
+        elif self.appendix_number == "B":
+            handler = ExtractAndRemoveHandler(
+                appendix_number="B", start_id="105923873468832", end_id="105925008885815"
+            )
+        else:
+            raise ValueError(f"Invalid appendix number: {self.appendix_number}")
         parser.setContentHandler(handler)
         parser.parse(self.main_file)
         return (handler.get_appendix(), handler.get_doc(), handler.get_styles())
@@ -191,9 +204,10 @@ class ExtractAndRemoveAppendixFromMain:
 class ExtractAppendix:
     def __init__(self, maindir: str, appendix: str) -> None:
         self.maindir = Path(maindir)
-        if appendix != "A":
-            # Only appendix A is support for now..
-            raise ValueError(f"Requires appendix = A. Appendix {appendix} is not supported.")
+        valid_appendices = {"A", "B"}
+        if appendix not in valid_appendices:
+            # Only appendix A and B is support for now..
+            raise ValueError(f"Requires appendix = A or B. Appendix {appendix} is not supported.")
         self.appendix = appendix
         self.main_file = self.maindir / FileNames.main_document
         assert self.main_file.is_file()
@@ -205,7 +219,7 @@ class ExtractAppendix:
         creator.create()
 
     def extract(self) -> str:
-        extractor = ExtractAndRemoveAppendixFromMain(self.main_file)
+        extractor = ExtractAndRemoveAppendixFromMain(self.main_file, self.appendix)
         appendix_txt, doc, styles = extractor.extract()
         self.write_updated_main(doc)
         self.create_appendix_file(appendix_txt, styles)
@@ -219,7 +233,7 @@ class ExtractAppendix:
 # USAGE: fodt-extract-appendix --maindir=<main_dir> --appendix=<appendix_number>
 
 @click.command()
-@ClickOptions.maindir()
+@ClickOptions.maindir(required=False)
 @click.option('--appendix', type=str, required=True, help='Number of the appendix to extract.')
 def extract_appendix(maindir: str, appendix: int) -> None:
     """Extract the appendix from a FODT file."""
