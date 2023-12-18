@@ -87,7 +87,7 @@ class AddKeyword():
 #                   --section=4.3
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @ClickOptions.keyword_dir
 @click.option('--keyword', type=str, required=True, help='Name of the keyword to add.')
 @click.option('--section', type=str, required=True, help='Number of the section.')

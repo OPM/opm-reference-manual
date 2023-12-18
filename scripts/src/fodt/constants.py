@@ -1,3 +1,4 @@
+import enum
 import click
 
 class AutomaticStyles():
@@ -16,13 +17,19 @@ class ClickOptions():
         required=False,
         help='Name of the directory containing the keyword names.'
     )(func)
-    maindir = lambda func: click.option(
-        '--maindir',
-        envvar='FODT_MAIN_DIR',
-        required=True,
-        type=str,
-        help='Directory to save generated files.'
-    )(func)
+
+    @staticmethod
+    def maindir(required: bool = True, default: str = '../parts'):
+        def decorator(func):
+            return click.option(
+                '--maindir',
+                envvar='FODT_MAIN_DIR',
+                required=required,
+                default=default,
+                type=str,
+                help='Directory to save generated files.'
+            )(func)
+        return decorator
 
 class Directories():
     appendices = "appendices"
@@ -50,6 +57,10 @@ class FileNames():
     styles_info_fn = "styles_info.txt"
     subsection = "section"
     subdocument = "section"
+
+class KeywordStatus(enum.Enum):
+    ORANGE = 0
+    GREEN = 1
 
 class MetaSections():
     names = [

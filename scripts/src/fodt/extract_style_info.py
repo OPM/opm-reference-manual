@@ -148,7 +148,7 @@ class ExtractStyleInfo:
 # that are defined in meta section automatic-styles.
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 def extract_style_info(maindir: str) -> None:
     logging.basicConfig(level=logging.INFO)
     ExtractStyleInfo(maindir).extract()

@@ -61,7 +61,7 @@ if sys.version_info < MIN_PYTHON:  # pragma: no cover
 #   fodt-create-subdocuments --maindir=out --chapters=1,2
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @click.option('--chapters', required=True, type=str,
                help='Create sub documents for these chapter numbers.')
 def create_subdocument(
@@ -90,7 +90,7 @@ def create_subdocument(
 #   - chapter{chapter_number1}.xml, chapter{chapter_number2}.xml, ... containing the extracted chapters
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @click.option('--chapters', type=str, required=True, help='Parts to extract.')
 @ClickOptions.filename
 def extract_chapters(maindir: str, chapters: str, filename: str) -> None:
@@ -163,7 +163,7 @@ def remove_chapters(outputfn: str, chapters: str, filename: str) -> None:
 #
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @ClickOptions.filename
 def extract_document_attributes(maindir: str, filename: str) -> None:
     """Extract the office:document tag's attributes."""
@@ -194,7 +194,7 @@ def extract_document_attributes(maindir: str, filename: str) -> None:
 #   fodt-extract-metadata --maindir=out --filename=original.fodt
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @ClickOptions.filename
 def extract_metadata(maindir: str, filename: str) -> None:
     """Extract metadata from a FODT file."""

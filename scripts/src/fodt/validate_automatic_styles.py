@@ -138,7 +138,7 @@ class Validator:
 #
 
 @click.group()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @click.option("--quiet", "-q", is_flag=True, help="Turn off verbose output")
 @click.pass_context
 def validate(ctx: click.Context, maindir: str, quiet: bool) -> None:

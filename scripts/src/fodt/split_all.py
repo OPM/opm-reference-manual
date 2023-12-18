@@ -132,7 +132,7 @@ class Splitter():
         logging.info(f"Done.")
 
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @ClickOptions.filename
 @click.option(
     '--font-decl-dir', type=str, required=False,

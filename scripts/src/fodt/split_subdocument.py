@@ -67,7 +67,7 @@ class Splitter():
 #
 #
 @click.command()
-@ClickOptions.maindir
+@ClickOptions.maindir()
 @ClickOptions.keyword_dir
 @click.option('--chapter', type=int, required=True, help='Number of the chapter to split.')
 @click.option('--section', type=int, required=True,
