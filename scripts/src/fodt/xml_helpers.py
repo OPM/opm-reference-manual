@@ -20,10 +20,11 @@ class XMLHelper(object):
         return tag
 
     @staticmethod
-    def starttag(name: str, attrs: dict[str, str]) -> str:
+    def starttag(name: str, attrs: dict[str, str], close_tag: bool = True) -> str:
         result = f"<{name}"
         for (key, value) in attrs.items():
             evalue = xml.sax.saxutils.escape(value)
             result += f" {key}=\"{evalue}\""
-        result += ">"
+        if close_tag:
+            result += ">"
         return result
