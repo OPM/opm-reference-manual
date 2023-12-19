@@ -22,8 +22,14 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         self.content = io.StringIO()
         self.in_master_styles = False
         self.nesting = 0
+        self.start_tag_open = False
 
     def characters(self, content: str):
+        if self.start_tag_open:
+            # NOTE: characters() is only called if there is content between the start
+            # tag and the end tag. If there is no content, characters() is not called.
+            self.content.write(">")
+            self.start_tag_open = False
         self.content.write(xml.sax.saxutils.escape(content))
 
     def endElement(self, name: str):
@@ -33,7 +39,11 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             elif name == "text:bookmark-ref":
                 # remove this tag
                 return
-        self.content.write(XMLHelper.endtag(name))
+        if self.start_tag_open:
+            self.content.write("/>")
+            self.start_tag_open = False
+        else:
+            self.content.write(XMLHelper.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -48,7 +58,10 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         if self.in_master_styles and name == "text:bookmark-ref":
             # remove this tag
             return
-        self.content.write(XMLHelper.starttag(name, attrs))
+        if self.start_tag_open:
+            self.content.write(">")
+        self.start_tag_open = True
+        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
 class RemoveBookmarksFromMasterStyles():
     def __init__(self, maindir: str, filename: str|None, directory: str|None) -> None:
