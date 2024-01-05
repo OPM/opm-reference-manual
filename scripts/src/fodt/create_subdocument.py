@@ -34,6 +34,11 @@ class CreateSubDocument():
     def create_subsection_template(self, part: str) -> str:
         template = Helpers.read_keyword_template()
         template = re.sub(r"###KEYWORD_NAME###", part, template)
+        if self.add_keyword:
+            description = self.title
+        else:
+            description = "Short description"
+        template = re.sub(r"###SHORT_DESCRIPTION###", description, template)
         return template
 
     def write_office_body_start_tag(self, part: str) -> None:
@@ -169,13 +174,20 @@ class CreateSubDocument2(CreateSubDocument):
 
 class CreateSubDocument3(CreateSubDocument):
     def __init__(
-            self, maindir: str, keyword_dir: str, chapter: str, section: str, keyword: str
+        self,
+        maindir: str,
+        keyword_dir: str,
+        chapter: str,
+        section: str,
+        keyword: str,
+        title: str,
     ) -> None:
         self.maindir = Path(maindir)
         self.keyword_dir = keyword_dir
         self.chapter = chapter
         self.section = section
         self.keyword = keyword
+        self.title = title
         self.metadir = self.maindir / Directories.meta
         self.documentdir = self.maindir / Directories.chapters
         self.extracted_sections_dir = self.documentdir / Directories.info / Directories.subsections
