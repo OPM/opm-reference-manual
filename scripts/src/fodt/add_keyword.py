@@ -165,14 +165,15 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
 
     def write_appendix_table(self) -> None:
         idx_found = False
+        new_row = '\n' + self.get_new_appendix_row()
         for (idx, keyword_name) in enumerate(self.keyword_names):
             # Find the correct position to insert the new keyword
             if (not idx_found) and keyword_name >= self.keyword_name:
-                new_row = self.get_new_appendix_row()
-                self.content.write('\n')
                 self.content.write(new_row)
                 idx_found = True
             self.content.write(self.rows[idx])
+        if not idx_found:  # last item in the list
+            self.content.write(new_row)
 
     def write_missing_styles(self):
         for style_name in self.style_names:
