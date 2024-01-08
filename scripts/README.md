@@ -32,10 +32,14 @@ only be used for exporting the manual to PDF format. Rather, edit the generated 
 After having split the main document into subsections, you can create a new subsection document by
 using the `fodt-add-keyword` command, for example
 ```
-$ fodt-add-keyword --maindir=../parts --keyword=HELLO --section=4.3
+$ fodt-add-keyword --maindir=../parts --keyword=HELLO --section=4.3 --title="Hello World" --status=green
 ```
-will add a keyword `HELLO` to section 4.3. It will be assumed that the keywords are sorted alphabetically
-in the subsection which is used to determine the position of the keyword within the section.
+will add a keyword `HELLO` to section 4.3. It will be assumed that the keywords are sorted
+alphabetically in the subsection which is used to determine the position of the keyword
+within the section. In addition, an entry for the keyword is added to alphabetical listing
+of keywords in Appendix A with the
+status color green specified by the `--status=green` option. The `--title="Hello world"`
+argument sets the short title for the keyword in both section 4.3 and in the Appendix A.
 
 For the above example, adding the keyword involves updating the sub document `parts/chapters/4.fodt`
 to include the new file `parts/chapters/subsections/4.3/HELLO.fodt`.
@@ -44,7 +48,7 @@ the heading with the keyword name.
 
 ## Changing the status of a keyword in Appendix A
 
-To change the status color of a keyword in the status column in the alphabetic listing of keywords
+To change the status color of a keyword in the status column in the alphabetical listing of keywords
 in Appendix A, run for example:
 
 ```
