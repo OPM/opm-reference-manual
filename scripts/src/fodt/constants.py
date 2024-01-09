@@ -40,6 +40,7 @@ class Directories():
     meta_sections = "sections"
     styles = "styles"
     chapters = "chapters"
+    sections = "sections"
     subsections = "subsections"
 
 class FileExtensions():
