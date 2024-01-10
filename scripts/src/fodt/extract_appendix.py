@@ -188,15 +188,16 @@ class ExtractAndRemoveAppendixFromMain:
     def extract(self) -> tuple[str, str, set[str]]:
         parser = xml.sax.make_parser()
         if self.appendix_number == "A":
-            handler = ExtractAndRemoveHandler(
-                appendix_number="A", start_id="3623483562", end_id="105923873468832"
-            )
+            ids = ("3623483562", "105923873468832")
         elif self.appendix_number == "B":
-            handler = ExtractAndRemoveHandler(
-                appendix_number="B", start_id="105923873468832", end_id="105925008885815"
-            )
+            ids = ("105923873468832", "105925008885815")
+        elif self.appendix_number == "E":
+            ids = ("105926382943660", "105927136285395")
         else:
             raise ValueError(f"Invalid appendix number: {self.appendix_number}")
+        handler = ExtractAndRemoveHandler(
+            appendix_number=self.appendix_number, start_id=ids[0], end_id=ids[1]
+        )
         parser.setContentHandler(handler)
         parser.parse(self.main_file)
         return (handler.get_appendix(), handler.get_doc(), handler.get_styles())
@@ -204,10 +205,12 @@ class ExtractAndRemoveAppendixFromMain:
 class ExtractAppendix:
     def __init__(self, maindir: str, appendix: str) -> None:
         self.maindir = Path(maindir)
-        valid_appendices = {"A", "B"}
+        valid_appendices = {"A", "B", "E"}
         if appendix not in valid_appendices:
-            # Only appendix A and B is support for now..
-            raise ValueError(f"Requires appendix = A or B. Appendix {appendix} is not supported.")
+            # Only certain appendices are supported for now..
+            raise ValueError(
+                f"Requires appendix ∈ {valid_appendices}. Appendix {appendix} is not supported."
+            )
         self.appendix = appendix
         self.main_file = self.maindir / FileNames.main_document
         assert self.main_file.is_file()
