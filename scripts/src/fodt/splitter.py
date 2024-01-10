@@ -8,7 +8,7 @@ import fodt.string_functions
 from fodt.constants import ClickOptions
 from fodt.create_subdocument import CreateSubDocument1
 from fodt.extract_metadata import ExtractMetaData
-from fodt.extract_section import ExtractSection
+from fodt.extract_xml_tag import ExtractXmlTag
 from fodt.extract_chapters import ExtractChapterParts
 from fodt.extract_tag_attrs import ExtractDocAttrs
 from fodt.remove_elements import RemoveElements
@@ -201,14 +201,14 @@ def extract_metadata(maindir: str, filename: str) -> None:
     logging.basicConfig(level=logging.INFO)
     extracter = ExtractMetaData(maindir, filename)
 
-# fodt-extract-section
+# fodt-extract-xml-tag
 # --------------------
 # SHELL USAGE:
-#   fodt-extract-section --section=<section_name> \
+#   fodt-extract-xml-tag --tag_name=<tag_name> \
 #                        --filename=<fodt_input_file>
 # DESCRIPTION:
 #   Extract a section from a fodt file and prints it to stdout.
-#   The section name is the name of the xml tag, e.g. "office:meta".
+#   The tag_name is the name of the xml tag, e.g. "office:meta".
 #   NOTE: this extracts a section as defined by an xml tag, whereas
 #   command fodt-extract-special-parts extracts a section as defined
 #   by two consecutive text:h tags with the same outline level.
@@ -217,13 +217,13 @@ def extract_metadata(maindir: str, filename: str) -> None:
 @click.option(
     '--section',
     required=True,
-    help='Name of the section to extract. Example: "office:meta"'
+    help='Name of the tag to extract. Example: "office:meta"'
 )
-def extract_section(filename: str, section: str) -> None:
-    """Extract a section from the fodt file."""
+def extract_xml_tag(filename: str, section: str) -> None:
+    """Extract an xml tag from the fodt file."""
     logging.basicConfig(level=logging.INFO)
     logging.info(f"Extracting a section from {filename}.")
-    extracter = ExtractSection(filename, section)
+    extracter = ExtractXmlTag(filename, section)
 
 def main():
     logging.basicConfig(level=logging.INFO)
