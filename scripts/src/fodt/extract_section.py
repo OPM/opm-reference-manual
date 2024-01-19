@@ -256,4 +256,4 @@ def extract_section(maindir: str, section: str) -> None:
     extractor.extract()
 
 if '__name__' == '__main__':
-    extract_appendix()
+    extract_section()
