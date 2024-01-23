@@ -23,6 +23,10 @@ host_directory="$PWD/../../$shared_dir"
 docker_image="lo-ubuntu2204"
 # The home directory of the user in the Docker container
 docker_home="/home/docker-user"
+# Directory where fonts are stored in the repository
+font_dir="$PWD/../../fonts"
+# Directory inside the Docker container where fonts will be stored
+docker_font_dir="/usr/local/share/fonts"
 
 # Check if a file argument is provided
 if [ $# -eq 0 ]; then
@@ -35,6 +39,7 @@ fi
 xhost +
 # Run soffice in the Docker container
 docker run -v "${host_directory}:${docker_home}/$shared_dir" \
+           -v "${font_dir}:${docker_font_dir}:ro" \
            --rm \
            -e DISPLAY=$DISPLAY \
            -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
