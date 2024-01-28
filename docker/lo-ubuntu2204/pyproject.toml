@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "lodocker"
+version = "0.1.0"
+description = ""
+authors = ["Håkon Hægland <hakon.hagland@gmail.com>"]
+readme = "README.md"
+packages = [{include = "lodocker", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+requests = "^2.31.0"
+
+[tool.poetry.scripts]
+lodocker-open-file = "lodocker.open_file:open_file"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

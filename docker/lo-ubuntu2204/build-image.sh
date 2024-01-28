@@ -1,3 +1,3 @@
 #! /bin/bash
 
-docker build --network=host -t lo-ubuntu2204 .
+docker build -t lo-ubuntu2204 .
