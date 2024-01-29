@@ -6,7 +6,7 @@ container. Currently, there are two scripts that can be used to run LibreOffice:
 - `docker-soffic.sh` : This script runs LibreOffice the same way that you would use
    outside the container. So running `./docker-soffice.sh main.fodt` will open the
 main document.
-- `start-container.sh` : This script will run LibreOffice as daemon (a standalone background process that
+- `start-container.sh` : This script will run LibreOffice as a daemon (a standalone background process that
    listens to messages over a socket) inside the docker container. The host can then communicate
    with this daemon using a Python UNO bridge script that is running inside the docker container.
    The communication between the host machine and docker container is done using a rest API against a

@@ -31,7 +31,8 @@ def open_document_with_libreoffice(doc_path: str):
     resolver = local_context.ServiceManager.createInstanceWithContext(
         "com.sun.star.bridge.UnoUrlResolver", local_context
     )
-    ctx = resolver.resolve("uno:socket,host=localhost,port=2002;urp;StarOffice.ComponentContext")
+    port = int(os.getenv('LIBREOFFICE_PORT', 2002))
+    ctx = resolver.resolve(f"uno:socket,host=localhost,port={port};urp;StarOffice.ComponentContext")
     smgr = ctx.ServiceManager
     desktop = smgr.createInstanceWithContext("com.sun.star.frame.Desktop", ctx)
     # Load the document
@@ -72,5 +73,6 @@ if __name__ == '__main__':
     #
     #    libreoffice --accept="socket,host=localhost,port=2002;urp;" --pidfile=lo_pid.txt
     #
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    port = int(os.getenv('FLASK_PORT', 8080))
+    app.run(debug=True, host='0.0.0.0', port=port)
 

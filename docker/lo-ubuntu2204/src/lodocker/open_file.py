@@ -10,7 +10,8 @@ def send_open_document_request(document_path: str):
     :param document_path: The path to the document to open.
     """
     #path = Path(document_path)
-    url = "http://localhost:8080/open-document"
+    port = int(os.getenv('FLASK_PORT', 8080))
+    url = f"http://localhost:{port}/open-document"
     headers = {"Content-Type": "application/json"}
     payload = {"path": document_path}
     response = requests.post(url, headers=headers, data=json.dumps(payload))

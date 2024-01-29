@@ -20,6 +20,11 @@
 #  lodocker-open-file appendices/A.fodt  # opens appendices/A.fodt in the Docker container
 #
 #
+# Default to 2002 if not set
+LIBREOFFICE_PORT=${LIBREOFFICE_PORT:-2002}
+# Default to 8080 if not set
+FLASK_PORT=${FLASK_PORT:-8080}
+
 # Assume this script is run from the directory containing the Dockerfile
 #  this means that the root of the repository is two levels up
 shared_dir="parts"
@@ -39,8 +44,10 @@ xhost +
 docker run -v "${host_directory}:${docker_home}/$shared_dir" \
            -v "${font_dir}:${docker_font_dir}:ro" \
            --rm \
-           -p 8080:8080 \
+           -p "$FLASK_PORT":"$FLASK_PORT" \
            -e DISPLAY=$DISPLAY \
+           -e LIBREOFFICE_PORT="$LIBREOFFICE_PORT" \
+           -e FLASK_PORT="$FLASK_PORT" \
            -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
            $docker_image
 
