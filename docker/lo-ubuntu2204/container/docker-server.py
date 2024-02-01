@@ -52,6 +52,9 @@ def open_document_with_libreoffice(doc_path: str):
     update_indexes(doc)
 
     # Save the document
+    # The user can save the document from the menu for now.
+    # If we want to automate the saving process we can do that by running libreoffice
+    # in headless mode using doc.store() as shown below
     #doc.store()
     #doc.dispose()
     logging.info("Done")
