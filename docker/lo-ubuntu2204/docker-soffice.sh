@@ -15,7 +15,20 @@
 #  ./docker-soffice.sh main.fodt          # opens main.fodt in the Docker container
 #  ./docker-soffice.sh appendices/A.fodt  # opens appendices/A.fodt in the Docker container
 #
+# NOTES for macOS:
 #
+#  Make sure docker desktop is running.
+#  The XQuartz server must be running before running this script.
+#  The IP address of the XQuartz server is obtained using ipconfig.
+#  The IP address is used to set the DISPLAY environment variable in the Docker container.
+#  The XQuartz server must be configured to allow connections from network clients.
+
+# Check if a file argument is provided
+if [ $# -eq 0 ]; then
+    echo "No file provided. Usage: ./docker-soffice.sh <file.fodt>"
+    exit 1
+fi
+
 # Assume this script is run from the directory containing the Dockerfile
 #  this means that the root of the repository is two levels up
 shared_dir="parts"
@@ -28,22 +41,34 @@ font_dir="$PWD/../../fonts"
 # Directory inside the Docker container where fonts will be stored
 docker_font_dir="/usr/local/share/fonts"
 
-# Check if a file argument is provided
-if [ $# -eq 0 ]; then
-    echo "No file provided. Usage: ./docker-soffice.sh <file.fodt>"
-    exit 1
-fi
 
-# Allow Docker Container to Access the Host's X Server
-# Temporarily allow connections from any client
-xhost +
-# Run soffice in the Docker container
-docker run -v "${host_directory}:${docker_home}/$shared_dir" \
-           -v "${font_dir}:${docker_font_dir}:ro" \
-           --rm \
-           -e DISPLAY=$DISPLAY \
-           -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-           $docker_image \
-           libreoffice "$docker_home/$shared_dir/$1"
-# Revoke the X11 access
-xhost -
+if [[ $(uname) == "Darwin" ]]; then
+    # macOS
+    # Get the IP address of the XQuartz server
+    # Check if XQUARTZ_IP is set by the user, otherwise obtain it dynamically
+    if [ -z "$XQUARTZ_IP" ]; then
+        # Get the IP address of the XQuartz server using ipconfig
+        XQUARTZ_IP=$(ipconfig getifaddr en0) # Change 'en0' to your active network interface
+    fi
+    DISPLAY_IP="$XQUARTZ_IP:0"
+    docker run -v "${host_directory}:${docker_home}/$shared_dir" \
+               -v "${font_dir}:${docker_font_dir}:ro" \
+               -v "${HOME}/.Xauthority:/home/docker-user/.Xauthority:rw" \
+               --rm \
+               -e DISPLAY=$DISPLAY_IP \
+               $docker_image \
+               libreoffice "$docker_home/$shared_dir/$1"
+else
+    # Allow Docker Container to Access the Host's X Server
+    # Temporarily allow connections from any client
+    xhost +
+    docker run -v "${host_directory}:${docker_home}/$shared_dir" \
+               -v "${font_dir}:${docker_font_dir}:ro" \
+               --rm \
+               -e DISPLAY=$DISPLAY \
+               -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+               $docker_image \
+               libreoffice "$docker_home/$shared_dir/$1"
+    # Revoke the X11 access on Linux
+    xhost -
+fi

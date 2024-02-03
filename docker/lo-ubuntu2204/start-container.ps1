@@ -1,4 +1,5 @@
-# This script is for PowerShell in Windows, see start-container.sh for the equivalent in Linux.
+# This script is for PowerShell in Windows, see start-container.sh for the
+#   equivalent in Linux and macOS.
 #
 # This script will run a docker container with Ubuntu 22.04 and libreoffice as a server
 # that the host can connect to and communicate with using a REST API.
