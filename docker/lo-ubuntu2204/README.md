@@ -1,7 +1,8 @@
 # Run LibreOffice from Ubuntu 22.04 docker container
 
 The scripts in this folder allows you to run LibreOffice version 7.5.9 inside a docker
-container. Currently, there are two scripts that can be used to run LibreOffice:
+container. Currently, there are two scripts that can be used to run LibreOffice on a
+Linux host, see sections below for Windows and macOS.
 
 - `docker-soffic.sh` : This script runs LibreOffice the same way that you would use
    outside the container. So running `./docker-soffice.sh main.fodt` will open the
@@ -15,6 +16,18 @@ main document.
 
    To simplify the use of this end point, you can use the Python script `lodocker-open-file <file.fodt>`.
    See information about installing the Python script below.
+
+### Windows
+
+On Windows, you need to install docker desktop, see: https://docs.docker.com/desktop/install/windows-install/
+and an X Server, for example VcXsrv or Xming.
+Then, ensure that the PowerShell execution policy is set to `RemoteSigned` or `Unrestricted`, see: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.4,
+such that you are allowed to run script from PowerShell.
+
+Then, make sure that both docker desktop is running and the X server is running, and open a PowerShell terminal window.
+See discussion above for Linux, instead of`
+running the script `docker-soffice.sh` you can run the script `docker-soffice.ps1`, and instead of the script
+`start-container.sh` you can run the script `start-container.ps1`.
 
 ## Installation of the python scripts
 - Requires python3 >= 3.10
