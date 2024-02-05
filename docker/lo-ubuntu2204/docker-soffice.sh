@@ -15,6 +15,18 @@
 #  ./docker-soffice.sh main.fodt          # opens main.fodt in the Docker container
 #  ./docker-soffice.sh appendices/A.fodt  # opens appendices/A.fodt in the Docker container
 #
+# NOTE:
+#
+#  See the script start-container.sh for more a more general/advanced solution. The
+#  start-container.sh can automatically update the index of a libreoffice document and
+#  also gets rid of the popup dialog
+#
+#    "The document contains one or more links to external data. Would you like to change the document,
+#     and update all links to get the most recent data?"
+#
+#  See issue #67 : https://github.com/OPM/opm-reference-manual/issues/67 for more information.
+#
+#
 # NOTES for macOS:
 #
 #  Make sure docker desktop is running.
@@ -22,6 +34,7 @@
 #  The IP address of the XQuartz server is obtained using ipconfig.
 #  The IP address is used to set the DISPLAY environment variable in the Docker container.
 #  The XQuartz server must be configured to allow connections from network clients.
+#
 
 # Check if a file argument is provided
 if [ $# -eq 0 ]; then
