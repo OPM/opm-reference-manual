@@ -33,7 +33,7 @@ RUN useradd --create-home -s /bin/bash $user \
         && adduser $user sudo \
         && echo "$user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-COPY --chown=$user:$user container/* $home
+COPY --chown=$user:$user container/* $home/
 RUN chmod +x $home/start.sh
 RUN chmod +x $home/update-libreoffice-config.sh
 
