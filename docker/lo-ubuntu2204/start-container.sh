@@ -10,10 +10,12 @@
 # After starting the docker container server the following API is available
 # to communicate with the server:
 #
-#  curl -X POST http://localhost:8080/open-document -H "Content-Type: application/json" \
+#    curl -X POST http://localhost:8080/<end-point> -H "Content-Type: application/json" \
 #                                           -d '{"path":"main.fodt"}'
 #
-# Or use the python script "lodocker-open-file" for example:
+# where <end-point> is one of the following: "open-file" and "open-file-and-update"
+#
+# Or use the python scripts "lodocker-open-file" and "lodocker-open-file-and-update" for example:
 #
 #
 #  lodocker-open-file main.fodt          # opens main.fodt in the Docker container

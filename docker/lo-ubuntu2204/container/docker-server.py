@@ -25,7 +25,7 @@ def update_indexes(doc):
     except Exception as e:
         logging.error("Error updating indexes and tables: " + str(e))
 
-def open_document_with_libreoffice(doc_path: str):
+def open_document_with_libreoffice(doc_path: str, do_update_indexes=True):
     # Connect to the running instance of LibreOffice
     local_context = uno.getComponentContext()
     resolver = local_context.ServiceManager.createInstanceWithContext(
@@ -49,7 +49,8 @@ def open_document_with_libreoffice(doc_path: str):
     logging.info("Loading {}".format(file_url))
     doc = desktop.loadComponentFromURL(file_url, "_blank", 0, load_props)
 
-    update_indexes(doc)
+    if do_update_indexes:
+        update_indexes(doc)
 
     # Save the document
     # The user can save the document from the menu for now.
@@ -60,14 +61,24 @@ def open_document_with_libreoffice(doc_path: str):
     logging.info("Done")
 
 
+@app.route('/open-document-and-update', methods=['POST'])
+def open_document_and_update():
+    # Extract the document path from the request
+    doc_path = request.json.get('path')
+
+    # Replace this with the command to open the document using LibreOffice
+    open_document_with_libreoffice(doc_path, do_update_indexes=True)
+    return "Document opened", 200
+
 @app.route('/open-document', methods=['POST'])
 def open_document():
     # Extract the document path from the request
     doc_path = request.json.get('path')
 
     # Replace this with the command to open the document using LibreOffice
-    open_document_with_libreoffice(doc_path)
+    open_document_with_libreoffice(doc_path, do_update_indexes=False)
     return "Document opened", 200
+
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)

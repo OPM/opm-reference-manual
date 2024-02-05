@@ -13,10 +13,12 @@ main document.
    listens to messages over a socket) inside the docker container. The host can then communicate
    with this daemon using a Python UNO bridge script that is running inside the docker container.
    The communication between the host machine and docker container is done using a rest API against a
-   flask web server running inside the docker container. The API currently only has a single
-   end point "open-document" which will open a given FODT document and also update its indexes.
+   flask web server running inside the docker container. The API currently only has two
+   end points "open-document" and "open-document-and-update", which will open a given FODT document
+   and the latter will also update its indexes.
 
-   To simplify the use of this end point, you can use the Python script `lodocker-open-file <file.fodt>`.
+   To simplify the use of these end points, you can use the Python scripts `lodocker-open-file <file.fodt>`
+   and `lodocker-open-file-and-update <file.fodt>`.
    See information about installing the Python script below.
 
 ### Notes
