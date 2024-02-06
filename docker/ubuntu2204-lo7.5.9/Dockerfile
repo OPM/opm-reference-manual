@@ -1,4 +1,3 @@
-# Stage 1: Build LibreOffice
 FROM ubuntu:22.04
 SHELL ["/bin/bash", "-c"]
 
@@ -18,6 +17,9 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y \
         curl git vim sudo wget tzdata \
         x11-xserver-utils
 RUN apt-get install -y libreoffice
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip python3-uno libreoffice-dev
+RUN pip install Flask
 
 # clean up the apt cache to reduce the image size
 RUN rm -rf /var/lib/apt/lists/*
@@ -31,11 +33,15 @@ RUN useradd --create-home -s /bin/bash $user \
         && adduser $user sudo \
         && echo "$user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
+COPY --chown=$user:$user container/* $home/
+RUN chmod +x $home/start.sh
+RUN chmod +x $home/update-libreoffice-config.sh
+
 WORKDIR $home
 
 ENV USER=$user
 ENV SHELL=/bin/bash
 USER $user
 
-CMD ["/bin/bash"]
+CMD ["./start.sh"]
 
