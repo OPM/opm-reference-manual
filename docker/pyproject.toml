@@ -10,10 +10,15 @@ packages = [{include = "lodocker", from = "src"}]
 python = "^3.10"
 click = "^8.1.7"
 requests = "^2.31.0"
+colorama = "^0.4.6"
+netifaces = "^0.11.0"
 
 [tool.poetry.scripts]
 lodocker-open-file = "lodocker.open_file:open_file"
 lodocker-open-file-and-update = "lodocker.open_file:open_file_and_update"
+lodocker-build-image = "lodocker.docker_build:build_docker_image"
+lodocker-run-container = "lodocker.docker_run:run_container"
+lodocker-start-container = "lodocker.docker_start:start_container"
 
 [build-system]
 requires = ["poetry-core"]
