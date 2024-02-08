@@ -41,12 +41,7 @@ class FixIgnored:
                     txt = re.sub(r"""<text:span>(.*?)</text:span>""", r"\1", txt)
                     if "is ignored by OPM Flow and has no effect on the simulation" in txt:
                         logging.info(f"Found ignored match in {file}:{line_no}.")
-                        if critical:
-                            txt = ("This keyword is not supported by OPM Flow but would change "
-                                   "the results if supported so the simulation will be stopped.")
-                        else:
-                            txt = ("This keyword is not supported by OPM Flow but has no effect "
-                                   "on the results so it will be ignored.")
+                        txt = self.replace_ignored(txt, critical)
                         line = start + txt + end
                         changed = True
                 lines.append(line)
@@ -102,6 +97,30 @@ class FixIgnored:
         else:
             logging.error(f"Failed to download {url}.")
         return None
+
+    def replace_ignored(self, txt: str, critical: set[str]) -> str:
+        if critical:
+            replacement = ("This keyword is not supported by OPM Flow but would change "
+                    "the results if supported so the simulation will be stopped.")
+        else:
+            replacement = ("This keyword is not supported by OPM Flow but has no effect "
+                    "on the results so it will be ignored.")
+
+        variants = ["This keyword is ignored by OPM Flow and has no effect on the simulation;",
+                    ", it is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness."]
+        found_variant = False
+        for variant in variants:
+            if variant in txt:
+                if variant[0:2] == ", ":
+                    replacement = ". " + replacement
+                elif variant[-1] == ";":
+                    replacement = replacement[:-1] + ";"
+                txt = txt.replace(variant, replacement)
+                found_variant = True
+                break
+        if not found_variant:
+            txt = replacement
+        return txt
 
 # USAGE:
 #
