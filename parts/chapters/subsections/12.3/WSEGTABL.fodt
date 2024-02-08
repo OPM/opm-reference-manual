@@ -4085,7 +4085,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716877_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716877_3964674244"/></text:h>
     <text:p text:style-name="P12060">WSEGTABL assigns previously defined Vertical Lift Performance (“VLP”) tables as specified by the VFPROD <text:s/>keyword in the SCHEDULE section, to multi-segment well segments, as well as stipulating how the tables are to be applied. </text:p>
     <text:p text:style-name="P12061">The FLOWOPT parameter on the WELSEGS keyword in the SCHEDULE section sets the default multi-segment well model. FLOWOPT either activates the homogeneous model, that is all phases flow at the same velocity, or the Drift Flux Slip model. However, the WSEGFMOD keyword in the SCHEDULE section, can be used to set the flow model for a segment to either the homogeneous model or the Drift Flux Slip model, and addition a: VLP table allocated via the WSEGTABL keyword, or a specific model as defined by the WSEGVALV, WSEGFLIM and WSEGLABY keywords. </text:p>
-    <text:p text:style-name="P12054">This keyword is ignored by OPM Flow and has no effect on the simulation.</text:p>
+    <text:p text:style-name="P12054">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P156"/>
     
    </text:section>
