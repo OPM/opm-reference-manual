@@ -9,6 +9,7 @@ packages = [{include = "fodt", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 click = "^8.1.7"
+requests = "^2.31.0"
 
 [tool.poetry.scripts]
 fodt-add-keyword = "fodt.add_keyword:add_keyword"
@@ -33,6 +34,7 @@ fodt-remove-bookmarks-from-master-styles = "fodt.remove_bookmarks:remove_bookmar
 fodt-extract-section = "fodt.extract_section:extract_section"
 fodt-extract-fonts = "fodt.extract_fonts:extract_fonts"
 fodt-remove-fonts = "fodt.remove_fonts:remove_fonts"
+fodt-fix-ignored-keywords = "fodt.fix_ignored:fix_ignored"
 
 [build-system]
 requires = ["poetry-core"]
