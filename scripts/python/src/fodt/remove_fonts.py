@@ -77,17 +77,17 @@ class RemoveFontData:
 # fodt-remove-fonts
 # -----------------
 # SHELL USAGE:
-#   fodt-remove-fonts --maindir=../parts --filename=<file.fodt>
+#   fodt-remove-fonts --maindir=../../parts --filename=<file.fodt>
 #
 # DESCRIPTION:
 #   Removes binary font data from font face declaration in file.fodt. The original
 #   file is backed up to a temp file before the font data is removed.
 #   The maindir is the directory where the file is located. If it is omitted, the
-#   default value "../parts" is used.
+#   default value "../../parts" is used.
 #
 # EXAMPLE:
 #
-#   fodt-remove-fonts --filename=main.fodt   # maindir is assumed to be ../parts
+#   fodt-remove-fonts --filename=main.fodt   # maindir is assumed to be ../../parts
 #
 @click.command()
 @ClickOptions.maindir(required=False)

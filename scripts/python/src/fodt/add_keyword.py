@@ -288,7 +288,7 @@ class AddKeyword():
 #
 # EXAMPLE:
 #
-#  fodt-add-keyword --maindir=../parts \
+#  fodt-add-keyword --maindir=../../parts \
 #                   --keyword=NEW_KEYWORD \
 #                   --section=4.3 \
 #                   --title="New Keyword" \

@@ -39,7 +39,7 @@ See [Splitting-Strategies.md](Splitting-Strategies.md) for status on this work.
 - Run the command:
 
 ```
-$ fodt-split-all --maindir=out --filename=../OPM_Flow_Reference_Manual.fodt
+$ fodt-split-all --maindir=out --filename=/tmp/Manual.fodt
 ```
 
 This will create a new main document in directory `out/main.fodt` and sub documents for each chapter
