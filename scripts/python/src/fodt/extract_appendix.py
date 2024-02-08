@@ -1,5 +1,5 @@
-# Specialized script to extract the Appendix A from file ../parts/main.fodt
-# We will save the appendix in directory ../parts/appendices/A.fodt
+# Specialized script to extract the Appendix A from file ../../parts/main.fodt
+# We will save the appendix in directory ../../parts/appendices/A.fodt
 
 import io
 import logging
