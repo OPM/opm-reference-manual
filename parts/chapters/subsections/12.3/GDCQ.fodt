@@ -4091,7 +4091,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881983"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881983"/></text:h>
     <text:p text:style-name="_40_TextBody">Th<text:span text:style-name="T5921">e GDCQ</text:span> keyword defines the <text:span text:style-name="T5921">Daily Contract Quantities (“DCQ”) for when multiple group contracts are required when the Gas Field Operations model has been activated by the GASFIELD keyword in the RUNSPEC section, or the GWSINGF has been invoked to define multiple group contracts in the SCHEDULE section. The group contracts must first be defined by the GSWINGF keyword, followed by the GCDQ keyword, and then the GASYEAR or GASPERIO keywords. GCDQ may be repeated in the SCHEDULE section to reset group DCQs. </text:span></text:p>
     <text:p text:style-name="_40_TextBody">See also the SWINGFAC keyword that set a single group DCQ at the field level, as opposed to having multiple DCQ group contracts using the GDCQ keyword.</text:p>
-    <text:p text:style-name="_40_TextBody">This keyword is ignored by OPM Flow and has no effect on the simulation.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     
    </text:section>
   </office:text>
