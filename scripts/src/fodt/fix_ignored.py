@@ -107,7 +107,9 @@ class FixIgnored:
                     "on the results so it will be ignored.")
 
         variants = ["This keyword is ignored by OPM Flow and has no effect on the simulation;",
-                    ", it is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness."]
+                    ", it is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness.",
+                    "This keyword is ignored by OPM Flow and has no effect on the simulation but",
+                    "; hence, <text:s/>this keyword is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness."]
         found_variant = False
         for variant in variants:
             if variant in txt:
@@ -115,6 +117,10 @@ class FixIgnored:
                     replacement = ". " + replacement
                 elif variant[-1] == ";":
                     replacement = replacement[:-1] + ";"
+                elif variant[-3:] == "but":
+                    replacement = replacement[:-1] + " but"
+                elif variant[0] == ";":
+                    replacement = "; hence t" + replacement[1:]
                 txt = txt.replace(variant, replacement)
                 found_variant = True
                 break
