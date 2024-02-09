@@ -106,10 +106,13 @@ class FixIgnored:
             replacement = ("This keyword is not supported by OPM Flow but has no effect "
                     "on the results so it will be ignored.")
 
-        variants = ["This keyword is ignored by OPM Flow and has no effect on the simulation;",
-                    ", it is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness.",
-                    "This keyword is ignored by OPM Flow and has no effect on the simulation but",
-                    "; hence, <text:s/>this keyword is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness."]
+        variants = [
+            "This keyword is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness.",
+            "This keyword is ignored by OPM Flow and has no effect on the simulation;",
+            ", it is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness.",
+            "This keyword is ignored by OPM Flow and has no effect on the simulation but",
+            "; hence, <text:s/>this keyword is ignored by OPM Flow and has no effect on the simulation but is documented here for completeness."
+        ]
         found_variant = False
         for variant in variants:
             if variant in txt:
