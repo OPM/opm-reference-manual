@@ -156,8 +156,7 @@ class FixIgnored:
 #
 @click.command()
 @ClickOptions.maindir(required=False)
-def fix_ignored(maindir: str
-) -> None:
+def fix_ignored(maindir: str) -> None:
     """Remove bookmark refs from the master style section in all subdocuments."""
     logging.basicConfig(level=logging.INFO)
     FixIgnored(maindir).fix_files()
