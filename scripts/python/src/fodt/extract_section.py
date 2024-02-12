@@ -237,7 +237,7 @@ class ExtractSection:
 #
 # Example:
 #
-# fodt-extract-section --maindir=../parts --section=11.2
+# fodt-extract-section --maindir=../../parts --section=11.2
 #
 @click.command()
 @ClickOptions.maindir(required=False)

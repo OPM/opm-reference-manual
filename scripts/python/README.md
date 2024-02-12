@@ -32,7 +32,7 @@ only be used for exporting the manual to PDF format. Rather, edit the generated 
 After having split the main document into subsections, you can create a new subsection document by
 using the `fodt-add-keyword` command, for example
 ```
-$ fodt-add-keyword --maindir=../parts --keyword=HELLO --section=4.3 --title="Hello World" --status=green
+$ fodt-add-keyword --maindir=../../parts --keyword=HELLO --section=4.3 --title="Hello World" --status=green
 ```
 will add a keyword `HELLO` to section 4.3. It will be assumed that the keywords are sorted
 alphabetically in the subsection which is used to determine the position of the keyword
@@ -74,9 +74,9 @@ extracted from it may need to be re-extracted. From the ``scripts`` folder we ca
 to re-extract (update) metadata:
 
 ```
-$ fodt-extract-metadata --maindir=../parts --filename=../OPM_Flow_Reference_Manual.fodt
-$ fodt-extract-document-attrs --maindir=../parts --filename=../OPM_Flow_Reference_Manual.fodt
-$ fodt-extract-style-info --maindir=../parts
+$ fodt-extract-metadata --maindir=../../parts --filename=/tmp/Manual.fodt
+$ fodt-extract-document-attrs --maindir=../../parts --filename=/tmp/Manual.fodt
+$ fodt-extract-style-info --maindir=../../parts
 ```
 
 Further, depending on the nature of the modification, all sub documents may also need to be updated.

@@ -19,7 +19,7 @@ class ClickOptions():
     )(func)
 
     @staticmethod
-    def maindir(required: bool = True, default: str = '../parts'):
+    def maindir(required: bool = True, default: str = '../../parts'):
         def decorator(func):
             return click.option(
                 '--maindir',
