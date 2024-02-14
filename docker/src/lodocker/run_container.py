@@ -8,6 +8,7 @@ from pathlib import Path
 import netifaces
 
 from lodocker.colors import green_color
+from lodocker.constants import Paths
 from lodocker.helpers import Helpers
 
 class RunContainer:
@@ -17,7 +18,7 @@ class RunContainer:
         logging.info(f"git_root: {self.git_root}")
         self.document_dir = self.git_root / self.shared_doc_dir
         # The home directory of the user in the Docker container
-        self.docker_home = "/home/docker-user"
+        self.docker_home = Paths.container_home
         # Directory where fonts are stored in the repository
         self.font_dir = self.git_root / "fonts"
         # Directory inside the Docker container where fonts will be stored
@@ -88,7 +89,7 @@ class RunContainer:
             ).stdout.strip()
         return xquartz_ip
 
-    def run_container(self, filename: str, image_name: str):
+    def run_container(self, filename: str, image_name: str, exec_name: str):
         if platform.system() == "Linux":
             Helpers.run_command(["xhost", "+"])
         args = ["docker", "run"]
@@ -101,7 +102,7 @@ class RunContainer:
         elif platform.system() == "Darwin":
             args.extend(["-v", self.xauthority_mount_string()])
         args.extend([image_name])
-        args.extend(["libreoffice", f"{self.docker_home}/{self.shared_doc_dir}/{filename}"])
+        args.extend([exec_name, f"{self.docker_home}/{self.shared_doc_dir}/{filename}"])
         command_str = " ".join(args)
         exit_code = Helpers.run_command(args)
         if platform.system() == "Linux":
@@ -113,7 +114,12 @@ class RunContainer:
         print("NOTE: You can also run this \"docker run\" command manually like this: ")
         print(f"{green_color(command_str)}")
 
-    def start_container(self, image_name: str):
+    def start_container(
+        self,
+        image_name: str,
+        exec_name: str,
+        lo_userdir: str,
+    ) -> None:
         if platform.system() == "Linux":
             Helpers.run_command(["xhost", "+"])
         args = ["docker", "run"]
@@ -127,6 +133,8 @@ class RunContainer:
         # Default to 8080 if not set
         flask_port = os.getenv("FLASK_PORT", 8080)
         args.extend(["-e", f"FLASK_PORT={flask_port}"])
+        args.extend(["-e", f"LIBREOFFICE_EXE={exec_name}"])
+        args.extend(["-e", f"LIBREOFFICE_USERDIR={lo_userdir}"])
         args.extend(["-p", f"{flask_port}:{flask_port}"])
         if platform.system() == "Linux":
             args.extend(["-v", self.x11_socket_mount_string()])

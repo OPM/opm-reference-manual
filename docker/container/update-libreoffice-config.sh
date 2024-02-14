@@ -8,8 +8,8 @@
 # https://ask.libreoffice.org/t/avoid-popup-dialog-at-startup-would-you-like-to-update-all-links-to-get-the-most-recent-data/99189
 #
 
-CONFIG_FILE="/home/docker-user/.config/libreoffice/4/user/registrymodifications.xcu"
-TEMP_FILE="/home/docker-user/.config/libreoffice/4/user/temp_registrymodifications.xcu"
+CONFIG_FILE="/home/docker-user/${LIBREOFFICE_USERDIR}/user/registrymodifications.xcu"
+TEMP_FILE="/home/docker-user/${LIBREOFFICE_USERDIR}/user/temp_registrymodifications.xcu"
 
 # Append the SecureURL item
 append_secure_url() {

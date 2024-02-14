@@ -20,6 +20,10 @@ lodocker-build-image = "lodocker.docker_build:build_docker_image"
 lodocker-run-container = "lodocker.docker_run:run_container"
 lodocker-start-container = "lodocker.docker_start:start_container"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-mock = "^3.12.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
