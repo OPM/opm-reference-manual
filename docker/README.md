@@ -28,7 +28,7 @@ Linux host, see sections below for details on Windows and macOS.
 `Dockerfile`'s are located in the directory `docker_files`. Currently, there are two
 Dockerfile directories, namely `ubuntu2204-lo7.5.9` and `ubuntu2310-dev`.
 The first one can be used to build a Docker image with Ubuntu22.04 and LibreOffice version
-7.5.9. The second, allow you to build LibreOffice from source from a specified git tag
+7.5.9. The second, allows you to build LibreOffice from source from a specified git tag
 and with or without debugging symbols.
 
 ### `lodocker-build-image`
