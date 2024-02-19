@@ -1,9 +1,9 @@
 # Run LibreOffice from a docker container
 
 The Python scripts in this folder allow you to run LibreOffice from a Docker
-container. Currently, there is only one container available with LibreOffice version
-7.5.9, but the plan is to add other containers in the future. For example,
-a container with a development version of LibreOffice with debugging symbols.
+container. Currently, there is one Dockerfile with Ubuntu 22.04 and
+LibreOffice version 7.5.9, and another one that allows you to build LibreOffice from
+source (from a specified git tag and with or without debugging symbols).
 
 The scripts need to be installed (with e.g. `poetry`) before they will be available,
 see the section below for how to install the scripts. After installation, the following
@@ -25,8 +25,11 @@ Linux host, see sections below for details on Windows and macOS.
 
 ## Scripts
 
-`Dockerfile`'s are located in the directory `docker_files`. Currently, there is only
-one Dockerfile directory, namely `ubuntu2204-lo7.5.9`.
+`Dockerfile`'s are located in the directory `docker_files`. Currently, there are two
+Dockerfile directories, namely `ubuntu2204-lo7.5.9` and `ubuntu2310-dev`.
+The first one can be used to build a Docker image with Ubuntu22.04 and LibreOffice version
+7.5.9. The second, allows you to build LibreOffice from source from a specified git tag
+and with or without debugging symbols.
 
 ### `lodocker-build-image`
 
@@ -42,6 +45,8 @@ If you do not specify a directory name, a menu of directory names will be presen
 can choose one from the menu.
 
 NOTE: The actual tag name of the Docker image is not necessarily the same as the directory name.
+
+
 
 ### `lodocker-run-container`
 

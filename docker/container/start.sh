@@ -29,7 +29,7 @@
 #  to initialize the user profile. Therefore we start LibreOffice, wait 5 seconds,
 #  kill it, modify the file, and start it again. See below:
 
-libreoffice --accept="socket,host=localhost,port=${LIBREOFFICE_PORT};urp;" --headless \
+${LIBREOFFICE_EXE} --accept="socket,host=localhost,port=${LIBREOFFICE_PORT};urp;" --headless \
   --norestore --nofirststartwizard --nologo --nodefault --pidfile=/home/docker-user/lo_pid.txt &
 
 
@@ -49,7 +49,7 @@ kill $(cat /home/docker-user/lo_pid.txt)
 
 echo "Restarting LibreOffice..."
 # Restart LibreOffice with the modified user profile
-libreoffice --accept="socket,host=localhost,port=${LIBREOFFICE_PORT};urp;" \
+${LIBREOFFICE_EXE} --accept="socket,host=localhost,port=${LIBREOFFICE_PORT};urp;" \
   --norestore --nofirststartwizard --nologo --nodefault --pidfile=/home/docker-user/lo_pid.txt &
 
 # Start the Flask server
