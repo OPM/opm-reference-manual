@@ -9,19 +9,19 @@ To make the rather large manual feasible to edit on most systems, the document
 is organized as a master document (`parts/main.fodt) which contains links to
 many other LibreOffice documents that contain the individual parts.
 
-Each chapter is in its own document (e.g. `parts/chapters/1.fdot` for the first
+Each chapter is in its own document (e.g. `parts/chapters/1.fodt` for the first
 chapter). The same holds for the chapters of the appendices (e.g
-`parts/appendices/A.fdot` for Appendix A).
+`parts/appendices/A.fodt` for Appendix A).
 
 Many of the chapter files contain themselves links to external documents. Those
 are representing sections (e.g. `parts/chapters/sections/4/3.fodt`  for section
-4.3 that is linked to from `parts/chapters/4.fdot`).
+4.3 that is linked to from `parts/chapters/4.fodt`).
 
 The special subsections (4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, and 12.3)
 contain all the descriptions of the keywords supported or not supported by
 flow. Each keyword is described in its
 own LibreOffice file and referenced as an external link in the subsection file.
-An example of such a file is parts/chapters/subsections/4.3/COLUMNS.fodt.
+An example of such a file is `parts/chapters/subsections/4.3/COLUMNS.fodt`.
 
 ## Editing the manual
 
