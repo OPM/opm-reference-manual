@@ -5,28 +5,19 @@ import xml.sax.handler
 import xml.sax.xmlreader
 import xml.sax.saxutils
 
+from fodt.constants import TagEvent
+from fodt.exceptions import HandlerDoneException
 from fodt.xml_helpers import XMLHelper
 
-class HandlerDoneException(Exception):
-    def __init__(self, value: str):
-        self.value = value
-
-    def __str__(self) -> str:
-        return f"Sax xml parsing finshed: {self.value}"
-
-class TagEvent():
-    NONE = 0
-    START = 1
-    END = 2
 
 class SectionHandler(xml.sax.handler.ContentHandler):
-    def __init__(self, section_name: str) -> None:
+    def __init__(self, section_name: str, enable_indent: bool = True) -> None:
         self.section_name = section_name
         self.section = ''
         self.indent = 0
         self.last_event = TagEvent.NONE
         self.close_tag_count = 0
-        self.enable_indent = True
+        self.enable_indent = enable_indent
         self.attrs = {}
         self.in_section = False
 
@@ -75,14 +66,20 @@ class SectionHandler(xml.sax.handler.ContentHandler):
         self.section = re.sub(r"\s+$", "", self.section)
 
 class ExtractXmlTag():
-    def __init__(self, filename: str, section_name: str) -> None:
-        logging.info(f"Extracting section {section_name} from {filename}.")
+    def __init__(
+        self, filename: str, section_name: str, enable_indent: bool = True
+    ) -> None:
+        self.filename = filename
+        self.section_name = section_name
+        self.enable_indent = enable_indent
+
+    def extract(self) -> str:
         parser = xml.sax.make_parser()
-        handler = SectionHandler(section_name)
+        handler = SectionHandler(self.section_name, enable_indent=self.enable_indent)
         parser.setContentHandler(handler)
         try:
-            logging.info(f"Parsing {filename}.")
-            parser.parse(filename)
+            logging.info(f"Parsing {self.filename}.")
+            parser.parse(self.filename)
         except HandlerDoneException as e:
             logging.info(e)
-        print(handler.get_section())
+        return handler.get_section()

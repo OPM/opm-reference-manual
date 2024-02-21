@@ -45,5 +45,5 @@ and click the "Export" button in the dialog, then choose a filename for the PDF 
 For further information please see the following READMEs:
 - [fonts/README.md](fonts/README.md) for information about how to display the
   documents correctly with the correct fonts (e.g. using docker)
-- [scripts/README.md](scripts/README.md) for information about the scripts
+- [scripts/python/README.md](scripts/python/README.md) for information about the scripts
   used for splitting the original document.
