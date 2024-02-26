@@ -4910,7 +4910,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P110">AUTO: <text:span text:style-name="T34">the well is initially SHUT, but may be opened automatically if an economic limit is violated. This option is currently not supported by OPM Flow. <text:s/></text:span></text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P59">Note a well’s STATUS should always be set either STOP or SHUT if the well’s production is to be set to zero. Just setting a well’s <text:span text:style-name="T48">injection</text:span> rate to zero means that the well is open <text:span text:style-name="T48">for injection</text:span> with a zero rate, this will cause numerical issues especially for wells under THP control. <text:s text:c="2"/></text:p>
+       <text:p text:style-name="P59">Note a well’s STATUS should always be set either STOP or SHUT if the well’s injection is to be set to zero. Just setting a well’s <text:span text:style-name="T48">injection</text:span> rate to zero means that the well is open <text:span text:style-name="T48">for injection</text:span> with a zero rate, this will cause numerical issues especially for wells under THP control. <text:s text:c="2"/></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4930,19 +4930,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P29">A <text:span text:style-name="T33">defined character string that sets the target injection control mode for the well. TARGET should be set to one of the following character strings:</text:span></text:p>
        <text:list text:continue-list="list162919371466315" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P108"><text:span text:style-name="T43">RATE</text:span>: <text:span text:style-name="T24">t</text:span>he <text:span text:style-name="T43">injection phase will be control by the surface fluid rate for the given well type as defined by the TYPE variable. <text:s/>For example, if TYPE has been set to WAT then this would mean the surface water injection rate as defined by item (5). </text:span></text:p>
+         <text:p text:style-name="P108"><text:span text:style-name="T43">RATE</text:span>: <text:span text:style-name="T24">t</text:span>he <text:span text:style-name="T43">injection phase will be controlled by the surface fluid rate for the given well type as defined by the TYPE variable. <text:s/>For example, if TYPE has been set to WAT then this would mean the surface water injection rate as defined by item (5). </text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P108"><text:span text:style-name="T43">RESV: t</text:span>he <text:span text:style-name="T43">injection phase will be control by the in situ reservoir volume fluid rate for the given well type as defined by the TYPE variable. <text:s/>For example, if TYPE has been set to GAS then this would mean the gas reservoir volume injection rate as defined by item (6). </text:span></text:p>
+         <text:p text:style-name="P108"><text:span text:style-name="T43">RESV: t</text:span>he <text:span text:style-name="T43">injection phase will be controlled by the in situ reservoir volume fluid rate for the given well type as defined by the TYPE variable. <text:s/>For example, if TYPE has been set to GAS then this would mean the gas reservoir volume injection rate as defined by item (6). </text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P111">BHP: the target rate is set to the bottom-hole pressure as defined by item (<text:span text:style-name="T44">7</text:span>).</text:p>
+         <text:p text:style-name="P111">BHP: the target rate is set according to the bottom-hole pressure as defined by item (<text:span text:style-name="T44">7</text:span>).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P112">THP: the target rate is set to the tubing head pressure as defined by item (<text:span text:style-name="T44">8</text:span>). If this option is selected then the vertical lift performance tables must be entered via the VFP<text:span text:style-name="T44">INJ</text:span> keyword in the SCHEDULE section <text:span text:style-name="T38">and allocated to the well via item (9).</text:span></text:p>
+         <text:p text:style-name="P112">THP: the target rate is set according to the tubing head pressure as defined by item (<text:span text:style-name="T44">8</text:span>). If this option is selected then the vertical lift performance tables must be entered via the VFP<text:span text:style-name="T44">INJ</text:span> keyword in the SCHEDULE section <text:span text:style-name="T38">and allocated to the well via item (9).</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P113">GRUP: the well is under group control and injects its share of the group&apos;s target as set using the GCONINJ keyword in the SCHEDULE. Section.</text:p>
+         <text:p text:style-name="P113">GRUP: the well is under group control and injects its share of the group&apos;s target as set using the GCONINJE keyword in the SCHEDULE section.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5006,7 +5006,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table118.C2"/>
       <table:covered-table-cell table:style-name="Table118.C2"/>
       <table:table-cell table:style-name="Table118.C2" office:value-type="string">
-       <text:p text:style-name="P37"><text:span text:style-name="T37">r</text:span>tb/d</text:p>
+       <text:p text:style-name="P37"><text:span text:style-name="T37">r</text:span>b/d</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" office:value-type="string">
        <text:p text:style-name="P37"><text:span text:style-name="T37">r</text:span>m<text:span text:style-name="T28">3</text:span>/day</text:p>
@@ -5025,7 +5025,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P38">A real positive value that defines the <text:span text:style-name="T44">maximum bottom-hole pressure</text:span> target or constraint.</text:p>
-       <text:p text:style-name="P53">Note the default value of <text:span text:style-name="T44">basically means unlimited injection or no constraint</text:span> <text:span text:style-name="T45">and </text:span>should <text:span text:style-name="T44">therefore be</text:span> avoided as the BHP will result in unrealistic well potentials as well as optimistic <text:span text:style-name="T44">injection </text:span>forecasts for the well.</text:p>
+       <text:p text:style-name="P53">Note the default value <text:span text:style-name="T44">basically means unlimited injection or no constraint</text:span> <text:span text:style-name="T45">and </text:span>should <text:span text:style-name="T44">therefore be</text:span> avoided as the BHP will result in unrealistic well potentials as well as optimistic <text:span text:style-name="T44">injection </text:span>forecasts for the well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5106,7 +5106,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P62">RSRVINJ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P64"><text:span text:style-name="T53">The </text:span><text:span text:style-name="T52">d</text:span>issolved gas ratio in <text:span text:style-name="T52">the </text:span>injected oil, or <text:span text:style-name="T52">the </text:span>vaporized oil ratio in <text:span text:style-name="T52">the </text:span>injected gas.</text:p>
+       <text:p text:style-name="P64"><text:span text:style-name="T53">The </text:span><text:span text:style-name="T52">d</text:span>issolved gas-oil ratio in <text:span text:style-name="T52">the </text:span>injected oil, or <text:span text:style-name="T52">the </text:span>vaporized oil-gas ratio in <text:span text:style-name="T52">the </text:span>injected gas.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5235,7 +5235,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P70">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.78</text:sequence>: WCONINJE Keyword Description</text:p>
     <text:p text:style-name="P74"/>
-    <text:p text:style-name="P72">See also the GCONPROD the GCONINJ<text:span text:style-name="T54">E</text:span> keywords to define a group’s production and injection targets and constraints, and the WCONPROD keyword to define a production well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P72">See also the GCONPROD the GCONINJE<text:span text:style-name="T54">E</text:span> keywords to define a group’s production and injection targets and constraints, and the WCONPROD keyword to define a production well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <text:p text:style-name="P72"/>
     <text:h text:style-name="P76" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716711_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716711_3964674244"/></text:h>
     <text:p text:style-name="P68">The following example defines the <text:span text:style-name="T46">injection ta</text:span>rgets and constraints <text:span text:style-name="T23">for one gas injection well and one water injection well as follows:</text:span></text:p>

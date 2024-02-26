@@ -4821,10 +4821,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19503"><text:span text:style-name="T2931">RESV: the target is set to the in situ reservoir volume rate as defined by item (5).</text:span> <text:s/></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19618">REIN: the target is set to groups production of the phase defined by TYPE multiplied by the value on item (6). <text:s/>For example, if TYPE has been set to WAT then this would mean the groups water production multiplied by item (6).</text:p>
+         <text:p text:style-name="P19618">REIN: the target is set to the group's production of the phase defined by TYPE multiplied by the value on item (6). <text:s/>For example, if TYPE has been set to WAT then this would mean the group's water production multiplied by item (6).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19618">VREP: the target is set to the groups voidage replacement ratio as defined by item (7).</text:p>
+         <text:p text:style-name="P19618">VREP: the target is set to the group's voidage replacement ratio as defined by item (7).</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P16231"/>
@@ -4909,7 +4909,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7698">A real positive value that defines the target or constraint<text:span text:style-name="T5111"> re-injection fraction</text:span> <text:span text:style-name="T5144">for the produced phase defined by the TYPE variable. </text:span></text:p>
-       <text:p text:style-name="P7974">For example, if TYPE is equal to GAS and REINJ is equal to 0.85, then 85% of the produced gas will be re-injected.</text:p>
+       <text:p text:style-name="P7974">For example, if TYPE is equal to GAS and REIN is equal to 0.85, then 85% of the produced gas will be re-injected.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4978,7 +4978,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19502"><text:span text:style-name="T5102">YES</text:span>: <text:span text:style-name="T5104">then this group is subject to a higher level group’s control and the flow rates for this group will be adjusted accordingly. </text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19619">NO: then this group is NOT subject to a higher level group’s control and the flow rates for this group will only be control by the parameters for this group.</text:p>
+         <text:p text:style-name="P19619">NO: then this group is NOT subject to a higher level group’s control and the flow rates for this group will only be controlled by the parameters for this group.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P16797">This variable is ignored if GRPNAME is equal to FIELD.</text:p>
@@ -4998,7 +4998,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7442">A real positive value that defines a group's <text:span text:style-name="T2925">injection</text:span> guide rate expressed as a dimensionless number. <text:s/>A group requires a value for GRPGUIDE only if it is required to produce a specified proportion of a higher level group’s rate.</text:p>
-       <text:p text:style-name="P8762">Defaulting GRPGUIDE results in the subordinate groups and wells under guide control having their rates dictating by any higher level groups under guide rate control. In other words the GRPNAME is masked out.</text:p>
+       <text:p text:style-name="P8762">Defaulting GRPGUIDE results in the subordinate groups and wells under guide control having their rates dictated by any higher level groups under guide rate control. In other words the GRPNAME is masked out.</text:p>
        <text:p text:style-name="P8763">Setting GRPGUIDE to a real positive value and <text:span text:style-name="T7180">GUIPHASE </text:span>to either RATE or RESV will result in a constant injection guide rate.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5033,7 +5033,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7379">A <text:span text:style-name="T5098">defined character string that sets the guide phase to which the guide rate in item (9) applies. <text:s/>GUIPHASE should be set to one of the following character strings:</text:span></text:p>
        <text:list xml:id="list105919970193996" text:continue-list="list105920254811648" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19504"><text:span text:style-name="T7178">NETV: the guide phase is set to production rate minus any injected reservoir rate from the other phases. The net volume is calculated at the beginning of a time step and </text:span><text:span text:style-name="T7179">the </text:span><text:span text:style-name="T7178">option </text:span><text:span text:style-name="T2161">should only</text:span><text:span text:style-name="T7178"> be used fo</text:span><text:span text:style-name="T7179">r</text:span><text:span text:style-name="T7178"> groups </text:span><text:span text:style-name="T7179">under</text:span><text:span text:style-name="T7178"> voidage replacement </text:span><text:span text:style-name="T7179">control</text:span><text:span text:style-name="T7178">. Note that using this option means that TYPE, item (2) will be the supplement or “make up” phase and the value entered for </text:span><text:span text:style-name="T7179">the groups guide rate (</text:span><text:span text:style-name="T7180">GRPGUIDE</text:span><text:span text:style-name="T7179">) will be ignored </text:span><text:span text:style-name="T7181">with this option.</text:span></text:p>
+         <text:p text:style-name="P19504"><text:span text:style-name="T7178">NETV: the guide phase is set to production rate minus any injected reservoir rate from the other phases. The net volume is calculated at the beginning of a time step and </text:span><text:span text:style-name="T7179">the </text:span><text:span text:style-name="T7178">option </text:span><text:span text:style-name="T2161">should only</text:span><text:span text:style-name="T7178"> be used fo</text:span><text:span text:style-name="T7179">r</text:span><text:span text:style-name="T7178"> groups </text:span><text:span text:style-name="T7179">under</text:span><text:span text:style-name="T7178"> voidage replacement </text:span><text:span text:style-name="T7179">control</text:span><text:span text:style-name="T7178">. Note that using this option means that TYPE, item (2) will be the supplement or “make up” phase and the value entered for </text:span><text:span text:style-name="T7179">the group's guide rate (</text:span><text:span text:style-name="T7180">GRPGUIDE</text:span><text:span text:style-name="T7179">) will be ignored </text:span><text:span text:style-name="T7181">with this option.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19505"><text:span text:style-name="T5100">RATE</text:span>: <text:span text:style-name="T5104">t</text:span>he <text:span text:style-name="T5098">guide phase is set to the surface injection rate. </text:span><text:span text:style-name="T7182">Setting </text:span><text:span text:style-name="T7180">GUIPHASE </text:span><text:span text:style-name="T7182">to RATE and GRPGUIDE to a real positive value will result in a constant injection guide rate.</text:span></text:p>
@@ -5062,7 +5062,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7325">A character string of up to eight characters in length that defines the <text:span text:style-name="T5097">group</text:span> name <text:span text:style-name="T6404">whose production rate should be used </text:span>for <text:span text:style-name="T6404">applying</text:span> the <text:span text:style-name="T6404">REIN quantity to be injected into GRPNAME.</text:span></text:p>
-       <text:p text:style-name="P8589">This variable is used to re-inject the REIN production faction from another group (GRPREIN) via this group (GRPNAME). <text:s/>If GRPREIN is defaulted then the re-injection quantity for GRPNAME will be based on the production from GRPNAME. </text:p>
+       <text:p text:style-name="P8589">This variable is used to re-inject the REIN production faction from another group (GRPREIN) via this group (GRPNAME). <text:s/>If GRPREIN is defaulted then the re-injection quantity for GRPNAME will be based on the production from GRPNAME itself. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5079,7 +5079,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7325">A character string of up to eight characters in length that defines the <text:span text:style-name="T5097">group</text:span> name <text:span text:style-name="T6404">whose production rate should be used </text:span>for <text:span text:style-name="T6404">applying</text:span> the <text:span text:style-name="T6404">VREP quantity to be injected into GRPNAME.</text:span></text:p>
-       <text:p text:style-name="P8589">This variable is used to re-inject the VREP production faction from another group (GRPVREP) via this group (GRPNAME). <text:s/>If GRPVREP is defaulted then the voidage quantity for GRPNAME will be based on the production from GRPNAME. </text:p>
+       <text:p text:style-name="P8589">This variable is used to re-inject the VREP production faction from another group (GRPVREP) via this group (GRPNAME). <text:s/>If GRPVREP is defaulted then the voidage quantity for GRPNAME will be based on the production from GRPNAME itself. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
