@@ -111,7 +111,11 @@ class CreateAppendixFile():
 class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
     def __init__(self, appendix_number: str, start_id: str, end_id: str) -> None:
         self.start_id = f"list{start_id}"
-        self.end_id = f"list{end_id}"
+        if end_id == "<<section>>":
+            self.end_type = "section"
+        else:
+            self.end_type = "list"
+            self.end_id = f"list{end_id}"
         self.appendix_number = appendix_number
         self.in_appendix = False
         self.appendix = None
@@ -167,13 +171,18 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
                     self.in_appendix = True
                     self.appendix = io.StringIO()
                     self.insert_section_link_into_doc()
-        elif self.in_appendix and (name == "text:list"):
-            if "xml:id" in attrs.getNames():
-                xml_id = attrs.getValue("xml:id")
-                if xml_id == self.end_id:
-                    self.in_appendix = False
-                    self.doc.write(XMLHelper.starttag(name, attrs))
-                    return
+        elif self.in_appendix:
+            if (self.end_type == "list") and (name == "text:list"):
+                if "xml:id" in attrs.getNames():
+                    xml_id = attrs.getValue("xml:id")
+                    if xml_id == self.end_id:
+                        self.in_appendix = False
+                        self.doc.write(XMLHelper.starttag(name, attrs))
+                        return
+            elif (self.end_type == "section") and (name == "text:section"):
+                self.in_appendix = False
+                self.doc.write(XMLHelper.starttag(name, attrs))
+                return
         if self.in_appendix:
             self.appendix.write(XMLHelper.starttag(name, attrs))
             self.collect_styles(attrs)
@@ -193,6 +202,8 @@ class ExtractAndRemoveAppendixFromMain:
             ids = ("105923873468832", "105925008885815")
         elif self.appendix_number == "C":
             ids = ("105925008885815", "105924600149260")
+        elif self.appendix_number == "D":
+            ids = ("105924600149260", "<<section>>")
         elif self.appendix_number == "E":
             ids = ("105926382943660", "105927136285395")
         else:
@@ -207,7 +218,7 @@ class ExtractAndRemoveAppendixFromMain:
 class ExtractAppendix:
     def __init__(self, maindir: str, appendix: str) -> None:
         self.maindir = Path(maindir)
-        valid_appendices = {"A", "B", "C", "E"}
+        valid_appendices = {"A", "B", "C", "D", "E"}
         if appendix not in valid_appendices:
             # Only certain appendices are supported for now..
             raise ValueError(
