@@ -57,6 +57,26 @@ $ fodt-set-ketword-status --keyword=CSKIN --color=green
 
 this will change the color from orange to green.
 
+## Submitting a PR for a change to a `.fodt` file
+
+If you modify one of the `.fodt` files in the `parts` folder using LibreOffice and then
+save it, LibreOffice will usually restructure the internally used XML tag attribute style
+names. These changes are of no importance for the real change you made to the document
+but will show up in a Git diff if you submit a pull request for the change and will
+make the review of your change more difficult for the reviewers (since they have to
+search through the whole diff for the actual change you made).
+
+To improve on this situation, there is a script `fodt-split-commit` that can be used
+to split a commit into two parts. The first part commit contains the style changes that
+is usually not important for the reviewer, and the second part commit contains the
+real changes. The reviewer can then focus on reviewing the second part.
+
+The requirement for using the script is that the last commit contain changes to a single
+`.fodt` file. The commit message of the last commit will be used as a prefix for the commit
+messages of the two new commits (that replaces the current commit) with style
+and content changes. See the documentation in the source code [split_git_commit.py](src/fodt/split_git_commit.py) for more details.
+
+
 ## Exporting the manual as PDF
 
 Open `main.fodt`. Scroll down to the table of contents and right-click on an entry (e.g. Chapter 1).
