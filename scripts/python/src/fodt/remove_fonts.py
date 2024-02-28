@@ -24,7 +24,7 @@ class FontHandler(xml.sax.handler.ContentHandler):
     def characters(self, content: str):
         if self.in_font_face:
             return  # we remove the interior of a font-face tag
-        self.content.write(xml.sax.saxutils.escape(content))
+        self.content.write(XMLHelper.escape(content))
 
     def endElement(self, name: str):
         if name == 'office:font-face-decls':

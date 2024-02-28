@@ -35,7 +35,7 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if not self.in_section:
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
 
     def default_replace_callback(self, section: int) -> str:
         return f"<text:section>Section{section}</text:section>\n"

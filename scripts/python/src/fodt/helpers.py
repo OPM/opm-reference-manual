@@ -5,6 +5,7 @@ import xml.sax.saxutils
 from pathlib import Path
 from fodt.constants import Directories, FileExtensions, FileNames
 from fodt.exceptions import InputException
+from fodt.xml_helpers import XMLHelper
 
 class Helpers:
 
@@ -103,7 +104,7 @@ class Helpers:
     def replace_section_callback(part: str, keyword: str) -> str:
         section = ".".join(part.split(".")[:2])
         href = f"{Directories.subsections}/{section}/{keyword}.fodt"
-        href = xml.sax.saxutils.escape(href)
+        href = XMLHelper.escape(href)
         return (f"""<text:section text:style-name="Sect1" text:name="Section{section}:{keyword}" """
                    f"""text:protected="true">\n"""
                 f"""     <text:section-source xlink:href="{href}" """

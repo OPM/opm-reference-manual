@@ -52,7 +52,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.include:
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
 
 
 class AutomaticStylesFilter:

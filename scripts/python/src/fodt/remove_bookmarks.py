@@ -30,7 +30,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(xml.sax.saxutils.escape(content))
+        self.content.write(XMLHelper.escape(content))
 
     def endElement(self, name: str):
         if self.in_master_styles:

@@ -40,7 +40,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
     def characters(self, content: str):
         # if (not self.in_subsection) and (not self.remove_section):
         if not self.in_main_section:
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
 
     def check_included_section(self, name: str, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
         if "text:name" in attrs.getNames():

@@ -62,7 +62,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
                 self.keyword_name = self.predefined_keywords[self.current_subsection - 1]
             self.save_keyword_name = False
         if self.in_subsection:
-            self.subsection.write(xml.sax.saxutils.escape(content))
+            self.subsection.write(XMLHelper.escape(content))
 
     def collect_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         for (key, value) in attrs.items():

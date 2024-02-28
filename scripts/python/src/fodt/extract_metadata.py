@@ -91,7 +91,7 @@ class SectionHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_section:
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
 
     def write_section_to_file(self):
         filename = self.current_section.removeprefix("office:") + ".xml"

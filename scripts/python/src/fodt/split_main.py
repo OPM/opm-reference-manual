@@ -23,7 +23,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         self.nesting = 0
 
     def characters(self, content: str):
-        self.content.write(xml.sax.saxutils.escape(content))
+        self.content.write(XMLHelper.escape(content))
 
     def check_correct_table(self, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
         keys = attrs.keys()

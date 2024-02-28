@@ -63,7 +63,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if not self.in_element:
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
 
     def write_file(self):
         filename = Path(self.outputfn)
