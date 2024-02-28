@@ -216,9 +216,9 @@ class Splitter:
 # Split the last committed file in a Git repository into separate commits for style and
 #  content changes. To simplify complexities with stashing of files, the last commit
 #  should contain changes to a single .fodt file. If the last commit contains
-#  changes to multiple files en error will be raised. The user is then required
+#  changes to multiple files an error will be raised. The user is then required
 #  to manually separate the changes into separate commits before running this script.
-#  If the last commit contain change to a file that is not a .fodt file, an error
+#  If the last commit contains changes to a file that is not a .fodt file, an error
 #  will be raised.
 #
 #  The commit message of the last commit will be used as a prefix for the commit
