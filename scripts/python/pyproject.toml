@@ -10,6 +10,9 @@ packages = [{include = "fodt", from = "src"}]
 python = "^3.10"
 click = "^8.1.7"
 requests = "^2.31.0"
+gitpython = "^3.1.42"
+pytest = "^8.0.1"
+pytest-mock = "^3.12.0"
 
 [tool.poetry.scripts]
 fodt-add-keyword = "fodt.add_keyword:add_keyword"
@@ -31,6 +34,7 @@ fodt-remove-lines = "fodt.remove_lines:remove_lines"
 fodt-set-font-decls = "fodt.set_fonts:set_font_decls"
 fodt-set-keyword-status = "fodt.add_keyword_status:set_keyword_status"
 fodt-split-all = "fodt.split_all:split_all"
+fodt-split-commit = "fodt.split_git_commit:split_commit"
 fodt-split-main = "fodt.split_main:split_main"
 fodt-split-subdocument = "fodt.split_subdocument:split_subdocument"
 fodt-splitter = "fodt.splitter:main"

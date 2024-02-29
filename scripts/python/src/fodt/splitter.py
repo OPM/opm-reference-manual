@@ -222,8 +222,9 @@ def extract_metadata(maindir: str, filename: str) -> None:
 def extract_xml_tag(filename: str, section: str) -> None:
     """Extract an xml tag from the fodt file."""
     logging.basicConfig(level=logging.INFO)
-    logging.info(f"Extracting a section from {filename}.")
-    extracter = ExtractXmlTag(filename, section)
+    logging.info(f"Extracting section {section} from {filename}.")
+    tag = ExtractXmlTag(filename, section).extract()
+    print(tag)
 
 def main():
     logging.basicConfig(level=logging.INFO)
