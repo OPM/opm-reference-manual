@@ -113,6 +113,8 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
         self.start_id = f"list{start_id}"
         if end_id == "<<section>>":
             self.end_type = "section"
+        elif end_id == "<<end>>":
+            self.end_type = "end"
         else:
             self.end_type = "list"
             self.end_id = f"list{end_id}"
@@ -183,6 +185,13 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
                 self.in_appendix = False
                 self.doc.write(XMLHelper.starttag(name, attrs))
                 return
+            elif (self.end_type == "end") and (name == "text:p"):
+                if "text:style-name" in attrs.getNames():
+                    style_name = attrs.getValue("text:style-name")
+                    if style_name == "ENDENDEND":
+                        self.in_appendix = False
+                        self.doc.write(XMLHelper.starttag(name, attrs))
+                        return
         if self.in_appendix:
             self.appendix.write(XMLHelper.starttag(name, attrs))
             self.collect_styles(attrs)
@@ -206,6 +215,8 @@ class ExtractAndRemoveAppendixFromMain:
             ids = ("105924600149260", "<<section>>")
         elif self.appendix_number == "E":
             ids = ("105926382943660", "105927136285395")
+        elif self.appendix_number == "F":
+            ids = ("105927136285395", "<<end>>")
         else:
             raise ValueError(f"Invalid appendix number: {self.appendix_number}")
         handler = ExtractAndRemoveHandler(
@@ -218,7 +229,7 @@ class ExtractAndRemoveAppendixFromMain:
 class ExtractAppendix:
     def __init__(self, maindir: str, appendix: str) -> None:
         self.maindir = Path(maindir)
-        valid_appendices = {"A", "B", "C", "D", "E"}
+        valid_appendices = {"A", "B", "C", "D", "E", "F"}
         if appendix not in valid_appendices:
             # Only certain appendices are supported for now..
             raise ValueError(
