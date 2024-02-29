@@ -4993,7 +4993,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:list text:style-name="L1">
         <text:list-header>
-         <text:p text:style-name="P117">Note the <text:span text:style-name="T48">TARGET </text:span>control mode may be reset using the WHISTCNTL keyword in the SCHEDULE section, from the time the WHISTCNTL is invoked, thus avoiding changing the control mode on all subsequent WCONHIST keywords.</text:p>
+         <text:p text:style-name="P117">Note the <text:span text:style-name="T48">TARGET </text:span>control mode may be reset using the WHISTCTL keyword in the SCHEDULE section, from the time the WHISTCTL is invoked, thus avoiding changing the control mode on all subsequent WCONHIST keywords.</text:p>
         </text:list-header>
        </text:list>
       </table:table-cell>
@@ -5118,7 +5118,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table122.F3" office:value-type="string">
-       <text:p text:style-name="P41">None</text:p>
+       <text:p text:style-name="P41">0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table122.1">
@@ -5129,7 +5129,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P43">ALQ-WELL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table122.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P44">A real positive value that defines the <text:span text:style-name="T40">artificial lift quantity to be used in conjunction with the VFPPROD assigned to the well via V</text:span><text:span text:style-name="T58">FP</text:span><text:span text:style-name="T40">TAB variable. <text:s/></text:span></text:p>
+       <text:p text:style-name="P44">A real positive value that defines the <text:span text:style-name="T40">artificial lift quantity to be used in conjunction with the VFPPROD assigned to the well via that keyword's V</text:span><text:span text:style-name="T58">FP</text:span><text:span text:style-name="T40">TAB variable. <text:s/></text:span></text:p>
        <text:p text:style-name="P44"><text:span text:style-name="T40">VFPTAB vertical lift performance table and the</text:span> <text:span text:style-name="T40">artificial lift quantity ALQ-WELL are used with the well fluid rates to calculate the well’s </text:span>tubing head pressure<text:span text:style-name="T40">s values from the bottom-hole pressure.</text:span></text:p>
        <text:p text:style-name="P47"><text:span text:style-name="T42">Note that the u</text:span>nits for ALQ-WELL is dependent on the associated variable on the VF<text:span text:style-name="T47">P</text:span>PROD keyword.</text:p>
       </table:table-cell>
@@ -5149,7 +5149,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table122.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P31">A real positive value that defines the <text:span text:style-name="T43">observed tubing head pressure.</text:span></text:p>
-       <text:p text:style-name="P56">This parameter is only used for comparing the actual tubing head pressure given here with those calculated by the simulator, that is history marching wells can only controlled by either the surface injection rate or their bottom-hole <text:span text:style-name="T44">pressure.</text:span></text:p>
+       <text:p text:style-name="P56">This parameter is only used for comparing the actual tubing head pressure given here with those calculated by the simulator, that is history matching wells can only be controlled by either the surface injection rate or their bottom-hole <text:span text:style-name="T44">pressure.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5257,7 +5257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P75">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.77</text:sequence>: WCONHIST Keyword Description</text:p>
     <text:p text:style-name="P76"/>
-    <text:p text:style-name="_40_TextBody">See also the WHISTCNTL that can be used to reset the TARGET phase, the GCONPROD and GCONINJ<text:span text:style-name="T58">E</text:span> keywords to define a group’s production and injection targets and constraints, and the WCONPROD keyword to define a production well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the WHISTCTL keyword that can be used to reset the TARGET phase, the GCONPROD and GCONINJ<text:span text:style-name="T58">E</text:span> keywords to define a group’s production and injection targets and constraints, and the WCONPROD keyword to define a production well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <table:table table:name="Table123" table:style-name="Table123">
      <table:table-column table:style-name="Table123.A"/>
      <table:table-header-rows>
@@ -5273,7 +5273,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="Text_20_body"><text:span text:style-name="T44">History matching well</text:span><text:span text:style-name="T56">s</text:span><text:span text:style-name="T44"> are converted to ordinary wells by restating a well’s control mode using either the <text:s/>WCON</text:span><text:span text:style-name="T49">PROD</text:span><text:span text:style-name="T44"> or WELTARG keywords in the SCHEDULE section.</text:span></text:p>
     <text:h text:style-name="P78" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716705_3964674244"/>Example<text:span text:style-name="T51">s</text:span><text:bookmark-end text:name="__RefHeading___Toc716705_3964674244"/></text:h>
-    <text:p text:style-name="P65">The following example <text:span text:style-name="T45">below shows the observed gas rates for the OP01 oil producer for the first quarter of 2000.</text:span></text:p>
+    <text:p text:style-name="P65">The following example <text:span text:style-name="T45">below shows the observed production rates for the OP01 oil producer for the first quarter of 2000.</text:span></text:p>
     <text:p text:style-name="P67">-- ------------------------------------------------------------------------------</text:p>
     <text:p text:style-name="P67">-- 01 JAN 2000 START OF SCHEDULE SECTION <text:s text:c="92"/></text:p>
     <text:p text:style-name="P67">-- ------------------------------------------------------------------------------ <text:s text:c="130"/></text:p>
