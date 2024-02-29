@@ -191,6 +191,8 @@ class ExtractAndRemoveAppendixFromMain:
             ids = ("3623483562", "105923873468832")
         elif self.appendix_number == "B":
             ids = ("105923873468832", "105925008885815")
+        elif self.appendix_number == "C":
+            ids = ("105925008885815", "105924600149260")
         elif self.appendix_number == "E":
             ids = ("105926382943660", "105927136285395")
         else:
@@ -205,7 +207,7 @@ class ExtractAndRemoveAppendixFromMain:
 class ExtractAppendix:
     def __init__(self, maindir: str, appendix: str) -> None:
         self.maindir = Path(maindir)
-        valid_appendices = {"A", "B", "E"}
+        valid_appendices = {"A", "B", "C", "E"}
         if appendix not in valid_appendices:
             # Only certain appendices are supported for now..
             raise ValueError(
