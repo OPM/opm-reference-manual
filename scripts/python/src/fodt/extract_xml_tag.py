@@ -60,7 +60,7 @@ class SectionHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_section:
-            self.section += xml.sax.saxutils.escape(content)
+            self.section += XMLHelper.escape(content)
 
     def remove_trailing_spaces(self):
         self.section = re.sub(r"\s+$", "", self.section)

@@ -70,7 +70,7 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_section:
-            self.section.write(xml.sax.saxutils.escape(content))
+            self.section.write(XMLHelper.escape(content))
 
     def patch_chapter_12(self, path: Path) -> None:
         with open(path, "r", encoding='utf8') as f:

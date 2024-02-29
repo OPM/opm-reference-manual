@@ -46,10 +46,10 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_styles:
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
         elif self.in_appendix_table:
             if self.in_table_row:
-                self.current_row.write(xml.sax.saxutils.escape(content))
+                self.current_row.write(XMLHelper.escape(content))
             else:
                 self.between_rows += content
                 # Capture stuff between the rows, such that we
@@ -64,7 +64,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                     self.current_table_number += 1
                     if self.current_table_number == self.keyword_table_number:
                         self.found_appendix_table = True
-            self.content.write(xml.sax.saxutils.escape(content))
+            self.content.write(XMLHelper.escape(content))
 
     def endElement(self, name: str):
         if name == "table:table-cell":

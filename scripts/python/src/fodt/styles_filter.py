@@ -19,7 +19,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         self.content.write(f"<{name}")
         for (key, value) in attrs.items():
-            evalue = xml.sax.saxutils.escape(value)
+            evalue = XMLHelper.escape(value)
             self.content.write(f" {key}=\"{evalue}\"")
         if name == "text:outline-level-style":
             level = int(attrs.getValue("text:level"))
@@ -34,7 +34,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         self.content.write(XMLHelper.endtag(name))
 
     def characters(self, content: str):
-        self.content.write(xml.sax.saxutils.escape(content))
+        self.content.write(XMLHelper.escape(content))
 
 class StylesFilter:
     def __init__(self, content: str, part: str) -> None:

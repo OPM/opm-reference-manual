@@ -37,7 +37,7 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
         self.green_styles = set()
 
     def characters(self, content: str):
-        self.content.write(xml.sax.saxutils.escape(content))
+        self.content.write(XMLHelper.escape(content))
 
     def collect_table_cell_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # collect the style names for orange and green colors

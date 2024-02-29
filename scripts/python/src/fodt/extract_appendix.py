@@ -127,9 +127,9 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_appendix:
-            self.appendix.write(xml.sax.saxutils.escape(content))
+            self.appendix.write(XMLHelper.escape(content))
         else:
-            self.doc.write(xml.sax.saxutils.escape(content))
+            self.doc.write(XMLHelper.escape(content))
 
     def collect_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         for (key, value) in attrs.items():
