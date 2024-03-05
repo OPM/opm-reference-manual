@@ -4224,7 +4224,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18372" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5743_3701168388"/>Description<text:bookmark-end text:name="__RefHeading___Toc5743_3701168388"/></text:h>
     <text:p text:style-name="_40_TextBody">ACT<text:span text:style-name="T3834">NUM specifies which grid blocks are active or inactive. A value of 1 indicates the block is active and a value of 0 indicates the block is inactive. <text:s/>A grid block is inactive if its pore volume is less than the value entered using keyword MINPV. This keyword can be used to make blocks with a pore volume greater than MINPV inactive. Note that a value must be entered for each grid block in the model. Grid blocks are ordered with the I index cycling fastest, followed by the J and K indices. As for all array data repeat counts may be used, for example 100*1; however the full array must be specified.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">Note that a cells activity can also be set using the EQUALS keyword by selection only those cells that are required to be made inactive.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that a cells activity can also be set using the EQUALS keyword by selection of only those cells that are required to be made inactive.</text:p>
     <table:table table:name="Table16" table:style-name="Table16">
      <table:table-column table:style-name="Table16.A"/>
      <table:table-column table:style-name="Table16.B"/>
@@ -4263,7 +4263,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1416">Notes:</text:p>
        <text:list xml:id="list105909541750891" text:continue-list="list105908911174112" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17112"><text:span text:style-name="T1596">A total of </text:span><text:span text:style-name="T1595">NX x NY x NZ </text:span><text:span text:style-name="T1596">integer values,</text:span><text:span text:style-name="T1595"> </text:span><text:span text:style-name="T1596">as defined by the DIMENS keyword in the RUNSPEC section,</text:span><text:span text:style-name="T1595"> </text:span><text:span text:style-name="T1596">must be specified for the array</text:span><text:span text:style-name="T1595">.</text:span></text:p>
+         <text:p text:style-name="P17112"><text:span text:style-name="T1596">The number of entries should correspond to the </text:span><text:span text:style-name="T1595">NX x NY x NZ </text:span><text:span text:style-name="T1596">parameters</text:span><text:span text:style-name="T1595"> </text:span><text:span text:style-name="T1596">on the DIMENS keyword in the RUNSPEC section,</text:span><text:span text:style-name="T1595"> </text:span><text:span text:style-name="T1596">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX keyword.</text:span><text:span text:style-name="T1595">.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18899"><text:span text:style-name="T4053">The keyword is terminated by a “/”</text:span>.</text:p>
