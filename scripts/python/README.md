@@ -79,9 +79,8 @@ and content changes. See the documentation in the source code [split_git_commit.
 
 ## Exporting the manual as PDF
 
-Open `main.fodt`. Scroll down to the table of contents and right-click on an entry (e.g. Chapter 1).
-Select "Update Index" from the popup menu. This will correct the numbering in the table of contents.
-You may have to wait a minute for the update to complete.
+Open `main.fodt`. Select from the menu item `Tools` → `Update` → `Indexes and Tables`.
+You may have to wait some minutes for the update to complete.
 
 You can now export the manual to PDF. From the `File` menu, select "Export As" → "Export as PDF…",
 and click the "Export" button in the dialog, then choose a filename for the PDF file.
