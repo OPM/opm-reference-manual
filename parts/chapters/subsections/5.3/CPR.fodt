@@ -4406,7 +4406,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P16992">ORIGINAL: Here the solver is applied for <text:span text:style-name="T7844">the </text:span>whole <text:span text:style-name="T7844">of the simulation.</text:span><text:span text:style-name="T8280"> </text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">ADAPTIVE: This option applies the more <text:span text:style-name="T2110">computational</text:span> demanding CPR linear solver, only in parts of run that would benefit for its use, for example when linear convergence is challenging.</text:p>
+         <text:p text:style-name="P16992">ADAPTIVE: This option applies the more <text:span text:style-name="T2110">computational</text:span> demanding CPR linear solver, only in parts of the run that would benefit from its use, for example when linear convergence is challenging.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P1131">Note that OPM Flow <text:span text:style-name="T8280">only supports the ORIGINAL option, which is the default value in OPM Flow, whereas the default value in the commercial simulator is ADAPTIVE</text:span>.<text:span text:style-name="T8280"> </text:span><text:span text:style-name="T8281">.</text:span></text:p>
@@ -4446,7 +4446,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="P11666">which should usually be combined with <text:span text:style-name="T7848">the </text:span><text:span text:style-name="T4032">-matrix-add-well-contributions=true</text:span><text:span text:style-name="T3485"> option, that is:</text:span></text:p>
     <text:p text:style-name="P11729"/>
-    <text:p text:style-name="P16222">flow --lin<text:span text:style-name="T8031">ear-</text:span>solver=cpr<text:span text:style-name="T5527"> --matrix-add-well-</text:span><text:span text:style-name="T7848">c</text:span><text:span text:style-name="T5527">ontributions=true</text:span>CASENAME.DATA </text:p>
+    <text:p text:style-name="P16222">flow --lin<text:span text:style-name="T8031">ear-</text:span>solver=cpr<text:span text:style-name="T5527"> --matrix-add-well-</text:span><text:span text:style-name="T7848">c</text:span><text:span text:style-name="T5527">ontributions=true </text:span>CASENAME.DATA </text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="P12516"/>
     <text:p text:style-name="P12516">However, the new CPRW preconditioner<text:span text:style-name="T7847">, </text:span><text:span text:style-name="T7854">that includes wells</text:span><text:span text:style-name="T7847"> </text:span>does not need the latter option, so <text:span text:style-name="T7849">in this instance</text:span> <text:span text:style-name="T7848">use:</text:span></text:p>
@@ -4457,7 +4457,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P11667">As of this release the CPRW preconditioner<text:span text:style-name="T7847">, <text:s/></text:span>should be considered experimental, and the recommended <text:s/>configuration for running this is:</text:p>
     <text:p text:style-name="P11667"/>
     <text:p text:style-name="P14524">flow --lin<text:span text:style-name="T8031">ear-</text:span>solver=cprw --linear-solver-reduction=0.005 --cpr-reuse-setup=4 </text:p>
-    <text:p text:style-name="P14524"><text:s text:c="5"/>--cpr-reuse-interval=10 ASENAME.DATA </text:p>
+    <text:p text:style-name="P14524"><text:s text:c="5"/>--cpr-reuse-interval=10 CASENAME.DATA </text:p>
     <text:p text:style-name="P11668"/>
     <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1345">See </text:span><text:span text:style-name="T1">new </text:span><text:span text:style-name="T1345">Rasmussen et al.</text:span><text:span text:style-name="T1345"><text:note text:id="ftn69" text:note-class="footnote"><text:note-citation>69</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Atgeirr Flø Rasmussen, Tor Harald Sandve, Kai Bao, Andreas Lauser, Joakim Hove, Bård Skaflestad, Robert Klöfkorn, Markus Blatt, Alf Birger Rustad, Ove Sævareid, Knut-Andreas Lie, Andreas Thune, The Open Porous Media Flow reservoir simulator, Computers &amp; Mathematics with Applications, Volume 81, 2021, Pages 159-185, ISSN 0898-1221, <text:a xlink:type="simple" xlink:href="https://doi.org/10.1016/j.camwa.2020.05.014" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">https://doi.org/10.1016/j.camwa.2020.05.014</text:a>. (https://www.sciencedirect.com/science/article/pii/S0898122120302182).</text:p></text:note-body></text:note></text:span><text:span text:style-name="T1344"> <text:s/></text:span><text:span text:style-name="T1345">for further information on the available numerical </text:span><text:span text:style-name="T3116">algorithms</text:span><text:span text:style-name="T1345"> available in OPM Flow.</text:span></text:p>
