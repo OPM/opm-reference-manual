@@ -2693,21 +2693,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4820" style:family="text">
-   <style:text-properties officeooo:rsid="046de380"/>
-  </style:style>
-  <style:style style:name="T4821" style:family="text">
-   <style:text-properties officeooo:rsid="046ec6ec"/>
-  </style:style>
-  <style:style style:name="T4822" style:family="text">
-   <style:text-properties officeooo:rsid="046f4d75"/>
-  </style:style>
-  <style:style style:name="T4823" style:family="text">
-   <style:text-properties officeooo:rsid="04711ecc"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3687,8 +3672,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4065,7 +4049,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="OLDTRAN">
 
-<text:h text:style-name="P17819" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc103170_3218818441"/><text:span text:style-name="T4821">OLD</text:span>TRAN – Activate <text:span text:style-name="T4821">Cartesian Regular Grid</text:span> Transmissibilities<text:bookmark-end text:name="__RefHeading___Toc103170_3218818441"/></text:h>
+<text:h text:style-name="P17819" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc103170_3218818441"/>OLDTRAN – Activate Cartesian Regular Grid Transmissibilities<text:bookmark-end text:name="__RefHeading___Toc103170_3218818441"/></text:h>
     <table:table table:name="Table404" table:style-name="Table404">
      <table:table-column table:style-name="Table404.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table404.E"/>
@@ -4099,14 +4083,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_37011683883171"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_37011683883171"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword switches on <text:span text:style-name="T4820">Cartesian Regular Grids geometry transmissibility calculation (or block centered transmissibility calculations), which is the default option for this type of grid. Grids defined by the DX, DY, and DZ series of keywords will always invoke this option by default. </text:span></text:p>
-    <text:p text:style-name="_40_TextBody">For Irregular Corner-Point Grids defined by the COORD and ZCORN keywor<text:span text:style-name="T4822">ds</text:span> <text:span text:style-name="T4822">Irregular Corner-Point Grid geometry transmissibility</text:span> calculations should be activated via the <text:span text:style-name="T4822">NEW</text:span>TRAN keyword. Again this is automatically invoked if this type of grid is being employed.</text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword switches on Cartesian Regular Grids geometry transmissibility calculation (or block centered transmissibility calculations), which is the default option for this type of grid. Grids defined by the DX, DY, and DZ series of keywords will always invoke this option by default. </text:p>
+    <text:p text:style-name="_40_TextBody">For Irregular Corner-Point Grids defined by the COORD and ZCORN keywords Irregular Corner-Point Grid geometry transmissibility calculations should be activated via the NEWTRAN keyword. Again this is automatically invoked if this type of grid is being employed.</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683883161"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683883161"/></text:h>
     <text:p text:style-name="P13915">--</text:p>
-    <text:p text:style-name="P13915">-- <text:s text:c="6"/>ACTIVATE <text:span text:style-name="T4823">CARTESIAN </text:span>REGULAR GRID TRANSMISSIBILITIES</text:p>
+    <text:p text:style-name="P13915">-- <text:s text:c="6"/>ACTIVATE CARTESIAN REGULAR GRID TRANSMISSIBILITIES</text:p>
     <text:p text:style-name="P13915">--</text:p>
-    <text:p text:style-name="P13915"><text:span text:style-name="T4823">OLD</text:span>TRAN</text:p>
+    <text:p text:style-name="P13915">OLDTRAN</text:p>
     <text:p text:style-name="P15719"/>
     <text:p text:style-name="P15184">The above example manually activates Cartesian Regular Grid transmissibility calculations.</text:p>
     <text:p text:style-name="P15184"/>

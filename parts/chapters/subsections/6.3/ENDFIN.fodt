@@ -2693,18 +2693,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T5330" style:family="text">
-   <style:text-properties officeooo:rsid="083cb5bc"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
-  <style:style style:name="T6018" style:family="text">
-   <style:text-properties officeooo:rsid="0cd18231"/>
-  </style:style>
-  <style:style style:name="T6019" style:family="text">
-   <style:text-properties officeooo:rsid="0cd3763b"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3684,8 +3672,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4062,7 +4049,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="ENDFIN">
 
-<text:h text:style-name="P17781" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc111797_332691817"/><text:span text:style-name="T5330">ENDFIN</text:span> – <text:span text:style-name="T5330">End the Definition of a Local Grid Refinement</text:span><text:bookmark-end text:name="__RefHeading___Toc111797_332691817"/></text:h>
+<text:h text:style-name="P17781" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc111797_332691817"/>ENDFIN – End the Definition of a Local Grid Refinement<text:bookmark-end text:name="__RefHeading___Toc111797_332691817"/></text:h>
     <table:table table:name="Table759" table:style-name="Table759">
      <table:table-column table:style-name="Table759.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table759.E"/>
@@ -4096,23 +4083,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18397" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T6019">The </text:span>ENDFIN <text:span text:style-name="T6019">keyword </text:span>defines the end of a Cartesian or radial local grid refinement (“LGR”) definition and a LGR property definition data set. <text:span text:style-name="T6019">In the GRID section the CARFIN, RADFIN, and RADFIN4 keywords defines the start of an LGR description section, whereas the REFINE keyword in the EDIT, PROPS, REGIONS, SOLUTION and SCHEDULE section defines the start. The REFINE keyword can also be used in the GRID section provided the LGR has been previously specified by the CARFIN, RADFIN, or RADFIN4 keywords. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The ENDFIN keyword defines the end of a Cartesian or radial local grid refinement (“LGR”) definition and a LGR property definition data set. In the GRID section the CARFIN, RADFIN, and RADFIN4 keywords defines the start of an LGR description section, whereas the REFINE keyword in the EDIT, PROPS, REGIONS, SOLUTION and SCHEDULE section defines the start. The REFINE keyword can also be used in the GRID section provided the LGR has been previously specified by the CARFIN, RADFIN, or RADFIN4 keywords. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="P18398" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715703_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715703_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below <text:span text:style-name="T6019">is based on using the CARFIN keyword in the GRID section to </text:span>define an LGR in the global grid, named LGR-OP01 with a maximum of one well allowed in the LGR. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below is based on using the CARFIN keyword in the GRID section to define an LGR in the global grid, named LGR-OP01 with a maximum of one well allowed in the LGR. </text:p>
     <text:p text:style-name="P13871">--</text:p>
     <text:p text:style-name="P13871">-- <text:s text:c="6"/>CARFIN LGR GRID COMMANDS</text:p>
     <text:p text:style-name="P13871">--</text:p>
     <text:p text:style-name="P13871">-- <text:s text:c="6"/>LGR <text:s text:c="7"/>----- FINE GRID ------ <text:s text:c="2"/>-- CARFIN GRID -- <text:s/>MAX <text:s text:c="4"/>HOST <text:s text:c="12"/></text:p>
     <text:p text:style-name="P13871">-- <text:s text:c="6"/>NAME <text:s text:c="6"/>I1 <text:s/>I2 <text:s/>J1 <text:s/>J2 <text:s/>K1 <text:s/>K2 <text:s text:c="4"/>NX <text:s text:c="3"/>NY <text:s text:c="3"/>NZ <text:s text:c="2"/>WELLS <text:s text:c="2"/>NAME <text:s text:c="11"/></text:p>
     <text:p text:style-name="P13871">CARFIN <text:s text:c="64"/></text:p>
-    <text:p text:style-name="P13871"><text:s text:c="9"/>LGR-OP01 <text:s text:c="2"/><text:span text:style-name="T6018">24</text:span> <text:s/>24 <text:s/><text:span text:style-name="T6018">87</text:span> <text:s/>87 <text:s text:c="2"/>1 <text:s/>50 <text:s text:c="5"/>3 <text:s text:c="4"/>3 <text:s text:c="3"/><text:span text:style-name="T6018">50</text:span> <text:s text:c="4"/><text:span text:style-name="T6018">1</text:span> <text:s text:c="4"/>GLOBAL /</text:p>
+    <text:p text:style-name="P13871"><text:s text:c="9"/>LGR-OP01 <text:s text:c="2"/>24 <text:s/>24 <text:s/>87 <text:s/>87 <text:s text:c="2"/>1 <text:s/>50 <text:s text:c="5"/>3 <text:s text:c="4"/>3 <text:s text:c="3"/>50 <text:s text:c="4"/>1 <text:s text:c="4"/>GLOBAL /</text:p>
     <text:p text:style-name="P13871"/>
     <text:p text:style-name="P13871"/>
     <text:p text:style-name="P13871">ENDFIN </text:p>
     <text:p text:style-name="P13871"/>
-    <text:p text:style-name="P11049"><text:span text:style-name="T6018">Here the one global cell in the areal plane (24, 87) is divided into three LGR cells in the x-direction and three cells in the y-direction. </text:span><text:s text:c="2"/><text:span text:style-name="T6018">Since no other property data is given, then the LGR cells take their properties from the host grid, that is the global grid.</text:span> <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P11049">Here the one global cell in the areal plane (24, 87) is divided into three LGR cells in the x-direction and three cells in the y-direction. <text:s text:c="2"/>Since no other property data is given, then the LGR cells take their properties from the host grid, that is the global grid. <text:s text:c="5"/></text:p>
     <text:p text:style-name="P11049"/>
     
    </text:section>

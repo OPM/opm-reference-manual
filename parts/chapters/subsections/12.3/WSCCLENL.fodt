@@ -2691,15 +2691,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2709" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
-  <style:style style:name="T2854" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0e6b74f9"/>
-  </style:style>
-  <style:style style:name="T2855" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0dc33caf"/>
-  </style:style>
-  <style:style style:name="T6339" style:family="text">
-   <style:text-properties officeooo:rsid="0e6b74f9"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3679,8 +3670,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4057,7 +4047,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="WSCCLENL">
 
-<text:h text:style-name="P18204" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc950266_4263943340"/>WSCCLEN<text:span text:style-name="T6339">L</text:span> – Well Deposited Scale Adjustment <text:span text:style-name="T6339">(LGR)</text:span><text:bookmark-end text:name="__RefHeading___Toc950266_4263943340"/></text:h>
+<text:h text:style-name="P18204" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc950266_4263943340"/>WSCCLENL – Well Deposited Scale Adjustment (LGR)<text:bookmark-end text:name="__RefHeading___Toc950266_4263943340"/></text:h>
     <table:table table:name="Table1740" table:style-name="Table1740">
      <table:table-column table:style-name="Table1740.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1740.E"/>
@@ -4091,8 +4081,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716837_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716837_3964674244"/></text:h>
-    <text:p text:style-name="P11582">The WSCCLE<text:span text:style-name="T6339">NL</text:span> keyword <text:span text:style-name="T6339">adjusts the amount of scale currently accumulated around a well’s well connections for wells located in a Local Grid Refinement (LGR). <text:s/>For example, if a workover has been performed on a well to remove (or reduce) the deposited scale over the perforations, <text:s/></text:span><text:span text:style-name="T2854">then this keyword can be used to implement the effects of the workover. Scale deposits reduce the productivity of well and this relationship is defined in the SCDPTAB and SCDATAB keywords in SCHEDULE section. The tables are allocated to a well via the WSCTAB keyword, which is also in the SCHEDULE section. Note that </text:span><text:span text:style-name="T2855">the Scale Deposition option </text:span><text:span text:style-name="T2854">must have</text:span><text:span text:style-name="T2855"> been activated by declaring the dimensions of the scaling deposition tables using the SCDPDIMS keyword in the RUNSPEC section.</text:span></text:p>
-    <text:p text:style-name="P11583"><text:span text:style-name="T2855">S</text:span><text:span text:style-name="T2709">ee also the WSSCLEAN keyword in the SCHEDULE section that performs similar functionality for wells located in the global grid.</text:span></text:p>
+    <text:p text:style-name="P11582">The WSCCLENL keyword adjusts the amount of scale currently accumulated around a well’s well connections for wells located in a Local Grid Refinement (LGR). <text:s/>For example, if a workover has been performed on a well to remove (or reduce) the deposited scale over the perforations, <text:s/>then this keyword can be used to implement the effects of the workover. Scale deposits reduce the productivity of well and this relationship is defined in the SCDPTAB and SCDATAB keywords in SCHEDULE section. The tables are allocated to a well via the WSCTAB keyword, which is also in the SCHEDULE section. Note that the Scale Deposition option must have been activated by declaring the dimensions of the scaling deposition tables using the SCDPDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P11583">S<text:span text:style-name="T2709">ee also the WSSCLEAN keyword in the SCHEDULE section that performs similar functionality for wells located in the global grid.</text:span></text:p>
     <text:p text:style-name="P11009">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P11009"/>
     

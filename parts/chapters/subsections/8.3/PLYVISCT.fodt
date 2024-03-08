@@ -2696,21 +2696,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4920" style:family="text">
-   <style:text-properties officeooo:rsid="051abd9d"/>
-  </style:style>
-  <style:style style:name="T4931" style:family="text">
-   <style:text-properties officeooo:rsid="0529ce49"/>
-  </style:style>
-  <style:style style:name="T4935" style:family="text">
-   <style:text-properties officeooo:rsid="052e9556"/>
-  </style:style>
-  <style:style style:name="T6171" style:family="text">
-   <style:text-properties officeooo:rsid="0d9280d6"/>
-  </style:style>
-  <style:style style:name="T6269" style:family="text">
-   <style:text-properties officeooo:rsid="0dfeba66"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3690,8 +3675,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4068,7 +4052,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="PLYVISCT">
 
-<text:h text:style-name="P17936" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc270349_501926209"/>PLY<text:span text:style-name="T4935">VISCT</text:span> –<text:span text:style-name="T4931"> </text:span>Define Po<text:span text:style-name="T4920">l</text:span>y<text:span text:style-name="T4920">m</text:span>er-<text:span text:style-name="T6171">Temperature</text:span> <text:span text:style-name="T4935">Viscosity Scaling Factors</text:span><text:bookmark-end text:name="__RefHeading___Toc270349_501926209"/></text:h>
+<text:h text:style-name="P17936" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc270349_501926209"/>PLYVISCT – Define Polymer-Temperature Viscosity Scaling Factors<text:bookmark-end text:name="__RefHeading___Toc270349_501926209"/></text:h>
     <table:table table:name="Table1463" table:style-name="Table1463">
      <table:table-column table:style-name="Table1463.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1463.E"/>
@@ -4102,7 +4086,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716137_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716137_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PLYSVISC<text:span text:style-name="T6171">T</text:span> defines the polymer-<text:span text:style-name="T6171">temperature </text:span>viscosity scaling factor <text:span text:style-name="T6171">tables</text:span> <text:span text:style-name="T6171">applied to pure water that are </text:span>used to determine the <text:span text:style-name="T6171">viscosity</text:span> of <text:span text:style-name="T6171">the polymer at a given temperature </text:span>with respect to increasing polymer <text:span text:style-name="T6269">concentration</text:span> within a grid block. <text:span text:style-name="T6171">Both t</text:span>he polymer option must be activated by the POLYMER <text:span text:style-name="T6171">keyword and the temperature option invoked by the TEMP keyword</text:span> in the RUNSPEC section in order to use this keyword. <text:s/><text:span text:style-name="T6171">However the BRINE keyword in the RUNSPEC must not be used with this keyword, that is the salt sensitivity options should be deactivated.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">PLYSVISCT defines the polymer-temperature viscosity scaling factor tables applied to pure water that are used to determine the viscosity of the polymer at a given temperature with respect to increasing polymer concentration within a grid block. Both the polymer option must be activated by the POLYMER keyword and the temperature option invoked by the TEMP keyword in the RUNSPEC section in order to use this keyword. <text:s/>However the BRINE keyword in the RUNSPEC must not be used with this keyword, that is the salt sensitivity options should be deactivated.</text:p>
     <text:p text:style-name="_40_TextBody">See also the PLYVSCST keyword in the PROPS section to enter polymer viscosity scaling factor data that is dependent on both salt and reservoir temperature.</text:p>
     <text:p text:style-name="P15866">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P15053"/>

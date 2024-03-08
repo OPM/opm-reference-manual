@@ -2688,21 +2688,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T5330" style:family="text">
-   <style:text-properties officeooo:rsid="083cb5bc"/>
-  </style:style>
-  <style:style style:name="T5331" style:family="text">
-   <style:text-properties officeooo:rsid="083cbc9b"/>
-  </style:style>
-  <style:style style:name="T5442" style:family="text">
-   <style:text-properties officeooo:rsid="08e1141f"/>
-  </style:style>
-  <style:style style:name="T5451" style:family="text">
-   <style:text-properties officeooo:rsid="08e9affd"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3682,8 +3667,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4060,7 +4044,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="ENDACTIO">
 
-<text:h text:style-name="P17781" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc109407_332691817"/><text:span text:style-name="T5330">ENDACTIO </text:span>– <text:span text:style-name="T5330">End the Definition of</text:span> ACTION <text:span text:style-name="T5331">Commands</text:span><text:bookmark-end text:name="__RefHeading___Toc109407_332691817"/></text:h>
+<text:h text:style-name="P17781" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc109407_332691817"/>ENDACTIO – End the Definition of ACTION Commands<text:bookmark-end text:name="__RefHeading___Toc109407_332691817"/></text:h>
     <table:table table:name="Table757" table:style-name="Table757">
      <table:table-column table:style-name="Table757.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table757.E"/>
@@ -4094,12 +4078,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T5330">END</text:span>ACTIO keyword defines <text:span text:style-name="T5330">the end of </text:span>a series of conditions that invoke run time processing of <text:span text:style-name="T5453">the </text:span>ACTION <text:span text:style-name="T5453">series of keywords, namely: ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW and ACTIONX</text:span>. <text:span text:style-name="T5453">Only the ACTIONX keyword is implemented in OPM Flow as this keyword implements the ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW functionality with greater flexibility. <text:s/>See the ACTIONX keyword in the SCHEDULE section for a full description of the ACTION facility.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The ENDACTIO keyword defines the end of a series of conditions that invoke run time processing of the ACTION series of keywords, namely: ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW and ACTIONX. Only the ACTIONX keyword is implemented in OPM Flow as this keyword implements the ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW functionality with greater flexibility. <text:s/>See the ACTIONX keyword in the SCHEDULE section for a full description of the ACTION facility.</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683883411"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683883411"/></text:h>
-    <text:p text:style-name="P10921"><text:span text:style-name="T5453">The example shows the use of the ACTIONX and ENDACTIO keywords to test if the field’s gas production rate is less than 600 MMscf/d after 2020 </text:span>and to open up additional wells if this occurs.</text:p>
+    <text:p text:style-name="P10921">The example shows the use of the ACTIONX and ENDACTIO keywords to test if the field’s gas production rate is less than 600 MMscf/d after 2020 and to open up additional wells if this occurs.</text:p>
     <text:p text:style-name="P14150">--</text:p>
-    <text:p text:style-name="P14150">-- <text:span text:style-name="T5451">START OF ACTIONX </text:span>FIELD PHASE-<text:span text:style-name="T5453">2</text:span> <text:span text:style-name="T5453">DEVELOPMENT DEFINITION</text:span></text:p>
+    <text:p text:style-name="P14150">-- START OF ACTIONX FIELD PHASE-2 DEVELOPMENT DEFINITION</text:p>
     <text:p text:style-name="P14150">--</text:p>
     <text:p text:style-name="P14150">ACTIONX</text:p>
     <text:p text:style-name="P14150"><text:s text:c="5"/>PHASE2 <text:s text:c="6"/>1 <text:s text:c="14"/>/</text:p>
@@ -4111,11 +4095,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14150">-- <text:s/>WELL <text:s text:c="3"/>WELL <text:s text:c="2"/>--LOCATION-- <text:s/>COMPLETION <text:s text:c="36"/></text:p>
     <text:p text:style-name="P14150">-- <text:s/>NAME <text:s text:c="3"/>STAT <text:s text:c="4"/>I <text:s text:c="2"/>J <text:s text:c="3"/>K <text:s/>FIRST LAST <text:s text:c="36"/></text:p>
     <text:p text:style-name="P14150">WELOPEN <text:s text:c="72"/></text:p>
-    <text:p text:style-name="P14150">GP<text:span text:style-name="T5442">10 </text:span><text:s text:c="7"/><text:span text:style-name="T5442">OPEN</text:span> <text:s text:c="26"/>/</text:p>
-    <text:p text:style-name="P14150">GP<text:span text:style-name="T5442">11 </text:span><text:s text:c="7"/><text:span text:style-name="T5442">OPEN</text:span> <text:s text:c="26"/>/</text:p>
+    <text:p text:style-name="P14150">GP10 <text:s text:c="7"/>OPEN <text:s text:c="26"/>/</text:p>
+    <text:p text:style-name="P14150">GP11 <text:s text:c="7"/>OPEN <text:s text:c="26"/>/</text:p>
     <text:p text:style-name="P14150">/</text:p>
     <text:p text:style-name="P14150">--</text:p>
-    <text:p text:style-name="P14150">-- <text:span text:style-name="T5453">END OF ACTIONX </text:span>FIELD PHASE-<text:span text:style-name="T5453">2</text:span> <text:span text:style-name="T5453">DEVELOPMENT DEFINITION</text:span></text:p>
+    <text:p text:style-name="P14150">-- END OF ACTIONX FIELD PHASE-2 DEVELOPMENT DEFINITION</text:p>
     <text:p text:style-name="P14150">--</text:p>
     <text:p text:style-name="P14150">ENDACTIO</text:p>
     <text:p text:style-name="P13618"/>

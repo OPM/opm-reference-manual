@@ -2633,20 +2633,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T506" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="13ac3201"/>
   </style:style>
-  <style:style style:name="T649" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="01532ad0"/>
-  </style:style>
-  <style:style style:name="T821" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0e93a0cc"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
-  </style:style>
-  <style:style style:name="T6135" style:family="text">
-   <style:text-properties officeooo:rsid="0d67e1bd"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3627,8 +3618,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4006,8 +3996,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:section text:style-name="Sect1" text:name="NODPPM">
 
 <text:h text:style-name="P17817" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc793989_2928331029"/>NODPPM – Deactivate Fracture Porosity-Permeability Calculation <text:bookmark-end text:name="__RefHeading___Toc793989_2928331029"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6135">NODPPM keyword d</text:span>eactivate<text:span text:style-name="T6135">s the default behavior of multiplying the f</text:span>racture <text:span text:style-name="T6135">p</text:span>orosity <text:span text:style-name="T6135">by the fracture p</text:span>ermeability <text:span text:style-name="T6135">to calculate the effective fracture permeability in dual porosity and dual permeability runs. Either the DUALPORO or DUALPERM keywords in the RUNSPEC section must be declared in the input file in order to use this keyword. If the default calculation is switched off by this keyword, then the effective fracture permeability is taken to be those entered for the fracture using the PERMX, PERMY and PERMZ keywords in the GRID section. If the keyword is absent from the input deck, then the entered PERMX, PERMY and PERMZ arrays for the fractures are multiplied by fracture PORO array values in order to obtain the effective fracture permeability.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">See </text:span><text:a xlink:type="simple" xlink:href="#5.2.49.NODPPM – Deactivate Fracture Porosity-Permeability Calculation |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T649"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc256454_718033703">NODPPM – Deactivate Fracture Porosity-Permeability Calculation</text:bookmark-ref></text:span></text:a><text:span text:style-name="T649"><text:s/></text:span><text:span text:style-name="T1">in the RUNSPEC section for a full </text:span><text:span text:style-name="T821">description.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NODPPM keyword deactivates the default behavior of multiplying the fracture porosity by the fracture permeability to calculate the effective fracture permeability in dual porosity and dual permeability runs. Either the DUALPORO or DUALPERM keywords in the RUNSPEC section must be declared in the input file in order to use this keyword. If the default calculation is switched off by this keyword, then the effective fracture permeability is taken to be those entered for the fracture using the PERMX, PERMY and PERMZ keywords in the GRID section. If the keyword is absent from the input deck, then the entered PERMX, PERMY and PERMZ arrays for the fractures are multiplied by fracture PORO array values in order to obtain the effective fracture permeability.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">See </text:span><text:a xlink:type="simple" xlink:href="#5.2.49.NODPPM – Deactivate Fracture Porosity-Permeability Calculation |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc256454_718033703">NODPPM – Deactivate Fracture Porosity-Permeability Calculation</text:bookmark-ref></text:a><text:s/><text:span text:style-name="T1">in the RUNSPEC section for a full </text:span>description.</text:p>
     
    </text:section>
   </office:text>

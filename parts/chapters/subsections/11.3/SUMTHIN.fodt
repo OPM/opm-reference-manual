@@ -2808,33 +2808,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2651" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="153990c2"/>
-  </style:style>
-  <style:style style:name="T5064" style:family="text">
-   <style:text-properties officeooo:rsid="060699c9"/>
-  </style:style>
-  <style:style style:name="T5065" style:family="text">
-   <style:text-properties officeooo:rsid="06088993"/>
-  </style:style>
-  <style:style style:name="T5066" style:family="text">
-   <style:text-properties officeooo:rsid="060a606f"/>
-  </style:style>
-  <style:style style:name="T6257" style:family="text">
-   <style:text-properties officeooo:rsid="0ded4981"/>
-  </style:style>
-  <style:style style:name="T6654" style:family="text">
-   <style:text-properties officeooo:rsid="109d2f4e"/>
-  </style:style>
-  <style:style style:name="T6699" style:family="text">
-   <style:text-properties officeooo:rsid="11039fda"/>
-  </style:style>
-  <style:style style:name="T7321" style:family="text">
-   <style:text-properties officeooo:rsid="153990c2"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3866,8 +3839,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4244,7 +4216,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SUMTHIN">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc28401_3671211675"/>SUMTHIN – Define SUMMARY D<text:span text:style-name="T6257">ata</text:span> Reporting Time Steps<text:bookmark-end text:name="__RefHeading___Toc28401_3671211675"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc28401_3671211675"/>SUMTHIN – Define SUMMARY Data Reporting Time Steps<text:bookmark-end text:name="__RefHeading___Toc28401_3671211675"/></text:h>
     <table:table table:name="Table639" table:style-name="Table639">
      <table:table-column table:style-name="Table639.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table639.E"/>
@@ -4278,7 +4250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716513_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716513_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines a time interval for writing out the SUMMARY data to the SUMMARY file and the RSM file, if the RUNSUM keyword has also been activated in the SUMMARY section. Only the data for the first time step in the time interval is written out and the other time steps are skipped until the next time interval, <text:span text:style-name="T7321">except for report time steps</text:span>. <text:span text:style-name="T2651">Note that report time steps data are always written out regardless of the setting on this keyword.</text:span> <text:s/>This enable<text:span text:style-name="T6699">s</text:span> the size of the SUMMARY files to be reduced depending on the size of the time interval. However, the keyword will produce irregular time steps reports of the SUMMARY data.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines a time interval for writing out the SUMMARY data to the SUMMARY file and the RSM file, if the RUNSUM keyword has also been activated in the SUMMARY section. Only the data for the first time step in the time interval is written out and the other time steps are skipped until the next time interval, except for report time steps. Note that report time steps data are always written out regardless of the setting on this keyword. <text:s/>This enables the size of the SUMMARY files to be reduced depending on the size of the time interval. However, the keyword will produce irregular time steps reports of the SUMMARY data.</text:p>
     <table:table table:name="Table640" table:style-name="Table640">
      <table:table-column table:style-name="Table640.A"/>
      <table:table-column table:style-name="Table640.B"/>
@@ -4323,8 +4295,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4973">SUMSTEP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table640.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3669"><text:span text:style-name="T5064">SUMSTEP</text:span> is <text:span text:style-name="T5065">a real positive number that defines the time interval for which the first time step of data will be written to the SUMMARY file (and the RSM file if RSM output has been activated).</text:span></text:p>
-       <text:p text:style-name="P4975">For example, if SUMSTEP is set to <text:span text:style-name="T5066">30</text:span> days, and <text:span text:style-name="T6654">if </text:span>the simulator takes time steps of 0, 5, 10, 16, <text:s/>24, 3<text:span text:style-name="T5066">0</text:span>, <text:span text:style-name="T5066">40, 45, </text:span>6<text:span text:style-name="T5066">0</text:span>, 90 <text:span text:style-name="T5066">days</text:span>. Then the SUMMARY data will be written <text:span text:style-name="T5066">out</text:span> at time steps 0, <text:span text:style-name="T5066">30</text:span>, <text:span text:style-name="T5066">4</text:span>0 and <text:span text:style-name="T5066">6</text:span>0 <text:span text:style-name="T5066">days.</text:span></text:p>
+       <text:p text:style-name="P3669">SUMSTEP is a real positive number that defines the time interval for which the first time step of data will be written to the SUMMARY file (and the RSM file if RSM output has been activated).</text:p>
+       <text:p text:style-name="P4975">For example, if SUMSTEP is set to 30 days, and if the simulator takes time steps of 0, 5, 10, 16, <text:s/>24, 30, 40, 45, 60, 90 days. Then the SUMMARY data will be written out at time steps 0, 30, 40 and 60 days.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4351,7 +4323,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1424">Notes:</text:p>
        <text:list xml:id="list2289461728" text:style-name="L113">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18996"><text:span text:style-name="T2084">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18996">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4362,18 +4334,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable542" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.33</text:sequence>: <text:span text:style-name="T5065">SUMTHIN Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable542" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.33</text:sequence>: SUMTHIN Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="P15296">See also the <text:span text:style-name="T5065">RPTONLY </text:span>keyword <text:span text:style-name="T5065">in the SUMMARY section that forces the SUMMARY data to be only written out at report time steps, as oppose to all time steps or SUMSTEP time intervals.</text:span></text:p>
+    <text:p text:style-name="P15296">See also the RPTONLY keyword in the SUMMARY section that forces the SUMMARY data to be only written out at report time steps, as oppose to all time steps or SUMSTEP time intervals.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716515_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716515_3964674244"/></text:h>
     <text:p text:style-name="P14117">--</text:p>
     <text:p text:style-name="P14117">-- <text:s text:c="6"/>DEFINE SUMMARY DATA REPORTING TIME STEP INTERVAL</text:p>
     <text:p text:style-name="P14117">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P14117">-- <text:s text:c="6"/>SUMSTEP <text:s text:c="54"/></text:p>
     <text:p text:style-name="P14117">SUMTHIN <text:s text:c="57"/></text:p>
-    <text:p text:style-name="P13584"><text:span text:style-name="T5066"><text:s text:c="9"/>30.0 <text:s text:c="45"/>/</text:span> <text:s text:c="65"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13584"><text:s text:c="9"/>30.0 <text:s text:c="45"/>/ <text:s text:c="65"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15087">The above example defines the <text:span text:style-name="T5066">SUMMARY file time step interval to be 30 days for both field and metric units.</text:span></text:p>
+    <text:p text:style-name="P15087">The above example defines the SUMMARY file time step interval to be 30 days for both field and metric units.</text:p>
     <text:p text:style-name="P15087"/>
     
    </text:section>

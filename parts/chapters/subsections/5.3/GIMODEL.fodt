@@ -2709,24 +2709,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2780" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="00679b6b"/>
   </style:style>
-  <style:style style:name="T5818" style:family="text">
-   <style:text-properties officeooo:rsid="0bc10b4e"/>
-  </style:style>
-  <style:style style:name="T5819" style:family="text">
-   <style:text-properties officeooo:rsid="01cf3d6a"/>
-  </style:style>
-  <style:style style:name="T5820" style:family="text">
-   <style:text-properties officeooo:rsid="01f310e4"/>
-  </style:style>
-  <style:style style:name="T5821" style:family="text">
-   <style:text-properties officeooo:rsid="0bc1cb25"/>
-  </style:style>
-  <style:style style:name="T5933" style:family="text">
-   <style:text-properties officeooo:rsid="0c5cc42f"/>
-  </style:style>
-  <style:style style:name="T5935" style:family="text">
-   <style:text-properties officeooo:rsid="0c5eafe8"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3706,8 +3688,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4118,15 +4099,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14499_37011683886"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_37011683886"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword, <text:span text:style-name="T5933">GIMODEL,</text:span> <text:span text:style-name="T5933">activates the Gi Pseudo Compositional option for gas condensate and volatile oil fluids. </text:span><text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword, GIMODEL, activates the Gi Pseudo Compositional option for gas condensate and volatile oil fluids. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T5818">T</text:span>he accuracy of gas condensate <text:span text:style-name="T5818">and volatile oil modeling</text:span> using <text:span text:style-name="T5818">a </text:span>black-oil reservoir simulator <text:span text:style-name="T5818">is now</text:span> <text:span text:style-name="T5818">firmly accepted</text:span> in the industry; both depletion and gas cycling above the <text:span text:style-name="T5818">saturation</text:span> point can be <text:span text:style-name="T5819">modeled</text:span> and yield an <text:span text:style-name="T5818">acceptable</text:span> match <text:span text:style-name="T5818">compared with </text:span>compositional simulators. The main <text:span text:style-name="T5818">deficiency</text:span> with the existing black-oil <text:span text:style-name="T5818">formulation is</text:span> the treatment of gas injection below the <text:span text:style-name="T5818">saturation</text:span> point, where the compositional effect <text:span text:style-name="T5818">of</text:span> the stripping of liquid components i<text:span text:style-name="T5820">s</text:span> inversely proportional to their molecular weights, is <text:span text:style-name="T5818">not considered</text:span>. Th<text:span text:style-name="T5818">is is because the</text:span> black-oil model assum<text:span text:style-name="T5821">es</text:span> that the saturated hydrocarbon fluid properties are <text:span text:style-name="T5818">only </text:span>functions of pressure. <text:s/>Thus, when dry gas is injected into a condensate <text:span text:style-name="T5818">reservoir </text:span>below <text:span text:style-name="T5818">the saturation pressure</text:span> the <text:span text:style-name="T5818">injected </text:span>gas continues to re-vaporize liquid at a rate governed only by the <text:span text:style-name="T5818">cell</text:span> pressure<text:span text:style-name="T5818">s</text:span>. <text:s/><text:span text:style-name="T5818">C</text:span>ompositional <text:span text:style-name="T5818">modeling</text:span> <text:span text:style-name="T5818">indicate </text:span>that <text:span text:style-name="T5818">this not the case</text:span>.</text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T5818">The GI option attempts to overcome the limitation of the standard black-oil approach by extending the <text:s/>black-oil model using the method of Cook et al.</text:span><text:span text:style-name="T5818"><text:note text:id="ftn86" text:note-class="footnote"><text:note-citation>86</text:note-citation><text:note-body>
-        <text:p text:style-name="P16636">Cook, R. E., Jacoby, R. H., and Ramesh, A. B. “A Beta-type Reservoir Simulator for Approximating Compositional Effects During Gas Injection” paper SPE 4272, Society of Petroleum Engineers Journal (1974) 14, No. 5, 471-481.</text:p></text:note-body></text:note></text:span><text:span text:style-name="T5818"> to take into account the</text:span> fluid property changes occurring during gas injection. Th<text:span text:style-name="T5821">is is done by</text:span> extend<text:span text:style-name="T5821">ing</text:span> the fluid property treatment so that the saturated fluid properties depend <text:span text:style-name="T5821">on </text:span>pressure <text:span text:style-name="T5821">(as per the standard black-oil formulation) and</text:span> also on an additional parameter which characterizes the compositional changes in the reservoir liquid and vapor phases at constant pressure.</text:p>
+    <text:p text:style-name="_40_TextBody">The accuracy of gas condensate and volatile oil modeling using a black-oil reservoir simulator is now firmly accepted in the industry; both depletion and gas cycling above the saturation point can be modeled and yield an acceptable match compared with compositional simulators. The main deficiency with the existing black-oil formulation is the treatment of gas injection below the saturation point, where the compositional effect of the stripping of liquid components is inversely proportional to their molecular weights, is not considered. This is because the black-oil model assumes that the saturated hydrocarbon fluid properties are only functions of pressure. <text:s/>Thus, when dry gas is injected into a condensate reservoir below the saturation pressure the injected gas continues to re-vaporize liquid at a rate governed only by the cell pressures. <text:s/>Compositional modeling indicate that this not the case.</text:p>
+    <text:p text:style-name="_40_TextBody">The GI option attempts to overcome the limitation of the standard black-oil approach by extending the <text:s/>black-oil model using the method of Cook et al.<text:note text:id="ftn86" text:note-class="footnote"><text:note-citation>86</text:note-citation><text:note-body>
+        <text:p text:style-name="P16636">Cook, R. E., Jacoby, R. H., and Ramesh, A. B. “A Beta-type Reservoir Simulator for Approximating Compositional Effects During Gas Injection” paper SPE 4272, Society of Petroleum Engineers Journal (1974) 14, No. 5, 471-481.</text:p></text:note-body></text:note> to take into account the fluid property changes occurring during gas injection. This is done by extending the fluid property treatment so that the saturated fluid properties depend on pressure (as per the standard black-oil formulation) and also on an additional parameter which characterizes the compositional changes in the reservoir liquid and vapor phases at constant pressure.</text:p>
     <text:p text:style-name="_40_TextBody">There is no data required for this keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683887"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683887"/></text:h>
     <text:p text:style-name="P13637">--</text:p>
-    <text:p text:style-name="P13637">-- <text:s text:c="6"/><text:span text:style-name="T5935">ACTIVATE</text:span> THE GI PSEUDO COMPOSITIONAL OPTION</text:p>
+    <text:p text:style-name="P13637">-- <text:s text:c="6"/>ACTIVATE THE GI PSEUDO COMPOSITIONAL OPTION</text:p>
     <text:p text:style-name="P13637">--</text:p>
     <text:p text:style-name="P13637">GIMODEL <text:s text:c="84"/></text:p>
     <text:p text:style-name="P13637"/>

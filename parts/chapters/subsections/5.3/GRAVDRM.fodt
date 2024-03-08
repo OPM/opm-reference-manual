@@ -2780,26 +2780,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
   <style:style style:name="T2709" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
   <style:style style:name="T2764" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="05a14f91"/>
-  </style:style>
-  <style:style style:name="T4585" style:family="text">
-   <style:text-properties officeooo:rsid="02307c0f"/>
-  </style:style>
-  <style:style style:name="T5944" style:family="text">
-   <style:text-properties officeooo:rsid="0c6eb442"/>
-  </style:style>
-  <style:style style:name="T5945" style:family="text">
-   <style:text-properties officeooo:rsid="0c70099b"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3884,8 +3869,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4296,7 +4280,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18358" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838872"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838872"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword switches on <text:span text:style-name="T5944">the alternative gravity drainage and imbibition modeling between the matrix and the fracture grid blocks in dual porosity and dual permeability runs. </text:span><text:s/><text:span text:style-name="T5944">Either the GRAVDRM or GRAVDR keywords should be used to activate this standard or alternative type of formulation.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword switches on the alternative gravity drainage and imbibition modeling between the matrix and the fracture grid blocks in dual porosity and dual permeability runs. <text:s/>Either the GRAVDRM or GRAVDR keywords should be used to activate this standard or alternative type of formulation.</text:p>
     <text:p text:style-name="_40_TextBody">There is no data required for this keyword.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P15275"/>
@@ -4330,10 +4314,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3418">A defined character string that sets the matrix flow in and out of the matrix block option, and should be set to one of the following:</text:p>
        <text:list xml:id="list2237241161" text:style-name="L31">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20176"><text:span text:style-name="T5945">YES</text:span>: <text:span text:style-name="T5945">oil flow is bi-directional, that is oil can flow into and out of the matrix block.</text:span></text:p>
+         <text:p text:style-name="P20176">YES: oil flow is bi-directional, that is oil can flow into and out of the matrix block.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20177"><text:span text:style-name="T5945">NO</text:span>: <text:span text:style-name="T5945">oil flow is uni-directional, that is oil can flow out of the matrix block.</text:span></text:p>
+         <text:p text:style-name="P20177">NO: oil flow is uni-directional, that is oil can flow out of the matrix block.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4346,7 +4330,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1393">Notes:</text:p>
        <text:list xml:id="list105908165517972" text:continue-list="list105908381598528" text:style-name="L25">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19938"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19938">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4355,7 +4339,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14610">Table <text:sequence text:ref-name="refTable32" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.17</text:sequence>: GRAVDRM<text:span text:style-name="T4585"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14610">Table <text:sequence text:ref-name="refTable32" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.17</text:sequence>: GRAVDRM Keyword Description</text:p>
     <text:h text:style-name="P18358" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14501_370116838882"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_370116838882"/></text:h>
     <text:p text:style-name="P13639">-- <text:s/></text:p>
     <text:p text:style-name="P13639">-- <text:s text:c="6"/>ACTIVATE ALTERNATIVE GRAVITY DRAINAGE AND IMBIBITION MODEL</text:p>

@@ -2824,57 +2824,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T3622" style:family="text">
-   <style:text-properties officeooo:rsid="015f4f01"/>
-  </style:style>
-  <style:style style:name="T3623" style:family="text">
-   <style:text-properties officeooo:rsid="02f0c19b"/>
-  </style:style>
-  <style:style style:name="T3844" style:family="text">
-   <style:text-properties officeooo:rsid="015ad7e2"/>
-  </style:style>
-  <style:style style:name="T3979" style:family="text">
-   <style:text-properties officeooo:rsid="004c0a62"/>
-  </style:style>
-  <style:style style:name="T4256" style:family="text">
-   <style:text-properties officeooo:rsid="0160d8fb"/>
-  </style:style>
-  <style:style style:name="T4582" style:family="text">
-   <style:text-properties officeooo:rsid="022b73b4"/>
-  </style:style>
-  <style:style style:name="T4583" style:family="text">
-   <style:text-properties officeooo:rsid="022c35d9"/>
-  </style:style>
-  <style:style style:name="T4676" style:family="text">
-   <style:text-properties officeooo:rsid="02f2cbe3"/>
-  </style:style>
-  <style:style style:name="T4677" style:family="text">
-   <style:text-properties officeooo:rsid="02f64196"/>
-  </style:style>
-  <style:style style:name="T4678" style:family="text">
-   <style:text-properties officeooo:rsid="02f68613"/>
-  </style:style>
-  <style:style style:name="T4680" style:family="text">
-   <style:text-properties officeooo:rsid="02f874c4"/>
-  </style:style>
-  <style:style style:name="T4681" style:family="text">
-   <style:text-properties officeooo:rsid="02fb1168"/>
-  </style:style>
-  <style:style style:name="T5982" style:family="text">
-   <style:text-properties officeooo:rsid="0cae4606"/>
-  </style:style>
-  <style:style style:name="T6116" style:family="text">
-   <style:text-properties officeooo:rsid="0d5171b8"/>
-  </style:style>
-  <style:style style:name="T6117" style:family="text">
-   <style:text-properties officeooo:rsid="0d519065"/>
-  </style:style>
-  <style:style style:name="T6118" style:family="text">
-   <style:text-properties officeooo:rsid="0d529a48"/>
-  </style:style>
-  <style:style style:name="T8350" style:family="text">
-   <style:text-properties officeooo:rsid="00391e1d"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3906,8 +3855,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4284,7 +4232,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="MULTREGH">
 
-<text:h text:style-name="P17809" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc246604_1841740821"/>MULTREG<text:span text:style-name="T6116">H </text:span>– Multiply <text:span text:style-name="T6117">Thermal Conductivities Between </text:span>Region<text:span text:style-name="T4677">s</text:span><text:bookmark-end text:name="__RefHeading___Toc246604_1841740821"/></text:h>
+<text:h text:style-name="P17809" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc246604_1841740821"/>MULTREGH – Multiply Thermal Conductivities Between Regions<text:bookmark-end text:name="__RefHeading___Toc246604_1841740821"/></text:h>
     <table:table table:name="Table1396" table:style-name="Table1396">
      <table:table-column table:style-name="Table1396.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1396.E"/>
@@ -4318,7 +4266,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18422" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc296623_15761773883"/>Description<text:bookmark-end text:name="__RefHeading___Toc296623_15761773883"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T3622">MULTREGH</text:span> keyword <text:span text:style-name="T3623">multiplies the thermal conductivity between two regions by a constant. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGT keyword is read by the simulator. The constant should be a real number. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The MULTREGH keyword multiplies the thermal conductivity between two regions by a constant. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGT keyword is read by the simulator. The constant should be a real number. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. </text:p>
     <table:table table:name="Table1397" table:style-name="Table1397">
      <table:table-column table:style-name="Table1397.A"/>
@@ -4344,10 +4292,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3324">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.B7" office:value-type="string">
-       <text:p text:style-name="P3659">REGION<text:span text:style-name="T4678">1</text:span></text:p>
+       <text:p text:style-name="P3659">REGION1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3659"><text:span text:style-name="T4678">A positive integer value that defines the from </text:span>REGION number for which the CONSTANT in (2) should be applied.</text:p>
+       <text:p text:style-name="P3659">A positive integer value that defines the from REGION number for which the CONSTANT in (2) should be applied.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P3250">None</text:p>
@@ -4358,10 +4306,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4231">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.B7" office:value-type="string">
-       <text:p text:style-name="P3659">REGION<text:span text:style-name="T4678">2</text:span></text:p>
+       <text:p text:style-name="P3659">REGION2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3659"><text:span text:style-name="T4678">A positive integer value that defines the to </text:span>REGION number for which the CONSTANT in (2) should be applied.</text:p>
+       <text:p text:style-name="P3659">A positive integer value that defines the to REGION number for which the CONSTANT in (2) should be applied.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P3250">None</text:p>
@@ -4375,7 +4323,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3244">CONSTANT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3244">A real value to <text:span text:style-name="T3622">multiply the thermal conductivity between REGION1 and REGION2.</text:span></text:p>
+       <text:p text:style-name="P3244">A real value to multiply the thermal conductivity between REGION1 and REGION2.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P4235">1</text:p>
@@ -4389,7 +4337,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4236">DIR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P4236">A character <text:span text:style-name="T4680">string</text:span> that de<text:span text:style-name="T4680">fines the direction to apply the thermal conductivity multiplier between the two regions, should be set to one of the following X, Y, Z, XY, YX, XZ, or XYZ.</text:span></text:p>
+       <text:p text:style-name="P4236">A character string that defines the direction to apply the thermal conductivity multiplier between the two regions, should be set to one of the following X, Y, Z, XY, YX, XZ, or XYZ.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P4239">XYZ</text:p>
@@ -4403,7 +4351,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4233">TYPE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P4233">A character string that defines <text:span text:style-name="T4681">the type</text:span> of connections the thermal conductivity <text:span text:style-name="T4681">multiplier</text:span> should be applied to, should be one <text:span text:style-name="T4681">of the following:</text:span></text:p>
+       <text:p text:style-name="P4233">A character string that defines the type of connections the thermal conductivity multiplier should be applied to, should be one of the following:</text:p>
        <text:list xml:id="list105912099785144" text:continue-list="list105912015054820" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19253">NNC – Only apply the thermal conductivity multiplier between REGION1 and REGION2 to non-neighbor connections.</text:p>
@@ -4425,19 +4373,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4241">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.B7" office:value-type="string">
-       <text:p text:style-name="P3659"><text:span text:style-name="T5982">A</text:span>RRAY</text:p>
+       <text:p text:style-name="P3659">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3659">The ARRAY to use for applying the CONSTANT in (2) based on the ARRAY in (<text:span text:style-name="T4676">1</text:span>). <text:s/><text:span text:style-name="T3844">ARRAY can have the following values:</text:span></text:p>
+       <text:p text:style-name="P3659">The ARRAY to use for applying the CONSTANT in (2) based on the ARRAY in (1). <text:s/>ARRAY can have the following values:</text:p>
        <text:list xml:id="list105912254054751" text:continue-list="list105912099785144" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19112">F for the FLUXNUM array<text:span text:style-name="T8350">.</text:span></text:p>
+         <text:p text:style-name="P19112">F for the FLUXNUM array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19112">M for the MULTNUM array<text:span text:style-name="T8350">.</text:span></text:p>
+         <text:p text:style-name="P19112">M for the MULTNUM array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19112">O for the OPERNUM array<text:span text:style-name="T8350">.</text:span></text:p>
+         <text:p text:style-name="P19112">O for the OPERNUM array.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4450,7 +4398,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1462">Notes:</text:p>
        <text:list xml:id="list1608041977" text:style-name="L67">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19105">Where <text:span text:style-name="T4583">REGION1 and REGION2</text:span> <text:span text:style-name="T4582">should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array </text:span>in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19105">Where REGION1 and REGION2 should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18973">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
@@ -4462,19 +4410,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14683">Table <text:sequence text:ref-name="refTable151" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.77</text:sequence>: <text:span text:style-name="T4256">MULTREGH Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14683">Table <text:sequence text:ref-name="refTable151" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.77</text:sequence>: MULTREGH Keyword Description</text:p>
     <text:p text:style-name="P11440"/>
-    <text:h text:style-name="P18701" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5737_37011683882112"/><text:span text:style-name="T3979">E</text:span>xample<text:bookmark-end text:name="__RefHeading___Toc5737_37011683882112"/></text:h>
+    <text:h text:style-name="P18701" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5737_37011683882112"/>Example<text:bookmark-end text:name="__RefHeading___Toc5737_37011683882112"/></text:h>
     <text:p text:style-name="P13906">-- <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13905">-- <text:s text:c="3"/>MULTIPLY THERMAL CONDUCTIVITIES BETWEEN RESERVOIRS </text:p>
     <text:p text:style-name="P13905">-- <text:s text:c="80"/></text:p>
-    <text:p text:style-name="P13906">-- <text:s text:c="3"/>REGION <text:s text:c="2"/>REGION <text:s text:c="2"/><text:span text:style-name="T6118">CONDS</text:span> <text:s text:c="2"/>DIREC <text:s text:c="2"/>NNC <text:s text:c="3"/>REGION ARRAY <text:s text:c="42"/></text:p>
+    <text:p text:style-name="P13906">-- <text:s text:c="3"/>REGION <text:s text:c="2"/>REGION <text:s text:c="2"/>CONDS <text:s text:c="2"/>DIREC <text:s text:c="2"/>NNC <text:s text:c="3"/>REGION ARRAY <text:s text:c="42"/></text:p>
     <text:p text:style-name="P13906">-- <text:s text:c="3"/>FROM <text:s text:c="4"/>TO <text:s text:c="6"/>MULT <text:s text:c="3"/>OPT <text:s text:c="4"/>OPTS <text:s text:c="2"/>M / F / O <text:s text:c="28"/></text:p>
-    <text:p text:style-name="P13906">MULTREG<text:span text:style-name="T6118">H</text:span> <text:s text:c="67"/></text:p>
+    <text:p text:style-name="P13906">MULTREGH <text:s text:c="67"/></text:p>
     <text:p text:style-name="P13906"><text:s text:c="6"/>1* <text:s text:c="6"/>1* <text:s text:c="6"/>1.05 <text:s text:c="3"/>1* <text:s text:c="4"/>&apos;ALL&apos; <text:s text:c="2"/>M <text:s text:c="10"/>/ ALL REGIONS <text:s text:c="10"/></text:p>
     <text:p text:style-name="P13906">/ <text:s text:c="171"/></text:p>
     <text:p text:style-name="P13229"><text:s text:c="198"/></text:p>
-    <text:p text:style-name="P15192">The above example <text:span text:style-name="T6117">multiplies the diffusivities between all the MULTNUM regions by 1.05 in all directions and for all connections types.</text:span></text:p>
+    <text:p text:style-name="P15192">The above example multiplies the diffusivities between all the MULTNUM regions by 1.05 in all directions and for all connections types.</text:p>
     <text:p text:style-name="P15192"/>
     <text:p text:style-name="P15191"/>
     

@@ -2799,36 +2799,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T3447" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT" fo:font-size="10pt" officeooo:rsid="173d64e6"/>
-  </style:style>
-  <style:style style:name="T4250" style:family="text">
-   <style:text-properties officeooo:rsid="0137d2da"/>
-  </style:style>
-  <style:style style:name="T4640" style:family="text">
-   <style:text-properties officeooo:rsid="003fdde1"/>
-  </style:style>
-  <style:style style:name="T5236" style:family="text">
-   <style:text-properties officeooo:rsid="078bfcea"/>
-  </style:style>
-  <style:style style:name="T5355" style:family="text">
-   <style:text-properties officeooo:rsid="08645752"/>
-  </style:style>
-  <style:style style:name="T6189" style:family="text">
-   <style:text-properties officeooo:rsid="0da90fb5"/>
-  </style:style>
-  <style:style style:name="T6190" style:family="text">
-   <style:text-properties officeooo:rsid="0da9150e"/>
-  </style:style>
-  <style:style style:name="T7594" style:family="text">
-   <style:text-properties officeooo:rsid="1739de4d"/>
-  </style:style>
-  <style:style style:name="T7595" style:family="text">
-   <style:text-properties officeooo:rsid="173d64e6"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3860,8 +3830,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4272,8 +4241,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18442" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_3701168388161111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_3701168388161111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6189">RESVNUM</text:span> keyword <text:span text:style-name="T6189">is used to define the start of a reservoir coordinate data set and stipulates the reservoir number for the data set. <text:s/>The keyword is used in conjunction with the COORD keyword in the GRID section, that specifies a set of coordinate lines or pillars for a reservoir grid via an array. Note that the COORD keyword should immediately follow the RESVNUM keyword.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T7595">Although the keyword is processed by OPM Flow, the </text:span>keyword is <text:span text:style-name="T7595">effectively </text:span>ignored <text:span text:style-name="T3447">as only the default value of one is supported.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The RESVNUM keyword is used to define the start of a reservoir coordinate data set and stipulates the reservoir number for the data set. <text:s/>The keyword is used in conjunction with the COORD keyword in the GRID section, that specifies a set of coordinate lines or pillars for a reservoir grid via an array. Note that the COORD keyword should immediately follow the RESVNUM keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">Although the keyword is processed by OPM Flow, the keyword is effectively ignored as only the default value of one is supported.</text:p>
     <table:table table:name="Table1495" table:style-name="Table1495">
      <table:table-column table:style-name="Table1495.A"/>
      <table:table-column table:style-name="Table1495.B"/>
@@ -4301,11 +4270,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4285">RESVNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1495.C2" office:value-type="string">
-       <text:p text:style-name="P4288"><text:span text:style-name="T5236">A positive integer values that defines the reservoir </text:span>coordinate data set, <text:span text:style-name="T5236">or the independent reservoir, for which the subsequent COORD data is to be associated with.</text:span> </text:p>
+       <text:p text:style-name="P4288">A positive integer values that defines the reservoir coordinate data set, or the independent reservoir, for which the subsequent COORD data is to be associated with. </text:p>
        <text:p text:style-name="P4288"/>
        <text:p text:style-name="P5247">RESVNUM should be less than or equal to NUMRES on the NUMRES keyword in the RUNSPEC section.</text:p>
        <text:p text:style-name="P5247"/>
-       <text:p text:style-name="P4289">OPM Flow currently only accepts a single data set, <text:span text:style-name="T5355">that is the default value of one.</text:span></text:p>
+       <text:p text:style-name="P4289">OPM Flow currently only accepts a single data set, that is the default value of one.</text:p>
        <text:p text:style-name="P4289"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1495.D2" office:value-type="string">
@@ -4317,7 +4286,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1679">Notes:</text:p>
        <text:list xml:id="list2747227445" text:style-name="L77">
         <text:list-item>
-         <text:p text:style-name="P19257"><text:span text:style-name="T2084">The keyw</text:span>ord is terminated by a “/”.</text:p>
+         <text:p text:style-name="P19257">The keyword is terminated by a “/”.</text:p>
          <text:p text:style-name="P19257"/>
         </text:list-item>
        </text:list>
@@ -4327,13 +4296,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P16175">Table <text:sequence text:ref-name="refTable188" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.114</text:sequence>: RESVNUM<text:span text:style-name="T4250"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P16175">Table <text:sequence text:ref-name="refTable188" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.114</text:sequence>: RESVNUM Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12453">See the NUMRES keyword in the RUNSPEC section that defines <text:span text:style-name="T7594">t</text:span><text:span text:style-name="T4640">he number of reservoir grids (COORD data sets) that the simulator should process.</text:span></text:p>
+    <text:p text:style-name="P12453">See the NUMRES keyword in the RUNSPEC section that defines the number of reservoir grids (COORD data sets) that the simulator should process.</text:p>
     <text:p text:style-name="P11921">The facility is useful to combine two separate reservoir grids into one model in the simulator. </text:p>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715845_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715845_3964674244"/></text:h>
     <text:p text:style-name="P14297">--</text:p>
-    <text:p text:style-name="P13302">-- <text:s text:c="6"/><text:span text:style-name="T6190">NUMRES</text:span> <text:s text:c="33"/></text:p>
+    <text:p text:style-name="P13302">-- <text:s text:c="6"/>NUMRES <text:s text:c="33"/></text:p>
     <text:p text:style-name="P13302">-- <text:s text:c="6"/>NUMBER <text:s text:c="35"/></text:p>
     <text:p text:style-name="P13302">RESVNUM </text:p>
     <text:p text:style-name="P13302"><text:s text:c="9"/>1 <text:s text:c="68"/>/ </text:p>
@@ -4358,7 +4327,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14297"><text:s text:c="3"/>300 <text:s text:c="3"/>400 <text:s text:c="2"/>1000 <text:s text:c="3"/>300 <text:s text:c="3"/>400 <text:s text:c="2"/>5000 </text:p>
     <text:p text:style-name="P13585">/ <text:s text:c="17"/></text:p>
     <text:p text:style-name="P14297">--</text:p>
-    <text:p text:style-name="P13302">-- <text:s text:c="6"/><text:span text:style-name="T6190">NUMRES</text:span> <text:s text:c="33"/></text:p>
+    <text:p text:style-name="P13302">-- <text:s text:c="6"/>NUMRES <text:s text:c="33"/></text:p>
     <text:p text:style-name="P13302">-- <text:s text:c="6"/>NUMBER <text:s text:c="35"/></text:p>
     <text:p text:style-name="P13302">RESVNUM </text:p>
     <text:p text:style-name="P13302"><text:s text:c="9"/>2 <text:s text:c="68"/>/ </text:p>

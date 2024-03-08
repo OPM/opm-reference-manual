@@ -2692,21 +2692,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2771" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0812c71a"/>
-  </style:style>
-  <style:style style:name="T3994" style:family="text">
-   <style:text-properties officeooo:rsid="006ad592"/>
-  </style:style>
-  <style:style style:name="T5304" style:family="text">
-   <style:text-properties officeooo:rsid="0812c71a"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
-  <style:style style:name="T8047" style:family="text">
-   <style:text-properties officeooo:rsid="1b6e3423"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3686,8 +3671,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4064,7 +4048,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="BLACKOIL">
 
-<text:h text:style-name="P17677" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc121257_2318984819"/><text:span text:style-name="T5304">BLACKOIL</text:span> –<text:span text:style-name="T3994"> Activate Black</text:span><text:span text:style-name="T8047">-</text:span><text:span text:style-name="T3994">Oil Phases</text:span><text:bookmark-end text:name="__RefHeading___Toc121257_2318984819"/></text:h>
+<text:h text:style-name="P17677" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc121257_2318984819"/>BLACKOIL – Activate Black-Oil Phases<text:bookmark-end text:name="__RefHeading___Toc121257_2318984819"/></text:h>
     <table:table table:name="Table746" table:style-name="Table746">
      <table:table-column table:style-name="Table746.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table746.E"/>
@@ -4098,14 +4082,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18350" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14499_37011683884"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_37011683884"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword switches on <text:span text:style-name="T5304">the black-oil formulation, and is equivalent to setting the phases present in the model to be oil, vaporized oil, gas, and dissolved gas. Note if water is present in the model this needs to be explicitly stated via the WATER keyword in the RUNSPEC section (see also the LIVEOIL keywords in the RUNSPEC section). The keyword is used by the commercial simulator’s compositional THERMAL option to set the phases present in the model.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword switches on the black-oil formulation, and is equivalent to setting the phases present in the model to be oil, vaporized oil, gas, and dissolved gas. Note if water is present in the model this needs to be explicitly stated via the WATER keyword in the RUNSPEC section (see also the LIVEOIL keywords in the RUNSPEC section). The keyword is used by the commercial simulator’s compositional THERMAL option to set the phases present in the model.</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="P18350" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683885"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683885"/></text:h>
     <text:p text:style-name="_40_TextBody">The following example activates the black-oil phases in the model.</text:p>
     <text:p text:style-name="P13238">-- </text:p>
-    <text:p text:style-name="P13177">-- <text:s text:c="6"/><text:span text:style-name="T5304">ACTIVATE</text:span> <text:span text:style-name="T5304">BLACK-OIL </text:span><text:span text:style-name="T2771">PHASES</text:span> <text:s text:c="113"/></text:p>
+    <text:p text:style-name="P13177">-- <text:s text:c="6"/>ACTIVATE BLACK-OIL PHASES <text:s text:c="113"/></text:p>
     <text:p text:style-name="P13238">-- </text:p>
-    <text:p text:style-name="P13177"><text:span text:style-name="T5304">BLACKOIL</text:span> <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P13177">BLACKOIL <text:s text:c="3"/></text:p>
     <text:p text:style-name="P15501"/>
     <text:p text:style-name="_40_TextBody">Alternatively one could explicitly declare the phases using the following keywords in the RUNSPEC section.</text:p>
     <text:p text:style-name="P12904">--</text:p>
@@ -4125,7 +4109,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">DISGAS <text:s text:c="75"/></text:p>
     <text:p text:style-name="P12904"/>
-    <text:p text:style-name="P11381">The above example switches on the <text:span text:style-name="T5304"><text:s/>black-oil phases in the model.</text:span></text:p>
+    <text:p text:style-name="P11381">The above example switches on the <text:s/>black-oil phases in the model.</text:p>
     <text:p text:style-name="P11381"/>
     
    </text:section>

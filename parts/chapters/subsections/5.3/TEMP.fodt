@@ -2824,26 +2824,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T22" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="0945e1d2"/>
   </style:style>
-  <style:style style:name="T23" style:family="text">
-   <style:text-properties officeooo:rsid="041cce81"/>
-  </style:style>
   <style:style style:name="T24" style:family="text">
    <style:text-properties officeooo:rsid="05623fe9"/>
   </style:style>
   <style:style style:name="T25" style:family="text">
    <style:text-properties officeooo:rsid="085c3c67"/>
-  </style:style>
-  <style:style style:name="T26" style:family="text">
-   <style:text-properties officeooo:rsid="091edc9b"/>
-  </style:style>
-  <style:style style:name="T27" style:family="text">
-   <style:text-properties officeooo:rsid="0945e1d2"/>
-  </style:style>
-  <style:style style:name="T28" style:family="text">
-   <style:text-properties officeooo:rsid="0fefa163"/>
-  </style:style>
-  <style:style style:name="T29" style:family="text">
-   <style:text-properties officeooo:rsid="001cae32"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3879,8 +3864,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
- </office:automatic-styles>
+  </number:number-style></office:automatic-styles>
  <office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1" draw:style-name="dp1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp2" style:next-style-name="Standard"/>
@@ -4257,7 +4241,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P63"/>
    <text:section text:style-name="Sect1" text:name="TEMP">
-    <text:h text:style-name="P35" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc146397_3544483072"/><text:span text:style-name="T23">TEMP</text:span> – <text:span text:style-name="T23">Activate the Temperature Modeling Option</text:span><text:bookmark-end text:name="__RefHeading___Toc146397_3544483072"/></text:h>
+    <text:h text:style-name="P35" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc146397_3544483072"/>TEMP – Activate the Temperature Modeling Option<text:bookmark-end text:name="__RefHeading___Toc146397_3544483072"/></text:h>
     <table:table table:name="Table352" table:style-name="Table352">
      <table:table-column table:style-name="Table352.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table352.E"/>
@@ -4291,16 +4275,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_37011683883141"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_37011683883141"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword <text:span text:style-name="T23">activates the temperature modeling option </text:span><text:span text:style-name="T29">in the commercial simulator</text:span><text:span text:style-name="T23">. </text:span>There is no data required for this keyword. </text:p>
-    <text:p text:style-name="P61"><text:span text:style-name="T27">T</text:span>he temperature <text:span text:style-name="T27">option</text:span> <text:span text:style-name="T27">(TEMP keyword) </text:span>and <text:span text:style-name="T27">the </text:span>thermal <text:span text:style-name="T27">option (THERMAL keyword) </text:span>are two separate modeling facilities <text:span text:style-name="T27">in the commercial simulator</text:span>, although some keywords can be used by both options, for example the RTEMP keyword. <text:s/><text:span text:style-name="T26">OPM Flow’s thermal implementation is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil TEMP or compositional THERMAL formulations. </text:span><text:span text:style-name="T29">To activate OPM Flow’s thermal implementation use the THERMAL keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword activates the temperature modeling option in the commercial simulator. There is no data required for this keyword. </text:p>
+    <text:p text:style-name="P61">The temperature option (TEMP keyword) and the thermal option (THERMAL keyword) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options, for example the RTEMP keyword. <text:s/>OPM Flow’s thermal implementation is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil TEMP or compositional THERMAL formulations. To activate OPM Flow’s thermal implementation use the THERMAL keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="P60">OPM Flow treats the TEMP keyword as an alias for the THERMAL keyword, although it is recommended that the THERMAL keyword is used instead.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683883141"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683883141"/></text:h>
     <text:p text:style-name="P32">--</text:p>
-    <text:p text:style-name="P33">-- <text:s text:c="6"/>ACTIVATE THE TEMPERATURE MODELING OPTION (NOT <text:span text:style-name="T28">SUPPORTED</text:span> BY OPM FLOW)</text:p>
+    <text:p text:style-name="P33">-- <text:s text:c="6"/>ACTIVATE THE TEMPERATURE MODELING OPTION (NOT SUPPORTED BY OPM FLOW)</text:p>
     <text:p text:style-name="P33">--</text:p>
-    <text:p text:style-name="P31"><text:span text:style-name="T23">TEMP <text:s text:c="75"/></text:span><text:s text:c="76"/></text:p>
+    <text:p text:style-name="P31">TEMP <text:s text:c="75"/><text:s text:c="76"/></text:p>
     <text:p text:style-name="P31"/>
-    <text:p text:style-name="P30">The above example <text:span text:style-name="T23">activates the temperature modeling option </text:span><text:span text:style-name="T29">in the commercial simulator</text:span><text:span text:style-name="T23">, </text:span><text:span text:style-name="T29">however</text:span><text:span text:style-name="T23"> the keyword is </text:span><text:span text:style-name="T29">treated</text:span><text:span text:style-name="T23"> </text:span><text:span text:style-name="T29">as an alias for the THERMAL keyword </text:span><text:span text:style-name="T23">by OPM Flow </text:span><text:span text:style-name="T29">and</text:span><text:span text:style-name="T23"> </text:span><text:span text:style-name="T29">activates OPM Flow’s thermal option</text:span><text:span text:style-name="T23">.</text:span></text:p>
+    <text:p text:style-name="P30">The above example activates the temperature modeling option in the commercial simulator, however the keyword is treated as an alias for the THERMAL keyword by OPM Flow and activates OPM Flow’s thermal option.</text:p>
    </text:section>
   </office:text>
  </office:body>

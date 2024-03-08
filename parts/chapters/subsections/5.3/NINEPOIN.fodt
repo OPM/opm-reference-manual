@@ -2699,24 +2699,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4266" style:family="text">
-   <style:text-properties officeooo:rsid="01830747"/>
-  </style:style>
-  <style:style style:name="T4673" style:family="text">
-   <style:text-properties officeooo:rsid="02edc23f"/>
-  </style:style>
-  <style:style style:name="T5011" style:family="text">
-   <style:text-properties officeooo:rsid="05b7d7b2"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
-  <style:style style:name="T6130" style:family="text">
-   <style:text-properties officeooo:rsid="0d627813"/>
-  </style:style>
-  <style:style style:name="T6133" style:family="text">
-   <style:text-properties officeooo:rsid="0d658362"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3696,8 +3678,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4074,7 +4055,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NINEPOIN">
 
-<text:h text:style-name="P17710" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc232496_718033703"/><text:span text:style-name="T6130">NINEPOIN</text:span> –<text:span text:style-name="T4673"> Activate the Nine-Point Discretization Option</text:span><text:bookmark-end text:name="__RefHeading___Toc232496_718033703"/></text:h>
+<text:h text:style-name="P17710" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc232496_718033703"/>NINEPOIN – Activate the Nine-Point Discretization Option<text:bookmark-end text:name="__RefHeading___Toc232496_718033703"/></text:h>
     <table:table table:name="Table1417" table:style-name="Table1417">
      <table:table-column table:style-name="Table1417.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1417.E"/>
@@ -4108,18 +4089,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838823231"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838823231"/></text:h>
-    <text:p text:style-name="P11303">The <text:span text:style-name="T6130">NINEPOIN</text:span> keyword <text:span text:style-name="T6133">activates the Nine-Point Discretization formulation for the whole grid. If the keyword is absent from the run then the conventional standard five-point discretization formulation is used for the model</text:span>. <text:span text:style-name="T6133">The nine-point scheme is </text:span>based on adding <text:span text:style-name="T6133">a</text:span>dditional non-neighbor connections between <text:span text:style-name="T6133">the </text:span>diagonal neighbors in the areal <text:span text:style-name="T6133">plane,</text:span> in order to reduce grid orientation effects<text:note text:id="ftn92" text:note-class="footnote"><text:note-citation>92</text:note-citation><text:note-body>
+    <text:p text:style-name="P11303">The NINEPOIN keyword activates the Nine-Point Discretization formulation for the whole grid. If the keyword is absent from the run then the conventional standard five-point discretization formulation is used for the model. The nine-point scheme is based on adding additional non-neighbor connections between the diagonal neighbors in the areal plane, in order to reduce grid orientation effects<text:note text:id="ftn92" text:note-class="footnote"><text:note-citation>92</text:note-citation><text:note-body>
        <text:p text:style-name="P16636">Yanosik, J. L. and McCracken, T. A. “A Nine-Point, Finite-Difference Reservoir Simulator for Realistic Prediction of Adverse Mobility Ratio Displacements,” paper SPE 5734, Society of Petroleum Engineers Journal (1979) 19, No. 4, 253-262.</text:p></text:note-body></text:note>.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody">In none Local Grid Refinement runs the NINENUM keyword in the GRID section may be use to optionally set parts of the grid to use nine-point discretization and the remaining regions to use the conventional standard five-point discretization formulation.</text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715607_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715607_3964674244"/></text:h>
     <text:p text:style-name="P13664">--</text:p>
-    <text:p text:style-name="P13624"><text:span text:style-name="T4266">-- <text:s text:c="6"/>ACTIVATE</text:span> <text:span text:style-name="T6133">THE NINE-POINT DISCRETIZATION </text:span>OPTION</text:p>
-    <text:p text:style-name="P13624"><text:span text:style-name="T5011">--</text:span> <text:s text:c="117"/></text:p>
-    <text:p text:style-name="P13624"><text:span text:style-name="T6133">NINEPOIN</text:span> <text:s text:c="73"/></text:p>
+    <text:p text:style-name="P13624">-- <text:s text:c="6"/>ACTIVATE THE NINE-POINT DISCRETIZATION OPTION</text:p>
+    <text:p text:style-name="P13624">-- <text:s text:c="117"/></text:p>
+    <text:p text:style-name="P13624">NINEPOIN <text:s text:c="73"/></text:p>
     <text:p text:style-name="P15434"/>
-    <text:p text:style-name="P15063">The above example switches on the <text:span text:style-name="T6133">Nine-Point Discretization option for the whole grid.</text:span> <text:s/></text:p>
+    <text:p text:style-name="P15063">The above example switches on the Nine-Point Discretization option for the whole grid. <text:s/></text:p>
     
    </text:section>
   </office:text>

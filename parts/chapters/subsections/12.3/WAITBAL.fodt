@@ -2695,12 +2695,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T5797" style:family="text">
-   <style:text-properties officeooo:rsid="0ba431a6"/>
-  </style:style>
-  <style:style style:name="T5798" style:family="text">
-   <style:text-properties officeooo:rsid="0ba4799a"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3680,8 +3674,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4092,8 +4085,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881924"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881924"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword <text:span text:style-name="T5797">sets the network balance option for all networks when networks are active in the model. Basically, the keyword either activates the PRORDER and GDRILPOT stipulated actions</text:span> <text:span text:style-name="T5797">before or after the network has been balanced</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">The network option is <text:span text:style-name="T5797">normally used to ensure that the </text:span>tubing head pressure (“THP”) <text:span text:style-name="T5797">of a group</text:span> of wells <text:span text:style-name="T5797">flowing into a common network node</text:span> <text:span text:style-name="T5797">is consistent with a group’s flow</text:span> rates, <text:span text:style-name="T5797">that is each well’s THP is flowing at the same THP and at the same time satisfying well and group targets and constraints.</text:span> Th<text:span text:style-name="T5798">is is accomplished by </text:span>calculat<text:span text:style-name="T5798">ing</text:span> the well THP limits dynamically by balancing the flow rates and pressure losses in the network.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword sets the network balance option for all networks when networks are active in the model. Basically, the keyword either activates the PRORDER and GDRILPOT stipulated actions before or after the network has been balanced</text:p>
+    <text:p text:style-name="_40_TextBody">The network option is normally used to ensure that the tubing head pressure (“THP”) of a group of wells flowing into a common network node is consistent with a group’s flow rates, that is each well’s THP is flowing at the same THP and at the same time satisfying well and group targets and constraints. This is accomplished by calculating the well THP limits dynamically by balancing the flow rates and pressure losses in the network.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P15505"/>

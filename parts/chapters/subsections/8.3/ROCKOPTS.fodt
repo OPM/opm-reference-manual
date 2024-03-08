@@ -2808,30 +2808,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2106" style:family="text">
-   <style:text-properties officeooo:rsid="0533b704"/>
-  </style:style>
-  <style:style style:name="T4941" style:family="text">
-   <style:text-properties officeooo:rsid="05347dfe"/>
-  </style:style>
-  <style:style style:name="T4942" style:family="text">
-   <style:text-properties officeooo:rsid="0534de8f"/>
-  </style:style>
-  <style:style style:name="T5237" style:family="text">
-   <style:text-properties officeooo:rsid="078cbc95"/>
-  </style:style>
-  <style:style style:name="T7433" style:family="text">
-   <style:text-properties officeooo:rsid="1620edaa"/>
-  </style:style>
-  <style:style style:name="T8209" style:family="text">
-   <style:text-properties officeooo:rsid="1caaf7e0"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3863,8 +3839,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4275,7 +4250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838832"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838832"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T2106">ROCKOPTS </text:span>keyword defines <text:span text:style-name="T2106">various option with respect to rock compaction and rock compressibility.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The ROCKOPTS keyword defines various option with respect to rock compaction and rock compressibility.</text:p>
     <table:table table:name="Table543" table:style-name="Table543">
      <table:table-column table:style-name="Table543.A"/>
      <table:table-column table:style-name="Table543.B"/>
@@ -4305,7 +4280,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4812">ROCKOPT1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table543.C5" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="T2106">ROCKOPT1 is a character string that d</text:span>efines the <text:span text:style-name="T2106">treatment of how the overburden pressures supplied by the OVERBURD keyword are applied to the tabulated pressures in the ROCKTAB</text:span> keywords:</text:p>
+       <text:p text:style-name="Table_20_Contents">ROCKOPT1 is a character string that defines the treatment of how the overburden pressures supplied by the OVERBURD keyword are applied to the tabulated pressures in the ROCKTAB keywords:</text:p>
        <text:list xml:id="list105917604069548" text:continue-list="list105916615028023" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19357">STRESS: Use this option if the overburden pressures on the OVERBURD keyword are greater than the fluid pressure which results in the effective fluid pressure being negative. To avoid the rock compaction tables being entered with negative pressure values use this option. In this case the pore volume and transmissibility multipliers will be tabulated against the effective overburden pressure.</text:p>
@@ -4329,7 +4304,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4812">ROCKOPT2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table543.C5" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="T4941">ROCKOPT2 is a character string that sets</text:span> the <text:span text:style-name="T4941">reference pressure option:</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents">ROCKOPT2 is a character string that sets the reference pressure option:</text:p>
        <text:list xml:id="list105916350957808" text:continue-list="list105917604069548" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19357">STORE: Copies the initial calculated grid block pressures into the overburden pressure array, resulting in the pore volumes being referenced at the initial pressures instead of the reference pressures as per the ROCKTAB keyword.</text:p>
@@ -4360,7 +4335,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19357">ROCKOPT3, should be set to ROCKNUM, SATNUM or PVTNUM.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19357">If the parameter is defaulted or the ROCKOPT keyword is not present in the deck, then <text:span text:style-name="T7433">the </text:span>PVTNUM array is used. </text:p>
+         <text:p text:style-name="P19357">If the parameter is defaulted or the ROCKOPT keyword is not present in the deck, then the PVTNUM array is used. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19357">Secondly, if ROCKOPT3 is set to ROCKNUM but the NTROCC parameter on the TABDIMS keyword in the RUNSPEC section is defaulted, then again the PVTNUM array will be utilized.</text:p>
@@ -4380,7 +4355,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4812">ROCKOPT4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table543.C5" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">ROCKOPT4 <text:span text:style-name="T5237">is a character string that </text:span>sets the initial conditions for the HYSTER and BOBERG options:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">ROCKOPT4 is a character string that sets the initial conditions for the HYSTER and BOBERG options:</text:p>
        <text:list xml:id="list105917233274519" text:continue-list="list105916369537789" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P16992">DEFLATION: This option defines the reservoir rock to be fully compacted and the deflation curve is used to calculated the initial pore volume and transmissibility multipliers. This is the default value.</text:p>
@@ -4400,7 +4375,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1383">Notes:</text:p>
        <text:list xml:id="list3799084151" text:style-name="L94">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19817"><text:span text:style-name="T1534">T</text:span><text:span text:style-name="T2084">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P19817">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4409,7 +4384,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable344" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.128</text:sequence>: <text:span text:style-name="T4942">ROCKOPTS Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable344" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.128</text:sequence>: ROCKOPTS Keyword Description</text:p>
     <text:p text:style-name="P11035"/>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838831"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838831"/></text:h>
     <text:p text:style-name="P14026">--</text:p>
@@ -4417,7 +4392,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14026">-- <text:s text:c="6"/>PRS/STRE <text:s/>NO/STORE <text:s text:c="2"/>ARRAY <text:s text:c="57"/></text:p>
     <text:p text:style-name="P14026">-- <text:s text:c="6"/>-------- <text:s/>-------- <text:s text:c="2"/>-------- <text:s/>-------- <text:s text:c="56"/></text:p>
     <text:p text:style-name="P14026">ROCKOPTS <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P14026"><text:s text:c="9"/>PRESSURE <text:s/>NOSTORE <text:s text:c="3"/>PVTNUM <text:s text:c="3"/><text:span text:style-name="T8209"><text:s text:c="9"/></text:span><text:s text:c="10"/>/ ROCK COMP OPTIONS <text:s text:c="10"/></text:p>
+    <text:p text:style-name="P14026"><text:s text:c="9"/>PRESSURE <text:s/>NOSTORE <text:s text:c="3"/>PVTNUM <text:s text:c="3"/><text:s text:c="9"/><text:s text:c="10"/>/ ROCK COMP OPTIONS <text:s text:c="10"/></text:p>
     <text:p text:style-name="P15021"/>
     <text:p text:style-name="P11223">The above example defines the default values for the ROCKOPTS keyword. <text:s/></text:p>
     <text:p text:style-name="P11223"/>

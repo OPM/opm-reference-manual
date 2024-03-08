@@ -2785,27 +2785,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T3774" style:family="text">
-   <style:text-properties officeooo:rsid="02cd0d97"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4656" style:family="text">
-   <style:text-properties officeooo:rsid="02d0bde6"/>
-  </style:style>
-  <style:style style:name="T4663" style:family="text">
-   <style:text-properties officeooo:rsid="02d786a4"/>
-  </style:style>
-  <style:style style:name="T6162" style:family="text">
-   <style:text-properties officeooo:rsid="0d855b90"/>
-  </style:style>
-  <style:style style:name="T6163" style:family="text">
-   <style:text-properties officeooo:rsid="0d8592d2"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3837,8 +3816,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4215,7 +4193,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="PINCHXY">
 
-<text:h text:style-name="P17827" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc775709_2928331029"/>PINCH<text:span text:style-name="T6163">XY</text:span> – Defin<text:span text:style-name="T4663">e</text:span> Pinch-<text:span text:style-name="T4656">O</text:span>ut <text:span text:style-name="T6163">Areal</text:span> Options<text:bookmark-end text:name="__RefHeading___Toc775709_2928331029"/></text:h>
+<text:h text:style-name="P17827" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc775709_2928331029"/>PINCHXY – Define Pinch-Out Areal Options<text:bookmark-end text:name="__RefHeading___Toc775709_2928331029"/></text:h>
     <table:table table:name="Table526" table:style-name="Table526">
      <table:table-column table:style-name="Table526.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table526.E"/>
@@ -4249,7 +4227,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388193"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388193"/></text:h>
-    <text:p text:style-name="_40_TextBody">The P<text:span text:style-name="T3774">INCHXY </text:span>keyword defines the <text:span text:style-name="T6163">x-direction and y-direction threshold thickness used to control the generation of Non-Neighbor Connections (“NNCs”) in the x- and y- directions for missing cells in the areal plane. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The PINCHXY keyword defines the x-direction and y-direction threshold thickness used to control the generation of Non-Neighbor Connections (“NNCs”) in the x- and y- directions for missing cells in the areal plane. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table527" table:style-name="Table527">
      <table:table-column table:style-name="Table527.A"/>
@@ -4294,10 +4272,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5554">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table527.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5510">PINCHTH<text:span text:style-name="T6162">X</text:span></text:p>
+       <text:p text:style-name="P5510">PINCHTHX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table527.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5558">A real number defining the pinch<text:span text:style-name="T4656">-</text:span>out threshold <text:span text:style-name="T6163">width</text:span> <text:span text:style-name="T4656">for any cell in the x-direction. <text:s/>NNCs are generated across inactive cells having a width less than PINCHTHX in the x-direction.</text:span></text:p>
+       <text:p text:style-name="P5558">A real number defining the pinch-out threshold width for any cell in the x-direction. <text:s/>NNCs are generated across inactive cells having a width less than PINCHTHX in the x-direction.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4317,7 +4295,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5505">0.001</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table527.C2" office:value-type="string">
-       <text:p text:style-name="P5505"><text:span text:style-name="T4656">c</text:span>m</text:p>
+       <text:p text:style-name="P5505">cm</text:p>
        <text:p text:style-name="P5505">0.001</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4327,10 +4305,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P129">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table527.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5510">PINCHTH<text:span text:style-name="T6162">Y</text:span></text:p>
+       <text:p text:style-name="P5510">PINCHTHY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table527.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5559">A real number defining the pinch<text:span text:style-name="T4656">-</text:span>out threshold <text:span text:style-name="T6163">width</text:span> <text:span text:style-name="T4656">for any cell in the y-direction. <text:s/>NNCs are generated across inactive cells having a width less than PINCHTHY in the y-direction.</text:span></text:p>
+       <text:p text:style-name="P5559">A real number defining the pinch-out threshold width for any cell in the y-direction. <text:s/>NNCs are generated across inactive cells having a width less than PINCHTHY in the y-direction.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4350,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5505">0.001</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table527.C2" office:value-type="string">
-       <text:p text:style-name="P5505"><text:span text:style-name="T4656">c</text:span>m</text:p>
+       <text:p text:style-name="P5505">cm</text:p>
        <text:p text:style-name="P5505">0.001</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4360,7 +4338,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2412">Notes:</text:p>
        <text:list xml:id="list2710121411" text:style-name="L75">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18851"><text:span text:style-name="T2084">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18851">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4371,9 +4349,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14660">Table <text:sequence text:ref-name="refTable185" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.111</text:sequence>: <text:span text:style-name="T4080">PINCHXY Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14660">Table <text:sequence text:ref-name="refTable185" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.111</text:sequence>: PINCHXY Keyword Description</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388193"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388193"/></text:h>
-    <text:p text:style-name="P11318">The example below will create NNCs between the cells <text:span text:style-name="T6163">in the areal plane </text:span>having <text:span text:style-name="T6163">cell widths</text:span> less than 0.01 in either feet or metres <text:span text:style-name="T6163">in both the x- and y-directions</text:span>.</text:p>
+    <text:p text:style-name="P11318">The example below will create NNCs between the cells in the areal plane having cell widths less than 0.01 in either feet or metres in both the x- and y-directions.</text:p>
     <text:p text:style-name="P14432">--</text:p>
     <text:p text:style-name="P14432">-- <text:s text:c="6"/>SET PINCH-OUT PARAMETERS FOR AREAL PLANE</text:p>
     <text:p text:style-name="P14432">--</text:p>

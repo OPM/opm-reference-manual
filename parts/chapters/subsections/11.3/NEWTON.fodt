@@ -2714,30 +2714,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2643" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="14e67246"/>
-  </style:style>
-  <style:style style:name="T2644" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="00679b6b"/>
-  </style:style>
-  <style:style style:name="T3361" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT" fo:font-size="10pt" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="14e67246"/>
-  </style:style>
-  <style:style style:name="T4429" style:family="text">
-   <style:text-properties officeooo:rsid="01fc4129"/>
-  </style:style>
-  <style:style style:name="T5056" style:family="text">
-   <style:text-properties officeooo:rsid="05fde776"/>
-  </style:style>
-  <style:style style:name="T5063" style:family="text">
-   <style:text-properties officeooo:rsid="0604dc3d"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
-  <style:style style:name="T6128" style:family="text">
-   <style:text-properties officeooo:rsid="0d5e3538"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3717,8 +3693,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4129,13 +4104,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881913113"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881913113"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword <text:span text:style-name="T5056">activates the writing out of the Newton iteration vector (the number of non-linear iterations per time step) to the SUMMARY file, and the RSM file if the RSM file option has been requested by the RUNSUM keyword in the SUMMARY section,</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T2643">Although the </text:span><text:span text:style-name="T2644">keyword is </text:span><text:span text:style-name="T3361">recognized</text:span><text:span text:style-name="T2643"> b</text:span><text:span text:style-name="T2644">y OPM Flow </text:span><text:span text:style-name="T2643">only zeros are written to the SUMMARY file.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword activates the writing out of the Newton iteration vector (the number of non-linear iterations per time step) to the SUMMARY file, and the RSM file if the RSM file option has been requested by the RUNSUM keyword in the SUMMARY section,</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">Although the keyword is recognized by OPM Flow only zeros are written to the SUMMARY file.</text:p>
     <text:h text:style-name="P18550" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683884113"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683884113"/></text:h>
     <text:p text:style-name="P13426">-- ==============================================================================</text:p>
     <text:p text:style-name="P13426">-- </text:p>
-    <text:p text:style-name="P13426">-- <text:span text:style-name="T4429">SUMMARY</text:span> SECTION </text:p>
+    <text:p text:style-name="P13426">-- SUMMARY SECTION </text:p>
     <text:p text:style-name="P13426">-- </text:p>
     <text:p text:style-name="P13426">-- ==============================================================================</text:p>
     <text:p text:style-name="P14335">SUMMARY</text:p>
@@ -4146,10 +4121,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14112">--</text:p>
     <text:p text:style-name="P14112">-- <text:s text:c="6"/>ACTIVATE SUMMARY DATA RSM FILE OUTPUT OPTION <text:s text:c="4"/></text:p>
     <text:p text:style-name="P14112">--</text:p>
-    <text:p text:style-name="P14103"><text:span text:style-name="T5063">SEPARATE <text:s text:c="6"/></text:span>--</text:p>
+    <text:p text:style-name="P14103">SEPARATE <text:s text:c="6"/>--</text:p>
     <text:p text:style-name="P14101">-- <text:s text:c="6"/>ACTIVATE NEWTON ITERATION SUMMARY OUTPUT <text:s text:c="4"/></text:p>
     <text:p text:style-name="P14101">--</text:p>
-    <text:p text:style-name="P14101"><text:span text:style-name="T6128">NEWTON</text:span> <text:s text:c="46"/></text:p>
+    <text:p text:style-name="P14101">NEWTON <text:s text:c="46"/></text:p>
     <text:p text:style-name="P15487"/>
     <text:p text:style-name="P15747">The above example actives the writing out of the Newton iteration vector to the SUMMARY file.</text:p>
     <text:p text:style-name="P15855"/>

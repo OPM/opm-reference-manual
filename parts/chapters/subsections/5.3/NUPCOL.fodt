@@ -2767,50 +2767,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T506" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="13ac3201"/>
   </style:style>
-  <style:style style:name="T631" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="03b730b7"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2095" style:family="text">
-   <style:text-properties officeooo:rsid="027152b9"/>
-  </style:style>
   <style:style style:name="T2554" style:family="text">
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
   </style:style>
   <style:style style:name="T2945" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT" fo:font-size="10pt"/>
-  </style:style>
-  <style:style style:name="T3975" style:family="text">
-   <style:text-properties officeooo:rsid="004069ac"/>
-  </style:style>
-  <style:style style:name="T4614" style:family="text">
-   <style:text-properties officeooo:rsid="0271e651"/>
-  </style:style>
-  <style:style style:name="T4758" style:family="text">
-   <style:text-properties officeooo:rsid="03fa76bf"/>
-  </style:style>
-  <style:style style:name="T4759" style:family="text">
-   <style:text-properties officeooo:rsid="03fc301d"/>
-  </style:style>
-  <style:style style:name="T7585" style:family="text">
-   <style:text-properties officeooo:rsid="17293366"/>
-  </style:style>
-  <style:style style:name="T7586" style:family="text">
-   <style:text-properties officeooo:rsid="172a2106"/>
-  </style:style>
-  <style:style style:name="T7729" style:family="text">
-   <style:text-properties officeooo:rsid="189254fe"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3843,8 +3810,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4221,7 +4187,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NUPCOL">
 
-<text:h text:style-name="P17719" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc86969_4106839650"/>N<text:span text:style-name="T4758">UPCOL</text:span> – Define the <text:span text:style-name="T7729">Maximum </text:span><text:span text:style-name="T4758">Number of Newton Iterations Used to Update Well Targets</text:span><text:bookmark-end text:name="__RefHeading___Toc86969_4106839650"/></text:h>
+<text:h text:style-name="P17719" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc86969_4106839650"/>NUPCOL – Define the Maximum Number of Newton Iterations Used to Update Well Targets<text:bookmark-end text:name="__RefHeading___Toc86969_4106839650"/></text:h>
     <table:table table:name="Table338" table:style-name="Table338">
      <table:table-column table:style-name="Table338.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table338.E"/>
@@ -4255,9 +4221,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388132"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388132"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T2095">NUP</text:span><text:span text:style-name="T7586">C</text:span><text:span text:style-name="T2095">OL</text:span> keyword defines the <text:span text:style-name="T2554">maximum</text:span> number <text:span text:style-name="T3975">of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NUPCOL keyword defines the <text:span text:style-name="T2554">maximum</text:span> number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:p>
     <text:p text:style-name="_40_TextBody">Wells under group control may suffer from some dependency with other wells in the same group that are under group control. This may cause some oscillation in the production and injection well rates within the group. In order to avoid this, after the number Newton iterations within a time step surpasses NUPCOL, the group well rates are frozen until the time step has converged. <text:s/>Reducing the potential of well rate oscillations within the time step may result in the group targets and limits not being exactly met in this case. Increasing the value of NUPCOL to greater than the default value of six, will improve the accuracy of the group targets and limits at the expense of computational efficiency.</text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T631">See also section </text:span><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T631"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:span></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T631"><text:s/></text:span></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T631"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:span></text:a><text:span text:style-name="T631"><text:s/>on how to set various other numerical control parameters for OPM Flow.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">See also section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>on how to set various other numerical control parameters for OPM Flow.</text:p>
     <table:table table:name="Table339" table:style-name="Table339">
      <table:table-column table:style-name="Table339.A"/>
      <table:table-column table:style-name="Table339.B"/>
@@ -4282,11 +4248,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2915">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table339.B2" office:value-type="string">
-       <text:p text:style-name="P3502">N<text:span text:style-name="T4759">UPCOL</text:span></text:p>
+       <text:p text:style-name="P3502">NUPCOL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table339.C2" office:value-type="string">
-       <text:p text:style-name="P3231"><text:span text:style-name="T2095">A positive integer that defines </text:span>the maximum number o<text:span text:style-name="T2095">f Newton iterations used to update well targets within a time step.</text:span></text:p>
-       <text:p text:style-name="P5279">Note that default value of <text:span text:style-name="T7585">six</text:span> is different to the commercial simulator’s default value of three.</text:p>
+       <text:p text:style-name="P3231">A positive integer that defines the maximum number of Newton iterations used to update well targets within a time step.</text:p>
+       <text:p text:style-name="P5279">Note that default value of six is different to the commercial simulator’s default value of three.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table339.D2" office:value-type="string">
        <text:p text:style-name="P5391">6</text:p>
@@ -4297,7 +4263,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1401">Notes:</text:p>
        <text:list xml:id="list105910325641550" text:continue-list="list105909441592297" text:style-name="L26">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19756"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19756">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4306,17 +4272,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14947">Table <text:sequence text:ref-name="refTable46" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.31</text:sequence>: <text:span text:style-name="T4614">NUPCOL Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14947">Table <text:sequence text:ref-name="refTable46" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.31</text:sequence>: NUPCOL Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12479">See also the MINNPCOL keyword in the RUNSPEC section that sets the minimum number <text:span text:style-name="T3975">of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:span>Note that MINNPCOL is an OPM Flow <text:span text:style-name="T2945">specific</text:span> keyword.</text:p>
+    <text:p text:style-name="P12479">See also the MINNPCOL keyword in the RUNSPEC section that sets the minimum number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. Note that MINNPCOL is an OPM Flow <text:span text:style-name="T2945">specific</text:span> keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388132"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388132"/></text:h>
     <text:p text:style-name="P13691">--</text:p>
-    <text:p text:style-name="P13691">-- <text:s text:c="6"/>DEFINE THE <text:span text:style-name="T7729">MAX </text:span>NUMBER OF ITERATIONS TO UPDATE WELL FLOW TARGETS</text:p>
+    <text:p text:style-name="P13691">-- <text:s text:c="6"/>DEFINE THE MAX NUMBER OF ITERATIONS TO UPDATE WELL FLOW TARGETS</text:p>
     <text:p text:style-name="P13691">--</text:p>
     <text:p text:style-name="P13691">NUPCOL <text:s text:c="73"/></text:p>
-    <text:p text:style-name="P13691"><text:s text:c="9"/><text:span text:style-name="T7585">6</text:span> <text:s text:c="67"/>/</text:p>
+    <text:p text:style-name="P13691"><text:s text:c="9"/>6 <text:s text:c="67"/>/</text:p>
     <text:p text:style-name="P11186"/>
-    <text:p text:style-name="P11195">The above example sets <text:span text:style-name="T4759">the default NUPCOL value to the</text:span><text:span text:style-name="T7586"> default value of six.</text:span></text:p>
+    <text:p text:style-name="P11195">The above example sets the default NUPCOL value to the default value of six.</text:p>
     <text:p text:style-name="P11195"/>
     
    </text:section>

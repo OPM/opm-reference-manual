@@ -2685,15 +2685,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2830" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="0d485fde"/>
   </style:style>
-  <style:style style:name="T6111" style:family="text">
-   <style:text-properties officeooo:rsid="0d485fde"/>
-  </style:style>
-  <style:style style:name="T6119" style:family="text">
-   <style:text-properties officeooo:rsid="0d54467a"/>
-  </style:style>
-  <style:style style:name="T6121" style:family="text">
-   <style:text-properties officeooo:rsid="0d556ebe"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3673,8 +3664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4051,7 +4041,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="MULTSIG">
 
-<text:h text:style-name="P18148" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc264217_1841740821"/>MUL<text:span text:style-name="T6119">TSIG</text:span> – Multiply Matrix-Fracture Coupling for All Cells<text:bookmark-end text:name="__RefHeading___Toc264217_1841740821"/></text:h>
+<text:h text:style-name="P18148" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc264217_1841740821"/>MULTSIG – Multiply Matrix-Fracture Coupling for All Cells<text:bookmark-end text:name="__RefHeading___Toc264217_1841740821"/></text:h>
     <table:table table:name="Table1398" table:style-name="Table1398">
      <table:table-column table:style-name="Table1398.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1398.E"/>
@@ -4085,8 +4075,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18596" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_3701168388162432"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_3701168388162432"/></text:h>
-    <text:p text:style-name="_40_TextBody">Th<text:span text:style-name="T6111">is keyword, </text:span>MUL<text:span text:style-name="T6119">TSIG</text:span>, <text:span text:style-name="T6111">defines a constant multiplier to modify</text:span> <text:span text:style-name="T6119">the m</text:span>atrix-<text:span text:style-name="T6111">f</text:span>racture <text:span text:style-name="T6111">c</text:span>oupling <text:span text:style-name="T6111">transmissibility </text:span>for <text:span text:style-name="T6111">dual porosity and dual permeability models, for</text:span> <text:span text:style-name="T6111">when the matrix-fracture coupling transmissibilities</text:span> <text:span text:style-name="T6119">have been specified via the SIGMAGD or SIGMAGDV keywords in the GRID section, and the dual porosity or dual permeability models have been activated by the DUALPORO or DUALPERM keywords in the RUNSPEC section, respectively.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">This keyword applies the multiplier for all cells in model; whereas, the MUL<text:span text:style-name="T6119">T</text:span>S<text:span text:style-name="T6119">I</text:span>GV keyword in the SCHEDULE <text:span text:style-name="T6121">section </text:span>applies the multiplier to individual grid blocks. </text:p>
+    <text:p text:style-name="_40_TextBody">This keyword, MULTSIG, defines a constant multiplier to modify the matrix-fracture coupling transmissibility for dual porosity and dual permeability models, for when the matrix-fracture coupling transmissibilities have been specified via the SIGMAGD or SIGMAGDV keywords in the GRID section, and the dual porosity or dual permeability models have been activated by the DUALPORO or DUALPERM keywords in the RUNSPEC section, respectively.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword applies the multiplier for all cells in model; whereas, the MULTSIGV keyword in the SCHEDULE section applies the multiplier to individual grid blocks. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     

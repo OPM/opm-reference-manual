@@ -2690,15 +2690,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2789" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="0c5cc42f"/>
   </style:style>
-  <style:style style:name="T5851" style:family="text">
-   <style:text-properties officeooo:rsid="0be20bce"/>
-  </style:style>
-  <style:style style:name="T6037" style:family="text">
-   <style:text-properties officeooo:rsid="0cf28410"/>
-  </style:style>
-  <style:style style:name="T6038" style:family="text">
-   <style:text-properties officeooo:rsid="0cf3b17d"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3678,8 +3669,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4090,7 +4080,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18359" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816225"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816225"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6037">INTPC</text:span> keyword <text:span text:style-name="T6037">activates the integrated capillary pressure option for the oil, gas or both phases, <text:s/>for </text:span>when<text:span text:style-name="T5851"> a Dual Porosity model has been activated by either the DUALPORO or DUALPERM keywords in the RUNSPEC section. In addition, the keyword can only be used if the Gravity Drainage option has been specified by either the GRAVDR or GRAVDRM in the RUNSPEC section. Basically, activating this feature results in the simulator adjusting the capillary </text:span>pressure curves <text:span text:style-name="T6038">by integrating</text:span> the <text:span text:style-name="T6038">matrix capillary pressure</text:span> curves over the matrix block height to calculate the average saturation.</text:p>
+    <text:p text:style-name="_40_TextBody">The INTPC keyword activates the integrated capillary pressure option for the oil, gas or both phases, <text:s/>for when a Dual Porosity model has been activated by either the DUALPORO or DUALPERM keywords in the RUNSPEC section. In addition, the keyword can only be used if the Gravity Drainage option has been specified by either the GRAVDR or GRAVDRM in the RUNSPEC section. Basically, activating this feature results in the simulator adjusting the capillary pressure curves by integrating the matrix capillary pressure curves over the matrix block height to calculate the average saturation.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>

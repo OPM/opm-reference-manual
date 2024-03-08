@@ -3128,51 +3128,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T3619" style:family="text">
-   <style:text-properties officeooo:rsid="030e2dea"/>
-  </style:style>
-  <style:style style:name="T3622" style:family="text">
-   <style:text-properties officeooo:rsid="015f4f01"/>
-  </style:style>
-  <style:style style:name="T3844" style:family="text">
-   <style:text-properties officeooo:rsid="015ad7e2"/>
-  </style:style>
-  <style:style style:name="T3979" style:family="text">
-   <style:text-properties officeooo:rsid="004c0a62"/>
-  </style:style>
-  <style:style style:name="T3980" style:family="text">
-   <style:text-properties officeooo:rsid="005089b7"/>
-  </style:style>
-  <style:style style:name="T3981" style:family="text">
-   <style:text-properties officeooo:rsid="0051b4ed"/>
-  </style:style>
-  <style:style style:name="T3983" style:family="text">
-   <style:text-properties officeooo:rsid="0056efa0"/>
-  </style:style>
-  <style:style style:name="T3985" style:family="text">
-   <style:text-properties officeooo:rsid="00583169"/>
-  </style:style>
-  <style:style style:name="T3986" style:family="text">
-   <style:text-properties officeooo:rsid="00589faa"/>
-  </style:style>
-  <style:style style:name="T4256" style:family="text">
-   <style:text-properties officeooo:rsid="0160d8fb"/>
-  </style:style>
-  <style:style style:name="T4583" style:family="text">
-   <style:text-properties officeooo:rsid="022c35d9"/>
-  </style:style>
-  <style:style style:name="T4584" style:family="text">
-   <style:text-properties officeooo:rsid="022c7653"/>
-  </style:style>
-  <style:style style:name="T4736" style:family="text">
-   <style:text-properties officeooo:rsid="03ad8dd2"/>
-  </style:style>
-  <style:style style:name="T5983" style:family="text">
-   <style:text-properties officeooo:rsid="0cb02a1e"/>
-  </style:style>
-  <style:style style:name="T7051" style:family="text">
-   <style:text-properties officeooo:rsid="133074b7"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4204,8 +4159,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4616,7 +4570,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc296615_1576177388"/>Description<text:bookmark-end text:name="__RefHeading___Toc296615_1576177388"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T3622">MULTIREG</text:span> keyword <text:span text:style-name="T3622">multiplies an array or part of an array by a constant for cells with a specific region number. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTIREG keyword is read by the simulator. The constant can be real or integer depending on the property array type; however, the property arrays that can be operated on is dependent on which section the MULTIREG keyword is being used. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The MULTIREG keyword multiplies an array or part of an array by a constant for cells with a specific region number. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTIREG keyword is read by the simulator. The constant can be real or integer depending on the property array type; however, the property arrays that can be operated on is dependent on which section the MULTIREG keyword is being used. </text:p>
     <table:table table:name="Table146" table:style-name="Table146">
      <table:table-column table:style-name="Table146.A"/>
      <table:table-column table:style-name="Table146.B"/>
@@ -4658,7 +4612,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3243">CONSTANT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
-       <text:p text:style-name="P3243">An integer or real value to <text:span text:style-name="T3622">multiply the</text:span> ARRAY <text:span text:style-name="T3622">by </text:span>in the same units as the ARRAY <text:span text:style-name="T3980">property for a given REGION.</text:span></text:p>
+       <text:p text:style-name="P3243">An integer or real value to multiply the ARRAY by in the same units as the ARRAY property for a given REGION.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.D2" office:value-type="string">
        <text:p text:style-name="P3647">0</text:p>
@@ -4672,7 +4626,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3658">REGION</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
-       <text:p text:style-name="P3655">REGIO<text:span text:style-name="T5983">N </text:span>is <text:span text:style-name="T3619">a positive integer representing </text:span>the region for which the CONSTANT in (2) should be applied</text:p>
+       <text:p text:style-name="P3655">REGION is a positive integer representing the region for which the CONSTANT in (2) should be applied</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.D2" office:value-type="string">
        <text:p text:style-name="P3647">None</text:p>
@@ -4686,7 +4640,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3658">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
-       <text:p text:style-name="P3658">The ARRAY to use for applying the CONSTANT in (2) based on the REGION in (3). <text:s/><text:span text:style-name="T3844">ARRAY can have the following values:</text:span></text:p>
+       <text:p text:style-name="P3658">The ARRAY to use for applying the CONSTANT in (2) based on the REGION in (3). <text:s/>ARRAY can have the following values:</text:p>
        <text:list xml:id="list105911656265534" text:continue-list="list105910354815294" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19111">F for the FLUXNUM array</text:p>
@@ -4708,10 +4662,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1458">Notes:</text:p>
        <text:list xml:id="list4140141660" text:style-name="L65">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19103">Where <text:span text:style-name="T4583">the REGION should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array </text:span>in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19103">Where the REGION should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18971">Each record must be terminated by a “/” and the keyword is terminated by <text:span text:style-name="T7051">a</text:span> “/”.</text:p>
+         <text:p text:style-name="P18971">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4720,9 +4674,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14622">Table <text:sequence text:ref-name="refTable144" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.70</text:sequence>: <text:span text:style-name="T4256">MULTIREG Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14622">Table <text:sequence text:ref-name="refTable144" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.70</text:sequence>: MULTIREG Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P15450">The applicable arrays for each <text:span text:style-name="T3981">section</text:span> <text:span text:style-name="T3979">are defined in </text:span><text:span text:style-name="T3979"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable145">Table 6.71</text:sequence-ref></text:span><text:span text:style-name="T3979">.</text:span></text:p>
+    <text:p text:style-name="P15450">The applicable arrays for each section are defined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable145">Table 6.71</text:sequence-ref>.</text:p>
     <text:p text:style-name="P15450"/>
     <table:table table:name="Table147" table:style-name="Table147">
      <table:table-column table:style-name="Table147.A" table:number-columns-repeated="5"/>
@@ -4731,7 +4685,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table147.1">
        <table:table-cell table:style-name="Table147.A1" table:number-columns-spanned="7" office:value-type="string">
-        <text:p text:style-name="P10544"><text:span text:style-name="T4736">MULTREG</text:span> Keyword and Variable Options by Section</text:p>
+        <text:p text:style-name="P10544">MULTREG Keyword and Variable Options by Section</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
        <table:covered-table-cell/>
@@ -5318,10 +5272,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14622">Table <text:sequence text:ref-name="refTable145" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.71</text:sequence>: <text:span text:style-name="T4256">MULTIREG</text:span> Keyword Applicable Arrays by Section</text:p>
-    <text:h text:style-name="P18419" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5737_37011683882"/><text:span text:style-name="T3979">E</text:span>xample<text:bookmark-end text:name="__RefHeading___Toc5737_37011683882"/></text:h>
+    <text:p text:style-name="P14622">Table <text:sequence text:ref-name="refTable145" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.71</text:sequence>: MULTIREG Keyword Applicable Arrays by Section</text:p>
+    <text:h text:style-name="P18419" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5737_37011683882"/>Example<text:bookmark-end text:name="__RefHeading___Toc5737_37011683882"/></text:h>
     <text:p text:style-name="P12904">--</text:p>
-    <text:p text:style-name="P13899"><text:span text:style-name="T3983">-- </text:span>FIRST DEFINE THE PROPERTY ARRAYS AND MULTNUM ARRAYS <text:span text:style-name="T3986">FOR 10 X 10 X 20 MODEL</text:span></text:p>
+    <text:p text:style-name="P13899">-- FIRST DEFINE THE PROPERTY ARRAYS AND MULTNUM ARRAYS FOR 10 X 10 X 20 MODEL</text:p>
     <text:p text:style-name="P13757">--</text:p>
     <text:p text:style-name="P13757">-- <text:s/>ARRAY <text:s text:c="4"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P13757">-- <text:s text:c="25"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
@@ -5335,18 +5289,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13768">-- </text:p>
     <text:p text:style-name="P13768">-- NOW RESET PORO AND PERMX BASED ON THE MULTNUM REGION NUMBER</text:p>
     <text:p text:style-name="P13776">-- <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P13774">-- <text:span text:style-name="T4584">MULTIPLY </text:span>AN ARRAY <text:span text:style-name="T4584">BY A CONSTANT </text:span>BASED ON A REGION NUMBER <text:s/></text:p>
+    <text:p text:style-name="P13774">-- MULTIPLY AN ARRAY BY A CONSTANT BASED ON A REGION NUMBER <text:s/></text:p>
     <text:p text:style-name="P13774">-- <text:s text:c="71"/></text:p>
     <text:p text:style-name="P13776">-- <text:s text:c="3"/>ARRAY <text:s text:c="4"/>CONSTANT <text:s/>REGION <text:s text:c="2"/>REGION ARRAY <text:s text:c="42"/></text:p>
     <text:p text:style-name="P13776">-- <text:s text:c="13"/>VALUE <text:s text:c="4"/>NUMBER <text:s text:c="3"/>M / F / O <text:s text:c="42"/></text:p>
-    <text:p text:style-name="P13776"><text:span text:style-name="T4256">MULTI</text:span>REG <text:s text:c="58"/></text:p>
-    <text:p text:style-name="P13776"><text:s text:c="6"/>PORO <text:s text:c="5"/><text:span text:style-name="T4256">1</text:span>.050 <text:s text:c="4"/>1 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="6"/></text:p>
-    <text:p text:style-name="P13776"><text:s text:c="6"/>PORO <text:s text:c="5"/><text:span text:style-name="T4256">1</text:span>.100 <text:s text:c="4"/>2 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="6"/></text:p>
-    <text:p text:style-name="P13776"><text:s text:c="6"/>PORO <text:s text:c="5"/>0.<text:span text:style-name="T4256">95</text:span>0 <text:s text:c="4"/>3 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="6"/></text:p>
+    <text:p text:style-name="P13776">MULTIREG <text:s text:c="58"/></text:p>
+    <text:p text:style-name="P13776"><text:s text:c="6"/>PORO <text:s text:c="5"/>1.050 <text:s text:c="4"/>1 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="6"/></text:p>
+    <text:p text:style-name="P13776"><text:s text:c="6"/>PORO <text:s text:c="5"/>1.100 <text:s text:c="4"/>2 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="6"/></text:p>
+    <text:p text:style-name="P13776"><text:s text:c="6"/>PORO <text:s text:c="5"/>0.950 <text:s text:c="4"/>3 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13776"><text:s text:c="6"/>PERMX <text:s text:c="5"/>1.25 <text:s text:c="4"/>1 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="4"/></text:p>
     <text:p text:style-name="P13776"><text:s text:c="6"/>PERMX <text:s text:c="5"/>1.30 <text:s text:c="4"/>2 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="4"/></text:p>
     <text:p text:style-name="P13776"><text:s text:c="6"/>PERMX <text:s text:c="5"/>0.90 <text:s text:c="4"/>3 <text:s text:c="8"/>M <text:s text:c="15"/>/ <text:s text:c="4"/></text:p>
-    <text:p text:style-name="P13749"><text:span text:style-name="T3985">/ <text:s text:c="9"/></text:span><text:s text:c="83"/></text:p>
+    <text:p text:style-name="P13749">/ <text:s text:c="9"/><text:s text:c="83"/></text:p>
     <text:p text:style-name="P15193"/>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/>The example first defines the PORO and PERMX property arrays for the model and then sets the MULTNUM array to 1 for all cells in the model, after which selected areas of model are assigned various MULTNUM integer values. The MULTIREG can then be invoked to multiple the PORO and PERMX arrays by a constant for the various MULTNUM regions.</text:p>
     

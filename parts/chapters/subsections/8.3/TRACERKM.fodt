@@ -2707,24 +2707,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1767" style:family="text">
    <style:text-properties style:text-position="0% 100%" fo:language="en" fo:country="US" officeooo:rsid="0e0761cb"/>
   </style:style>
-  <style:style style:name="T1850" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0e0761cb"/>
-  </style:style>
-  <style:style style:name="T2083" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0018adde"/>
-  </style:style>
-  <style:style style:name="T4148" style:family="text">
-   <style:text-properties style:text-position="sub 58%" officeooo:rsid="0e0761cb"/>
-  </style:style>
-  <style:style style:name="T6276" style:family="text">
-   <style:text-properties officeooo:rsid="0e059bd5"/>
-  </style:style>
-  <style:style style:name="T6277" style:family="text">
-   <style:text-properties officeooo:rsid="0e0761cb"/>
-  </style:style>
-  <style:style style:name="T8538" style:family="text">
-   <style:text-properties officeooo:rsid="000f3a85"/>
-  </style:style>
   <style:style style:name="fr66" style:family="graphic" style:parent-style-name="Formula">
    <style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:ole-draw-aspect="1"/>
   </style:style>
@@ -3707,8 +3689,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4119,7 +4100,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18642" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816285"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816285"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T6276">This keyword, </text:span>TRACERKM, <text:span text:style-name="T6276">defines the M</text:span>ulti-Partitioned Tracer <text:span text:style-name="T6276">o</text:span>ption K(P) <text:span text:style-name="T6276">t</text:span>ables, <text:span text:style-name="T6276">for when the Partitioned Tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section, and the SOLPHASE parameter on the TRACER keyword in the PROPS section has been set to MULT to activate the Multi-Partitioned Tracer option. <text:s/>Multi-partitioned tracers can </text:span>partition into any number of phases <text:span text:style-name="T6276">(oil, water, gas etc.) </text:span>and have adsorption, decay and diffusion parameters <text:span text:style-name="T6276">specific to each phase;</text:span> <text:span text:style-name="T6276">whereas the standard partitioned tracers only have a “free” and “solution” phases. For the TRACERKM keyword the K(P) tables relate the ratio of the reference phase to the other phases versus pressure. So for example, given a multi-partitioned tracer in oil, water and gas, with the water phase acting as the reference phase, then TRACERKM would consist of columnar vectors of:</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword, TRACERKM, defines the Multi-Partitioned Tracer option K(P) tables, for when the Partitioned Tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section, and the SOLPHASE parameter on the TRACER keyword in the PROPS section has been set to MULT to activate the Multi-Partitioned Tracer option. <text:s/>Multi-partitioned tracers can partition into any number of phases (oil, water, gas etc.) and have adsorption, decay and diffusion parameters specific to each phase; whereas the standard partitioned tracers only have a “free” and “solution” phases. For the TRACERKM keyword the K(P) tables relate the ratio of the reference phase to the other phases versus pressure. So for example, given a multi-partitioned tracer in oil, water and gas, with the water phase acting as the reference phase, then TRACERKM would consist of columnar vectors of:</text:p>
     <table:table table:name="Table1635" table:style-name="Table1635">
      <table:table-column table:style-name="Table1635.A"/>
      <table:table-column table:style-name="Table1635.B"/>
@@ -4308,7 +4289,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AAAAAAABAAEAKQCMAAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:span text:style-name="T6277"><text:tab/></text:span><text:span text:style-name="T8538"><text:tab/></text:span><text:span text:style-name="T6277">= multi-partitioned oil-water K(P) </text:span></text:p>
+     </draw:frame><text:tab/><text:tab/>= multi-partitioned oil-water K(P) </text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object861" text:anchor-type="as-char" svg:width="1.418cm" svg:height="0.422cm" draw:z-index="1136"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
@@ -4343,7 +4324,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AAAAAAABAAEAKQCMAAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:span text:style-name="T6277"><text:tab/></text:span><text:span text:style-name="T8538"><text:tab/></text:span><text:span text:style-name="T6277">= multi-partitioned gas-water K(P) </text:span></text:p>
+     </draw:frame><text:tab/><text:tab/>= multi-partitioned gas-water K(P) </text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object862" text:anchor-type="as-char" svg:width="0.815cm" svg:height="0.39cm" draw:z-index="1138"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
@@ -4361,8 +4342,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AAAAAA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:span text:style-name="T1850"><text:tab/></text:span><text:span text:style-name="T2083"><text:tab/></text:span><text:span text:style-name="T1850">= oil concentration</text:span></text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="T4148"><draw:frame draw:style-name="fr66" draw:name="Object863" text:anchor-type="as-char" svg:width="0.93cm" svg:height="0.39cm" draw:z-index="1139"><draw:object>
+     </draw:frame><text:tab/><text:tab/>= oil concentration</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object863" text:anchor-type="as-char" svg:width="0.93cm" svg:height="0.39cm" draw:z-index="1139"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <mi mathvariant="italic">Cgas</mi>
@@ -4379,8 +4360,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          AAAAAA==
         </office:binary-data>
        </draw:image>
-      </draw:frame></text:span><text:span text:style-name="T1850"><text:tab/><text:tab/>= gas concentration</text:span></text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="T4148"><draw:frame draw:style-name="fr66" draw:name="Object864" text:anchor-type="as-char" svg:width="1.252cm" svg:height="0.39cm" draw:z-index="1140"><draw:object>
+      </draw:frame><text:tab/><text:tab/>= gas concentration</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object864" text:anchor-type="as-char" svg:width="1.252cm" svg:height="0.39cm" draw:z-index="1140"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <mi mathvariant="italic">Cwater</mi>
@@ -4397,7 +4378,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          CQCMAAEAAAAAAA==
         </office:binary-data>
        </draw:image>
-      </draw:frame></text:span><text:span text:style-name="T1850"><text:tab/></text:span><text:span text:style-name="T2083"><text:tab/></text:span><text:span text:style-name="T1850">= water concentration</text:span></text:p>
+      </draw:frame><text:tab/><text:tab/>= water concentration</text:p>
     <text:p text:style-name="P11979"/>
     <text:p text:style-name="P11979">See also the TRACERKP keyword in the PROPS section that provides similar data for standard partitioned tracers.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>

@@ -2813,42 +2813,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1672" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0646d115"/>
-  </style:style>
-  <style:style style:name="T2697" style:family="text">
-   <style:text-properties officeooo:rsid="0412520d"/>
-  </style:style>
-  <style:style style:name="T5084" style:family="text">
-   <style:text-properties officeooo:rsid="0638817d"/>
-  </style:style>
-  <style:style style:name="T5122" style:family="text">
-   <style:text-properties officeooo:rsid="0678ab2b"/>
-  </style:style>
-  <style:style style:name="T5127" style:family="text">
-   <style:text-properties officeooo:rsid="0681f694"/>
-  </style:style>
-  <style:style style:name="T5153" style:family="text">
-   <style:text-properties officeooo:rsid="06a850c7"/>
-  </style:style>
-  <style:style style:name="T5155" style:family="text">
-   <style:text-properties officeooo:rsid="06a8855e"/>
-  </style:style>
-  <style:style style:name="T6336" style:family="text">
-   <style:text-properties officeooo:rsid="0e64f6ee"/>
-  </style:style>
-  <style:style style:name="T6888" style:family="text">
-   <style:text-properties officeooo:rsid="11fd8b40"/>
-  </style:style>
-  <style:style style:name="T8101" style:family="text">
-   <style:text-properties officeooo:rsid="1bec4e56"/>
-  </style:style>
-  <style:style style:name="T8219" style:family="text">
-   <style:text-properties officeooo:rsid="1cbd7da3"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3880,8 +3844,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4258,7 +4221,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="WRFT">
 
-<text:h text:style-name="P18202" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc268467_1366622701"/><text:span text:style-name="T5153">WRFT</text:span> – Activate <text:span text:style-name="T5153">Well </text:span>R<text:span text:style-name="T5153">FT</text:span> Reporting <text:span text:style-name="T5153">to the RFT File</text:span><text:bookmark-end text:name="__RefHeading___Toc268467_1366622701"/></text:h>
+<text:h text:style-name="P18202" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc268467_1366622701"/>WRFT – Activate Well RFT Reporting to the RFT File<text:bookmark-end text:name="__RefHeading___Toc268467_1366622701"/></text:h>
     <table:table table:name="Table671" table:style-name="Table671">
      <table:table-column table:style-name="Table671.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table671.E"/>
@@ -4292,8 +4255,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881923"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881923"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword <text:span text:style-name="T2697">activates reporting of a well’s pressure </text:span><text:span text:style-name="T8219">and saturation </text:span><text:span text:style-name="T2697">profile </text:span><text:span text:style-name="T8219">versus depth for the connected grid blocks, </text:span><text:span text:style-name="T2697">to the RFT file for the requested wells at the time the keyword is activated. Data written out by OPM Flow is used to match the field measured data collected from a Repeat Formation Tester (“RFT”) tool. </text:span></text:p>
-    <text:p text:style-name="_40_TextBody">The RFT tool is an open hole device which is an updated version of the Formation Interval Tester (“FIT”), both of which are run on wire line. Both tools take multiple pressure readings (at various depths) thus enabling a pressure depth profile to be obtained from the formation, and, in addition, they can also take fluid samples from the formation. The latest tool available from <text:span text:style-name="T6336">Schlumberger</text:span> is the Modular Formation Dynamics Tester (“MDT”), which, as its name suggests, is a modular tool that can be assembled in different configurations depending on what are the objectives for running the tool. Note other vendors have similar wire line logging tools with alternative names for the tools. Throughout this section the term RFT applies to all tools that measure a pressure profile versus depth (RFT/FIT/MDT etc.).</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword activates reporting of a well’s pressure and saturation profile versus depth for the connected grid blocks, to the RFT file for the requested wells at the time the keyword is activated. Data written out by OPM Flow is used to match the field measured data collected from a Repeat Formation Tester (“RFT”) tool. </text:p>
+    <text:p text:style-name="_40_TextBody">The RFT tool is an open hole device which is an updated version of the Formation Interval Tester (“FIT”), both of which are run on wire line. Both tools take multiple pressure readings (at various depths) thus enabling a pressure depth profile to be obtained from the formation, and, in addition, they can also take fluid samples from the formation. The latest tool available from Schlumberger is the Modular Formation Dynamics Tester (“MDT”), which, as its name suggests, is a modular tool that can be assembled in different configurations depending on what are the objectives for running the tool. Note other vendors have similar wire line logging tools with alternative names for the tools. Throughout this section the term RFT applies to all tools that measure a pressure profile versus depth (RFT/FIT/MDT etc.).</text:p>
     <table:table table:name="Table672" table:style-name="Table672">
      <table:table-column table:style-name="Table672.A"/>
      <table:table-column table:style-name="Table672.B"/>
@@ -4340,7 +4303,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9599">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table672.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7344">A <text:span text:style-name="T5153">columnar vector of </text:span>character string<text:span text:style-name="T5153">s</text:span> of up to eight characters in length <text:span text:style-name="T5153">for each item, </text:span><text:s/>that defines the well name for which the <text:span text:style-name="T5153">RFT data should be written to the RFT file. </text:span></text:p>
+       <text:p text:style-name="P7344">A columnar vector of character strings of up to eight characters in length for each item, <text:s/>that defines the well name for which the RFT data should be written to the RFT file. </text:p>
        <text:p text:style-name="P8255">Note that the WELNAME must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
        <text:p text:style-name="P8253">If the WELNAME is left blank then the data is written out for all wells at the time they are first opened to flow. </text:p>
        <text:p text:style-name="P8253">If the WELNAME is given, then the RFT data for the well at the time step the keyword is invoked is written out.</text:p>
@@ -4356,10 +4319,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1657">Notes:</text:p>
        <text:list xml:id="list4221978025" text:style-name="L180">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19237"><text:span text:style-name="T1595">The keyword is followed by </text:span><text:span text:style-name="T1672">any number of records</text:span><text:span text:style-name="T1595">.</text:span></text:p>
+         <text:p text:style-name="P19237">The keyword is followed by any number of records.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19237">Each record is terminated by a “/” and the <text:span text:style-name="T5084">keyword should be terminated by a </text:span>“/”.</text:p>
+         <text:p text:style-name="P19237">Each record is terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4372,8 +4335,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable657" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.115</text:sequence>: WRFT Keyword Description</text:p>
     <text:p text:style-name="P10921"/>
-    <text:p text:style-name="P11674">See also the WRFTPL<text:span text:style-name="T5153">T</text:span> keyword <text:span text:style-name="T5153">in the SCHEDULE section </text:span>that has more flexible reporting options<text:span text:style-name="T8101">.</text:span></text:p>
-    <text:h text:style-name="Heading_20_4" text:outline-level="4">Example<text:span text:style-name="T6888">s</text:span></text:h>
+    <text:p text:style-name="P11674">See also the WRFTPLT keyword in the SCHEDULE section that has more flexible reporting options.</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4">Examples</text:h>
     <text:p text:style-name="P11249">The first example activates RFT reporting for all wells at the time a well is first opened to flow: </text:p>
     <text:p text:style-name="P16005">--</text:p>
     <text:p text:style-name="P16005">-- <text:s text:c="6"/>ACTIVATE WELL RFT REPORTING TO THE RFT FILE <text:s text:c="221"/></text:p>
@@ -4384,20 +4347,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P16005">/</text:p>
     <text:p text:style-name="P16005"/>
     <text:p text:style-name="P11362">Ideally, this version of the keyword should be place at the beginning of the SCHEDULE section to obtain the data for the wells in the run before they are opened up through time.</text:p>
-    <text:p text:style-name="P11284">The <text:span text:style-name="T5155">next example shows how to use the keyword to request the output for several wells at different reporting time steps.</text:span> </text:p>
+    <text:p text:style-name="P11284">The next example shows how to use the keyword to request the output for several wells at different reporting time steps. </text:p>
     <text:p text:style-name="P14171">-- ------------------------------------------------------------------------------</text:p>
     <text:p text:style-name="P14171">-- 01 JAN 2000 START OF SCHEDULE SECTION <text:s text:c="92"/></text:p>
     <text:p text:style-name="P14171">-- ------------------------------------------------------------------------------ <text:s text:c="130"/></text:p>
     <text:p text:style-name="P14255">DATES <text:s text:c="127"/></text:p>
     <text:p text:style-name="P14172">15 JAN 2000 / <text:s text:c="119"/></text:p>
-    <text:p text:style-name="P14183"><text:span text:style-name="T5122">/</text:span> <text:s text:c="77"/></text:p>
+    <text:p text:style-name="P14183">/ <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14214">--</text:p>
     <text:p text:style-name="P14215">-- <text:s text:c="6"/>WELL HISTORICAL PRODUCTION CONTROLS <text:s text:c="53"/></text:p>
     <text:p text:style-name="P14215">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14215">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>VFP <text:s text:c="3"/>VFP <text:s text:c="2"/>THP <text:s text:c="2"/>BHP <text:s/></text:p>
     <text:p text:style-name="P14215">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
-    <text:p text:style-name="P14171"><text:span text:style-name="T5127">WCONHIST <text:s text:c="121"/>OP</text:span>01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>0.0 <text:s text:c="3"/>1550 <text:s text:c="2"/>1<text:span text:style-name="T5127">0</text:span> <text:s text:c="5"/><text:span text:style-name="T5127">1</text:span>* <text:s text:c="2"/><text:span text:style-name="T5127">900.0</text:span> 1* <text:s text:c="4"/>/</text:p>
-    <text:p text:style-name="P12904"><text:span text:style-name="T5127">OP</text:span>0<text:span text:style-name="T5155">2</text:span> <text:s text:c="4"/>SHUT <text:s text:c="8"/><text:span text:style-name="T5155"><text:s/></text:span><text:s text:c="22"/><text:span text:style-name="T5127"><text:s/></text:span><text:s text:c="6"/><text:span text:style-name="T5127"><text:s/></text:span><text:s text:c="4"/><text:span text:style-name="T5127"><text:s text:c="5"/></text:span><text:s text:c="8"/>/</text:p>
+    <text:p text:style-name="P14171">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>0.0 <text:s text:c="3"/>1550 <text:s text:c="2"/>10 <text:s text:c="5"/>1* <text:s text:c="2"/>900.0 1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="P12904">OP02 <text:s text:c="4"/>SHUT <text:s text:c="8"/><text:s/><text:s text:c="22"/><text:s/><text:s text:c="6"/><text:s/><text:s text:c="4"/><text:s text:c="5"/><text:s text:c="8"/>/</text:p>
     <text:p text:style-name="P14256">/ <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14257">--</text:p>
     <text:p text:style-name="P14257">-- <text:s text:c="6"/>ACTIVATE WELL RFT REPORTING TO THE RFT FILE <text:s text:c="221"/></text:p>
@@ -4407,17 +4370,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14257">WRFT <text:s text:c="247"/></text:p>
     <text:p text:style-name="P14258">OP01 <text:s text:c="65"/>/</text:p>
     <text:p text:style-name="P14258">OP02 <text:s text:c="65"/>/</text:p>
-    <text:p text:style-name="P14255"><text:span text:style-name="T5155">/</text:span> <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P14255">/ <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14256">DATES <text:s text:c="127"/></text:p>
     <text:p text:style-name="P14171">01 FEB 2000 / <text:s text:c="119"/></text:p>
-    <text:p text:style-name="P14184"><text:span text:style-name="T5122">/</text:span> <text:s text:c="77"/></text:p>
+    <text:p text:style-name="P14184">/ <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14215">--</text:p>
     <text:p text:style-name="P14215">-- <text:s text:c="6"/>WELL HISTORICAL PRODUCTION CONTROLS <text:s text:c="53"/></text:p>
     <text:p text:style-name="P14215">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14215">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>VFP <text:s text:c="3"/>VFP <text:s text:c="2"/>THP <text:s text:c="2"/>BHP <text:s/></text:p>
     <text:p text:style-name="P14215">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
-    <text:p text:style-name="P14171"><text:span text:style-name="T5127">WCONHIST <text:s text:c="121"/>OP</text:span>01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>0.0 <text:s text:c="3"/>1550 <text:s text:c="2"/>1<text:span text:style-name="T5127">0</text:span> <text:s text:c="5"/><text:span text:style-name="T5127">1</text:span>* <text:s text:c="2"/><text:span text:style-name="T5127">900.0</text:span> 1* <text:s text:c="4"/>/</text:p>
-    <text:p text:style-name="P14256"><text:span text:style-name="T5127">OP</text:span>0<text:span text:style-name="T5155">2</text:span> <text:s text:c="4"/>SHUT <text:s text:c="8"/><text:span text:style-name="T5155"><text:s/></text:span><text:s text:c="22"/><text:span text:style-name="T5127"><text:s/></text:span><text:s text:c="6"/><text:span text:style-name="T5127"><text:s/></text:span><text:s text:c="4"/><text:span text:style-name="T5127"><text:s text:c="5"/></text:span><text:s text:c="8"/>/</text:p>
+    <text:p text:style-name="P14171">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>0.0 <text:s text:c="3"/>1550 <text:s text:c="2"/>10 <text:s text:c="5"/>1* <text:s text:c="2"/>900.0 1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="P14256">OP02 <text:s text:c="4"/>SHUT <text:s text:c="8"/><text:s/><text:s text:c="22"/><text:s/><text:s text:c="6"/><text:s/><text:s text:c="4"/><text:s text:c="5"/><text:s text:c="8"/>/</text:p>
     <text:p text:style-name="P14171">/ <text:s text:c="78"/>--</text:p>
     <text:p text:style-name="P14257">-- <text:s text:c="6"/>ACTIVATE WELL RFT REPORTING TO THE RFT FILE <text:s text:c="221"/></text:p>
     <text:p text:style-name="P14257">-- <text:s text:c="253"/></text:p>
@@ -4426,7 +4389,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14257">WRFT</text:p>
     <text:p text:style-name="P14257">OP01 <text:s text:c="65"/>/</text:p>
     <text:p text:style-name="P14257">OP02 <text:s text:c="65"/>/ <text:s text:c="231"/></text:p>
-    <text:p text:style-name="P14256"><text:span text:style-name="T5155">/</text:span> <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P14256">/ <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14171">DATES <text:s text:c="127"/></text:p>
     <text:p text:style-name="P14171">01 MAR 2000 / <text:s text:c="119"/></text:p>
     <text:p text:style-name="P14256">/ </text:p>
@@ -4435,8 +4398,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14215">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14215">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>VFP <text:s text:c="3"/>VFP <text:s text:c="2"/>THP <text:s text:c="2"/>BHP <text:s/></text:p>
     <text:p text:style-name="P14215"><text:soft-page-break/>-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
-    <text:p text:style-name="P14215">WCONHIST <text:s text:c="121"/>OP<text:span text:style-name="T5122">01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>0.0 <text:s text:c="3"/>1550 <text:s text:c="2"/>1</text:span>0<text:span text:style-name="T5122"> <text:s text:c="5"/></text:span>1<text:span text:style-name="T5122">* <text:s text:c="2"/></text:span>900.0<text:span text:style-name="T5122"> 1* <text:s text:c="4"/>/</text:span></text:p>
-    <text:p text:style-name="P14256"><text:span text:style-name="T5127">OP</text:span>0<text:span text:style-name="T5155">2</text:span> <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>1<text:span text:style-name="T5155">0</text:span>.5E3 <text:s/>0.0 <text:s text:c="3"/>1000 <text:s text:c="2"/>1<text:span text:style-name="T5127">0</text:span> <text:s text:c="5"/><text:span text:style-name="T5127">1</text:span>* <text:s text:c="2"/><text:span text:style-name="T5127">900.0</text:span> 1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="P14215">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>0.0 <text:s text:c="3"/>1550 <text:s text:c="2"/>10 <text:s text:c="5"/>1* <text:s text:c="2"/>900.0 1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="P14256">OP02 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>10.5E3 <text:s/>0.0 <text:s text:c="3"/>1000 <text:s text:c="2"/>10 <text:s text:c="5"/>1* <text:s text:c="2"/>900.0 1* <text:s text:c="4"/>/</text:p>
     <text:p text:style-name="P14215">/ <text:s text:c="18"/></text:p>
     <text:p text:style-name="P15515"/>
     <text:p text:style-name="P15515">In this example, both well’s have their RFT written out on February 1 and March 1 2000.</text:p>

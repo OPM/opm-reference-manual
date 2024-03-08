@@ -2785,21 +2785,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T4603" style:family="text">
-   <style:text-properties officeooo:rsid="024d3cdd"/>
-  </style:style>
-  <style:style style:name="T5325" style:family="text">
-   <style:text-properties officeooo:rsid="083581d4"/>
-  </style:style>
-  <style:style style:name="T5886" style:family="text">
-   <style:text-properties officeooo:rsid="0c1ca2bf"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3831,8 +3816,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4243,7 +4227,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715595_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715595_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T5886">FRICTION</text:span> keyword <text:span text:style-name="T5886">activates the Wellbore Friction option and defines the maximum number of <text:s/>wellbore friction wells together with the maximum number of well branches.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The FRICTION keyword activates the Wellbore Friction option and defines the maximum number of <text:s/>wellbore friction wells together with the maximum number of well branches.</text:p>
     <text:p text:style-name="P12080">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1122" table:style-name="Table1122">
      <table:table-column table:style-name="Table1122.A"/>
@@ -4271,10 +4255,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2906">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1122.B3" office:value-type="string">
-       <text:p text:style-name="P3167">MX<text:span text:style-name="T4603">WELS</text:span></text:p>
+       <text:p text:style-name="P3167">MXWELS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1122.C3" office:value-type="string">
-       <text:p text:style-name="P3439">A positive<text:span text:style-name="T4603"> integer defining the maximum number of wellbore friction wells for this model.</text:span></text:p>
+       <text:p text:style-name="P3439">A positive integer defining the maximum number of wellbore friction wells for this model.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1122.D3" office:value-type="string">
        <text:p text:style-name="P3440">0</text:p>
@@ -4285,10 +4269,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3360">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1122.B3" office:value-type="string">
-       <text:p text:style-name="P3182">MX<text:span text:style-name="T5325">BRAN</text:span></text:p>
+       <text:p text:style-name="P3182">MXBRAN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1122.C3" office:value-type="string">
-       <text:p text:style-name="P3439">A positive<text:span text:style-name="T4603"> integer defining the maximum number of branches per well.</text:span></text:p>
+       <text:p text:style-name="P3439">A positive integer defining the maximum number of branches per well.</text:p>
        <text:p text:style-name="P3444">The default value of one implies a standard well with no branches.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1122.D3" office:value-type="string">
@@ -4300,7 +4284,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1392">Notes:</text:p>
        <text:list xml:id="list4100732500" text:style-name="L30">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19765"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19765">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4309,15 +4293,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14592">Table <text:sequence text:ref-name="refTable31" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.16</text:sequence>: <text:span text:style-name="T5886">FRICTION Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14592">Table <text:sequence text:ref-name="refTable31" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.16</text:sequence>: FRICTION Keyword Description</text:p>
     <text:h text:style-name="P18357" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388811"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388811"/></text:h>
     <text:p text:style-name="P13631">-- <text:s text:c="79"/></text:p>
     <text:p text:style-name="P13631">-- <text:s text:c="6"/>WELL <text:s text:c="3"/>BRANCH <text:s text:c="41"/></text:p>
     <text:p text:style-name="P13631">-- <text:s text:c="6"/>MXWELS <text:s/>MXBRAN <text:s text:c="41"/></text:p>
     <text:p text:style-name="P13631">FRICTION</text:p>
-    <text:p text:style-name="P13631"><text:s text:c="9"/><text:span text:style-name="T5325">5</text:span> <text:s text:c="6"/>1 <text:s text:c="60"/>/</text:p>
+    <text:p text:style-name="P13631"><text:s text:c="9"/>5 <text:s text:c="6"/>1 <text:s text:c="60"/>/</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">The above example defines the maximum number of <text:span text:style-name="T5886">wellbore friction wells </text:span>to be five <text:span text:style-name="T5886">and the maximum number of branches set to one, for standard wells.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The above example defines the maximum number of wellbore friction wells to be five and the maximum number of branches set to one, for standard wells.</text:p>
     
    </text:section>
   </office:text>

@@ -2716,24 +2716,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2696" style:family="text">
-   <style:text-properties officeooo:rsid="0615297c"/>
-  </style:style>
-  <style:style style:name="T4429" style:family="text">
-   <style:text-properties officeooo:rsid="01fc4129"/>
-  </style:style>
-  <style:style style:name="T4631" style:family="text">
-   <style:text-properties officeooo:rsid="0292ea9e"/>
-  </style:style>
-  <style:style style:name="T4633" style:family="text">
-   <style:text-properties officeooo:rsid="0292fa99"/>
-  </style:style>
-  <style:style style:name="T5042" style:family="text">
-   <style:text-properties officeooo:rsid="05e01b86"/>
-  </style:style>
-  <style:style style:name="T5067" style:family="text">
-   <style:text-properties officeooo:rsid="06141bf7"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3713,8 +3695,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4091,7 +4072,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SKIPREST">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc117631_2179381650"/>SKIPREST – Activate Skipping of <text:span text:style-name="T5067">Restart </text:span>Schedule Data<text:bookmark-end text:name="__RefHeading___Toc117631_2179381650"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc117631_2179381650"/>SKIPREST – Activate Skipping of Restart Schedule Data<text:bookmark-end text:name="__RefHeading___Toc117631_2179381650"/></text:h>
     <table:table table:name="Table641" table:style-name="Table641">
      <table:table-column table:style-name="Table641.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table641.E"/>
@@ -4125,31 +4106,31 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881914"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881914"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T5067">This keyword t</text:span>urns <text:span text:style-name="T4633">on</text:span> <text:span text:style-name="T4631">skipping of keywords up to the start of the restart point, as defined on the RESTART keyword in the RUNSPEC section. The RESTART keyword defines the parameters to restart the simulation from a previous run that has written a RESTART file out to disk. Activating the SKIPREST keyword causes the simulator to only read in data it requires for restarting the run up to the RESTART point (RSNUM on the RESTART keyword in the SOLUTION section). Note that certain keywords always need to be present in a restart run in the SCHEDULE section as the data is not stored on the RESTART file, for example the VFP tables (VFPPROD and VFPINJ keywords). The SKIPREST keyword automatically processes the input deck and reads the required data. <text:s/></text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword turns on skipping of keywords up to the start of the restart point, as defined on the RESTART keyword in the RUNSPEC section. The RESTART keyword defines the parameters to restart the simulation from a previous run that has written a RESTART file out to disk. Activating the SKIPREST keyword causes the simulator to only read in data it requires for restarting the run up to the RESTART point (RSNUM on the RESTART keyword in the SOLUTION section). Note that certain keywords always need to be present in a restart run in the SCHEDULE section as the data is not stored on the RESTART file, for example the VFP tables (VFPPROD and VFPINJ keywords). The SKIPREST keyword automatically processes the input deck and reads the required data. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">There is no data required for this keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_3701168388371112"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_3701168388371112"/></text:h>
     <text:p text:style-name="P11226">The example below defines a restart from the previously run NOR-OPM-A01 case at time step number 40. <text:s/></text:p>
     <text:p text:style-name="P13417">-- ==============================================================================</text:p>
     <text:p text:style-name="P13417">-- </text:p>
-    <text:p text:style-name="P13417">-- <text:span text:style-name="T4429">SOLUTION</text:span> SECTION </text:p>
+    <text:p text:style-name="P13417">-- SOLUTION SECTION </text:p>
     <text:p text:style-name="P13417">-- </text:p>
     <text:p text:style-name="P13417">-- ==============================================================================</text:p>
-    <text:p text:style-name="P13175"><text:span text:style-name="T4429">SOLUTION</text:span> <text:s text:c="78"/></text:p>
+    <text:p text:style-name="P13175">SOLUTION <text:s text:c="78"/></text:p>
     <text:p text:style-name="P13341">--</text:p>
     <text:p text:style-name="P13341">-- <text:s text:c="6"/>FLEXIBLE RESTART FROM PREVIOUS SIMULATION RUN</text:p>
     <text:p text:style-name="P13341">--</text:p>
     <text:p text:style-name="P13341">-- <text:s text:c="6"/>FILE <text:s text:c="18"/>RESTART <text:s text:c="2"/>RESTART <text:s text:c="2"/>FILE</text:p>
     <text:p text:style-name="P13341">-- <text:s text:c="6"/>NAME <text:s text:c="18"/>NUMBER <text:s text:c="3"/>TYPE <text:s text:c="5"/>FORMAT</text:p>
     <text:p text:style-name="P13341">RESTART</text:p>
-    <text:p text:style-name="P13501"><text:span text:style-name="T5042"><text:s text:c="9"/>&apos;NOR-OPM-A01&apos; <text:s text:c="9"/>40 <text:s text:c="7"/>1* <text:s text:c="7"/>1* <text:s text:c="4"/>/</text:span> </text:p>
+    <text:p text:style-name="P13501"><text:s text:c="9"/>&apos;NOR-OPM-A01&apos; <text:s text:c="9"/>40 <text:s text:c="7"/>1* <text:s text:c="7"/>1* <text:s text:c="4"/>/ </text:p>
     <text:p text:style-name="P15473"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T2696">Then </text:span>in the SCHEDULE section the SKIPREST keyword <text:span text:style-name="T2696">is</text:span> used to correctly read in the schedule data up to the RESTART point.</text:p>
+    <text:p text:style-name="_40_TextBody">Then in the SCHEDULE section the SKIPREST keyword is used to correctly read in the schedule data up to the RESTART point.</text:p>
     <text:p text:style-name="P13417">-- ==============================================================================</text:p>
     <text:p text:style-name="P13417">-- </text:p>
-    <text:p text:style-name="P13417">-- <text:span text:style-name="T4429">SCHEDULE</text:span> SECTION </text:p>
+    <text:p text:style-name="P13417">-- SCHEDULE SECTION </text:p>
     <text:p text:style-name="P13417">-- </text:p>
     <text:p text:style-name="P13417">-- ==============================================================================</text:p>
-    <text:p text:style-name="P13501"><text:span text:style-name="T4429">SCHEDULE </text:span><text:s/></text:p>
+    <text:p text:style-name="P13501">SCHEDULE <text:s/></text:p>
     <text:p text:style-name="P14068">--</text:p>
     <text:p text:style-name="P14068">-- <text:s text:c="6"/>ACTIVATE SKIPREST OPTION TO AVOID MODIFYING SCHEDULE SECTION</text:p>
     <text:p text:style-name="P14068">--</text:p>

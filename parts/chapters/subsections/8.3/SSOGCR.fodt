@@ -2792,42 +2792,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4398" style:family="text">
-   <style:text-properties officeooo:rsid="01b41e2e"/>
-  </style:style>
-  <style:style style:name="T4408" style:family="text">
-   <style:text-properties officeooo:rsid="01d539fa"/>
-  </style:style>
-  <style:style style:name="T4409" style:family="text">
-   <style:text-properties officeooo:rsid="01d5540b"/>
-  </style:style>
-  <style:style style:name="T4410" style:family="text">
-   <style:text-properties officeooo:rsid="01d65f8c"/>
-  </style:style>
-  <style:style style:name="T4416" style:family="text">
-   <style:text-properties officeooo:rsid="01e61764"/>
-  </style:style>
-  <style:style style:name="T4417" style:family="text">
-   <style:text-properties officeooo:rsid="01e7517c"/>
-  </style:style>
-  <style:style style:name="T4418" style:family="text">
-   <style:text-properties officeooo:rsid="01e968e6"/>
-  </style:style>
-  <style:style style:name="T4947" style:family="text">
-   <style:text-properties officeooo:rsid="053f91b8"/>
-  </style:style>
-  <style:style style:name="T6253" style:family="text">
-   <style:text-properties officeooo:rsid="0de95599"/>
-  </style:style>
-  <style:style style:name="T6255" style:family="text">
-   <style:text-properties officeooo:rsid="0dea5788"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3859,8 +3823,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4237,7 +4200,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SSOGCR">
 
-<text:h text:style-name="P17983" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc817831_4250154414"/>SSOGCR – End-Point Scaling Grid Cell <text:span text:style-name="T6253">Surfactant Critical</text:span> <text:span text:style-name="T4416">Oil</text:span> <text:span text:style-name="T4408">Saturation with Respect to Gas</text:span><text:bookmark-end text:name="__RefHeading___Toc817831_4250154414"/></text:h>
+<text:h text:style-name="P17983" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc817831_4250154414"/>SSOGCR – End-Point Scaling Grid Cell Surfactant Critical Oil Saturation with Respect to Gas<text:bookmark-end text:name="__RefHeading___Toc817831_4250154414"/></text:h>
     <table:table table:name="Table1591" table:style-name="Table1591">
      <table:table-column table:style-name="Table1591.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1591.E"/>
@@ -4271,7 +4234,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31088_7842323223"/>Description<text:bookmark-end text:name="__RefHeading___Toc31088_7842323223"/></text:h>
-    <text:p text:style-name="P11783"><text:span text:style-name="T4408">SSOGCR defines the surfactant critical oil saturation for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array when the end-point scaling option has been invoked via the ENDSCALE keyword and the surfactant phase has been activated by the SURFACT keyword in the RUNSPEC section. The critical oil saturation with respect to gas is defined as the maximum oil saturation for which the oil relative permeability is zero in a two-phase gas-oil relative permeability table. <text:s/>SSOGCR scales the surfactant oil relative </text:span>permeability to gas <text:span text:style-name="T6253">data.</text:span></text:p>
+    <text:p text:style-name="P11783">SSOGCR defines the surfactant critical oil saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword and the surfactant phase has been activated by the SURFACT keyword in the RUNSPEC section. The critical oil saturation with respect to gas is defined as the maximum oil saturation for which the oil relative permeability is zero in a two-phase gas-oil relative permeability table. <text:s/>SSOGCR scales the surfactant oil relative permeability to gas data.</text:p>
     <text:p text:style-name="P11783">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1592" table:style-name="Table1592">
      <table:table-column table:style-name="Table1592.A"/>
@@ -4317,8 +4280,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4608">SSOGCR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1592.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3226"><text:span text:style-name="T4409">SSOGCR is an array of real numbers assigning the surfactant critical oil saturation with respect to gas values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4077">Repeat counts may be used, for example <text:span text:style-name="T4410">3</text:span>0*0.<text:span text:style-name="T4417">30</text:span> <text:span text:style-name="T4947">dimensionless</text:span></text:p>
+       <text:p text:style-name="P3226">SSOGCR is an array of real numbers assigning the surfactant critical oil saturation with respect to gas values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4077">Repeat counts may be used, for example 30*0.30 dimensionless</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4348,7 +4311,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19414">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18991"><text:span text:style-name="T4410">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18991">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4359,18 +4322,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14786">Table <text:sequence text:ref-name="refTable391" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.175</text:sequence>: <text:span text:style-name="T4410">SSOGCR Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14786">Table <text:sequence text:ref-name="refTable391" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.175</text:sequence>: SSOGCR Keyword Description</text:p>
     <text:p text:style-name="P15583"/>
-    <text:p text:style-name="P11784">End-point scaling allows the entered <text:span text:style-name="T6255">surfactant </text:span>relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SSWL, <text:span text:style-name="T6255">S</text:span>SWCR, <text:span text:style-name="T6255">S</text:span>SWU, <text:span text:style-name="T6255">S</text:span>SGL, <text:span text:style-name="T6255">S</text:span>SGCR, <text:span text:style-name="T6255">S</text:span>SGU, <text:span text:style-name="T6255">S</text:span>SOWCR, <text:span text:style-name="T4398">and S</text:span>SOGCR <text:span text:style-name="T4398">saturation grid arrays for the saturation end-points, and the SKRG, SKROG, SKROW and SKRW relative permeability grid cell arrays for the relative permeability end-point data.</text:span></text:p>
+    <text:p text:style-name="P11784">End-point scaling allows the entered surfactant relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SSWL, SSWCR, SSWU, SSGL, SSGCR, SSGU, SSOWCR, and SSOGCR saturation grid arrays for the saturation end-points, and the SKRG, SKROG, SKROW and SKRW relative permeability grid cell arrays for the relative permeability end-point data.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31090_7842323222"/>Example<text:bookmark-end text:name="__RefHeading___Toc31090_7842323222"/></text:h>
     <text:p text:style-name="P13591">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13999">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SSOGCR DATA FOR ALL CELLS</text:p>
     <text:p text:style-name="P13999">-- <text:s text:c="6"/>(FOR NX x NY x NZ = 300) <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13999">-- <text:s text:c="21"/></text:p>
     <text:p text:style-name="P13591">SSOGCR</text:p>
-    <text:p text:style-name="P13591"><text:s text:c="9"/>300*0.<text:span text:style-name="T4418">20</text:span>0 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13591"><text:s text:c="9"/>300*0.200 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13134"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15145">The above example defines <text:span text:style-name="T4080">a surfactant constant critical oil saturation with respect to gas of 0.20 to all </text:span>300 cells in the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15145">The above example defines a surfactant constant critical oil saturation with respect to gas of 0.20 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/></text:p>
     

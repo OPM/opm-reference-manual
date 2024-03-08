@@ -2803,30 +2803,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T4575" style:family="text">
-   <style:text-properties officeooo:rsid="0221e4e0"/>
-  </style:style>
-  <style:style style:name="T5074" style:family="text">
-   <style:text-properties officeooo:rsid="0621c765"/>
-  </style:style>
-  <style:style style:name="T5075" style:family="text">
-   <style:text-properties officeooo:rsid="06227bcd"/>
-  </style:style>
-  <style:style style:name="T5076" style:family="text">
-   <style:text-properties officeooo:rsid="0623a210"/>
-  </style:style>
-  <style:style style:name="T5077" style:family="text">
-   <style:text-properties officeooo:rsid="06246622"/>
-  </style:style>
-  <style:style style:name="T5216" style:family="text">
-   <style:text-properties officeooo:rsid="07524044"/>
-  </style:style>
-  <style:style style:name="T6128" style:family="text">
-   <style:text-properties officeooo:rsid="0d5e3538"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3858,8 +3834,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4236,7 +4211,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NEXT">
 
-<text:h text:style-name="P18151" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc117629_2179381650"/><text:span text:style-name="T5074">NEXT</text:span> –<text:span text:style-name="T4575"> Maximum Next Time Step Size (Alias for NEXTSTEP)</text:span><text:bookmark-end text:name="__RefHeading___Toc117629_2179381650"/></text:h>
+<text:h text:style-name="P18151" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc117629_2179381650"/>NEXT – Maximum Next Time Step Size (Alias for NEXTSTEP)<text:bookmark-end text:name="__RefHeading___Toc117629_2179381650"/></text:h>
     <table:table table:name="Table649" table:style-name="Table649">
      <table:table-column table:style-name="Table649.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table649.E"/>
@@ -4270,8 +4245,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881101"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881101"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines the maximum time step size the simulator should take for the next time step. This keyword can be used to reset the time step for when known large changes to the model are taking place that may result in time step chops. For example, if the reporting time size is using monthly reporting steps via the DATES keyword in the SCHEDULE section, then if for example, a group of wells start production at a given date, then the NEXT keyword can be used to shorten the next step <text:span text:style-name="T6128">in order </text:span>to avoid a time step chop.</text:p>
-    <text:p text:style-name="_40_TextBody">Time steps chops are computationally expensive as the simulator cannot solve the current time step at the given tolerance, and therefore has to reduce the time step size. For example, if the previous completed time step was at <text:span text:style-name="T5216">day </text:span>365 and the current time step <text:span text:style-name="T5216">ending </text:span>at 396 days cannot be solved, then <text:span text:style-name="T5216">the </text:span>simulator will reduce the current time step to perhaps <text:span text:style-name="T5216">end at day </text:span>370, if this still cannot solved then the time step will be chopped back again to perhaps to less then one day. Using the NEXT <text:span text:style-name="T6128">or NEXTSTEP</text:span> keyword, the simulator is instructed to take a small time step in the anticipation that this will avoid time step chops and thus improve computational performance. <text:s text:c="2"/></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines the maximum time step size the simulator should take for the next time step. This keyword can be used to reset the time step for when known large changes to the model are taking place that may result in time step chops. For example, if the reporting time size is using monthly reporting steps via the DATES keyword in the SCHEDULE section, then if for example, a group of wells start production at a given date, then the NEXT keyword can be used to shorten the next step in order to avoid a time step chop.</text:p>
+    <text:p text:style-name="_40_TextBody">Time steps chops are computationally expensive as the simulator cannot solve the current time step at the given tolerance, and therefore has to reduce the time step size. For example, if the previous completed time step was at day 365 and the current time step ending at 396 days cannot be solved, then the simulator will reduce the current time step to perhaps end at day 370, if this still cannot solved then the time step will be chopped back again to perhaps to less then one day. Using the NEXT or NEXTSTEP keyword, the simulator is instructed to take a small time step in the anticipation that this will avoid time step chops and thus improve computational performance. <text:s text:c="2"/></text:p>
     <table:table table:name="Table650" table:style-name="Table650">
      <table:table-column table:style-name="Table650.A"/>
      <table:table-column table:style-name="Table650.B"/>
@@ -4346,7 +4321,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">NSTEP2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table650.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9311">NSTEP2 is a character string <text:span text:style-name="T5076">that should be set to either NO or YES to state if the NSTEP1 should be applied to future reporting time steps.</text:span></text:p>
+       <text:p text:style-name="P9311">NSTEP2 is a character string that should be set to either NO or YES to state if the NSTEP1 should be applied to future reporting time steps.</text:p>
        <text:list xml:id="list105920406906754" text:continue-list="list105921521974876" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P20146">NO: Means that NSTEP1 should not be applied to subsequent reporting time steps.</text:p>
@@ -4368,7 +4343,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1636">Notes:</text:p>
        <text:list xml:id="list105921244385011" text:continue-list="list105908435805182" text:style-name="L13">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18999"><text:span text:style-name="T2084">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18999">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4379,7 +4354,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14927">Table <text:sequence text:ref-name="refTable596" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.54</text:sequence>: <text:span text:style-name="T5075">NEXT Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14927">Table <text:sequence text:ref-name="refTable596" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.54</text:sequence>: NEXT Keyword Description</text:p>
     <text:p text:style-name="P15643"/>
     <text:p text:style-name="P15333">See also the DATES and TSTEP keywords in the RUNSPEC section that are used to advance the simulation through time.</text:p>
     <text:p text:style-name="P15333"/>
@@ -4389,7 +4364,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14190">-- <text:s text:c="6"/>STEP <text:s text:c="2"/>TIME</text:p>
     <text:p text:style-name="P14190">-- <text:s text:c="6"/>---- <text:s text:c="2"/>----</text:p>
     <text:p text:style-name="P14190">NEXT</text:p>
-    <text:p text:style-name="P13109"><text:span text:style-name="T5077"><text:s text:c="9"/>1 <text:s text:c="4"/>&apos;NO&apos; <text:s text:c="39"/>/</text:span> <text:s text:c="76"/></text:p>
+    <text:p text:style-name="P13109"><text:s text:c="9"/>1 <text:s text:c="4"/>&apos;NO&apos; <text:s text:c="39"/>/ <text:s text:c="76"/></text:p>
     <text:p text:style-name="P15503">Here the next step size is set to one day and should only be used once.</text:p>
     
    </text:section>

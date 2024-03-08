@@ -2876,30 +2876,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T3853" style:family="text">
    <style:text-properties style:text-position="super 58%"/>
   </style:style>
-  <style:style style:name="T4968" style:family="text">
-   <style:text-properties officeooo:rsid="05578943"/>
-  </style:style>
-  <style:style style:name="T4969" style:family="text">
-   <style:text-properties officeooo:rsid="05587ec4"/>
-  </style:style>
-  <style:style style:name="T4970" style:family="text">
-   <style:text-properties officeooo:rsid="05597f1a"/>
-  </style:style>
-  <style:style style:name="T4971" style:family="text">
-   <style:text-properties officeooo:rsid="0559c8b1"/>
-  </style:style>
-  <style:style style:name="T4987" style:family="text">
-   <style:text-properties officeooo:rsid="056ec8b1"/>
-  </style:style>
-  <style:style style:name="T5007" style:family="text">
-   <style:text-properties officeooo:rsid="05a14f91"/>
-  </style:style>
-  <style:style style:name="T7309" style:family="text">
-   <style:text-properties officeooo:rsid="15210d5c"/>
-  </style:style>
-  <style:style style:name="T7330" style:family="text">
-   <style:text-properties officeooo:rsid="154c6237"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3931,8 +3907,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4343,7 +4318,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716269_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716269_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4970">The TRACER keyword </text:span>defines <text:span text:style-name="T4968">a series of passive tracers that are associated with a phase (oil, water, or gas) in the model. The maximum number of tracers for each phase are declared on the TRACERS keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The TRACER keyword defines a series of passive tracers that are associated with a phase (oil, water, or gas) in the model. The maximum number of tracers for each phase are declared on the TRACERS keyword in the RUNSPEC section.</text:p>
     <table:table table:name="Table571" table:style-name="Table571">
      <table:table-column table:style-name="Table571.A"/>
      <table:table-column table:style-name="Table571.B"/>
@@ -4391,9 +4366,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4856">A three letter character string defining the tracer’s name.</text:p>
-       <text:p text:style-name="P5357">NAME is used by the TNUM keyword in the REGIONS section, and u<text:span text:style-name="T4987">nlike other keywords, the TNUM keyword </text:span>itself <text:span text:style-name="T4987">must be concatenated with the phase and the name of the tracer </text:span>defined by NAME.</text:p>
+       <text:p text:style-name="P5357">NAME is used by the TNUM keyword in the REGIONS section, and unlike other keywords, the TNUM keyword itself must be concatenated with the phase and the name of the tracer defined by NAME.</text:p>
        <text:p text:style-name="P5357">Similarly for the TVDP keyword in the SOLUTION section, where the TVDP keyword itself must be concatenated with the either letter F (for free) or S (for solution), followed by the name of the tracer defined by NAME.</text:p>
-       <text:p text:style-name="P4856">Note it is best to void names beginning with the letters F, S, and T as these names may <text:span text:style-name="T5007">c</text:span>reat<text:span text:style-name="T5007">e</text:span> naming issues in post-processing software.</text:p>
+       <text:p text:style-name="P4856">Note it is best to void names beginning with the letters F, S, and T as these names may create naming issues in post-processing software.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4426,7 +4401,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4856">UNITS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4869">The units for the tracer. This <text:span text:style-name="T7330">can be any unit but should be consistent with values entered via the TBLK and TVDP keywords in the SOLUTION section. <text:s/>The default values are</text:span> the same as the PHASE in the model.</text:p>
+       <text:p text:style-name="P4869">The units for the tracer. This can be any unit but should be consistent with values entered via the TBLK and TVDP keywords in the SOLUTION section. <text:s/>The default values are the same as the PHASE in the model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4459,8 +4434,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9327">SOLPHASE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9319">A three or four letter <text:span text:style-name="T4968">character string defining the </text:span>partitioned tracer’s solution phase. The character string should be set to OIL, WAT, GAS or MULT.</text:p>
-       <text:p text:style-name="P9320">Note that SOLPHASE only needs to be defined if the <text:span text:style-name="T4970">partitioned</text:span> tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P9319">A three or four letter character string defining the partitioned tracer’s solution phase. The character string should be set to OIL, WAT, GAS or MULT.</text:p>
+       <text:p text:style-name="P9320">Note that SOLPHASE only needs to be defined if the partitioned tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4476,8 +4451,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9327">KPNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9322">The table number to be used with the partitioned<text:span text:style-name="T4969"> </text:span>tracers defined by the PARTTRAC, TRACERKP and TRACERKM keywords.</text:p>
-       <text:p text:style-name="P9320">Note that <text:span text:style-name="T4970">KPNUM</text:span> only needs to be defined if the <text:span text:style-name="T4970">partitioned</text:span> tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P9322">The table number to be used with the partitioned tracers defined by the PARTTRAC, TRACERKP and TRACERKM keywords.</text:p>
+       <text:p text:style-name="P9320">Note that KPNUM only needs to be defined if the partitioned tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4491,11 +4466,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9326">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.B9" office:value-type="string">
-       <text:p text:style-name="P9327"><text:span text:style-name="T7309">ADS</text:span><text:span text:style-name="T4970">PHASE</text:span></text:p>
+       <text:p text:style-name="P9327">ADSPHASE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9321">A three <text:span text:style-name="T4970">l</text:span>etter <text:span text:style-name="T4968">character string defining the phase used for the adsorption calculation for when the MULT option has been for SOLPHASE</text:span>. The character string should be set to OIL, WAT, GAS or <text:span text:style-name="T4970">ALL</text:span>.</text:p>
-       <text:p text:style-name="P9320">Note that <text:span text:style-name="T7309">ADS</text:span>PHASE only needs to be defined if the <text:span text:style-name="T4970">partitioned</text:span> tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P9321">A three letter character string defining the phase used for the adsorption calculation for when the MULT option has been for SOLPHASE. The character string should be set to OIL, WAT, GAS or ALL.</text:p>
+       <text:p text:style-name="P9320">Note that ADSPHASE only needs to be defined if the partitioned tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4508,7 +4483,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1424">Notes:</text:p>
        <text:list xml:id="list1677839868" text:style-name="L100">
         <text:list-item>
-         <text:p text:style-name="P18992"><text:span text:style-name="T4970">Each record (or row) should be terminated by a “/” and t</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18992">Each record (or row) should be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4519,7 +4494,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable410" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.194</text:sequence>: <text:span text:style-name="T4970">TRACER Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable410" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.194</text:sequence>: TRACER Keyword Description</text:p>
     <text:p text:style-name="P11136"/>
     <text:p text:style-name="P11034">See also the TNUM keyword in the REGION section that defines tracer regions, and the TVDP keyword in the SOLUTION section that sets the initial tracer saturation for all the cells as a function of depth.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716271_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716271_3964674244"/></text:h>
@@ -4534,9 +4509,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13025"><text:s text:c="8"/>&apos;DGS&apos; <text:s text:c="4"/>&apos;GAS&apos; <text:s text:c="35"/>/ DISOLVED GAS</text:p>
     <text:p text:style-name="P13025"><text:s text:c="8"/>&apos;IW1&apos; <text:s text:c="4"/>&apos;WAT&apos; <text:s text:c="35"/>/ WAT INJECTOR 1</text:p>
     <text:p text:style-name="P13025"><text:s text:c="8"/>&apos;Iw2&apos; <text:s text:c="4"/>&apos;WAT&apos; <text:s text:c="35"/>/ WAT INJECTOR 2</text:p>
-    <text:p text:style-name="P13579"><text:span text:style-name="T4971">/ </text:span><text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13579">/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15087">The above example defines <text:span text:style-name="T4971">four passive tracers one for a gas injection well, one for tracking the dissolved gas, and two to track the injected water from two water injection wells.</text:span></text:p>
+    <text:p text:style-name="P15087">The above example defines four passive tracers one for a gas injection well, one for tracking the dissolved gas, and two to track the injected water from two water injection wells.</text:p>
     
    </text:section>
   </office:text>

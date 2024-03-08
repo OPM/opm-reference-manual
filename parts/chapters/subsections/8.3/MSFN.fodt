@@ -2779,24 +2779,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2569" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="04ddf5dc"/>
-  </style:style>
-  <style:style style:name="T4879" style:family="text">
-   <style:text-properties officeooo:rsid="04ddf5dc"/>
-  </style:style>
-  <style:style style:name="T4880" style:family="text">
-   <style:text-properties officeooo:rsid="04e0ac85"/>
-  </style:style>
-  <style:style style:name="T5491" style:family="text">
-   <style:text-properties officeooo:rsid="092cbe01"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3828,8 +3810,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4240,7 +4221,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838831"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838831"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T4879">MSFN</text:span> keyword defines the <text:span text:style-name="T4879">miscible </text:span><text:span text:style-name="T2569">normalized</text:span><text:span text:style-name="T4879"> relative permeability tables for when the MISCIBLE and or SOLVENT options have been activated in the RUNSPEC section using the respective keyword. The MISCIBLE keyword invokes a three component formulation (oil, water and solvent gas or an oil, water and solvent oil). <text:s/>Whereas the SOLVENT keyword results in a four component model (oil, water and gas plus a solvent). This keyword should only be used if the MISCIBLE and or SOLVENT options have been activated. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The MSFN keyword defines the miscible normalized relative permeability tables for when the MISCIBLE and or SOLVENT options have been activated in the RUNSPEC section using the respective keyword. The MISCIBLE keyword invokes a three component formulation (oil, water and solvent gas or an oil, water and solvent oil). <text:s/>Whereas the SOLVENT keyword results in a four component model (oil, water and gas plus a solvent). This keyword should only be used if the MISCIBLE and or SOLVENT options have been activated. </text:p>
     <table:table table:name="Table477" table:style-name="Table477">
      <table:table-column table:style-name="Table477.A"/>
      <table:table-column table:style-name="Table477.B"/>
@@ -4268,7 +4249,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4632">SGAS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table477.A2" office:value-type="string">
-       <text:p text:style-name="P4350">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values sta<text:span text:style-name="T5491">r</text:span>ting from zero and terminating at one, that defines the gas plus solvent saturation.</text:p>
+       <text:p text:style-name="P4350">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values starting from zero and terminating at one, that defines the gas plus solvent saturation.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table477.D2" office:value-type="string">
        <text:p text:style-name="P4328">None</text:p>
@@ -4307,13 +4288,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1383">Notes:</text:p>
        <text:list xml:id="list105915213401400" text:continue-list="list105915277746929" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19858"><text:span text:style-name="T1534">T</text:span><text:span text:style-name="T2084">he keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:span></text:p>
+         <text:p text:style-name="P19858">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19990">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20082">Each table is terminated by "/" and there is no "/" terminator for the keyword.</text:p>
+         <text:p text:style-name="P20082">Each table is terminated by &quot;/&quot; and there is no &quot;/&quot; terminator for the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4322,7 +4303,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable305" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.89</text:sequence>: <text:span text:style-name="T4880">MSFN Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable305" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.89</text:sequence>: MSFN Keyword Description</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838830"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838830"/></text:h>
     <text:p text:style-name="P13319">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P13319">-- <text:s text:c="6"/>MISCIBLE NORMALIZED RELATIVE PERMEABILITY TABLES <text:s text:c="45"/></text:p>

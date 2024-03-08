@@ -2685,9 +2685,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T6345" style:family="text">
-   <style:text-properties officeooo:rsid="0e728957"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3667,8 +3664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4079,7 +4075,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716853_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716853_3964674244"/></text:h>
-    <text:p text:style-name="P12042"><text:span text:style-name="T6345">The WSEGFMOD declares the multi-phase flow model to be used to calculate the pressure drop within an individual segment for multi-segment wells. The FLOWOPT parameter on the WELSEGS keyword in the SCHEDULE section sets the default multi-segment well model. FLOWOPT is a character string that can be set to </text:span>HO <text:span text:style-name="T6345">that activates </text:span>the homogeneous model, that is all phases flow at the same velocity, <text:span text:style-name="T6345">or</text:span> DF <text:span text:style-name="T6345">that</text:span> <text:span text:style-name="T6345">invokes </text:span>the <text:span text:style-name="T6345">Drift</text:span> Flux <text:span text:style-name="T6345">Slip m</text:span>odel <text:span text:style-name="T6345">(note </text:span>OPM Flow only supports the default value of HO <text:span text:style-name="T6345">for the homogeneous model)</text:span>. <text:s/><text:span text:style-name="T6345">Here WSEGFMOD can be used to set the flow model for a segment to either the homogeneous model or the Drift Flux Slip model, and addition a: VLP table allocated via the WSEGTABL keyword, or a specific model as defined by the WSEGVALV, WSEGFLIM and WSEGLABY keywords. All the aforementioned keywords are in the SCHEDULE section.</text:span></text:p>
+    <text:p text:style-name="P12042">The WSEGFMOD declares the multi-phase flow model to be used to calculate the pressure drop within an individual segment for multi-segment wells. The FLOWOPT parameter on the WELSEGS keyword in the SCHEDULE section sets the default multi-segment well model. FLOWOPT is a character string that can be set to HO that activates the homogeneous model, that is all phases flow at the same velocity, or DF that invokes the Drift Flux Slip model (note OPM Flow only supports the default value of HO for the homogeneous model). <text:s/>Here WSEGFMOD can be used to set the flow model for a segment to either the homogeneous model or the Drift Flux Slip model, and addition a: VLP table allocated via the WSEGTABL keyword, or a specific model as defined by the WSEGVALV, WSEGFLIM and WSEGLABY keywords. All the aforementioned keywords are in the SCHEDULE section.</text:p>
     <text:p text:style-name="P11015">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P11015"/>
     

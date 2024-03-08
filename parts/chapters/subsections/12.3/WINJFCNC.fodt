@@ -2955,42 +2955,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T18" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T19" style:family="text">
-   <style:text-properties officeooo:rsid="001bc7c1"/>
-  </style:style>
-  <style:style style:name="T20" style:family="text">
-   <style:text-properties officeooo:rsid="001be987"/>
-  </style:style>
-  <style:style style:name="T21" style:family="text">
-   <style:text-properties officeooo:rsid="0656caca"/>
-  </style:style>
-  <style:style style:name="T22" style:family="text">
-   <style:text-properties officeooo:rsid="06608a53"/>
-  </style:style>
-  <style:style style:name="T23" style:family="text">
-   <style:text-properties officeooo:rsid="06686de3"/>
-  </style:style>
-  <style:style style:name="T24" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T25" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="065d9e8e"/>
-  </style:style>
-  <style:style style:name="T26" style:family="text">
-   <style:text-properties officeooo:rsid="0638817d"/>
-  </style:style>
-  <style:style style:name="T27" style:family="text">
-   <style:text-properties officeooo:rsid="001d374c"/>
-  </style:style>
-  <style:style style:name="T28" style:family="text">
-   <style:text-properties officeooo:rsid="001b3690"/>
-  </style:style>
-  <style:style style:name="T29" style:family="text">
-   <style:text-properties officeooo:rsid="065e8b3e"/>
-  </style:style>
-  <style:style style:name="T30" style:family="text">
-   <style:text-properties officeooo:rsid="066af41e"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4025,8 +3989,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
- </office:automatic-styles>
+  </number:number-style></office:automatic-styles>
  <office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1" draw:style-name="dp1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp2" style:next-style-name="Standard"/>
@@ -4437,7 +4400,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P39" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716717_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716717_3964674244"/></text:h>
-    <text:p text:style-name="P70">The <text:span text:style-name="T19">WINJ</text:span><text:span text:style-name="T20">FCNC</text:span> keyword defines <text:span text:style-name="T20">the injected filtrate concentration</text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T21">for wells that have previously been defined by the WELSPECS keyword in the SCHEDULE section. </text:span></text:p>
+    <text:p text:style-name="P70">The WINJFCNC keyword defines the injected filtrate concentration for wells that have previously been defined by the WELSPECS keyword in the SCHEDULE section. </text:p>
     <table:table table:name="Table115" table:style-name="Table115">
      <table:table-column table:style-name="Table115.A"/>
      <table:table-column table:style-name="Table115.B"/>
@@ -4481,10 +4444,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P44">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table115.C2" office:value-type="string">
-       <text:p text:style-name="P45"><text:span text:style-name="T22">WEL</text:span>NAME</text:p>
+       <text:p text:style-name="P45">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table115.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P47">A character string of up to eight characters in length that defines the well name for which the <text:span text:style-name="T19">filter cake properties</text:span> <text:span text:style-name="T23">are</text:span> being defined.</text:p>
+       <text:p text:style-name="P47">A character string of up to eight characters in length that defines the well name for which the filter cake properties are being defined.</text:p>
        <text:p text:style-name="P46">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4501,7 +4464,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P50">FCONCPPM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table115.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P52">A real positive value that defines the <text:span text:style-name="T20">volumetric concentration of filtrate in the injected water</text:span>. </text:p>
+       <text:p text:style-name="P52">A real positive value that defines the volumetric concentration of filtrate in the injected water. </text:p>
        <text:p text:style-name="P51">Note this can be defined by a user-defined argument (UDA).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4529,7 +4492,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P53">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P77"><text:span text:style-name="T24">The keyword is followed by any number of records </text:span><text:span text:style-name="T25">with e</text:span>ach record terminated by a “/” and the <text:span text:style-name="T26">keyword should be terminated by a </text:span>“/”.</text:p>
+         <text:p text:style-name="P77">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P78">New records overwrite previously specified data.</text:p>
@@ -4543,22 +4506,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P41">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.3.296.1</text:sequence>: <text:span text:style-name="T19">WINJ</text:span><text:span text:style-name="T20">FCNC</text:span> Keyword Description</text:p>
+    <text:p text:style-name="P41">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.3.296.1</text:sequence>: WINJFCNC Keyword Description</text:p>
     <text:p text:style-name="P43"/>
-    <text:p text:style-name="P43">See also the <text:span text:style-name="T27">WINJDA</text:span><text:span text:style-name="T28">M</text:span><text:span text:style-name="T27"> keyword to define the filter cake properties</text:span><text:span text:style-name="T19"> and </text:span>the <text:span text:style-name="T19">WINJCLN</text:span> keyword to <text:span text:style-name="T19">signal that a filter cake should be completely or partially cleaned</text:span>. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P43">See also the WINJDAM keyword to define the filter cake properties and the WINJCLN keyword to signal that a filter cake should be completely or partially cleaned. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <text:h text:style-name="P39" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716719_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716719_3964674244"/></text:h>
-    <text:p text:style-name="P72">The following example defines the <text:span text:style-name="T19">f</text:span><text:span text:style-name="T20">iltrate injection concentration</text:span><text:span text:style-name="T19"> for a water injection well using WINJ</text:span><text:span text:style-name="T20">FCNC</text:span><text:span text:style-name="T29">:</text:span></text:p>
+    <text:p text:style-name="P72">The following example defines the filtrate injection concentration for a water injection well using WINJFCNC:</text:p>
     <text:p text:style-name="P69">--</text:p>
-    <text:p text:style-name="P36">-- <text:s text:c="6"/>WELL <text:span text:style-name="T19">FILT</text:span><text:span text:style-name="T20">RATE INJECTION CONCENTRATION</text:span> <text:s text:c="52"/></text:p>
+    <text:p text:style-name="P36">-- <text:s text:c="6"/>WELL FILTRATE INJECTION CONCENTRATION <text:s text:c="52"/></text:p>
     <text:p text:style-name="P36">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P36">-- WELL <text:s/><text:span text:style-name="T20">FILTRATE</text:span> </text:p>
-    <text:p text:style-name="P36">-- NAME <text:s/><text:span text:style-name="T20">CONC</text:span> <text:s text:c="4"/></text:p>
-    <text:p text:style-name="P36"><text:span text:style-name="T19">WINJ</text:span><text:span text:style-name="T20">FCNC</text:span> <text:s text:c="68"/></text:p>
-    <text:p text:style-name="P36"><text:span text:style-name="T19">INJ-</text:span><text:span text:style-name="T20">A1</text:span> <text:s text:c="2"/><text:span text:style-name="T20">10</text:span> <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P36"><text:span text:style-name="T19">INJ-</text:span><text:span text:style-name="T20">B*</text:span> <text:s text:c="2"/><text:span text:style-name="T20">30 <text:s text:c="2"/></text:span>/</text:p>
-    <text:p text:style-name="P37"><text:span text:style-name="T30">/ <text:s text:c="157"/></text:span><text:s text:c="77"/></text:p>
+    <text:p text:style-name="P36">-- WELL <text:s/>FILTRATE </text:p>
+    <text:p text:style-name="P36">-- NAME <text:s/>CONC <text:s text:c="4"/></text:p>
+    <text:p text:style-name="P36">WINJFCNC <text:s text:c="68"/></text:p>
+    <text:p text:style-name="P36">INJ-A1 <text:s text:c="2"/>10 <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="P36">INJ-B* <text:s text:c="2"/>30 <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="P37">/ <text:s text:c="157"/><text:s text:c="77"/></text:p>
     <text:p text:style-name="P40"/>
-    <text:p text:style-name="P40"><text:span text:style-name="T29">Well </text:span><text:span text:style-name="T19">INJ-</text:span><text:span text:style-name="T20">A1</text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T20">has a filtrate concentration of 10 ppm in the injection water, and wells matching INJ-B* have a concentration of 30 ppm</text:span><text:span text:style-name="T19">. </text:span></text:p>
+    <text:p text:style-name="P40">Well INJ-A1 has a filtrate concentration of 10 ppm in the injection water, and wells matching INJ-B* have a concentration of 30 ppm. </text:p>
     <text:p text:style-name="P70"/>
    </text:section>
   </office:text>

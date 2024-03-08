@@ -2855,36 +2855,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1533" style:family="text">
    <style:text-properties style:text-position="0% 100%"/>
   </style:style>
-  <style:style style:name="T1684" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="07da55ec"/>
-  </style:style>
-  <style:style style:name="T5020" style:family="text">
-   <style:text-properties officeooo:rsid="05c320bc"/>
-  </style:style>
-  <style:style style:name="T5084" style:family="text">
-   <style:text-properties officeooo:rsid="0638817d"/>
-  </style:style>
-  <style:style style:name="T5154" style:family="text">
-   <style:text-properties officeooo:rsid="062cbd9a"/>
-  </style:style>
-  <style:style style:name="T5281" style:family="text">
-   <style:text-properties officeooo:rsid="07dc21fa"/>
-  </style:style>
-  <style:style style:name="T5714" style:family="text">
-   <style:text-properties officeooo:rsid="0aee92df"/>
-  </style:style>
-  <style:style style:name="T5715" style:family="text">
-   <style:text-properties officeooo:rsid="0aef6a1f"/>
-  </style:style>
-  <style:style style:name="T5716" style:family="text">
-   <style:text-properties officeooo:rsid="02ebf432"/>
-  </style:style>
-  <style:style style:name="T6612" style:family="text">
-   <style:text-properties officeooo:rsid="10587505"/>
-  </style:style>
-  <style:style style:name="T6683" style:family="text">
-   <style:text-properties officeooo:rsid="10ddd9dc"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3916,8 +3886,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4328,8 +4297,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18449" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14507_3701168388111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14507_3701168388111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The THPRESFT keyword defines <text:span text:style-name="T5714">a fault threshold pressures that prevents fluid flow from occurring across the fault plane until the threshold pressure is exceeded, for when the threshold pressure option has been activated via the THRPRES variable on the EQLOPTS keyword in the RUNSPEC section. <text:s/></text:span></text:p>
-    <text:p text:style-name="_40_TextBody">Each row entry in the <text:span text:style-name="T5154">THPRESFT</text:span> keyword defines <text:span text:style-name="T5715">a fault threshold pressure.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The THPRESFT keyword defines a fault threshold pressures that prevents fluid flow from occurring across the fault plane until the threshold pressure is exceeded, for when the threshold pressure option has been activated via the THRPRES variable on the EQLOPTS keyword in the RUNSPEC section. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">Each row entry in the THPRESFT keyword defines a fault threshold pressure.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <table:table table:name="Table918" table:style-name="Table918">
      <table:table-column table:style-name="Table918.A"/>
@@ -4394,8 +4363,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7231">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table918.C4" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7231">PRESS <text:span text:style-name="T5020">is a single positive real value that defines the threshold pressure for the fault (FLTNAME). </text:span></text:p>
-       <text:p text:style-name="P7206">If <text:span text:style-name="T5281">PRESS</text:span> <text:span text:style-name="T5281">is defaulted then the simulator will set the threshold pressure to zero, that is the fault is open to flow along the fault plane.</text:span></text:p>
+       <text:p text:style-name="P7231">PRESS is a single positive real value that defines the threshold pressure for the fault (FLTNAME). </text:p>
+       <text:p text:style-name="P7206">If PRESS is defaulted then the simulator will set the threshold pressure to zero, that is the fault is open to flow along the fault plane.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4422,10 +4391,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1485">Notes:</text:p>
        <text:list xml:id="list105911813299378" text:continue-list="list105911371232044" text:style-name="L49">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19268"><text:span text:style-name="T1684">I</text:span><text:span text:style-name="T1533">f there are multiple entries for FLTNAME only the last entry is applied.</text:span></text:p>
+         <text:p text:style-name="P19268">I<text:span text:style-name="T1533">f there are multiple entries for FLTNAME only the last entry is applied.</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19224">Each record is terminated by a “/” and the <text:span text:style-name="T5084">keyword should be terminated by a </text:span>“/”.</text:p>
+         <text:p text:style-name="P19224">Each record is terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4436,12 +4405,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14744">Table <text:sequence text:ref-name="refTable202" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.128</text:sequence>: <text:span text:style-name="T5714">THPRESFT </text:span>Keyword Description</text:p>
+    <text:p text:style-name="P14744">Table <text:sequence text:ref-name="refTable202" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.128</text:sequence>: THPRESFT Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">See also the <text:span text:style-name="T6612">FAULTS keyword in the GRID section that is used to created named faults. Normally this fault data is automatically generated by pre-processing software that generates the static model.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">See also the FAULTS keyword in the GRID section that is used to created named faults. Normally this fault data is automatically generated by pre-processing software that generates the static model.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715871_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715871_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below defines two fault traces, <text:s/>‘M_WEST’ <text:s/>and <text:s/>‘BC’ fault <text:span text:style-name="T5715">having threshold pressures of 1000.0 and 2000 psis respectively.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The example below defines two fault traces, <text:s/>‘M_WEST’ <text:s/>and <text:s/>‘BC’ fault having threshold pressures of 1000.0 and 2000 psis respectively.</text:p>
     <text:p text:style-name="P13001">-- <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13001">-- <text:s text:c="6"/>DEFINE FAULTS IN THE GRID GEOMETRY </text:p>
     <text:p text:style-name="P13001">-- <text:s text:c="86"/></text:p>
@@ -4455,7 +4424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12997"/>
     <text:p text:style-name="P13874"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="8"/>43 <text:s text:c="2"/>43 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
     <text:p text:style-name="P13874"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="8"/>42 <text:s text:c="2"/>42 <text:s text:c="4"/>9 <text:s text:c="3"/>9 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/ </text:p>
-    <text:p text:style-name="P13874"><text:s/><text:span text:style-name="T6683"><text:s text:c="6"/></text:span><text:s text:c="2"/>&apos;BC&apos; <text:s text:c="8"/>44 <text:s text:c="2"/>44 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="P13874"><text:s/><text:s text:c="6"/><text:s text:c="2"/>&apos;BC&apos; <text:s text:c="8"/>44 <text:s text:c="2"/>44 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
     <text:p text:style-name="P12997">……………………………………………..</text:p>
     <text:p text:style-name="P53"><text:tab/><text:tab/>/</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="80"/></text:p>
@@ -4465,7 +4434,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>NAME <text:s text:c="8"/>PRESSURE <text:s text:c="7"/></text:p>
     <text:p text:style-name="P12904">THPRESFT <text:s text:c="40"/></text:p>
     <text:p text:style-name="P14351"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="4"/>1000.0 <text:s text:c="31"/>/ <text:s text:c="8"/></text:p>
-    <text:p text:style-name="P14351"><text:s text:c="9"/><text:span text:style-name="T5716">&apos;BC&apos; <text:s text:c="5"/></text:span><text:s text:c="3"/>1200.0 <text:s text:c="26"/><text:span text:style-name="T5715"><text:s text:c="4"/></text:span><text:s/>/ <text:s text:c="8"/></text:p>
+    <text:p text:style-name="P14351"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="5"/><text:s text:c="3"/>1200.0 <text:s text:c="26"/><text:s text:c="4"/><text:s/>/ <text:s text:c="8"/></text:p>
     <text:p text:style-name="P43"><text:tab/><text:tab/>/</text:p>
     
    </text:section>

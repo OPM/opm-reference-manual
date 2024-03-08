@@ -2970,24 +2970,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T22" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T23" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T24" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T25" style:family="text">
-   <style:text-properties officeooo:rsid="069aba2a"/>
-  </style:style>
-  <style:style style:name="T26" style:family="text">
-   <style:text-properties officeooo:rsid="066fc5c7"/>
-  </style:style>
-  <style:style style:name="T27" style:family="text">
-   <style:text-properties officeooo:rsid="0b692b8d"/>
-  </style:style>
-  <style:style style:name="T28" style:family="text">
-   <style:text-properties officeooo:rsid="0b6b2b35"/>
-  </style:style>
   <style:style style:name="T29" style:family="text">
    <style:text-properties officeooo:rsid="0b6d29e4"/>
   </style:style>
@@ -2996,9 +2978,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="T31" style:family="text">
    <style:text-properties fo:language="en" fo:country="GB" officeooo:rsid="001caa66"/>
-  </style:style>
-  <style:style style:name="T32" style:family="text">
-   <style:text-properties officeooo:rsid="001e1c4a"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -4034,8 +4013,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
- </office:automatic-styles>
+  </number:number-style></office:automatic-styles>
  <office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1" draw:style-name="dp1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp2" style:next-style-name="Standard"/>
@@ -4446,7 +4424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P48" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838837"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838837"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T27">FOAMOPTS</text:span> keyword defines the <text:span text:style-name="T27">transport phase for the foam </text:span><text:span text:style-name="T32">(gas, water or solvent) </text:span><text:span text:style-name="T27">and how gas mobility reduction should be calculated for when the Foam option has been activated by the FOAM keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The FOAMOPTS keyword defines the transport phase for the foam (gas, water or solvent) and how gas mobility reduction should be calculated for when the Foam option has been activated by the FOAM keyword in the RUNSPEC section.</text:p>
     <table:table table:name="Table972" table:style-name="Table972">
      <table:table-column table:style-name="Table972.A"/>
      <table:table-column table:style-name="Table972.B"/>
@@ -4474,13 +4452,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P36">FOAMOPT1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.C2" office:value-type="string">
-       <text:p text:style-name="P39">A <text:span text:style-name="T25">defined character </text:span><text:span text:style-name="T32">string</text:span><text:span text:style-name="T25"> that </text:span><text:span text:style-name="T32">specifies</text:span><text:span text:style-name="T25"> the transport phase for the foam, and should be </text:span>set to one of the following:</text:p>
+       <text:p text:style-name="P39">A defined character string that specifies the transport phase for the foam, and should be set to one of the following:</text:p>
        <text:list xml:id="list1085031121" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P67"><text:span text:style-name="T26">GAS</text:span>: <text:span text:style-name="T26">for the foam to be transport in the gas phase., </text:span></text:p>
+         <text:p text:style-name="P67">GAS: for the foam to be transport in the gas phase., </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P68">WAT<text:span text:style-name="T28">ER</text:span>: for <text:span text:style-name="T28">the foam to be transported in the water phase, </text:span><text:span text:style-name="T32">or</text:span></text:p>
+         <text:p text:style-name="P68">WATER: for the foam to be transported in the water phase, or</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P70">SOLVENT: for the foam to be transported in the solvent phase.</text:p>
@@ -4499,13 +4477,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P36">FOAMOPT2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.C2" office:value-type="string">
-       <text:p text:style-name="P39">A <text:span text:style-name="T25">defined character </text:span><text:span text:style-name="T32">string </text:span><text:span text:style-name="T25">that </text:span><text:span text:style-name="T32">specifies</text:span><text:span text:style-name="T25"> the method to be used to calculate the reduction in gas mobility, and should be </text:span>set to one of the following:</text:p>
+       <text:p text:style-name="P39">A defined character string that specifies the method to be used to calculate the reduction in gas mobility, and should be set to one of the following:</text:p>
        <text:list text:continue-list="list1085031121" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P67"><text:span text:style-name="T28">TAB</text:span>: <text:span text:style-name="T28">Sets the reduction in gas mobility </text:span><text:span text:style-name="T32">is </text:span><text:span text:style-name="T28">to be calculated based on tables using the FOAMMO</text:span><text:span text:style-name="T32">B</text:span><text:span text:style-name="T28"> keyword as a function of foam concentration, the FOAMMOBS </text:span><text:span text:style-name="T32">keyword </text:span><text:span text:style-name="T28">as a function </text:span><text:span text:style-name="T32">of</text:span><text:span text:style-name="T28"> shear, or as a function of pressure using the FOAMMOBP keyword. All keywords are in the PROPS section.</text:span></text:p>
+         <text:p text:style-name="P67">TAB: Sets the reduction in gas mobility is to be calculated based on tables using the FOAMMOB keyword as a function of foam concentration, the FOAMMOBS keyword as a function of shear, or as a function of pressure using the FOAMMOBP keyword. All keywords are in the PROPS section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P68"><text:span text:style-name="T28">FUNC</text:span>: <text:s/><text:span text:style-name="T28">Sets the reduction in gas mobility to be calculated based on a function defined via the FOAMFRM, FOAMFSC, FOAMFSW, FOAMFSO, FOAMFCN, or FOAMFST keywords in the PROPS section. </text:span></text:p>
+         <text:p text:style-name="P68">FUNC: <text:s/>Sets the reduction in gas mobility to be calculated based on a function defined via the FOAMFRM, FOAMFSC, FOAMFSW, FOAMFSO, FOAMFCN, or FOAMFST keywords in the PROPS section. </text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P37">Only the default value of TAB is currently supported by OPM Flow.</text:p>
@@ -4519,7 +4497,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P34">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P69"><text:span text:style-name="T23">T</text:span><text:span text:style-name="T24">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P69">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4528,7 +4506,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P43">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.70.1</text:sequence>: <text:span text:style-name="T27">FOAMOPTS Keyword Description</text:span></text:p>
+    <text:p text:style-name="P43">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.70.1</text:sequence>: FOAMOPTS Keyword Description</text:p>
     <text:p text:style-name="P41"/>
     <text:h text:style-name="P48" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838835"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838835"/></text:h>
     <text:p text:style-name="P42">--</text:p>
@@ -4538,7 +4516,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P42">FOAMOPTS <text:s text:c="74"/></text:p>
     <text:p text:style-name="P42"><text:s text:c="9"/>GAS <text:s text:c="6"/>TAB <text:s text:c="36"/>/ FOAM MODEL OPTIONS <text:s text:c="9"/></text:p>
     <text:p text:style-name="P41"/>
-    <text:p text:style-name="P46">The above example defines the transport phase <text:span text:style-name="T32">is </text:span>to be gas and the gas mobility reduction <text:span text:style-name="T32">is </text:span>to use a table as defined by the FOAMMO<text:span text:style-name="T32">B</text:span> keyword as a function of foam concentration, the FOAMMOBS <text:span text:style-name="T32">keyword</text:span> as a function of shear, or as a function of pressure using the FOAMMOBP keyword. </text:p>
+    <text:p text:style-name="P46">The above example defines the transport phase is to be gas and the gas mobility reduction is to use a table as defined by the FOAMMOB keyword as a function of foam concentration, the FOAMMOBS keyword as a function of shear, or as a function of pressure using the FOAMMOBP keyword. </text:p>
     <text:p text:style-name="P45"/>
    </text:section>
   </office:text>

@@ -2813,30 +2813,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4815" style:family="text">
-   <style:text-properties officeooo:rsid="0464b730"/>
-  </style:style>
-  <style:style style:name="T4816" style:family="text">
-   <style:text-properties officeooo:rsid="04654f9d"/>
-  </style:style>
-  <style:style style:name="T4817" style:family="text">
-   <style:text-properties officeooo:rsid="04664455"/>
-  </style:style>
-  <style:style style:name="T5012" style:family="text">
-   <style:text-properties officeooo:rsid="05ba6e8d"/>
-  </style:style>
-  <style:style style:name="T5612" style:family="text">
-   <style:text-properties officeooo:rsid="0a3ae3ec"/>
-  </style:style>
-  <style:style style:name="T7051" style:family="text">
-   <style:text-properties officeooo:rsid="133074b7"/>
-  </style:style>
-  <style:style style:name="T7257" style:family="text">
-   <style:text-properties officeooo:rsid="148ae54a"/>
-  </style:style>
-  <style:style style:name="T7805" style:family="text">
-   <style:text-properties officeooo:rsid="196313d9"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3868,8 +3844,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4246,7 +4221,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="MULTFLT">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc90875_3218818441"/>MULTFLT – <text:span text:style-name="T4815">Multiply</text:span> the Transmissibility of a Defined Fault <text:span text:style-name="T4815">by a Constant</text:span><text:bookmark-end text:name="__RefHeading___Toc90875_3218818441"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc90875_3218818441"/>MULTFLT – Multiply the Transmissibility of a Defined Fault by a Constant<text:bookmark-end text:name="__RefHeading___Toc90875_3218818441"/></text:h>
     <table:table table:name="Table399" table:style-name="Table399">
      <table:table-column table:style-name="Table399.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table399.E"/>
@@ -4308,7 +4283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4099">FLTNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table400.C3" office:value-type="string">
-       <text:p text:style-name="P4097">FLTNAME is a character string enclosed in quotes with a maximum length of eight characters, that defines the name of the fault <text:span text:style-name="T4815">that FLTMULT will be applied to. FLTNAME must have previously been defined using the FAULTS keyword in GRID section</text:span></text:p>
+       <text:p text:style-name="P4097">FLTNAME is a character string enclosed in quotes with a maximum length of eight characters, that defines the name of the fault that FLTMULT will be applied to. FLTNAME must have previously been defined using the FAULTS keyword in GRID section</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table400.D3" office:value-type="string">
        <text:p text:style-name="P4207">None</text:p>
@@ -4319,7 +4294,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2901">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table400.B3" office:value-type="string">
-       <text:p text:style-name="P4209">FLT<text:span text:style-name="T4816">-</text:span><text:span text:style-name="T7805">TRS</text:span></text:p>
+       <text:p text:style-name="P4209">FLT-TRS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table400.C3" office:value-type="string">
        <text:p text:style-name="P4208">A positive real number that sets the transmissible multiplier to be applied to the FLTNAME transmissibilities positive real number that sets the transmissible multiplier to be applied to the FLTNAME transmissibilities.</text:p>
@@ -4336,9 +4311,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4208">FLT-DIF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table400.C4" office:value-type="string">
-       <text:p text:style-name="P4208">A positive real number that sets the <text:span text:style-name="T5612">diffusivity</text:span> multiplier to be applied to the FLTNAME <text:span text:style-name="T5612">diffusivities.</text:span></text:p>
+       <text:p text:style-name="P4208">A positive real number that sets the diffusivity multiplier to be applied to the FLTNAME diffusivities.</text:p>
        <text:p text:style-name="P4208">This option should only be used if the Diffusion option has been made activate by the DIFFUSE keyword in the RUNSPEC section.</text:p>
-       <text:p text:style-name="P4208">OPM F<text:span text:style-name="T5012">low</text:span> does not support <text:span text:style-name="T7257">this </text:span>Diffusion option.</text:p>
+       <text:p text:style-name="P4208">OPM Flow does not support this Diffusion option.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table400.D4" office:value-type="string">
        <text:p text:style-name="P4207">1.0</text:p>
@@ -4352,7 +4327,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19729">Repeated entries of the same FLTNAME will result in all but the last entry being overwritten.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19800">Each record must be terminated by a “/” and the keyword is terminated by <text:span text:style-name="T7051">a</text:span> “/”.</text:p>
+         <text:p text:style-name="P19800">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4361,7 +4336,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable141" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.67</text:sequence>: <text:span text:style-name="T4817">MULTFLT Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable141" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.67</text:sequence>: MULTFLT Keyword Description</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838827"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838827"/></text:h>
     <text:p text:style-name="P12904">-- <text:s text:c="80"/></text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>MODIFY THE TRANSMISSIBILITES ACROSS DEFINED FAULTS </text:p>
@@ -4370,8 +4345,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>NAME <text:s text:c="12"/>MULTIPLIER <text:s text:c="5"/>MULTIPLIER <text:s text:c="31"/></text:p>
     <text:p text:style-name="P12904">MULTFLT <text:s text:c="56"/></text:p>
     <text:p text:style-name="P13898"><text:s text:c="9"/>&apos;FAULT01&apos; <text:s text:c="7"/>0.0 <text:s text:c="32"/>/ FAULT MULTIPLIERS <text:s text:c="4"/></text:p>
-    <text:p text:style-name="P13898"><text:s text:c="9"/>&apos;FAULT0<text:span text:style-name="T4817">2</text:span>&apos; <text:s text:c="7"/>0.0 <text:s text:c="32"/>/ FAULT MULTIPLIERS <text:s text:c="4"/></text:p>
-    <text:p text:style-name="P13898"><text:s text:c="9"/>&apos;FAULT0<text:span text:style-name="T4817">3</text:span>&apos; <text:s text:c="7"/>0.0 <text:s text:c="32"/>/ FAULT MULTIPLIERS <text:s text:c="4"/></text:p>
+    <text:p text:style-name="P13898"><text:s text:c="9"/>&apos;FAULT02&apos; <text:s text:c="7"/>0.0 <text:s text:c="32"/>/ FAULT MULTIPLIERS <text:s text:c="4"/></text:p>
+    <text:p text:style-name="P13898"><text:s text:c="9"/>&apos;FAULT03&apos; <text:s text:c="7"/>0.0 <text:s text:c="32"/>/ FAULT MULTIPLIERS <text:s text:c="4"/></text:p>
     <text:p text:style-name="P13898">/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P12904"/>
     <text:p text:style-name="P11439">The above example sets the fault transmissibility multiplier for defined faults named FAULT01, FAULT02, and FAULT03 to zero making the faults sealing in the model.</text:p>

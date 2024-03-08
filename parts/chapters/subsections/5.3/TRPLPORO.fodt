@@ -2784,24 +2784,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T4745" style:family="text">
-   <style:text-properties officeooo:rsid="03de2f3a"/>
-  </style:style>
-  <style:style style:name="T5234" style:family="text">
-   <style:text-properties officeooo:rsid="0788dc40"/>
-  </style:style>
-  <style:style style:name="T6134" style:family="text">
-   <style:text-properties officeooo:rsid="0d65f8f4"/>
-  </style:style>
-  <style:style style:name="T6286" style:family="text">
-   <style:text-properties officeooo:rsid="0e13801a"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3833,8 +3815,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4211,7 +4192,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="TRPLPORO">
 
-<text:h text:style-name="P17745" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc1613912_4250154414"/>TRPLPORO – <text:span text:style-name="T6134">Activate</text:span> <text:span text:style-name="T6134">the Triple</text:span> Porosity <text:span text:style-name="T6286">Model Option</text:span><text:bookmark-end text:name="__RefHeading___Toc1613912_4250154414"/></text:h>
+<text:h text:style-name="P17745" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc1613912_4250154414"/>TRPLPORO – Activate the Triple Porosity Model Option<text:bookmark-end text:name="__RefHeading___Toc1613912_4250154414"/></text:h>
     <table:table table:name="Table1652" table:style-name="Table1652">
      <table:table-column table:style-name="Table1652.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1652.E"/>
@@ -4245,7 +4226,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18368" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881624711"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881624711"/></text:h>
-    <text:p text:style-name="P11984">The TRPLPORO <text:span text:style-name="T6134">keyword activates</text:span> <text:span text:style-name="T6134">the Triple Porosity Model option that models matrix, fractures and vuggy porosity for carbonate reservoirs, and specifies the number of matrix porosity systems</text:span></text:p>
+    <text:p text:style-name="P11984">The TRPLPORO keyword activates the Triple Porosity Model option that models matrix, fractures and vuggy porosity for carbonate reservoirs, and specifies the number of matrix porosity systems</text:p>
     <text:p text:style-name="P10996">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1653" table:style-name="Table1653">
      <table:table-column table:style-name="Table1653.A"/>
@@ -4274,7 +4255,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3476">TRPLPORO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1653.C2" office:value-type="string">
-       <text:p text:style-name="P5261"><text:span text:style-name="T5234">A positive </text:span>integer<text:span text:style-name="T5234"> value that specifies the number of matrix porosity systems in the model. TRPLPORO should be set to either:</text:span></text:p>
+       <text:p text:style-name="P5261">A positive integer value that specifies the number of matrix porosity systems in the model. TRPLPORO should be set to either:</text:p>
        <text:list xml:id="list105910102318963" text:continue-list="list105909401537953" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19084">TRPLPORO set equal to 2, if the vugs are only connected to the fractures, so that the porosity system is matrix and connected vugs, or,</text:p>
@@ -4293,7 +4274,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1710">Notes:</text:p>
        <text:list xml:id="list105909203434623" text:continue-list="list105909722044447" text:style-name="L35">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19773"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19773">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4302,7 +4283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14601">Table <text:sequence text:ref-name="refTable64" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.49</text:sequence>: TRPLPORO<text:span text:style-name="T4745"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14601">Table <text:sequence text:ref-name="refTable64" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.49</text:sequence>: TRPLPORO Keyword Description</text:p>
     <text:p text:style-name="P11984"/>
     <text:p text:style-name="P11985">Note the keyword cannot be used in conjunction with the NMATRIX keyword, which is also in the RUNSPEC section.</text:p>
     <text:h text:style-name="P18644" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683882312"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683882312"/></text:h>
@@ -4310,9 +4291,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13655">-- <text:s text:c="6"/>TRPLPORO <text:s text:c="51"/></text:p>
     <text:p text:style-name="P13654">-- <text:s text:c="6"/>OPTION <text:s text:c="48"/></text:p>
     <text:p text:style-name="P13654">TRPLPORO <text:s text:c="73"/></text:p>
-    <text:p text:style-name="P13654"><text:s text:c="9"/><text:span text:style-name="T6286">3</text:span> <text:s text:c="55"/>/ </text:p>
+    <text:p text:style-name="P13654"><text:s text:c="9"/>3 <text:s text:c="55"/>/ </text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">The above example activates the <text:span text:style-name="T6134">Triple Porosity Model option</text:span> and specifies the porosity system is matrix, connected vugs, and isolated vugs.</text:p>
+    <text:p text:style-name="_40_TextBody">The above example activates the Triple Porosity Model option and specifies the porosity system is matrix, connected vugs, and isolated vugs.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P11252"/>
     
