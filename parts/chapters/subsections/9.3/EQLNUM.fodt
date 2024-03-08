@@ -4237,7 +4237,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232111"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232111"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4640">The EQLNUM keyword defines </text:span>the equilibration region numbers for each grid block. <text:span text:style-name="T4697">The equilibration data for various regions are defined in the SOLUTION section. For example, the EQUIL keyword in the SOLUTION defines the initial pressures and fluid contacts for each equilibration region identified by the EQLNUM region array.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4640">The EQLNUM keyword defines </text:span>the equilibration region numbers for each grid block. <text:span text:style-name="T4697">The equilibration data for various regions are defined in the SOLUTION section. For example, the EQUIL keyword in the SOLUTION section defines the initial pressures and fluid contacts for each equilibration region identified by the EQLNUM region array.</text:span></text:p>
     <table:table table:name="Table310" table:style-name="Table310">
      <table:table-column table:style-name="Table310.A"/>
      <table:table-column table:style-name="Table310.B"/>
@@ -4265,8 +4265,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3937">EQ<text:span text:style-name="T4695">L</text:span>NUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table310.A2" office:value-type="string">
-       <text:p text:style-name="P3937">EQLNUM defines an array of positive integers assigning a grid cell to a particular fluid in-place region. </text:p>
-       <text:p text:style-name="P3937">The maximum number <text:span text:style-name="T4687">of </text:span>EQ<text:span text:style-name="T4695">LNUM</text:span> regions is set by the <text:span text:style-name="T4687">NTEQUIL</text:span> variable on the <text:span text:style-name="T4695">EQLDIMS</text:span> keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3937">EQLNUM defines an array of positive integers assigning a grid cell to a particular equilibration region. </text:p>
+       <text:p text:style-name="P3937">The maximum number <text:span text:style-name="T4687">of </text:span>EQ<text:span text:style-name="T4695">LNUM</text:span> regions is set by the <text:span text:style-name="T4687">NTEQUL</text:span> variable on the <text:span text:style-name="T4695">EQLDIMS</text:span> keyword in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table310.D2" office:value-type="string">
        <text:p text:style-name="P4115">1</text:p>
@@ -4280,7 +4280,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19966"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19732">The EQULNUM and PVTNUM arrays need to be consistent, that is the all cells with the same EQLNUM can only belong to one PVTNUM region.</text:p>
+         <text:p text:style-name="P19732">The EQLNUM and PVTNUM arrays need to be consistent, that is the all cells with the same EQLNUM can only belong to one PVTNUM region.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19943"><text:span text:style-name="T1595">If a cell</text:span><text:span text:style-name="T1533"> is not assigned a EQ</text:span><text:span text:style-name="T1619">L</text:span><text:span text:style-name="T1533">NUM region </text:span><text:span text:style-name="T1619">number </text:span><text:span text:style-name="T1533">then the default value will be used.</text:span></text:p>
