@@ -4349,7 +4349,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838817222"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838817222"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4087">DENSITY </text:span>defines the <text:span text:style-name="T4087">oil, water and gas surface densities for the fluids for various regions in the model. The number of DENSITY vector data sets is defined by the NTPVT parameter on the TABDIMS keyword in the RUNSPEC section and the allocation of the DENSITY data sets to different grid blocks in the model is done via the PVTNUM keyword in the REGION section. One data set consists of one record or line which is terminated by a “/”. <text:s/>This surface density or gravity must be entered using either the DENSITY or GRAVITY keywords irrespective of which phases are active in the model.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4087">DENSITY </text:span>defines the <text:span text:style-name="T4087">oil, water and gas surface densities for the fluids for various regions in the model. The number of DENSITY vector data sets is defined by the NTPVT parameter on the TABDIMS keyword in the RUNSPEC section and the allocation of the DENSITY data sets to different grid blocks in the model is done via the PVTNUM keyword in the REGIONS section. One data set consists of one record or line which is terminated by a “/”. <text:s/>The surface density or gravity must be entered using either the DENSITY or GRAVITY keywords irrespective of which phases are active in the model.</text:span></text:p>
     <table:table table:name="Table103" table:style-name="Table103">
      <table:table-column table:style-name="Table103.A"/>
      <table:table-column table:style-name="Table103.B"/>
@@ -4394,7 +4394,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4487">OIL<text:span text:style-name="T4090">DEN</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3737"><text:span text:style-name="T4090">OILDEN </text:span>is a real number defining the <text:span text:style-name="T4089">density of oil at surface conditions.</text:span></text:p>
+       <text:p text:style-name="P3737"><text:span text:style-name="T4090">OILDEN </text:span>is a real number defining the <text:span text:style-name="T4089">density of the oil phase at surface conditions.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4407,7 +4407,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">Ib/ft<text:span text:style-name="T3853">3</text:span></text:p>
-       <text:p text:style-name="P5736">600</text:p>
+       <text:p text:style-name="P5736">37.457</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">kg/m<text:span text:style-name="T3853">3</text:span></text:p>
@@ -4415,7 +4415,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">gm/cc</text:p>
-       <text:p text:style-name="P5736">600</text:p>
+       <text:p text:style-name="P5736">0.6</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4427,7 +4427,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4487"><text:span text:style-name="T4090">WAT</text:span>DEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3738"><text:span text:style-name="T4090">WATDEN </text:span>is a real number defining the <text:span text:style-name="T4089">density of water at surface conditions.</text:span></text:p>
+       <text:p text:style-name="P3738"><text:span text:style-name="T4090">WATDEN </text:span>is a real number defining the <text:span text:style-name="T4089">density of the water phase at surface conditions.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4440,7 +4440,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">Ib/ft<text:span text:style-name="T3853">3</text:span></text:p>
-       <text:p text:style-name="P5736">999.014 </text:p>
+       <text:p text:style-name="P5736">62.366 </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">kg/m<text:span text:style-name="T3853">3</text:span></text:p>
@@ -4448,7 +4448,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">gm/cc</text:p>
-       <text:p text:style-name="P5736">999.014 </text:p>
+       <text:p text:style-name="P5736">0.999014 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4460,7 +4460,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4493">GASDEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2823"><text:span text:style-name="T4089">GASDEN </text:span>is a real number defining the <text:span text:style-name="T4089">density of gas at surface conditions.</text:span></text:p>
+       <text:p text:style-name="P2823"><text:span text:style-name="T4089">GASDEN </text:span>is a real number defining the <text:span text:style-name="T4089">density of the gas phase at surface conditions.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4473,7 +4473,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">Ib/ft<text:span text:style-name="T3853">3</text:span></text:p>
-       <text:p text:style-name="P5736">1.000</text:p>
+       <text:p text:style-name="P5736">0.062428</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">kg/m<text:span text:style-name="T3853">3</text:span></text:p>
@@ -4481,7 +4481,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table103.C2" office:value-type="string">
        <text:p text:style-name="P2819">gm/cc</text:p>
-       <text:p text:style-name="P5736">1.000</text:p>
+       <text:p text:style-name="P5736">0.001</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
