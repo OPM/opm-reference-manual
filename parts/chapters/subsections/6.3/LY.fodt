@@ -2821,50 +2821,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T1760" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0d3752b3"/>
-  </style:style>
   <style:style style:name="T2554" style:family="text">
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
-  </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T3626" style:family="text">
-   <style:text-properties officeooo:rsid="00e8a0dd"/>
-  </style:style>
-  <style:style style:name="T3839" style:family="text">
-   <style:text-properties officeooo:rsid="00c1d7af"/>
-  </style:style>
-  <style:style style:name="T3840" style:family="text">
-   <style:text-properties officeooo:rsid="00ce5e6c"/>
-  </style:style>
-  <style:style style:name="T3842" style:family="text">
-   <style:text-properties officeooo:rsid="00e47d3a"/>
-  </style:style>
-  <style:style style:name="T4079" style:family="text">
-   <style:text-properties officeooo:rsid="00e20559"/>
-  </style:style>
-  <style:style style:name="T4829" style:family="text">
-   <style:text-properties officeooo:rsid="004124a1"/>
-  </style:style>
-  <style:style style:name="T6098" style:family="text">
-   <style:text-properties officeooo:rsid="0d33ae47"/>
-  </style:style>
-  <style:style style:name="T6099" style:family="text">
-   <style:text-properties officeooo:rsid="0d359d74"/>
-  </style:style>
-  <style:style style:name="T6100" style:family="text">
-   <style:text-properties officeooo:rsid="0d3752b3"/>
-  </style:style>
-  <style:style style:name="T6101" style:family="text">
-   <style:text-properties officeooo:rsid="0d3886ca"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3897,8 +3855,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4309,7 +4266,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18413" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715727_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715727_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T6099">The LY</text:span> <text:span text:style-name="T6099">keyword </text:span>defines the size <text:span text:style-name="T3839">of <text:s/>“representative” matrix </text:span>grid blocks in <text:span text:style-name="T3842">the Y </text:span>direction via a<text:span text:style-name="T2941">n array in dual porosity and dual permeability runs, for when the VISCD keyword has been used in the RUNSPEC section to activate the dual porosity viscous displacement option. In addition, either the DUALPORO or DUALPERM keyword should be entered in the RUNSPEC section to activate the dual porosity or dual permeability models. <text:s/>The VISCD option is used to model the viscous displacement of fluids from the matrix by the fracture pressure gradient, for when the fracture system has a more moderate permeability, and flow to and from the matrix caused by the fracture pressure gradient acts as an additional production mechanism.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The LY keyword defines the size of <text:s/>“representative” matrix grid blocks in the Y direction via an array in dual porosity and dual permeability runs, for when the VISCD keyword has been used in the RUNSPEC section to activate the dual porosity viscous displacement option. In addition, either the DUALPORO or DUALPERM keyword should be entered in the RUNSPEC section to activate the dual porosity or dual permeability models. <text:s/>The VISCD option is used to model the viscous displacement of fluids from the matrix by the fracture pressure gradient, for when the fracture system has a more moderate permeability, and flow to and from the matrix caused by the fracture pressure gradient acts as an additional production mechanism.</text:p>
     <text:p text:style-name="P10954">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1367" table:style-name="Table1367">
      <table:table-column table:style-name="Table1367.A"/>
@@ -4356,7 +4313,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1367.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4192">LY is an array of real numbers describing the “representative” cell size in the Y direction for each cell in the model. </text:p>
-       <text:p text:style-name="P4013">Repeat counts may be used, for example 10*<text:span text:style-name="T3840">10</text:span>0.0. </text:p>
+       <text:p text:style-name="P4013">Repeat counts may be used, for example 10*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4383,10 +4340,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1451">Notes:</text:p>
        <text:list xml:id="list105911200670939" text:continue-list="list105912128110687" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19012"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x </text:span><text:span text:style-name="T1760">(</text:span><text:span text:style-name="T1595">NZ/</text:span><text:span text:style-name="T1760">2) </text:span><text:span text:style-name="T1595">parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19012">The number of entries should correspond to the NX x NY x (NZ/2) parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18915"><text:span text:style-name="T4829">The keyword is terminated by a “/”</text:span>.</text:p>
+         <text:p text:style-name="P18915">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4397,13 +4354,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14620">Table <text:sequence text:ref-name="refTable130" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.56</text:sequence>: <text:span text:style-name="T6099">LY Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14620">Table <text:sequence text:ref-name="refTable130" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.56</text:sequence>: LY Keyword Description</text:p>
     <text:p text:style-name="P15448"/>
-    <text:p text:style-name="P15387">If the <text:span text:style-name="T6098">VISCD keyword </text:span>has been used to <text:span text:style-name="T6098">activate the Dual Porosity Viscous Displacement option </text:span>and L<text:span text:style-name="T6101">Y</text:span> has <text:span text:style-name="T2554">not</text:span> been specified then L<text:span text:style-name="T6101">Y</text:span> is set to zero<text:span text:style-name="T6098"> in the calculation of the viscous displacement term.</text:span></text:p>
+    <text:p text:style-name="P15387">If the VISCD keyword has been used to activate the Dual Porosity Viscous Displacement option and LY has <text:span text:style-name="T2554">not</text:span> been specified then LY is set to zero in the calculation of the viscous displacement term.</text:p>
     <text:p text:style-name="P15387"/>
-    <text:p text:style-name="P15288">See also the <text:span text:style-name="T6099">LX, LZ </text:span>and LTOSIGMA keywords <text:span text:style-name="T6099">in the GRID section.</text:span></text:p>
+    <text:p text:style-name="P15288">See also the LX, LZ and LTOSIGMA keywords in the GRID section.</text:p>
     <text:p text:style-name="P11201"/>
-    <text:h text:style-name="P18699" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715729_3964674244"/><text:span text:style-name="T6100">E</text:span>xample<text:span text:style-name="T4079"> <text:s text:c="73"/></text:span><text:bookmark-end text:name="__RefHeading___Toc715729_3964674244"/></text:h>
+    <text:h text:style-name="P18699" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715729_3964674244"/>Example <text:s text:c="73"/><text:bookmark-end text:name="__RefHeading___Toc715729_3964674244"/></text:h>
     <text:p text:style-name="P13822">--</text:p>
     <text:p text:style-name="P13822">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS</text:p>
     <text:p text:style-name="P13822">-- <text:s text:c="6"/></text:p>
@@ -4412,16 +4369,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13822">BOX <text:s text:c="44"/></text:p>
     <text:p text:style-name="P13822"><text:s text:c="9"/>10 <text:s/>10 <text:s text:c="2"/>1 <text:s text:c="2"/>6 <text:s text:c="3"/>1 <text:s text:c="2"/>1 <text:s text:c="26"/>/ DEFINE BOX AREA <text:s/></text:p>
     <text:p text:style-name="P13842">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13843">-- <text:s text:c="6"/>DEFINE DUAL POROSITY VISCOUS DISPLACEMENT <text:span text:style-name="T6101">Y</text:span> DIRECTION MATRIX SIZE <text:s text:c="27"/></text:p>
+    <text:p text:style-name="P13843">-- <text:s text:c="6"/>DEFINE DUAL POROSITY VISCOUS DISPLACEMENT Y DIRECTION MATRIX SIZE <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13843">-- </text:p>
-    <text:p text:style-name="P13293">L<text:span text:style-name="T6101">Y </text:span></text:p>
-    <text:p text:style-name="P13037"><text:span text:style-name="T3626"><text:s text:c="9"/>6*15.0 <text:s text:c="43"/>/ <text:s text:c="80"/></text:span><text:s text:c="34"/></text:p>
+    <text:p text:style-name="P13293">LY </text:p>
+    <text:p text:style-name="P13037"><text:s text:c="9"/>6*15.0 <text:s text:c="43"/>/ <text:s text:c="80"/><text:s text:c="34"/></text:p>
     <text:p text:style-name="P13890">--</text:p>
     <text:p text:style-name="P13890">-- <text:s text:c="6"/>DEFINE END OF INPUT BOX EDITING OF INPUT ARRAYS</text:p>
     <text:p text:style-name="P13890">-- <text:s text:c="6"/></text:p>
-    <text:p text:style-name="P13812"><text:span text:style-name="T4079">ENDBOX <text:s text:c="80"/></text:span><text:s text:c="89"/></text:p>
+    <text:p text:style-name="P13812">ENDBOX <text:s text:c="80"/><text:s text:c="89"/></text:p>
     <text:p text:style-name="P15196"/>
-    <text:p text:style-name="P15196">The above example defines <text:span text:style-name="T6100">a subset of the grid and </text:span>the size of the “<text:span text:style-name="T6100">representative” matrix </text:span>cells in the <text:span text:style-name="T6101">Y </text:span>direction <text:span text:style-name="T6100">to 15.0 ft.; <text:s/>after which the ENDBOX keyword resets the input to be the full grid.</text:span></text:p>
+    <text:p text:style-name="P15196">The above example defines a subset of the grid and the size of the “representative” matrix cells in the Y direction to 15.0 ft.; <text:s/>after which the ENDBOX keyword resets the input to be the full grid.</text:p>
     <text:p text:style-name="P15196"/>
     
    </text:section>

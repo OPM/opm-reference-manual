@@ -2772,33 +2772,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4398" style:family="text">
-   <style:text-properties officeooo:rsid="01b41e2e"/>
-  </style:style>
-  <style:style style:name="T4408" style:family="text">
-   <style:text-properties officeooo:rsid="01d539fa"/>
-  </style:style>
-  <style:style style:name="T4409" style:family="text">
-   <style:text-properties officeooo:rsid="01d5540b"/>
-  </style:style>
-  <style:style style:name="T4410" style:family="text">
-   <style:text-properties officeooo:rsid="01d65f8c"/>
-  </style:style>
-  <style:style style:name="T4411" style:family="text">
-   <style:text-properties officeooo:rsid="01d8dd9b"/>
-  </style:style>
-  <style:style style:name="T4414" style:family="text">
-   <style:text-properties officeooo:rsid="01de87df"/>
-  </style:style>
-  <style:style style:name="T4415" style:family="text">
-   <style:text-properties officeooo:rsid="01e1fb19"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3830,8 +3803,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4208,7 +4180,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SWL">
 
-<text:h text:style-name="P17992" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc22881_7842323221"/>S<text:span text:style-name="T4414">WL</text:span> – End-Point Scaling Grid Cell <text:span text:style-name="T4408">Connate</text:span> <text:span text:style-name="T4415">Water</text:span> <text:span text:style-name="T4408">Saturation</text:span><text:bookmark-end text:name="__RefHeading___Toc22881_7842323221"/></text:h>
+<text:h text:style-name="P17992" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc22881_7842323221"/>SWL – End-Point Scaling Grid Cell Connate Water Saturation<text:bookmark-end text:name="__RefHeading___Toc22881_7842323221"/></text:h>
     <table:table table:name="Table179" table:style-name="Table179">
      <table:table-column table:style-name="Table179.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table179.E"/>
@@ -4242,7 +4214,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31100_784232322"/>Description<text:bookmark-end text:name="__RefHeading___Toc31100_784232322"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4408">SWL defines the connate water saturation for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The connate water saturation is defined as the minimum water saturation in a two-phase water relative permeability table. <text:s/></text:span></text:p>
+    <text:p text:style-name="_40_TextBody">SWL defines the connate water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The connate water saturation is defined as the minimum water saturation in a two-phase water relative permeability table. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table180" table:style-name="Table180">
      <table:table-column table:style-name="Table180.A"/>
@@ -4285,11 +4257,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3045">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table180.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4604">SW<text:span text:style-name="T4411">L</text:span></text:p>
+       <text:p text:style-name="P4604">SWL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table180.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3219"><text:span text:style-name="T4409">SWL is an array of real numbers assigning the connate water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4054">Repeat counts may be used, for example <text:span text:style-name="T4410">3</text:span>0*0.<text:span text:style-name="T4415">15</text:span> </text:p>
+       <text:p text:style-name="P3219">SWL is an array of real numbers assigning the connate water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4054">Repeat counts may be used, for example 30*0.15 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4316,13 +4288,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1562">Notes:</text:p>
        <text:list xml:id="list105917935031757" text:continue-list="list105918470277461" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19414"><text:span text:style-name="T4410">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SWLX</text:span>±<text:span text:style-name="T4410"> , SWLY</text:span>± and SWZ± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19414">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SWLX± , SWLY± and SWZ± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19414">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19414"><text:span text:style-name="T4410">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P19414">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4333,18 +4305,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14563">Table <text:sequence text:ref-name="refTable403" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.187</text:sequence>: <text:span text:style-name="T4410">SWL Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14563">Table <text:sequence text:ref-name="refTable403" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.187</text:sequence>: SWL Keyword Description</text:p>
     <text:p text:style-name="P15031"/>
-    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, <text:span text:style-name="T4398">and </text:span>SOGCR <text:s/><text:span text:style-name="T4398">saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SWLX, SWLY and SWLZ instead of SWL. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SWLX, SWLX-, SWLY, SWLY-, SWLZ and SWLZ-, <text:s/>instead of the SWL keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SWLX, SWLY and SWLZ instead of SWL. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SWLX, SWLX-, SWLY, SWLY-, SWLZ and SWLZ-, <text:s/>instead of the SWL keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31102_784232322"/>Example<text:bookmark-end text:name="__RefHeading___Toc31102_784232322"/></text:h>
     <text:p text:style-name="P13576">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13992">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SWL DATA FOR ALL CELLS <text:s text:c="25"/></text:p>
     <text:p text:style-name="P13999">-- <text:s text:c="6"/>(FOR NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13602">-- </text:p>
-    <text:p text:style-name="P13576">SW<text:span text:style-name="T4411">L</text:span></text:p>
-    <text:p text:style-name="P13576"><text:s text:c="9"/>300*0.<text:span text:style-name="T4415">15</text:span>0 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13576">SWL</text:p>
+    <text:p text:style-name="P13576"><text:s text:c="9"/>300*0.150 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13078"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15105">The above example defines <text:span text:style-name="T4080">a constant connate water saturation of 0.15 to all </text:span>300 cells <text:soft-page-break/>in the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15105">The above example defines a constant connate water saturation of 0.15 to all 300 cells <text:soft-page-break/>in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="P97"/>
     
    </text:section>

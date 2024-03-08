@@ -2771,9 +2771,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T506" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="13ac3201"/>
   </style:style>
-  <style:style style:name="T833" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="02eddc5f"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
@@ -2782,33 +2779,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="T1533" style:family="text">
    <style:text-properties style:text-position="0% 100%"/>
-  </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1597" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0301278d"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2616" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="003fdde1"/>
-  </style:style>
-  <style:style style:name="T4640" style:family="text">
-   <style:text-properties officeooo:rsid="003fdde1"/>
-  </style:style>
-  <style:style style:name="T4687" style:family="text">
-   <style:text-properties officeooo:rsid="030280b1"/>
-  </style:style>
-  <style:style style:name="T4691" style:family="text">
-   <style:text-properties officeooo:rsid="0308b4ef"/>
-  </style:style>
-  <style:style style:name="T4693" style:family="text">
-   <style:text-properties officeooo:rsid="030dfacf"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3841,8 +3811,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4253,7 +4222,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232118"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232118"/></text:h>
-    <text:p text:style-name="P11820"><text:span text:style-name="T4640">The WH2NUM keyword defines the </text:span><text:span text:style-name="T2616">two phase</text:span><text:span text:style-name="T4640"> Water-Alternating-Gas (“WAG”) hysteresis tables (relative permeability and capillary pressure tables) region numbers for each grid block, for when the hysteresis option has been activated by the WAGHYSTR variable on the SATOPTS keyword in the RUNSPEC section. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the </text:span>relative permeability and capillary pressure in <text:span text:style-name="T4693">a grid block. Note that this keyword if the two phase water relative permeabilities WAG option.</text:span></text:p>
+    <text:p text:style-name="P11820">The WH2NUM keyword defines the two phase Water-Alternating-Gas (“WAG”) hysteresis tables (relative permeability and capillary pressure tables) region numbers for each grid block, for when the hysteresis option has been activated by the WAGHYSTR variable on the SATOPTS keyword in the RUNSPEC section. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the relative permeability and capillary pressure in a grid block. Note that this keyword if the two phase water relative permeabilities WAG option.</text:p>
     <text:p text:style-name="P12024">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1716" table:style-name="Table1716">
      <table:table-column table:style-name="Table1716.A"/>
@@ -4283,7 +4252,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1716.C2" office:value-type="string">
        <text:p text:style-name="P3956">WH2NUM defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
-       <text:p text:style-name="P3956">The maximum number <text:span text:style-name="T4687">of WH2NUM</text:span> regions is set by the <text:span text:style-name="T4687">NTSFUN</text:span> variable on the <text:span text:style-name="T4691">TABDIMS</text:span> keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3956">The maximum number of WH2NUM regions is set by the NTSFUN variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1716.D2" office:value-type="string">
        <text:p text:style-name="P5270">Taken from cell allocated SATNUM</text:p>
@@ -4294,13 +4263,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2509">Notes:</text:p>
        <text:list xml:id="list105918688990564" text:continue-list="list105917728798157" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19384"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19384">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19384"><text:span text:style-name="T1595">If a cell</text:span><text:span text:style-name="T1533"> is not assigned a WH2NUM region then the default value will be used.</text:span></text:p>
+         <text:p text:style-name="P19384">If a cell<text:span text:style-name="T1533"> is not assigned a WH2NUM region then the default value will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19852"><text:span text:style-name="T1597">T</text:span><text:span text:style-name="T2084">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P19852">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4309,7 +4278,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14990"><text:span text:style-name="T1">Table </text:span><text:span text:style-name="T1"><text:sequence text:ref-name="refTable445" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.28</text:sequence></text:span><text:span text:style-name="T1">: WH2NUM</text:span><text:span text:style-name="T833"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14990"><text:span text:style-name="T1">Table </text:span><text:span text:style-name="T1"><text:sequence text:ref-name="refTable445" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.28</text:sequence></text:span><text:span text:style-name="T1">: WH2NUM</text:span> Keyword Description</text:p>
     <text:h text:style-name="P18517" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716335_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716335_3964674244"/></text:h>
     <text:p text:style-name="P11968">The example below sets three WH2NUM regions for a model. </text:p>
     <text:p text:style-name="P14358">--</text:p>

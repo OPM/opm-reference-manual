@@ -2693,26 +2693,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2709" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
-  <style:style style:name="T2789" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0c5cc42f"/>
-  </style:style>
   <style:style style:name="T2812" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="07e7e813"/>
-  </style:style>
-  <style:style style:name="T2834" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0d690a48"/>
-  </style:style>
-  <style:style style:name="T2835" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0b8a572c"/>
-  </style:style>
-  <style:style style:name="T2836" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0d67e1bd"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
-  <style:style style:name="T6135" style:family="text">
-   <style:text-properties officeooo:rsid="0d67e1bd"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3693,8 +3675,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4105,16 +4086,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18359" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816248"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816248"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6135">NODPPM keyword d</text:span>eactivate<text:span text:style-name="T6135">s the default behavior of multiplying the f</text:span>racture <text:span text:style-name="T6135">p</text:span>orosity <text:span text:style-name="T6135">by the fracture p</text:span>ermeability <text:span text:style-name="T6135">to calculate the effective fracture permeability in dual porosity and dual permeability runs. Either the DUALPORO or DUALPERM keywords in the RUNSPEC section must be declared in the input file in order to use this keyword. If the default calculation is switched off by this keyword, then the effective fracture permeability is taken to be those entered for the fracture using the PERMX, PERMY and PERMZ keywords in the GRID section. If the keyword is absent from the input deck, then the entered PERMX, PERMY and PERMZ arrays for the fractures are multiplied by fracture PORO array values in order to obtain the effective fracture permeability.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NODPPM keyword deactivates the default behavior of multiplying the fracture porosity by the fracture permeability to calculate the effective fracture permeability in dual porosity and dual permeability runs. Either the DUALPORO or DUALPERM keywords in the RUNSPEC section must be declared in the input file in order to use this keyword. If the default calculation is switched off by this keyword, then the effective fracture permeability is taken to be those entered for the fracture using the PERMX, PERMY and PERMZ keywords in the GRID section. If the keyword is absent from the input deck, then the entered PERMX, PERMY and PERMZ arrays for the fractures are multiplied by fracture PORO array values in order to obtain the effective fracture permeability.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. </text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715611_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715611_3964674244"/></text:h>
     <text:p text:style-name="P13672">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13672">-- <text:s text:c="6"/>DEACTIVATE FRACTURE POROSITY-PERMEABILITY CALCULATION <text:s text:c="28"/></text:p>
     <text:p text:style-name="P13672">-- <text:s text:c="64"/></text:p>
     <text:p text:style-name="P13672">NODPPM <text:s text:c="74"/></text:p>
     <text:p text:style-name="P13676"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T2789">The above example switches </text:span><text:span text:style-name="T2834">off the</text:span><text:span text:style-name="T2836"> default behavior of multiplying the f</text:span><text:span text:style-name="T2835">racture </text:span><text:span text:style-name="T2836">p</text:span><text:span text:style-name="T2835">orosity </text:span><text:span text:style-name="T2836">by the fracture p</text:span><text:span text:style-name="T2835">ermeability </text:span><text:span text:style-name="T2836">to calculate the effective fracture permeabilit</text:span><text:span text:style-name="T2834">y.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The above example switches off the default behavior of multiplying the fracture porosity by the fracture permeability to calculate the effective fracture permeability.</text:p>
     
    </text:section>
   </office:text>

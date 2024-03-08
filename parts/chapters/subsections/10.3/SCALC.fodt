@@ -2783,42 +2783,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T3433" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT" fo:font-size="10pt" officeooo:rsid="16db04aa"/>
-  </style:style>
-  <style:style style:name="T4299" style:family="text">
-   <style:text-properties fo:color="#800000" loext:opacity="100%" style:font-name="Liberation Mono" fo:font-size="9pt" fo:font-weight="normal" officeooo:rsid="16d703cc" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
-  </style:style>
-  <style:style style:name="T4420" style:family="text">
-   <style:text-properties officeooo:rsid="01f1577f"/>
-  </style:style>
-  <style:style style:name="T4829" style:family="text">
-   <style:text-properties officeooo:rsid="004124a1"/>
-  </style:style>
-  <style:style style:name="T4946" style:family="text">
-   <style:text-properties officeooo:rsid="053f8786"/>
-  </style:style>
-  <style:style style:name="T5038" style:family="text">
-   <style:text-properties officeooo:rsid="05d798a4"/>
-  </style:style>
-  <style:style style:name="T5039" style:family="text">
-   <style:text-properties officeooo:rsid="05da6389"/>
-  </style:style>
-  <style:style style:name="T7535" style:family="text">
-   <style:text-properties officeooo:rsid="16d703cc"/>
-  </style:style>
-  <style:style style:name="T7536" style:family="text">
-   <style:text-properties officeooo:rsid="16d84ea3"/>
-  </style:style>
-  <style:style style:name="T7537" style:family="text">
-   <style:text-properties officeooo:rsid="16d8f742"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3850,8 +3814,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4305,11 +4268,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3144">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2026.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4919">S<text:span text:style-name="T7535">CALC</text:span></text:p>
+       <text:p text:style-name="P4919">SCALC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2026.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3705">S<text:span text:style-name="T7536">CALC</text:span> is an array of real positive numbers <text:span text:style-name="T4946">that are greater than or equal to zero and less than or equal to one </text:span>assigning the <text:span text:style-name="T5038">initial equilibration <text:s/>calcite volume fraction values </text:span>to each cell in the model. </text:p>
-       <text:p text:style-name="P4085">Repeat counts may be used, for example <text:span text:style-name="T4420">20</text:span>*<text:span text:style-name="T5039">0.</text:span><text:span text:style-name="T7537">0010.</text:span> </text:p>
+       <text:p text:style-name="P3705">SCALC is an array of real positive numbers that are greater than or equal to zero and less than or equal to one assigning the initial equilibration <text:s/>calcite volume fraction values to each cell in the model. </text:p>
+       <text:p text:style-name="P4085">Repeat counts may be used, for example 20*0.0010. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4336,10 +4299,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1794">Notes:</text:p>
        <text:list xml:id="list105918184698641" text:continue-list="list105919178166313" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19040"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19040">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18945"><text:span text:style-name="T4829">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18945">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4350,18 +4313,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14826">Table <text:sequence text:ref-name="refTable488" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.42</text:sequence>: S<text:span text:style-name="T7535">CALC</text:span><text:span text:style-name="T5039"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14826">Table <text:sequence text:ref-name="refTable488" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.42</text:sequence>: SCALC Keyword Description</text:p>
     <text:p text:style-name="P15599"/>
     <text:p text:style-name="P11882">See also the PRESSURE, SBIOF, SMICR, SOXYG and SUREA keywords to fully define the initial state of the model.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_370116838831421111"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_370116838831421111"/></text:h>
     <text:p text:style-name="P13018">--</text:p>
-    <text:p text:style-name="P13018">-- <text:s text:c="6"/>DEFINE INITIAL EQUILIBRATION <text:span text:style-name="T7535">CALCITE</text:span> VOLUME FRACTION FOR ALL <text:span text:style-name="T4299">CELLS</text:span></text:p>
+    <text:p text:style-name="P13018">-- <text:s text:c="6"/>DEFINE INITIAL EQUILIBRATION CALCITE VOLUME FRACTION FOR ALL CELLS</text:p>
     <text:p text:style-name="P14505">-- <text:s text:c="6"/>BASED ON NX = 100, NY = 100 AND NZ = 3</text:p>
     <text:p text:style-name="P13018">--</text:p>
-    <text:p text:style-name="P13018">S<text:span text:style-name="T7535">CALC</text:span> <text:s text:c="50"/></text:p>
+    <text:p text:style-name="P13018">SCALC <text:s text:c="50"/></text:p>
     <text:p text:style-name="P14500"><text:s text:c="9"/>1000*0.0000 1000*0.0000 1000*0.0010 <text:s text:c="34"/>/</text:p>
     <text:p text:style-name="P14500"/>
-    <text:p text:style-name="P11120">The above example defines the initial equilibration <text:span text:style-name="T3433">calcite</text:span> volume fraction values to be 0.0000 for all the cells in the first and second layers and finally 0.0010 for all the cells in the third layer.</text:p>
+    <text:p text:style-name="P11120">The above example defines the initial equilibration calcite volume fraction values to be 0.0000 for all the cells in the first and second layers and finally 0.0010 for all the cells in the third layer.</text:p>
     
    </text:section>
   </office:text>

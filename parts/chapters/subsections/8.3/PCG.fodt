@@ -2801,41 +2801,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1533" style:family="text">
    <style:text-properties style:text-position="0% 100%"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T1632" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="04c48920"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T3840" style:family="text">
-   <style:text-properties officeooo:rsid="00ce5e6c"/>
-  </style:style>
   <style:style style:name="T4092" style:family="text">
    <style:text-properties style:text-position="sub 58%"/>
-  </style:style>
-  <style:style style:name="T4860" style:family="text">
-   <style:text-properties officeooo:rsid="04bed606"/>
-  </style:style>
-  <style:style style:name="T4861" style:family="text">
-   <style:text-properties officeooo:rsid="04bfdbb8"/>
-  </style:style>
-  <style:style style:name="T4862" style:family="text">
-   <style:text-properties officeooo:rsid="04c48920"/>
-  </style:style>
-  <style:style style:name="T4863" style:family="text">
-   <style:text-properties officeooo:rsid="04c4de1e"/>
-  </style:style>
-  <style:style style:name="T8352" style:family="text">
-   <style:text-properties officeooo:rsid="003caf64"/>
   </style:style>
   <style:style style:name="fr66" style:family="graphic" style:parent-style-name="Formula">
    <style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:ole-draw-aspect="1"/>
@@ -3871,8 +3838,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4249,7 +4215,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="PCG">
 
-<text:h text:style-name="P17584" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc77040_621662414"/>PC<text:span text:style-name="T4863">G</text:span> – End-Point Scaling <text:span text:style-name="T4862">of </text:span>Grid Cell Maximum <text:span text:style-name="T4862">Gas</text:span> Capillary Pressure <text:span text:style-name="T4862">(Drainage)</text:span><text:bookmark-end text:name="__RefHeading___Toc77040_621662414"/></text:h>
+<text:h text:style-name="P17584" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc77040_621662414"/>PCG – End-Point Scaling of Grid Cell Maximum Gas Capillary Pressure (Drainage)<text:bookmark-end text:name="__RefHeading___Toc77040_621662414"/></text:h>
     <table:table table:name="Table443" table:style-name="Table443">
      <table:table-column table:style-name="Table443.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table443.E"/>
@@ -4283,7 +4249,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716089_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716089_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4860">PCG</text:span> defines the <text:span text:style-name="T4860">maximum drainage gas-oil capillary pressure values for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array. <text:s/>The ENDSCALE keyword in the RUNSPEC section should be activated to enable end-point scaling and the use of this keyword. The keyword can be used with all grid types. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">PCG defines the maximum drainage gas-oil capillary pressure values for all the cells in the model via an array. <text:s/>The ENDSCALE keyword in the RUNSPEC section should be activated to enable end-point scaling and the use of this keyword. The keyword can be used with all grid types. </text:p>
     <text:p text:style-name="P11020">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. See also the IPCG keyword for the equivalent imbibition functionality.</text:p>
     <table:table table:name="Table445" table:style-name="Table445">
      <table:table-column table:style-name="Table445.A"/>
@@ -4326,11 +4292,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3006">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table445.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4594">PC<text:span text:style-name="T4862">G</text:span></text:p>
+       <text:p text:style-name="P4594">PCG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table445.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3683"><text:span text:style-name="T4861">PCG</text:span> is an array of <text:span text:style-name="T4860">positive</text:span> real numbers assigning the <text:span text:style-name="T4860">maximum drainage <text:s/>gas-oil capillary pressure values </text:span>for each cell in the model. </text:p>
-       <text:p text:style-name="P4047">Repeat counts may be used, for example 30*<text:span text:style-name="T3840">10</text:span>0.0. </text:p>
+       <text:p text:style-name="P3683">PCG is an array of positive real numbers assigning the maximum drainage <text:s/>gas-oil capillary pressure values for each cell in the model. </text:p>
+       <text:p text:style-name="P4047">Repeat counts may be used, for example 30*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4357,13 +4323,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1518">Notes:</text:p>
        <text:list xml:id="list105916626116816" text:continue-list="list105914799622515" text:style-name="L87">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19067"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19067">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19284"><text:span text:style-name="T1595">I</text:span><text:span text:style-name="T1533">f the HYSTER on the SATOPTS keyword in the RUNSPEC section has been activated to invoke hysteresis then PC</text:span><text:span text:style-name="T1632">G</text:span><text:span text:style-name="T1533"> scales the drainage curve </text:span><text:span text:style-name="T1632">and IPCG scales the imbibition curve.</text:span></text:p>
+         <text:p text:style-name="P19284">I<text:span text:style-name="T1533">f the HYSTER on the SATOPTS keyword in the RUNSPEC section has been activated to invoke hysteresis then PC</text:span>G<text:span text:style-name="T1533"> scales the drainage curve </text:span>and IPCG scales the imbibition curve.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19067"><text:span text:style-name="T2084">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P19067">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4374,7 +4340,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14885">Table <text:sequence text:ref-name="refTable311" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.95</text:sequence>: <text:span text:style-name="T4861">PCG Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14885">Table <text:sequence text:ref-name="refTable311" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.95</text:sequence>: PCG Keyword Description</text:p>
     <text:p text:style-name="P16906">The capillary pressure for a grid block is scaled by:</text:p>
     <table:table table:name="Table444" table:style-name="Table444">
      <table:table-column table:style-name="Table444.A"/>
@@ -4510,7 +4476,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AAAAAAABAAEAYwCMAAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:span text:style-name="T4092"><text:tab/></text:span>=<text:tab/>the resulting <text:span text:style-name="T4861">drainage</text:span> <text:span text:style-name="T4863">gas-oil capillary pressure for a grid cell.</text:span></text:p>
+     </draw:frame><text:span text:style-name="T4092"><text:tab/></text:span>=<text:tab/>the resulting drainage gas-oil capillary pressure for a grid cell.</text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object773" text:anchor-type="as-char" svg:width="0.931cm" svg:height="0.39cm" draw:z-index="1062"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
@@ -4528,7 +4494,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:tab/>=<text:tab/>the maximum capillary pressure from the PC<text:span text:style-name="T4863">G</text:span> array for a given cell.</text:p>
+     </draw:frame><text:tab/>=<text:tab/>the maximum capillary pressure from the PCG array for a given cell.</text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object17" text:anchor-type="as-char" svg:width="0.915cm" svg:height="0.474cm" draw:z-index="1063"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
@@ -4559,8 +4525,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </office:binary-data>
       </draw:image>
       <svg:desc>formula</svg:desc>
-     </draw:frame><text:tab/>=<text:tab/>the capillary pressure in the <text:span text:style-name="T4861">drainage</text:span> capillary pressure table </text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>allocated to the grid bloc<text:span text:style-name="T4861">k.</text:span></text:p>
+     </draw:frame><text:tab/>=<text:tab/>the capillary pressure in the drainage capillary pressure table </text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>allocated to the grid block.</text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object18" text:anchor-type="as-char" svg:width="1.296cm" svg:height="0.474cm" draw:z-index="1064"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
@@ -4601,8 +4567,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </office:binary-data>
       </draw:image>
       <svg:desc>formula</svg:desc>
-     </draw:frame><text:span text:style-name="T8352"><text:tab/></text:span>=<text:tab/>the maximum capillary pressure in the <text:span text:style-name="T4861">drainage</text:span> capillary pressure table</text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:soft-page-break/><text:tab/><text:tab/>allocated to the grid block <text:span text:style-name="T4862">at </text:span><text:span text:style-name="T4862"><draw:frame draw:style-name="fr66" draw:name="Object22" text:anchor-type="as-char" svg:width="1.829cm" svg:height="0.441cm" draw:z-index="1065"><draw:object>
+     </draw:frame><text:tab/>=<text:tab/>the maximum capillary pressure in the drainage capillary pressure table</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:soft-page-break/><text:tab/><text:tab/>allocated to the grid block at <draw:frame draw:style-name="fr66" draw:name="Object22" text:anchor-type="as-char" svg:width="1.829cm" svg:height="0.441cm" draw:z-index="1065"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <mrow>
@@ -4651,13 +4617,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </office:binary-data>
        </draw:image>
        <svg:desc>formula</svg:desc>
-      </draw:frame></text:span><text:span text:style-name="T4862">.</text:span></text:p>
+      </draw:frame>.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716091_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716091_3964674244"/></text:h>
     <text:p text:style-name="P13568">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13568">-- <text:s text:c="6"/>DEFINE GRID BLOCK <text:span text:style-name="T4861">PCG</text:span> DATA FOR ALL CELLS (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
+    <text:p text:style-name="P13568">-- <text:s text:c="6"/>DEFINE GRID BLOCK PCG DATA FOR ALL CELLS (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13600">--</text:p>
-    <text:p text:style-name="P13988">PC<text:span text:style-name="T4862">G</text:span></text:p>
-    <text:p text:style-name="P13568"><text:s text:c="9"/><text:span text:style-name="T4861">1</text:span>00*50.<text:span text:style-name="T4861">0</text:span> <text:s/>100*75.0 <text:s/>100*125.0 <text:s text:c="40"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13988">PCG</text:p>
+    <text:p text:style-name="P13568"><text:s text:c="9"/>100*50.0 <text:s/>100*75.0 <text:s/>100*125.0 <text:s text:c="40"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="Text_20_body">The above example defines the PCW for 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     
    </text:section>

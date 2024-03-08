@@ -2685,9 +2685,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2828" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="0d409bef"/>
   </style:style>
-  <style:style style:name="T6107" style:family="text">
-   <style:text-properties officeooo:rsid="0d409bef"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3667,8 +3664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4045,7 +4041,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="MESSOPTS">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc557508_3181922006"/>MESSOPTS – Reset Severity Level for Force<text:span text:style-name="T6107">d</text:span> Time Steps<text:bookmark-end text:name="__RefHeading___Toc557508_3181922006"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc557508_3181922006"/>MESSOPTS – Reset Severity Level for Forced Time Steps<text:bookmark-end text:name="__RefHeading___Toc557508_3181922006"/></text:h>
     <table:table table:name="Table1377" table:style-name="Table1377">
      <table:table-column table:style-name="Table1377.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1377.E"/>
@@ -4079,7 +4075,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18359" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816238"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816238"/></text:h>
-    <text:p text:style-name="_40_TextBody">Th<text:span text:style-name="T6107">is </text:span>keyword, <text:span text:style-name="T6107">MESSOPTS, resets the severity level for time steps that are forced to be accepted by the simulator. The normal severity level for this type of simulator generated message is PROBLEM and this can result in the run stopping depending on the parameters entered on the MESSAGES keyword. <text:s/>MESSOPTS can be used to reset the severity level to MESSAGE, COMMENT, WARNING, or PROBLEM; for example, to avoid the run terminating due to too many PROBLEM messages. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword, MESSOPTS, resets the severity level for time steps that are forced to be accepted by the simulator. The normal severity level for this type of simulator generated message is PROBLEM and this can result in the run stopping depending on the parameters entered on the MESSAGES keyword. <text:s/>MESSOPTS can be used to reset the severity level to MESSAGE, COMMENT, WARNING, or PROBLEM; for example, to avoid the run terminating due to too many PROBLEM messages. </text:p>
     <text:p text:style-name="_40_TextBody">Note that the MESSAGES keyword is a global keyword can therefore be used in any section; however, only the last instance of the keywords is active. The MESSOPTS keyword can only be used in the SCHEDULE section but can be used multiple times to change the severity level for forced time steps. Again, only the last occurrence of the keyword is active.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <text:p text:style-name="_40_TextBody"/>

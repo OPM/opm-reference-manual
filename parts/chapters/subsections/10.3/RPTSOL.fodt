@@ -2811,47 +2811,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
   <style:style style:name="T2697" style:family="text">
    <style:text-properties officeooo:rsid="0412520d"/>
-  </style:style>
-  <style:style style:name="T3641" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="0447fa22" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3642" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="04493b08" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3643" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="044a6abf" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3644" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="044ada83" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3645" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="044c686f" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T4796" style:family="text">
-   <style:text-properties officeooo:rsid="04429fde"/>
-  </style:style>
-  <style:style style:name="T4798" style:family="text">
-   <style:text-properties officeooo:rsid="0447fa22"/>
-  </style:style>
-  <style:style style:name="T4799" style:family="text">
-   <style:text-properties officeooo:rsid="04493b08"/>
-  </style:style>
-  <style:style style:name="T4802" style:family="text">
-   <style:text-properties officeooo:rsid="044b2bd9"/>
-  </style:style>
-  <style:style style:name="T4804" style:family="text">
-   <style:text-properties officeooo:rsid="044c686f"/>
-  </style:style>
-  <style:style style:name="T5016" style:family="text">
-   <style:text-properties officeooo:rsid="05be53e8"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3884,8 +3845,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4262,7 +4222,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="RPTSOL">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc135631_1317547213"/>RPT<text:span text:style-name="T4804">SOL</text:span> – <text:span text:style-name="T4802">Define</text:span> <text:span text:style-name="T4804">SOLUTION Section</text:span> Reporting<text:bookmark-end text:name="__RefHeading___Toc135631_1317547213"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc135631_1317547213"/>RPTSOL – Define SOLUTION Section Reporting<text:bookmark-end text:name="__RefHeading___Toc135631_1317547213"/></text:h>
     <table:table table:name="Table387" table:style-name="Table387">
      <table:table-column table:style-name="Table387.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table387.E"/>
@@ -4296,7 +4256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388192211"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388192211"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword <text:span text:style-name="T4796">defines the data in the SOLUTION section that is to be printed to the output print file in human readable format. The keyword has two distinct forms, the first of which consists of the keyword followed by a series of integers on the next line indicating the data to be printed (see the first example). This is the original formal in the commercial simulator and was subsequently superseded by the second format. The second format consists of the keyword followed by a series of character strings that indicate the data to be printed. In most cases the character string is the keyword used to load the data in the OPM Flow input deck, for example PVDG for the dry gas PVT tables. Its is anticipated that OPM Flow will eventually support the functionality of the second format only, the first format although recognized will be completely ignored.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines the data in the SOLUTION section that is to be printed to the output print file in human readable format. The keyword has two distinct forms, the first of which consists of the keyword followed by a series of integers on the next line indicating the data to be printed (see the first example). This is the original formal in the commercial simulator and was subsequently superseded by the second format. The second format consists of the keyword followed by a series of character strings that indicate the data to be printed. In most cases the character string is the keyword used to load the data in the OPM Flow input deck, for example PVDG for the dry gas PVT tables. Its is anticipated that OPM Flow will eventually support the functionality of the second format only, the first format although recognized will be completely ignored.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <table:table table:name="Table388" table:style-name="Table388">
      <table:table-column table:style-name="Table388.A"/>
@@ -4325,7 +4285,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4958">DENO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.C6" office:value-type="string">
-       <text:p text:style-name="P4270">Print <text:span text:style-name="T4804">the oil reservoir density array</text:span></text:p>
+       <text:p text:style-name="P4270">Print the oil reservoir density array</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.D6" office:value-type="string">
        <text:p text:style-name="P4265">N/A</text:p>
@@ -4339,7 +4299,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4958">EQUIL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.C6" office:value-type="string">
-       <text:p text:style-name="P4270">Print <text:span text:style-name="T4804">the equilibration report.</text:span></text:p>
+       <text:p text:style-name="P4270">Print the equilibration report.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.D6" office:value-type="string">
        <text:p text:style-name="P4265">N/A</text:p>
@@ -4353,7 +4313,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4958">FIP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.C6" office:value-type="string">
-       <text:p text:style-name="P4270">Print <text:span text:style-name="T4804">the fluid in-place report.</text:span></text:p>
+       <text:p text:style-name="P4270">Print the fluid in-place report.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.D6" office:value-type="string">
        <text:p text:style-name="P4265">N/A</text:p>
@@ -4367,7 +4327,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4958">FIPRESV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.C6" office:value-type="string">
-       <text:p text:style-name="P4270">Print <text:span text:style-name="T4804">the reservoir volumes in-place report.</text:span></text:p>
+       <text:p text:style-name="P4270">Print the reservoir volumes in-place report.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table388.D6" office:value-type="string">
        <text:p text:style-name="P4265">N/A</text:p>
@@ -4392,7 +4352,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1599">Notes:</text:p>
        <text:list xml:id="list105919697402733" text:continue-list="list105917384663190" text:style-name="L78">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19809"><text:span text:style-name="T1534">T</text:span><text:span text:style-name="T2084">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P19809">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4401,7 +4361,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14706">Table <text:sequence text:ref-name="refTable474" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.28</text:sequence>: <text:span text:style-name="T4799">RPTSOL Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14706">Table <text:sequence text:ref-name="refTable474" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.28</text:sequence>: RPTSOL Keyword Description</text:p>
     <text:p text:style-name="P15535"/>
     <table:table table:name="Table389" table:style-name="Table389">
      <table:table-column table:style-name="Table389.A"/>
@@ -4409,22 +4369,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table389.1">
        <table:table-cell table:style-name="Table389.A1" office:value-type="string">
         <text:p text:style-name="P10303">Note</text:p>
-        <text:p text:style-name="P10321"><text:span text:style-name="T3643">Except for </text:span><text:span text:style-name="T3645">non-array</text:span><text:span text:style-name="T3643"> like </text:span><text:span text:style-name="T3644">data, </text:span><text:span text:style-name="T3645">FIP</text:span><text:span text:style-name="T3643"> etc., t</text:span><text:span text:style-name="T3641">his keyword has the potential to produce very large print files that some text editors may have difficulty loading. A more efficient solution </text:span><text:span text:style-name="T3644">for array type data</text:span><text:span text:style-name="T3641"> is to load the *.INIT </text:span><text:span text:style-name="T3645">and *.RESTART </text:span><text:span text:style-name="T3641">file</text:span><text:span text:style-name="T3645">s</text:span><text:span text:style-name="T3641"> into OPM ResInsight to view the data graphically, this also has the benefit of being able to filter </text:span><text:span text:style-name="T3642">the grid </text:span><text:span text:style-name="T3641">based on I, J, K ranges </text:span><text:span text:style-name="T3642">and grid properties.</text:span></text:p>
+        <text:p text:style-name="P10321">Except for non-array like data, FIP etc., this keyword has the potential to produce very large print files that some text editors may have difficulty loading. A more efficient solution for array type data is to load the *.INIT and *.RESTART files into OPM ResInsight to view the data graphically, this also has the benefit of being able to filter the grid based on I, J, K ranges and grid properties.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="Text_20_body"/>
-    <text:h text:style-name="P18693" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716405_3964674244"/>Example<text:span text:style-name="T5016">s</text:span><text:bookmark-end text:name="__RefHeading___Toc716405_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The first example shows the original format of this keyword; although the keyword and format are recognized by OPM Flow, <text:span text:style-name="T4798">the format is ignored and is unlikely to be implemented in in the simulator.</text:span></text:p>
+    <text:h text:style-name="P18693" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716405_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716405_3964674244"/></text:h>
+    <text:p text:style-name="_40_TextBody">The first example shows the original format of this keyword; although the keyword and format are recognized by OPM Flow, the format is ignored and is unlikely to be implemented in in the simulator.</text:p>
     <text:p text:style-name="P13702">--</text:p>
-    <text:p text:style-name="P13702">-- <text:s text:c="6"/><text:span text:style-name="T4796">DEFINE</text:span> <text:span text:style-name="T4804">SOLUTION</text:span> SECTION REPORT <text:span text:style-name="T4798">OPTION (ORIGINAL FORMAT)</text:span></text:p>
+    <text:p text:style-name="P13702">-- <text:s text:c="6"/>DEFINE SOLUTION SECTION REPORT OPTION (ORIGINAL FORMAT)</text:p>
     <text:p text:style-name="P13298">–</text:p>
-    <text:p text:style-name="P13942">RPT<text:span text:style-name="T4804">SOL</text:span></text:p>
+    <text:p text:style-name="P13942">RPTSOL</text:p>
     <text:p text:style-name="P13942"><text:s text:c="9"/>1 <text:s text:c="7"/>2*0 <text:s text:c="5"/>1 <text:s text:c="7"/>3*1 <text:s text:c="39"/>/</text:p>
-    <text:p text:style-name="P11512">The <text:span text:style-name="T4799">next example shows the second</text:span> forma<text:span text:style-name="T4799">t of the keyword which may be supported in a future release of OPM Flow. </text:span></text:p>
+    <text:p text:style-name="P11512">The next example shows the second format of the keyword which may be supported in a future release of OPM Flow. </text:p>
     <text:p text:style-name="P13334">--</text:p>
-    <text:p text:style-name="P13334">-- <text:s text:c="6"/>DEFINE <text:span text:style-name="T4804">SOLUTION</text:span> SECTION REPORT OPTIONS</text:p>
+    <text:p text:style-name="P13334">-- <text:s text:c="6"/>DEFINE SOLUTION SECTION REPORT OPTIONS</text:p>
     <text:p text:style-name="P13334">--</text:p>
     <text:p text:style-name="P14053">RPTSOL <text:s text:c="74"/></text:p>
     <text:p text:style-name="P14053"><text:s text:c="9"/>FIP=2 <text:s text:c="3"/>FIPRESV <text:s/>RESTART=3 <text:s text:c="42"/>/</text:p>

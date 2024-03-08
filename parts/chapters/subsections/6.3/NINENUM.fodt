@@ -2782,38 +2782,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1597" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0301278d"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T3977" style:family="text">
-   <style:text-properties officeooo:rsid="00474f46"/>
-  </style:style>
-  <style:style style:name="T4673" style:family="text">
-   <style:text-properties officeooo:rsid="02edc23f"/>
-  </style:style>
-  <style:style style:name="T4674" style:family="text">
-   <style:text-properties officeooo:rsid="02eddc5f"/>
-  </style:style>
   <style:style style:name="T5290" style:family="text">
    <style:text-properties officeooo:rsid="07e7e813"/>
-  </style:style>
-  <style:style style:name="T6130" style:family="text">
-   <style:text-properties officeooo:rsid="0d627813"/>
-  </style:style>
-  <style:style style:name="T6131" style:family="text">
-   <style:text-properties officeooo:rsid="0d635105"/>
-  </style:style>
-  <style:style style:name="T6132" style:family="text">
-   <style:text-properties officeooo:rsid="0d6422c6"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3846,8 +3816,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4224,7 +4193,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NINENUM">
 
-<text:h text:style-name="P17816" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc226526_718033703"/><text:span text:style-name="T6130">NINE</text:span>NUM –<text:span text:style-name="T4673"> Define the Nine-Point Discretization Region</text:span><text:bookmark-end text:name="__RefHeading___Toc226526_718033703"/></text:h>
+<text:h text:style-name="P17816" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc226526_718033703"/>NINENUM – Define the Nine-Point Discretization Region<text:bookmark-end text:name="__RefHeading___Toc226526_718033703"/></text:h>
     <table:table table:name="Table1415" table:style-name="Table1415">
      <table:table-column table:style-name="Table1415.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1415.E"/>
@@ -4258,7 +4227,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683882323"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683882323"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6130">NINENUM</text:span> keyword defines <text:span text:style-name="T6130">areas in the grid that should use the Nine-Point Discretization formulation by setting a grid block’s NINENUM value to one, or zero for the conventional standard five-point discretization formulation, <text:s/>for when the Nine-Point Discretization formulation has been activated by the NINEPOIN keyword in the RUNSPEC section. <text:s text:c="2"/>There should be a NINENUM value for each grid block in the model. <text:s/>Note that if the if the NINEPOIN keyword in the RUNSPEC section has been invoked and the NINENUM keyword has not been used in the input deck, then all the grid will use the nine-point scheme.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NINENUM keyword defines areas in the grid that should use the Nine-Point Discretization formulation by setting a grid block’s NINENUM value to one, or zero for the conventional standard five-point discretization formulation, <text:s/>for when the Nine-Point Discretization formulation has been activated by the NINEPOIN keyword in the RUNSPEC section. <text:s text:c="2"/>There should be a NINENUM value for each grid block in the model. <text:s/>Note that if the if the NINEPOIN keyword in the RUNSPEC section has been invoked and the NINENUM keyword has not been used in the input deck, then all the grid will use the nine-point scheme.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1416" table:style-name="Table1416">
      <table:table-column table:style-name="Table1416.A"/>
@@ -4287,8 +4256,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3933">NINENUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1416.C2" office:value-type="string">
-       <text:p text:style-name="P3933">NINENUM defines an <text:span text:style-name="T6131">integer </text:span>array of <text:span text:style-name="T6131">zeros and ones </text:span>assigning a grid cell to a particular <text:span text:style-name="T6131">discretization</text:span> region, <text:span text:style-name="T6131">a value of zero for five-point or a value of one for nine-point discretization</text:span>. </text:p>
-       <text:p text:style-name="P3933"><text:span text:style-name="T6130">Note that the default value of one implies a cell is included in the Nine-Point Discretization region; thus, if a cell is to use the conventional standard five-point finite difference discretization formulation, then NINENUM must be explicitly set to zero</text:span>.</text:p>
+       <text:p text:style-name="P3933">NINENUM defines an integer array of zeros and ones assigning a grid cell to a particular discretization region, a value of zero for five-point or a value of one for nine-point discretization. </text:p>
+       <text:p text:style-name="P3933">Note that the default value of one implies a cell is included in the Nine-Point Discretization region; thus, if a cell is to use the conventional standard five-point finite difference discretization formulation, then NINENUM must be explicitly set to zero.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1416.D2" office:value-type="string">
        <text:p text:style-name="P4112">1</text:p>
@@ -4299,10 +4268,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1470">Notes:</text:p>
        <text:list xml:id="list105910768878989" text:continue-list="list105911062069845" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19963"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19963">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19794"><text:span text:style-name="T1597">T</text:span><text:span text:style-name="T2084">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P19794">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4311,22 +4280,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14630">Table <text:sequence text:ref-name="refTable162" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.88</text:sequence>: NINENUM<text:span text:style-name="T4674"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14630">Table <text:sequence text:ref-name="refTable162" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.88</text:sequence>: NINENUM Keyword Description</text:p>
     <text:p text:style-name="P10921"/>
-    <text:p text:style-name="P10921">The NINE<text:span text:style-name="T6131">NUM</text:span> keyword <text:span text:style-name="T6131">cannot be used in models with Local Grid Refinements (“LGR”) to set different discretization regions within the model, that is if LGRs are present in the model either all the grid uses nine-point discretization, if NINEPOIN is present in the RUNSPEC section, or five-point if NINEPOIN is absent.</text:span></text:p>
+    <text:p text:style-name="P10921">The NINENUM keyword cannot be used in models with Local Grid Refinements (“LGR”) to set different discretization regions within the model, that is if LGRs are present in the model either all the grid uses nine-point discretization, if NINEPOIN is present in the RUNSPEC section, or five-point if NINEPOIN is absent.</text:p>
     <text:h text:style-name="P18429" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715795_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715795_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T3977">The example below sets a portion of the model to us the Nine-Point Discretization formulation</text:span>. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets a portion of the model to us the Nine-Point Discretization formulation. </text:p>
     <text:p text:style-name="P12904">-- <text:s/></text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="6"/>DEFINE NINE-POINT DISCRETIZATION REGION <text:span text:style-name="T6132">FOR </text:span>ALL CELLS <text:s text:c="27"/></text:p>
+    <text:p text:style-name="P12904">-- <text:s text:c="6"/>DEFINE NINE-POINT DISCRETIZATION REGION FOR ALL CELLS <text:s text:c="27"/></text:p>
     <text:p text:style-name="P14350">--</text:p>
     <text:p text:style-name="P14350">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14350">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
     <text:p text:style-name="P14350">EQUALS <text:s text:c="61"/></text:p>
-    <text:p text:style-name="P13917"><text:s text:c="9"/>NINENUM’ <text:s text:c="3"/><text:span text:style-name="T6131">0</text:span> <text:s text:c="11"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / <text:span text:style-name="T6131">FIVE-POINT</text:span> <text:s text:c="2"/></text:p>
-    <text:p text:style-name="P13917"><text:s text:c="9"/>NINENUM’ <text:s text:c="3"/><text:span text:style-name="T6131">1</text:span> <text:s text:c="11"/>1* <text:s/><text:span text:style-name="T6132">1*</text:span> <text:s text:c="2"/>1* <text:s/><text:span text:style-name="T6132">1*</text:span> <text:s text:c="2"/>1 <text:s text:c="2"/><text:span text:style-name="T6131">5</text:span> <text:s/>/ <text:span text:style-name="T6131">NINE-POINT</text:span> <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13917"><text:s text:c="9"/>NINENUM’ <text:s text:c="3"/>0 <text:s text:c="11"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / FIVE-POINT <text:s text:c="2"/></text:p>
+    <text:p text:style-name="P13917"><text:s text:c="9"/>NINENUM’ <text:s text:c="3"/>1 <text:s text:c="11"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1 <text:s text:c="2"/>5 <text:s/>/ NINE-POINT <text:s text:c="5"/></text:p>
     <text:p text:style-name="P12941"><text:soft-page-break/>/ </text:p>
     <text:p text:style-name="P11441"/>
-    <text:p text:style-name="P11441">Here the first line sets all the grid to us the five-point d<text:span text:style-name="T6130">iscretization formulation, </text:span>all values set to zero,<text:span text:style-name="T6130"> </text:span>and then the second line sets all the cells in the layers one to five to use the n<text:span text:style-name="T6130">ine-</text:span>p<text:span text:style-name="T6130">oint </text:span>d<text:span text:style-name="T6130">iscretization </text:span>f<text:span text:style-name="T6130">ormulation.</text:span></text:p>
+    <text:p text:style-name="P11441">Here the first line sets all the grid to us the five-point discretization formulation, all values set to zero, and then the second line sets all the cells in the layers one to five to use the nine-point discretization formulation.</text:p>
     
    </text:section>
   </office:text>

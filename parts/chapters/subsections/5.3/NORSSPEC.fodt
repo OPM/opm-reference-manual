@@ -2683,21 +2683,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4737" style:family="text">
-   <style:text-properties officeooo:rsid="03b730b7"/>
-  </style:style>
-  <style:style style:name="T4742" style:family="text">
-   <style:text-properties officeooo:rsid="03d87517"/>
-  </style:style>
-  <style:style style:name="T4750" style:family="text">
-   <style:text-properties officeooo:rsid="03eac8bd"/>
-  </style:style>
-  <style:style style:name="T4755" style:family="text">
-   <style:text-properties officeooo:rsid="03f622c8"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3677,8 +3662,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4055,7 +4039,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NORSSPEC">
 
-<text:h text:style-name="P17717" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc79044_4106839650"/>NO<text:span text:style-name="T4755">RSSPEC</text:span> – <text:span text:style-name="T4750">Dea</text:span>ctivate <text:span text:style-name="T4750">Output of the RESTART Index File</text:span><text:bookmark-end text:name="__RefHeading___Toc79044_4106839650"/></text:h>
+<text:h text:style-name="P17717" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc79044_4106839650"/>NORSSPEC – Deactivate Output of the RESTART Index File<text:bookmark-end text:name="__RefHeading___Toc79044_4106839650"/></text:h>
     <table:table table:name="Table335" table:style-name="Table335">
      <table:table-column table:style-name="Table335.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table335.E"/>
@@ -4089,9 +4073,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715621_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715621_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4750">The NORSSPEC </text:span>keyword <text:span text:style-name="T4750">deactivates</text:span> <text:span text:style-name="T4742">the writing out of the RESTART index file (*.RSSPEC). The restart data (pressure, saturations etc. through time for each active cell) are written out to two files one file contains the data, *.UNRST for example, and the second file contains an index of the data (*.RSSPEC) stored in the *.UNRST file. This functionality is redundant as most post-processing software require the *.RSSPEC file to load the *.UNRST data set. </text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4750">Hence, OPM Flow ignores this keyword. It is documented here for </text:span>completeness<text:span text:style-name="T4737">.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NORSSPEC keyword deactivates the writing out of the RESTART index file (*.RSSPEC). The restart data (pressure, saturations etc. through time for each active cell) are written out to two files one file contains the data, *.UNRST for example, and the second file contains an index of the data (*.RSSPEC) stored in the *.UNRST file. This functionality is redundant as most post-processing software require the *.RSSPEC file to load the *.UNRST data set. </text:p>
+    <text:p text:style-name="_40_TextBody">Hence, OPM Flow ignores this keyword. It is documented here for completeness.</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_370116838838212"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_370116838838212"/></text:h>
     <text:p text:style-name="P13682">--</text:p>
     <text:p text:style-name="P13682">-- <text:s text:c="6"/>DEACTIVATE OUTPUT OF THE RESTART INDEX FILE *.RSSPEC </text:p>

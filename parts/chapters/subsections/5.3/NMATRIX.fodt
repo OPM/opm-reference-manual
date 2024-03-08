@@ -2775,24 +2775,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T4745" style:family="text">
-   <style:text-properties officeooo:rsid="03de2f3a"/>
-  </style:style>
-  <style:style style:name="T5234" style:family="text">
-   <style:text-properties officeooo:rsid="0788dc40"/>
-  </style:style>
-  <style:style style:name="T6134" style:family="text">
-   <style:text-properties officeooo:rsid="0d65f8f4"/>
-  </style:style>
-  <style:style style:name="T6135" style:family="text">
-   <style:text-properties officeooo:rsid="0d67e1bd"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3824,8 +3806,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4202,7 +4183,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NMATRIX">
 
-<text:h text:style-name="P17711" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc244469_718033703"/>NM<text:span text:style-name="T6134">ATRIX</text:span> – <text:span text:style-name="T6134">Activate</text:span> <text:span text:style-name="T6134">the </text:span>Discretized Matrix Dual Porosity <text:span text:style-name="T6134">Option</text:span><text:bookmark-end text:name="__RefHeading___Toc244469_718033703"/></text:h>
+<text:h text:style-name="P17711" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc244469_718033703"/>NMATRIX – Activate the Discretized Matrix Dual Porosity Option<text:bookmark-end text:name="__RefHeading___Toc244469_718033703"/></text:h>
     <table:table table:name="Table1419" table:style-name="Table1419">
      <table:table-column table:style-name="Table1419.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1419.E"/>
@@ -4236,7 +4217,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18362" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_3701168388162471"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_3701168388162471"/></text:h>
-    <text:p text:style-name="_40_TextBody">The NMA<text:span text:style-name="T6134">TRIX</text:span> <text:span text:style-name="T6134">keyword activates</text:span> <text:span text:style-name="T6134">the </text:span>Discretized Matrix Dual Porosity <text:span text:style-name="T6134">option and specifies the number of sub-grid blocks in the actual matrix grid blocks. See also the NMATOPS keyword in the GRID section that defines various parameters for this option.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NMATRIX keyword activates the Discretized Matrix Dual Porosity option and specifies the number of sub-grid blocks in the actual matrix grid blocks. See also the NMATOPS keyword in the GRID section that defines various parameters for this option.</text:p>
     <text:p text:style-name="P10995">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1420" table:style-name="Table1420">
      <table:table-column table:style-name="Table1420.A"/>
@@ -4265,7 +4246,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3474">NMATRIX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1420.C2" office:value-type="string">
-       <text:p text:style-name="P3489"><text:span text:style-name="T5234">A positive </text:span>integer<text:span text:style-name="T5234"> value that specifies the number of sub-grid blocks in the actual matrix grid blocks.</text:span></text:p>
+       <text:p text:style-name="P3489">A positive integer value that specifies the number of sub-grid blocks in the actual matrix grid blocks.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1420.D2" office:value-type="string">
        <text:p text:style-name="P3471">1</text:p>
@@ -4276,7 +4257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1396">Notes:</text:p>
        <text:list xml:id="list482343348" text:style-name="L35">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19771"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19771">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4285,17 +4266,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14593">Table <text:sequence text:ref-name="refTable41" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.26</text:sequence>: NMATRIX<text:span text:style-name="T4745"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14593">Table <text:sequence text:ref-name="refTable41" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.26</text:sequence>: NMATRIX Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P11985">Note the keyword cannot be used in conjunction with the TRPLPORO keyword, which is also in the RUNSPEC section.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388231"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388231"/></text:h>
     <text:p text:style-name="P13652">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13652">-- <text:s text:c="6"/><text:span text:style-name="T6134">SUB-GRIDS</text:span> <text:s text:c="51"/></text:p>
+    <text:p text:style-name="P13652">-- <text:s text:c="6"/>SUB-GRIDS <text:s text:c="51"/></text:p>
     <text:p text:style-name="P13652">-- <text:s text:c="6"/>NMATRIX <text:s text:c="46"/></text:p>
     <text:p text:style-name="P13652">NMATRIX <text:s text:c="73"/></text:p>
-    <text:p text:style-name="P13652"><text:s text:c="9"/><text:span text:style-name="T6134">4</text:span> <text:s text:c="55"/>/ </text:p>
+    <text:p text:style-name="P13652"><text:s text:c="9"/>4 <text:s text:c="55"/>/ </text:p>
     <text:p text:style-name="P11183"/>
-    <text:p text:style-name="P10974">The above example activates the Discretized Matrix Dual Porosity option and specifies the number of sub-<text:span text:style-name="T6135">g</text:span>rid blocks in the actual matrix grid block <text:span text:style-name="T6134">to be four.</text:span> </text:p>
+    <text:p text:style-name="P10974">The above example activates the Discretized Matrix Dual Porosity option and specifies the number of sub-grid blocks in the actual matrix grid block to be four. </text:p>
     
    </text:section>
   </office:text>

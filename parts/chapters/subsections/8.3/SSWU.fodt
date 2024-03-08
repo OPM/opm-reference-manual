@@ -2793,33 +2793,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4398" style:family="text">
-   <style:text-properties officeooo:rsid="01b41e2e"/>
-  </style:style>
-  <style:style style:name="T4408" style:family="text">
-   <style:text-properties officeooo:rsid="01d539fa"/>
-  </style:style>
-  <style:style style:name="T4409" style:family="text">
-   <style:text-properties officeooo:rsid="01d5540b"/>
-  </style:style>
-  <style:style style:name="T4410" style:family="text">
-   <style:text-properties officeooo:rsid="01d65f8c"/>
-  </style:style>
-  <style:style style:name="T4412" style:family="text">
-   <style:text-properties officeooo:rsid="01db1891"/>
-  </style:style>
-  <style:style style:name="T4413" style:family="text">
-   <style:text-properties officeooo:rsid="01dde58f"/>
-  </style:style>
-  <style:style style:name="T6255" style:family="text">
-   <style:text-properties officeooo:rsid="0dea5788"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3851,8 +3824,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4229,7 +4201,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SSWU">
 
-<text:h text:style-name="P17986" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc837482_4250154414"/>SSWU – End-Point Scaling Grid Cell <text:span text:style-name="T6255">Surfactant Maximum Water</text:span> <text:span text:style-name="T4408">Saturation</text:span><text:bookmark-end text:name="__RefHeading___Toc837482_4250154414"/></text:h>
+<text:h text:style-name="P17986" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc837482_4250154414"/>SSWU – End-Point Scaling Grid Cell Surfactant Maximum Water Saturation<text:bookmark-end text:name="__RefHeading___Toc837482_4250154414"/></text:h>
     <table:table table:name="Table1597" table:style-name="Table1597">
      <table:table-column table:style-name="Table1597.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1597.E"/>
@@ -4263,7 +4235,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31104_7842323223"/>Description<text:bookmark-end text:name="__RefHeading___Toc31104_7842323223"/></text:h>
-    <text:p text:style-name="P11784"><text:span text:style-name="T4408">SSWU defines the surfactant maximum water saturation for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array when the end-point scaling option has been invoked via the ENDSCALE keyword and the surfactant phase has been activated by the SURFACT keyword in the RUNSPEC section. <text:s/>The maximum water saturation is defined as the maximum water saturation in a two-phase water relative permeability table. <text:s/>SSWU scales the surfactant water relative permeability data.</text:span></text:p>
+    <text:p text:style-name="P11784">SSWU defines the surfactant maximum water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword and the surfactant phase has been activated by the SURFACT keyword in the RUNSPEC section. <text:s/>The maximum water saturation is defined as the maximum water saturation in a two-phase water relative permeability table. <text:s/>SSWU scales the surfactant water relative permeability data.</text:p>
     <text:p text:style-name="P11784">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1598" table:style-name="Table1598">
      <table:table-column table:style-name="Table1598.A"/>
@@ -4309,8 +4281,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4610">SSWU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1598.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3228"><text:span text:style-name="T4409">SSWU is an array of real numbers assigning the surfactant maximum water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4079">Repeat counts may be used, for example <text:span text:style-name="T4410">3</text:span>0*0.<text:span text:style-name="T4412">70</text:span> </text:p>
+       <text:p text:style-name="P3228">SSWU is an array of real numbers assigning the surfactant maximum water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4079">Repeat counts may be used, for example 30*0.70 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4340,7 +4312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19414">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19414"><text:span text:style-name="T4410">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P19414">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4351,18 +4323,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14787">Table <text:sequence text:ref-name="refTable395" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.179</text:sequence>: <text:span text:style-name="T4410">SSWU Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14787">Table <text:sequence text:ref-name="refTable395" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.179</text:sequence>: SSWU Keyword Description</text:p>
     <text:p text:style-name="P15584"/>
-    <text:p text:style-name="P11784">End-point scaling allows the entered <text:span text:style-name="T6255">surfactant </text:span>relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SSWL, <text:span text:style-name="T6255">S</text:span>SWCR, <text:span text:style-name="T6255">S</text:span>SWU, <text:span text:style-name="T6255">S</text:span>SGL, <text:span text:style-name="T6255">S</text:span>SGCR, <text:span text:style-name="T6255">S</text:span>SGU, <text:span text:style-name="T6255">S</text:span>SOWCR, <text:span text:style-name="T4398">and S</text:span>SOGCR <text:span text:style-name="T4398">saturation grid arrays for the saturation end-points, and the SKRG, SKROG, SKROW and SKRW relative permeability grid cell arrays for the relative permeability end-point data.</text:span></text:p>
+    <text:p text:style-name="P11784">End-point scaling allows the entered surfactant relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SSWL, SSWCR, SSWU, SSGL, SSGCR, SSGU, SSOWCR, and SSOGCR saturation grid arrays for the saturation end-points, and the SKRG, SKROG, SKROW and SKRW relative permeability grid cell arrays for the relative permeability end-point data.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31106_7842323222"/>Example<text:bookmark-end text:name="__RefHeading___Toc31106_7842323222"/></text:h>
     <text:p text:style-name="P13593">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13995">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SSWU DATA FOR ALL CELLS <text:s text:c="26"/></text:p>
     <text:p text:style-name="P13999">-- <text:s text:c="6"/>(FOR NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13602">-- </text:p>
     <text:p text:style-name="P13593">SSWU</text:p>
-    <text:p text:style-name="P13593"><text:s text:c="9"/>300*0.<text:span text:style-name="T4413">7</text:span>00 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13593"><text:s text:c="9"/>300*0.700 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13136"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15146">The above example defines <text:span text:style-name="T4080">a constant surfactant connate gas saturation of 0.70 to all </text:span>300 cells in the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15146">The above example defines a constant surfactant connate gas saturation of 0.70 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="P15146"/>
     <text:p text:style-name="P15146"/>
     

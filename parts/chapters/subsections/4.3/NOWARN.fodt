@@ -2700,15 +2700,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4627" style:family="text">
-   <style:text-properties officeooo:rsid="02914662"/>
-  </style:style>
-  <style:style style:name="T4632" style:family="text">
-   <style:text-properties officeooo:rsid="0292f4f5"/>
-  </style:style>
-  <style:style style:name="T4650" style:family="text">
-   <style:text-properties officeooo:rsid="02c2c9ad"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3688,8 +3679,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4066,7 +4056,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NOWARN">
 
-<text:h text:style-name="P17672" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc54928_2479612490"/><text:span text:style-name="T4650">NOWARN</text:span> – <text:span text:style-name="T4650">Dea</text:span>ctivate <text:span text:style-name="T4650">Warning Messages</text:span><text:bookmark-end text:name="__RefHeading___Toc54928_2479612490"/></text:h>
+<text:h text:style-name="P17672" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc54928_2479612490"/>NOWARN – Deactivate Warning Messages<text:bookmark-end text:name="__RefHeading___Toc54928_2479612490"/></text:h>
     <table:table table:name="Table288" table:style-name="Table288">
      <table:table-column table:style-name="Table288.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table288.E"/>
@@ -4100,25 +4090,25 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881721"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881721"/></text:h>
-    <text:p text:style-name="_40_TextBody">Turns o<text:span text:style-name="T4650">ff</text:span> <text:span text:style-name="T4650">warning messages </text:span>to <text:span text:style-name="T4650">be </text:span>print<text:span text:style-name="T4650">ed to the print</text:span> file; not<text:span text:style-name="T4632">e</text:span> that this keyword is <text:span text:style-name="T4650">de</text:span>activated by default and can subsequently be <text:span text:style-name="T4627">switched</text:span> off by the <text:span text:style-name="T4650">WARN</text:span> activation keyword. <text:span text:style-name="T4650">The warning messages may be turned on and off using keywords WARN and NOWARN. <text:s/></text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Turns off warning messages to be printed to the print file; note that this keyword is deactivated by default and can subsequently be switched off by the WARN activation keyword. The warning messages may be turned on and off using keywords WARN and NOWARN. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">It is recommended that WARN should always be used and action taken if necessary. For subsequent runs, the warning messages can be turned off. </text:p>
     <text:p text:style-name="_40_TextBody">There is no data required for this keyword.</text:p>
     <text:p text:style-name="P10948">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683883721"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683883721"/></text:h>
     <text:p text:style-name="P14319">-- </text:p>
-    <text:p text:style-name="P13499">-- <text:s text:c="5"/>SWITCH OFF <text:span text:style-name="T4650">WARNING MESSAGES</text:span> <text:s text:c="35"/></text:p>
-    <text:p text:style-name="P13499">NO<text:span text:style-name="T4650">WARN</text:span></text:p>
+    <text:p text:style-name="P13499">-- <text:s text:c="5"/>SWITCH OFF WARNING MESSAGES <text:s text:c="35"/></text:p>
+    <text:p text:style-name="P13499">NOWARN</text:p>
     <text:p text:style-name="P14319">-- </text:p>
     <text:p text:style-name="P13476">-- <text:s text:c="5"/>INCLUDE SIMULATION GRID WITH SLOPING FAULTS</text:p>
     <text:p text:style-name="P13480">-- </text:p>
     <text:p text:style-name="P13476">INCLUDE</text:p>
     <text:p text:style-name="P13476"><text:s text:c="5"/>&apos;./INCLUDE/GRID/IRAP_1005.GRDECL&apos; / </text:p>
     <text:p text:style-name="P13196">-- </text:p>
-    <text:p text:style-name="P13487">-- <text:s text:c="5"/>SWITCH ON <text:span text:style-name="T4650">WARNING MESSAGES</text:span> <text:s/></text:p>
+    <text:p text:style-name="P13487">-- <text:s text:c="5"/>SWITCH ON WARNING MESSAGES <text:s/></text:p>
     <text:p text:style-name="P13487">-- <text:s text:c="34"/></text:p>
-    <text:p text:style-name="P13484"><text:span text:style-name="T4650">WARN</text:span> <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P13484">WARN <text:s text:c="3"/></text:p>
     <text:p text:style-name="P15429"/>
-    <text:p text:style-name="_40_TextBody">The example deactivates the <text:span text:style-name="T4650">warning messages before reading the </text:span>grid geometry data using the INCLUDE <text:s/>keyword, and then activates the <text:span text:style-name="T4650">warning messages after reading the INCLUDE file.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The example deactivates the warning messages before reading the grid geometry data using the INCLUDE <text:s/>keyword, and then activates the warning messages after reading the INCLUDE file.</text:p>
     <text:p text:style-name="P15429"/>
     <text:p text:style-name="P146"/>
     <text:p text:style-name="_40_TextBody"/>

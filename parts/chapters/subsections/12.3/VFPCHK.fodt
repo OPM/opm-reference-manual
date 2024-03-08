@@ -2813,21 +2813,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T553" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" style:text-underline-style="none" officeooo:rsid="05a14f91"/>
   </style:style>
-  <style:style style:name="T653" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="06e613f0"/>
-  </style:style>
-  <style:style style:name="T807" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="06d0e766"/>
-  </style:style>
-  <style:style style:name="T808" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0e318d5c"/>
-  </style:style>
-  <style:style style:name="T809" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0e324b75"/>
-  </style:style>
-  <style:style style:name="T810" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0e331e6a"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
@@ -2840,35 +2825,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2709" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
-  <style:style style:name="T2711" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00f1d08a" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T2716" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00c4024a" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T2764" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="05a14f91"/>
-  </style:style>
-  <style:style style:name="T2927" style:family="text">
-   <style:text-properties officeooo:rsid="0757dcb1"/>
-  </style:style>
   <style:style style:name="T3628" style:family="text">
    <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="T3630" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="00ec78b5" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
   <style:style style:name="T3853" style:family="text">
    <style:text-properties style:text-position="super 58%"/>
-  </style:style>
-  <style:style style:name="T5106" style:family="text">
-   <style:text-properties officeooo:rsid="0665b9db"/>
-  </style:style>
-  <style:style style:name="T5159" style:family="text">
-   <style:text-properties officeooo:rsid="06b1a69a"/>
-  </style:style>
-  <style:style style:name="T6306" style:family="text">
-   <style:text-properties officeooo:rsid="0e324b75"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3901,8 +3862,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4313,8 +4273,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716687_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716687_3964674244"/></text:h>
-    <text:p text:style-name="P12001"><text:span text:style-name="T653">The </text:span><text:span text:style-name="T807">VFPPROD keyword </text:span><text:span text:style-name="T653">defines </text:span><text:span text:style-name="T807">production Vertical Flow Performance (“VFP”)</text:span><text:span text:style-name="T653"> </text:span><text:span text:style-name="T807">tables that are used to determine the outflow or downstream pressure</text:span><text:span text:style-name="T653"> </text:span><text:span text:style-name="T807">based on the inlet or upstream pressure and the phases flowing through the system. <text:s/>For a well this means the table relates the flowing bottom-hole pressure (“BHP”) to the well’s tubing head pressure (“THP”) based on the oil, gas and water rates (and any artificial lift quantities like gas lift gas), or phases ratios, flowing up the wellbore. <text:s/></text:span></text:p>
-    <text:p text:style-name="P12001"><text:span text:style-name="T808">The VFP tables are generated by external programs and may result in some inconsistencies. A common inconsistency is that </text:span><text:span text:style-name="T809">the </text:span><text:span text:style-name="T808">curves of BHP versus flow rate at adjacent THP values cross, </text:span><text:span text:style-name="T809">that is the BHP is increasing with decreasing THP. <text:s/>This will result in numerical convergence problems and should therefore be avoided; which is why the simulator checks for this </text:span><text:span text:style-name="T810">particular</text:span><text:span text:style-name="T809"> inconsistency. However, there are cases when the external software generating the VFP table outputs “valid” high BHP values, for example, when the flow exceeds </text:span><text:span text:style-name="T810">the </text:span><text:span text:style-name="T809">erosion velocity limits, or the flow is supersonic</text:span><text:span text:style-name="T808">, </text:span><text:span text:style-name="T809">indicating a no flow condition. The VPFCHK keyword sets the BHP check pressure (VFPCHK) for subsequent VFPPROD tables, so that crossing BHP values above VFPCHK will be ignored.</text:span></text:p>
+    <text:p text:style-name="P12001">The VFPPROD keyword defines production Vertical Flow Performance (“VFP”) tables that are used to determine the outflow or downstream pressure based on the inlet or upstream pressure and the phases flowing through the system. <text:s/>For a well this means the table relates the flowing bottom-hole pressure (“BHP”) to the well’s tubing head pressure (“THP”) based on the oil, gas and water rates (and any artificial lift quantities like gas lift gas), or phases ratios, flowing up the wellbore. <text:s/></text:p>
+    <text:p text:style-name="P12001">The VFP tables are generated by external programs and may result in some inconsistencies. A common inconsistency is that the curves of BHP versus flow rate at adjacent THP values cross, that is the BHP is increasing with decreasing THP. <text:s/>This will result in numerical convergence problems and should therefore be avoided; which is why the simulator checks for this particular inconsistency. However, there are cases when the external software generating the VFP table outputs “valid” high BHP values, for example, when the flow exceeds the erosion velocity limits, or the flow is supersonic, indicating a no flow condition. The VPFCHK keyword sets the BHP check pressure (VFPCHK) for subsequent VFPPROD tables, so that crossing BHP values above VFPCHK will be ignored.</text:p>
     <text:p text:style-name="P12001">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P15834"/>
     <table:table table:name="Table1691" table:style-name="Table1691">
@@ -4361,7 +4321,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5267">VFPCHK</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1691.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2816"><text:span text:style-name="T6306">VFPCHK is a</text:span> <text:span text:style-name="T5159">real positive value </text:span>that define<text:span text:style-name="T6306">s</text:span> <text:span text:style-name="T2927">the BHP pressure above which crossing VFP curves will be ignored.</text:span></text:p>
+       <text:p text:style-name="P2816">VFPCHK is a real positive value that defines the BHP pressure above which crossing VFP curves will be ignored.</text:p>
        <text:p text:style-name="P2824">Setting VFPCHK to a large number like the default value number will cause all crossing curves to be checked. Also if the keyword is omitted from the input deck then the check is performed using the default value. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4374,13 +4334,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1691.C2" office:value-type="string">
-       <text:p text:style-name="P7200"><text:span text:style-name="T5106">p</text:span>sia</text:p>
+       <text:p text:style-name="P7200">psia</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1691.C2" office:value-type="string">
-       <text:p text:style-name="P7200"><text:span text:style-name="T5106">b</text:span>arsa</text:p>
+       <text:p text:style-name="P7200">barsa</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1691.C2" office:value-type="string">
-       <text:p text:style-name="P7200"><text:span text:style-name="T5106">a</text:span>tma</text:p>
+       <text:p text:style-name="P7200">atma</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4389,7 +4349,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1716">Notes:</text:p>
        <text:list xml:id="list105922824155057" text:continue-list="list105922185297434" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20152"><text:span text:style-name="T2716">T</text:span><text:span text:style-name="T2711">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P20152">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4400,7 +4360,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14995">Table <text:sequence text:ref-name="refTable615" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.73</text:sequence>: VFPCHK <text:span text:style-name="T5159">Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14995">Table <text:sequence text:ref-name="refTable615" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.73</text:sequence>: VFPCHK Keyword Description</text:p>
     <text:p text:style-name="P11006"/>
     <text:p text:style-name="P15809"/>
     <table:table table:name="Table1692" table:style-name="Table1692">
@@ -4410,13 +4370,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table1692.1">
        <table:table-cell table:style-name="Table1692.A1" office:value-type="string">
         <text:p text:style-name="P10327">Note</text:p>
-        <text:p text:style-name="P10331"><text:span text:style-name="T3630">O</text:span><text:span text:style-name="T3628">ne reason for external programs generating crossing VFP curves is that the curves have been generated with too much resolution. For example, if the GOR entries has been generated with values of 100, 150, 200, 250, 300, 350, 400, 450 and 500, <text:s/>then use a geometric spacing instead to generated the VFP table, that is: 100, 300, 900. <text:s/>This will enable the simulator to interpolate the curves consistently and avoid crossing VFP curves.</text:span></text:p>
+        <text:p text:style-name="P10331">O<text:span text:style-name="T3628">ne reason for external programs generating crossing VFP curves is that the curves have been generated with too much resolution. For example, if the GOR entries has been generated with values of 100, 150, 200, 250, 300, 350, 400, 450 and 500, <text:s/>then use a geometric spacing instead to generated the VFP table, that is: 100, 300, 900. <text:s/>This will enable the simulator to interpolate the curves consistently and avoid crossing VFP curves.</text:span></text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P11008"/>
-    <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716689_3964674244"/><text:span text:style-name="T2764">E</text:span><text:span text:style-name="T2709">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc716689_3964674244"/></text:h>
+    <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716689_3964674244"/>E<text:span text:style-name="T2709">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc716689_3964674244"/></text:h>
     <text:p text:style-name="P12002">Here the example sets the maximum BHP to be 1.0 x10<text:span text:style-name="T3853">6 </text:span><text:span text:style-name="T1533">above which crossing VFP curves will be ignored.</text:span></text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE PRODUCTION VFP CHECK MAX BHP</text:p>

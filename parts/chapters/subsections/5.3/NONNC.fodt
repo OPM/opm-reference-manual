@@ -2684,24 +2684,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4737" style:family="text">
-   <style:text-properties officeooo:rsid="03b730b7"/>
-  </style:style>
-  <style:style style:name="T4750" style:family="text">
-   <style:text-properties officeooo:rsid="03eac8bd"/>
-  </style:style>
-  <style:style style:name="T4752" style:family="text">
-   <style:text-properties officeooo:rsid="03f25e24"/>
-  </style:style>
-  <style:style style:name="T4753" style:family="text">
-   <style:text-properties officeooo:rsid="03f35edb"/>
-  </style:style>
-  <style:style style:name="T4754" style:family="text">
-   <style:text-properties officeooo:rsid="03f42d0d"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3733,8 +3715,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4111,7 +4092,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="NONNC">
 
-<text:h text:style-name="P17707" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc77075_4106839650"/>NO<text:span text:style-name="T4752">NNC</text:span> – <text:span text:style-name="T4750">Deactivate Non-Neighbor Connections</text:span><text:bookmark-end text:name="__RefHeading___Toc77075_4106839650"/></text:h>
+<text:h text:style-name="P17707" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc77075_4106839650"/>NONNC – Deactivate Non-Neighbor Connections<text:bookmark-end text:name="__RefHeading___Toc77075_4106839650"/></text:h>
     <table:table table:name="Table334" table:style-name="Table334">
      <table:table-column table:style-name="Table334.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table334.E"/>
@@ -4145,7 +4126,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715619_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715619_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4750">The NONNC </text:span>keyword <text:span text:style-name="T4750">deactivates</text:span> <text:span text:style-name="T4753">non-neighbor connections (“NNCs”) in the current run. <text:s/>NNCs create off-diagonal elements in the Jacobi matrix that impact the numerical efficiency of the solution algorithms, and thus if the run does not contain NNC’s then there is the potential for greater computation efficiency. <text:s text:c="2"/>Unfortunately, nearly all models, except for the most simple models, generate NNCs via for example:</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NONNC keyword deactivates non-neighbor connections (“NNCs”) in the current run. <text:s/>NNCs create off-diagonal elements in the Jacobi matrix that impact the numerical efficiency of the solution algorithms, and thus if the run does not contain NNC’s then there is the potential for greater computation efficiency. <text:s text:c="2"/>Unfortunately, nearly all models, except for the most simple models, generate NNCs via for example:</text:p>
     <text:list xml:id="list2507210336" text:style-name="L37">
      <text:list-item>
       <text:p text:style-name="P17291">aquifer connections,</text:p>
@@ -4157,8 +4138,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:p text:style-name="P17291">manually entered NNCs, <text:s/>including those automatically generate by pre-processing software.</text:p>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4754">Due to the limited application of this option, the feature has not been implemented in OPM Flow and hence OPM Flow ignores this keyword. It is documented here for </text:span>completeness<text:span text:style-name="T4737">.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Due to the limited application of this option, the feature has not been implemented in OPM Flow and hence OPM Flow ignores this keyword. It is documented here for completeness.</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_3701168388382112"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_3701168388382112"/></text:h>
     <text:p text:style-name="P13681">--</text:p>
     <text:p text:style-name="P13681">-- <text:s text:c="6"/>DEACTIVATE NON-NEIGHBOR CONNECTIONS </text:p>

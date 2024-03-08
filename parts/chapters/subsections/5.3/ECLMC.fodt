@@ -2725,21 +2725,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4690" style:family="text">
-   <style:text-properties officeooo:rsid="03051993"/>
-  </style:style>
-  <style:style style:name="T4764" style:family="text">
-   <style:text-properties officeooo:rsid="04068816"/>
-  </style:style>
-  <style:style style:name="T5453" style:family="text">
-   <style:text-properties officeooo:rsid="08ecc6fd"/>
-  </style:style>
-  <style:style style:name="T5865" style:family="text">
-   <style:text-properties officeooo:rsid="0bf90300"/>
-  </style:style>
-  <style:style style:name="T5868" style:family="text">
-   <style:text-properties officeooo:rsid="0bfe6799"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3719,8 +3704,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4097,7 +4081,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="ECLMC">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc206960_803326780"/>ECLMC – Activate Mult<text:span text:style-name="T5865">i</text:span>-Component Brine Model<text:bookmark-end text:name="__RefHeading___Toc206960_803326780"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc206960_803326780"/>ECLMC – Activate Multi-Component Brine Model<text:bookmark-end text:name="__RefHeading___Toc206960_803326780"/></text:h>
     <table:table table:name="Table1092" table:style-name="Table1092">
      <table:table-column table:style-name="Table1092.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1092.E"/>
@@ -4132,7 +4116,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881970"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881970"/></text:h>
     <text:p text:style-name="_40_TextBody">The ECLM keyword activates the Multi-Component Brine model that allows for the water phase to have multiple water salinities. The keyword should be used in conjunction with the BRINE keyword in the RUNSPEC. Both keywords must be specified to activate the Multi-Component Brine model, whereas the BRINE keyword only is required to activate the standard brine tracking model. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody">There is no data required for this keyword <text:span text:style-name="T5453">and there is no terminating “/” for this keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:p text:style-name="P10951">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_37011683883201"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_37011683883201"/></text:h>
     <text:p text:style-name="P11174">The first example activates the standard Brine Tracking model.</text:p>
@@ -4141,7 +4125,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">BRINE</text:p>
     <text:p text:style-name="P11174"/>
-    <text:p text:style-name="P11174">The next example shows the <text:span text:style-name="T5868">ECLMC and </text:span>BRINE keyword<text:span text:style-name="T5868">s</text:span> for when the <text:span text:style-name="T4690">Multi-Component Brine mode</text:span>l is required.</text:p>
+    <text:p text:style-name="P11174">The next example shows the ECLMC and BRINE keywords for when the Multi-Component Brine model is required.</text:p>
     <text:p text:style-name="P13506">--</text:p>
     <text:p text:style-name="P13506">-- <text:s text:c="6"/>ACTIVATE MULTI-COMPONENT BRINE MODEL</text:p>
     <text:p text:style-name="P13506">--</text:p>
@@ -4151,9 +4135,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13505">--</text:p>
     <text:p text:style-name="P13505">-- <text:s text:c="6"/>SALT1 <text:s text:c="2"/>SALT2 <text:s text:c="2"/>SALT3 <text:s text:c="2"/>SALT4 <text:s text:c="2"/>SALT5 <text:s text:c="31"/></text:p>
     <text:p text:style-name="P13505">BRINE <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13515"><text:span text:style-name="T4764"><text:s text:c="9"/>NACL <text:s text:c="3"/>CACL2 <text:s text:c="2"/>MGC03 <text:s text:c="48"/>/ <text:s text:c="150"/></text:span><text:s text:c="61"/></text:p>
+    <text:p text:style-name="P13515"><text:s text:c="9"/>NACL <text:s text:c="3"/>CACL2 <text:s text:c="2"/>MGC03 <text:s text:c="48"/>/ <text:s text:c="150"/><text:s text:c="61"/></text:p>
     <text:p text:style-name="P15216"/>
-    <text:p text:style-name="_40_TextBody">The above example <text:span text:style-name="T4690">activates the Multi-Component Brine model with three different water salinities.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The above example activates the Multi-Component Brine model with three different water salinities.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     
    </text:section>

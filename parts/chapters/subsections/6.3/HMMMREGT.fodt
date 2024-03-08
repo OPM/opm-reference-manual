@@ -2684,12 +2684,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T3623" style:family="text">
-   <style:text-properties officeooo:rsid="02f0c19b"/>
-  </style:style>
-  <style:style style:name="T5982" style:family="text">
-   <style:text-properties officeooo:rsid="0cae4606"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3669,8 +3663,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4081,8 +4074,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18405" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc296623_15761773881"/>Description<text:bookmark-end text:name="__RefHeading___Toc296623_15761773881"/></text:h>
-    <text:p text:style-name="_40_TextBody">The HMMMREGT keyword <text:span text:style-name="T3623">multiplies the transmissibility between two regions by a constant, for when the History Match Gradient option has been activated by the HMDIMS keyword in the RUNSPEC section. The constant should be a real number. Unlike the MULTREGT keyword in the GRID section, the HMMMREGT keyword modifications are cumulative. <text:s/></text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T3623">Note that the </text:span>HMMMREGT <text:span text:style-name="T5982">keyword only declares the two regions and the multiplier between those regions, the transmissibility direction (DIR on the MULTREGT keyword), type of transmissibility multiplier (TYPE on the MULTREGT keyword), and the region number array to use (ARRAY on the MULTREGT keyword), are all taken from the MULTREGY keyword. For example, the region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGT keyword is read by the simulator, and before the </text:span>HMMMREGT keyword <text:span text:style-name="T5982">is used. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The HMMMREGT keyword multiplies the transmissibility between two regions by a constant, for when the History Match Gradient option has been activated by the HMDIMS keyword in the RUNSPEC section. The constant should be a real number. Unlike the MULTREGT keyword in the GRID section, the HMMMREGT keyword modifications are cumulative. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">Note that the HMMMREGT keyword only declares the two regions and the multiplier between those regions, the transmissibility direction (DIR on the MULTREGT keyword), type of transmissibility multiplier (TYPE on the MULTREGT keyword), and the region number array to use (ARRAY on the MULTREGT keyword), are all taken from the MULTREGY keyword. For example, the region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGT keyword is read by the simulator, and before the HMMMREGT keyword is used. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>

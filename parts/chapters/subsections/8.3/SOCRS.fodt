@@ -2801,36 +2801,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4398" style:family="text">
-   <style:text-properties officeooo:rsid="01b41e2e"/>
-  </style:style>
-  <style:style style:name="T4408" style:family="text">
-   <style:text-properties officeooo:rsid="01d539fa"/>
-  </style:style>
-  <style:style style:name="T4409" style:family="text">
-   <style:text-properties officeooo:rsid="01d5540b"/>
-  </style:style>
-  <style:style style:name="T4410" style:family="text">
-   <style:text-properties officeooo:rsid="01d65f8c"/>
-  </style:style>
-  <style:style style:name="T4416" style:family="text">
-   <style:text-properties officeooo:rsid="01e61764"/>
-  </style:style>
-  <style:style style:name="T4417" style:family="text">
-   <style:text-properties officeooo:rsid="01e7517c"/>
-  </style:style>
-  <style:style style:name="T4418" style:family="text">
-   <style:text-properties officeooo:rsid="01e968e6"/>
-  </style:style>
-  <style:style style:name="T6243" style:family="text">
-   <style:text-properties officeooo:rsid="0de04a96"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3862,8 +3832,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4240,7 +4209,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SOCRS">
 
-<text:h text:style-name="P17974" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc245260_4250154414"/>SOCRS – End-Point Scaling Grid Cell <text:span text:style-name="T6243">Miscible Critical</text:span> <text:span text:style-name="T4416">Oil</text:span> <text:span text:style-name="T4408">Saturation with Respect to Water</text:span><text:bookmark-end text:name="__RefHeading___Toc245260_4250154414"/></text:h>
+<text:h text:style-name="P17974" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc245260_4250154414"/>SOCRS – End-Point Scaling Grid Cell Miscible Critical Oil Saturation with Respect to Water<text:bookmark-end text:name="__RefHeading___Toc245260_4250154414"/></text:h>
     <table:table table:name="Table1575" table:style-name="Table1575">
      <table:table-column table:style-name="Table1575.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1575.E"/>
@@ -4274,7 +4243,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31092_7842323223"/>Description<text:bookmark-end text:name="__RefHeading___Toc31092_7842323223"/></text:h>
-    <text:p text:style-name="P11953"><text:span text:style-name="T4408">SOCRS defines the miscible critical oil saturation for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The critical oil saturation with respect to water is defined as the maximum oil saturation for which the oil relative permeability is zero in a two-phase oil-water relative permeability table. <text:s/>The keyword is used with the Surfactant model to re-scale the surfactant relative permeability saturation tables allocated to a grid block by the by the SURFNUM keyword in the REGIONS section.</text:span></text:p>
+    <text:p text:style-name="P11953">SOCRS defines the miscible critical oil saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The critical oil saturation with respect to water is defined as the maximum oil saturation for which the oil relative permeability is zero in a two-phase oil-water relative permeability table. <text:s/>The keyword is used with the Surfactant model to re-scale the surfactant relative permeability saturation tables allocated to a grid block by the by the SURFNUM keyword in the REGIONS section.</text:p>
     <text:p text:style-name="P11953">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1576" table:style-name="Table1576">
      <table:table-column table:style-name="Table1576.A"/>
@@ -4320,8 +4289,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4606">SOCRS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1576.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3224"><text:span text:style-name="T4409">SOCRS is an array of real numbers assigning the critical oil saturation with respect to water values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4074">Repeat counts may be used, for example <text:span text:style-name="T4410">3</text:span>0*0.<text:span text:style-name="T4417">30</text:span> </text:p>
+       <text:p text:style-name="P3224">SOCRS is an array of real numbers assigning the critical oil saturation with respect to water values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4074">Repeat counts may be used, for example 30*0.30 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4348,13 +4317,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1692">Notes:</text:p>
        <text:list xml:id="list105916152844330" text:continue-list="list105916717426463" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19264"><text:span text:style-name="T4410">Note this the directional independent version of the critical gas saturation used with the end-point scaling option. If directional end-point scaling has been activated then the SOCRSX</text:span>±<text:span text:style-name="T4410"> , SOCRSX</text:span>± and SOCRSX± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19264">Note this the directional independent version of the critical gas saturation used with the end-point scaling option. If directional end-point scaling has been activated then the SOCRSX± , SOCRSX± and SOCRSX± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18773">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18989"><text:span text:style-name="T4410">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18989">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4365,18 +4334,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14783">Table <text:sequence text:ref-name="refTable380" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.164</text:sequence>: <text:span text:style-name="T4410">SOGCR Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14783">Table <text:sequence text:ref-name="refTable380" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.164</text:sequence>: SOGCR Keyword Description</text:p>
     <text:p text:style-name="P15580"/>
-    <text:p text:style-name="P11953">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOCRS, <text:span text:style-name="T4398">and </text:span>SOGCR <text:s/><text:span text:style-name="T4398">saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. </text:span></text:p>
+    <text:p text:style-name="P11953">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOCRS, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. </text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31094_7842323222"/>Example<text:bookmark-end text:name="__RefHeading___Toc31094_7842323222"/></text:h>
     <text:p text:style-name="P13589">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13998">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SOCRS DATA FOR ALL CELLS </text:p>
     <text:p text:style-name="P13998">-- <text:s text:c="6"/>(FOR NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13601">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13601">SOCRS</text:p>
-    <text:p text:style-name="P13589"><text:s text:c="9"/>300*0.<text:span text:style-name="T4418">20</text:span>0 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13589"><text:s text:c="9"/>300*0.200 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13131"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P11128">The above example defines <text:span text:style-name="T4080">a constant critical oil saturation of 0.20 to all </text:span>300 cells in the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P11128">The above example defines a constant critical oil saturation of 0.20 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     
    </text:section>
   </office:text>

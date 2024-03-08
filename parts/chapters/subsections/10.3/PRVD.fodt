@@ -2804,48 +2804,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1635" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="04fdfed6"/>
-  </style:style>
-  <style:style style:name="T1637" style:family="text">
-   <style:text-properties style:text-position="0% 100%" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00f1d08a" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3626" style:family="text">
-   <style:text-properties officeooo:rsid="00e8a0dd"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4910" style:family="text">
-   <style:text-properties officeooo:rsid="050f0547"/>
-  </style:style>
-  <style:style style:name="T5031" style:family="text">
-   <style:text-properties officeooo:rsid="05cdf4c2"/>
-  </style:style>
-  <style:style style:name="T5032" style:family="text">
-   <style:text-properties officeooo:rsid="05cf6b53"/>
-  </style:style>
-  <style:style style:name="T5035" style:family="text">
-   <style:text-properties officeooo:rsid="05d436e4"/>
-  </style:style>
-  <style:style style:name="T5036" style:family="text">
-   <style:text-properties officeooo:rsid="05d5734a"/>
-  </style:style>
-  <style:style style:name="T5038" style:family="text">
-   <style:text-properties officeooo:rsid="05d798a4"/>
-  </style:style>
-  <style:style style:name="T5484" style:family="text">
-   <style:text-properties officeooo:rsid="091edc9b"/>
-  </style:style>
-  <style:style style:name="T6175" style:family="text">
-   <style:text-properties officeooo:rsid="0d95d347"/>
-  </style:style>
-  <style:style style:name="T6176" style:family="text">
-   <style:text-properties officeooo:rsid="0d96e128"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3877,8 +3835,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4255,7 +4212,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="PRVD">
 
-<text:h text:style-name="P18048" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc288806_501926209"/>PR<text:span text:style-name="T6175">VD</text:span> – Define the Initial Equilibration Pressures <text:span text:style-name="T6175">versus Depth</text:span><text:bookmark-end text:name="__RefHeading___Toc288806_501926209"/></text:h>
+<text:h text:style-name="P18048" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc288806_501926209"/>PRVD – Define the Initial Equilibration Pressures versus Depth<text:bookmark-end text:name="__RefHeading___Toc288806_501926209"/></text:h>
     <table:table table:name="Table1466" table:style-name="Table1466">
      <table:table-column table:style-name="Table1466.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1466.E"/>
@@ -4289,8 +4246,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18533" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716399_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716399_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6175">PRVD keyword defines the initial reservoir pressure versus depth</text:span> and should be used in conjunction with the PBUB, PDEW, RS, RV, SGAS, SOIL and SWAT keywords etc., to fully describe the initial state of the model. <text:s/><text:span text:style-name="T6175">PRVD is an alternative to the </text:span>PRESSURE keyword <text:span text:style-name="T6175">in the SOLUTION section, that</text:span> defines the initial equilibration pressures for all grid cells in the model</text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T5484">The keyword is used by the Enumeration Initialization method to initialize the model, as opposed to the Equilibration Initialization method that utilizes the EQUIL keyword in the SOLUTION section.</text:span> This is the non-standard formulation to initialize the model and is seldom employed in the industry. <text:s/>The standard methodology is for OPM Flow to initialize a model using the parameters on the EQUIL keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody">The PRVD keyword defines the initial reservoir pressure versus depth and should be used in conjunction with the PBUB, PDEW, RS, RV, SGAS, SOIL and SWAT keywords etc., to fully describe the initial state of the model. <text:s/>PRVD is an alternative to the PRESSURE keyword in the SOLUTION section, that defines the initial equilibration pressures for all grid cells in the model</text:p>
+    <text:p text:style-name="_40_TextBody">The keyword is used by the Enumeration Initialization method to initialize the model, as opposed to the Equilibration Initialization method that utilizes the EQUIL keyword in the SOLUTION section. This is the non-standard formulation to initialize the model and is seldom employed in the industry. <text:s/>The standard methodology is for OPM Flow to initialize a model using the parameters on the EQUIL keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
     <text:p text:style-name="P10970">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1467" table:style-name="Table1467">
      <table:table-column table:style-name="Table1467.A"/>
@@ -4336,7 +4293,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5236">DEPTH</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1467.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4415">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the <text:span text:style-name="T5031">depth values for the corresponding reservoir oil pressures values, PRESSURE.</text:span></text:p>
+       <text:p text:style-name="P4415">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the depth values for the corresponding reservoir oil pressures values, PRESSURE.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4363,10 +4320,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5235">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1467.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3696">P<text:span text:style-name="T5036">RESSURE</text:span></text:p>
+       <text:p text:style-name="P3696">PRESSURE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1467.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3696"><text:span text:style-name="T6175">A columnar vector of real values that defines the</text:span> <text:span text:style-name="T5038">initial equilibration oil pressure</text:span> <text:span text:style-name="T6175">values at the corresponding DEPTH. </text:span></text:p>
+       <text:p text:style-name="P3696">A columnar vector of real values that defines the initial equilibration oil pressure values at the corresponding DEPTH. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4396,10 +4353,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19369">The keyword is followed by NTEQUL records as declared on the EQLDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20060">Each table must contain a minimum of two rows and a maximum of <text:span text:style-name="T5031">NDRXVD</text:span> r<text:span text:style-name="T4910">ow</text:span>s as declared on the <text:span text:style-name="T5031">EQL</text:span>DIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20060">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the EQLDIMS keyword in the RUNSPEC section. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19290"><text:span text:style-name="T1595">Each table is terminated by a “/” </text:span><text:span text:style-name="T1635">and </text:span><text:span text:style-name="T1637">there is no “/” terminator for the keyword.</text:span></text:p>
+         <text:p text:style-name="P19290">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4410,34 +4367,34 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14662">Table <text:sequence text:ref-name="refTable470" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.24</text:sequence>: <text:span text:style-name="T4080">PRVD Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14662">Table <text:sequence text:ref-name="refTable470" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.24</text:sequence>: PRVD Keyword Description</text:p>
     <text:p text:style-name="P15518"/>
-    <text:p text:style-name="P15348">See also the <text:span text:style-name="T5036">PBUB, PDEW, RS, RV, SGAS, SOIL and SWAT </text:span>keywords to fully define <text:span text:style-name="T3626">the initial state of the model.</text:span></text:p>
+    <text:p text:style-name="P15348">See also the PBUB, PDEW, RS, RV, SGAS, SOIL and SWAT keywords to fully define the initial state of the model.</text:p>
     <text:p text:style-name="P15348"/>
     <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716401_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716401_3964674244"/></text:h>
-    <text:p text:style-name="P15666">Given NTEQUL equals three and NDRXVD is greater than or equal to <text:span text:style-name="T6175">five</text:span> on the EQLDIMS keyword in the RUNSPEC section, then <text:span text:style-name="T5032">the following example defines the initial oil reservoir pressure versus depth</text:span></text:p>
+    <text:p text:style-name="P15666">Given NTEQUL equals three and NDRXVD is greater than or equal to five on the EQLDIMS keyword in the RUNSPEC section, then the following example defines the initial oil reservoir pressure versus depth</text:p>
     <text:p text:style-name="P14295">--</text:p>
-    <text:p text:style-name="P14295">-- <text:s text:c="6"/>DEPTH <text:s text:c="3"/><text:span text:style-name="T6175">INIT</text:span> <text:s text:c="47"/></text:p>
+    <text:p text:style-name="P14295">-- <text:s text:c="6"/>DEPTH <text:s text:c="3"/>INIT <text:s text:c="47"/></text:p>
     <text:p text:style-name="P14295">-- <text:s text:c="15"/>PRESS <text:s text:c="49"/></text:p>
     <text:p text:style-name="P14295">-- <text:s text:c="6"/>------ <text:s text:c="2"/>------ <text:s text:c="62"/></text:p>
-    <text:p text:style-name="P14295">P<text:span text:style-name="T6175">R</text:span>VD <text:s text:c="11"/></text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/>3000.0 <text:s text:c="2"/><text:span text:style-name="T6176">3</text:span>000.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6175">4</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>345.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6175">500</text:span>0.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>690.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6175">7</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">4</text:span>700.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">72</text:span>00.0 <text:s text:c="2"/><text:span text:style-name="T5035">4</text:span>769.0 <text:s text:c="27"/>/ P<text:span text:style-name="T6176">OIL</text:span> VS DEPTH EQUIL REGN 01</text:p>
-    <text:p text:style-name="P14295"><text:span text:style-name="T5032">-- <text:s text:c="6"/>------ <text:s text:c="2"/>------ <text:s text:c="7"/></text:span><text:s text:c="5"/></text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/>3000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>100.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6175">4</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>445.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6175">5</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>790.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">7</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">4</text:span>700.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">72</text:span>00.0 <text:s text:c="2"/>4769.0 <text:s text:c="27"/>/ P<text:span text:style-name="T6176">OIL</text:span> VS DEPTH EQUIL REGN 02</text:p>
-    <text:p text:style-name="P14295"><text:span text:style-name="T5032">-- <text:s text:c="6"/>------ <text:s text:c="2"/>------ <text:s text:c="7"/></text:span><text:s text:c="4"/></text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/>3000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>150.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">4</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>495.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">5</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">3</text:span>840.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">7</text:span>000.0 <text:s text:c="2"/><text:span text:style-name="T5035">4</text:span>700.0</text:p>
-    <text:p text:style-name="P14295"><text:s text:c="9"/><text:span text:style-name="T6176">720</text:span>0.0 <text:s text:c="2"/><text:span text:style-name="T5035">4</text:span>769.0 <text:s text:c="27"/>/ P<text:span text:style-name="T6176">OIL</text:span> VS DEPTH EQUIL REGN 03</text:p>
+    <text:p text:style-name="P14295">PRVD <text:s text:c="11"/></text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>3000.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>4000.0 <text:s text:c="2"/>3345.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>5000.0 <text:s text:c="2"/>3690.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>7000.0 <text:s text:c="2"/>4700.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>7200.0 <text:s text:c="2"/>4769.0 <text:s text:c="27"/>/ POIL VS DEPTH EQUIL REGN 01</text:p>
+    <text:p text:style-name="P14295">-- <text:s text:c="6"/>------ <text:s text:c="2"/>------ <text:s text:c="7"/><text:s text:c="5"/></text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>3100.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>4000.0 <text:s text:c="2"/>3445.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>5000.0 <text:s text:c="2"/>3790.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>7000.0 <text:s text:c="2"/>4700.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>7200.0 <text:s text:c="2"/>4769.0 <text:s text:c="27"/>/ POIL VS DEPTH EQUIL REGN 02</text:p>
+    <text:p text:style-name="P14295">-- <text:s text:c="6"/>------ <text:s text:c="2"/>------ <text:s text:c="7"/><text:s text:c="4"/></text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>3150.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>4000.0 <text:s text:c="2"/>3495.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>5000.0 <text:s text:c="2"/>3840.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>7000.0 <text:s text:c="2"/>4700.0</text:p>
+    <text:p text:style-name="P14295"><text:s text:c="9"/>7200.0 <text:s text:c="2"/>4769.0 <text:s text:c="27"/>/ POIL VS DEPTH EQUIL REGN 03</text:p>
     <text:p text:style-name="P11365"/>
     <text:p text:style-name="P11508">Here three tables are entered and each table is terminated by a “/” and there is no keyword terminating “/”.</text:p>
     <text:p text:style-name="P11508"/>

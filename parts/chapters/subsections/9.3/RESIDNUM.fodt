@@ -2781,36 +2781,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1533" style:family="text">
    <style:text-properties style:text-position="0% 100%"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1597" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0301278d"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T4640" style:family="text">
-   <style:text-properties officeooo:rsid="003fdde1"/>
-  </style:style>
-  <style:style style:name="T4674" style:family="text">
-   <style:text-properties officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T4687" style:family="text">
-   <style:text-properties officeooo:rsid="030280b1"/>
-  </style:style>
-  <style:style style:name="T4691" style:family="text">
-   <style:text-properties officeooo:rsid="0308b4ef"/>
-  </style:style>
-  <style:style style:name="T4693" style:family="text">
-   <style:text-properties officeooo:rsid="030dfacf"/>
-  </style:style>
-  <style:style style:name="T6188" style:family="text">
-   <style:text-properties officeooo:rsid="0da901aa"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3842,8 +3812,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4254,7 +4223,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232116"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232116"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4640">The RESIDNUM keyword defines the Vertical Equilibrium (“VE”) residual flow calculation saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the </text:span>relative permeability and capillary pressure in <text:span text:style-name="T4693">a grid block. The keyword should only be used if the Vertical Equilibrium option has been invoked via the VE keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The RESIDNUM keyword defines the Vertical Equilibrium (“VE”) residual flow calculation saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the relative permeability and capillary pressure in a grid block. The keyword should only be used if the Vertical Equilibrium option has been invoked via the VE keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="P10962">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1493" table:style-name="Table1493">
      <table:table-column table:style-name="Table1493.A"/>
@@ -4284,7 +4253,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1493.C2" office:value-type="string">
        <text:p text:style-name="P3952">RESIDNUM defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
-       <text:p text:style-name="P3952">The maximum number <text:span text:style-name="T4687">of RESIDNUM</text:span> regions is set by the <text:span text:style-name="T4687">NTSFUN</text:span> variable on the <text:span text:style-name="T4691">TABDIMS</text:span> keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3952">The maximum number of RESIDNUM regions is set by the NTSFUN variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1493.D2" office:value-type="string">
        <text:p text:style-name="P4129">1</text:p>
@@ -4295,13 +4264,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1678">Notes:</text:p>
        <text:list xml:id="list105918851914928" text:continue-list="list105918555473506" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19976"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19976">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19954"><text:span text:style-name="T1595">If a cell</text:span><text:span text:style-name="T1533"> is not assigned a RESIDNUM region then the default value will be used.</text:span></text:p>
+         <text:p text:style-name="P19954">If a cell<text:span text:style-name="T1533"> is not assigned a RESIDNUM region then the default value will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19845"><text:span text:style-name="T1597">T</text:span><text:span text:style-name="T2084">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P19845">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4310,9 +4279,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14663">Table <text:sequence text:ref-name="refTable435" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.18</text:sequence>: RESIDNUM<text:span text:style-name="T4674"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14663">Table <text:sequence text:ref-name="refTable435" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.18</text:sequence>: RESIDNUM Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">Note that any capillary pressure data on the <text:span text:style-name="T4640">relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) </text:span>will be ignored by the VE option.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that any capillary pressure data on the relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) will be ignored by the VE option.</text:p>
     <text:h text:style-name="P18513" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716315_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716315_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The example below sets three RESIDNUM regions for the model, by first setting all values to one, then setting layers 2 to 10 to two, <text:s/>and finally setting layers 30 to 50 to three. </text:p>
     <text:p text:style-name="P14357">--</text:p>
@@ -4320,8 +4289,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
     <text:p text:style-name="P14357">EQUALS <text:s text:c="49"/></text:p>
     <text:p text:style-name="P14357"><text:s text:c="9"/>SATNUM <text:s text:c="5"/>1 <text:s text:c="11"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / SET REGION 1 <text:s text:c="3"/></text:p>
-    <text:p text:style-name="P14296"><text:s text:c="9"/>SATNUM <text:s text:c="5"/>2 <text:s text:c="11"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/><text:span text:style-name="T6188">2</text:span> <text:s text:c="2"/>1<text:span text:style-name="T6188">0</text:span> / SET REGION 2 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P14296"><text:s text:c="9"/>SATNUM <text:s text:c="5"/>3 <text:s text:c="11"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/><text:span text:style-name="T6188">30</text:span> <text:s/><text:span text:style-name="T6188">50</text:span> / SET REGION 3 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P14296"><text:s text:c="9"/>SATNUM <text:s text:c="5"/>2 <text:s text:c="11"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>2 <text:s text:c="2"/>10 / SET REGION 2 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P14296"><text:s text:c="9"/>SATNUM <text:s text:c="5"/>3 <text:s text:c="11"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>30 <text:s/>50 / SET REGION 3 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P14296">/</text:p>
     
    </text:section>

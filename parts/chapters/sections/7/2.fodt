@@ -2746,23 +2746,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1533" style:family="text">
    <style:text-properties style:text-position="0% 100%"/>
   </style:style>
-  <style:style style:name="T1960" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="12377354"/>
-  </style:style>
   <style:style style:name="T4073" style:family="text">
    <style:text-properties text:display="none"/>
-  </style:style>
-  <style:style style:name="T5361" style:family="text">
-   <style:text-properties officeooo:rsid="086cb30c"/>
-  </style:style>
-  <style:style style:name="T5366" style:family="text">
-   <style:text-properties officeooo:rsid="0872200a"/>
-  </style:style>
-  <style:style style:name="T5367" style:family="text">
-   <style:text-properties officeooo:rsid="0873a1dc"/>
-  </style:style>
-  <style:style style:name="T5375" style:family="text">
-   <style:text-properties officeooo:rsid="087f7f5a"/>
   </style:style>
   <style:style style:name="fr10" style:family="graphic" style:parent-style-name="Frame">
    <style:graphic-properties fo:margin-left="0cm" fo:margin-right="0cm" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%"/>
@@ -3798,8 +3783,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4177,14 +4161,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:section text:style-name="Sect1" text:name="Section2">
 
 <text:h text:style-name="P17496" text:outline-level="2"><text:bookmark-start text:name="__RefHeading___Toc119410_2179381650"/>Data Requirements<text:bookmark-end text:name="__RefHeading___Toc119410_2179381650"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:bookmark-start text:name="__RefHeading___Toc119412_2179381650"/>As the primary purpose of this section is to modify the simulator’s calculated pore volumes and transmissibilities, then the properties used to define th<text:span text:style-name="T5367">ese</text:span> arrays must have been fully defined in the GRID section. <text:s/>The arrays available <text:span text:style-name="T5366">for modification in the EDIT section are listed in</text:span> <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable206">Table 7.1</text:sequence-ref><text:s/><text:span text:style-name="T5367">together with the associated GRID arrays used to generate the EDIT property array. </text:span><text:bookmark-end text:name="__RefHeading___Toc119412_2179381650"/></text:p>
+    <text:p text:style-name="_40_TextBody"><text:bookmark-start text:name="__RefHeading___Toc119412_2179381650"/>As the primary purpose of this section is to modify the simulator’s calculated pore volumes and transmissibilities, then the properties used to define these arrays must have been fully defined in the GRID section. <text:s/>The arrays available for modification in the EDIT section are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable206">Table 7.1</text:sequence-ref><text:s/>together with the associated GRID arrays used to generate the EDIT property array. <text:bookmark-end text:name="__RefHeading___Toc119412_2179381650"/></text:p>
     <table:table table:name="Table822" table:style-name="Table822">
      <table:table-column table:style-name="Table822.A" table:number-columns-repeated="4"/>
      <table:table-header-rows>
       <text:soft-page-break/>
       <table:table-row table:style-name="Table822.1">
        <table:table-cell table:style-name="Table822.A1" table:number-columns-spanned="2" office:value-type="string">
-        <text:p text:style-name="P10544">Cartesian <text:span text:style-name="T5361">and </text:span>Irregular Corner-Point Grids</text:p>
+        <text:p text:style-name="P10544">Cartesian and Irregular Corner-Point Grids</text:p>
         <text:p text:style-name="P10544">Keywords</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
@@ -4366,7 +4350,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P17118">Currently Radial Grids have not been implemented in OPM Flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17114"><text:span text:style-name="T1533">The GRID property association to the EDIT property is only </text:span><text:span text:style-name="T1960">indicative</text:span><text:span text:style-name="T1533"> as several variables, DZNET and NTG for example, are also used in the transmissibility calculations. </text:span></text:p>
+         <text:p text:style-name="P17114"><text:span text:style-name="T1533">The GRID property association to the EDIT property is only </text:span>indicative<text:span text:style-name="T1533"> as several variables, DZNET and NTG for example, are also used in the transmissibility calculations. </text:span></text:p>
          <text:p text:style-name="P17118"/>
         </text:list-item>
        </text:list>
@@ -4376,10 +4360,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable206" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">7.1</text:sequence>: EDIT Section Arrays <text:span text:style-name="T5367">Available</text:span> for Modification</text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable206" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">7.1</text:sequence>: EDIT Section Arrays Available for Modification</text:p>
     <text:p text:style-name="P15713"/>
     <text:p text:style-name="P16048">An example pore volume array (PORV property) from the Volve<text:note text:id="ftn132" text:note-class="footnote"><text:note-citation>132</text:note-citation><text:note-body>
-       <text:p text:style-name="P16636">The Volve Data was approved for data sharing in 2018 by the initiative of the last Operating company, Equinor and approved by the license partners ExxonMobil E&amp;P Norway AS and Bayerngas Norge AS in the end of 2017.</text:p></text:note-body></text:note> field is shown in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure61">Figure 7.1</text:sequence-ref><text:s/>and <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure62">Figure 7.2</text:sequence-ref><text:s/>illustrates the model’s <text:span text:style-name="T5375">transmissibility</text:span> in the x-direction (TRANX).</text:p>
+       <text:p text:style-name="P16636">The Volve Data was approved for data sharing in 2018 by the initiative of the last Operating company, Equinor and approved by the license partners ExxonMobil E&amp;P Norway AS and Bayerngas Norge AS in the end of 2017.</text:p></text:note-body></text:note> field is shown in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure61">Figure 7.1</text:sequence-ref><text:s/>and <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure62">Figure 7.2</text:sequence-ref><text:s/>illustrates the model’s transmissibility in the x-direction (TRANX).</text:p>
     <text:p text:style-name="P15712"><draw:frame draw:style-name="fr10" draw:name="Frame10" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" svg:width="15.609cm" draw:z-index="167">
       <draw:text-box fo:min-height="9.372cm">
        <text:p text:style-name="P16901"><draw:frame draw:style-name="fr13" draw:name="Frame11" text:anchor-type="as-char" svg:width="15.325cm" style:rel-width="100%" svg:height="9.691cm" style:rel-height="scale-min" draw:z-index="799">

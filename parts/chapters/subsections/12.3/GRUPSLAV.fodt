@@ -2685,12 +2685,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2789" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="0c5cc42f"/>
   </style:style>
-  <style:style style:name="T5947" style:family="text">
-   <style:text-properties officeooo:rsid="0c742f87"/>
-  </style:style>
-  <style:style style:name="T5949" style:family="text">
-   <style:text-properties officeooo:rsid="0c78b1c5"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3670,8 +3664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4082,7 +4075,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18359" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881622"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881622"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GRUP<text:span text:style-name="T5949">SLAV</text:span> <text:span text:style-name="T5949">keyword d</text:span>efine<text:span text:style-name="T5947">s</text:span> <text:span text:style-name="T5949">slave</text:span> <text:span text:style-name="T5947">groups in a slave input deck and their associated master</text:span> <text:span text:style-name="T5947">g</text:span>roups <text:span text:style-name="T5949">in the master run, for when the Reservoir Coupling option as been activated by the GRUPMAST and SLAVES keywords in the SCHEDULE section. This keyword is required for every slave input deck. Reservoir coupling allows for independent reservoir simulation decks (SLAVES) to be controlled by a separate master run file. For example, if there are five separate reservoir models each representing one field, one of the four would be used as the master and the other four would be the subordinate SLAVES. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The GRUPSLAV keyword defines slave groups in a slave input deck and their associated master groups in the master run, for when the Reservoir Coupling option as been activated by the GRUPMAST and SLAVES keywords in the SCHEDULE section. This keyword is required for every slave input deck. Reservoir coupling allows for independent reservoir simulation decks (SLAVES) to be controlled by a separate master run file. For example, if there are five separate reservoir models each representing one field, one of the four would be used as the master and the other four would be the subordinate SLAVES. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     
    </text:section>

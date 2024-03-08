@@ -2797,50 +2797,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T3626" style:family="text">
-   <style:text-properties officeooo:rsid="00e8a0dd"/>
-  </style:style>
   <style:style style:name="T3853" style:family="text">
    <style:text-properties style:text-position="super 58%"/>
   </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
   <style:style style:name="T4092" style:family="text">
    <style:text-properties style:text-position="sub 58%"/>
-  </style:style>
-  <style:style style:name="T4420" style:family="text">
-   <style:text-properties officeooo:rsid="01f1577f"/>
-  </style:style>
-  <style:style style:name="T4829" style:family="text">
-   <style:text-properties officeooo:rsid="004124a1"/>
-  </style:style>
-  <style:style style:name="T5036" style:family="text">
-   <style:text-properties officeooo:rsid="05d5734a"/>
-  </style:style>
-  <style:style style:name="T5037" style:family="text">
-   <style:text-properties officeooo:rsid="05d6814b"/>
-  </style:style>
-  <style:style style:name="T5038" style:family="text">
-   <style:text-properties officeooo:rsid="05d798a4"/>
-  </style:style>
-  <style:style style:name="T5484" style:family="text">
-   <style:text-properties officeooo:rsid="091edc9b"/>
-  </style:style>
-  <style:style style:name="T6146" style:family="text">
-   <style:text-properties officeooo:rsid="0d74d32e"/>
-  </style:style>
-  <style:style style:name="T6147" style:family="text">
-   <style:text-properties officeooo:rsid="0d75f6b2"/>
-  </style:style>
-  <style:style style:name="T7243" style:family="text">
-   <style:text-properties officeooo:rsid="146c2fa1"/>
   </style:style>
   <style:style style:name="fr66" style:family="graphic" style:parent-style-name="Formula">
    <style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:ole-draw-aspect="1"/>
@@ -3876,8 +3837,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4254,7 +4214,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="OILAPI">
 
-<text:h text:style-name="P18047" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc240796_2928331029"/><text:span text:style-name="T6146">OILAPI</text:span> – Define the Initial Equilibration <text:span text:style-name="T6147">Oil API</text:span> for All Grid Blocks<text:bookmark-end text:name="__RefHeading___Toc240796_2928331029"/></text:h>
+<text:h text:style-name="P18047" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc240796_2928331029"/>OILAPI – Define the Initial Equilibration Oil API for All Grid Blocks<text:bookmark-end text:name="__RefHeading___Toc240796_2928331029"/></text:h>
     <table:table table:name="Table1436" table:style-name="Table1436">
      <table:table-column table:style-name="Table1436.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1436.E"/>
@@ -4288,8 +4248,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18527" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716375_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716375_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6147">OILAPI</text:span> keyword defines the initial equilibration <text:span text:style-name="T6147">oil API gravity </text:span>pressures for all grid cells in the model, <text:span text:style-name="T6147">for when the Oil API Tracking option as been invoked by the API keyword in the RUNSPEC section. The keyword should be</text:span> used in conjunction with the PBUB, PDEW, <text:span text:style-name="T6147">PRESSURE, </text:span>RS, RV, SGAS, SOIL and SWAT keywords etc., to fully describe the initial state of the model. </text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T5484">The keyword is used by the Enumeration Initialization method to initialize the model, as opposed to the Equilibration Initialization method that utilizes the EQUIL keyword in the SOLUTION section.</text:span> This is the non-standard formulation to initialize the model and is seldom employed in the industry. <text:s/>The standard methodology is for OPM Flow to initialize a model using the parameters on the EQUIL keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody">The OILAPI keyword defines the initial equilibration oil API gravity pressures for all grid cells in the model, for when the Oil API Tracking option as been invoked by the API keyword in the RUNSPEC section. The keyword should be used in conjunction with the PBUB, PDEW, PRESSURE, RS, RV, SGAS, SOIL and SWAT keywords etc., to fully describe the initial state of the model. </text:p>
+    <text:p text:style-name="_40_TextBody">The keyword is used by the Enumeration Initialization method to initialize the model, as opposed to the Equilibration Initialization method that utilizes the EQUIL keyword in the SOLUTION section. This is the non-standard formulation to initialize the model and is seldom employed in the industry. <text:s/>The standard methodology is for OPM Flow to initialize a model using the parameters on the EQUIL keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table1437" table:style-name="Table1437">
      <table:table-column table:style-name="Table1437.A"/>
      <table:table-column table:style-name="Table1437.B"/>
@@ -4334,7 +4294,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4925">OILAPI</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1437.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3704"><text:span text:style-name="T6147">OILAPI</text:span> is an array of real positive numbers assigning the <text:span text:style-name="T5038">initial equilibration oil API gravity</text:span> to each cell in the model. </text:p>
+       <text:p text:style-name="P3704">OILAPI is an array of real positive numbers assigning the initial equilibration oil API gravity to each cell in the model. </text:p>
        <text:p text:style-name="P4573">The American Petroleum Institute (“API”) classifies oils based on an API gravity (γ<text:span text:style-name="T4092">API</text:span>), <text:s/>or degrees API (<text:span text:style-name="T3853">o</text:span>API), the relationship between relative density (γ<text:span text:style-name="T4092">o</text:span>) of oil and API gravity (γ<text:span text:style-name="T4092">API</text:span>) is given by:</text:p>
        <text:p text:style-name="P3746"><draw:frame draw:style-name="fr66" draw:name="Object112" text:anchor-type="as-char" svg:width="3.738cm" svg:height="0.75cm" draw:z-index="1172"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -4402,7 +4362,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P4058">Repeat counts may be used, for example <text:span text:style-name="T4420">20</text:span>*<text:span text:style-name="T6147">38.5</text:span> </text:p>
+       <text:p text:style-name="P4058">Repeat counts may be used, for example 20*38.5 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4429,10 +4389,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1593">Notes:</text:p>
        <text:list xml:id="list105919319593285" text:continue-list="list105918541398829" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19032"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19032">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18939"><text:span text:style-name="T4829">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18939">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4443,18 +4403,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14761">Table <text:sequence text:ref-name="refTable464" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.18</text:sequence>: <text:span text:style-name="T7243">OILA</text:span><text:span text:style-name="T4080">P</text:span><text:span text:style-name="T7243">I</text:span><text:span text:style-name="T4080"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14761">Table <text:sequence text:ref-name="refTable464" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.18</text:sequence>: OILAPI Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P15308">See also the <text:span text:style-name="T5036">PBUB, PDEW, PRESSURE, RS, RV, SGAS, SOIL and SWAT </text:span>keywords to fully define <text:span text:style-name="T3626">the initial state of the model.</text:span></text:p>
+    <text:p text:style-name="P15308">See also the PBUB, PDEW, PRESSURE, RS, RV, SGAS, SOIL and SWAT keywords to fully define the initial state of the model.</text:p>
     <text:h text:style-name="P18527" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716377_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716377_3964674244"/></text:h>
     <text:p text:style-name="P13850">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13850">-- <text:s text:c="6"/>DEFINE <text:span text:style-name="T5037">INITIAL EQUILIBRATION OIL API </text:span>FOR ALL CELLS <text:span text:style-name="T5037">IN THE MODEL</text:span></text:p>
-    <text:p text:style-name="P13850">-- <text:s text:c="6"/>BASED ON NX <text:span text:style-name="T5037">= 100,</text:span> NY <text:span text:style-name="T5037">= 100</text:span> <text:span text:style-name="T5037">AND </text:span>NZ = 3 <text:s text:c="28"/></text:p>
+    <text:p text:style-name="P13850">-- <text:s text:c="6"/>DEFINE INITIAL EQUILIBRATION OIL API FOR ALL CELLS IN THE MODEL</text:p>
+    <text:p text:style-name="P13850">-- <text:s text:c="6"/>BASED ON NX = 100, NY = 100 AND NZ = 3 <text:s text:c="28"/></text:p>
     <text:p text:style-name="P13850">-- </text:p>
     <text:p text:style-name="P12928">OILAPI <text:s/></text:p>
-    <text:p text:style-name="P13850"><text:s text:c="9"/>1<text:span text:style-name="T5037">0</text:span>00*<text:span text:style-name="T5037">4</text:span>0.2 <text:s text:c="4"/>1<text:span text:style-name="T5037">0</text:span>00*<text:span text:style-name="T5037">3</text:span>9<text:span text:style-name="T5037">.</text:span>5 <text:s text:c="4"/>1<text:span text:style-name="T5037">0</text:span>00*<text:span text:style-name="T5037">38</text:span>.2 <text:s text:c="32"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13850"><text:s text:c="9"/>1000*40.2 <text:s text:c="4"/>1000*39.5 <text:s text:c="4"/>1000*38.2 <text:s text:c="32"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13085"><text:soft-page-break/><text:s text:c="60"/></text:p>
-    <text:p text:style-name="P15097">The above example defines the <text:span text:style-name="T5037">initial equilibration oil API gravity to be 40.2 for all the cells in the first layer, 39.5 for all the cells in the second layer, and finally 38.2 for all the cells in the third layer.</text:span></text:p>
+    <text:p text:style-name="P15097">The above example defines the initial equilibration oil API gravity to be 40.2 for all the cells in the first layer, 39.5 for all the cells in the second layer, and finally 38.2 for all the cells in the third layer.</text:p>
     
    </text:section>
   </office:text>

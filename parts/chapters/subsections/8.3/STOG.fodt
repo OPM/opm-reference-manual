@@ -2689,26 +2689,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T506" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="13ac3201"/>
   </style:style>
-  <style:style style:name="T792" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="020e813f"/>
-  </style:style>
-  <style:style style:name="T793" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="02077c16"/>
-  </style:style>
-  <style:style style:name="T794" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0dec385c"/>
-  </style:style>
-  <style:style style:name="T795" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0ded4981"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
-  </style:style>
-  <style:style style:name="T6256" style:family="text">
-   <style:text-properties officeooo:rsid="0dec385c"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3689,8 +3674,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4101,9 +4085,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18642" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816279"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816279"/></text:h>
-    <text:p text:style-name="P12799">The STOG <text:span text:style-name="T6256">keyword d</text:span>efine<text:span text:style-name="T6256">s</text:span> <text:span text:style-name="T6256">c</text:span>apillary <text:span text:style-name="T6256">p</text:span>ressure oil-gas surface tension versus pressure<text:span text:style-name="T6256"> tables used in adjusting the pressure independent capillary pressure vectors in the SGFN, SGOF or </text:span>SLGOF <text:span text:style-name="T6256">saturation tables, entered by their respective keywords in the PROPS section. The SATOPTS keyword in the RUNSPEC section should state the </text:span><text:span text:style-name="T792">SURFTENS</text:span><text:span text:style-name="T793"> </text:span><text:span text:style-name="T794">c</text:span><text:span text:style-name="T793">haracter string </text:span><text:span text:style-name="T794">to activate</text:span><text:span text:style-name="T793"> the Capillary Pressure Surface Tension Pressure Dependency option. </text:span><text:span text:style-name="T794">If the STOG keyword is not supplied then no </text:span><text:span text:style-name="T793">capillary pressure surface tension pressure </text:span><text:span text:style-name="T794">scaling will occur and the </text:span><text:span text:style-name="T795">capillary pressure </text:span><text:span text:style-name="T794">values on the SGFN, SGOF or </text:span><text:span text:style-name="T1">SLGOF </text:span><text:span text:style-name="T794">saturation tables will be used directly.</text:span></text:p>
+    <text:p text:style-name="P12799">The STOG keyword defines capillary pressure oil-gas surface tension versus pressure tables used in adjusting the pressure independent capillary pressure vectors in the SGFN, SGOF or SLGOF saturation tables, entered by their respective keywords in the PROPS section. The SATOPTS keyword in the RUNSPEC section should state the SURFTENS character string to activate the Capillary Pressure Surface Tension Pressure Dependency option. If the STOG keyword is not supplied then no capillary pressure surface tension pressure scaling will occur and the capillary pressure values on the SGFN, SGOF or <text:span text:style-name="T1">SLGOF </text:span>saturation tables will be used directly.</text:p>
     <text:p text:style-name="P12764"/>
-    <text:p text:style-name="P12799"><text:span text:style-name="T794">C</text:span><text:span text:style-name="T793">apillary pressure surface tension pressure </text:span><text:span text:style-name="T794">scaling can also be used with multi-segment wells, but this facility has not been </text:span><text:span text:style-name="T795">incorporated</text:span><text:span text:style-name="T794"> in OPM Flow’s multi-segment well implementation.</text:span></text:p>
+    <text:p text:style-name="P12799">Capillary pressure surface tension pressure scaling can also be used with multi-segment wells, but this facility has not been incorporated in OPM Flow’s multi-segment well implementation.</text:p>
     <text:p text:style-name="P12815"/>
     <text:p text:style-name="P10970">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="P10970"/>

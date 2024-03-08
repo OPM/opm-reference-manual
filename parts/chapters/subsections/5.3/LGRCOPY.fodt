@@ -2699,18 +2699,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4312" style:family="text">
-   <style:text-properties officeooo:rsid="018adce5"/>
-  </style:style>
-  <style:style style:name="T6050" style:family="text">
-   <style:text-properties officeooo:rsid="0d0958f7"/>
-  </style:style>
-  <style:style style:name="T6051" style:family="text">
-   <style:text-properties officeooo:rsid="0d0ae768"/>
-  </style:style>
-  <style:style style:name="T6052" style:family="text">
-   <style:text-properties officeooo:rsid="0d0c8074"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3690,8 +3678,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4068,7 +4055,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="LGRCOPY">
 
-<text:h text:style-name="P17701" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc236708_2843394514"/>LGR<text:span text:style-name="T6050">COPY</text:span> – <text:span text:style-name="T6050">Activate</text:span> Local Grid Refinement <text:span text:style-name="T6050">Inheritance</text:span><text:bookmark-end text:name="__RefHeading___Toc236708_2843394514"/></text:h>
+<text:h text:style-name="P17701" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc236708_2843394514"/>LGRCOPY – Activate Local Grid Refinement Inheritance<text:bookmark-end text:name="__RefHeading___Toc236708_2843394514"/></text:h>
     <table:table table:name="Table1313" table:style-name="Table1313">
      <table:table-column table:style-name="Table1313.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1313.E"/>
@@ -4102,18 +4089,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_37011683883113"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_37011683883113"/></text:h>
-    <text:p text:style-name="_40_TextBody">Th<text:span text:style-name="T6050">e LGRCOPY</text:span> keyword <text:span text:style-name="T6050">actives Local Grid Refinement (“LGR”) Inheritance option that allows the LGR to inherit the properties of the global or host cell containing a LGR grid block at the start of the GRID section, as oppose to the normal process of applying this transform at the end of the GRID section. LGRCOPY can be used in the RUNSPEC, GRID and EDIT sections. If used in the RUNSPEC section then the option is applied to all LGRs defined in the input file, whereas if used in the GRID and EDIT sections the keyword must be placed inside a LGR definition section, that is between a CARFIN (Cartesian LGR grid) or RADIN/RADIN4 (radial LGR grid) and the ENDFIN keyword. In the latter case inheritance is applied on an individual LGR basis.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody">Currently, OPM Flow does not support the local grid refinement feature <text:span text:style-name="T6050">and therefore this keyword is ignored by the simulator.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The LGRCOPY keyword actives Local Grid Refinement (“LGR”) Inheritance option that allows the LGR to inherit the properties of the global or host cell containing a LGR grid block at the start of the GRID section, as oppose to the normal process of applying this transform at the end of the GRID section. LGRCOPY can be used in the RUNSPEC, GRID and EDIT sections. If used in the RUNSPEC section then the option is applied to all LGRs defined in the input file, whereas if used in the GRID and EDIT sections the keyword must be placed inside a LGR definition section, that is between a CARFIN (Cartesian LGR grid) or RADIN/RADIN4 (radial LGR grid) and the ENDFIN keyword. In the latter case inheritance is applied on an individual LGR basis.</text:p>
+    <text:p text:style-name="_40_TextBody">Currently, OPM Flow does not support the local grid refinement feature and therefore this keyword is ignored by the simulator.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715601_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715601_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following example activates the <text:span text:style-name="T6051">LGR Inheritance option for all LGRs in the </text:span>model.</text:p>
+    <text:p text:style-name="_40_TextBody">The following example activates the LGR Inheritance option for all LGRs in the model.</text:p>
     <text:p text:style-name="P13406">-- ==============================================================================</text:p>
     <text:p text:style-name="P13406">-- </text:p>
     <text:p text:style-name="P13406">-- RUNSPEC SECTION </text:p>
     <text:p text:style-name="P13406">-- </text:p>
     <text:p text:style-name="P13406">-- ==============================================================================</text:p>
-    <text:p text:style-name="P13179"><text:span text:style-name="T4312">RUNSPEC</text:span> <text:s text:c="79"/></text:p>
+    <text:p text:style-name="P13179">RUNSPEC <text:s text:c="79"/></text:p>
     <text:p text:style-name="P13246">-- </text:p>
-    <text:p text:style-name="P13180">-- <text:s text:c="6"/><text:span text:style-name="T6052">ACTIVATE </text:span>LOCAL GRID REFINEMENT INHERITANCE <text:s text:c="111"/></text:p>
+    <text:p text:style-name="P13180">-- <text:s text:c="6"/>ACTIVATE LOCAL GRID REFINEMENT INHERITANCE <text:s text:c="111"/></text:p>
     <text:p text:style-name="P13247">-- </text:p>
     <text:p text:style-name="P13180">LGRCOPY </text:p>
     <text:p text:style-name="P15499"/>

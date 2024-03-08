@@ -2894,12 +2894,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T506" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="13ac3201"/>
   </style:style>
-  <style:style style:name="T770" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0641400b"/>
-  </style:style>
-  <style:style style:name="T1430" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0644534f"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
@@ -2908,45 +2902,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="T1533" style:family="text">
    <style:text-properties style:text-position="0% 100%"/>
-  </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1671" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="0638817d"/>
-  </style:style>
-  <style:style style:name="T2572" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="0640ce7d"/>
-  </style:style>
-  <style:style style:name="T2694" style:family="text">
-   <style:text-properties officeooo:rsid="0640ce7d"/>
-  </style:style>
-  <style:style style:name="T2918" style:family="text">
-   <style:text-properties officeooo:rsid="063da055"/>
-  </style:style>
-  <style:style style:name="T2920" style:family="text">
-   <style:text-properties officeooo:rsid="0648a392"/>
-  </style:style>
-  <style:style style:name="T5082" style:family="text">
-   <style:text-properties officeooo:rsid="0635cd06"/>
-  </style:style>
-  <style:style style:name="T5084" style:family="text">
-   <style:text-properties officeooo:rsid="0638817d"/>
-  </style:style>
-  <style:style style:name="T5085" style:family="text">
-   <style:text-properties officeooo:rsid="063a4264"/>
-  </style:style>
-  <style:style style:name="T5087" style:family="text">
-   <style:text-properties officeooo:rsid="0641400b"/>
-  </style:style>
-  <style:style style:name="T5088" style:family="text">
-   <style:text-properties officeooo:rsid="0642fbb9"/>
-  </style:style>
-  <style:style style:name="T5214" style:family="text">
-   <style:text-properties officeooo:rsid="0748c7e6"/>
-  </style:style>
-  <style:style style:name="T8347" style:family="text">
-   <style:text-properties officeooo:rsid="00313857"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3979,8 +3934,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4391,8 +4345,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716535_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716535_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMP<text:span text:style-name="T2694">IMB</text:span> keyword <text:span text:style-name="T2694">assigns imbibition saturation tables to well connections. The COMPDAT keyword in the SCHEDULE section also assigns imbibition saturation tables to connections, but in this case the table number is the same as for the drainage curve. <text:s/>If this is not the required assignment then the COMPIMB keyword can be used to reset the imbibition saturation table number. For this to be effective the COMPIMB keyword </text:span><text:span text:style-name="T2572">must</text:span><text:span text:style-name="T2694"> precede the COMPDAT keyword, otherwise it will have no effect. </text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T770">T</text:span><text:span text:style-name="T1">he </text:span><text:span text:style-name="T770">COMPIMB keyword should only be used if the </text:span><text:span text:style-name="T1">hysteresis option has been activated via the HYSTER variable on the SATOPTS keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The COMPIMB keyword assigns imbibition saturation tables to well connections. The COMPDAT keyword in the SCHEDULE section also assigns imbibition saturation tables to connections, but in this case the table number is the same as for the drainage curve. <text:s/>If this is not the required assignment then the COMPIMB keyword can be used to reset the imbibition saturation table number. For this to be effective the COMPIMB keyword must precede the COMPDAT keyword, otherwise it will have no effect. </text:p>
+    <text:p text:style-name="_40_TextBody">T<text:span text:style-name="T1">he </text:span>COMPIMB keyword should only be used if the <text:span text:style-name="T1">hysteresis option has been activated via the HYSTER variable on the SATOPTS keyword in the RUNSPEC section.</text:span></text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table655" table:style-name="Table655">
      <table:table-column table:style-name="Table655.A"/>
@@ -4458,7 +4412,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table655.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7366">A positive integer greater than or equal to zero and less than or equal to NX that defines the connection location in the I-direction.</text:p>
-       <text:p text:style-name="P7368">If set to zero or defaulted with 1* <text:span text:style-name="T5088">then all connections in the I-direction that also satisfy J, K1 and K2 criteria are assigned the IMBNUM imbibition table number.</text:span></text:p>
+       <text:p text:style-name="P7368">If set to zero or defaulted with 1* then all connections in the I-direction that also satisfy J, K1 and K2 criteria are assigned the IMBNUM imbibition table number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4476,7 +4430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table655.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7367">A positive integer greater than or equal to zero and less than or equal to NY that defines the connection location in the J-direction.</text:p>
-       <text:p text:style-name="P7371">If set to zero or defaulted with 1* <text:span text:style-name="T5088">then all connections in the J-direction that also satisfy I, K1 and K2 criteria are assigned the IMBNUM imbibition table number.</text:span></text:p>
+       <text:p text:style-name="P7371">If set to zero or defaulted with 1* then all connections in the J-direction that also satisfy I, K1 and K2 criteria are assigned the IMBNUM imbibition table number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4493,7 +4447,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table655.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7367">A positive integer greater than or equal to one and less than or equal to NZ that defines the UPPER connection location in the K-direction.</text:p>
-       <text:p text:style-name="P7371">If set to zero or defaulted with 1* <text:span text:style-name="T5088">then the upper most connection in the well is used.</text:span></text:p>
+       <text:p text:style-name="P7371">If set to zero or defaulted with 1* then the upper most connection in the well is used.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4506,11 +4460,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7588">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table655.C2" office:value-type="string">
-       <text:p text:style-name="P9460">K<text:span text:style-name="T5082">2</text:span></text:p>
+       <text:p text:style-name="P9460">K2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table655.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7367">A positive integer greater than or equal to K1 and less than or equal to NZ that defines the LOWER connection location in the K-direction.</text:p>
-       <text:p text:style-name="P7371">If set to zero or defaulted with 1* <text:span text:style-name="T5088">then the lowest most connection in the well is used. </text:span></text:p>
+       <text:p text:style-name="P7371">If set to zero or defaulted with 1* then the lowest most connection in the well is used. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4527,8 +4481,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7899">IMBNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table655.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7573">An integer <text:span text:style-name="T5087">greater than or equal to zero and less than NTSFUN as declared on the TABDIMS keyword in the RUNSPEC, </text:span>that defines the <text:span text:style-name="T2694">imbibition saturation</text:span> table number to be used for flow between the reservoir grid block and the well connections.</text:p>
-       <text:p text:style-name="P7574">If IMBNUM is set to zero or defaulted with 1* then <text:span text:style-name="T2694">t</text:span>he <text:span text:style-name="T2694">inhibition saturation</text:span> table allocated to the grid block that the connections are located within is used.</text:p>
+       <text:p text:style-name="P7573">An integer greater than or equal to zero and less than NTSFUN as declared on the TABDIMS keyword in the RUNSPEC, that defines the imbibition saturation table number to be used for flow between the reservoir grid block and the well connections.</text:p>
+       <text:p text:style-name="P7574">If IMBNUM is set to zero or defaulted with 1* then the inhibition saturation table allocated to the grid block that the connections are located within is used.</text:p>
        <text:p text:style-name="P7926">If I, J, K1, K2 are all set to zero or defaulted to 1*, then IMBNUM is allocated to all connections in the well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4542,10 +4496,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1612">Notes:</text:p>
        <text:list xml:id="list1564568164" text:style-name="L117">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19146"><text:span text:style-name="T1595">The keyword is followed by </text:span><text:span text:style-name="T1671">up to MXCONS</text:span><text:span text:style-name="T1533"> records</text:span><text:span text:style-name="T1595"> as declared on the </text:span><text:span text:style-name="T1671">WELLDIMS</text:span><text:span text:style-name="T1595"> keyword in the RUNSPEC section.</text:span></text:p>
+         <text:p text:style-name="P19146">The keyword is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the WELLDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19146">Each record is terminated by a “/” and the <text:span text:style-name="T5084">keyword should be terminated by a </text:span>“/”.</text:p>
+         <text:p text:style-name="P19146">Each record is terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4558,19 +4512,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable554" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.12</text:sequence>: COMPIMB Keyword Description</text:p>
     <text:p text:style-name="P15674"/>
-    <text:p text:style-name="_40_TextBody">Multiple grid block connections can be defined on one record for vertical wells by assigning different values to K1 and K2, for deviated and horizontal wells this may not be possible and therefore each grid block connection must be <text:span text:style-name="T5085">separately</text:span> defines by setting K1 equal to K2.<text:span text:style-name="T8347"> </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Multiple grid block connections can be defined on one record for vertical wells by assigning different values to K1 and K2, for deviated and horizontal wells this may not be possible and therefore each grid block connection must be separately defines by setting K1 equal to K2. </text:p>
     <text:p text:style-name="P15344">See also the COMPDAT keyword in the SCHEDULE section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716537_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716537_3964674244"/></text:h>
-    <text:p text:style-name="Text_20_body">The following example defines <text:span text:style-name="T2920">the connections for </text:span>two <text:span text:style-name="T2918">vertical oil wells using the COMPDAT keyword and then re-sets the imbibition saturation functions using the COMPIMP keyword.</text:span></text:p>
+    <text:p text:style-name="Text_20_body">The following example defines the connections for two vertical oil wells using the COMPDAT keyword and then re-sets the imbibition saturation functions using the COMPIMP keyword.</text:p>
     <text:p text:style-name="P13373">--</text:p>
     <text:p text:style-name="P13373">-- <text:s text:c="6"/>WELL CONNECTION DATA <text:s text:c="26"/></text:p>
     <text:p text:style-name="P13373">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13373">-- WELL <text:s/>--- LOCATION --- <text:s/>OPEN <text:s text:c="2"/>SAT <text:s text:c="2"/>CONN <text:s text:c="2"/>WELL <text:s text:c="2"/>KH <text:s text:c="3"/>SKIN <text:s text:c="2"/>D <text:s text:c="4"/>DIR <text:s text:c="2"/></text:p>
     <text:p text:style-name="P13373">-- NAME <text:s text:c="2"/>II <text:s/>JJ <text:s/>K1 <text:s/>K2 <text:s text:c="2"/>SHUT <text:s text:c="2"/>TAB <text:s text:c="2"/>FACT <text:s text:c="2"/>DIA <text:s text:c="3"/>FACT <text:s/>FACT <text:s text:c="2"/>FACT <text:s/>PEN <text:s text:c="2"/></text:p>
     <text:p text:style-name="P12977">COMPDAT <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P12977"><text:span text:style-name="T2918">OP</text:span>01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>20 <text:s/>56 <text:s text:c="2"/><text:span text:style-name="T2918">OPEN </text:span><text:s text:c="2"/>1 <text:s text:c="4"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P12977"><text:span text:style-name="T2918">O</text:span>P01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>75 100 <text:s text:c="2"/>SHUT <text:s text:c="2"/><text:span text:style-name="T5214">2 </text:span><text:s text:c="4"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P12977">OP0<text:span text:style-name="T2918">2</text:span> <text:s text:c="5"/>35 <text:s/>96 <text:s/>75 100 <text:s text:c="2"/><text:span text:style-name="T2918">OPEN </text:span><text:s text:c="2"/>1 <text:s text:c="4"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="P12977">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>20 <text:s/>56 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1 <text:s text:c="4"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="P12977">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>75 100 <text:s text:c="2"/>SHUT <text:s text:c="2"/>2 <text:s text:c="4"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="P12977">OP02 <text:s text:c="5"/>35 <text:s/>96 <text:s/>75 100 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1 <text:s text:c="4"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
     <text:p text:style-name="P13361">--</text:p>
     <text:p text:style-name="P13362">-- ASSIGN IMBIBITION SATURATION TABLES TO CONNECTIONS <text:s text:c="26"/></text:p>
     <text:p text:style-name="P13362">-- <text:s text:c="77"/></text:p>
@@ -4581,7 +4535,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13362">OP01 <text:s text:c="7"/>1* <text:s/>1* <text:s/>75 100 <text:s text:c="2"/>12 <text:s text:c="21"/>/</text:p>
     <text:p text:style-name="P13362">OP02 <text:s text:c="7"/>1* <text:s/>1* <text:s/>1* <text:s/>1* <text:s text:c="2"/>11 <text:s text:c="21"/>/</text:p>
     <text:p text:style-name="P13371">/ </text:p>
-    <text:p text:style-name="P14423"><text:span text:style-name="T1430"><text:s text:c="155"/></text:span><text:span text:style-name="T1"><text:s text:c="77"/></text:span></text:p>
+    <text:p text:style-name="P14423"><text:s text:c="155"/><text:span text:style-name="T1"><text:s text:c="77"/></text:span></text:p>
     <text:p text:style-name="P10921">Well OP01 has two sets of COMPIMB records to overwrite the imbibition saturation tables, one for connections (14, 13, 20) to (14, 13, 56) resetting the imbibition saturation table number from one to 11 and one for connections (14, 13, 75) to (14, 13, 100) that resets the imbibition table number from 2 to 12. Well OP02 has only one connection from cells (35, 96, 75) to cells (35, 96, 100), so all the default values for I, J, <text:soft-page-break/>K1, and K2 can be used to set the imbibition table numbers from 2 to 11. Note in all cases the drainage <text:s/>saturation table retains the value as specified by the COMPDAT keyword, that is one, two and one. </text:p>
     
    </text:section>

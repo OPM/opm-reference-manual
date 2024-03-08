@@ -2804,56 +2804,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2711" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00f1d08a" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T2713" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="04fdfed6" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
   <style:style style:name="T3628" style:family="text">
    <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3630" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="00ec78b5" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3771" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="0117ff08" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T4881" style:family="text">
-   <style:text-properties officeooo:rsid="04e4d6d9"/>
-  </style:style>
-  <style:style style:name="T4882" style:family="text">
-   <style:text-properties officeooo:rsid="04e78bc3"/>
-  </style:style>
-  <style:style style:name="T4883" style:family="text">
-   <style:text-properties officeooo:rsid="04e81372"/>
-  </style:style>
-  <style:style style:name="T4884" style:family="text">
-   <style:text-properties officeooo:rsid="04e9c166"/>
-  </style:style>
-  <style:style style:name="T4885" style:family="text">
-   <style:text-properties officeooo:rsid="04eb20bb"/>
-  </style:style>
-  <style:style style:name="T5491" style:family="text">
-   <style:text-properties officeooo:rsid="092cbe01"/>
-  </style:style>
-  <style:style style:name="T8366" style:family="text">
-   <style:text-properties officeooo:rsid="0059be35"/>
-  </style:style>
-  <style:style style:name="T8367" style:family="text">
-   <style:text-properties officeooo:rsid="0059fd3e"/>
-  </style:style>
-  <style:style style:name="T8368" style:family="text">
-   <style:text-properties officeooo:rsid="005c51b6"/>
-  </style:style>
-  <style:style style:name="T8370" style:family="text">
-   <style:text-properties officeooo:rsid="005e4663"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3886,8 +3838,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4298,14 +4249,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="P12686"><text:span text:style-name="T8366">The GSF keyword defines the </text:span><text:span text:style-name="T4881">gas relative permeability and gas</text:span><text:span text:style-name="T8366">-water</text:span><text:span text:style-name="T4881"> capillary pressure data versus gas saturation tables for when </text:span><text:span text:style-name="T8368">only </text:span><text:span text:style-name="T4881">gas </text:span><text:span text:style-name="T8366">and water </text:span><text:span text:style-name="T8368">are</text:span><text:span text:style-name="T4881"> present in the input deck. <text:s/>This keyword should only be used if the gas </text:span><text:span text:style-name="T8366">and water </text:span><text:span text:style-name="T8368">phases </text:span><text:span text:style-name="T8366">are</text:span><text:span text:style-name="T4881"> present in the run</text:span><text:span text:style-name="T8366">, and can therefore </text:span><text:span text:style-name="T8368">also be </text:span><text:span text:style-name="T8366">used with the CO2STORE and H2STORE models.</text:span><text:span text:style-name="T8367"> In addition, the keyword must be used in conjunction with the WSF keyword in the PROPS section, that defines the water relative permeability versus water saturation for gas-water systems.</text:span></text:p>
+    <text:p text:style-name="P12686">The GSF keyword defines the gas relative permeability and gas-water capillary pressure data versus gas saturation tables for when only gas and water are present in the input deck. <text:s/>This keyword should only be used if the gas and water phases are present in the run, and can therefore also be used with the CO2STORE and H2STORE models. In addition, the keyword must be used in conjunction with the WSF keyword in the PROPS section, that defines the water relative permeability versus water saturation for gas-water systems.</text:p>
     <table:table table:name="Table770" table:style-name="Table770">
      <table:table-column table:style-name="Table770.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708698342048">
        <table:table-cell table:style-name="Table770.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10412"><text:span text:style-name="T3630">G</text:span><text:span text:style-name="T3628">SF is a compositional keyword in the commercial compositional simulator, and will therefore cause an error in the commercial black-oil simulator.</text:span><text:span text:style-name="T3771"> </text:span></text:p>
+        <text:p text:style-name="P10412">G<text:span text:style-name="T3628">SF is a compositional keyword in the commercial compositional simulator, and will therefore cause an error in the commercial black-oil simulator.</text:span> </text:p>
         <text:p text:style-name="P10341">Currently, both the GSF and WSF keywords can only be used with the CO2STORE and H2STORE models.</text:p>
        </table:table-cell>
       </table:table-row>
@@ -4356,7 +4307,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4643">SGAS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4432">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values <text:span text:style-name="T5491">starting</text:span> from zero and terminating at one, that defines the gas saturation.</text:p>
+       <text:p text:style-name="P4432">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values starting from zero and terminating at one, that defines the gas saturation.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4383,7 +4334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3159">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4652">K<text:span text:style-name="T4882">RG</text:span></text:p>
+       <text:p text:style-name="P4652">KRG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4432">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the gas relative permeability.</text:p>
@@ -4414,10 +4365,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4345">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4698">PC<text:span text:style-name="T8367">W</text:span>G</text:p>
+       <text:p text:style-name="P4698">PCWG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4432">A columnar vector of real values that are either equal or increasing down the column that defines the gas<text:span text:style-name="T8367">-water</text:span> capillary pressure.</text:p>
+       <text:p text:style-name="P4432">A columnar vector of real values that are either equal or increasing down the column that defines the gas-water capillary pressure.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4435,7 +4386,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4691">bars</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" office:value-type="string">
-       <text:p text:style-name="P4691"><text:span text:style-name="T4885">a</text:span>tm</text:p>
+       <text:p text:style-name="P4691">atm</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4444,13 +4395,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1830">Notes:</text:p>
        <text:list xml:id="list105915277746929" text:continue-list="list105914356541914" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19857"><text:span text:style-name="T1534">T</text:span><text:span text:style-name="T2084">he keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:span></text:p>
+         <text:p text:style-name="P19857">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19989">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19989"><text:span text:style-name="T2711">Each table is terminated by a “/” </text:span><text:span text:style-name="T2713">and </text:span><text:span text:style-name="T2711">there is no “/” terminator for the keyword.</text:span></text:p>
+         <text:p text:style-name="P19989">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4461,9 +4412,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14968">Table <text:sequence text:ref-name="refTable260" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.44</text:sequence>: <text:span text:style-name="T8367">GSF</text:span><text:span text:style-name="T4885"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14968">Table <text:sequence text:ref-name="refTable260" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.44</text:sequence>: GSF Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12880">See also the <text:a xlink:type="simple" xlink:href="#8.3.365.WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc524656_3603161511 Copy 1">WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)</text:bookmark-ref></text:a><text:s/><text:soft-page-break/>keyword in the PROPS section<text:span text:style-name="T8370">,</text:span> that defines the water saturation as a function of water saturation for when only the gas and water phases are present<text:span text:style-name="T8370"> in the model</text:span>. </text:p>
+    <text:p text:style-name="P12880">See also the <text:a xlink:type="simple" xlink:href="#8.3.365.WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc524656_3603161511 Copy 1">WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)</text:bookmark-ref></text:a><text:s/><text:soft-page-break/>keyword in the PROPS section, that defines the water saturation as a function of water saturation for when only the gas and water phases are present in the model. </text:p>
     <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388301 Copy 1"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388301 Copy 1"/></text:h>
     <text:p text:style-name="_40_Example">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>GAS RELATIVE PERMEABILITY TABLES (OPM FLOW KEYWORD) <text:s text:c="44"/></text:p>
@@ -4512,7 +4463,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="13"/>0.82 <text:s text:c="3"/>0.4000 <text:s text:c="5"/>0.0</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="13"/>0.85 <text:s text:c="3"/>0.4450 <text:s text:c="5"/>0.0 <text:s text:c="22"/>/ TABLE NO. 02</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11687">The example defines two <text:span text:style-name="T8367">GSF</text:span><text:span text:style-name="T4883"> </text:span>tables for <text:span text:style-name="T4885">when gas </text:span><text:span text:style-name="T8367">and water are</text:span><text:span text:style-name="T4885"> present in the input deck.</text:span><text:span text:style-name="T8370"> </text:span><text:span text:style-name="T4884">In the tables the </text:span><text:span text:style-name="T8370">gas-</text:span><text:span text:style-name="T4884">water capillary pressure data has been set to zero.</text:span></text:p>
+    <text:p text:style-name="P11687">The example defines two GSF tables for when gas and water are present in the input deck. In the tables the gas-water capillary pressure data has been set to zero.</text:p>
     
    </text:section>
   </office:text>

@@ -2815,42 +2815,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T2935" style:family="text">
-   <style:text-properties officeooo:rsid="06a6c6b7"/>
-  </style:style>
-  <style:style style:name="T5098" style:family="text">
-   <style:text-properties officeooo:rsid="0654745b"/>
-  </style:style>
-  <style:style style:name="T5122" style:family="text">
-   <style:text-properties officeooo:rsid="0678ab2b"/>
-  </style:style>
-  <style:style style:name="T5123" style:family="text">
-   <style:text-properties officeooo:rsid="067b683c"/>
-  </style:style>
-  <style:style style:name="T5127" style:family="text">
-   <style:text-properties officeooo:rsid="0681f694"/>
-  </style:style>
-  <style:style style:name="T5128" style:family="text">
-   <style:text-properties officeooo:rsid="0682c367"/>
-  </style:style>
-  <style:style style:name="T5152" style:family="text">
-   <style:text-properties officeooo:rsid="06a50a20"/>
-  </style:style>
-  <style:style style:name="T5154" style:family="text">
-   <style:text-properties officeooo:rsid="062cbd9a"/>
-  </style:style>
-  <style:style style:name="T5224" style:family="text">
-   <style:text-properties officeooo:rsid="076e7afd"/>
-  </style:style>
-  <style:style style:name="T5232" style:family="text">
-   <style:text-properties officeooo:rsid="07876263"/>
-  </style:style>
-  <style:style style:name="T8208" style:family="text">
-   <style:text-properties officeooo:rsid="1ca27669"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3934,8 +3898,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4312,7 +4275,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="WHISTCTL">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc268465_1366622701"/>WHISTCTL - Define Well <text:span text:style-name="T5123">Historical Target Phase</text:span><text:bookmark-end text:name="__RefHeading___Toc268465_1366622701"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc268465_1366622701"/>WHISTCTL - Define Well Historical Target Phase<text:bookmark-end text:name="__RefHeading___Toc268465_1366622701"/></text:h>
     <table:table table:name="Table669" table:style-name="Table669">
      <table:table-column table:style-name="Table669.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table669.E"/>
@@ -4346,7 +4309,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716773_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716773_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">Th<text:span text:style-name="T5152">e WHIS</text:span><text:span text:style-name="T8208">T</text:span><text:span text:style-name="T5152">CTL keyword changes the target control for wells declared as history match wells via the </text:span>WCONHIST keyword <text:span text:style-name="T5152">in the SCHEDULE section.</text:span> <text:span text:style-name="T5152">The target phase is set on the WCONHIST keyword and WHIS</text:span><text:span text:style-name="T8208">T</text:span><text:span text:style-name="T5152">CTL overrides this value for all subsequent entries on the WCONHIST keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The WHISTCTL keyword changes the target control for wells declared as history match wells via the WCONHIST keyword in the SCHEDULE section. The target phase is set on the WCONHIST keyword and WHISTCTL overrides this value for all subsequent entries on the WCONHIST keyword.</text:p>
     <table:table table:name="Table670" table:style-name="Table670">
      <table:table-column table:style-name="Table670.A"/>
      <table:table-column table:style-name="Table670.B"/>
@@ -4394,7 +4357,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7971">TARGET</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table670.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7399">A <text:span text:style-name="T5098">defined character string that sets the observed target production phase for the well, all the other phases are calculated unconstrained and used for reporting only. The simulator will attempt to meet the TARGET based on the phase rate stated in items (4) to (6) and (10) on the WCONHIST keyword. </text:span></text:p>
+       <text:p text:style-name="P7399">A defined character string that sets the observed target production phase for the well, all the other phases are calculated unconstrained and used for reporting only. The simulator will attempt to meet the TARGET based on the phase rate stated in items (4) to (6) and (10) on the WCONHIST keyword. </text:p>
        <text:p text:style-name="P7971">TARGET should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105921589074657" text:continue-list="list105922273056518" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
@@ -4421,7 +4384,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:list xml:id="list105923218314696" text:continue-list="list105921971729929" text:style-name="L31">
         <text:list-header>
-         <text:p text:style-name="P19438"><text:span text:style-name="T5152">The TARGET </text:span>control mode <text:span text:style-name="T5152">defined on this keyword </text:span>reset<text:span text:style-name="T5152">s</text:span> <text:span text:style-name="T5152">the TARGET control mode on the WCONHIST </text:span>keyword in the SCHEDULE section, from the time the WHISTCNTL is invoked, thus avoiding changing the control model on all subsequent WCONHIST keywords.</text:p>
+         <text:p text:style-name="P19438">The TARGET control mode defined on this keyword resets the TARGET control mode on the WCONHIST keyword in the SCHEDULE section, from the time the WHISTCNTL is invoked, thus avoiding changing the control model on all subsequent WCONHIST keywords.</text:p>
         </text:list-header>
        </text:list>
       </table:table-cell>
@@ -4439,7 +4402,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7954">END</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table670.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9292">A defined character string that defines if the simulation should terminate if the well <text:span text:style-name="T5152">has switch to BHP control by the simulator, and should be</text:span> set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9292">A defined character string that defines if the simulation should terminate if the well has switch to BHP control by the simulator, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105923156349525" text:continue-list="list105921589074657" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P20158">NO: no action is taken and the run continues. </text:p>
@@ -4448,7 +4411,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P20158">YES: terminate the run at the next report time step.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P9073">Wells <text:span text:style-name="T2935">set to</text:span> BHP <text:span text:style-name="T2935">control </text:span>via <text:span text:style-name="T2935">the </text:span>WCONHIST or WHISCTL <text:span text:style-name="T2935">keywords </text:span>are ignored. <text:span text:style-name="T5232">Only END equal to NO is currently supported in OPM Flow.</text:span></text:p>
+       <text:p text:style-name="P9073">Wells set to BHP control via the WCONHIST or WHISCTL keywords are ignored. Only END equal to NO is currently supported in OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4461,7 +4424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1652">Notes:</text:p>
        <text:list xml:id="list2168494480" text:style-name="L174">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19235"><text:span text:style-name="T1595">The keyword is </text:span>terminated by a “/”.</text:p>
+         <text:p text:style-name="P19235">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4474,10 +4437,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable640" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.98</text:sequence>: WHISTCTL Keyword Description</text:p>
     <text:p text:style-name="P15412"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T5154">History matching wells are handled differently then ordinary wells that use the WCONPROD keyword for controlling their production targets and constraints. However, the wells still need to be defined like ordinary production wells using the WELSPECS keyword in the SCHEDULE section. </text:span>History matching well<text:span text:style-name="T8208">s</text:span> are converted to ordinary wells by restating a well’s control mode using either the WCONPROD or WELTARG keywords in the SCHEDULE section.</text:p>
-    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>See also the <text:span text:style-name="T5123">WCONHIST and WCONINJH keywords that are used to define the historical production and injection data, </text:span><text:s/>All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">History matching wells are handled differently then ordinary wells that use the WCONPROD keyword for controlling their production targets and constraints. However, the wells still need to be defined like ordinary production wells using the WELSPECS keyword in the SCHEDULE section. History matching wells are converted to ordinary wells by restating a well’s control mode using either the WCONPROD or WELTARG keywords in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>See also the WCONHIST and WCONINJH keywords that are used to define the historical production and injection data, <text:s/>All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <text:h text:style-name="P18621" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716775_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716775_3964674244"/></text:h>
-    <text:p text:style-name="P11088">The example <text:span text:style-name="T5122">below shows the observed gas rates for the OP01 oil producer for the first quarter of 2000.</text:span></text:p>
+    <text:p text:style-name="P11088">The example below shows the observed gas rates for the OP01 oil producer for the first quarter of 2000.</text:p>
     <text:p text:style-name="P14170">-- ------------------------------------------------------------------------------</text:p>
     <text:p text:style-name="P14170">-- 01 JAN 2000 START OF SCHEDULE SECTION <text:s text:c="92"/></text:p>
     <text:p text:style-name="P14170">-- ------------------------------------------------------------------------------ <text:s text:c="130"/></text:p>
@@ -4493,16 +4456,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14213">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14213">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>VFP <text:s text:c="3"/>VFP <text:s text:c="2"/>THP <text:s text:c="2"/>BHP <text:s/></text:p>
     <text:p text:style-name="P14213">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
-    <text:p text:style-name="P14170"><text:span text:style-name="T5127">WCONHIST <text:s text:c="121"/>OP</text:span>01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>100.0 <text:s/>1550 <text:s text:c="2"/>1<text:span text:style-name="T5127">0</text:span> <text:s text:c="5"/><text:span text:style-name="T5127">1</text:span>* <text:s text:c="2"/><text:span text:style-name="T5127">900.0</text:span> 1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="P14170">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.5E3 <text:s/>100.0 <text:s/>1550 <text:s text:c="2"/>10 <text:s text:c="5"/>1* <text:s text:c="2"/>900.0 1* <text:s text:c="4"/>/</text:p>
     <text:p text:style-name="P14170">/ <text:s text:c="78"/>DATES <text:s text:c="127"/></text:p>
     <text:p text:style-name="P14170">01 FEB 2000 / <text:s text:c="119"/></text:p>
-    <text:p text:style-name="P14181"><text:span text:style-name="T5122">/</text:span> <text:s text:c="77"/></text:p>
+    <text:p text:style-name="P14181">/ <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14213">--</text:p>
     <text:p text:style-name="P14213">-- <text:s text:c="6"/>WELL HISTORICAL PRODUCTION CONTROLS <text:s text:c="53"/></text:p>
     <text:p text:style-name="P14213">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14213">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>VFP <text:s text:c="3"/>VFP <text:s text:c="2"/>THP <text:s text:c="2"/>BHP <text:s/></text:p>
     <text:p text:style-name="P14213">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
-    <text:p text:style-name="P14170"><text:span text:style-name="T5127">WCONHIST <text:s text:c="121"/>OP</text:span>01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.<text:span text:style-name="T5127">2</text:span>E3 <text:s/>1<text:span text:style-name="T5127">5</text:span>0.0 <text:s/>15<text:span text:style-name="T5127">2</text:span>0 <text:s text:c="2"/>1* <text:s text:c="5"/><text:span text:style-name="T5127">1</text:span>* <text:s text:c="2"/><text:span text:style-name="T5127">875.0</text:span> <text:span text:style-name="T5127">3250.0 </text:span>/</text:p>
+    <text:p text:style-name="P14170">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.2E3 <text:s/>150.0 <text:s/>1520 <text:s text:c="2"/>1* <text:s text:c="5"/>1* <text:s text:c="2"/>875.0 3250.0 /</text:p>
     <text:p text:style-name="P14170">/ <text:s text:c="78"/>DATES <text:s text:c="127"/></text:p>
     <text:p text:style-name="P14170">01 MAR 2000 / <text:s text:c="119"/></text:p>
     <text:p text:style-name="P14247">/ </text:p>
@@ -4513,7 +4476,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14213">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
     <text:p text:style-name="P14213">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.0E3 <text:s/>200.0 <text:s/>1500 <text:s text:c="2"/>1* <text:s text:c="5"/>1* <text:s text:c="2"/>850.0 1* <text:s text:c="4"/>/</text:p>
     <text:p text:style-name="P14213">/ <text:s text:c="18"/></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T2935">From January 1, 2000 the WCONHIST keyword defines w</text:span>ell OP01, <text:span text:style-name="T5224">which</text:span> is open and is on <text:span text:style-name="T5128">oil rate cont</text:span>rol, <text:span text:style-name="T2935">to produce 15,500 stb/d oil, with the observed rates of 100 stb/d of water and 15.5 MMscf/d of gas. However the WHISCTL keyword resets the target control to reservoir voidage from January 1, 2000 and onward. This is useful in initial history matching runs to get a “reasonable” pressure match, by ensuring that the total reservoir withdrawals are correct, although the individual phase withdrawals will not match. Once a reasonable pressure match is achieved for the reservoir then one can reset TARGET to the sales phase, OIL or GAS, and continue with the matching of all the phases.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">From January 1, 2000 the WCONHIST keyword defines well OP01, which is open and is on oil rate control, to produce 15,500 stb/d oil, with the observed rates of 100 stb/d of water and 15.5 MMscf/d of gas. However the WHISCTL keyword resets the target control to reservoir voidage from January 1, 2000 and onward. This is useful in initial history matching runs to get a “reasonable” pressure match, by ensuring that the total reservoir withdrawals are correct, although the individual phase withdrawals will not match. Once a reasonable pressure match is achieved for the reservoir then one can reset TARGET to the sales phase, OIL or GAS, and continue with the matching of all the phases.</text:p>
     
    </text:section>
   </office:text>

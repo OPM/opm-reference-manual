@@ -2823,35 +2823,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2095" style:family="text">
-   <style:text-properties officeooo:rsid="027152b9"/>
-  </style:style>
   <style:style style:name="T3628" style:family="text">
    <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3630" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="00ec78b5" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3838" style:family="text">
-   <style:text-properties officeooo:rsid="00443005"/>
-  </style:style>
-  <style:style style:name="T3975" style:family="text">
-   <style:text-properties officeooo:rsid="004069ac"/>
-  </style:style>
-  <style:style style:name="T4614" style:family="text">
-   <style:text-properties officeooo:rsid="0271e651"/>
-  </style:style>
-  <style:style style:name="T5010" style:family="text">
-   <style:text-properties officeooo:rsid="05b6ab21"/>
-  </style:style>
-  <style:style style:name="T5489" style:family="text">
-   <style:text-properties officeooo:rsid="03b54640"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3884,8 +3857,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4296,8 +4268,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838813"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838813"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T2095">NSTACK</text:span> keyword defines the maximum number <text:span text:style-name="T3975">of previous search directions stored by the linear solver. Increasing the value of NSTACK may improve the efficiency of the solver on difficult problems, but will increase the memory requirements of the simulator. The default value of 10 should be sufficient for most problems; however, if OPM Flow is having issues with the convergence of the linear questions then increasing NSTACK and LITMAX on the TUNING keyword may improve performance.</text:span></text:p>
-    <text:p text:style-name="P12071"><text:span text:style-name="T5489">OPM Flow uses a </text:span>different<text:span text:style-name="T5489"> numerical scheme which makes this keyword redundant; see section </text:span><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T5489"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:span></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T5489"><text:s/></text:span></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T5489"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:span></text:a><text:span text:style-name="T5489"><text:s/>on how to invoke various numerical schemes via the OPM Flow command line interface.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The NSTACK keyword defines the maximum number of previous search directions stored by the linear solver. Increasing the value of NSTACK may improve the efficiency of the solver on difficult problems, but will increase the memory requirements of the simulator. The default value of 10 should be sufficient for most problems; however, if OPM Flow is having issues with the convergence of the linear questions then increasing NSTACK and LITMAX on the TUNING keyword may improve performance.</text:p>
+    <text:p text:style-name="P12071">OPM Flow uses a different numerical scheme which makes this keyword redundant; see section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>on how to invoke various numerical schemes via the OPM Flow command line interface.</text:p>
     <text:p text:style-name="P12069">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <table:table table:name="Table715" table:style-name="Table715">
      <table:table-column table:style-name="Table715.A"/>
@@ -4326,7 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3498">NSTACK</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table715.C2" office:value-type="string">
-       <text:p text:style-name="P3185"><text:span text:style-name="T2095">A positive integer that defines </text:span>the maximum number o<text:span text:style-name="T2095">f previous search directions stored by the linear solver.</text:span></text:p>
+       <text:p text:style-name="P3185">A positive integer that defines the maximum number of previous search directions stored by the linear solver.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table715.D2" office:value-type="string">
        <text:p text:style-name="P3499">10</text:p>
@@ -4340,7 +4312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19725">NSTACK and LITMAX on the TUNING keyword are related such that NSTACK should always be less than or equal to LITMAX. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19829"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19829">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4349,15 +4321,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14839">Table <text:sequence text:ref-name="refTable44" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.29</text:sequence>: <text:span text:style-name="T4614">NSTACK Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14839">Table <text:sequence text:ref-name="refTable44" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.29</text:sequence>: NSTACK Keyword Description</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838813"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838813"/></text:h>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P13688">-- <text:s text:c="8"/>SET STACK SIZE FOR LINEAR SOLVER </text:p>
-    <text:p text:style-name="P13688"><text:span text:style-name="T5010">--</text:span> <text:s text:c="43"/></text:p>
+    <text:p text:style-name="P13688">-- <text:s text:c="43"/></text:p>
     <text:p text:style-name="P13689">NSTACK <text:s text:c="73"/></text:p>
     <text:p text:style-name="P13689"><text:s text:c="11"/>30 <text:s text:c="65"/>/</text:p>
     <text:p text:style-name="P15021"/>
-    <text:p text:style-name="P11193">The above example sets maximum number of previous search directions stored by the linear solver to 30, <text:span text:style-name="T3838">this has no effect in OPM Flow input decks</text:span>.</text:p>
+    <text:p text:style-name="P11193">The above example sets maximum number of previous search directions stored by the linear solver to 30, this has no effect in OPM Flow input decks.</text:p>
     <text:p text:style-name="P15254"/>
     <table:table table:name="Table240" table:style-name="Table240">
      <table:table-column table:style-name="Table240.A"/>
@@ -4365,7 +4337,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table240.1">
        <table:table-cell table:style-name="Table240.A1" office:value-type="string">
         <text:p text:style-name="P10298">Note</text:p>
-        <text:p text:style-name="P10315"><text:span text:style-name="T3630">I</text:span><text:span text:style-name="T3628">f the run is suffering from linear convergence problems, then check the data first for any data issues before manipulating the numerical control parameters. For example, if OPM Flow has written some WARNING messages with respect to end-point scaling, etc., then resolve these messages first before adjusting the numerical controls.</text:span></text:p>
+        <text:p text:style-name="P10315">I<text:span text:style-name="T3628">f the run is suffering from linear convergence problems, then check the data first for any data issues before manipulating the numerical control parameters. For example, if OPM Flow has written some WARNING messages with respect to end-point scaling, etc., then resolve these messages first before adjusting the numerical controls.</text:span></text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>

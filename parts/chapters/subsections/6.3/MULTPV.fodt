@@ -2764,48 +2764,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1595" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="02eddc5f"/>
-  </style:style>
-  <style:style style:name="T1630" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="049cf205"/>
-  </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T2942" style:family="text">
-   <style:text-properties officeooo:rsid="04291af9"/>
-  </style:style>
-  <style:style style:name="T3840" style:family="text">
-   <style:text-properties officeooo:rsid="00ce5e6c"/>
-  </style:style>
-  <style:style style:name="T4420" style:family="text">
-   <style:text-properties officeooo:rsid="01f1577f"/>
-  </style:style>
-  <style:style style:name="T4781" style:family="text">
-   <style:text-properties officeooo:rsid="04225c4f"/>
-  </style:style>
-  <style:style style:name="T4783" style:family="text">
-   <style:text-properties officeooo:rsid="04256c20"/>
-  </style:style>
-  <style:style style:name="T4784" style:family="text">
-   <style:text-properties officeooo:rsid="042777bd"/>
-  </style:style>
-  <style:style style:name="T4786" style:family="text">
-   <style:text-properties officeooo:rsid="042bf865"/>
-  </style:style>
-  <style:style style:name="T4818" style:family="text">
-   <style:text-properties officeooo:rsid="04697738"/>
-  </style:style>
-  <style:style style:name="T4819" style:family="text">
-   <style:text-properties officeooo:rsid="046a7975"/>
-  </style:style>
-  <style:style style:name="T4829" style:family="text">
-   <style:text-properties officeooo:rsid="004124a1"/>
-  </style:style>
-  <style:style style:name="T7052" style:family="text">
-   <style:text-properties officeooo:rsid="13318511"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3837,8 +3795,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4215,7 +4172,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="MULTPV">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc95300_3218818441"/>MULTPV – Multiply Cell Pore Volumes <text:span text:style-name="T4818">by a Constant</text:span><text:bookmark-end text:name="__RefHeading___Toc95300_3218818441"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc95300_3218818441"/>MULTPV – Multiply Cell Pore Volumes by a Constant<text:bookmark-end text:name="__RefHeading___Toc95300_3218818441"/></text:h>
     <table:table table:name="Table401" table:style-name="Table401">
      <table:table-column table:style-name="Table401.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table401.E"/>
@@ -4249,7 +4206,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18420" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715751_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715751_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4818">MULTPV</text:span> <text:span text:style-name="T4781">multiples</text:span> the <text:span text:style-name="T4818">pore volumes of a cell by a real positive constant for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array. An alternative to defining the complete array is to use the BOX keyword to define an area of the grid and then use the MULTPV keyword to set the multipliers just for the area defined by the BOX keyword (see the example).</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">MULTPV multiples the pore volumes of a cell by a real positive constant for all the cells in the model via an array. An alternative to defining the complete array is to use the BOX keyword to define an area of the grid and then use the MULTPV keyword to set the multipliers just for the area defined by the BOX keyword (see the example).</text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used for all grid types, except for the Radial Grid geometry. </text:p>
     <table:table table:name="Table402" table:style-name="Table402">
      <table:table-column table:style-name="Table402.A"/>
@@ -4275,11 +4232,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2954">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table402.A2" office:value-type="string">
-       <text:p text:style-name="P4210">MUL<text:span text:style-name="T4818">TPV</text:span></text:p>
+       <text:p text:style-name="P4210">MULTPV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table402.A2" office:value-type="string">
-       <text:p text:style-name="P4210">M<text:span text:style-name="T4818">ULTPV</text:span> is an array of real positive numbers assigning the <text:span text:style-name="T4818">pore volume</text:span> multipliers <text:span text:style-name="T4818">for</text:span> each cell in the model. </text:p>
-       <text:p text:style-name="P4015">Repeat counts may be used, for example <text:span text:style-name="T4420">20</text:span>*<text:span text:style-name="T3840">10</text:span>0.0. </text:p>
+       <text:p text:style-name="P4210">MULTPV is an array of real positive numbers assigning the pore volume multipliers for each cell in the model. </text:p>
+       <text:p text:style-name="P4015">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table402.D2" office:value-type="string">
        <text:p text:style-name="P4211">1.0</text:p>
@@ -4290,10 +4247,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1460">Notes:</text:p>
        <text:list xml:id="list105910554428036" text:continue-list="list105911910488085" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19007"><text:span text:style-name="T1595">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword </text:span><text:span text:style-name="T1630">in the RUNSPEC section, </text:span><text:span text:style-name="T1595">unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:span></text:p>
+         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18904"><text:span text:style-name="T4829">T</text:span>he keyword is terminated by <text:span text:style-name="T7052">a</text:span> “/”.</text:p>
+         <text:p text:style-name="P18904">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4302,9 +4259,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14624">Table <text:sequence text:ref-name="refTable147" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.73</text:sequence>: <text:span text:style-name="T4786">MULTPV Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14624">Table <text:sequence text:ref-name="refTable147" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.73</text:sequence>: MULTPV Keyword Description</text:p>
     <text:p text:style-name="P15451"/>
-    <text:p text:style-name="P15290">See also the <text:span text:style-name="T4783">MULTREGP keyword for scaling the cell pore volumes by region numbers.</text:span></text:p>
+    <text:p text:style-name="P15290">See also the MULTREGP keyword for scaling the cell pore volumes by region numbers.</text:p>
     <text:h text:style-name="P18420" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715753_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715753_3964674244"/></text:h>
     <text:p text:style-name="P13824">--</text:p>
     <text:p text:style-name="P13824">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS</text:p>
@@ -4316,14 +4273,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13824">--</text:p>
     <text:p text:style-name="P13824">-- <text:s text:c="6"/>SET MULTX+ TRANSMISSIBILITY MULTIPLIERS <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13824">-- </text:p>
-    <text:p text:style-name="P13824">MULT<text:span text:style-name="T4819">PV</text:span></text:p>
-    <text:p text:style-name="P13041"><text:span text:style-name="T4784"><text:s text:c="9"/>18*0.0500 <text:s text:c="40"/>/ <text:s text:c="80"/></text:span><text:s text:c="60"/></text:p>
+    <text:p text:style-name="P13824">MULTPV</text:p>
+    <text:p text:style-name="P13041"><text:s text:c="9"/>18*0.0500 <text:s text:c="40"/>/ <text:s text:c="80"/><text:s text:c="60"/></text:p>
     <text:p text:style-name="P13901">--</text:p>
     <text:p text:style-name="P13901">-- <text:s text:c="6"/>DEFINE END OF INPUT BOX EDITING OF INPUT ARRAYS</text:p>
     <text:p text:style-name="P13901">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13902">ENDBOX <text:s text:c="2"/></text:p>
     <text:p text:style-name="P13902"><text:s text:c="6"/></text:p>
-    <text:p text:style-name="P15133">The above example defines <text:span text:style-name="T2942">a 0.05 scaling multiplier for the 18 cells defined by the preceding BOX statement. The ENDBOX keyword resets the input box to the full grid.</text:span></text:p>
+    <text:p text:style-name="P15133">The above example defines a 0.05 scaling multiplier for the 18 cells defined by the preceding BOX statement. The ENDBOX keyword resets the input box to the full grid.</text:p>
     <text:p text:style-name="P15133"/>
     <text:p text:style-name="P15133"/>
     

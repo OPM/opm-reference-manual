@@ -2680,20 +2680,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T3543" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT" officeooo:rsid="0d17f162"/>
-  </style:style>
   <style:style style:name="T6006" style:family="text">
    <style:text-properties style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Gill Sans MT" fo:font-size="9pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="0d17f162" style:font-size-asian="9pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:text-emphasize="none"/>
   </style:style>
   <style:style style:name="T6007" style:family="text">
    <style:text-properties style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Gill Sans MT" fo:font-size="9pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="0c5cc42f" style:font-size-asian="9pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:text-emphasize="none"/>
-  </style:style>
-  <style:style style:name="T6062" style:family="text">
-   <style:text-properties officeooo:rsid="0d17f162"/>
-  </style:style>
-  <style:style style:name="T6064" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT5" officeooo:rsid="0d17f162"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3674,8 +3665,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4086,7 +4076,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18359" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816229"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816229"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6062">LINKPERM</text:span> keyword <text:span text:style-name="T6062">assigns the grid cell permeabilities entered via the PERMX, PERMY and PERMZ keywords to a cell face (I</text:span><text:span text:style-name="T6064">±</text:span><text:span text:style-name="T3543">, J</text:span><text:span text:style-name="T6064">±,</text:span><text:span text:style-name="T3543"> or K</text:span><text:span text:style-name="T6064">±) and results in the simulator using these values directly in the calculating the transmissibility between grid blocks. <text:s/>This is different to the conventional way of entering permeability data that consists of entering the cell centered permeability and the simulator calculating a weighted average transmissibility based on the cell centered permeability of the up-stream and down-stream grid blocks. </text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The LINKPERM keyword assigns the grid cell permeabilities entered via the PERMX, PERMY and PERMZ keywords to a cell face (I±, J±, or K±) and results in the simulator using these values directly in the calculating the transmissibility between grid blocks. <text:s/>This is different to the conventional way of entering permeability data that consists of entering the cell centered permeability and the simulator calculating a weighted average transmissibility based on the cell centered permeability of the up-stream and down-stream grid blocks. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P15860"/>

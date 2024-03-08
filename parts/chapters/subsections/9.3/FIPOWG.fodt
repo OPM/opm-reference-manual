@@ -2692,24 +2692,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T4640" style:family="text">
-   <style:text-properties officeooo:rsid="003fdde1"/>
-  </style:style>
-  <style:style style:name="T4673" style:family="text">
-   <style:text-properties officeooo:rsid="02edc23f"/>
-  </style:style>
-  <style:style style:name="T4694" style:family="text">
-   <style:text-properties officeooo:rsid="030faba6"/>
-  </style:style>
-  <style:style style:name="T4698" style:family="text">
-   <style:text-properties officeooo:rsid="03174db5"/>
-  </style:style>
-  <style:style style:name="T4989" style:family="text">
-   <style:text-properties officeooo:rsid="057430b9"/>
-  </style:style>
-  <style:style style:name="T4990" style:family="text">
-   <style:text-properties officeooo:rsid="05751175"/>
-  </style:style>
   <style:style style:name="T5007" style:family="text">
    <style:text-properties officeooo:rsid="05a14f91"/>
   </style:style>
@@ -3692,8 +3674,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4070,7 +4051,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="FIPOWG">
 
-<text:h text:style-name="P18011" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc93831_3812137098"/>FIP<text:span text:style-name="T4989">OWG</text:span> –<text:span text:style-name="T4673"> Activate Oil, Gas, and Water FIP Zone Reporting</text:span><text:bookmark-end text:name="__RefHeading___Toc93831_3812137098"/></text:h>
+<text:h text:style-name="P18011" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc93831_3812137098"/>FIPOWG – Activate Oil, Gas, and Water FIP Zone Reporting<text:bookmark-end text:name="__RefHeading___Toc93831_3812137098"/></text:h>
     <table:table table:name="Table590" table:style-name="Table590">
      <table:table-column table:style-name="Table590.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table590.E"/>
@@ -4104,8 +4085,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18505" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838823211112"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838823211112"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4640">The FIPOWG keyword activates automatic fluid in-place reporting based on the initial oil, gas and water zones defined by the initial equilibration. The fluid contacts on the EQUIL keyword in the SOLUTION section determine the reporting fluid category a grid cell belongs to. For example all grid cells with depths above the gas-oil contact on the EQUIL keyword will be assigned to the gas zone and reported accordingly. Similarly, grid cells with depths between the gas-oil contact and the water-oil contact will be assigned to the oil zone. And finally, grid cells with depths below the oil-water contact will be assigned to the water zone. <text:s/></text:span>The simulator can print out summaries of the fluid in<text:span text:style-name="T4698">-</text:span>place in each region, the current flow rates betw<text:span text:style-name="T4694">e</text:span>en regions, and the cumulative flows between regions. </text:p>
-    <text:p text:style-name="P10921">Note that <text:span text:style-name="T4990">the total number of FIP and FIPNUM regions must be defined by the NMFIPR variable on the REGDIMS keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The FIPOWG keyword activates automatic fluid in-place reporting based on the initial oil, gas and water zones defined by the initial equilibration. The fluid contacts on the EQUIL keyword in the SOLUTION section determine the reporting fluid category a grid cell belongs to. For example all grid cells with depths above the gas-oil contact on the EQUIL keyword will be assigned to the gas zone and reported accordingly. Similarly, grid cells with depths between the gas-oil contact and the water-oil contact will be assigned to the oil zone. And finally, grid cells with depths below the oil-water contact will be assigned to the water zone. <text:s/>The simulator can print out summaries of the fluid in-place in each region, the current flow rates between regions, and the cumulative flows between regions. </text:p>
+    <text:p text:style-name="P10921">Note that the total number of FIP and FIPNUM regions must be defined by the NMFIPR variable on the REGDIMS keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="_40_TextBody">There is no data required for this keyword.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_3701168388319"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_3701168388319"/></text:h>

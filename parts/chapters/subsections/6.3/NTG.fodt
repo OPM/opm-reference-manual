@@ -2785,24 +2785,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T3624" style:family="text">
-   <style:text-properties officeooo:rsid="01eeceab"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4419" style:family="text">
-   <style:text-properties officeooo:rsid="01f045ce"/>
-  </style:style>
-  <style:style style:name="T4684" style:family="text">
-   <style:text-properties officeooo:rsid="02fc9717"/>
-  </style:style>
-  <style:style style:name="T6400" style:family="text">
-   <style:text-properties officeooo:rsid="0f03dd02"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3834,8 +3816,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4246,7 +4227,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715803_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715803_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T3624">NTG</text:span> defines the <text:span text:style-name="T3624">Net-to-Gross Ratio (“NTG”) for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array. The keyword can be used with all grid types.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">NTG defines the Net-to-Gross Ratio (“NTG”) for all the cells in the model via an array. The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table186" table:style-name="Table186">
      <table:table-column table:style-name="Table186.A"/>
      <table:table-column table:style-name="Table186.B"/>
@@ -4291,8 +4272,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4258">NTG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table186.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3210"><text:span text:style-name="T3624">NTG is an array of real numbers greater than or equal to zero and less than or equal to one, that are assigned the net-to-gross ratio values for each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4022">Repeat counts may be used, for example <text:span text:style-name="T4419">20</text:span>0*<text:span text:style-name="T4419">0.850</text:span>. </text:p>
+       <text:p text:style-name="P3210">NTG is an array of real numbers greater than or equal to zero and less than or equal to one, that are assigned the net-to-gross ratio values for each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4022">Repeat counts may be used, for example 200*0.850. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4322,7 +4303,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19255">Setting a cells NTG value to zero will make the cell inactive, similar to setting the cells ACTNUM property to zero.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18980"><text:span text:style-name="T4419">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P18980">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4333,17 +4314,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable164" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.90</text:sequence>: <text:span text:style-name="T4684">NTG Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable164" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.90</text:sequence>: NTG Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="P15296">See also the <text:span text:style-name="T4684">PORO, PERMX, PERMY and PERMZ key</text:span>words to fully define a <text:span text:style-name="T4684">grid’s properties.</text:span></text:p>
+    <text:p text:style-name="P15296">See also the PORO, PERMX, PERMY and PERMZ keywords to fully define a grid’s properties.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715805_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715805_3964674244"/></text:h>
     <text:p text:style-name="P13552">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13552">-- <text:s text:c="7"/>DEFINE GRID BLOCK <text:span text:style-name="T3624">NTG</text:span> DATA FOR ALL CELLS (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
+    <text:p text:style-name="P13552">-- <text:s text:c="7"/>DEFINE GRID BLOCK NTG DATA FOR ALL CELLS (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13552">-- </text:p>
     <text:p text:style-name="P13552">NTG </text:p>
-    <text:p text:style-name="P13552"><text:s text:c="10"/>100*1.000 <text:s text:c="2"/>100*0.850 <text:s text:c="2"/><text:span text:style-name="T6400">1</text:span>00*0.500 <text:s text:c="36"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13552"><text:s text:c="10"/>100*1.000 <text:s text:c="2"/>100*0.850 <text:s text:c="2"/>100*0.500 <text:s text:c="36"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15087">The above example defines <text:span text:style-name="T4080">a constant NTG of 1.00 for the first 100 cells, then 0.85 for the second 100 hundred cells, and finally 0.500 for the last 100 cell, for the 300 cells </text:span>in the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15087">The above example defines a constant NTG of 1.00 for the first 100 cells, then 0.85 for the second 100 hundred cells, and finally 0.500 for the last 100 cell, for the 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="P15440"/>
     <text:p text:style-name="P15440"/>
     

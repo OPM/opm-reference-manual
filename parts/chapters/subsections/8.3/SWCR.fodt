@@ -2768,27 +2768,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4398" style:family="text">
-   <style:text-properties officeooo:rsid="01b41e2e"/>
-  </style:style>
-  <style:style style:name="T4408" style:family="text">
-   <style:text-properties officeooo:rsid="01d539fa"/>
-  </style:style>
-  <style:style style:name="T4409" style:family="text">
-   <style:text-properties officeooo:rsid="01d5540b"/>
-  </style:style>
-  <style:style style:name="T4410" style:family="text">
-   <style:text-properties officeooo:rsid="01d65f8c"/>
-  </style:style>
-  <style:style style:name="T4414" style:family="text">
-   <style:text-properties officeooo:rsid="01de87df"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3820,8 +3799,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4198,7 +4176,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SWCR">
 
-<text:h text:style-name="P17992" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc27248_784232322"/>S<text:span text:style-name="T4414">WC</text:span>R – End-Point Scaling Grid Cell <text:span text:style-name="T4408">Critical</text:span> <text:span text:style-name="T4414">Water</text:span> <text:span text:style-name="T4408">Saturation</text:span><text:bookmark-end text:name="__RefHeading___Toc27248_784232322"/></text:h>
+<text:h text:style-name="P17992" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc27248_784232322"/>SWCR – End-Point Scaling Grid Cell Critical Water Saturation<text:bookmark-end text:name="__RefHeading___Toc27248_784232322"/></text:h>
     <table:table table:name="Table177" table:style-name="Table177">
      <table:table-column table:style-name="Table177.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table177.E"/>
@@ -4232,7 +4210,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31096_784232322"/>Description<text:bookmark-end text:name="__RefHeading___Toc31096_784232322"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4408">SWCR defines the critical water saturation for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The critical water saturation is defined as the maximum water saturation for which the water relative permeability is zero in a two-phase relative permeability table. <text:s/></text:span></text:p>
+    <text:p text:style-name="_40_TextBody">SWCR defines the critical water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The critical water saturation is defined as the maximum water saturation for which the water relative permeability is zero in a two-phase relative permeability table. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table178" table:style-name="Table178">
      <table:table-column table:style-name="Table178.A"/>
@@ -4275,11 +4253,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3045">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table178.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4604">S<text:span text:style-name="T4414">WC</text:span>R</text:p>
+       <text:p text:style-name="P4604">SWCR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table178.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3219"><text:span text:style-name="T4409">SWCR is an array of real numbers assigning the critical water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4054">Repeat counts may be used, for example <text:span text:style-name="T4410">3</text:span>0*0.<text:span text:style-name="T4414">20</text:span> </text:p>
+       <text:p text:style-name="P3219">SWCR is an array of real numbers assigning the critical water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4054">Repeat counts may be used, for example 30*0.20 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4306,13 +4284,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1562">Notes:</text:p>
        <text:list xml:id="list105918470277461" text:continue-list="list105916719608030" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19414"><text:span text:style-name="T4410">Note this the directional independent version of the critical water saturation used with the end-point scaling option. If directional end-point scaling has been activated then the SWCRX</text:span>±<text:span text:style-name="T4410"> , SWCRY</text:span>± and SWCRZ± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19414">Note this the directional independent version of the critical water saturation used with the end-point scaling option. If directional end-point scaling has been activated then the SWCRX± , SWCRY± and SWCRZ± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19414">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19414"><text:span text:style-name="T4410">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P19414">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4323,18 +4301,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14563">Table <text:sequence text:ref-name="refTable401" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.185</text:sequence>: <text:span text:style-name="T4410">SWCR Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14563">Table <text:sequence text:ref-name="refTable401" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.185</text:sequence>: SWCR Keyword Description</text:p>
     <text:p text:style-name="P15031"/>
-    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, <text:span text:style-name="T4398">and </text:span>SOGCR <text:s/><text:span text:style-name="T4398">saturation grid arrays for the saturation end-points, and the KRG, KRGR, KRO, KRORG, KRORW, KRW and KRWR relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SWCRX, SWCRY and SWCRZ instead of SWCR. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the <text:s/>non-reversible versions of the aforementioned arrays should be used, that is SWCRX, SWCRX-, SWCRY, SWCRY-, <text:s/>SWCRZ and SWCRZ-, <text:s/>instead of the SWCR keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KRGR, KRO, KRORG, KRORW, KRW and KRWR relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SWCRX, SWCRY and SWCRZ instead of SWCR. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the <text:s/>non-reversible versions of the aforementioned arrays should be used, that is SWCRX, SWCRX-, SWCRY, SWCRY-, <text:s/>SWCRZ and SWCRZ-, <text:s/>instead of the SWCR keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31098_784232322"/>Example<text:bookmark-end text:name="__RefHeading___Toc31098_784232322"/></text:h>
     <text:p text:style-name="P13576">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13992">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SWCR DATA FOR ALL CELLS <text:s text:c="28"/></text:p>
     <text:p text:style-name="P13999">-- <text:s text:c="6"/>(FOR NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13602">-- </text:p>
-    <text:p text:style-name="P13576">S<text:span text:style-name="T4414">W</text:span>CR</text:p>
-    <text:p text:style-name="P13576"><text:soft-page-break/><text:s text:c="9"/>300*0.<text:span text:style-name="T4414">20</text:span>0 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P13576">SWCR</text:p>
+    <text:p text:style-name="P13576"><text:soft-page-break/><text:s text:c="9"/>300*0.200 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13078"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15105">The above example defines <text:span text:style-name="T4080">a constant critical water saturation of 0.20 to all </text:span>300 cells in the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15105">The above example defines a constant critical water saturation of 0.20 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     
    </text:section>
   </office:text>

@@ -2799,41 +2799,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2692" style:family="text">
-   <style:text-properties officeooo:rsid="00679b6b"/>
-  </style:style>
   <style:style style:name="T2709" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
   <style:style style:name="T2764" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="05a14f91"/>
-  </style:style>
-  <style:style style:name="T2789" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0c5cc42f"/>
-  </style:style>
-  <style:style style:name="T2851" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="05475326"/>
-  </style:style>
-  <style:style style:name="T2852" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="0e1b00d0"/>
-  </style:style>
-  <style:style style:name="T4950" style:family="text">
-   <style:text-properties officeooo:rsid="05475326"/>
-  </style:style>
-  <style:style style:name="T6291" style:family="text">
-   <style:text-properties officeooo:rsid="0e1a0c65"/>
-  </style:style>
-  <style:style style:name="T6292" style:family="text">
-   <style:text-properties officeooo:rsid="0e1b00d0"/>
-  </style:style>
-  <style:style style:name="T6293" style:family="text">
-   <style:text-properties officeooo:rsid="0e1cc5bb"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3866,8 +3836,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4278,7 +4247,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388331"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388331"/></text:h>
-    <text:p text:style-name="P11988">The <text:span text:style-name="T6291">TZONE</text:span> keyword <text:span text:style-name="T4950">sets the transition end-point scaling options for the oil, water and gas phases, for when the End-Point Scaling option has been activated by the ENDSCALE keyword in the RUNSPEC section. The keyword determines if the phase critical saturation should or should not be set to the initial immobile saturation in areas where the initial saturation is below the entered critical saturation.</text:span></text:p>
+    <text:p text:style-name="P11988">The TZONE keyword sets the transition end-point scaling options for the oil, water and gas phases, for when the End-Point Scaling option has been activated by the ENDSCALE keyword in the RUNSPEC section. The keyword determines if the phase critical saturation should or should not be set to the initial immobile saturation in areas where the initial saturation is below the entered critical saturation.</text:p>
     <text:p text:style-name="P11988">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1663" table:style-name="Table1663">
      <table:table-column table:style-name="Table1663.A"/>
@@ -4307,10 +4276,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5262">OILZONE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1663.C2" office:value-type="string">
-       <text:p text:style-name="P4825"><text:span text:style-name="T6291">OILZONE </text:span>is a <text:span text:style-name="T6291">single </text:span>character that sets the <text:span text:style-name="T6291">oil phase transition zone </text:span>end-point scaling option and should be set to either <text:span text:style-name="T6291">T</text:span> or <text:span text:style-name="T6291">F</text:span>:</text:p>
+       <text:p text:style-name="P4825">OILZONE is a single character that sets the oil phase transition zone end-point scaling option and should be set to either T or F:</text:p>
        <text:list xml:id="list105917296953976" text:continue-list="list105916584057909" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17111">T: for true, results in the SOWCR values being adjusted to the initial immobile saturation <text:span text:style-name="T6292">f</text:span>or oil-water <text:span text:style-name="T6292">or oil-water</text:span>-miscible gas simulations. For oil-gas simulations the <text:span text:style-name="T6292">SOGCR values are modified to be the initial immobile saturation. The modifications only occur in cells where the initial saturation is below the entered critical saturation.</text:span></text:p>
+         <text:p text:style-name="P17111">T: for true, results in the SOWCR values being adjusted to the initial immobile saturation for oil-water or oil-water-miscible gas simulations. For oil-gas simulations the SOGCR values are modified to be the initial immobile saturation. The modifications only occur in cells where the initial saturation is below the entered critical saturation.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17126">F: for false, means the critical saturations are not modified.</text:p>
@@ -4329,10 +4298,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5262">WATZONE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1663.C4" office:value-type="string">
-       <text:p text:style-name="P4825"><text:span text:style-name="T6292">WATZONE </text:span>is a <text:span text:style-name="T6291">single </text:span>character that sets the <text:span text:style-name="T6292">water phase transition zone </text:span>end-point scaling option and should be set to either <text:span text:style-name="T6291">T</text:span> or <text:span text:style-name="T6291">F</text:span>:</text:p>
+       <text:p text:style-name="P4825">WATZONE is a single character that sets the water phase transition zone end-point scaling option and should be set to either T or F:</text:p>
        <text:list xml:id="list105917471050431" text:continue-list="list105917296953976" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17111">T: for true, results in the SWCR values being adjusted to the initial immobile saturation<text:span text:style-name="T6292">s. The modifications only occur in cells where the initial saturation is below the entered critical saturation values (SWCR).</text:span></text:p>
+         <text:p text:style-name="P17111">T: for true, results in the SWCR values being adjusted to the initial immobile saturations. The modifications only occur in cells where the initial saturation is below the entered critical saturation values (SWCR).</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17126">F: for false, means the critical saturations are not modified.</text:p>
@@ -4351,10 +4320,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5262">GASZONE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1663.C4" office:value-type="string">
-       <text:p text:style-name="P4825"><text:span text:style-name="T6292">GASZONE </text:span>is a <text:span text:style-name="T6291">single </text:span>character that sets the <text:span text:style-name="T6292">gas phase transition zone </text:span>end-point scaling option and should be set to either <text:span text:style-name="T6291">T</text:span> or <text:span text:style-name="T6291">F</text:span>:</text:p>
+       <text:p text:style-name="P4825">GASZONE is a single character that sets the gas phase transition zone end-point scaling option and should be set to either T or F:</text:p>
        <text:list xml:id="list105917364723722" text:continue-list="list105917471050431" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17111">T: for true, results in the S<text:span text:style-name="T6292">G</text:span>CR values being adjusted to the initial immobile saturation <text:span text:style-name="T6292">f</text:span>or oil-<text:span text:style-name="T6292">gas</text:span> <text:span text:style-name="T6292">or gas-water</text:span> simulations. <text:s/><text:span text:style-name="T6292">The modifications only occur in cells where the initial saturation is below the entered critical saturation <text:s/>(SGCR).</text:span></text:p>
+         <text:p text:style-name="P17111">T: for true, results in the SGCR values being adjusted to the initial immobile saturation for oil-gas or gas-water simulations. <text:s/>The modifications only occur in cells where the initial saturation is below the entered critical saturation <text:s/>(SGCR).</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17126">F: for false, means the critical saturations are not modified.</text:p>
@@ -4370,7 +4339,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1714">Notes:</text:p>
        <text:list xml:id="list452860881" text:style-name="L101">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19822"><text:span text:style-name="T1534">T</text:span><text:span text:style-name="T2084">he keyword is terminated by a “/”.</text:span></text:p>
+         <text:p text:style-name="P19822">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4379,20 +4348,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14791"><text:span text:style-name="T2789">Table </text:span><text:span text:style-name="T2789"><text:sequence text:ref-name="refTable411" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.195</text:sequence></text:span><text:span text:style-name="T2789">: </text:span><text:span text:style-name="T2852">TZONE</text:span><text:span text:style-name="T2851"> Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14791">Table <text:sequence text:ref-name="refTable411" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.195</text:sequence>: TZONE Keyword Description</text:p>
     <text:p text:style-name="P15052"/>
-    <text:p text:style-name="Standard"><text:span text:style-name="T2692">S</text:span>ee also the <text:span text:style-name="T4950">SCALECRS</text:span> keyword in the PROPS section that <text:span text:style-name="T4950">sets the end-point scaling </text:span><text:soft-page-break/><text:span text:style-name="T4950">option to be either two-point or three-point scaling.</text:span></text:p>
+    <text:p text:style-name="Standard">See also the SCALECRS keyword in the PROPS section that sets the end-point scaling <text:soft-page-break/>option to be either two-point or three-point scaling.</text:p>
     <text:p text:style-name="Standard"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716275_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716275_3964674244"/></text:h>
     <text:p text:style-name="P14310">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P14310">-- <text:s text:c="6"/>END-POINT SCALING TRANSITION ZONE OPTIONS </text:p>
     <text:p text:style-name="P14310">--</text:p>
-    <text:p text:style-name="P14310">-- <text:s text:c="6"/>OILZONE <text:s/><text:span text:style-name="T6292">WAT</text:span>ZONE <text:s/><text:span text:style-name="T6292">GAS</text:span>ZONE <text:s text:c="73"/></text:p>
+    <text:p text:style-name="P14310">-- <text:s text:c="6"/>OILZONE <text:s/>WATZONE <text:s/>GASZONE <text:s text:c="73"/></text:p>
     <text:p text:style-name="P14310">-- <text:s text:c="6"/>------- <text:s/>------- <text:s/>------- <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P14310"><text:span text:style-name="T6292">TZONE</text:span> <text:s text:c="80"/></text:p>
+    <text:p text:style-name="P14310">TZONE <text:s text:c="80"/></text:p>
     <text:p text:style-name="P14310"><text:s text:c="9"/>F <text:s text:c="7"/>T <text:s text:c="7"/>F <text:s text:c="30"/>/ SCALING OPTION <text:s text:c="12"/></text:p>
     <text:p text:style-name="Standard"/>
-    <text:p text:style-name="P15992">The above example results in the SWCR values being adjusted to the initial immobile saturation<text:span text:style-name="T6293">s.</text:span></text:p>
+    <text:p text:style-name="P15992">The above example results in the SWCR values being adjusted to the initial immobile saturations.</text:p>
     <text:p text:style-name="P15992"/>
     <text:p text:style-name="P15992"/>
     

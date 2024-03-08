@@ -2682,18 +2682,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2554" style:family="text">
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
   </style:style>
-  <style:style style:name="T2598" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" officeooo:rsid="0c4ffe72"/>
-  </style:style>
-  <style:style style:name="T5924" style:family="text">
-   <style:text-properties officeooo:rsid="0c4e0eca"/>
-  </style:style>
-  <style:style style:name="T5925" style:family="text">
-   <style:text-properties officeooo:rsid="0c4ffe72"/>
-  </style:style>
-  <style:style style:name="T5959" style:family="text">
-   <style:text-properties officeooo:rsid="0c898655"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3673,8 +3661,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4051,7 +4038,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="GUPFREQ">
 
-<text:h text:style-name="P18139" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc246071_870710203"/>G<text:span text:style-name="T5959">UPFREQ</text:span> – Instantaneous Gradient Option <text:span text:style-name="T5959">Update Frequency</text:span> <text:bookmark-end text:name="__RefHeading___Toc246071_870710203"/></text:h>
+<text:h text:style-name="P18139" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc246071_870710203"/>GUPFREQ – Instantaneous Gradient Option Update Frequency <text:bookmark-end text:name="__RefHeading___Toc246071_870710203"/></text:h>
     <table:table table:name="Table1194" table:style-name="Table1194">
      <table:table-column table:style-name="Table1194.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1194.E"/>
@@ -4085,7 +4072,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18587" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838819841"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838819841"/></text:h>
-    <text:p text:style-name="_40_TextBody">Th<text:span text:style-name="T5924">e GUPFREQ</text:span> keyword <text:span text:style-name="T5959">sets the update frequency of the Instantaneous Gradient option for when this option has been activated by the GDIMS keyword in the RUNSPEC section. The Instantaneous Gradient </text:span>option <text:span text:style-name="T5925">calculates</text:span> derivatives of solution quantities at the current time step with respect to variations in the <text:span text:style-name="T5925">variables</text:span> at the <text:span text:style-name="T2554">current time step</text:span>. Th<text:span text:style-name="T5925">is is different to</text:span> <text:span text:style-name="T5925">Gradient option that calculates</text:span> <text:span text:style-name="T5925">the </text:span>derivatives of solution quantities at the current time step with respect to variations in the <text:span text:style-name="T5925">variables</text:span> at the <text:span text:style-name="T2598">initial</text:span><text:span text:style-name="T2554"> time step</text:span>, <text:span text:style-name="T5925">that is a time equal to zero. Consequently, the Instantaneous Gradient option can be switched on and off by the </text:span>GUPFREQ keyword <text:span text:style-name="T5925">in the SCHEDULE section, whereas the Gradient option cannot.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The GUPFREQ keyword sets the update frequency of the Instantaneous Gradient option for when this option has been activated by the GDIMS keyword in the RUNSPEC section. The Instantaneous Gradient option calculates derivatives of solution quantities at the current time step with respect to variations in the variables at the <text:span text:style-name="T2554">current time step</text:span>. This is different to Gradient option that calculates the derivatives of solution quantities at the current time step with respect to variations in the variables at the initial<text:span text:style-name="T2554"> time step</text:span>, that is a time equal to zero. Consequently, the Instantaneous Gradient option can be switched on and off by the GUPFREQ keyword in the SCHEDULE section, whereas the Gradient option cannot.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     

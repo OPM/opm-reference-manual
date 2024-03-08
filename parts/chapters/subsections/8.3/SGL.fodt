@@ -2779,27 +2779,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T2941" style:family="text">
-   <style:text-properties officeooo:rsid="00e44d1e"/>
-  </style:style>
-  <style:style style:name="T4080" style:family="text">
-   <style:text-properties officeooo:rsid="00e7849c"/>
-  </style:style>
-  <style:style style:name="T4398" style:family="text">
-   <style:text-properties officeooo:rsid="01b41e2e"/>
-  </style:style>
-  <style:style style:name="T4408" style:family="text">
-   <style:text-properties officeooo:rsid="01d539fa"/>
-  </style:style>
-  <style:style style:name="T4409" style:family="text">
-   <style:text-properties officeooo:rsid="01d5540b"/>
-  </style:style>
-  <style:style style:name="T4410" style:family="text">
-   <style:text-properties officeooo:rsid="01d65f8c"/>
-  </style:style>
-  <style:style style:name="T4411" style:family="text">
-   <style:text-properties officeooo:rsid="01d8dd9b"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3831,8 +3810,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4209,7 +4187,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="SGL">
 
-<text:h text:style-name="P17967" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc22881_784232322"/>SG<text:span text:style-name="T4411">L</text:span> – End-Point Scaling Grid Cell <text:span text:style-name="T4408">Connate</text:span> Gas <text:span text:style-name="T4408">Saturations</text:span><text:bookmark-end text:name="__RefHeading___Toc22881_784232322"/></text:h>
+<text:h text:style-name="P17967" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc22881_784232322"/>SGL – End-Point Scaling Grid Cell Connate Gas Saturations<text:bookmark-end text:name="__RefHeading___Toc22881_784232322"/></text:h>
     <table:table table:name="Table173" table:style-name="Table173">
      <table:table-column table:style-name="Table173.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table173.E"/>
@@ -4243,7 +4221,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31080_784232322"/>Description<text:bookmark-end text:name="__RefHeading___Toc31080_784232322"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T4408">SGL defines the connate gas saturation for all the cells in the model</text:span> via a<text:span text:style-name="T2941">n array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The connate gas saturation is defined as the minimum gas saturation in a two-phase gas relative permeability table. <text:s/></text:span></text:p>
+    <text:p text:style-name="_40_TextBody">SGL defines the connate gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The connate gas saturation is defined as the minimum gas saturation in a two-phase gas relative permeability table. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table174" table:style-name="Table174">
      <table:table-column table:style-name="Table174.A"/>
@@ -4286,11 +4264,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3034">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table174.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4600">SG<text:span text:style-name="T4411">L</text:span></text:p>
+       <text:p text:style-name="P4600">SGL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table174.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3215"><text:span text:style-name="T4409">SGL is an array of real numbers assigning the connate gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword</text:span>.</text:p>
-       <text:p text:style-name="P4050">Repeat counts may be used, for example <text:span text:style-name="T4410">3</text:span>0*0.<text:span text:style-name="T4410">03</text:span> </text:p>
+       <text:p text:style-name="P3215">SGL is an array of real numbers assigning the connate gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P4050">Repeat counts may be used, for example 30*0.03 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4317,13 +4295,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1549">Notes:</text:p>
        <text:list xml:id="list105916289097544" text:continue-list="list3669430610" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19261"><text:span text:style-name="T4410">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SGLX</text:span>±<text:span text:style-name="T4410"> , SGLY</text:span>± and SGZ± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19261">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SGLX± , SGLY± and SGZ± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18772">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19073"><text:span text:style-name="T4410">T</text:span>he keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P19073">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4334,18 +4312,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14565">Table <text:sequence text:ref-name="refTable365" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.149</text:sequence>: <text:span text:style-name="T4410">SGL Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14565">Table <text:sequence text:ref-name="refTable365" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.149</text:sequence>: SGL Keyword Description</text:p>
     <text:p text:style-name="P15033"/>
-    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, <text:span text:style-name="T4398">and </text:span>SOGCR <text:s/><text:span text:style-name="T4398">saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SGLX, SGLY and SGLZ instead of SGL. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SGLX, SGLX-, SGLY, SGLY-, SGLZ and SGLZ-, <text:s/>instead of the SGL keyword.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SGLX, SGLY and SGLZ instead of SGL. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SGLX, SGLX-, SGLY, SGLY-, SGLZ and SGLZ-, <text:s/>instead of the SGL keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31082_784232322"/>Example<text:bookmark-end text:name="__RefHeading___Toc31082_784232322"/></text:h>
     <text:p text:style-name="P13572">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13998">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SGL DATA FOR ALL CELLS </text:p>
     <text:p text:style-name="P13998">– <text:s text:c="6"/>(FOR NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13572">-- </text:p>
-    <text:p text:style-name="P13601">SG<text:span text:style-name="T4411">L</text:span></text:p>
+    <text:p text:style-name="P13601">SGL</text:p>
     <text:p text:style-name="P13572"><text:s text:c="9"/>300*0.030 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13075"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15109">The above example defines <text:span text:style-name="T4080">a constant connate gas saturation of 0.03 to all </text:span>300 cells in <text:soft-page-break/>the mode<text:span text:style-name="T4080">l</text:span> as defined by <text:span text:style-name="T2941">the</text:span> DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15109">The above example defines a constant connate gas saturation of 0.03 to all 300 cells in <text:soft-page-break/>the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
     <text:p text:style-name="P99"/>
     
    </text:section>

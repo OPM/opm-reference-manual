@@ -2779,44 +2779,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T553" style:family="text">
    <style:text-properties fo:language="en" fo:country="US" style:text-underline-style="none" officeooo:rsid="05a14f91"/>
   </style:style>
-  <style:style style:name="T653" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="06e613f0"/>
-  </style:style>
-  <style:style style:name="T811" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0e356a31"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
   <style:style style:name="T2709" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
-  </style:style>
-  <style:style style:name="T2711" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00f1d08a" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T2713" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="04fdfed6" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T2714" style:family="text">
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="061ec80f" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T2764" style:family="text">
-   <style:text-properties style:text-underline-style="none" officeooo:rsid="05a14f91"/>
-  </style:style>
-  <style:style style:name="T6306" style:family="text">
-   <style:text-properties officeooo:rsid="0e324b75"/>
-  </style:style>
-  <style:style style:name="T6307" style:family="text">
-   <style:text-properties officeooo:rsid="0e356a31"/>
   </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
@@ -3901,8 +3871,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4313,7 +4282,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716699_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716699_3964674244"/></text:h>
-    <text:p text:style-name="P12004"><text:span text:style-name="T653">T</text:span><text:span text:style-name="T1">he VFPTABL keyword defines the interpolation method for production Vertical Flow Performance (“VFP”) tables for the Artificial Lift Quantity (“ALQ”). <text:s/></text:span><text:span text:style-name="T811">Production VFP data is entered via the VFPPROD keyword in the SCHEDULE section. By default t</text:span><text:span text:style-name="T1">he simulator interpolates all the variables in the VFP tables using linear interpolation, including the ALQ quantity. However, if the ALQ values represent gas lift, then linear interpolation may not be insufficient, as the gradient change between the tabulated ALQ values may result in sudden changes. This is particular</text:span><text:span text:style-name="T811">ly</text:span><text:span text:style-name="T1"> important in gas lift optimization studies where the available gas lift gas is being allocated to a group of well</text:span><text:span text:style-name="T811">s</text:span><text:span text:style-name="T1"> in order to maximize oil production rates. To overcome this issue the VFPTABL keyword allows the ALQ values to be interpolated using cubic spline interpolation, and results </text:span><text:span text:style-name="T811">in </text:span><text:span text:style-name="T1">a smother transition between the </text:span><text:span text:style-name="T811">various ALQ entries.</text:span><text:span text:style-name="T1"> </text:span></text:p>
+    <text:p text:style-name="P12004">T<text:span text:style-name="T1">he VFPTABL keyword defines the interpolation method for production Vertical Flow Performance (“VFP”) tables for the Artificial Lift Quantity (“ALQ”). <text:s/></text:span>Production VFP data is entered via the VFPPROD keyword in the SCHEDULE section. By default t<text:span text:style-name="T1">he simulator interpolates all the variables in the VFP tables using linear interpolation, including the ALQ quantity. However, if the ALQ values represent gas lift, then linear interpolation may not be insufficient, as the gradient change between the tabulated ALQ values may result in sudden changes. This is particular</text:span>ly<text:span text:style-name="T1"> important in gas lift optimization studies where the available gas lift gas is being allocated to a group of well</text:span>s<text:span text:style-name="T1"> in order to maximize oil production rates. To overcome this issue the VFPTABL keyword allows the ALQ values to be interpolated using cubic spline interpolation, and results </text:span>in <text:span text:style-name="T1">a smother transition between the </text:span>various ALQ entries.<text:span text:style-name="T1"> </text:span></text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1694" table:style-name="Table1694">
      <table:table-column table:style-name="Table1694.A"/>
@@ -4356,10 +4325,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3128">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1694.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5269">VFP<text:span text:style-name="T6307">TABL</text:span></text:p>
+       <text:p text:style-name="P5269">VFPTABL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1694.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2817"><text:span text:style-name="T6306">VFPTABL is a defined positive integer </text:span>that <text:span text:style-name="T6307">specifies the interpolation method to be used with the ALQ quantity in the VFP production tables, and should be set to one of the following:</text:span></text:p>
+       <text:p text:style-name="P2817">VFPTABL is a defined positive integer that specifies the interpolation method to be used with the ALQ quantity in the VFP production tables, and should be set to one of the following:</text:p>
        <text:list xml:id="list105922039938254" text:continue-list="list105921284824273" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P17123">Apply linear interpolation to all VFPPROD variables.</text:p>
@@ -4399,7 +4368,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1717">Notes:</text:p>
        <text:list xml:id="list105922838471786" text:continue-list="list105922824155057" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20103"><text:span text:style-name="T1534">T</text:span><text:span text:style-name="T2084">he keyword is followed by a vector of numbers separated by a space </text:span><text:span text:style-name="T2713">and </text:span><text:span text:style-name="T2711">the </text:span><text:span text:style-name="T2714">keyword is terminated by a “/”</text:span><text:span text:style-name="T2711">.</text:span></text:p>
+         <text:p text:style-name="P20103">The keyword is followed by a vector of numbers separated by a space and the keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4410,15 +4379,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14992">Table <text:sequence text:ref-name="refTable618" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.76</text:sequence>: <text:span text:style-name="T6307">VFPTABL Keyword Description</text:span></text:p>
-    <text:h text:style-name="P18685" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716701_3964674244"/><text:span text:style-name="T2764">E</text:span><text:span text:style-name="T2709">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc716701_3964674244"/></text:h>
-    <text:p text:style-name="P12003"><text:span text:style-name="T6307">T</text:span>he example sets <text:span text:style-name="T6307">cubic spline interpolation for the ALQ quantity in the VFPPROD tables, with linear interpolation used for all the variables.</text:span></text:p>
+    <text:p text:style-name="P14992">Table <text:sequence text:ref-name="refTable618" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.76</text:sequence>: VFPTABL Keyword Description</text:p>
+    <text:h text:style-name="P18685" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716701_3964674244"/>E<text:span text:style-name="T2709">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc716701_3964674244"/></text:h>
+    <text:p text:style-name="P12003">The example sets cubic spline interpolation for the ALQ quantity in the VFPPROD tables, with linear interpolation used for all the variables.</text:p>
     <text:p text:style-name="P14441">--</text:p>
-    <text:p text:style-name="P14441">-- <text:s text:c="6"/><text:span text:style-name="T6307">ALQ INTERPOLATION OPTION</text:span></text:p>
+    <text:p text:style-name="P14441">-- <text:s text:c="6"/>ALQ INTERPOLATION OPTION</text:p>
     <text:p text:style-name="P14441">--</text:p>
-    <text:p text:style-name="P14441">-- <text:s text:c="6"/><text:span text:style-name="T6307">OPTION</text:span> <text:s text:c="29"/></text:p>
-    <text:p text:style-name="P14441">VFP<text:span text:style-name="T6307">TABL</text:span> <text:s text:c="61"/></text:p>
-    <text:p text:style-name="P14441"><text:s text:c="9"/><text:span text:style-name="T6307">2</text:span> </text:p>
+    <text:p text:style-name="P14441">-- <text:s text:c="6"/>OPTION <text:s text:c="29"/></text:p>
+    <text:p text:style-name="P14441">VFPTABL <text:s text:c="61"/></text:p>
+    <text:p text:style-name="P14441"><text:s text:c="9"/>2 </text:p>
     <text:p text:style-name="P14210">/</text:p>
     
    </text:section>

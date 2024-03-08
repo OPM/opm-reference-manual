@@ -2693,9 +2693,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2789" style:family="text">
    <style:text-properties style:text-underline-style="none" officeooo:rsid="0c5cc42f"/>
   </style:style>
-  <style:style style:name="T6088" style:family="text">
-   <style:text-properties officeooo:rsid="0d1aa5ad"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3675,8 +3672,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4053,7 +4049,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="LOAD">
 
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc309839_2843394514"/>LOAD – Load a SAVE File for <text:span text:style-name="T6088">a </text:span>Fast Restart<text:bookmark-end text:name="__RefHeading___Toc309839_2843394514"/></text:h>
+<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc309839_2843394514"/>LOAD – Load a SAVE File for a Fast Restart<text:bookmark-end text:name="__RefHeading___Toc309839_2843394514"/></text:h>
     <table:table table:name="Table1330" table:style-name="Table1330">
      <table:table-column table:style-name="Table1330.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1330.E"/>
@@ -4087,7 +4083,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18359" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816230"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816230"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T6088">LOAD</text:span> keyword <text:span text:style-name="T6088">loads a previously generated SAVE file to enable a fast restart. A SAVE file contains all the data from a previous run’s RUNSPEC, GRID, EDIT, PROPS and REGIONS sections, and thus there is no need for the simulator to calculate various parameters, including grid block transmissibilities etc. This allows for the current run to restart quicker than a conventional restart run using the RESTART keyword in the SOLUTION section via a RESTART file (*.UNRST or *.FUNRST etc.). The keyword should be the first keyword in the input deck and the RUNSPEC, GRID, EDIT, PROPS and REGIONS sections should be deleted from the input deck.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The LOAD keyword loads a previously generated SAVE file to enable a fast restart. A SAVE file contains all the data from a previous run’s RUNSPEC, GRID, EDIT, PROPS and REGIONS sections, and thus there is no need for the simulator to calculate various parameters, including grid block transmissibilities etc. This allows for the current run to restart quicker than a conventional restart run using the RESTART keyword in the SOLUTION section via a RESTART file (*.UNRST or *.FUNRST etc.). The keyword should be the first keyword in the input deck and the RUNSPEC, GRID, EDIT, PROPS and REGIONS sections should be deleted from the input deck.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P10921"/>

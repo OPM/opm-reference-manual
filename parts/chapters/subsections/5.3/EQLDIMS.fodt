@@ -2813,36 +2813,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1534" style:family="text">
-   <style:text-properties style:text-position="0% 100%" officeooo:rsid="01c43302"/>
-  </style:style>
-  <style:style style:name="T2084" style:family="text">
-   <style:text-properties officeooo:rsid="00c4024a"/>
-  </style:style>
-  <style:style style:name="T2086" style:family="text">
-   <style:text-properties officeooo:rsid="022f5868"/>
-  </style:style>
-  <style:style style:name="T2087" style:family="text">
-   <style:text-properties officeooo:rsid="02308b45"/>
-  </style:style>
-  <style:style style:name="T2088" style:family="text">
-   <style:text-properties officeooo:rsid="02326d32"/>
-  </style:style>
-  <style:style style:name="T3975" style:family="text">
-   <style:text-properties officeooo:rsid="004069ac"/>
-  </style:style>
-  <style:style style:name="T4585" style:family="text">
-   <style:text-properties officeooo:rsid="02307c0f"/>
-  </style:style>
-  <style:style style:name="T4586" style:family="text">
-   <style:text-properties officeooo:rsid="0233744d"/>
-  </style:style>
-  <style:style style:name="T4673" style:family="text">
-   <style:text-properties officeooo:rsid="02edc23f"/>
-  </style:style>
-  <style:style style:name="T5234" style:family="text">
-   <style:text-properties officeooo:rsid="0788dc40"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -3874,8 +3844,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style>
-  </office:automatic-styles><office:master-styles>
+  </number:number-style></office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -4286,7 +4255,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683883"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683883"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T2086">EQL</text:span>DIMS keyword defines the maximum number <text:span text:style-name="T3975">of </text:span>properties <text:span text:style-name="T3975">associated</text:span> with <text:span text:style-name="T2086">equilibrating the model, that is initializing the model. A reservoir grid can be separated into separate regions in order to apply different pressure regimes and/or fluid contacts. <text:s/>Care should be taken that the different regions are not in communication if the pressures or fluid contacts are different for the various regions, as this would lead to an unstable initialization and would also imply errors in the model description as implemented.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The EQLDIMS keyword defines the maximum number of properties associated with equilibrating the model, that is initializing the model. A reservoir grid can be separated into separate regions in order to apply different pressure regimes and/or fluid contacts. <text:s/>Care should be taken that the different regions are not in communication if the pressures or fluid contacts are different for the various regions, as this would lead to an unstable initialization and would also imply errors in the model description as implemented.</text:p>
     <table:table table:name="Table219" table:style-name="Table219">
      <table:table-column table:style-name="Table219.A"/>
      <table:table-column table:style-name="Table219.B"/>
@@ -4314,7 +4283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3416">NTEQUL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.A2" office:value-type="string">
-       <text:p text:style-name="P3181"><text:span text:style-name="T2086">A positive integer value that d</text:span>efines the number of <text:span text:style-name="T2086">equilibration regions entered using the EQLNUM keyword in the REGIONS section and the number of entries associated with the EQUIL keyword in the SOLUTION section.</text:span></text:p>
+       <text:p text:style-name="P3181">A positive integer value that defines the number of equilibration regions entered using the EQLNUM keyword in the REGIONS section and the number of entries associated with the EQUIL keyword in the SOLUTION section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.D2" office:value-type="string">
        <text:p text:style-name="P3417">1</text:p>
@@ -4328,7 +4297,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3419">NPRSVD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.A2" office:value-type="string">
-       <text:p text:style-name="P3421"><text:span text:style-name="T5234">A positive</text:span> integer value setting the number of pressure versus depth entries used by OPM Flow in determining equilibration <text:span text:style-name="T4673">parameters.</text:span> </text:p>
+       <text:p text:style-name="P3421">A positive integer value setting the number of pressure versus depth entries used by OPM Flow in determining equilibration parameters. </text:p>
        <text:p text:style-name="P3422">Unless there is a requirement for a very fine equilibration this parameter should be defaulted. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.D2" office:value-type="string">
@@ -4343,7 +4312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3420">NDRXVD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.A2" office:value-type="string">
-       <text:p text:style-name="P3181"><text:span text:style-name="T2087">A positive integer value that d</text:span>efines the maximum <text:span text:style-name="T2087">number of depth entries in equilibration property versus depth tables (RSVD, RVVD, PBVD or PDVD etc.) as defined in the SOLUTION section.</text:span></text:p>
+       <text:p text:style-name="P3181">A positive integer value that defines the maximum number of depth entries in equilibration property versus depth tables (RSVD, RVVD, PBVD or PDVD etc.) as defined in the SOLUTION section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.D2" office:value-type="string">
        <text:p text:style-name="P3417">20</text:p>
@@ -4357,7 +4326,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3422">NTTRVD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.A5" office:value-type="string">
-       <text:p text:style-name="P3181"><text:span text:style-name="T2088">A positive integer that d</text:span>efines the maximum number of <text:span text:style-name="T2088">TVDP tables that describe the initial tracer concentration versus depth.</text:span></text:p>
+       <text:p text:style-name="P3181">A positive integer that defines the maximum number of TVDP tables that describe the initial tracer concentration versus depth.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.D5" office:value-type="string">
        <text:p text:style-name="P3417">1</text:p>
@@ -4371,7 +4340,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3422">NSTRVD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.A5" office:value-type="string">
-       <text:p text:style-name="P3421"><text:span text:style-name="T5234">A positive</text:span> integer that defines the maximum number of depth entries in the TVDP tables as described in (4)</text:p>
+       <text:p text:style-name="P3421">A positive integer that defines the maximum number of depth entries in the TVDP tables as described in (4)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table219.D5" office:value-type="string">
        <text:p text:style-name="P3423">20</text:p>
@@ -4385,7 +4354,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19936">NTEQUL is the exact number of entries must be entered on the EQUIL keyword, otherwise OPM Flow will report an error. It is not a maximum number as for the other region arrays.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19937"><text:span text:style-name="T1534">The keyword is terminated by a “/”</text:span><text:span text:style-name="T2084">.</text:span></text:p>
+         <text:p text:style-name="P19937">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4394,7 +4363,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable26" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.11</text:sequence>: <text:span text:style-name="T4585">EQLDIMS Keyword Description</text:span></text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable26" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.11</text:sequence>: EQLDIMS Keyword Description</text:p>
     <text:p text:style-name="P10921"/>
     <text:p text:style-name="P11179">It is common that the EQLNUM and FIPNUM arrays are identical so that the fluid in-place reporting matches the equilibration regions. Thus, in order to avoid errors in this case, one should just use one array (say the FIPNUM property array) and use the COPY keyword to generate the EQLNUM array. </text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683883"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683883"/></text:h>
@@ -4404,7 +4373,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13268"><text:soft-page-break/>EQLDIMS <text:s text:c="72"/></text:p>
     <text:p text:style-name="P13268"><text:s text:c="9"/>9 <text:s text:c="6"/>1* <text:s text:c="5"/>20 <text:s text:c="5"/>1* <text:s text:c="5"/>1* <text:s text:c="35"/>/ <text:s text:c="73"/></text:p>
     <text:p text:style-name="P15021"/>
-    <text:p text:style-name="P11126">The above example defines <text:span text:style-name="T4586">nine equilibration regions </text:span>the default values for the <text:span text:style-name="T4586">remaining parameters on the EQLDIMS keyword</text:span>. <text:s/></text:p>
+    <text:p text:style-name="P11126">The above example defines nine equilibration regions the default values for the remaining parameters on the EQLDIMS keyword. <text:s/></text:p>
     
    </text:section>
   </office:text>
