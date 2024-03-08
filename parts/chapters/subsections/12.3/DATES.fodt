@@ -4360,7 +4360,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table647.A2" office:value-type="string">
        <text:p text:style-name="P5115">A numeric character string that defines the time <text:span text:style-name="T2928">for the data set </text:span>in the form of:</text:p>
-       <text:p text:style-name="P5114">HH;MM:SS:SSSS</text:p>
+       <text:p text:style-name="P5114">HH:MM:SS.SSSS</text:p>
        <text:p text:style-name="P5116">The d<text:span text:style-name="T2928">efa</text:span>ult value <text:span text:style-name="T2928">means in most cases this parameter can be defaulted. TIME is normally used when detailed DST matching is performed to enable the pressures and rates to be stated at specific dates and times.</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table647.D2" office:value-type="string">
@@ -4386,7 +4386,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable561" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.19</text:sequence>: <text:span text:style-name="T2928">DATES Keyword Description</text:span></text:p>
     <text:p text:style-name="P11337"/>
-    <text:p text:style-name="P11570">Note that since OPM Flow uses the standard Gregorian calendar and therefore leap years are accounted for in the DATES keyword. Thus, it is more accurate to use the DATES keyword to progress the simulator through time if one is matching actual production data.</text:p>
+    <text:p text:style-name="P11570">Note that OPM Flow uses the standard Gregorian calendar and therefore leap years are accounted for in the DATES keyword. Thus, it is more accurate to use the DATES keyword to progress the simulator through time if one is matching actual production data.</text:p>
     <text:p text:style-name="P11342">See also the <text:span text:style-name="T6288">TIME and </text:span>TSTEP keyword<text:span text:style-name="T6288">s</text:span> in the <text:span text:style-name="T5159">SCHEDULE</text:span> section.</text:p>
     <text:p text:style-name="P11337">Whenever possible it is a good idea to always set the start date to be at the beginning of the year, as like most simulators, OPM Flow reports are always stated at the number of days from the start date (and sometimes at a given date). If the start date is at the beginning of the year, then calculating the actual date is relatively straight forward and simple.</text:p>
     <text:p text:style-name="P10921"/>
