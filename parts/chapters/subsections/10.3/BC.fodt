@@ -4571,8 +4571,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list xml:id="list105918777521634" text:continue-list="list105917364723722" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P17087">DIRICHLET: for a user defined boundary conditions. In this case, items (1) through (7) must be set, together with PHASE for the fluid type, and PRESS and TEMP for the constant pressure and temperature boundary conditions.</text:p>
-        </text:list-item>
-        <text:list-item>
          <text:p text:style-name="P17087">This option is currently not supported but will be available in the next release. <text:s/></text:p>
         </text:list-item>
         <text:list-item>
@@ -4608,11 +4606,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P17087">OIL: the oil phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17087">WATER or WAT: the waters phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
+         <text:p text:style-name="P17087">W<text:span text:style-name="T8069">ATER or WAT</text:span>:<text:span text:style-name="T8069"> </text:span><text:span text:style-name="T2931">the </text:span><text:span text:style-name="T8069">water phase will be used to control the boundary conditions for when the TYPE has been set to </text:span><text:span text:style-name="T5099">DIRICHLET</text:span><text:span text:style-name="T8069"> or RATE.</text:span></text:p>
         </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P17087">P<text:span text:style-name="T1">HASE must be declared if TYPE has be set to either </text:span>DIRICHLET<text:span text:style-name="T1"> or RATE.</text:span></text:p>
-        </text:list-item>
+         <text:p text:style-name="P17087">P<text:span text:style-name="T1">HASE must be declared if TYPE has been set to either </text:span>DIRICHLET<text:span text:style-name="T1"> or RATE.</text:span></text:p>
        </text:list>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4629,7 +4625,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2310">RATE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the constant surface oil, gas or water rate to be injected or withdrawn at the boundary, for when TYPE has bee set to RATE. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the <text:span text:style-name="T8068">constant </text:span>surface oil<text:span text:style-name="T8067">, gas or water rate</text:span><text:span text:style-name="T8068"> to be injected or withdrawn at the boundary, for when TYPE has been set to RATE. </text:span></text:p>
        <text:p text:style-name="_40_Table_20_Contents">Note a negative value implies an injection rate, whereas, a positive value indicates a withdrawal rate. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4642,16 +4638,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2227.C2" office:value-type="string">
-       <text:p text:style-name="P4864">Liquid: stb </text:p>
-       <text:p text:style-name="P4864">Gas: Mscf</text:p>
+       <text:p text:style-name="P4864">Liquid: stb/day</text:p>
+       <text:p text:style-name="P4864">Gas: Mscf/day</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" office:value-type="string">
-       <text:p text:style-name="P4864">Liquid: sm<text:span text:style-name="T3853">3</text:span> </text:p>
-       <text:p text:style-name="P4864">Gas: sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P4864">Liquid: sm<text:span text:style-name="T3853">3</text:span>/day</text:p>
+       <text:p text:style-name="P4864">Gas: sm<text:span text:style-name="T3853">3</text:span>/day</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" office:value-type="string">
-       <text:p text:style-name="P4864">Liquid: scc </text:p>
-       <text:p text:style-name="P4864">Gas: scc</text:p>
+       <text:p text:style-name="P4864">Liquid: scc/hr</text:p>
+       <text:p text:style-name="P4864">Gas: scc/hr</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
