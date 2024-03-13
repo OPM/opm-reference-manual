@@ -23,13 +23,20 @@ flow. Each keyword is described in its
 own LibreOffice file and referenced as an external link in the subsection file.
 An example of such a file is `parts/chapters/subsections/4.3/COLUMNS.fodt`.
 
-## Editing the manual
+## Editing the manual/Submitting PRs
 
 Note that any document containing links to external documents should never be
 edited directly. If such a document would be saved then LibreOffice would
 remove all the links to the external documents and instead embed those documents
 into the document that is edited. This would break the above described
 structure.
+
+Make sure to disable document comparison mode in LibreOffice. Since we already
+use version control with Git, it would make editing the documents more difficult
+if LibreOffice saved version information into the files also. The option can be
+disabled in LibreOffice by choosing the menu item Tools → Options → LibreOffice Writer → Comparison and then uncheck the box "Store it when changing the document", see [screenshot](assets/option-doc-comparison-store-it-when-changing-the-document.png).
+
+
 
 ## Exporting the manual as PDF
 
