@@ -2981,9 +2981,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T4124" style:family="text">
    <style:text-properties style:text-position="sub 58%" fo:language="en" fo:country="US"/>
   </style:style>
-  <style:style style:name="T7520" style:family="text">
-   <style:text-properties officeooo:rsid="16c83a1f"/>
-  </style:style>
   <style:style style:name="T7526" style:family="text">
    <style:text-properties fo:font-size="7pt" style:font-size-asian="7pt" style:font-size-complex="7pt"/>
   </style:style>
@@ -4433,7 +4430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
     <text:p text:style-name="P12749"><text:span text:style-name="T1">PVTSOL defines the live oil PVT properties as a function of CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1"> mass fraction. The keyword automatically invokes the simulator’s </text:span>CO2 Dynamic EOR Model<text:note text:id="ftn223" text:note-class="footnote"><text:note-citation>223</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote"><text:span text:style-name="T7520">T</text:span>. H. Sandve, O. Sævareid and I. Aavatsmark: “Improved Extended Blackoil Formulation -- <text:s/>for CO2 EOR Simulations.” in ECMOR XVII – The 17th European Conference on the -- Mathematics of Oil Recovery, <text:s/>September 2020. <text:s text:c="4"/></text:p></text:note-body></text:note>,<text:span text:style-name="T1"> that uses a fourth component to model the injected CO</text:span><text:span text:style-name="T4124">2.</text:span><text:span text:style-name="T1763">, for use in evaluating CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> Enhanced Oil Recovery (“EOR”) projects. Normally CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> EOR projects are evaluated via compositional simulators to account for the mass transfer of the various components and phases. Unfortunately, compositional models are computationally expensive compared to the black-oil approach, which for field studies is challenging, especially if an ensemble approach is being used to capture the uncertainties. Previous extended black-oil formulations often poorly represent the PVT properties of the oil-CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> mixtures, resulting in poor agreement with the compositional formulation. </text:span></text:p>
+        <text:p text:style-name="Footnote">T. H. Sandve, O. Sævareid and I. Aavatsmark: “Improved Extended Blackoil Formulation -- <text:s/>for CO2 EOR Simulations.” in ECMOR XVII – The 17th European Conference on the -- Mathematics of Oil Recovery, <text:s/>September 2020. <text:s text:c="4"/></text:p></text:note-body></text:note>,<text:span text:style-name="T1"> that uses a fourth component to model the injected CO</text:span><text:span text:style-name="T4124">2.</text:span><text:span text:style-name="T1763">, for use in evaluating CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> Enhanced Oil Recovery (“EOR”) projects. Normally CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> EOR projects are evaluated via compositional simulators to account for the mass transfer of the various components and phases. Unfortunately, compositional models are computationally expensive compared to the black-oil approach, which for field studies is challenging, especially if an ensemble approach is being used to capture the uncertainties. Previous extended black-oil formulations often poorly represent the PVT properties of the oil-CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> mixtures, resulting in poor agreement with the compositional formulation. </text:span></text:p>
     <text:p text:style-name="P12747">To overcome the limitations of the standard four component black-oil formulation, OPM Flow uses an improved extended black-oil formulation, the CO2 Dynamic EOR Model, with the black-oil properties dependent on the fraction of CO2 in the cell, as described by the PVTSOL keyword. This approach models the oil-CO2 mixture more accurately and thus give results closer to the compositional simulator. Data for the keyword should normally be derived from laboratory or numerical slim-tube experiments based on one-dimensional compositional Equation Of State (“EOS”) simulations. </text:p>
     <text:p text:style-name="P12747">Note, if this keyword is absent from the input deck then the CO2 Standard EOR Model is used instead.</text:p>
     <text:p text:style-name="P15928"/>
@@ -4677,7 +4674,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4792">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2329.D2" office:value-type="string">
-       <text:p text:style-name="P4792"><text:span text:style-name="T4908"></text:span>scc/scc</text:p>
+       <text:p text:style-name="P4792"><text:span text:style-name="T4908"/>scc/scc</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
