@@ -4674,9 +4674,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8880">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2247.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8870">A <text:span text:style-name="T8139">series</text:span> <text:span text:style-name="T8139">of real positive vectors</text:span> <text:span text:style-name="T8139">representing the </text:span><text:span text:style-name="T8143">wellbore skin pressure, for the given reference polymer concentration (POLCON),</text:span> for all combinations of the polymer throughput values (OUTPUT) and velocity values (VELOCITY)<text:span text:style-name="T8139">, organized as a series of vectors </text:span><text:span text:style-name="T8145">PRESS</text:span><text:span text:style-name="T8139">(OUTPUT,</text:span><text:span text:style-name="T8143"> </text:span><text:span text:style-name="T8139">VELOCITY).</text:span></text:p>
-       <text:p text:style-name="P8870"><text:span text:style-name="T8139">Thus, the first vector represents the </text:span><text:span text:style-name="T8143">wellbore skin pressure</text:span><text:span text:style-name="T8139"> of the first OUTPUT value and each entry in the vector is the corresponding </text:span><text:span text:style-name="T8143">wellbore skin pressure</text:span><text:span text:style-name="T8139"> of the associated VELOCITY vector. Each vector should be on a separate line and should be terminated</text:span><text:span text:style-name="T1595"> by a “/”</text:span><text:span text:style-name="T2057">.</text:span></text:p>
-       <text:p text:style-name="P8877"><text:span text:style-name="T1533">T</text:span><text:span text:style-name="T2059">hus</text:span><text:span text:style-name="T1533">, if OUTPUT has three entries and VELOCITY has four, then there should be three vectors, with each vector containing four elements representing </text:span><text:span text:style-name="T2060">wellbore skin pressure</text:span><text:span text:style-name="T1533"> values</text:span><text:span text:style-name="T2059">, as a function of OUTPUT and VELOCITY</text:span><text:span text:style-name="T1533">.</text:span></text:p>
+       <text:p text:style-name="P8870">A <text:span text:style-name="T8139">series</text:span> <text:span text:style-name="T8139">of real positive vectors</text:span> <text:span text:style-name="T8139">representing the </text:span><text:span text:style-name="T8143">wellbore skin pressure, for the given reference polymer concentration (POLCON),</text:span> for all combinations of the polymer throughput values (THRUPUT) and velocity values (VELOCITY)<text:span text:style-name="T8139">, organized as a series of vectors </text:span><text:span text:style-name="T8145">PRESS</text:span><text:span text:style-name="T8139">(THRUPUT,</text:span><text:span text:style-name="T8143"> </text:span><text:span text:style-name="T8139">VELOCITY).</text:span></text:p>
+       <text:p text:style-name="P8870"><text:span text:style-name="T8139">Thus, the first vector represents the </text:span><text:span text:style-name="T8143">wellbore skin pressure</text:span><text:span text:style-name="T8139"> of the first THRUPUT value and each entry in the vector is the corresponding </text:span><text:span text:style-name="T8143">wellbore skin pressure</text:span><text:span text:style-name="T8139"> of the associated VELOCITY vector. Each vector should be on a separate line and should be terminated</text:span><text:span text:style-name="T1595"> by a “/”</text:span><text:span text:style-name="T2057">.</text:span></text:p>
+       <text:p text:style-name="P8877"><text:span text:style-name="T1533">T</text:span><text:span text:style-name="T2059">hus</text:span><text:span text:style-name="T1533">, if THRUPUT has three entries and VELOCITY has four, then there should be three vectors, with each vector containing four elements representing </text:span><text:span text:style-name="T2060">wellbore skin pressure</text:span><text:span text:style-name="T1533"> values</text:span><text:span text:style-name="T2059">, as a function of THRUPUT and VELOCITY</text:span><text:span text:style-name="T1533">.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4732,7 +4732,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13351">-- <text:s text:c="6"/>NO. <text:s text:c="4"/>CONCENTRATION </text:p>
     <text:p text:style-name="P13351"><text:s text:c="9"/>1 <text:s text:c="6"/>2.00 <text:s text:c="17"/>/</text:p>
     <text:p text:style-name="P13351">-- <text:s/></text:p>
-    <text:p text:style-name="P13351">-- <text:s text:c="6"/>OUTPUT THROUGHPUT VALUES <text:s text:c="31"/></text:p>
+    <text:p text:style-name="P13351">-- <text:s text:c="6"/>THRUPUT THROUGHPUT VALUES <text:s text:c="31"/></text:p>
     <text:p text:style-name="P13351">--</text:p>
     <text:p text:style-name="P13351"><text:s text:c="9"/>0.0 <text:s text:c="4"/>200.0 <text:s text:c="2"/>400.0 <text:s text:c="8"/>/ </text:p>
     <text:p text:style-name="P13351">--</text:p>
@@ -4742,16 +4742,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13351">--</text:p>
     <text:p text:style-name="P13351">-- <text:s text:c="6"/>PRESS SKIN VALUES</text:p>
     <text:p text:style-name="P13351">--</text:p>
-    <text:p text:style-name="P13351"><text:s text:c="9"/>0.0 <text:s text:c="4"/>10.0 <text:s text:c="3"/>20.0 <text:s text:c="3"/>40.0 <text:s/>/ P<text:span text:style-name="T8145">RESS</text:span>(OUTPUT=1, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / P<text:span text:style-name="T8145">RESS</text:span>(OUTPUT=2, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>100.0 <text:s text:c="2"/>200.0 <text:s text:c="2"/>400.0 / P<text:span text:style-name="T8145">RESS</text:span>(OUTPUT=3, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13351"><text:s text:c="9"/>0.0 <text:s text:c="4"/>10.0 <text:s text:c="3"/>20.0 <text:s text:c="3"/>40.0 <text:s/>/ P<text:span text:style-name="T8145">RESS</text:span>(THRUPUT=1, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / P<text:span text:style-name="T8145">RESS</text:span>(THRUPUT=2, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>100.0 <text:s text:c="2"/>200.0 <text:s text:c="2"/>400.0 / P<text:span text:style-name="T8145">RESS</text:span>(THRUPUT=3, VELOCITY=1 TO N)</text:p>
     <text:p text:style-name="P13351">/</text:p>
     <text:p text:style-name="P13351">SKPRPOLY</text:p>
     <text:p text:style-name="P13351">-- <text:s text:c="6"/>TABLE <text:s text:c="2"/>POLYMER REF</text:p>
     <text:p text:style-name="P13351">-- <text:s text:c="6"/>NO. <text:s text:c="4"/>CONCENTRATION </text:p>
     <text:p text:style-name="P13351"><text:s text:c="9"/>2 <text:s text:c="6"/>2.0 <text:s text:c="18"/>/ </text:p>
     <text:p text:style-name="P13351">-- <text:s/></text:p>
-    <text:p text:style-name="P13351">-- <text:s text:c="6"/>OUTPUT THROUGHPUT VALUES</text:p>
+    <text:p text:style-name="P13351">-- <text:s text:c="6"/>THRUPUT THROUGHPUT VALUES</text:p>
     <text:p text:style-name="P13351">--</text:p>
     <text:p text:style-name="P13351"><text:s text:c="9"/>0.0 <text:s text:c="4"/>200.0 <text:s text:c="2"/>400.0 <text:s text:c="8"/>/ </text:p>
     <text:p text:style-name="P13351">--</text:p>
@@ -4761,9 +4761,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13351">--</text:p>
     <text:p text:style-name="P13351">-- <text:s text:c="6"/>PRESS SKIN VALUES</text:p>
     <text:p text:style-name="P13351">--</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>10.0 <text:s text:c="3"/>20.0 <text:s text:c="3"/>40.0 <text:s/>/ P<text:span text:style-name="T8145">RESS</text:span>(OUTPUT=1, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / P<text:span text:style-name="T8145">RESS</text:span>(OUTPUT=2, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>100.0 <text:s text:c="2"/>200.0 <text:s text:c="2"/>400.0 / P<text:span text:style-name="T8145">RESS</text:span>(OUTPUT=3, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>10.0 <text:s text:c="3"/>20.0 <text:s text:c="3"/>40.0 <text:s/>/ P<text:span text:style-name="T8145">RESS</text:span>(THRUPUT=1, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / P<text:span text:style-name="T8145">RESS</text:span>(THRUPUT=2, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>100.0 <text:s text:c="2"/>200.0 <text:s text:c="2"/>400.0 / P<text:span text:style-name="T8145">RESS</text:span>(THRUPUT=3, VELOCITY=1 TO N)</text:p>
     <text:p text:style-name="P13351">/ <text:s text:c="8"/></text:p>
     <text:p text:style-name="P13351"><text:s text:c="6"/></text:p>
     <text:p text:style-name="P11680">As mentioned previously, the <text:span text:style-name="T8143">SKPRPOLY</text:span> keyword requires that the keyword itself must be repeated for each table, as is shown in the above example.</text:p>
