@@ -36,7 +36,7 @@ use version control with Git, it would make editing the documents more difficult
 if LibreOffice saved version information into the files also. The option can be
 disabled in LibreOffice by choosing the menu item Tools → Options → LibreOffice Writer → Comparison and then uncheck the box "Store it when changing the document", see [screenshot](assets/option-doc-comparison-store-it-when-changing-the-document.png).
 
-
+Please note that this setting might influence your whole LibreOffice experience as it is used whenever you open LibreOffice. If you do not want that then you will need to set it back after editing the manual.
 
 ## Exporting the manual as PDF
 
