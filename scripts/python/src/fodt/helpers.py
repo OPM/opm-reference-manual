@@ -31,6 +31,28 @@ class Helpers:
         return backup_file
 
     @staticmethod
+    def derive_maindir_from_filename(filename: str) -> Path:
+        """filename is a assumed to be an aboslute path to file inside maindir or
+        subdirectories of maindir."""
+        filename = Path(filename)
+        assert filename.is_absolute()
+        # Search parent directories for main.fodt in a directory called "parts"
+        while True:
+            # Check if we have reached the root directory
+            #  filename.parent == filename is True if filename is the root directory
+            if filename.parent == filename:
+                raise FileNotFoundError(f"Could not derive maindir from filename: "
+                      f"Could not find '{FileNames.main_document}' in a directory "
+                      f"called '{Directories.parts}' by searching the parent "
+                      f"directories of filename."
+                )
+            if filename.parent.name == Directories.parts:
+                if (filename.parent / FileNames.main_document).exists():
+                    return filename.parent
+            filename = filename.parent
+        # This should never be reached
+
+    @staticmethod
     def get_keyword_dir(keyword_dir: str) -> str:
         if keyword_dir is None:
             try_path = Path('../keyword-names')
@@ -74,6 +96,32 @@ class Helpers:
     @staticmethod
     def keywords_inverse_map(keyw_list: list[str]) -> dict[str, int]:
         return {keyw_list[i]: i + 1 for i in range(len(keyw_list))}
+
+
+    @staticmethod
+    def locate_maindir_and_filename(
+        maindir: str,
+        filename: str
+    ) -> tuple[Path, Path]:
+        """filename is assumed to be a file in maindir or a file in one of its
+        subdirectories."""
+        filename = Path(filename)
+        maindir = Path(maindir)  # maindir can be absolute or relative
+        # If filename is an absolute path, ignore maindir
+        if filename.is_absolute():
+            assert filename.exists()
+            maindir = Helpers.derive_maindir_from_filename(filename)
+            return maindir, Path(filename)
+        else:
+            # Try to find filename by concatenating maindir and filename
+            filename = maindir / filename
+            if filename.exists():
+                return maindir, filename
+            # If not found, search for filename relative to the current working directory
+            filename = Path.cwd() / filename
+            if filename.exists():
+                maindir = Helpers.derive_maindir_from_filename(filename)
+                return maindir, filename
 
     @staticmethod
     def read_keyword_order(outputdir: Path, chapter: int, section: int) -> list[str]:
