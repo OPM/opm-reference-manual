@@ -4516,8 +4516,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8744">CHOKE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1904.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8743">CHOKE is a defined character string that sets if the upstream branch from this node should have the capability to choke back the flow rate in order impose a flow constraint.</text:p>
-       <text:p text:style-name="P8993">Here the upstream branch that is the node furthermost from the wells. Thus for a production network, <text:s/>this will be an outlet branch as the wells are exporting fluid from the branch node. Wheres as for an injection node, this is inlet branch as the well’s are importing the injection fluid.</text:p>
+       <text:p text:style-name="P8743">CHOKE is a defined character string that sets if the downstream branch (or uptree branch, being the one closer towards the terminal node) from this node should have the capability to choke back the flow rate in order impose a flow constraint.</text:p>
+       <text:p text:style-name="P8993">Here the downstream branch is the node furthermost from the wells. Thus for a production network, <text:s/>this will be an outlet branch as the wells are exporting fluid from the branch node. Whereas for an injection node, this is an inlet branch as the wells are importing the injection fluid.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4537,10 +4537,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8994">A defined character string that sets if the associated subordinate well’s produced gas lift gas should be included in the node’s flow stream (YES), or not (NO). <text:s/>GASLIFT should be set to either:</text:p>
        <text:list xml:id="list105920451409501" text:continue-list="list105920709201235" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20161"><text:span text:style-name="T1">NO: Do not include gas lift gas in the nodes production. </text:span>This means that <text:span text:style-name="T1">only </text:span>the <text:span text:style-name="T1">produced gas </text:span>from the nodes subordinate wells <text:span text:style-name="T1">will be included in the nodes production stream.</text:span></text:p>
+         <text:p text:style-name="P20161"><text:span text:style-name="T1">NO: Do not include gas lift gas in the node&apos;s production. </text:span>This means that <text:span text:style-name="T1">only </text:span>the <text:span text:style-name="T1">produced gas </text:span>from the node&apos;s subordinate wells <text:span text:style-name="T1">will be included in the node&apos;s production stream.</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20163">YES: Include both gas lift gas in and produced gas in the nodes production. This means that all gas from the subordinate wells will be included in the nodes production stream.</text:p>
+         <text:p text:style-name="P20163">YES: Include both gas lift gas and produced gas in the node&apos;s production. This means that all gas from the subordinate wells will be included in the node&apos;s production stream.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="Table_20_Contents">If NODE does not have any subordinate wells or satellite groups (see the <text:s/>GSATPROD keyword in the SCHEDULE section) directly attached to the node, then GASLIFT should be defaulted (1*) or set to NO. <text:s/>The option is only valid for producing networks</text:p>
@@ -4560,7 +4560,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1904.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P9018">A character string of up to eight characters in length that defines the group for which the automatic choke will be applied in order to match the group’s target rate (the TARGET variable on the GCONPROD keyword in the SCHEDULE section). The target rate is matched by adjusting the pressure drops across the automatic choke.</text:p>
-       <text:p text:style-name="P9019">The default value of 1* uses NODE (item one) as the group if it exists in the run. In addition, if NODE is just connected to subordinate wells than GROUP should also be defaulted.</text:p>
+       <text:p text:style-name="P9019">The default value of 1* uses NODE (item one) as the group if it exists in the run. In addition, if NODE is just connected to subordinate wells then GROUP should also be defaulted.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
