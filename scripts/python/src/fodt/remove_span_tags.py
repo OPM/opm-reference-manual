@@ -9,6 +9,7 @@ from pathlib import Path
 import click
 
 from fodt.constants import ClickOptions
+from fodt.helpers import Helpers
 from fodt.xml_helpers import XMLHelper
 
 class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
@@ -346,4 +347,5 @@ def remove_version_span_tags(
 ) -> None:
     """Remove version span tags from all .fodt subdocuments."""
     logging.basicConfig(level=logging.INFO)
+    maindir, filename = Helpers.locate_maindir_and_filename(maindir, filename)
     RemoveSpanTags(maindir, filename, max_files).remove_span_tags()
