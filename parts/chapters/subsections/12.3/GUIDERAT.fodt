@@ -4660,7 +4660,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881917"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881917"/></text:h>
-    <text:p text:style-name="P11850">This keyword defines a general formulae used to define a group’s and well’s guide rate as a function of the their potential. <text:s/>The default behavior, that is when this keyword is not invoked, <text:s/>is to set the target control mode and rate via the GCONCON keyword in the SCHEDULE section. <text:s/>In this case the target rate is distributed between the group’s wells that are under group control using a well’s guide rate. If a well’s guide rate has not been defined, for example by this keyword, then the well potential of the group controlling phase at the beginning of the time step is used. <text:s/>For example, if the group target rate and phase is oil, then the well’s under group control will have their oil rates determined by their oil rate potential<text:note text:id="ftn309" text:note-class="footnote"><text:note-citation>309</text:note-citation><text:note-body>
+    <text:p text:style-name="P11850">This keyword defines a general formulae used to define a group’s and well’s guide rate as a function of the their potential. <text:s/>The default behavior, that is when this keyword is not invoked, <text:s/>is to set the target control mode and rate via the GCONPROD keyword in the SCHEDULE section. <text:s/>In this case the target rate is distributed between the group’s wells that are under group control using a well’s guide rate. If a well’s guide rate has not been defined, for example by this keyword, then the well potential of the group controlling phase at the beginning of the time step is used. <text:s/>For example, if the group target rate and phase is oil, then the well’s under group control will have their oil rates determined by their oil rate potential<text:note text:id="ftn309" text:note-class="footnote"><text:note-citation>309</text:note-citation><text:note-body>
         <text:p text:style-name="P16676"><text:span text:style-name="T6985">Production and injection potentials are based on rates that are unrestricted. For wells this implies that well potential is calculated based on either the BHP or THP limit, which ever is the more </text:span><text:span text:style-name="T6782">constraining</text:span><text:span text:style-name="T6985">.</text:span></text:p></text:note-body></text:note>. The GUIDERAT keyword substitutes the potential calculation with a more general formulae in the aforementioned distribution and allocation of the rates:</text:p>
     <table:table table:name="Table802" table:style-name="Table802">
      <table:table-column table:style-name="Table802.A"/>
@@ -4684,7 +4684,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                   <mo fence="true" stretchy="false">(</mo>
                   <mrow>
                    <msub>
-                    <mi mathvariant="italic">Potental</mi>
+                    <mi mathvariant="italic">Potential</mi>
                     <mi mathvariant="italic">Phase</mi>
                    </msub>
                   </mrow>
@@ -4845,7 +4845,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P16496">Where:</text:p>
     <text:p text:style-name="P16575"><text:span text:style-name="T4001">Potential</text:span><text:span text:style-name="T4092">Phase</text:span><text:tab/><text:tab/>= the potential of the phase,</text:p>
-    <text:p text:style-name="P16575"><text:span text:style-name="T4001">A to F</text:span><text:tab/><text:tab/>= constants define on this keyword,</text:p>
+    <text:p text:style-name="P16575"><text:span text:style-name="T4001">A to F</text:span><text:tab/><text:tab/>= constants defined on this keyword,</text:p>
     <text:p text:style-name="P16575"><text:span text:style-name="T4001">Potential Ratio</text:span><text:span text:style-name="T4192">1</text:span><text:span text:style-name="T1533"><text:tab/>= the potential phase ratio as defined by this keyword, </text:span></text:p>
     <text:p text:style-name="P16575"><text:span text:style-name="T4001">Potential Ratio</text:span><text:span text:style-name="T4192">2</text:span><text:span text:style-name="T1533"><text:tab/>= the potential phase ratio as defined by this keyword.</text:span></text:p>
     <text:p text:style-name="Text_20_body"/>
@@ -4946,10 +4946,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19695">RES: here the potential phase guide rate is defined as the reservoir fluid volume rate and the Potential Ratio1 variable is the water-oil ratio (“WOR”) and Potential Ratio2 refers to the gas-oil ratio (“GOR”) in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref>.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19703"><text:span text:style-name="T1107">COMB: this option is uses the linearly combined phase guide rate based on the values entered on the LINCOM keyword in the SCHEDULE section. Here the </text:span><text:span text:style-name="T619">Potential Ratio</text:span><text:span text:style-name="T4135">1</text:span> <text:span text:style-name="T1107">variable </text:span>is <text:span text:style-name="T1107">the water divided by linearly combined phase and </text:span><text:span text:style-name="T619">Potential Ratio</text:span><text:span text:style-name="T4135">2</text:span> <text:span text:style-name="T1107">refers to the gas divided by linearly combined phase in equation </text:span><text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref><text:span text:style-name="T1107">. </text:span>This option is not available in OPM Flow.</text:p>
+         <text:p text:style-name="P19703"><text:span text:style-name="T1107">COMB: this option uses the linearly combined phase guide rate based on the values entered on the LINCOM keyword in the SCHEDULE section. Here the </text:span><text:span text:style-name="T619">Potential Ratio</text:span><text:span text:style-name="T4135">1</text:span> <text:span text:style-name="T1107">variable </text:span>is <text:span text:style-name="T1107">the water divided by linearly combined phase and </text:span><text:span text:style-name="T619">Potential Ratio</text:span><text:span text:style-name="T4135">2</text:span> <text:span text:style-name="T1107">refers to the gas divided by linearly combined phase in equation </text:span><text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref><text:span text:style-name="T1107">. </text:span>This option is not available in OPM Flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19696">NONE: the Phase Guide Rate calculation is switch off and the well guides rates revert to the well potentials of their group target phase.</text:p>
+         <text:p text:style-name="P19696">NONE: the Phase Guide Rate calculation is switched off and the well guide rates revert to the well potentials of their group target phase.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P881">For reference, the units for the various options is given below .</text:p>
@@ -5056,7 +5056,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9117">D</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table803.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7693">D is a real value greater than or equal to -3 and less than or equal to 3, that defines coefficient A in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref>.</text:p>
+       <text:p text:style-name="P7693">D is a real value greater than or equal to -3 and less than or equal to 3, that defines coefficient D in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5088,7 +5088,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8733">F</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table803.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7693">D is a real value greater than or equal to -3 and less than or equal to 3, that defines coefficient A in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref>.</text:p>
+       <text:p text:style-name="P7693">F is a real value greater than or equal to -3 and less than or equal to 3, that defines coefficient F in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5110,7 +5110,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19645">NO: The phase guide rates calculated from equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref><text:s/>are not allowed to increase above the current value, and will be reset to the current value if the calculated value does exceed the current value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19647">Y<text:span text:style-name="T1938">ES: </text:span>The phase guide rates calculated from equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref><text:s/><text:span text:style-name="T1938">are allowed to increase a</text:span>t<text:span text:style-name="T1938"> each calculation. This may increase the propensity for oscillations in the rates if if the water cut and GOR are rate dependent.</text:span></text:p>
+         <text:p text:style-name="P19647">Y<text:span text:style-name="T1938">ES: </text:span>The phase guide rates calculated from equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref><text:s/><text:span text:style-name="T1938">are allowed to increase a</text:span>t<text:span text:style-name="T1938"> each calculation. This may increase the propensity for oscillations in the rates if the water cut and GOR are rate dependent.</text:span></text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P2543">Note only the default value is currently supported by OPM Flow.</text:p>
@@ -5424,7 +5424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable589" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.47</text:sequence>: GUIDERAT Keyword Description</text:p>
     <text:p text:style-name="P15878"/>
-    <text:p text:style-name="P15880">Note that the GUIDERAT keyword only applies to production groups and wells, injection groups and wells are still control by their potential guide rates.</text:p>
+    <text:p text:style-name="P15880">Note that the GUIDERAT keyword only applies to production groups and wells. Injection groups and wells are still controlled by their potential guide rates.</text:p>
     <text:p text:style-name="P15880"/>
     <text:p text:style-name="P16048">Finally, as mentioned previously, if the GUIDERAT or WGRUPCON keywords are not present in the input deck then the group and well potential guide rates will be calculated using the well’s potential rates. The WGRUPCON keyword in the SCHEDULE section can be used to set a constant potential guide rate for a well.</text:p>
     <table:table table:name="Table804" table:style-name="Table804">
@@ -5434,7 +5434,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table804.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
         <text:p text:style-name="P10382">GUIDERAT can be used to penalize wells producing excessive water by utilizing the C and D coefficients in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText219">(12.28)</text:sequence-ref>, and to discriminate against wells that are gassing out by setting the E and F coefficients. </text:p>
-        <text:p text:style-name="P10383">Note that the value range through which Potential Ratio1 and Potential Ratio2 vary is variable. For example, if Potential Ratio1 is water cut, <text:s/>then the value should be between zero and one, whereas for the water-oil ratio the value can vary between zero and infinity. The same applies to the units of Potential Ratio2 which are on dependent on if the GOR, GLR or OGR ratio is used in the calculation. </text:p>
+        <text:p text:style-name="P10383">Note that the value range through which Potential Ratio1 and Potential Ratio2 vary is variable. For example, if Potential Ratio1 is water cut, <text:s/>then the value should be between zero and one, whereas for the water-oil ratio the value can vary between zero and infinity. The same applies to the units of Potential Ratio2 which are dependent on if the GOR, GLR or OGR ratio is used in the calculation. </text:p>
         <text:p text:style-name="P10383">One can use the C and E coefficients to scale these terms to the required relative magnitudes in the denominator and the D and F powers to influence how quickly the penalty increases with increasing water and gas fractions. <text:s/>High positive value for D and F coefficients will make production fall off rapidly as the water or gas fraction increases, while a negative values will favor producing these type of wells.</text:p>
         <text:p text:style-name="P10383">Note that the B coefficient should always be positive to prevent the denominator&apos;s going to zero. </text:p>
         <text:p text:style-name="P10383">Finally, if one wishes each well to produce in proportion to its potential when the water fraction and gas fraction are equal (the usual case), then the A coefficient should be set to one.</text:p>
@@ -5986,7 +5986,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14468">-- <text:s text:c="6"/>TIME <text:s/>GUIDE <text:s/>A <text:s text:c="5"/>B <text:s text:c="4"/>C <text:s text:c="4"/>D <text:s text:c="4"/>E <text:s text:c="3"/>F <text:s text:c="4"/>INCR <text:s text:c="2"/>DAMP <text:s text:c="2"/>FREE <text:s text:c="5"/></text:p>
     <text:p text:style-name="P14468">-- <text:s text:c="6"/>STEP <text:s/>PHASE <text:s/>POW <text:s text:c="3"/>CON <text:s text:c="2"/>CON <text:s text:c="2"/>POW <text:s text:c="2"/>CON <text:s/>POW <text:s text:c="2"/>OPTN <text:s text:c="2"/>OPTN <text:s text:c="2"/>GAS <text:s text:c="6"/></text:p>
     <text:p text:style-name="P14468">GUIDERAT <text:s text:c="9"/></text:p>
-    <text:p text:style-name="P14468"><text:s text:c="9"/>1* <text:s text:c="3"/>&apos;OIL&apos; <text:s/>1.0 <text:s text:c="3"/>1.0 <text:s text:c="3"/>1* <text:s text:c="2"/>1* <text:s text:c="3"/>10 <text:s text:c="2"/>2 <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="5"/>/</text:p>
+    <text:p text:style-name="P14468"><text:s text:c="9"/>1* <text:s text:c="3"/>&apos;RES&apos; <text:s/>1.0 <text:s text:c="3"/>1.0 <text:s text:c="3"/>1* <text:s text:c="2"/>1* <text:s text:c="3"/>10 <text:s text:c="2"/>2 <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="5"/>/</text:p>
     <text:p text:style-name="P11867"/>
     <text:p text:style-name="P11867">The GUIDERAT keyword is very flexible but can also lead to unexpected results, thus it is probably useful to perform some manual calculations outside of the simulator before implementing the selected scheme in the input deck.</text:p>
     

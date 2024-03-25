@@ -4410,7 +4410,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716897_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716897_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WTEST keyword outlined the testing procedures to be applied to wells that are closed for various reason to see if the wells are capable flowing under the current operating conditions. The keyword can be <text:s/>applied to single wells or groups of wells.</text:p>
+    <text:p text:style-name="_40_TextBody">The WTEST keyword outlines the testing procedures to be applied to wells that are closed for various reason to see if the wells are capable flowing under the current operating conditions. The keyword can be <text:s/>applied to single wells or groups of wells.</text:p>
     <table:table table:name="Table708" table:style-name="Table708">
      <table:table-column table:style-name="Table708.A"/>
      <table:table-column table:style-name="Table708.B"/>
@@ -4519,7 +4519,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19686">If a well has no open connections, then those that have been closed due to economic limit test (<text:span text:style-name="T2110">“</text:span>ELT<text:span text:style-name="T2110">”</text:span>), then ALL such connections are individually tested and reopened if they meet the ELT criteria <text:span text:style-name="T2110">as defined by</text:span> the WECON, CECON and WECONINJ keywords in the SCHEDULE section. And the well is opened if there is at least one open connection. Where the ELT applies to ORAT, GRAT, WCUT, GOR and WGR etc.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19537">G: meaning the well was closed due to a group economic constraint, as per the GECON, GECONT, GCONCAL, GCONPRI, GCONPRPD, and GCONSALE, keywords in the SCHEDULE section, then the well is tested to see if it can flow, if it can, then it is put back on production, otherwise it remains closed. </text:p>
+         <text:p text:style-name="P19537">G: meaning the well was closed due to a group economic constraint, as per the GECON, GECONT, GCONCAL, GCONPRI, GCONPROD, and GCONSALE, keywords in the SCHEDULE section, then the well is tested to see if it can flow, if it can, then it is put back on production, otherwise it remains closed. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19538"><text:soft-page-break/>D: <text:s/>not used by OPM Flow.</text:p>
@@ -4562,7 +4562,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8266">START</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table708.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7450">A real positive value that defines the start up time used to prorate the rate at which the well is put back on production. If START is large compared to the time step size, then the well is brought on gradually, if it is less than, then the well is opened faster. The rate is prorated based on the following:</text:p>
+       <text:p text:style-name="P7450">A real positive value that defines the start up time used to prorate the rate at which the well is put back on production. If START is large compared to the time step size, then the well is brought on gradually, if it is less than the time step size, then the well is opened faster. The rate is prorated based on the following:</text:p>
        <text:p text:style-name="P8264"><draw:frame draw:style-name="fr67" draw:name="Object256" text:anchor-type="paragraph" svg:y="0.152cm" svg:width="5.482cm" svg:height="0.984cm" draw:z-index="268"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
@@ -4723,7 +4723,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15674"/>
     <text:p text:style-name="P15325">See also the WELSPECS keyword to define a wells shut-in or stop options, WECON for setting a well’s economic criteria, <text:s/>GCONPROD and GCONINJE for group controls, and GECON for setting a group’s economic criteria. <text:s/>All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc121927_2556401936"/>Example<text:bookmark-end text:name="__RefHeading___Toc121927_2556401936"/></text:h>
-    <text:p text:style-name="P11067">The following example defines test criteria for all gas wells (“GP*’) and three oil wells (OP01, OP02, and OP03).</text:p>
+    <text:p text:style-name="P11067">The following example defines test criteria for all gas wells (‘GP*’) and three oil wells (OP01, OP02, and OP03).</text:p>
     <text:p text:style-name="P13731">--</text:p>
     <text:p text:style-name="P14263">-- <text:s text:c="7"/></text:p>
     <text:p text:style-name="P14263">-- <text:s text:c="6"/>WELL TESTING CRITERIA FOR RE-OPENING CLOSED WELLS</text:p>
@@ -4738,7 +4738,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14263">OPO3 <text:s text:c="4"/>30.0 <text:s text:c="2"/>PEG <text:s text:c="3"/>0 <text:s text:c="5"/>0.0 <text:s text:c="45"/>/</text:p>
     <text:p text:style-name="P14263"><text:soft-page-break/>/</text:p>
     <text:p text:style-name="P13095"><text:s text:c="78"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15516">All the gas wells are test annually if they have been shut-in due to a bottom-hole or tubing head pressure limit, <text:s/>are tested five times after they have been closed, and are opened up immediately. <text:s/>The oil wells are tested every 30 days if they have been closes due bottom-hole or tubing head pressure limit, a well economic limit or a group economic limit. All the oil wells are tested an infinite amount of times and are opened up immediately. <text:span text:style-name="T4045">Note that only the </text:span>P and <text:span text:style-name="T4045">E option</text:span>s are<text:span text:style-name="T4045"> currently supported in OPM Flow.</text:span></text:p>
+    <text:p text:style-name="P15516">All the gas wells are test annually if they have been shut-in due to a bottom-hole or tubing head pressure limit, <text:s/>are tested five times after they have been closed, and are opened up immediately. <text:s/>The oil wells are tested every 30 days if they have been closed due to a bottom-hole or tubing head pressure limit, a well economic limit or a group economic limit. All the oil wells are tested an infinite amount of times and are opened up immediately. <text:span text:style-name="T4045">Note that only the </text:span>P and <text:span text:style-name="T4045">E option</text:span>s are<text:span text:style-name="T4045"> currently supported in OPM Flow.</text:span></text:p>
     <text:p text:style-name="P15414"/>
     
    </text:section>

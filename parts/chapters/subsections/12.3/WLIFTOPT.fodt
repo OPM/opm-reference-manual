@@ -4633,10 +4633,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9022">A real value that defines the total amount of gas lift gas available for this well, multiplied by the well’s efficiency factor.</text:p>
        <text:list xml:id="list105922582135856" text:continue-list="list105922106545940" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19691">If OPTLIFT is defined as NO then MXLIFT is considered a fix gas lift gas rate. However, if MXLIFT is defaulted (1*) then MXLIFT is unchanged from the previous entered value.</text:p>
+         <text:p text:style-name="P19691">If OPTLIFT is defined as NO then MXLIFT is considered a fixed gas lift gas rate. However, if MXLIFT is defaulted (1*) then MXLIFT is unchanged from the previously entered value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19465">If OPTLIFT equals YES and MXLIFT is defaulted (1*), <text:s/>then MAXLIFT is taken from the largest value of the ALQ variable on the well’s associated VFPPROD table.</text:p>
+         <text:p text:style-name="P19465">If OPTLIFT equals YES and MXLIFT is defaulted (1*), <text:s/>then MXLIFT is taken from the largest value of the ALQ variable on the well’s associated VFPPROD table.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P16794">Note that the value entered here should be in the range entered in the VFPPROD table allocated to the well, otherwise errors may occur when optimizing the gas lift gas injection rate for the well.</text:p>
@@ -4930,7 +4930,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            </office:binary-data>
           </draw:image>
          </draw:frame></text:p>
-       <text:p text:style-name="P9248">OPTWGT is ignored if OPTLIFT is equal NO.</text:p>
+       <text:p text:style-name="P9248">OPTWGT is ignored if OPTLIFT is equal to NO.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5235,7 +5235,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15882">See also the LIFTOPT keyword to activate gas lift optimization, the GLIFTOPT keyword to define the group <text:s/>gas lift optimization controls, GRUPTREE keyword to define the hierarchy of the groups below the FIELD level, the WCONPROD and WCONINJE keywords to define a well’s production and injection rate targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <text:p text:style-name="P15368"/>
     <text:h text:style-name="P18738" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716785_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716785_3964674244"/></text:h>
-    <text:p text:style-name="P11110">The following example fist switches on gas lift optimization via the LIFTOPT keyword and then defines the artificial lift constraints for PLAT-A, using the GLIFTOPT keyword and sets the well gas lift parameters using the WLIFTOPT keyword.</text:p>
+    <text:p text:style-name="P11110">The following example first switches on gas lift optimization via the LIFTOPT keyword and then defines the artificial lift constraints for PLAT-A, using the GLIFTOPT keyword and sets the well gas lift parameters using the WLIFTOPT keyword.</text:p>
     <text:p text:style-name="P13738">-- <text:s text:c="6"/>ACTIVATE GAS LIFT OPTIMIZATION AND PARAMETERS <text:s text:c="51"/></text:p>
     <text:p text:style-name="P13738">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13738">-- INCR <text:s text:c="2"/>INCR <text:s text:c="2"/>TSTEP <text:s text:c="3"/>NEWTON <text:s text:c="72"/></text:p>

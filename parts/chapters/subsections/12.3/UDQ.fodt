@@ -4503,8 +4503,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section, <text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>An UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
-    <text:p text:style-name="P12402">User Defined Quantities and also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their GOR, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_MXOIL say, and then use WU_MXOIL as a UDA variable on the WCONPROD keyword for the ORAT parameter. See the <text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a><text:s/>in the SCHEDULE section for the list of keywords that can use UDA variables.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section, <text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>An UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
+    <text:p text:style-name="P12402">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their GOR, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_MXOIL say, and then use WU_MXOIL as a UDA variable on the WCONPROD keyword for the ORAT parameter. See the <text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a><text:s/>in the SCHEDULE section for the list of keywords that can use UDA variables.</text:p>
     <text:p text:style-name="P12090">Although t<text:span text:style-name="T2709">his keyword is </text:span>read<text:span text:style-name="T2709"> by OPM Flow </text:span>and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table833" table:style-name="Table833">
      <table:table-column table:style-name="Table833.A"/>
@@ -4624,10 +4624,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19302">ASSIGN: Then EXPRESSION should be a numerical value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">DEFINE: In this case a mathematical formula is defined and assigned to a variable. The variable is initialized with the formula and the UPDATE status is set to ON. </text:p>
+         <text:p text:style-name="P19302">DEFINE: In this case a mathematical formula is defined as a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19357">UNITS: Then EXPRESSION should be a character string enclosed in quotes it it contains blanks, with a maximum length of eight characters, that declares the units for VARIABLE that will be used for reporting.</text:p>
+         <text:p text:style-name="P19357">UNITS: Then EXPRESSION should be a character string enclosed in quotes if it contains blanks, with a maximum length of eight characters, that declares the units for VARIABLE that will be used for reporting.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19302">UPDATE: In this case EXPRESSION can have the value ON to evaluate VARIABLE at all time steps, OFF to not evaluate VARIABLE, or NEXT to evaluate VARIABLE at the next time step.</text:p>
@@ -5026,17 +5026,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         <text:p text:style-name="P10361">Note</text:p>
         <text:p text:style-name="P10409">Note that after the terminating “/” for the ASSIGN operator normally any comments can be entered; however, if there is “/” within the comment field, as per:</text:p>
         <text:p text:style-name="P10409"/>
-        <text:p text:style-name="P42">ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ <text:s text:c="3"/>Condensate Yield (63.5/56.7)/(1.0 – 0.065)</text:p>
+        <text:p text:style-name="P42">ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ <text:s text:c="3"/>Condensate Yield (63.5 / 56.7) / (1.0 – 0.065)</text:p>
         <text:p text:style-name="P42"/>
         <text:p text:style-name="P10409">then the simulator will abort. The work around is to manually place the comment characters “--” after the ASSIGN terminating “/”, like so:</text:p>
         <text:p text:style-name="P10409"/>
-        <text:p text:style-name="P42">ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ -- Condensate Yield (63.5/56.7)/(1.0 – 0.06)</text:p>
+        <text:p text:style-name="P42">ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ -- Condensate Yield (63.5 / 56.7) / (1.0 – 0.06)</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716685_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716685_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The fist example shows how to define some constant field variables used for calculating facilities corrected condensate and Liquefied Petroleum Gas<text:note text:id="ftn315" text:note-class="footnote"><text:note-citation>315</text:note-citation><text:note-body>
+    <text:p text:style-name="_40_TextBody">The first example shows how to define some constant field variables used for calculating facilities corrected condensate and Liquefied Petroleum Gas<text:note text:id="ftn315" text:note-class="footnote"><text:note-citation>315</text:note-citation><text:note-body>
         <text:p text:style-name="P16636">Liquefied Petroleum Gas or LPG consists mainly of propane, propylene, butane, and butylene in various mixtures. It is produced as a by-product of natural gas processing and petroleum refining. The components of LPG are gases at <text:span text:style-name="T5423">standard conditions</text:span>.</text:p></text:note-body></text:note> (“LPG “) yields in a wet gas model:</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- DEFINE START OF USER DEFINED QUANTITY SECTION</text:p>
@@ -5051,7 +5051,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">ASSIGN <text:s text:c="5"/>FULPGSHK <text:s/>0.080410 <text:s text:c="8"/>/ <text:s text:c="3"/>LPG <text:s text:c="8"/>Shrinkage Factor</text:p>
     <text:p text:style-name="P12904">ASSIGN <text:s text:c="5"/>FUFACSHK <text:s/>0.000935 <text:s text:c="8"/>/ <text:s text:c="3"/>Facilities <text:s/>Shrinkage Factor</text:p>
     <text:p text:style-name="P12904">ASSIGN <text:s text:c="5"/>FUFULSHK <text:s/>0.052924 <text:s text:c="8"/>/ <text:s text:c="3"/>Fuel <text:s text:c="7"/>Utilization</text:p>
-    <text:p text:style-name="P14329"><text:soft-page-break/>ASSIGN <text:s text:c="5"/>FUDELTA <text:s text:c="2"/>1E-10 <text:s text:c="11"/>/ <text:s text:c="3"/>Value to avoid diving by zero errors <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P14329"><text:soft-page-break/>ASSIGN <text:s text:c="5"/>FUDELTA <text:s text:c="2"/>1E-10 <text:s text:c="11"/>/ <text:s text:c="3"/>Value to avoid dividing by zero errors <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14329"><text:s/></text:p>
     <text:p text:style-name="P12904">/ <text:s/>DEFINE END OF USER DEFINED QUANTITY SECTION</text:p>
     <text:p text:style-name="Text_20_body"/>
@@ -5064,7 +5064,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- OPERATOR VARIABLE <text:s/>EXPRESSION</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="7"/></text:p>
-    <text:p text:style-name="P12904">DEFINE <text:s text:c="5"/>FU_FNGLR <text:s/>FGPR *(FOGR * FUNGLYLD) <text:s/>/ Calculate Condensate Rate Field</text:p>
+    <text:p text:style-name="P12904">DEFINE <text:s text:c="5"/>FU_FNGLR <text:s/>FGPR * (FOGR * FUNGLYLD) <text:s/>/ Calculate Condensate Rate Field</text:p>
     <text:p text:style-name="P12904">UPDATE <text:s text:c="5"/>FU_FNGLR <text:s/>ON <text:s text:c="22"/>/</text:p>
     <text:p text:style-name="P12904">UNITS <text:s text:c="6"/>FU_FNGLR <text:s/>STBD <text:s text:c="20"/>/</text:p>
     <text:p text:style-name="P12904"/>
