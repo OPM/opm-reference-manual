@@ -20,23 +20,41 @@ import click
 from fodt.constants import ClickOptions, Directories, FileExtensions, KeywordStatus
 from fodt.xml_helpers import XMLHelper
 
-class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
-    def __init__(self, keyword: str, status: KeywordStatus) -> None:
+class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
+    def __init__(self, keyword: str, status: KeywordStatus, opm_flow: bool) -> None:
         self.keyword = keyword
         self.status = status
+        self.opm_flow = opm_flow
         self.in_section = False
         self.in_table_row = False
         self.in_table_cell = False
+        self.in_table_cell_p = False
         self.current_tag_name = None
         self.content = io.StringIO()
         self.current_keyword = None
-        self.keyword_found = False
+        self.keyword_handled = False
+        self.found_table_cell = False
         self.office_body_found = False
         self.in_table_cell_style = False
         self.orange_styles = set()
         self.green_styles = set()
+        self.start_tag_open = False  # For empty tags, do not close with />
 
     def characters(self, content: str):
+        if self.start_tag_open:
+            # NOTE: characters() is only called if there is content between the start
+            # tag and the end tag. If there is no content, characters() is not called.
+            self.content.write(">")
+            self.start_tag_open = False
+        if self.in_table_cell_p:
+            if self.opm_flow:
+                content = "OPM Flow"
+            else:
+                content = ""
+            self.keyword_handled = True
+            self.current_keyword = None
+            self.in_table_cell_p = False
+            self.found_table_cell = False
         self.content.write(XMLHelper.escape(content))
 
     def collect_table_cell_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
@@ -58,14 +76,27 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
 
 
     def endElement(self, name: str):
-        if not self.keyword_found:
+        if not self.keyword_handled:
             if name == "table:table-row":
                 self.in_table_row = False
             elif self.in_table_row and name == "table:table-cell":
                 self.in_table_cell = False
             elif self.in_table_cell_style and name == "style:style":
                 self.in_table_cell_style = False
-        self.content.write(XMLHelper.endtag(name))
+        if self.in_table_cell_p and name == "text:p" and self.start_tag_open and self.opm_flow:
+            self.content.write(">")
+            self.start_tag_open = False
+            content = "OPM Flow"
+            self.keyword_handled = True
+            self.current_keyword = None
+            self.in_table_cell_p = False
+            self.found_table_cell = False
+            self.content.write(XMLHelper.escape(content))
+        if self.start_tag_open:
+            self.content.write("/>")
+            self.start_tag_open = False
+        else:
+            self.content.write(XMLHelper.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -81,6 +112,7 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
             self.in_table_row = True
             self.current_keyword = None
         elif self.in_table_row and name == 'table:table-cell':
+            self.in_table_cell = True
             if (self.current_keyword is not None) and self.current_keyword == self.keyword:
                 logging.info(f"Found keyword {self.keyword}.")
                 # We have already found the keyword name within this table row
@@ -93,11 +125,7 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
                     else:
                         raise ValueError(f"Invalid status value: {self.status}.")
                     logging.info(f"Successfully changed status of keyword {self.keyword}.")
-                    self.current_keyword = None
-                    self.in_table_cell = False
-                    self.keyword_found = True
-            else:
-                self.in_table_cell = True
+                    self.found_table_cell = True
         elif self.in_table_cell and name == 'text:a':
             if "xlink:href" in attrs.getNames():
                 href = attrs.getValue("xlink:href")
@@ -105,6 +133,11 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
                 # we want to extract the keyword name from this string
                 if match := re.match(r"#\d+.\d+.\d+.(\w+)\s+", href):
                     self.current_keyword = match.group(1)
+        elif self.in_table_cell and name == 'text:p':
+            if self.found_table_cell:
+                logging.info(f"Found text:p element for keyword {self.keyword}.")
+                # replace the content of the text:p element with the new status
+                self.in_table_cell_p = True
         return attrs
 
     def select_table_cell_styles(self) -> None:
@@ -128,7 +161,10 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
         self.content.write(XMLHelper.header)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
-        if not self.keyword_found:
+        if self.start_tag_open:
+            self.content.write(">")  # Close the start tag
+            self.start_tag_open = False
+        if not self.keyword_handled:
             if not self.office_body_found:
                 if name == 'style:style':
                     if "style:family" in attrs.getNames():
@@ -143,14 +179,18 @@ class AppendixStatusColorHandler(xml.sax.handler.ContentHandler):
                     self.office_body_found = True
             else:
                 attrs = self.handle_table_row(name, attrs)
-        self.content.write(XMLHelper.starttag(name, attrs))
+        self.start_tag_open = True
+        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
 
 class UpdateKeywordStatus:
-    def __init__(self, maindir: str, keyword: str, status: KeywordStatus) -> None:
+    def __init__(
+        self, maindir: str, keyword: str, status: KeywordStatus, opm_flow: bool
+    ) -> None:
         self.keyword = keyword
         self.status = status
         self.maindir = maindir
+        self.opm_flow = opm_flow
 
     def update(self) -> None:
         self.filename = Path(self.maindir) / Directories.appendices / f"A.{FileExtensions.fodt}"
@@ -158,10 +198,10 @@ class UpdateKeywordStatus:
             raise FileNotFoundError(f"File {self.filename} not found.")
         # parse the xml file
         parser = xml.sax.make_parser()
-        handler = AppendixStatusColorHandler(self.keyword, self.status)
+        handler = AppendixKeywordHandler(self.keyword, self.status, self.opm_flow)
         parser.setContentHandler(handler)
         parser.parse(self.filename)
-        if handler.keyword_found:
+        if handler.keyword_handled:
             # Take a backup of the file
             tempfile_ = tempfile.mktemp()
             shutil.copy(self.filename, tempfile_)
@@ -177,15 +217,21 @@ class UpdateKeywordStatus:
 @ClickOptions.maindir(required=False)
 @click.option("--keyword", type=str, required=True, help="Keyword to change status for.")
 @click.option("--status", type=str, required=True, help="New status for keyword.")
-def set_keyword_status(maindir: str, keyword: str, status: str) -> None:
+@click.option("--opm-flow", type=bool, default=False, is_flag=True, help="Flow specific keyword")
+def set_keyword_status(
+    maindir: str,
+    keyword: str,
+    status: str,
+    opm_flow: bool
+) -> None:
     """Change the status of a keyword in Appendix A."""
     logging.basicConfig(level=logging.INFO)
     try:
         status = KeywordStatus[status.upper()]
     except ValueError:
         raise ValueError(f"Invalid status value: {status}.")
-    logging.info(f"Setting status of keyword {keyword} to {status}.")
-    UpdateKeywordStatus(maindir, keyword, status).update()
+    logging.info(f"Updating parameters for keyword {keyword}:  Status: {status}, flow-specific keyword: {opm_flow}.")
+    UpdateKeywordStatus(maindir, keyword, status, opm_flow).update()
 
 if "__name__" == "__main__":
     set_keyword_status()
