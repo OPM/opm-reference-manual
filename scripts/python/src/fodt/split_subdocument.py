@@ -14,8 +14,8 @@ class Splitter():
     def __init__(self, maindir: str, keyword_dir: str, chapter: int, section: int) -> None:
         self.chapter = chapter
         self.section = section
-        self.maindir = Path(maindir)
-        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir)
+        self.maindir = Helpers.get_maindir(maindir)
+        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir, self.maindir)
         self.metadata_dir = self.maindir / Directories.meta
         assert self.maindir.is_dir()
 

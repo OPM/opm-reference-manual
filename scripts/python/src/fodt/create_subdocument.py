@@ -175,14 +175,14 @@ class CreateSubDocument2(CreateSubDocument):
 class CreateSubDocument3(CreateSubDocument):
     def __init__(
         self,
-        maindir: str,
+        maindir: Path,
         keyword_dir: str,
         chapter: str,
         section: str,
         keyword: str,
         title: str,
     ) -> None:
-        self.maindir = Path(maindir)
+        self.maindir = maindir
         self.keyword_dir = keyword_dir
         self.chapter = chapter
         self.section = section
