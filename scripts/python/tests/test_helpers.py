@@ -5,7 +5,7 @@ import pytest
 from fodt.constants import Directories, FileNames
 from fodt.helpers import Helpers
 
-class TestLocateMainDir:
+class TestLocateMainDirAndFilename:
     def test_locate_with_absolute_path_exists(self, tmp_path: Path) -> None:
         """Test locating maindir and filename when the maindir is given as an absolute path."""
         maindir = tmp_path / Directories.parts
@@ -87,3 +87,40 @@ class TestLocateMainDir:
             Helpers.locate_maindir_and_filename(
                 str(maindir), str(filename)
             )
+
+class TestLocateMainDirFromCwd:
+    def test_locate_exists_in_cwd(self, tmp_path: Path):
+        """Test locating maindir from the current working directory when the maindir
+        exists in the current working directory."""
+        maindir = tmp_path / Directories.parts
+        maindir.mkdir()
+        mainfile = maindir / FileNames.main_document
+        mainfile.touch()
+        os.chdir(str(tmp_path))
+        result = Helpers.locate_maindir_from_current_dir()
+        assert result == maindir
+
+    def test_locate_exists_as_parent(self, tmp_path: Path):
+        """Test locating maindir from the current working directory when the maindir
+        is the parent of the current working directory."""
+        maindir = tmp_path / Directories.parts
+        maindir.mkdir()
+        mainfile = maindir / FileNames.main_document
+        mainfile.touch()
+        os.chdir(str(maindir))
+        result = Helpers.locate_maindir_from_current_dir()
+        assert result == maindir
+
+    def test_locate_exists_as_sibling_of_parent(self, tmp_path: Path):
+        """Test locating maindir from the current working directory when the maindir
+        is a sibling of the parent of the current working directory."""
+        maindir = tmp_path / Directories.parts
+        maindir.mkdir()
+        mainfile = maindir / FileNames.main_document
+        mainfile.touch()
+        os.chdir(str(tmp_path))
+        subdir = tmp_path / "subdir"
+        subdir.mkdir()
+        os.chdir(str(subdir))
+        result = Helpers.locate_maindir_from_current_dir()
+        assert result == maindir

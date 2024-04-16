@@ -32,8 +32,10 @@ class Helpers:
 
     @staticmethod
     def derive_maindir_from_filename(filename: str) -> Path:
-        """filename is a assumed to be an aboslute path to file inside maindir or
-        subdirectories of maindir."""
+        """
+        :param filename: Assumed to be an aboslute path to file inside maindir or subdirectories of maindir.
+        :return: The absolute path to the maindir.
+        """
         filename = Path(filename)
         assert filename.is_absolute()
         # Search parent directories for main.fodt in a directory called "parts"
@@ -61,6 +63,28 @@ class Helpers:
             else:
                 raise FileNotFoundError(f"Keyword names directory not found.")
         return keyword_dir
+
+    @staticmethod
+    def get_maindir(maindir: str) -> Path:
+        """
+        :param maindir: The main directory of the project. Can be relative or absolute.
+        :return: The absolute path to the main directory.
+        """
+        if maindir is None:
+            # Try to find maindir by searching the current working directory and its
+            # parent directories for a file main.fodt inside a directory called parts
+            maindir = Helpers.locate_maindir_from_current_dir()
+        else:
+            maindir = Path(maindir)
+            if not maindir.is_dir():
+                # The default value for maindir is a relative path like "../../parts"
+                # If it does not exist, try to find maindir by searching the current
+                # working directory and its parent directories. This is better than
+                # raising an exception here I think..
+                maindir = Helpers.locate_maindir_from_current_dir()
+            else:
+                maindir = maindir.absolute()
+        return maindir
 
     @staticmethod
     def keyword_file(outputdir: Path, chapter: int, section: int) -> Path:
@@ -103,8 +127,10 @@ class Helpers:
         maindir: str,
         filename: str
     ) -> tuple[Path, Path]:
-        """filename is assumed to be a file in maindir or a file in one of its
-        subdirectories."""
+        """
+        :param maindir: The main directory of the project. Can be relative or absolute.
+        :param filename: The filename to locate. Can be relative or absolute. ``filename`` is assumed to be a file in maindir or a file in one of its subdirectories.
+        :return: A tuple of the form (maindir, filename), where both are absolute paths."""
         filename = Path(filename)
         maindir = Path(maindir)  # maindir can be absolute or relative
         # If filename is an absolute path, ignore maindir
@@ -114,14 +140,47 @@ class Helpers:
             return maindir, Path(filename)
         else:
             # Try to find filename by concatenating maindir and filename
-            filename = maindir / filename
-            if filename.exists():
-                return maindir, filename
+            if not maindir.is_absolute():
+                # If both maindir and filename are relative, make filename relative
+                # to maindir instead of relative to the current working directory
+                maindir_abs = Path.cwd() / maindir
+                filename_abs = maindir_abs / filename
+                if filename_abs.exists():
+                    return maindir_abs, filename_abs
+            else:
+                filename = maindir / filename
+                if filename.exists():
+                    return maindir, filename
             # If not found, search for filename relative to the current working directory
             filename = Path.cwd() / filename
             if filename.exists():
                 maindir = Helpers.derive_maindir_from_filename(filename)
                 return maindir, filename
+        raise FileNotFoundError(f"Could not find '{filename.name}' in a directory "
+                                f"called '{maindir.name}'.")
+
+
+    @staticmethod
+    def locate_maindir_from_current_dir() -> Path:
+        cwd = Path.cwd()
+        # We cannot use derive_maindir_from_filename() here because cwd does not
+        # have to be inside maindir in this case
+        while True:
+            # Check if we have reached the root directory
+            #  cwd.parent == cwd is True if filename is the root directory
+            if cwd.parent == cwd:
+                raise FileNotFoundError(f"Could not derive maindir from cwd: "
+                      f"Could not find '{FileNames.main_document}' in a directory "
+                      f"called '{Directories.parts}' by searching the parent "
+                      f"directories of cwd."
+                )
+            # Check if there is a sibling directory called "parts" with a file main.fodt
+            dir_ = cwd / Directories.parts
+            if dir_.is_dir():
+                if (dir_ / FileNames.main_document).exists():
+                    return dir_
+            cwd = cwd.parent
+        # This line should never be reached
 
     @staticmethod
     def read_keyword_order(outputdir: Path, chapter: int, section: int) -> list[str]:
