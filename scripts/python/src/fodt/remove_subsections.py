@@ -36,8 +36,14 @@ class PartsHandler(xml.sax.handler.ContentHandler):
         self.done = False
         self.remove_section = False
         self.in_main_section = False
+        self.start_tag_open = False  # Handle empty tags
 
     def characters(self, content: str):
+        if self.start_tag_open:
+            # NOTE: characters() is only called if there is content between the start
+            # tag and the end tag. If there is no content, characters() is not called.
+            self.content.write(">")
+            self.start_tag_open = False
         # if (not self.in_subsection) and (not self.remove_section):
         if not self.in_main_section:
             self.content.write(XMLHelper.escape(content))
@@ -60,7 +66,11 @@ class PartsHandler(xml.sax.handler.ContentHandler):
                 self.done = True
                 self.in_main_section = False
         if (not self.in_subsection) and (not self.remove_section):
-            self.content.write(XMLHelper.endtag(name))
+            if self.start_tag_open:
+                self.content.write("/>")
+                self.start_tag_open = False
+            else:
+                self.content.write(XMLHelper.endtag(name))
         if name == "text:section":
             if self.remove_section:
                 self.remove_section = False
@@ -104,6 +114,9 @@ class PartsHandler(xml.sax.handler.ContentHandler):
                 if self.check_included_section(name, attrs):
                     self.remove_section = True
                     self.in_main_section = True
+        if self.start_tag_open:
+            self.content.write(">")  # Close the start tag
+            self.start_tag_open = False
         if write_include:
             self.in_main_section = True
             part = f"{self.chapter}.{self.section}.{self.current_subsection}"
@@ -111,7 +124,8 @@ class PartsHandler(xml.sax.handler.ContentHandler):
             callback = self.replace_callback
             self.content.write(callback(part, keyword))
         if (not self.in_subsection) and (not self.remove_section):
-            self.content.write(XMLHelper.starttag(name, attrs))
+            self.start_tag_open = True
+            self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
     def write_file(self):
         filename = Path(self.outputfn)

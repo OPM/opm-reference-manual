@@ -36,6 +36,7 @@ class Directories():
     backup = "backup"
     info = "info"
     keywords = "keywords"
+    keyword_names = "keyword-names"
     meta = "meta"
     meta_sections = "sections"
     parts = "parts"

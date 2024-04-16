@@ -1,6 +1,5 @@
 import importlib.resources  # access non-code resources
 import shutil
-import xml.sax.saxutils
 
 from pathlib import Path
 from fodt.constants import Directories, FileExtensions, FileNames
@@ -55,12 +54,14 @@ class Helpers:
         # This should never be reached
 
     @staticmethod
-    def get_keyword_dir(keyword_dir: str) -> str:
+    def get_keyword_dir(keyword_dir: str, maindir: Path) -> str:
         if keyword_dir is None:
-            try_path = Path('../keyword-names')
-            if try_path.exists():
-                keyword_dir = try_path
-            else:
+            # Default value for keyword_dir is a relative path like "../../keyword-names"
+            keyword_dir = Path(f'../../{Directories.keyword_names}')
+        if not keyword_dir.exists():
+            main_dir = Helpers.locate_maindir_from_current_dir()
+            keyword_dir = main_dir.parent / Directories.keyword_names
+            if not keyword_dir.exists():
                 raise FileNotFoundError(f"Keyword names directory not found.")
         return keyword_dir
 
@@ -159,6 +160,28 @@ class Helpers:
         raise FileNotFoundError(f"Could not find '{filename.name}' in a directory "
                                 f"called '{maindir.name}'.")
 
+
+    @staticmethod
+    def locate_maindir_from_current_dir() -> Path:
+        cwd = Path.cwd()
+        # We cannot use derive_maindir_from_filename() here because cwd does not
+        # have to be inside maindir in this case
+        while True:
+            # Check if we have reached the root directory
+            #  cwd.parent == cwd is True if filename is the root directory
+            if cwd.parent == cwd:
+                raise FileNotFoundError(f"Could not derive maindir from cwd: "
+                      f"Could not find '{FileNames.main_document}' in a directory "
+                      f"called '{Directories.parts}' by searching the parent "
+                      f"directories of cwd."
+                )
+            # Check if there is a sibling directory called "parts" with a file main.fodt
+            dir_ = cwd / Directories.parts
+            if dir_.is_dir():
+                if (dir_ / FileNames.main_document).exists():
+                    return dir_
+            cwd = cwd.parent
+        # This line should never be reached
 
     @staticmethod
     def locate_maindir_from_current_dir() -> Path:

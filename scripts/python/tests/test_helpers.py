@@ -23,6 +23,8 @@ class TestLocateMainDirAndFilename:
         assert result_filename == filename
 
     def test_locate_with_absolute_path_exists_no_main(self, tmp_path: Path) -> None:
+        """Test locating maindir and filename when the maindir is given as an absolute path
+        and the main file does not exist. This should raise an error."""
         maindir = tmp_path / Directories.parts
         maindir.mkdir()
         mainfile = maindir / FileNames.main_document
@@ -39,6 +41,8 @@ class TestLocateMainDirAndFilename:
                 f"called '{Directories.parts}'" in str(excinfo.value))
 
     def test_locate_with_relative_path_in_maindir_exists(self, tmp_path: Path) -> None:
+        """Test locating maindir and filename when the maindir is absolute and the
+        filename is a relative path."""
         maindir = tmp_path / Directories.parts
         maindir.mkdir()
         mainfile = maindir / FileNames.main_document
@@ -60,6 +64,9 @@ class TestLocateMainDirAndFilename:
     def test_locate_with_relative_path_not_in_maindir_but_in_cwd(
             self, tmp_path: Path
     ):
+        """Test locating maindir and filename when the maindir is absolute and the
+        filename is a relative path. The filename is not found in the maindir but
+        is found in the current working directory."""
         cwd = tmp_path / "cwd"
         cwd.mkdir()
         os.chdir(str(cwd))
@@ -78,6 +85,9 @@ class TestLocateMainDirAndFilename:
         )
 
     def test_locate_with_absolute_path_not_exists(self, tmp_path: Path):
+        """Test locating maindir and filename when the maindir is absolute and the
+        filename is a relative path. The filename is not found in the maindir and
+        is not found in the current working directory. This should raise an error."""
         maindir = tmp_path / Directories.parts
         maindir.mkdir()
         filename = tmp_path / "nonexistent.fodt"
