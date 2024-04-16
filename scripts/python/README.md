@@ -52,7 +52,7 @@ To change the status of a keyword in the status column in the alphabetical listi
 of keywords in Appendix A, run for example:
 
 ```
-$ fodt-set-ketword-status --keyword=CSKIN --color=green --opm-flow
+$ fodt-set-keyword-status --keyword=CSKIN --color=green --opm-flow
 ```
 
 this will change the color from orange to green and add the text "OPM Flow" to indicate
