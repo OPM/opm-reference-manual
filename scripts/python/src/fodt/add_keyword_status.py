@@ -216,22 +216,22 @@ class UpdateKeywordStatus:
 @click.command()
 @ClickOptions.maindir(required=False)
 @click.option("--keyword", type=str, required=True, help="Keyword to change status for.")
-@click.option("--status", type=str, required=True, help="New status for keyword.")
+@click.option("--color", type=str, required=True, help="New status color for keyword.")
 @click.option("--opm-flow", type=bool, default=False, is_flag=True, help="Flow specific keyword")
 def set_keyword_status(
     maindir: str,
     keyword: str,
-    status: str,
+    color: str,
     opm_flow: bool
 ) -> None:
     """Change the status of a keyword in Appendix A."""
     logging.basicConfig(level=logging.INFO)
     try:
-        status = KeywordStatus[status.upper()]
+        color = KeywordStatus[color.upper()]
     except ValueError:
         raise ValueError(f"Invalid status value: {status}.")
-    logging.info(f"Updating parameters for keyword {keyword}:  Status: {status}, flow-specific keyword: {opm_flow}.")
-    UpdateKeywordStatus(maindir, keyword, status, opm_flow).update()
+    logging.info(f"Updating parameters for keyword {keyword}:  Color: {color}, flow-specific keyword: {opm_flow}.")
+    UpdateKeywordStatus(maindir, keyword, color, opm_flow).update()
 
 if "__name__" == "__main__":
     set_keyword_status()
