@@ -9,6 +9,7 @@ from pathlib import Path
 import click
 
 from fodt.constants import ClickOptions
+from fodt.helpers import Helpers
 from fodt.xml_helpers import XMLHelper
 
 class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
@@ -256,6 +257,9 @@ class RemoveSpanTags:
         self.maindir = Path(maindir)
         self.filename = filename
         self.max_files = max_files
+        assert self.maindir.is_absolute()
+        assert self.filename is None or Path(self.filename).is_absolute()
+        assert self.maindir.is_dir()
 
     def remove_empty_lines(self, filename: Path) -> None:
         # Remove empty lines from the automtic-styles section
@@ -268,7 +272,8 @@ class RemoveSpanTags:
 
     def remove_span_tags(self) -> None:
         if self.filename:
-            self.remove_span_tags_and_styles_from_file(self.maindir / self.filename)
+            # NOTE: self.filename is an absolute path
+            self.remove_span_tags_and_styles_from_file(self.filename)
         else:
             self.remove_span_tags_from_all_files()
 
@@ -346,4 +351,13 @@ def remove_version_span_tags(
 ) -> None:
     """Remove version span tags from all .fodt subdocuments."""
     logging.basicConfig(level=logging.INFO)
+    if filename is not None:
+        filename = Path(filename)
+        assert filename.is_absolute()
+        maindir, filename = Helpers.locate_maindir_and_filename(maindir, filename)
+    else:
+        # Convert maindir to an absolute path
+        maindir = Helpers.get_maindir(maindir)
+        maindir = Path(maindir).absolute()
+        assert maindir.is_dir()
     RemoveSpanTags(maindir, filename, max_files).remove_span_tags()

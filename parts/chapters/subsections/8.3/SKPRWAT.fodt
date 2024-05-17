@@ -4065,7 +4065,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
@@ -4470,9 +4470,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8881">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2250.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8871">A series of real positive vectors representing the wellbore skin pressure, for all combinations of the water throughput values (OUTPUT) and velocity values (VELOCITY), organized as a series of vectors PRESS(OUTPUT, VELOCITY).</text:p>
-       <text:p text:style-name="P8871">Thus, the first vector represents the wellbore skin pressure of the first OUTPUT value and each entry in the vector is the corresponding wellbore skin pressure of the associated VELOCITY vector. Each vector should be on a separate line and should be terminated by a “/”.</text:p>
-       <text:p text:style-name="P8878"><text:span text:style-name="T1533">T</text:span>hus<text:span text:style-name="T1533">, if OUTPUT has three entries and VELOCITY has four, then there should be three vectors, with each vector containing four elements representing </text:span>wellbore skin pressure<text:span text:style-name="T1533"> values</text:span>, as a function of OUTPUT and VELOCITY<text:span text:style-name="T1533">.</text:span></text:p>
+       <text:p text:style-name="P8871">A series of real positive vectors representing the wellbore skin pressure, for all combinations of the water throughput values (THRUPUT) and velocity values (VELOCITY), organized as a series of vectors PRESS(THRUPUT, VELOCITY).</text:p>
+       <text:p text:style-name="P8871">Thus, the first vector represents the wellbore skin pressure of the first THRUPUT value and each entry in the vector is the corresponding wellbore skin pressure of the associated VELOCITY vector. Each vector should be on a separate line and should be terminated by a “/”.</text:p>
+       <text:p text:style-name="P8878"><text:span text:style-name="T1533">T</text:span>hus<text:span text:style-name="T1533">, if THRUPUT has three entries and VELOCITY has four, then there should be three vectors, with each vector containing four elements representing </text:span>wellbore skin pressure<text:span text:style-name="T1533"> values</text:span>, as a function of THRUPUT and VELOCITY<text:span text:style-name="T1533">.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4526,7 +4526,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13352">SKPRWAT</text:p>
     <text:p text:style-name="P13352"><text:s text:c="9"/>1 <text:s text:c="28"/>/ TABLE NUMBER</text:p>
     <text:p text:style-name="P13352">-- <text:s/></text:p>
-    <text:p text:style-name="P13352">-- <text:s text:c="6"/>OUTPUT THROUGHPUT VALUES <text:s text:c="31"/></text:p>
+    <text:p text:style-name="P13352">-- <text:s text:c="6"/>THROUGHPUT VALUES <text:s text:c="31"/></text:p>
     <text:p text:style-name="P13352">--</text:p>
     <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>200.0 <text:s text:c="2"/>400.0 <text:s text:c="8"/>/ </text:p>
     <text:p text:style-name="P13352">--</text:p>
@@ -4536,14 +4536,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13352">--</text:p>
     <text:p text:style-name="P13352">-- <text:s text:c="6"/>PRESS SKIN VALUES</text:p>
     <text:p text:style-name="P13352">--</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>2.0 <text:s text:c="4"/>4.0 <text:s text:c="4"/>8.0 <text:s text:c="2"/>/ PRESS(OUTPUT=1, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>20.0 <text:s text:c="3"/>40.0 <text:s text:c="3"/>80.0 <text:s/>/ PRESS(OUTPUT=2, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / PRESS(OUTPUT=3, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>2.0 <text:s text:c="4"/>4.0 <text:s text:c="4"/>8.0 <text:s text:c="2"/>/ PRESS(THRUPUT=1, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>20.0 <text:s text:c="3"/>40.0 <text:s text:c="3"/>80.0 <text:s/>/ PRESS(THRUPUT=2, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / PRESS(THRUPUT=3, VELOCITY=1 TO N)</text:p>
     <text:p text:style-name="P13352">/</text:p>
     <text:p text:style-name="P13352">SKPRWAT</text:p>
     <text:p text:style-name="P13352"><text:s text:c="9"/>2 <text:s text:c="28"/>/ TABLE NUMBER</text:p>
     <text:p text:style-name="P13352">-- <text:s/></text:p>
-    <text:p text:style-name="P13352">-- <text:s text:c="6"/>OUTPUT THROUGHPUT VALUES</text:p>
+    <text:p text:style-name="P13352">-- <text:s text:c="6"/>THROUGHPUT VALUES</text:p>
     <text:p text:style-name="P13352">--</text:p>
     <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>200.0 <text:s text:c="2"/>400.0 <text:s text:c="8"/>/ </text:p>
     <text:p text:style-name="P13352">--</text:p>
@@ -4553,9 +4553,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13352">--</text:p>
     <text:p text:style-name="P13352">-- <text:s text:c="6"/>PRESS SKIN VALUES</text:p>
     <text:p text:style-name="P13352">--</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>2.0 <text:s text:c="4"/>4.0 <text:s text:c="4"/>8.0 <text:s text:c="2"/>/ PRESS(OUTPUT=1, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>20.0 <text:s text:c="3"/>40.0 <text:s text:c="3"/>80.0 <text:s/>/ PRESS(OUTPUT=2, VELOCITY=1 TO N)</text:p>
-    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / PRESS(OUTPUT=3, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>2.0 <text:s text:c="4"/>4.0 <text:s text:c="4"/>8.0 <text:s text:c="2"/>/ PRESS(THRUPUT=1, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>20.0 <text:s text:c="3"/>40.0 <text:s text:c="3"/>80.0 <text:s/>/ PRESS(THRUPUT=2, VELOCITY=1 TO N)</text:p>
+    <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / PRESS(THRUPUT=3, VELOCITY=1 TO N)</text:p>
     <text:p text:style-name="P13352">/ <text:s text:c="16"/></text:p>
     <text:p text:style-name="P13352"><text:s text:c="6"/></text:p>
     <text:p text:style-name="P11680">As mentioned previously, the SKPRWAT keyword requires that the keyword itself must be repeated for each table, as is shown in the above example.</text:p>

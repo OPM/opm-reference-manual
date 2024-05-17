@@ -48,14 +48,16 @@ the heading with the keyword name.
 
 ## Changing the status of a keyword in Appendix A
 
-To change the status color of a keyword in the status column in the alphabetical listing of keywords
-in Appendix A, run for example:
+To change the status of a keyword in the status column in the alphabetical listing
+of keywords in Appendix A, run for example:
 
 ```
-$ fodt-set-ketword-status --keyword=CSKIN --color=green
+$ fodt-set-keyword-status --keyword=CSKIN --color=green --opm-flow
 ```
 
-this will change the color from orange to green.
+this will change the color from orange to green and add the text "OPM Flow" to indicate
+that the keyword is specific to OPM flow. If the keyword is not specific to OPM flow,
+just omit the `--opm-flow` flag.
 
 ## Submitting a PR for a change to a `.fodt` file
 

@@ -1,4 +1,3 @@
-import io
 import logging
 import xml.sax
 import xml.sax.handler
@@ -9,39 +8,7 @@ from pathlib import Path
 import click
 
 from fodt.constants import ClickOptions
-from fodt.xml_helpers import XMLHelper
-
-class ElementHandler(xml.sax.handler.ContentHandler):
-    def __init__(self) -> None:
-        self.content = io.StringIO()
-        self.start_tag_open = False  # For empty tags, do not close with />
-
-    def characters(self, content: str):
-        if self.start_tag_open:
-            # NOTE: characters() is only called if there is content between the start
-            # tag and the end tag. If there is no content, characters() is not called.
-            self.content.write(">")
-            self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
-
-    def endElement(self, name: str):
-        if self.start_tag_open:
-            self.content.write("/>")
-            self.start_tag_open = False
-        else:
-            self.content.write(XMLHelper.endtag(name))
-
-    def get_content(self) -> str:
-        return self.content.getvalue()
-
-    def startDocument(self):
-        self.content.write(XMLHelper.header)
-
-    def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
-        if self.start_tag_open:
-            self.content.write(">")
-        self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+from fodt.xml_handlers import PassThroughFilterHandler
 
 
 class FilterAll:
@@ -57,7 +24,7 @@ class FilterAll:
 
     def filter_file(self, filename: Path) -> None:
         parser = xml.sax.make_parser()
-        handler = ElementHandler()
+        handler = PassThroughFilterHandler()
         parser.setContentHandler(handler)
         parser.parse(filename)
         with open(filename, "w", encoding='utf8') as f:

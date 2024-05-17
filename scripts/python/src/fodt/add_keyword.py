@@ -43,14 +43,20 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
         self.in_table_row = False
         self.keyword_table_number = self.get_keyword_table_number()
         self.current_table_number = 0
+        self.start_tag_open = False  # Flag for empty tags, close with />
 
     def characters(self, content: str):
         if self.in_styles:
+            self.maybe_close_start_tag(self.content)
             self.content.write(XMLHelper.escape(content))
         elif self.in_appendix_table:
             if self.in_table_row:
+                self.maybe_close_start_tag(self.current_row)
                 self.current_row.write(XMLHelper.escape(content))
             else:
+                if self.start_tag_open:
+                    self.between_rows += ">"
+                    self.start_tag_open = False
                 self.between_rows += content
                 # Capture stuff between the rows, such that we
                 # can add it back. There can be tags like
@@ -64,6 +70,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                     self.current_table_number += 1
                     if self.current_table_number == self.keyword_table_number:
                         self.found_appendix_table = True
+            self.maybe_close_start_tag(self.content)
             self.content.write(XMLHelper.escape(content))
 
     def endElement(self, name: str):
@@ -73,7 +80,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
             self.in_table_row = False
         if self.in_appendix_table:
             if name == "table:table-row":
-                self.current_row.write(XMLHelper.endtag(name))
+                self.write_end_tag(self.current_row, name)
                 current_row = self.between_rows + self.current_row.getvalue()
                 self.between_rows = ''
                 self.rows.append(current_row)
@@ -82,21 +89,25 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                 self.in_appendix_table = False
                 self.write_appendix_table()
                 self.content.write(self.between_rows)
-                self.content.write(XMLHelper.endtag(name))
+                self.write_end_tag(self.content, name)
             elif self.in_table_row:
-                self.current_row.write(XMLHelper.endtag(name))
+                self.write_end_tag(self.current_row, name)
             else:
-                self.between_rows += XMLHelper.endtag(name)
+                if self.start_tag_open:
+                    self.between_rows += "/>"
+                    self.start_tag_open = False
+                else:
+                    self.between_rows += XMLHelper.endtag(name)
         else:
             if self.in_styles:
                 if name == "office:automatic-styles":
                     self.in_styles = False
                     self.write_missing_styles()
-            self.content.write(XMLHelper.endtag(name))
+            self.write_end_tag(self.content, name)
 
     def extract_keyword_name(self, href: str) -> str:
         # Assume href starts with "#xxx.yyy.zzz.KEYWORD_NAME<space>"
-        if m:= re.match(r"#\d+\.\d+\.\d+\.(\w+)\s+", href):
+        if m:= re.match(r"#\d+\.\d+\.\d+\.(\w+)(?:\s+|$)", href):
             return m.group(1)
         else:
             return '<NOT FOUND>'
@@ -124,6 +135,14 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
         new_row = re.sub(r'###COLOR###', color, new_row)
         return new_row
 
+    def maybe_close_start_tag(self, buffer: io.StringIO) -> None:
+        if self.start_tag_open:
+            # NOTE: characters() is only called if there is content between the start
+            # tag and the end tag. If there is no content, characters() is not called.
+            buffer.write(">")
+            self.start_tag_open = False
+
+
     def startDocument(self):
         self.content.write(XMLHelper.header)
 
@@ -138,7 +157,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
         elif name == "office:automatic-styles":
             self.in_styles = True
         if self.in_styles:
-            self.content.write(XMLHelper.starttag(name, attrs))
+            self.write_start_tag(self.content, name, attrs)
         else:
             if name == "table:table-row":
                 self.in_table_row = True
@@ -157,11 +176,12 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                     )
             if self.in_appendix_table:
                 if self.in_table_row:
-                    self.current_row.write(XMLHelper.starttag(name, attrs))
+                    self.write_start_tag(self.current_row, name, attrs)
                 else:
-                    self.between_rows += XMLHelper.starttag(name, attrs)
+                    self.start_tag_open = True
+                    self.between_rows += XMLHelper.starttag(name, attrs, close_tag=False)
             else:
-                self.content.write(XMLHelper.starttag(name, attrs))
+                self.write_start_tag(self.content, name, attrs)
 
     def write_appendix_table(self) -> None:
         idx_found = False
@@ -175,10 +195,25 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
         if not idx_found:  # last item in the list
             self.content.write(new_row)
 
+    def write_end_tag(self, buffer: io.StringIO, name: str) -> None:
+        if self.start_tag_open:
+            buffer.write("/>")
+            self.start_tag_open = False
+        else:
+            buffer.write(XMLHelper.endtag(name))
+
     def write_missing_styles(self):
         for style_name in self.style_names:
             self.content.write(self.style_templates[style_name])
             self.content.write("\n")
+
+    def write_start_tag(
+        self, buffer: io.StringIO, name: str, attrs: xml.sax.xmlreader.AttributesImpl
+    ) -> None:
+        if self.start_tag_open:
+            buffer.write(">")  # Close the start tag
+        self.start_tag_open = True
+        buffer.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
 
 class AddKeyword():
@@ -192,8 +227,8 @@ class AddKeyword():
         title: str,
         status: KeywordStatus
     ) -> None:
-        self.maindir = maindir
-        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir)
+        self.maindir = Helpers.get_maindir(maindir)
+        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir, self.maindir)
         self.keyword = keyword
         self.chapter = chapter
         self.section = section
@@ -221,7 +256,7 @@ class AddKeyword():
 
     def update_appendixA(self) -> None:
         logging.info(f"Updating appendix A.")
-        self.filename = Path(self.maindir) / Directories.appendices / f"A.{FileExtensions.fodt}"
+        self.filename = self.maindir / Directories.appendices / f"A.{FileExtensions.fodt}"
         if not self.filename.is_file():
             raise FileNotFoundError(f"File {self.filename} not found.")
         # parse the xml file

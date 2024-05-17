@@ -1,8 +1,44 @@
+import io
 import re
 import xml.sax
 import xml.sax.handler
 import xml.sax.xmlreader
 import xml.sax.saxutils
+
+from fodt.xml_helpers import XMLHelper
+
+class PassThroughFilterHandler(xml.sax.handler.ContentHandler):
+    def __init__(self) -> None:
+        self.content = io.StringIO()
+        self.start_tag_open = False  # For empty tags, do not close with />
+
+    def characters(self, content: str):
+        if self.start_tag_open:
+            # NOTE: characters() is only called if there is content between the start
+            # tag and the end tag. If there is no content, characters() is not called.
+            self.content.write(">")
+            self.start_tag_open = False
+        self.content.write(XMLHelper.escape(content))
+
+    def endElement(self, name: str):
+        if self.start_tag_open:
+            self.content.write("/>")
+            self.start_tag_open = False
+        else:
+            self.content.write(XMLHelper.endtag(name))
+
+    def get_content(self) -> str:
+        return self.content.getvalue()
+
+    def startDocument(self):
+        self.content.write(XMLHelper.header)
+
+    def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
+        if self.start_tag_open:
+            self.content.write(">")
+        self.start_tag_open = True
+        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+
 
 class GetUsedStylesHandler(xml.sax.handler.ContentHandler):
     def __init__(self) -> None:

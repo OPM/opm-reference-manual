@@ -4118,7 +4118,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
@@ -4430,10 +4430,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9433">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" office:value-type="string">
-       <text:p text:style-name="P9873">DOWNODE</text:p>
+       <text:p text:style-name="P9873">DOWNNODE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9268">A character string of up to eight characters in length that defines the <text:s/>down stream node name for this branch, that is the node closest to the wells. Thus for a production network, <text:s/>this will be an inlet node as the wells are importing fluid into the branch node. Wheres as for an injection node, this is outlet node as well’s are exporting the fluid.</text:p>
+       <text:p text:style-name="P9268">A character string of up to eight characters in length that defines the <text:s/>down stream node name for this branch, that is the node closest to the wells. Thus for a production network, <text:s/>this will be an inlet node as the wells are importing fluid into the branch node. Whereas for an injection node, this is an outlet node as injection fluid is being exported to the wells.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4450,7 +4450,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9554"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9016">A character string of up to eight characters in length that defines the up stream node name for this branch, that is the node furthermost from the wells. Thus for a production network, <text:s/>this will be an outlet node as the wells are exporting fluid from the branch node. Wheres as for an injection node, this is inlet node as the well’s are importing the injection fluid.</text:p>
+       <text:p text:style-name="P9016">A character string of up to eight characters in length that defines the up stream node name for this branch, that is the node furthermost from the wells. Thus for a production network, <text:s/>this will be an outlet node as the wells are exporting fluid from the branch node. Whereas for an injection node, this is an inlet node as the wells are importing the injection fluid.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4466,8 +4466,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8037">VFPTAB</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7695">A positive integer greater than or equal to zero that defines the vertical lift performance table to be used for calculating the pressure behavior <text:s/>between NODEIN and NODEOUT. For a production network this must reference a table associated with the VFPPROD keyword, and for an injection network a table declared via the VFPINJ keyword. Both keywords are in the SCHEDULE section.</text:p>
-       <text:p text:style-name="P8739">If the pressure behavior between the two nodes is zero, then the value of 9999 should be entered for this variable.</text:p>
+       <text:p text:style-name="P7695">A positive integer greater than or equal to zero that defines the vertical lift performance table to be used for calculating the pressure behavior <text:s/>between the inlet (for production) or outlet (for injection) node (DOWNNODE) and the outlet (for production) or inlet (for injection) node (UPNODE). For a production network this must reference a table associated with the VFPPROD keyword, and for an injection network a table declared via the VFPINJ keyword. Both keywords are in the SCHEDULE section.</text:p>
+       <text:p text:style-name="P8739">If the pressure behavior between the two nodes is zero (no pressure loss in the network branch), then a value of 9999 should be entered for this variable.</text:p>
        <text:p text:style-name="P8740">A value of zero for VFPTAB removes the branch from the extended network and the resulting flows are ignored in the network flow stream.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4504,7 +4504,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8741">ALQ-DEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8742">A defined character string that defines that ALQ-NODE variable represents either a surface density or as an artificial lift quantity for a pump or a compressor, and should be set to one of the following:</text:p>
+       <text:p text:style-name="P8742">A defined character string that defines that ALQ-NODE variable represents either as a surface density or as an artificial lift quantity for a pump or a compressor, and should be set to one of the following:</text:p>
        <text:list xml:id="list105920492216870" text:continue-list="list105919330063247" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19586">DENO: ALQ-NODE represents the average surface oil density flowing through the branch.</text:p>
@@ -4542,7 +4542,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable551" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.9</text:sequence>: BRANPROP Keyword Description</text:p>
     <text:p text:style-name="P15881"/>
-    <text:p text:style-name="P15842">See also the NETWORK keyword in the RUNSPEC section and the NODEPROP in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15842">See also the NETWORK keyword in the RUNSPEC section and the NODEPROP keyword in the SCHEDULE section.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716523_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716523_3964674244"/></text:h>
     <text:p text:style-name="P12264">Given the following Extended Network model in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure88">Figure 12.3</text:sequence-ref>.</text:p>
     <text:p text:style-name="P12264"><draw:frame draw:style-name="fr10" draw:name="Frame66" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" svg:width="15.609cm" draw:z-index="244">

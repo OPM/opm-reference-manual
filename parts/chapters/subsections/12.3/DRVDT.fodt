@@ -3939,7 +3939,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
@@ -4172,7 +4172,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="DRVDT">
 
-<text:h text:style-name="P18107" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc117625_2179381650"/>DRVDT – Solution Oil (Rv) Maximum Rate of Increase Parameters<text:bookmark-end text:name="__RefHeading___Toc117625_2179381650"/></text:h>
+<text:h text:style-name="P18107" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc117625_2179381650"/>DRVDT – Vaporized Oil (Rv) Maximum Rate of Increase Parameters<text:bookmark-end text:name="__RefHeading___Toc117625_2179381650"/></text:h>
     <table:table table:name="Table644" table:style-name="Table644">
      <table:table-column table:style-name="Table644.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table644.E"/>
@@ -4206,7 +4206,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716567_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716567_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">DRVDT defines the maximum rate at which the solution oil-gas ratio or condensate-gas ratio (Rv) can be increased in a grid cell. The keyword is similar in functionality to the DRVDTR keyword, that defines the maximum rate at which Rv can be increased in a grid cell by region. Both keywords should only be used if the OIL, GAS, and VAPOIL (condensate) keywords in the RUNSPEC section have been invoked to allow oil, gas and condensate to be present in the model. <text:s text:c="2"/>The keyword only affects the behavior of an increasing Rv, for example when gas is being injected into a gas condensate reservoir as part of as gas re-cycling scheme, and is subject to the availability of free oil (condensate) and the ability of the undersaturated gas to adsorb this condensate.</text:p>
+    <text:p text:style-name="_40_TextBody">DRVDT defines the maximum rate at which the vaporized oil-gas ratio or condensate-gas ratio (Rv) can be increased in a grid cell. The keyword is similar in functionality to the DRVDTR keyword, that defines the maximum rate at which Rv can be increased in a grid cell by region. Both keywords should only be used if the OIL, GAS, and VAPOIL (condensate) keywords in the RUNSPEC section have been invoked to allow oil, gas and condensate to be present in the model. <text:s text:c="2"/>The keyword only affects the behavior of an increasing Rv, for example when gas is being injected into a gas condensate reservoir as part of as gas re-cycling scheme, and is subject to the availability of free oil (condensate) and the ability of the undersaturated gas to adsorb this condensate.</text:p>
     <table:table table:name="Table645" table:style-name="Table645">
      <table:table-column table:style-name="Table645.A"/>
      <table:table-column table:style-name="Table645.B"/>
@@ -4251,9 +4251,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4967">DRVDT1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table645.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4970">DRVDT1 is a real positive number that defines the maximum rate at which the solution oil-gas ratio is allowed to increase in a grid cell, that is the maximum rate at which the oil can dissolve into the available undersaturated gas. </text:p>
-       <text:p text:style-name="P5117">A value of zero means that Rv cannot increase and free oil cannot dissolve into the unsaturated gas in a grid cell. Alternatively a very large value of DRVDT1 allows Rv to increase rapidly until there is no free oil or the gas within the grid block is fully saturated.</text:p>
-       <text:p text:style-name="P5117">Note if the keyword is not present in the input deck then DRVDT1 is assumed to be a very large number resulting in complete re-solution of the oil into the available undersaturated gas.</text:p>
+       <text:p text:style-name="P4970">DRVDT1 is a real positive number that defines the maximum rate at which the vaporized oil-gas ratio is allowed to increase in a grid cell, that is the maximum rate at which the oil can dissolve into the available undersaturated gas. </text:p>
+       <text:p text:style-name="P5117">A value of zero means that Rv cannot increase and free oil cannot vaporize into the unsaturated gas in a grid cell. Alternatively a very large value of DRVDT1 allows Rv to increase rapidly until there is no free oil or the gas within the grid block is fully saturated.</text:p>
+       <text:p text:style-name="P5117">Note if the keyword is not present in the input deck then DRVDT1 is assumed to be a very large number resulting in complete re-vaporization of the oil into the available undersaturated gas.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4292,11 +4292,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14711">Table <text:sequence text:ref-name="refTable565" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.23</text:sequence>: DRVDT Keyword Description</text:p>
-    <text:p text:style-name="P12750">Note this keyword can be used in history matching field performance to control the availability of the movable gas phase. See also the VAPPARS keyword in the SOLUTION section and the DRVDTR, DRSDT and DRSDTR keywords in the SCHEDULE section that controls how vaporized oil is treated and the rate at which the dissolved phase ratio increases within a grid block.</text:p>
+    <text:p text:style-name="P12750">Note this keyword can be used in history matching field performance to control the availability of the movable gas phase. See also the VAPPARS keyword in the SOLUTION section and the DRVDTR, DRSDT and DRSDTR keywords in the SCHEDULE section that controls how solution gas is treated and the rate at which the vaporized phase ratio increases within a grid block.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716569_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716569_3964674244"/></text:h>
     <text:p text:style-name="Text_20_body">The example prevents the solution oil-gas ratio from increasing.</text:p>
     <text:p text:style-name="P14089">-- <text:s text:c="84"/></text:p>
-    <text:p text:style-name="P14089">-- <text:s text:c="6"/>SOLUTION OIL (RV) MAXIMUM RATE OF INCREASE FOR MODEL <text:s text:c="42"/>-- <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P14089">-- <text:s text:c="6"/>VAPORIZED OIL (RV) MAXIMUM RATE OF INCREASE FOR MODEL <text:s text:c="42"/>-- <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14089">DRVDT</text:p>
     <text:p text:style-name="P14089">-- <text:s text:c="6"/>MAX RV <text:s text:c="61"/></text:p>
     <text:p text:style-name="P14089">-- <text:s text:c="6"/>DRVDT1 <text:s text:c="38"/></text:p>

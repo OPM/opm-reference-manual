@@ -4061,7 +4061,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
@@ -4389,7 +4389,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9630">PLYMWNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2244.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7860">A positive integer value greater than zero and less than or equal to the NTPMWINJ variable, as defined on the PINTDIMS keyword in the RUNSPEC section, that defines the PLYMWINJ Polymer Molecular Weight Model molecular weight throughput and velocity table number.</text:p>
+       <text:p text:style-name="P7860">A positive integer value greater than zero and less than or equal to the NTPMWINJ variable, as defined on the PINTDIMS keyword in the RUNSPEC section, that defines the PLYMWINJ Polymer Molecular Weight Model throughput and velocity table number.</text:p>
        <text:p text:style-name="P7860"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4467,9 +4467,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8868">POLYMW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2244.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8869">A series of real positive vectors representing the polymer molecular weights for all combinations of the polymer throughput values (OUTPUT) and velocity values (VELOCITY), organized as a series of vectors POLYMW(OUTPUT, VELOCITY).</text:p>
-       <text:p text:style-name="P8869">Thus, the first vector represents the molecular weights of the first OUTPUT value and each entry in the vector is the corresponding molecular weight of the associated VELOCITY vector. Each vector should be on a separate line and should be terminated by a “/”.</text:p>
-       <text:p text:style-name="P8876"><text:span text:style-name="T1533">T</text:span>hus<text:span text:style-name="T1533">, if OUTPUT has three entries and VELOCITY has four, then there should be three vectors, with each vector containing four elements representing molecular weight values</text:span>, as a function of OUTPUT and VELOCITY<text:span text:style-name="T1533">.</text:span></text:p>
+       <text:p text:style-name="P8869">A series of real positive vectors representing the polymer molecular weights for all combinations of the polymer throughput values (THRUPUT) and velocity values (VELOCITY), organized as a series of vectors POLYMW(THRUPUT, VELOCITY).</text:p>
+       <text:p text:style-name="P8869">Thus, the first vector represents the molecular weights of the first THRUPUT value and each entry in the vector is the corresponding molecular weight of the associated VELOCITY vector. Each vector should be on a separate line and should be terminated by a “/”.</text:p>
+       <text:p text:style-name="P8876"><text:span text:style-name="T1533">T</text:span>hus<text:span text:style-name="T1533">, if THRUPUT has three entries and VELOCITY has four, then there should be three vectors, with each vector containing four elements representing molecular weight values</text:span>, as a function of THRUPUT and VELOCITY<text:span text:style-name="T1533">.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4510,7 +4510,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14960">Table <text:sequence text:ref-name="refTable320" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.104</text:sequence>: PLYMWINJ Keyword Description</text:p>
     <text:p text:style-name="P15770"/>
     <text:p text:style-name="P12619">Unlike other PROPS section table keywords, that enable multiple tables following the keyword to be entered, the PLYMWINJ keyword requires that the keyword itself must be repeated for each table, as is shown in the example on the following page.</text:p>
-    <text:p text:style-name="P12618">See also the WPMITAB keyword in the SCHEDULE section, that assigns the PLYMWINJ tables to the water injection wells. <text:s/>As wells as the SKPRWAT, SKPRPOLY, and PLYVMH keywords, in the PROPS section, that are the additional property keywords required for the Polymer Molecular Weight Transport option. </text:p>
+    <text:p text:style-name="P12618">See also the WPMITAB keyword in the SCHEDULE section, that assigns the PLYMWINJ tables to the water injection wells, <text:s/>as well as the SKPRWAT, SKPRPOLY, and PLYVMH keywords, in the PROPS section, that are the additional property keywords required for the Polymer Molecular Weight Transport option. </text:p>
     <text:p text:style-name="P12614">The WSKPTAB keyword in the SCHEDULE section may be used to assign the SKPRPOLY<text:span text:style-name="T1"> and </text:span>SKPRWAT<text:span text:style-name="T1"> tables to water injections wells, that enable the calculation of the wellbore skin pressure based on the fluids being injected.</text:span></text:p>
     <text:p text:style-name="P12605">Note that the standard polymer property data keywords: PLYROCK, PLYADS, PLYMAX, etc., are still required to fully describe the polymer fluid. <text:s/></text:p>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716817_396467424412"/>Example<text:bookmark-end text:name="__RefHeading___Toc716817_396467424412"/></text:h>
@@ -4522,7 +4522,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13350">PLYMWINJ</text:p>
     <text:p text:style-name="P13350"><text:s text:c="9"/>1 <text:s text:c="28"/>/ TABLE NUMBER</text:p>
     <text:p text:style-name="P13350">-- <text:s/></text:p>
-    <text:p text:style-name="P13350">-- <text:s text:c="6"/>OUTPUT THROUGHPUT VALUES</text:p>
+    <text:p text:style-name="P13350">-- <text:s text:c="6"/>THROUGHPUT VALUES</text:p>
     <text:p text:style-name="P13350">--</text:p>
     <text:p text:style-name="P13350"><text:s text:c="9"/>0.0 <text:s text:c="4"/>200.0 <text:s text:c="2"/>400.0 <text:s text:c="8"/>/ </text:p>
     <text:p text:style-name="P13350">--</text:p>
@@ -4539,7 +4539,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13350">PLYMWINJ</text:p>
     <text:p text:style-name="P13350"><text:s text:c="9"/>2 <text:s text:c="28"/>/ TABLE NUMBER</text:p>
     <text:p text:style-name="P13350">-- <text:s/></text:p>
-    <text:p text:style-name="P13350">-- <text:s text:c="6"/>OUTPUT THROUGHPUT VALUES</text:p>
+    <text:p text:style-name="P13350">-- <text:s text:c="6"/>THROUGHPUT VALUES</text:p>
     <text:p text:style-name="P13350">--</text:p>
     <text:p text:style-name="P13350"><text:s text:c="9"/>0.0 <text:s text:c="4"/>200.0 <text:s text:c="2"/>400.0 <text:s text:c="8"/>/ </text:p>
     <text:p text:style-name="P13350">--</text:p>

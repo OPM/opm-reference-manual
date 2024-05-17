@@ -4298,7 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
@@ -4565,7 +4565,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716873_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716873_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WSEGSICD keyword defines a multi-segment well segment to be a spiral Inflow Control Device. (“ICD”) as part of a completion for a multi-segment well. Note that the well must have been previously define by the WELSPECS and WELSEGS keywords in the SCHEDULE section and that the data for the keyword should be repeated for each multi-segment completion that contains a spiral ICD. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The WSEGSICD keyword defines a multi-segment well segment to be a spiral Inflow Control Device (“ICD”) as part of a completion for a multi-segment well. Note that the well must have been previously defined by the WELSPECS and WELSEGS keywords in the SCHEDULE section and that the data for the keyword should be repeated for each multi-segment completion that contains a spiral ICD. <text:s/></text:p>
     <text:p text:style-name="P12038">An ICD is a well completion component usually installed along the producing section of a well to minimize the unwanted water and gas breakthrough in an oil well, or early water production in a gas well, due to an uneven flow profile over the completed interval. <text:s/>Permeability variations over the producing interval cause the high permeability zones to produce higher quantities of fluids than the lower permeability zones and this uneven producing fluid profile may result in bypassed hydrocarbons. Secondly, for horizontal wells, the pressure loss from the “toe” to the “heel” of the well again results in an uneven fluid profile over the producing interval. In order to rectify this ICDs can be installed so that the well fluids have to flow through an ICD before entering the tubing; thus, creating an additional “designed” pressure loss. <text:s/></text:p>
     <text:p text:style-name="P12038">A spiral ICD is a type of frictional ICD that adds an additional pressure loss by directing the fluid along a “channel” (spiral/helix) before entering the tubing. The channel flow path is designed in such a manner as to create the desired pressure loss for a given ICD. <text:s text:c="2"/>By placing various ICD’s over the production interval one can design a completion that results in a more uniform producing fluid profile throughout the length of the producing interval. </text:p>
     <table:table table:name="Table827" table:style-name="Table827">
@@ -4694,16 +4694,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1335">ICDLEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table827.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the length of the ICD used in conjunction with NSCAFAC to calculate a scaling factor to be applied to the reservoir flow to adjust the flow through each ICD, that is:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the length of the ICD used in conjunction with NSCALFAC to calculate a scaling factor to be applied to the reservoir flow to adjust the flow through each ICD, that is:</text:p>
        <text:list xml:id="list105922078447699" text:continue-list="list105922310385783" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P16992">If NSCAFAC equals zero: then the scale factor is equal to the length of the ICD (ICDLEN) divided by the length of the tubing section, that is the parent of the ICDs, then this allows for the case when the ICD segment may represent a number of ICDs in parallel. </text:p>
+         <text:p text:style-name="P16992">If NSCALFAC equals zero: then the scale factor is equal to the length of the ICD (ICDLEN) divided by the length of the tubing section, that is the parent of the ICDs, then this allows for the case when the ICD segment may represent a number of ICDs in parallel. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">If NSCAFAC equals one: then the scale factor is equal to the absolute value of ICDLEN.</text:p>
+         <text:p text:style-name="P16992">If NSCALFAC equals one: then the scale factor is equal to the absolute value of ICDLEN.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">If NSCAFAC equals two: then the scale factor is equal to the length of ICDLEN, divided by the total length of the completions which supply the ICD.</text:p>
+         <text:p text:style-name="P16992">If NSCALFAC equals two: then the scale factor is equal to the length of ICDLEN, divided by the total length of the completions which supply the ICD.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">NSCALFAC explicitly sets which of the above three options is used. If NSCALFAC is defaulted, then option 1) is used whenever ICDLEN is positive and option 2) when ICDLEN is negative.</text:p>
@@ -4890,19 +4890,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9485">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table827.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9483">NSCAFAC</text:p>
+       <text:p text:style-name="P9483">NSCALFAC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table827.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7769">NSCALFAC is a positive integer value that is greater than or equal to zero, that sets the method to be used when applying the scaling factor and should be set to one of the following:</text:p>
        <text:list xml:id="list105922512940162" text:continue-list="list105922078447699" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18774">If NSCAFAC equals zero: then the scale factor is equal to the length of the ICD (ICDLEN) divided by the length of the tubing section, that is the parent of the ICDs, then this allows for the case when the ICD segment may represent a number of ICDs in parallel. </text:p>
+         <text:p text:style-name="P18774">If NSCALFAC equals zero: then the scale factor is equal to the length of the ICD (ICDLEN) divided by the length of the tubing section, that is the parent of the ICDs, then this allows for the case when the ICD segment may represent a number of ICDs in parallel. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20160">If NSCAFAC equals one: then the scale factor is equal to the absolute value of ICDLEN. </text:p>
+         <text:p text:style-name="P20160">If NSCALFAC equals one: then the scale factor is equal to the absolute value of ICDLEN. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20160">If NSCAFAC equals two: then the scale factor is equal to the length of ICDLEN, divided by the total length of the completions which supply the ICD.</text:p>
+         <text:p text:style-name="P20160">If NSCALFAC equals two: then the scale factor is equal to the length of ICDLEN, divided by the total length of the completions which supply the ICD.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P16156">NSCALFAC explicitly sets which of the above three options is used. If NSCALFAC is defaulted, then option 1) is used whenever ICDLEN is positive and option 2) when ICDLEN is negative.</text:p>
@@ -4968,10 +4968,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7358">A defined character string of length four that defines the ICD’s operational status, STATUS should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105923536914402" text:continue-list="list105922512940162" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19536">OPEN: the ICD connection is are open to flow.</text:p>
+         <text:p text:style-name="P19536">OPEN: the ICD connections are are open to flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19536">SHUT: the ICD connections is closed to flow (shut-in).</text:p>
+         <text:p text:style-name="P19536">SHUT: the ICD connections are closed to flow (shut-in).</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5558,7 +5558,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_EquationWhereList">μemulsion<text:tab/>= <text:s/>the viscosity of the oil-water emulsion at local conditions.\</text:p>
     <text:p text:style-name="_40_EquationWhereList">β<text:tab/>= <text:s/>ICDSTREN, the strength of the ICD as measured using the calibrated fluid.</text:p>
     <text:p text:style-name="P16614">q<text:tab/>= <text:s/>the local flow rate through the ICD at local conditions adjusted for scaling</text:p>
-    <text:p text:style-name="_40_EquationWhereListSecondLine">based on ICDLEN and NSCAFAC parameters in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable662">Table 12.120</text:sequence-ref>.</text:p>
+    <text:p text:style-name="_40_EquationWhereListSecondLine">based on ICDLEN and NSCALFAC parameters in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable662">Table 12.120</text:sequence-ref>.</text:p>
     <text:p text:style-name="P16384"/>
     <text:p text:style-name="P12307">In equation <text:sequence-ref text:reference-format="text" text:ref-name="refText231">(12.40)</text:sequence-ref>, αi represents the volume fraction of oil, water and gas at local conditions and ρi the density of the three phases. Similarity for equation <text:sequence-ref text:reference-format="text" text:ref-name="refText232">(12.41)</text:sequence-ref>, αi represents the volume fraction of oil, water and gas at local conditions and μi the viscosity of the three phases.</text:p>
     <text:p text:style-name="P11633">See also the WSEGAICD keyword in the SCHEDULE section for autonomous ICDs, that work in a similar fashion to how sprial ICDs work.</text:p>
@@ -5580,7 +5580,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14259">COMPDAT <text:s text:c="71"/></text:p>
     <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>1 <text:s text:c="2"/>1 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.5 <text:s text:c="28"/>/</text:p>
     <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>2 <text:s text:c="2"/>2 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.5 <text:s text:c="28"/>/</text:p>
-    <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>3 <text:s text:c="2"/>6 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.4 <text:s text:c="28"/>/</text:p>
+    <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>3 <text:s text:c="2"/>3 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.4 <text:s text:c="28"/>/</text:p>
     <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>4 <text:s text:c="2"/>4 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.4 <text:s text:c="28"/>/</text:p>
     <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>5 <text:s text:c="2"/>5 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.4 <text:s text:c="28"/>/</text:p>
     <text:p text:style-name="P14259">OP01 <text:s text:c="5"/>10 <text:s/>10 <text:s text:c="2"/>6 <text:s text:c="2"/>6 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>200. <text:s text:c="2"/>0.4 <text:s text:c="28"/>/</text:p>
@@ -5706,7 +5706,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">OP01 <text:s text:c="5"/>24 <text:s text:c="3"/>24 <text:s/>0.00025 <text:s text:c="2"/>1* <text:s/>1.0 <text:s/>0.45 <text:s/>0.50 <text:s/>0.05 <text:s text:c="2"/>5.0 <text:s text:c="2"/>2 <text:s text:c="3"/>1* <text:s text:c="3"/>OPEN /</text:p>
     <text:p text:style-name="P12904">OP01 <text:s text:c="5"/>25 <text:s text:c="3"/>25 <text:s/>0.00050 10.0 <text:s/>1.0 <text:s/>0.45 <text:s/>0.50 <text:s/>0.05 <text:s text:c="2"/>5.0 <text:s text:c="2"/>2 <text:s text:c="3"/>1* <text:s text:c="3"/>OPEN /</text:p>
     <text:p text:style-name="P14260">/ <text:s text:c="76"/><text:span text:style-name="T4"><text:s text:c="77"/></text:span></text:p>
-    <text:p text:style-name="P15783">Branch number two uses one ICD for segments seven to ten, branch number three again uses only one <text:s/>ICD for segments 12 to 15 and similarly branch number three uses one ICD. The fifth and final branch has a total of four ICDs with the last interval having a 10 foot length. <text:s/>Since NSCAFAC equals two for the ICDs, then the scale factor is equal to the length to ICDLEN, divided by the total length of the completions which supply the ICD. <text:s/>Where ICDLEN is defaulted, the default value of 39.37 ft will be used for field units and 12 m for SI units.</text:p>
+    <text:p text:style-name="P15783">Branch number two uses one ICD for segments seven to ten, branch number three again uses only one <text:s/>ICD for segments 12 to 15 and similarly branch number three uses one ICD. The fifth and final branch has a total of four ICDs with the last interval having a 10 foot length. <text:s/>Since NSCALFAC equals two for the ICDs, then the scale factor is equal to the length of ICDLEN, divided by the total length of the completions which supply the ICD. <text:s/>Where ICDLEN is defaulted, the default value of 39.37 ft will be used for field units and 12 m for SI units.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>
     

@@ -2916,12 +2916,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T3853" style:family="text">
    <style:text-properties style:text-position="super 58%"/>
   </style:style>
-  <style:style style:name="T3855" style:family="text">
-   <style:text-properties style:text-position="super 58%" officeooo:rsid="01ace5c4"/>
-  </style:style>
-  <style:style style:name="T4394" style:family="text">
-   <style:text-properties officeooo:rsid="01ace5c4"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4097,7 +4091,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
@@ -4365,7 +4359,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716167_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716167_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">PVTG defines the gas PVT properties for wet gas<text:note text:id="ftn219" text:note-class="footnote"><text:note-citation>219</text:note-citation><text:note-body>
-        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. <text:span text:style-name="T4394">Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 </text:span><text:span text:style-name="T3855">o</text:span><text:span text:style-name="T4394">API.</text:span></text:p></text:note-body></text:note>. This keyword should be used when the VAPOIL keyword has be declared in the RUNSPEC section indicating that that vaporized oil (more commonly referred to as condensate) is present in the wet gas phase. The keyword may be used for gas-water and oil-water-gas input decks that contain the oil and gas phases. </text:p>
+        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 oAPI.</text:p></text:note-body></text:note>. This keyword should be used when the VAPOIL keyword has be declared in the RUNSPEC section indicating that that vaporized oil (more commonly referred to as condensate) is present in the wet gas phase. The keyword may be used for gas-water and oil-water-gas input decks that contain the oil and gas phases. </text:p>
     <table:table table:name="Table513" table:style-name="Table513">
      <table:table-column table:style-name="Table513.A"/>
      <table:table-column table:style-name="Table513.B" table:number-columns-repeated="2"/>
@@ -4559,7 +4553,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P20023">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rv entries as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20114">Apart from the PRES data there must be same number of entries for each column. </text:p>
+         <text:p text:style-name="P20114">Apart from the PRESS data there must be same number of entries for each column. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20024">Each sub table defining the under saturated gas properties must be terminated by <text:s/>“/”.</text:p>
@@ -4600,36 +4594,36 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13443">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13443">PVTG</text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="6"/>PRES <text:s text:c="6"/>RV <text:s text:c="10"/>BG <text:s text:c="10"/>VISC <text:s text:c="56"/></text:p>
-    <text:p text:style-name="P13443">-- <text:s text:c="6"/>PSIA <text:s text:c="4"/>STB/MSCF <text:s text:c="4"/>RB/MSCF <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
+    <text:p text:style-name="P13443">-- <text:s text:c="6"/>BARSA<text:s text:c="4"/>SM^3/SM^3 <text:s text:c="4"/>RM^3/SM^3 <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="5"/>------ <text:s text:c="3"/>--------- <text:s text:c="3"/>------- <text:s text:c="6"/>------ <text:s text:c="47"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="10"/>300 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="10"/> 20 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.042310 <text:s text:c="5"/>0.01389 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="10"/>600 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="10"/> 40 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.020430 <text:s text:c="5"/>0.01450 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="10"/>900 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="10"/> 60 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.013250 <text:s text:c="5"/>0.01532 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>1200 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/>  80 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.009730 <text:s text:c="5"/>0.01634 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>1500 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 100 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.007690 <text:s text:c="5"/>0.01752 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>1800 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 120 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.006405 <text:s text:c="5"/>0.01883 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>2100 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 140 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.005553 <text:s text:c="5"/>0.02021 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>2400 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 160 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.004952 <text:s text:c="5"/>0.02163 <text:s text:c="5"/>/ <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13444"><text:s text:c="17"/><text:s text:c="42"/>/ TABLE NO. 1 </text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="6"/>PRES <text:s text:c="6"/>RV <text:s text:c="10"/>BG <text:s text:c="10"/>VISC <text:s text:c="56"/></text:p>
-    <text:p text:style-name="P13443">-- <text:s text:c="6"/>PSIA <text:s text:c="4"/>STB/MSCF <text:s text:c="4"/>RB/MSCF <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
+    <text:p text:style-name="P13443">-- <text:s text:c="6"/>BARSA<text:s text:c="4"/>SM^3/SM^3 <text:s text:c="4"/>RM^3/SM^3 <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="5"/>------ <text:s text:c="3"/>--------- <text:s text:c="3"/>------- <text:s text:c="6"/>------ <text:s text:c="47"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="10"/>300 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="10"/>600 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="10"/>900 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>1200 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>1500 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>1800 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>2100 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13443"><text:s text:c="9"/>2400 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="10"/> 20 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="10"/> 40 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="10"/> 60 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/>  80 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 100 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 120 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 140 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13443"><text:s text:c="9"/> 160 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13443"><text:s text:c="18"/>0 <text:s text:c="12"/>0.004952 <text:s text:c="5"/>0.02163 <text:s text:c="5"/>/ </text:p>
     <text:p text:style-name="P13444"><text:s text:c="14"/><text:s text:c="45"/>/ TABLE NO. 2</text:p>
     <text:p text:style-name="Text_20_body"/>
@@ -4640,37 +4634,37 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13448">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13448">PVTG</text:p>
     <text:p text:style-name="P13448">-- <text:s text:c="6"/>PRES <text:s text:c="6"/>RV <text:s text:c="10"/>BG <text:s text:c="10"/>VISC <text:s text:c="56"/></text:p>
-    <text:p text:style-name="P13448">-- <text:s text:c="6"/>PSIA <text:s text:c="4"/>STB/MSCF <text:s text:c="4"/>RB/MSCF <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
+    <text:p text:style-name="P13448">-- <text:s text:c="6"/>BARSA<text:s text:c="4"/>SM^3/SM^3 <text:s text:c="4"/>RM^3/SM^3 <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
     <text:p text:style-name="P13448">-- <text:s text:c="5"/>------ <text:s text:c="3"/>--------- <text:s text:c="3"/>------- <text:s text:c="6"/>------ <text:s text:c="47"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="10"/>300 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="10"/> 20 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.042310 <text:s text:c="5"/>0.01389 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="10"/>600 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="10"/> 40 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.020430 <text:s text:c="5"/>0.01450 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="10"/>900 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="10"/> 60 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.013250 <text:s text:c="5"/>0.01532 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>1200 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/>  80 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.009730 <text:s text:c="5"/>0.01634 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>1500 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 100 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.007690 <text:s text:c="5"/>0.01752 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>1800 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 120 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.006405 <text:s text:c="5"/>0.01883 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>2100 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 140 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.005553 <text:s text:c="5"/>0.02021 <text:s text:c="5"/>/</text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>2400 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 160 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="18"/>0 <text:s text:c="12"/>0.004952 <text:s text:c="5"/>0.02163 <text:s text:c="5"/>/ <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13448"><text:s text:c="17"/><text:s text:c="42"/>/ TABLE NO. 1 </text:p>
     <text:p text:style-name="P13448"><text:s text:c="17"/><text:s text:c="42"/>/ TABLE NO. 2 </text:p>
     <text:p text:style-name="P13448">-- <text:s text:c="6"/>PRES <text:s text:c="6"/>RV <text:s text:c="10"/>BG <text:s text:c="10"/>VISC <text:s text:c="56"/></text:p>
-    <text:p text:style-name="P13448">-- <text:s text:c="6"/>PSIA <text:s text:c="4"/>STB/MSCF <text:s text:c="4"/>RB/MSCF <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
+    <text:p text:style-name="P13448">-- <text:s text:c="6"/>BARSA<text:s text:c="4"/>SM^3/SM^3 <text:s text:c="4"/>RM^3/SM^3 <text:s text:c="6"/>CPOISE <text:s text:c="55"/></text:p>
     <text:p text:style-name="P13448">-- <text:s text:c="5"/>------ <text:s text:c="3"/>--------- <text:s text:c="3"/>------- <text:s text:c="6"/>------ <text:s text:c="47"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="10"/>300 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="10"/>600 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="10"/>900 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>1200 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>1500 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>1800 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>2100 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P13448"><text:s text:c="9"/>2400 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="10"/> 20 <text:s text:c="4"/>0.000132 <text:s text:c="5"/>0.042340 <text:s text:c="5"/>0.01344 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="10"/> 40 <text:s text:c="4"/>0.000124 <text:s text:c="5"/>0.020460 <text:s text:c="5"/>0.01420 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="10"/> 60 <text:s text:c="4"/>0.000126 <text:s text:c="5"/>0.013280 <text:s text:c="5"/>0.01526 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/>  80 <text:s text:c="4"/>0.000135 <text:s text:c="5"/>0.009770 <text:s text:c="5"/>0.01660 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 100 <text:s text:c="4"/>0.000149 <text:s text:c="5"/>0.007730 <text:s text:c="5"/>0.01818 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 120 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.006426 <text:s text:c="5"/>0.01994 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 140 <text:s text:c="4"/>0.000191 <text:s text:c="5"/>0.005541 <text:s text:c="5"/>0.02181 <text:s text:c="5"/></text:p>
+    <text:p text:style-name="P13448"><text:s text:c="9"/> 160 <text:s text:c="4"/>0.000225 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/></text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="18"/>0 <text:s text:c="12"/>0.004952 <text:s text:c="5"/>0.02163 <text:s text:c="5"/>/ </text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="14"/><text:s text:c="45"/>/ TABLE NO. 3</text:p>
     <text:p text:style-name="P13448"><text:s text:c="17"/><text:s text:c="42"/>/ TABLE NO. 4 </text:p>
