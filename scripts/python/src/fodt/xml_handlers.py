@@ -8,7 +8,8 @@ import xml.sax.saxutils
 from fodt.xml_helpers import XMLHelper
 
 class PassThroughFilterHandler(xml.sax.handler.ContentHandler):
-    def __init__(self) -> None:
+    def __init__(self, add_header=True) -> None:
+        self.add_header = add_header
         self.content = io.StringIO()
         self.start_tag_open = False  # For empty tags, do not close with />
 
@@ -31,7 +32,8 @@ class PassThroughFilterHandler(xml.sax.handler.ContentHandler):
         return self.content.getvalue()
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        if self.add_header:
+            self.content.write(XMLHelper.header)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:

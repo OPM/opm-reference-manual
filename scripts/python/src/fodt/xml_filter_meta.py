@@ -28,7 +28,7 @@ class FilterAll:
 
     def filter_file(self, filename: Path) -> None:
         parser = xml.sax.make_parser()
-        handler = PassThroughFilterHandler()
+        handler = PassThroughFilterHandler(add_header=False)
         parser.setContentHandler(handler)
         parser.parse(filename)
         with open(filename, "w", encoding='utf8') as f:
