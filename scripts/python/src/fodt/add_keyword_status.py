@@ -83,15 +83,16 @@ class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
                 self.in_table_cell = False
             elif self.in_table_cell_style and name == "style:style":
                 self.in_table_cell_style = False
-        if self.in_table_cell_p and name == "text:p" and self.start_tag_open and self.opm_flow:
+        if self.in_table_cell_p and name == "text:p" and self.start_tag_open:
             self.content.write(">")
             self.start_tag_open = False
-            content = "OPM Flow"
             self.keyword_handled = True
             self.current_keyword = None
             self.in_table_cell_p = False
             self.found_table_cell = False
-            self.content.write(XMLHelper.escape(content))
+            if self.opm_flow:
+                content = "OPM Flow"
+                self.content.write(XMLHelper.escape(content))
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -229,7 +230,7 @@ def set_keyword_status(
     try:
         color = KeywordStatus[color.upper()]
     except ValueError:
-        raise ValueError(f"Invalid status value: {status}.")
+        raise ValueError(f"Invalid color value: {color}.")
     logging.info(f"Updating parameters for keyword {keyword}:  Color: {color}, flow-specific keyword: {opm_flow}.")
     UpdateKeywordStatus(maindir, keyword, color, opm_flow).update()
 
