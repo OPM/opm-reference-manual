@@ -4318,7 +4318,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
     <text:p text:style-name="P51"><text:span text:style-name="T20">The ACF keyword defines the acentric factors for each of the compositional components active in the model and for each equation of state. The keyword should only be used if the compositional mode has been requested using the COMPS keyword in the RUNSPEC section.</text:span></text:p>
-    <text:p text:style-name="P51">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
+    <text:p text:style-name="P51">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
+    <text:p text:style-name="P51">This keyword is not supported by OPM Flow but it will be parsed and its data ignored.</text:p>
     <table:table table:name="Table2084" table:style-name="Table2084">
      <table:table-column table:style-name="Table2084.A"/>
      <table:table-column table:style-name="Table2084.B"/>
@@ -4360,7 +4361,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P61">The keyword is followed by NMEOSR records as specified by the TABDIMS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P61">Each record must contain COMPS values as specfied by the COMPS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P61">Each record must contain COMPS values as specified by the COMPS keyword in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P59"><text:span text:style-name="T20">Each record</text:span> is terminated by a “/” <text:span text:style-name="T20">and there is no “/” terminator for the keyword</text:span>.</text:p>
@@ -4372,7 +4373,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P55">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.1.1</text:sequence>: CNAMES Keyword Description</text:p>
+    <text:p text:style-name="P55">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.1.1</text:sequence>: ACF Keyword Description</text:p>
     <text:h text:style-name="P48" text:outline-level="4">Example<text:span text:style-name="T20">s</text:span></text:h>
     <text:p text:style-name="P52">The following example defines the acentric factors for each component in a single three-component equation of state model.</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
