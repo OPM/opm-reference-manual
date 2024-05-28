@@ -19,10 +19,19 @@ from fodt.templates import Templates
 from fodt.xml_helpers import XMLHelper
 
 class AppendixHandler(xml.sax.handler.ContentHandler):
-    def __init__(self, keyword: str, status: KeywordStatus, title: str) -> None:
+    def __init__(
+            self,
+            keyword: str,
+            status: KeywordStatus,
+            title: str,
+            chapter: int,
+            section: int
+        ) -> None:
         self.keyword_name = keyword
         self.keyword_status = status
         self.keyword_title = title
+        self.keyword_chapter = chapter
+        self.keyword_section = section
         self.in_styles = False
         self.content = io.StringIO()
         self.current_row = io.StringIO()
@@ -124,7 +133,9 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
 
     def get_new_appendix_row(self) -> str:
         new_row = Templates.AppendixA.Content.table_row_template
+        bookmark_name = f"{self.keyword_name}_{self.keyword_chapter}_{self.keyword_section}"
         new_row = re.sub(r'###KEYWORD_NAME###', self.keyword_name, new_row)
+        new_row = re.sub(r'###KEYWORD_NAME_BOOKMARK###', bookmark_name, new_row)
         new_row = re.sub(r'###KEYWORD_DESCRIPTION###', self.keyword_title, new_row)
         if self.keyword_status == KeywordStatus.ORANGE:
             color = "Orange"
@@ -266,7 +277,9 @@ class AddKeyword():
             raise FileNotFoundError(f"File {self.filename} not found.")
         # parse the xml file
         parser = xml.sax.make_parser()
-        handler = AppendixHandler(self.keyword, self.status, self.title)
+        handler = AppendixHandler(
+            self.keyword, self.status, self.title, self.chapter, self.section
+        )
         parser.setContentHandler(handler)
         parser.parse(self.filename)
         # Take a backup of the file

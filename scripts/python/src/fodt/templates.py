@@ -35,7 +35,7 @@ class Templates:
                  """text:style-name="Internet_20_link" """
                  """text:visited-style-name="Visited_20_Internet_20_Link">"""
                  """<text:bookmark-ref text:reference-format="text" """
-                 """text:ref-name="REF_HEADING_KEYWORD_###KEYWORD_NAME###">"""
+                 """text:ref-name="REF_HEADING_KEYWORD_###KEYWORD_NAME_BOOKMARK###">"""
                  """###KEYWORD_NAME### – ###KEYWORD_DESCRIPTION###"""
                  """</text:bookmark-ref></text:a></text:p>\n"""
 """      </table:table-cell>
