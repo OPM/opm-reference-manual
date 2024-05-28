@@ -6,6 +6,7 @@ from typing import Optional, Any
 
 import click
 
+from lodocker.constants import Directories, FileNames
 from lodocker.constants import Paths
 
 class ClickHelpers:
@@ -101,6 +102,31 @@ class Helpers:
     def is_dev_container(dockerfile_dirname: str) -> bool:
         """Check if the Dockerfile is for a development container."""
         return dockerfile_dirname == "ubuntu2310-dev"
+
+    @staticmethod
+    def locate_git_root_from_file(file: str) -> Path:
+        """Locate the root directory of a git repository from a file within the repository.
+        :param file: A file within the git repository.
+        :return: The root directory of the git repository.
+        """
+        file = Path(file).resolve()
+        assert file.is_absolute(), "File path must be absolute."
+        assert file.is_file(), "File path must be a file."
+        cwd = file.parent
+        while True:
+            # Check if we have reached the root directory
+            #  filename.parent == filename is True if filename is the root directory
+            if cwd.parent == cwd:
+                raise FileNotFoundError(f"Could not derive git root from '{file}'.")
+            # Check if the current directory is a git repository and that there is a
+            #  directory named "parts" with a main document file therein
+            if (cwd / ".git").exists() and (cwd / ".git").is_dir():
+                if (cwd / Directories.parts).exists():
+                    if (cwd / Directories.parts / FileNames.main_document).exists():
+                        return cwd
+            cwd = cwd.parent
+        # This should never be reached
+        return Path("")
 
     @staticmethod
     def run_command(command: str | list) -> int:

@@ -14,7 +14,8 @@ from lodocker.helpers import Helpers
 class RunContainer:
     def __init__(self):
         self.shared_doc_dir = "parts"
-        self.git_root = Path(__file__).resolve().parents[3]
+        #self.git_root = Path(__file__).resolve().parents[3]
+        self.git_root = Helpers.locate_git_root_from_file(__file__)
         logging.info(f"git_root: {self.git_root}")
         self.document_dir = self.git_root / self.shared_doc_dir
         # The home directory of the user in the Docker container
