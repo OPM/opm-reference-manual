@@ -225,7 +225,8 @@ class AddKeyword():
         chapter: int,
         section: int,
         title: str,
-        status: KeywordStatus
+        status: KeywordStatus,
+        appendix: bool
     ) -> None:
         self.maindir = Helpers.get_maindir(maindir)
         self.keyword_dir = Helpers.get_keyword_dir(keyword_dir, self.maindir)
@@ -234,10 +235,14 @@ class AddKeyword():
         self.section = section
         self.title = title
         self.status = status
+        self.appendix = appendix
         self.add_keyword()
         self.update_subdocument()
         self.update_chapter_document()
-        self.update_appendixA()
+        if self.appendix:
+            self.update_appendixA()
+        else:
+            logging.info("Not updating appendix A since requested not to.")
 
     def add_keyword(self) -> None:
         self.documentdir = Path(self.maindir) / Directories.chapters
@@ -338,13 +343,15 @@ class AddKeyword():
     '--title', type=str, required=True, help='The link text displayed in the appendix.'
 )
 @click.option('--status', type=str, required=True, help='The status of the keyword.')
+@click.option('--appendix/--no-appendix', type=bool, default=True, help="Include keyword in appendix or not.")
 def add_keyword(
     maindir: str,
     keyword_dir: str,
     keyword: str,
     section: str,
     title: str,
-    status: str
+    status: str,
+    appendix: bool
 ) -> None:
     logging.basicConfig(level=logging.INFO)
     (chapter, section) = Helpers.split_section(section)
@@ -352,7 +359,7 @@ def add_keyword(
         status = KeywordStatus[status.upper()]
     except ValueError:
         raise ValueError(f"Invalid status value: {status}.")
-    add_keyword = AddKeyword(maindir, keyword_dir, keyword, chapter, section, title, status)
+    add_keyword = AddKeyword(maindir, keyword_dir, keyword, chapter, section, title, status, appendix)
 
 if __name__ == "__main__":
     add_keyword()
