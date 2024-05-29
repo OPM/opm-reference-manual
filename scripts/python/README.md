@@ -46,6 +46,8 @@ to include the new file `parts/chapters/subsections/4.3/HELLO.fodt`.
 The generated file `HELLO.fodt` is created from a template such that it initially contains just
 the heading with the keyword name.
 
+Note: In the rare case you want to add the same keyword name to different sections, you can avoid adding the keyword twice to Appendix A by giving option `--no-appendix`.
+
 ## Changing the status of a keyword in Appendix A
 
 To change the status of a keyword in the status column in the alphabetical listing

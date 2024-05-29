@@ -19,10 +19,19 @@ from fodt.templates import Templates
 from fodt.xml_helpers import XMLHelper
 
 class AppendixHandler(xml.sax.handler.ContentHandler):
-    def __init__(self, keyword: str, status: KeywordStatus, title: str) -> None:
+    def __init__(
+            self,
+            keyword: str,
+            status: KeywordStatus,
+            title: str,
+            chapter: int,
+            section: int
+        ) -> None:
         self.keyword_name = keyword
         self.keyword_status = status
         self.keyword_title = title
+        self.keyword_chapter = chapter
+        self.keyword_section = section
         self.in_styles = False
         self.content = io.StringIO()
         self.current_row = io.StringIO()
@@ -124,7 +133,9 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
 
     def get_new_appendix_row(self) -> str:
         new_row = Templates.AppendixA.Content.table_row_template
+        bookmark_name = f"{self.keyword_name}_{self.keyword_chapter}_{self.keyword_section}"
         new_row = re.sub(r'###KEYWORD_NAME###', self.keyword_name, new_row)
+        new_row = re.sub(r'###KEYWORD_NAME_BOOKMARK###', bookmark_name, new_row)
         new_row = re.sub(r'###KEYWORD_DESCRIPTION###', self.keyword_title, new_row)
         if self.keyword_status == KeywordStatus.ORANGE:
             color = "Orange"
@@ -225,7 +236,8 @@ class AddKeyword():
         chapter: int,
         section: int,
         title: str,
-        status: KeywordStatus
+        status: KeywordStatus,
+        appendix: bool
     ) -> None:
         self.maindir = Helpers.get_maindir(maindir)
         self.keyword_dir = Helpers.get_keyword_dir(keyword_dir, self.maindir)
@@ -234,10 +246,14 @@ class AddKeyword():
         self.section = section
         self.title = title
         self.status = status
+        self.appendix = appendix
         self.add_keyword()
         self.update_subdocument()
         self.update_chapter_document()
-        self.update_appendixA()
+        if self.appendix:
+            self.update_appendixA()
+        else:
+            logging.info("Not updating appendix A since requested not to.")
 
     def add_keyword(self) -> None:
         self.documentdir = Path(self.maindir) / Directories.chapters
@@ -261,7 +277,9 @@ class AddKeyword():
             raise FileNotFoundError(f"File {self.filename} not found.")
         # parse the xml file
         parser = xml.sax.make_parser()
-        handler = AppendixHandler(self.keyword, self.status, self.title)
+        handler = AppendixHandler(
+            self.keyword, self.status, self.title, self.chapter, self.section
+        )
         parser.setContentHandler(handler)
         parser.parse(self.filename)
         # Take a backup of the file
@@ -338,13 +356,15 @@ class AddKeyword():
     '--title', type=str, required=True, help='The link text displayed in the appendix.'
 )
 @click.option('--status', type=str, required=True, help='The status of the keyword.')
+@click.option('--appendix/--no-appendix', type=bool, default=True, help="Include keyword in appendix or not.")
 def add_keyword(
     maindir: str,
     keyword_dir: str,
     keyword: str,
     section: str,
     title: str,
-    status: str
+    status: str,
+    appendix: bool
 ) -> None:
     logging.basicConfig(level=logging.INFO)
     (chapter, section) = Helpers.split_section(section)
@@ -352,7 +372,7 @@ def add_keyword(
         status = KeywordStatus[status.upper()]
     except ValueError:
         raise ValueError(f"Invalid status value: {status}.")
-    add_keyword = AddKeyword(maindir, keyword_dir, keyword, chapter, section, title, status)
+    add_keyword = AddKeyword(maindir, keyword_dir, keyword, chapter, section, title, status, appendix)
 
 if __name__ == "__main__":
     add_keyword()

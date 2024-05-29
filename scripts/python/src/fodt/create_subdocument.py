@@ -11,12 +11,16 @@ from fodt.xml_helpers import XMLHelper
 from fodt.styles_filter import StylesFilter
 
 class CreateSubDocument():
-    def create_documents(self, parts: list[str]) -> None:
+    def create_documents(self, parts: list[str], bookmark_info: list[str]|None = None) -> None:
+        # NOTE: The bookmark_info parameter is used by CreateSubDocument3 to differentiate
+        #   between keywords with the same name in different chapters.
+        #   See: https://github.com/OPM/opm-reference-manual/pull/259
         outputdir = self.outputdir
         if not self.is_chapter:
             outputdir = outputdir / f"{self.chapter}.{self.section}"
         outputdir.mkdir(parents=True, exist_ok=True)
-        for part in parts:
+        for (i, part) in enumerate(parts):
+            part_extra = bookmark_info[i] if bookmark_info is not None else None
             outputfile: Path = outputdir / f"{part}.{FileExtensions.fodt}"
             if outputfile.exists():
                 logging.info(f"Skipping {outputfile} because it already exists.")
@@ -27,12 +31,14 @@ class CreateSubDocument():
                 self.write_office_document_start_tag()
                 self.write_meta(part)
                 self.write_office_body_start_tag(part)
-                self.write_section(part)
+                self.write_section(part, part_extra)
                 self.write_xml_footer()
             logging.info(f"Created FODT subdocument {outputfile}")
 
-    def create_subsection_template(self, part: str) -> str:
+    def create_subsection_template(self, part: str, part_extra: str|None) -> str:
         template = Helpers.read_keyword_template()
+        part_bookmark = f"{part}_{part_extra}" if part_extra is not None else part
+        template = re.sub(r"###KEYWORD_NAME_BOOKMARK###", part_bookmark, template)
         template = re.sub(r"###KEYWORD_NAME###", part, template)
         if self.add_keyword:
             description = self.title
@@ -101,7 +107,7 @@ class CreateSubDocument():
                 content = filter.get_filtered_content()
         self.outputfile.write(content)
 
-    def write_section(self, part: str) -> None:
+    def write_section(self, part: str, part_extra: str|None) -> None:
         if self.is_chapter:
             dir_ = self.extracted_sections_dir
         else:
@@ -113,7 +119,7 @@ class CreateSubDocument():
                 content = f.read()
         else:
             if not self.is_chapter:
-                content = self.create_subsection_template(part)
+                content = self.create_subsection_template(part, part_extra)
         if content is None:
             raise InputException(f"Could not find section file {section_file}")
         self.outputfile.write("\n")
@@ -195,7 +201,8 @@ class CreateSubDocument3(CreateSubDocument):
         self.outputdir = self.documentdir / Directories.subsections
         self.is_chapter = False
         parts = [self.keyword]
+        parts_extra = [f"{self.chapter}_{self.section}"]
         keyw_list = Helpers.read_keyword_order_v2(self.keyword_dir, chapter, section)
         self.keywords = Helpers.keywords_inverse_map(keyw_list)
         self.add_keyword = True
-        self.create_documents(parts)
+        self.create_documents(parts, parts_extra)
