@@ -4246,14 +4246,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18640" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838818 Copy 1"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838818 Copy 1"/></text:h>
-    <text:p text:style-name="P12728">Turns on the Compositional Modeling Formulation, and declares the maximum number of components in the model. The keyword should only be used if the CO2STORE keyword and either the GASWAT or the GAS and WATER keywords in the RUNSPEC section, have also be activated for the gas-water two component model. </text:p>
+    <text:p text:style-name="P12728">The COMPS keyword activates the Compositional Modeling Formulation, and declares the number of components active in the model.</text:p>
+    <text:p text:style-name="P12728">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
     <table:table table:name="Table2075" table:style-name="Table2075">
      <table:table-column table:style-name="Table2075.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2075.1">
        <table:table-cell table:style-name="Table2075.A1" office:value-type="string">
         <text:p text:style-name="P10229">Note</text:p>
-        <text:p text:style-name="P10194">This is an OPM Flow keyword used with OPM Flow’s CO2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the COMPS keyword used in the commercial compositional simulator.</text:p>
+        <text:p text:style-name="P10194">This keyword is only supported by OPM Flow when the two component gas-water CO2 storage model has been activated using the CO2STORE keyword and either the GASWAT or the GAS and WATER keywords in the RUNSPEC section.</text:p>
         <text:p text:style-name="P10209">Secondly, although OPM Flow parses the keyword, the simulator currently ignores the data for this keyword.</text:p>
        </table:table-cell>
       </table:table-row>
@@ -4287,7 +4288,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5436">COMPS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2074.C2" office:value-type="string">
-       <text:p text:style-name="P1152">A positive integer defining the maximum number of compositional components in the model.</text:p>
+       <text:p text:style-name="P1152">A positive integer defining the number of compositional components active in the model.</text:p>
        <text:p text:style-name="P1152">Only the default value of two is currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2074.D2" office:value-type="string">
@@ -4310,7 +4311,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14971">Table <text:sequence text:ref-name="refTable22" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.7</text:sequence>: COMPS Keyword Description</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12716">The following example defines how to define a two component formulation to be used with the CO2STORE and GASWAT options.</text:p>
+    <text:p text:style-name="P12716">The following example shows how to request a two component compositional modeling formulation to be used with the CO2STORE and GASWAT options.</text:p>
     <text:p text:style-name="P13437">-- ==============================================================================</text:p>
     <text:p text:style-name="P13437">-- </text:p>
     <text:p text:style-name="P13437">-- RUNSPEC SECTION </text:p>
