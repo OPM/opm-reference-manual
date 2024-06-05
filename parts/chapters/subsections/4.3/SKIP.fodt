@@ -2495,12 +2495,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:table-column-properties style:column-width="1.99cm"/>
   </style:style>
   <style:style style:name="Table257.A1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
   <style:style style:name="Table257.H1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -4086,9 +4086,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838817111"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838817111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SKIP keyword turns on skipping of keywords until the ENDSKIP activation keyword is encountered. All keywords and between the SKIP and ENDSKIP keywords are ignored by OPM Flow. See also the SKIP100 and SKIP300 keywords that skip only the black-oil and compositional keywords, respectively.</text:p>
+    <text:p text:style-name="_40_TextBody">The SKIP keyword activates skipping of all keywords and input data until the ENDSKIP keyword is encountered. All keywords between the SKIP and ENDSKIP keywords are ignored. Each SKIP keyword should be paired with an ENDSKIP keyword. See also the SKIP100 and SKIP300 keywords.</text:p>
     <text:p text:style-name="_40_TextBody">There is no data required for this keyword.</text:p>
-    <text:p text:style-name="P10947">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
+    <text:p text:style-name="P10947">The nesting of pairs of the SKIP, SKIP100 or SKIP300 keywords and the ENDSKIP keyword is not supported by OPM Flow.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_370116838837111"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_370116838837111"/></text:h>
     <text:p text:style-name="P13500">-- </text:p>
     <text:p text:style-name="P13491">-- <text:s text:c="6"/>SWITCH ON SKIPPING OF ALL KEYWORDS AND DATA <text:s text:c="35"/></text:p>
@@ -4104,7 +4104,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13501">-- </text:p>
     <text:p text:style-name="P13483">ENDSKIP</text:p>
     <text:p text:style-name="P15428"/>
-    <text:p text:style-name="_40_TextBody">The example skips reading of the of the grid geometry data using the INCLUDE keyword, and then reverts back to reading the input files again.</text:p>
+    <text:p text:style-name="_40_TextBody">The example skips reading of the of the grid geometry data input using the INCLUDE keyword, and then reverts back to reading the remainder of the input file.</text:p>
     <text:p text:style-name="P15428"/>
     <text:p text:style-name="P15428"/>
     
