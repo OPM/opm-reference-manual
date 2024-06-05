@@ -2,6 +2,7 @@ from pathlib import Path
 
 class Directories():
     parts = "parts"
+    docker_files = "docker_files"
 
 class FileNames():
     main_document = "main.fodt"
