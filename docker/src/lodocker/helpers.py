@@ -6,6 +6,7 @@ from typing import Optional, Any
 
 import click
 
+from lodocker.constants import Directories, FileNames
 from lodocker.constants import Paths
 
 class ClickHelpers:
@@ -17,11 +18,13 @@ class ClickHelpers:
 
     @staticmethod
     def directory_callback(ctx: click.Context, param: click.Parameter, value: Optional[str]) -> Any:
+        project_dir = Helpers.get_python_project_dir()
         if value is None:
             # Dynamically read the directories and prompt the user to choose
-            choices = ClickHelpers.get_directories('docker_files')
+            dir_ = project_dir / Directories.docker_files
+            choices = ClickHelpers.get_directories(dir_)
             if not choices:
-                raise click.UsageError('No directories found in docker_files.')
+                raise click.UsageError(f'No directories found in {dir_}.')
 
             choice_dict = dict(enumerate(choices, start=1))
             click.echo("Select a Dockerfile:")
@@ -78,6 +81,11 @@ class Helpers:
             return str(Path(".config") / "libreoffice" / "4")
 
     @staticmethod
+    def get_python_project_dir() -> Path:
+        """Get the root directory of the Python project."""
+        return Helpers.locate_git_root() / "docker"
+
+    @staticmethod
     def get_tag_name_from_docker_dirname(dockerfile_dirname: str) -> str | None:
         """Get the tag name for a docker image from the directory name of the Dockerfile.
         :param dockerfile_dirname: The directory name of the Dockerfile.
@@ -85,7 +93,8 @@ class Helpers:
         If there exists a file named "tag_name.txt" in the directory, use the contents of
         that file as the tag name. Otherwise, display an error message and return.
         """
-        dockerfile_dirname = Path("docker_files") / dockerfile_dirname
+        project_dir = Helpers.get_python_project_dir()
+        dockerfile_dirname = project_dir / Directories.docker_files / dockerfile_dirname
         # Check that the Dockerfile exists
         if not dockerfile_dirname.exists():
             logging.error(f"Dockerfile directory {dockerfile_dirname} does not exist.")
@@ -101,6 +110,48 @@ class Helpers:
     def is_dev_container(dockerfile_dirname: str) -> bool:
         """Check if the Dockerfile is for a development container."""
         return dockerfile_dirname == "ubuntu2310-dev"
+
+    @staticmethod
+    def locate_git_root() -> Path:
+        """Locate the root directory of a git repository. Note that this may fail in the
+        unlikely case that the user has installed the project globally outside the git
+        repository and the current working directory is not within the repository.
+        """
+        root = None
+        try:
+            root = Helpers.locate_git_root_from_path(Path(__file__))
+        except FileNotFoundError:
+            pass
+        if root is None:
+            root = Helpers.locate_git_root_from_path(Path.cwd())
+        return root
+
+    @staticmethod
+    def locate_git_root_from_path(path: Path) -> Path:
+        """Locate the root directory of a git repository from a file within the repository.
+        :param file: A file within the git repository.
+        :return: The root directory of the git repository.
+        """
+        path = path.resolve()
+        if path.is_file():
+            path = path.parent
+        assert path.is_absolute(), "File path must be absolute."
+        assert path.is_dir(), "File path must be a file."
+        cwd = path
+        while True:
+            # Check if we have reached the root directory
+            #  filename.parent == filename is True if filename is the root directory
+            if cwd.parent == cwd:
+                raise FileNotFoundError(f"Could not derive git root from '{file}'.")
+            # Check if the current directory is a git repository and that there is a
+            #  directory named "parts" with a main document file therein
+            if (cwd / ".git").exists() and (cwd / ".git").is_dir():
+                if (cwd / Directories.parts).exists():
+                    if (cwd / Directories.parts / FileNames.main_document).exists():
+                        return cwd
+            cwd = cwd.parent
+        # This should never be reached
+        return Path("")
 
     @staticmethod
     def run_command(command: str | list) -> int:
