@@ -116,7 +116,9 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
 
     def extract_keyword_name(self, href: str) -> str:
         # Assume href starts with "#xxx.yyy.zzz.KEYWORD_NAME<space>"
-        if m:= re.match(r"#\d+\.\d+\.\d+\.(\w+)(?:\s+|$)", href):
+        # or "#xxx.yyy.zzz.KEYWORD_NAME|outline"
+        # KEYWORD_NAME can contain letters, numbers, and optionally a trailing hyphen or en-dash
+        if m:= re.match(r"#\d+\.\d+\.\d+\.(\w+[\-–]?)(?:\s+|$|\|outline$)", href):
             return m.group(1)
         else:
             return '<NOT FOUND>'
