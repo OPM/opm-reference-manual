@@ -11,7 +11,7 @@ from pathlib import Path
 
 import click
 
-from fodt.constants import ClickOptions, Directories, FileExtensions, KeywordStatus
+from fodt.constants import ClickOptions, Directories, FileExtensions, KeywordStatus, Regex
 from fodt.create_subdocument import CreateSubDocument3
 from fodt.helpers import Helpers
 from fodt.remove_subsections import RemoveSubSections
@@ -118,7 +118,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
         # Assume href starts with "#xxx.yyy.zzz.KEYWORD_NAME<space>"
         # or "#xxx.yyy.zzz.KEYWORD_NAME|outline"
         # KEYWORD_NAME can contain letters, numbers, and optionally a trailing hyphen or en-dash
-        if m:= re.match(r"#\d+\.\d+\.\d+\.(\w+[\-–]?)(?:\s+|$|\|outline$)", href):
+        if m:= re.match(Regex.href_keyword_name, href):
             return m.group(1)
         else:
             return '<NOT FOUND>'
