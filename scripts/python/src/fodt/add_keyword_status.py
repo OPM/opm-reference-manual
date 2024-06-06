@@ -132,7 +132,7 @@ class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
                 href = attrs.getValue("xlink:href")
                 # the href value is on the form "#1.2.1.ACTDIMS – ACTION Keyword Dimensions"
                 # we want to extract the keyword name from this string
-                if match := re.match(r"#\d+.\d+.\d+.(\w+)\s+", href):
+                if match := re.match(r"#\d+\.\d+\.\d+\.(\w+[\-–]?)(?:\s+|$|\|outline$)", href):
                     self.current_keyword = match.group(1)
         elif self.in_table_cell and name == 'text:p':
             if self.found_table_cell:
