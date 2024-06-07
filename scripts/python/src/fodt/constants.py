@@ -76,6 +76,9 @@ class MetaSections():
         'office:master-styles',
     ]
 
+class Regex:
+    href_keyword_name = r"#\d+\.\d+\.\d+\.(\w+[\-–]?)(?:\s+|$|\|outline$)"
+
 class TagEvent():
     NONE = 0
     START = 1
