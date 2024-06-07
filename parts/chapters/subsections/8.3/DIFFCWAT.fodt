@@ -4344,16 +4344,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18463" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881954 Copy 1 Copy 1"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881954 Copy 1 Copy 1"/></text:h>
-    <text:p text:style-name="P12730">The DIFFCWAT keyword defines the water diffusion coefficients for each compositional component in the model and for each PVT region, for when the Molecular Diffusion option has been activated by the DIFFUSE keyword in the RUNSPEC section. This keyword is optional as OPM Flow will automatically calculate the coefficients, as described by Sandve et al.<text:note text:id="ftn184" text:note-class="footnote"><text:note-citation>184</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">Tor Harald Sandve1, Sarah E. Gasda, Atgeirr Rasmussen, <text:span text:style-name="T7193">and</text:span> Alf Birger Rustad. Convective dissolution in field scale CO<text:span text:style-name="T4092">2</text:span> storage simulation using the OPM Flow simulator. Submitted to TCCS 11 – Trondheim Conference on CO<text:span text:style-name="T4092">2</text:span> Capture, Transport and Storage Trondheim, Norway – June 21-23, 2021.</text:p></text:note-body></text:note>, if the DIFFCWAT keyword is absent from the input deck. <text:s/>The keyword thus allows one to overwrite the automatically calculated values.</text:p>
-    <text:p text:style-name="P12730">The keyword should only be used if the CO2STORE keyword and either the GASWAT or the GAS and WATER keywords in the RUNSPEC section, have also be activated for the gas-water two component model. </text:p>
+    <text:p text:style-name="P12730">The DIFFCWAT keyword defines the water diffusion coefficients assuming the standard mole fraction formulation for each compositional component in the model and for each PVT region, for when the Molecular Diffusion option has been activated by the DIFFUSE keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="P12730">This keyword is optional as OPM Flow will automatically calculate the coefficients assuming the mole fraction formulation, as described by Sandve et al.<text:note text:id="ftn184" text:note-class="footnote"><text:note-citation>184</text:note-citation><text:note-body>
+        <text:p text:style-name="Footnote">Tor Harald Sandve, Sarah E. Gasda, Atgeirr Rasmussen, <text:span text:style-name="T7193">and</text:span> Alf Birger Rustad. Convective dissolution in field scale CO<text:span text:style-name="T4092">2</text:span> storage simulation using the OPM Flow simulator. Submitted to TCCS 11 – Trondheim Conference on CO<text:span text:style-name="T4092">2</text:span> Capture, Transport and Storage Trondheim, Norway – June 21-23, 2021.</text:p></text:note-body></text:note>, if the DIFFAWAT and DIFFCWAT keywords are absent from the input deck. <text:s/>The keyword thus allows one to overwrite the automatically calculated values.</text:p>
+    <text:p text:style-name="P12730">The keyword should only be used if the CO2STORE or H2STORE keyword and either the GASWAT or the GAS and WATER keywords in the RUNSPEC section, have also been activated for the gas-water two component model. </text:p>
+    <text:p text:style-name="_40_TextBody">See also the DIFFAGAS and DIFFAWAT keywords that assume a mass fraction formulation for diffusion rather than the standard mole fraction formulation assumed by the DIFFCGAS and DIFFCWAT keywords. The DIFFAGAS and DIFFAWAT keywords cannot be used in combination with the DIFFCGAS and DIFFCWAT keywords. </text:p>
     <table:table table:name="Table2319" table:style-name="Table2319">
      <table:table-column table:style-name="Table2319.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2319.1">
        <table:table-cell table:style-name="Table2319.A1" office:value-type="string">
         <text:p text:style-name="P10237">Note</text:p>
-        <text:p text:style-name="P10191">This is an OPM Flow keyword used with OPM Flow’s CO2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the DIFFCWAT keyword used in the commercial compositional simulator.</text:p>
+        <text:p text:style-name="P10191">This is an OPM Flow keyword used with OPM Flow’s CO2STORE or H2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the DIFFCWAT keyword used in the commercial compositional simulator.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4405,7 +4407,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1169">CO2DIFF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2320.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P952">A real positive number that declares the CO2 in water<text:span text:style-name="T2110"> diffusion coefficient</text:span> in the given PVT region.</text:p>
+       <text:p text:style-name="P952">A real positive number that declares the CO<text:span text:style-name="T4092">2</text:span> or H<text:span text:style-name="T4092">2</text:span> in water<text:span text:style-name="T2110"> diffusion coefficient</text:span> in the given PVT region.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4490,8 +4492,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P11214"/>
-    <text:p text:style-name="P12730"><text:soft-page-break/>See also the DIFFUSE keyword in the RUNSPEC section to activate the Molecular Diffusion option and the DIFFCGAS keyword in the PROPS section that define the gas diffusion coefficients for each compositional component in the model and for each PVT region. Finally, for gas-oil systems the DIFFC keyword in the PROPS section should be used.</text:p>
-    <text:p text:style-name="P12733">Normally diffusion coefficients are measured in laboratory units, that is cm<text:span text:style-name="T3853">2</text:span>/s, for easy of use <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable247">Table 8.31</text:sequence-ref><text:s/>outlines the conversion factors for converting the laboratory measured diffusion coefficients to those used by the simulator.</text:p>
+    <text:p text:style-name="P12730"><text:soft-page-break/>See also the DIFFUSE keyword in the RUNSPEC section to activate the Molecular Diffusion option and the DIFFCGAS keyword in the PROPS section that defines the gas diffusion coefficients for each compositional component in the model and for each PVT region. Finally, for gas-oil systems the DIFFC keyword in the PROPS section should be used.</text:p>
+    <text:p text:style-name="P12733">Normally diffusion coefficients are measured in laboratory units, that is cm<text:span text:style-name="T3853">2</text:span>/s, for ease of use <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable247">Table 8.31</text:sequence-ref><text:s/>outlines the conversion factors for converting the laboratory measured diffusion coefficients to those used by the simulator.</text:p>
     <table:table table:name="Table2322" table:style-name="Table2322" table:template-name="Default Style">
      <table:table-column table:style-name="Table2322.A" table:number-columns-repeated="3"/>
      <table:table-row table:style-name="TableLine94708696171408">
