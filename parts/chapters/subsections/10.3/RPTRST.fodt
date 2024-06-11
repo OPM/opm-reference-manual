@@ -5256,7 +5256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">SOMAX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="P4956">Maximum oil saturation used when the VAPPARS keyword is included in the input deck.</text:p>
+       <text:p text:style-name="P4956">Maximum oil saturation used when the VAPPARS keyword has been included in the input deck.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4935">SOMAX</text:p>
@@ -5298,7 +5298,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">TEMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4950">Temperature of each grid block used when the THERMAL option has been activated in the RUNSPEC section (always outputted!!).</text:p>
+       <text:p text:style-name="P4950">Temperature of each grid block used when the THERMAL option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4950">OPM Flow also supports the output of temperatures for non-thermal simulations when the TEMP mnemonic is specified.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4948">TEMP</text:p>
@@ -5349,7 +5350,89 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716403_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716403_3964674244"/></text:h>
+    <text:p text:style-name="P15809"/>
+    <text:p text:style-name="_40_TextBody">If the --enable-opm-rst-file=true command line option has been specified then the following OPM Flow specific data are also automatically output for visualization only as outlined in the table below:</text:p>
+    <table:table table:name="Table718" table:style-name="Table718">
+     <table:table-column table:style-name="Table718.A"/>
+     <table:table-column table:style-name="Table718.B"/>
+     <table:table-column table:style-name="Table718.C"/>
+     <table:table-column table:style-name="Table718.D"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table718.1">
+       <table:table-cell table:style-name="Table718.A1" office:value-type="string">
+        <text:p text:style-name="P10544">No.</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table718.A1" office:value-type="string">
+        <text:p text:style-name="P10544">Mnemonic</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table718.A1" office:value-type="string">
+        <text:p text:style-name="P10544">Description</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table718.D1" office:value-type="string">
+        <text:p text:style-name="P10544">Array</text:p>
+        <text:p text:style-name="P10544">Name</text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="P2625">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">XMFCO2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">CO2 liquid-phase mole fractions written when the CO2STORE option has been activated in the RUNSPEC section.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="P4934">XMFCO2</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="P2625">2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">XMFH2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">H2 liquid-phase mole fractions written when the H2STORE option has been activated in the RUNSPEC section.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="P4934">XMFH2</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="P2625">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">YMFWAT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Water gas-phase mole fractions written when either the CO2STORE or H2STORE option has been activated in the RUNSPEC section.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="P4934">YMFWAT</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A20" table:number-columns-spanned="4" office:value-type="string">
+       <text:p text:style-name="P1598">Notes:</text:p>
+       <text:list xml:id="list105919156804686" text:continue-list="list105919023537637" text:style-name="_40_NumberList">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P19292">The above OPM Flow specific data are only written to the restart file if the --enable-opm-rst-file=true command line option has been specified and the specified options have been activated in the RUNSPEC section.</text:p>
+        </text:list-item>
+       </text:list>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+    </table:table>
+    <text:p text:style-name="P14954">Table <text:sequence text:ref-name="refTable473" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.27</text:sequence>: Data Sets Automatically Written to the RESTART File for Visualization Only</text:p>
+    <text:p text:style-name="P14954"/>
+<text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716403_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716403_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The first example request that the standard restart data be written out every month.</text:p>
     <text:p text:style-name="P13381">--</text:p>
     <text:p text:style-name="P13381">-- <text:s text:c="6"/>RESTART CONTROL BASIC = 4 (YEARLY) 5 (MONTHLY)</text:p>
