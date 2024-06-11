@@ -5222,13 +5222,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4954">11</text:p>
+       <text:p text:style-name="P4954">21</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">SGAS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Gas saturation for each grid block to enable restarts.</text:p>
+       <text:p text:style-name="P4952">Gas saturation for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4953">SGAS</text:p>
@@ -5236,13 +5236,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4955">12</text:p>
+       <text:p text:style-name="P4955">22</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">SOIL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Oil saturation each grid block to enable restarts.</text:p>
+       <text:p text:style-name="P4952">Oil saturation each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4953">SOIL</text:p>
@@ -5250,13 +5250,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="P4957">12</text:p>
+       <text:p text:style-name="P4957">23</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">SOMAX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="P4956">Maximum oil saturation used in determining the rate of oil vaporization in the presence of undersaturated gas and the rate at which the remaining oil gets “heavier” via the reduction in the solution gas-oil ratio (“Rs”).</text:p>
+       <text:p text:style-name="P4956">Maximum oil saturation used when the VAPPARS keyword is included in the input deck.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4935">SOMAX</text:p>
@@ -5264,27 +5264,27 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4957">14</text:p>
+       <text:p text:style-name="P4957">24</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">SSOL</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">SSOLVENT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4937">Solvent saturation for each grid block to enable restarts for when the SOLVENT option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4937">Solvent saturation for each grid block used when the SOLVENT option has been activated in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4935">SSOL</text:p>
+       <text:p text:style-name="P4935">SSOLVENT</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4957">15</text:p>
+       <text:p text:style-name="P4957">25</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">SWAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Water ratio for each grid block to enable restarts.</text:p>
+       <text:p text:style-name="P4952">Water saturation for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4953">SWAT</text:p>
@@ -5292,39 +5292,27 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4957">16</text:p>
+       <text:p text:style-name="P4957">26</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">TEMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4950">Temperature of each grid block, to enable restarts for when OPM Flow’s THERMAL option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4950">Temperature of each grid block used when the THERMAL option has been activated in the RUNSPEC section (always outputted!!).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4948">TEMP<office:annotation>
-         <dc:creator>Tor Harald Sandve</dc:creator>
-         <dc:date>2017-09-01T13:48:28</dc:date>
-         <meta:creator-initials>TSA</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">Always outputted. (Needed for restart) </text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ KRNSW_GO</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ KRNSW_OW</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ PCSWM_GO</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ PCSWM_OG</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ SOMAX</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ SSOl only for solvent</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">+ CPOLYMER only for polymer </text:span></text:p>
-        </office:annotation></text:p>
+       <text:p text:style-name="P4948">TEMP</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4957">17</text:p>
+       <text:p text:style-name="P4957">27</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">TERNARY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4947">Three phase ternary saturation data is data array is calculated by OPM ResInsight when the RESTART file is loaded into OPM ResInsight.</text:p>
+       <text:p text:style-name="P4947">Three phase ternary saturation data array calculated by OPM ResInsight when the RESTART file is loaded into OPM ResInsight.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4953">TERNARY</text:p>
@@ -5333,17 +5321,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <text:soft-page-break/>
      <table:table-row table:style-name="Table718.1">
-      <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4957">18</text:p>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="P2625">28</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">KRW</text:p>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">UREA</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4946">Water relative permeability at the grid blocks water saturation.</text:p>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Urea concentration used when the MICP option has been activated in the RUNSPEC section.</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4949">WATKR</text:p>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="P4934">UREA</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5351,7 +5339,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1598">Notes:</text:p>
        <text:list xml:id="list105919156804686" text:continue-list="list105919023537637" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19292">Only items (1) to (14) that are necessary to restart a run are written to the restart file, for example if the neither the POLYMER and SOLVENT options have not been invoked in the RUNSPEC section then the CPOLYMER ans SSOL arrays will not be written to the restart file.</text:p>
+         <text:p text:style-name="P19292">Only items that are necessary to restart a run are written to the restart file, for example if the SOLVENT option has not been activated in the RUNSPEC section then the SSOLVENT array will not be written to the restart file.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
