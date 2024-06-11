@@ -4437,7 +4437,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388199111"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388199111"/></text:h>
     <text:p text:style-name="_40_TextBody">This keyword defines the data to be written to the RESTART file and the frequency at which restart points will be created. In addition to the solution data arrays required to restart a run, the user may request extra data to be written to the restart file for visualization in OPM ResInsight.</text:p>
-    <text:p text:style-name="_40_TextBody">The keyword RPTRST keyword should be followed by a series of character strings that indicate the data to be written. In most cases the character string is the keyword used to load the data in the OPM Flow input deck, for example KRG for the gas relative permeability of each grid block at the requested times. It is anticipated that OPM Flow will support additional functionality as development progresses.</text:p>
+    <text:p text:style-name="_40_TextBody">The RPTRST keyword should be followed by a series of character strings that indicate the data to be written. In most cases the character string is the keyword used to load the data in the OPM Flow input deck, for example KRG for the gas relative permeability of each grid block at the requested times. It is anticipated that OPM Flow will support additional functionality as development progresses.</text:p>
     <table:table table:name="Table716" table:style-name="Table716">
      <table:table-column table:style-name="Table716.A"/>
      <table:table-column table:style-name="Table716.B"/>
@@ -5302,21 +5302,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4948">TEMP</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table718.1">
-      <table:table-cell table:style-name="Table718.A19" office:value-type="string">
-       <text:p text:style-name="P4957">27</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">TERNARY</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4947">Three phase ternary saturation data array calculated by OPM ResInsight when the RESTART file is loaded into OPM ResInsight.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">TERNARY</text:p>
-       <text:p text:style-name="P4948">(Calculated)</text:p>
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
