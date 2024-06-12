@@ -22927,7 +22927,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P301"/>
     <text:p text:style-name="P360">Note that not all these variables are available in OPM Flow; however, the simulator will issue a warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc614364_2141070512"/>Option Specific Variables - CO2STORE Model<text:bookmark-end text:name="__RefHeading___Toc614364_2141070512"/></text:h>
-    <text:p text:style-name="P371">The variables in this section are for OPM Flow&apos;s black-oil CO2STORE Model, and are based on the commercial simulator&apos;s compositional vectors, as the model is only <text:span text:style-name="T77">available in the commercial simulator&apos;s compositional</text:span> simulator.</text:p>
+    <text:p text:style-name="P371">The variables in this section are for OPM Flow&apos;s black-oil CO2STORE Model, and are based on the commercial simulator&apos;s compositional vectors (GCDI, GCDM and WCD series), as the model is only <text:span text:style-name="T77">available in the commercial simulator&apos;s compositional</text:span> simulator.</text:p>
     <text:p text:style-name="P380"/>
     <table:table table:name="Table12" table:style-name="Table12">
      <table:table-column table:style-name="Table12.A"/>
@@ -23127,6 +23127,122 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P81"/>
       </table:table-cell>
      </table:table-row>
+     <table:table-row table:style-name="Table12.3">
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.B3" office:value-type="string">
+       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span> Dissolved and immobile in the gas phase</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">GMTR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">FGMTR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">RGMTR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table12.4">
+      <table:table-cell table:style-name="Table12.A4" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.B3" office:value-type="string">
+       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span> Dissolved and mobile in the gas phase</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.C4" office:value-type="string">
+       <text:p text:style-name="P82">GMMO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">FGMMO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">RGMMO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table12.3">
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.B3" office:value-type="string">
+       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span> Dissolved and immobile in the gas phase (Non-wetting relative permeability equals zero)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">GKTR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">FGKTR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">RGKTR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table12.4">
+      <table:table-cell table:style-name="Table12.A4" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.B3" office:value-type="string">
+       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span> Dissolved and mobile in the gas phase (Non-wetting relative permeability greater than zero)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.C4" office:value-type="string">
+       <text:p text:style-name="P82">GKMO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">FGKMO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.A3" office:value-type="string">
+       <text:p text:style-name="P82">RGKMO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table12.E3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
      <table:table-row table:style-name="Table12.6">
       <table:table-cell table:style-name="Table12.A4" office:value-type="string">
        <text:p text:style-name="P82">Volume</text:p>
@@ -23213,6 +23329,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P391">Table <text:sequence text:ref-name="refTable12" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.13</text:sequence>: CO2STORE Summary Variables</text:p>
     <text:p text:style-name="P379"/>
     <text:p text:style-name="_40_TextBody">The 11th Society of Petroleum Engineers Comparative Solution Project (http://spe.org/csp) defines the “immobile free-phase CO<text:span text:style-name="T106">2</text:span>” as “CO<text:span text:style-name="T106">2</text:span> at saturations for which the non-wetting phase relative permeability equals zero”.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that the GKDI, GKDM, GKTR, GKMO, GMTR and GMMO series of variables are OPM Flow specific variables.</text:p>
     <text:p text:style-name="_40_TextBody">Note that the WIPG and WIPL series of variables are OPM Flow specific variables.</text:p>
     <text:h text:style-name="P342" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311682_2754225602"/>Option Specific Variables – Coal Bed Methane Model<text:bookmark-end text:name="__RefHeading___Toc311682_2754225602"/></text:h>
     <text:p text:style-name="P337">The Coal Bed Methane model is not supported by OPM Flow.</text:p>
