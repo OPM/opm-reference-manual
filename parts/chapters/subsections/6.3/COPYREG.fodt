@@ -4624,7 +4624,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc296591_1576177388"/>Description<text:bookmark-end text:name="__RefHeading___Toc296591_1576177388"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COPYREG keyword copies a specified array or part of an array based on cells with a specific region number to another array. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the COPYREG keyword is read by the simulator. The property arrays can be real or integer depending on the property array type; however, the property arrays that can be operated on is dependent on which section the COPYREG keyword is being used. </text:p>
+    <text:p text:style-name="_40_TextBody">The COPYREG keyword copies a specified array or part of an array based on cells with a specific region number to another array. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the COPYREG keyword is read by the simulator. The property arrays can be real or integer valued depending on the property array type; however, the property arrays that can be operated on are dependent on which section the COPYREG keyword is being applied in. </text:p>
     <table:table table:name="Table216" table:style-name="Table216">
      <table:table-column table:style-name="Table216.A"/>
      <table:table-column table:style-name="Table216.B"/>
@@ -4652,8 +4652,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3240">ARRAY-1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table216.C5" office:value-type="string">
-       <text:p text:style-name="P3238">The name of the array to be copied from.</text:p>
-       <text:p text:style-name="P3238">This is the keyword name identifying the property and is up to eight characters in length and enclosed in quotes. </text:p>
+       <text:p text:style-name="P3238">A character string of up to eight characters in length that defines the keyword identifying the array to be copied from.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table216.D2" office:value-type="string">
        <text:p text:style-name="P1342">None</text:p>
@@ -4667,8 +4666,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3996">ARRAY-2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table216.C5" office:value-type="string">
-       <text:p text:style-name="P3238">The name of the array to be copied to. </text:p>
-       <text:p text:style-name="P3238">This is the keyword name identifying the property and is up to eight characters in length and enclosed in quotes. </text:p>
+       <text:p text:style-name="P3238">A character string of up to eight characters in length that defines the keyword identifying the array to be copied to.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table216.D5" office:value-type="string">
        <text:p text:style-name="P3323">None</text:p>
@@ -4734,7 +4732,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14606">Table <text:sequence text:ref-name="refTable94" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.20</text:sequence>: COPYREG Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P15422">The applicable arrays for each section are defined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable95">Table 6.21</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P15422">Examples of the arrays most commonly operated on in each section are given in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable95">Table 6.21</text:sequence-ref>. Cells colored red indicate arrays that are not supported by OPM Flow operations.</text:p>
     <text:p text:style-name="Text_20_body"/>
     <table:table table:name="Table217" table:style-name="Table217">
      <table:table-column table:style-name="Table217.A" table:number-columns-repeated="5"/>
@@ -4878,7 +4876,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table217.C16" office:value-type="string">
        <text:p text:style-name="P3291">SGCR</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table217.E16" office:value-type="string">
+      <table:table-cell table:style-name="Table217.B17" office:value-type="string">
        <text:p text:style-name="P3291">MISCNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table217.E7" office:value-type="string">
@@ -5089,7 +5087,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table217.D16" office:value-type="string">
        <text:p text:style-name="P2010"/>
       </table:table-cell>
-      <table:table-cell table:style-name="Table217.E16" office:value-type="string">
+      <table:table-cell table:style-name="Table217.E7" office:value-type="string">
        <text:p text:style-name="P3621">SPOLY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table217.F25" office:value-type="string">
