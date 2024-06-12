@@ -4565,7 +4565,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18372" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5731_3701168388"/>Description<text:bookmark-end text:name="__RefHeading___Toc5731_3701168388"/></text:h>
-    <text:p text:style-name="_40_TextBody">The ADD keyword adds a constant to a specified array or part of an array. The constant can be real or integer depending on the array type; however, the arrays that can be operated on is dependent on which <text:s/>section the ADD keyword is being applied. </text:p>
+    <text:p text:style-name="_40_TextBody">The ADD keyword adds a constant to a specified array or part of an array. The constant can be an integer or real value depending on the array type; however, the arrays that can be operated on are dependent on which section the ADD keyword is being applied in. </text:p>
     <table:table table:name="Table18" table:style-name="Table18">
      <table:table-column table:style-name="Table18.A"/>
      <table:table-column table:style-name="Table18.B"/>
@@ -4593,7 +4593,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1945">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table18.A2" office:value-type="string">
-       <text:p text:style-name="P1945">The name of the array to be modified. This is the keyword name identifying the property and is up to eight characters in length and enclosed in quotes. </text:p>
+       <text:p text:style-name="P1945">A character string of up to eight characters in length that defines the keyword identifying the property to be modified. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table18.D2" office:value-type="string">
        <text:p text:style-name="P1967">None</text:p>
@@ -4716,11 +4716,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable77" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.3</text:sequence>: ADD Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P15424"><office:annotation office:name="__Annotation__44773_519381071" loext:resolved="false">
-      <dc:creator>Unknown Author</dc:creator>
-      <dc:date>2017-06-26T14:53:50</dc:date>
-      <text:p text:style-name="P20244"><text:span text:style-name="T8540">This I do not know, I think it should be checked by Joakim Hove of Statoil, who designed and implemented opm-parser.</text:span></text:p>
-     </office:annotation>The applicable arrays for each section<office:annotation-end office:name="__Annotation__44773_519381071"/> are defined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable78">Table 6.4</text:sequence-ref><text:s/>on the following page.</text:p>
+    <text:p text:style-name="P15424">Examples of the arrays most commonly operated on in each section are given in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable78">Table 6.4</text:sequence-ref>. Cells colored red indicate arrays that are not currently supported by OPM Flow operations.</text:p>
     <text:p text:style-name="P16039"/>
     <table:table table:name="Table19" table:style-name="Table19">
      <table:table-column table:style-name="Table19.A" table:number-columns-repeated="5"/>
@@ -4864,7 +4860,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table19.C16" office:value-type="string">
        <text:p text:style-name="P3287">SGCR</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table19.E16" office:value-type="string">
+      <table:table-cell table:style-name="Table19.B17" office:value-type="string">
        <text:p text:style-name="P3287">MISCNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table19.E7" office:value-type="string">
@@ -5074,7 +5070,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table19.D16" office:value-type="string">
        <text:p text:style-name="P2006"/>
       </table:table-cell>
-      <table:table-cell table:style-name="Table19.E16" office:value-type="string">
+      <table:table-cell table:style-name="Table19.E7" office:value-type="string">
        <text:p text:style-name="P3617">SPOLY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table19.F25" office:value-type="string">
@@ -5324,7 +5320,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13750"><text:s text:c="9"/>PERMX <text:s text:c="5"/>20.000 <text:s text:c="7"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / ADD 20 mD TO PERMX</text:p>
     <text:p text:style-name="P13750">/ <text:s text:c="248"/></text:p>
     <text:p text:style-name="P15021"/>
-    <text:p text:style-name="P15172">The above example ADDS 20 units to the PERMX array in the GRID section to all grid blocks in the model.</text:p>
+    <text:p text:style-name="P15172">The above example adds 20 md to the PERMX property array throughout the model.</text:p>
     <text:p text:style-name="P15172"/>
     
    </text:section>
