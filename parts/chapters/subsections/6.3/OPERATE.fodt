@@ -4627,7 +4627,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388195"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388195"/></text:h>
-    <text:p text:style-name="P12084">This keyword, OPERATE, <text:s/>defines mathematical operations on property arrays (NTG, PORO etc.) and <text:s/>optionally using another property array as input to the function. <text:s/>The keyword allows for various mathematical functions and their associated variables to be defined and applied to the selected array data. Input constants can be real or integer depending on the array type; however, the arrays that can be operated on is dependent on which section the keyword is being used. </text:p>
+    <text:p text:style-name="P12084">The OPERATE keyword performs a mathematical operation on a specified array or part of an array, optionally using another specified array as input to the operation. <text:s/>The keyword allows for various mathematical functions and their associated variables to be defined and applied to the specified array. Input constants can be integer or real valued depending on the array type; however, the arrays that can be operated on are dependent on which section the OPERATE keyword is being applied in. </text:p>
     <text:p text:style-name="P15836"/>
     <table:table table:name="Table1783" table:style-name="Table1783">
      <table:table-column table:style-name="Table1783.A"/>
@@ -4660,7 +4660,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2190">Y</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1958">The name of the array to be modified. This is the keyword name identifying the property and is up to eight characters in length and optionally enclosed in quotes. </text:p>
+       <text:p text:style-name="P1958">A character string of up to eight characters in length that defines the keyword identifying the array to be modified. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.E2" office:value-type="string">
@@ -4690,7 +4690,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1958">I2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1958">A positive integer that defines the upper bound of the array in the I-direction to be modified must be greater than or equal to II and less than or equal to NX</text:p>
+       <text:p text:style-name="P1958">A positive integer that defines the upper bound of the array in the I-direction to be modified must be greater than or equal to I1 and less than or equal to NX</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.E2" office:value-type="string">
@@ -4720,7 +4720,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1958">J2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1958">A positive integer that defines the upper bound of the array in the J-direction to be modified must be greater than or equal to JI and less than or equal to NY.</text:p>
+       <text:p text:style-name="P1958">A positive integer that defines the upper bound of the array in the J-direction to be modified must be greater than or equal to J1 and less than or equal to NY.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.E2" office:value-type="string">
@@ -4750,7 +4750,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1958">K2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1958">A positive integer that defines the upper bound of the array in the K-direction to be modified must be greater than or equal to KI and less than or equal to NZ.</text:p>
+       <text:p text:style-name="P1958">A positive integer that defines the upper bound of the array in the K-direction to be modified must be greater than or equal to K1 and less than or equal to NZ.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.E2" office:value-type="string">
@@ -4765,7 +4765,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2190">EQUATION</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.C9" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A defined character string enclosed in quotes that selects the mathematical function to be applied, using the X array and the ALPHA and BETA constants declared on this keyword. EQUATION should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string of up to eight characters that defines the mathematical function to be applied, using the X array and the ALPHA and BETA constants declared on this keyword. EQUATION should be set to one of the following character strings:</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.E2" table:number-rows-spanned="2" office:value-type="string">
@@ -4776,7 +4776,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.A2" office:value-type="string">
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘MULTA’ -</text:span><draw:frame draw:style-name="fr66" draw:name="Object150" text:anchor-type="as-char" svg:width="2.085cm" svg:height="0.402cm" draw:z-index="751"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘MULTA’<text:s text:c="4"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object150" text:anchor-type="as-char" svg:width="2.085cm" svg:height="0.402cm" draw:z-index="751"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -4824,7 +4824,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘POLY’ <text:s text:c="2"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object151" text:anchor-type="as-char" svg:width="2.154cm" svg:height="0.407cm" draw:z-index="753"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘POLY’<text:s text:c="7"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object151" text:anchor-type="as-char" svg:width="2.154cm" svg:height="0.407cm" draw:z-index="753"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -4877,7 +4877,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘SLOG’ </text:span><text:s text:c="2"/>-<draw:frame draw:style-name="fr66" draw:name="Object152" text:anchor-type="as-char" svg:width="1.956cm" svg:height="0.439cm" draw:z-index="754"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘SLOG’<text:s text:c="6"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object152" text:anchor-type="as-char" svg:width="1.956cm" svg:height="0.439cm" draw:z-index="754"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -4933,7 +4933,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘LOG10’</text:span> <text:s/>-<draw:frame draw:style-name="fr66" draw:name="Object153" text:anchor-type="as-char" svg:width="1.907cm" svg:height="0.422cm" draw:z-index="755"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘LOG10’<text:s text:c="4"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object153" text:anchor-type="as-char" svg:width="1.907cm" svg:height="0.422cm" draw:z-index="755"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -4981,7 +4981,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘LOGE’</text:span> <text:s text:c="3"/>-<draw:frame draw:style-name="fr66" draw:name="Object154" text:anchor-type="as-char" svg:width="1.732cm" svg:height="0.422cm" draw:z-index="759"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘LOGE’<text:s text:c="6"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object154" text:anchor-type="as-char" svg:width="1.732cm" svg:height="0.422cm" draw:z-index="759"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5029,7 +5029,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘INV’ <text:s text:c="6"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object155" text:anchor-type="as-char" svg:width="1.219cm" svg:height="0.831cm" draw:z-index="763"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘INV’<text:s text:c="9"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object155" text:anchor-type="as-char" svg:width="1.219cm" svg:height="0.831cm" draw:z-index="763"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5071,7 +5071,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘MULTX’</text:span> -<draw:frame draw:style-name="fr66" draw:name="Object156" text:anchor-type="as-char" svg:width="1.439cm" svg:height="0.39cm" draw:z-index="764"><draw:object>
+       <text:p text:style-name="P640"><text:span text:style-name="T3628">‘MULTX’<text:s text:c="3"/>-</text:span><draw:frame draw:style-name="fr66" draw:name="Object156" text:anchor-type="as-char" svg:width="1.439cm" svg:height="0.39cm" draw:z-index="764"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5109,7 +5109,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </draw:frame></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.D10" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">‘ADDX’ <text:s text:c="3"/>-<draw:frame draw:style-name="fr66" draw:name="Object157" text:anchor-type="as-char" svg:width="1.785cm" svg:height="0.39cm" draw:z-index="99"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘ADDX’<text:s text:c="6"/>-<draw:frame draw:style-name="fr66" draw:name="Object157" text:anchor-type="as-char" svg:width="1.785cm" svg:height="0.39cm" draw:z-index="99"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5153,7 +5153,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="_40_Table_20_Contents">‘COPY’ <text:s text:c="4"/>-<draw:frame draw:style-name="fr66" draw:name="Object158" text:anchor-type="as-char" svg:width="1.148cm" svg:height="0.39cm" draw:z-index="100"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘COPY’<text:s text:c="7"/>-<draw:frame draw:style-name="fr66" draw:name="Object158" text:anchor-type="as-char" svg:width="1.148cm" svg:height="0.39cm" draw:z-index="100"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5185,7 +5185,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="_40_Table_20_Contents">‘MAXLIM’ <text:s/>-<draw:frame draw:style-name="fr66" draw:name="Object159" text:anchor-type="as-char" svg:width="2.461cm" svg:height="0.422cm" draw:z-index="101"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘MAXLIM’<text:s text:c="3"/>-<draw:frame draw:style-name="fr66" draw:name="Object159" text:anchor-type="as-char" svg:width="2.461cm" svg:height="0.422cm" draw:z-index="101"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5195,7 +5195,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
               <mo stretchy="false">=</mo>
               <mspace width="0.5em"/>
              </mrow>
-             <mi mathvariant="italic">max</mi>
+             <mi mathvariant="italic">min</mi>
              <mrow>
               <mo fence="true" stretchy="false">(</mo>
               <mrow>
@@ -5208,7 +5208,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
               <mo fence="true" stretchy="false">)</mo>
              </mrow>
             </mrow>
-            <annotation encoding="StarMath 5.0">Y` = `max( %alpha, X)</annotation>
+            <annotation encoding="StarMath 5.0">Y` = `min( %alpha, X)</annotation>
            </semantics>
           </math>
          </draw:object><draw:image>
@@ -5243,7 +5243,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="_40_Table_20_Contents">‘MINLIM’ <text:s text:c="2"/>-<draw:frame draw:style-name="fr66" draw:name="Object160" text:anchor-type="as-char" svg:width="2.39cm" svg:height="0.422cm" draw:z-index="765"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘MINLIM’<text:s text:c="4"/>-<draw:frame draw:style-name="fr66" draw:name="Object160" text:anchor-type="as-char" svg:width="2.39cm" svg:height="0.422cm" draw:z-index="765"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5253,7 +5253,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
               <mo stretchy="false">=</mo>
               <mspace width="0.5em"/>
              </mrow>
-             <mi mathvariant="italic">min</mi>
+             <mi mathvariant="italic">max</mi>
              <mrow>
               <mo fence="true" stretchy="false">(</mo>
               <mrow>
@@ -5266,7 +5266,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
               <mo fence="true" stretchy="false">)</mo>
              </mrow>
             </mrow>
-            <annotation encoding="StarMath 5.0">Y` = `min( %alpha, X)</annotation>
+            <annotation encoding="StarMath 5.0">Y` = `max( %alpha, X)</annotation>
            </semantics>
           </math>
          </draw:object><draw:image>
@@ -5301,7 +5301,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="_40_Table_20_Contents">‘MULTP’ <text:s text:c="3"/>-<draw:frame draw:style-name="fr66" draw:name="Object161" text:anchor-type="as-char" svg:width="1.6cm" svg:height="0.407cm" draw:z-index="102"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘MULTP’<text:s text:c="5"/>-<draw:frame draw:style-name="fr66" draw:name="Object161" text:anchor-type="as-char" svg:width="1.6cm" svg:height="0.407cm" draw:z-index="102"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5343,7 +5343,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="_40_Table_20_Contents">‘ABS’ <text:s text:c="8"/>-<draw:frame draw:style-name="fr66" draw:name="Object162" text:anchor-type="as-char" svg:width="1.536cm" svg:height="0.423cm" draw:z-index="766"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘ABS’<text:s text:c="10"/>-<draw:frame draw:style-name="fr66" draw:name="Object162" text:anchor-type="as-char" svg:width="1.536cm" svg:height="0.423cm" draw:z-index="766"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5399,7 +5399,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame></text:p>
-       <text:p text:style-name="_40_Table_20_Contents">‘MULTIPLY’ -<draw:frame draw:style-name="fr66" draw:name="Object163" text:anchor-type="as-char" svg:width="1.363cm" svg:height="0.39cm" draw:z-index="103"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">‘MULTIPLY’<text:s text:c="1"/>-<draw:frame draw:style-name="fr66" draw:name="Object163" text:anchor-type="as-char" svg:width="1.363cm" svg:height="0.39cm" draw:z-index="103"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -5442,7 +5442,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2190">X</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1783.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1959">The name of the array to be used as an input parameter. This is the keyword name identifying the property and is up to eight characters in length and optionally enclosed in quotes. </text:p>
+       <text:p text:style-name="P1959">A character string of up to eight characters in length that defines the keyword identifying the array to be used as an input parameter.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1783.E2" office:value-type="string">
@@ -5499,7 +5499,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14797">Table <text:sequence text:ref-name="refTable168" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.94</text:sequence>: OPERATE Keyword Description</text:p>
     <text:p text:style-name="P12084"/>
-    <text:p text:style-name="P15591">The applicable arrays for each section are defined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable169">Table 6.95</text:sequence-ref><text:s/>as shown below.</text:p>
+    <text:p text:style-name="P15591">Examples of the arrays most commonly operated on in each section are given in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable169">Table 6.95</text:sequence-ref><text:s/>. Cells colored red indicate arrays that are not supported by OPM Flow operations.</text:p>
     <text:p text:style-name="P15591"/>
     <table:table table:name="Table1784" table:style-name="Table1784">
      <table:table-column table:style-name="Table1784.A" table:number-columns-repeated="5"/>
@@ -5643,7 +5643,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1784.C16" office:value-type="string">
        <text:p text:style-name="P3298">SGCR</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1784.E16" office:value-type="string">
+      <table:table-cell table:style-name="Table1784.B17" office:value-type="string">
        <text:p text:style-name="P3298">MISCNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1784.E7" office:value-type="string">
@@ -5853,7 +5853,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1784.D16" office:value-type="string">
        <text:p text:style-name="P2017"/>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1784.E16" office:value-type="string">
+      <table:table-cell table:style-name="Table1784.E7" office:value-type="string">
        <text:p text:style-name="P3628">SPOLY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1784.F25" office:value-type="string">
@@ -6099,7 +6099,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">Note that care should be exercised when performing operations on integer array data as all transforms are performed using floating point arithmetic operations. In addition, operations on any of the transmissibility arrays (TRANX, TRANX-, TRANY, TRANY-, TRANZ, and TRANZ-) may result in untended consequences as these arrays have zero values on the boundary of the grid. In this use OPM ResInsight to verify and visually inspect the results. </text:p>
     <text:h text:style-name="P18650" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5741_370116838811"/>E<text:span text:style-name="T1">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc5741_370116838811"/></text:h>
-    <text:p text:style-name="P12086">The first example uses the MULTP function combined with the Net-to-Gross (NTG) array to re-scale the MULTX, MULTY and MULTZ arrays to reduce the transmissibility in three separation reservoirs based on the reservoir quality (NTG).</text:p>
+    <text:p text:style-name="P12086">The first example uses the MULTP function combined with the Net-to-Gross (NTG) array to re-scale the MULTX, MULTY and MULTZ arrays to reduce the transmissibility in three separate reservoirs based on the reservoir quality (NTG).</text:p>
     <text:p text:style-name="P14443">--</text:p>
     <text:p text:style-name="P14443">-- <text:s text:c="6"/>MATHEMATICAL OPERATIONS ON ARRAYS BY CELL</text:p>
     <text:p text:style-name="P14443">--</text:p>
@@ -6129,7 +6129,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>SGU <text:s text:c="4"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s/>&apos;MULTA&apos; <text:s text:c="4"/>SWL <text:s text:c="3"/>-1.0 <text:s text:c="3"/>1.0 <text:s text:c="5"/>/</text:p>
     <text:p text:style-name="_40_Example">/ <text:s text:c="42"/></text:p>
     <text:p text:style-name="P15224"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P15224">The above example set the maximum gas saturation to be one minus the minimum water saturation.</text:p>
+    <text:p text:style-name="P15224">The above example sets the maximum gas saturation to be one minus the minimum water saturation.</text:p>
     <text:p text:style-name="P15224"/>
     
    </text:section>
