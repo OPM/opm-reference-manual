@@ -3315,7 +3315,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="First_20_Page">
    <style:paragraph-properties style:page-number="auto"/>
   </style:style>
-  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties style:writing-mode="lr-tb"/>
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
@@ -4969,6 +4969,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P98" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716753_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716753_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The WELSPECS keyword defines the general well specification data for all well types, and must be used for all wells before any other well specification keywords are used in the input file. The keyword declares the well, the name of the well, the group the well initial belongs to, the wellhead location and other key parameters.</text:p>
+    <text:p text:style-name="_40_TextBody">OPM Flow also supports the use of the WELSPECS keyword to change the properties of one or more wells previously specified using the WELSPECS keyword. In particular, this supports changing the controlling group (GRPNAME) without affecting any other well properties such as the location of the well head (I, J) or the well reference depth (BHPREF), since defaulted properties are not changed in this case. However, the well reference depth can be re-defaulted by specifying a negative value for BHPREF. The wells to be changed can be specified using a well name, well name pattern or well list (WELNAME).</text:p>
     <table:table table:name="Table665" table:style-name="Table665">
      <table:table-column table:style-name="Table665.A"/>
      <table:table-column table:style-name="Table665.B"/>
@@ -5101,13 +5102,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table665.C2"/>
       <table:covered-table-cell table:style-name="Table665.C2"/>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P136">feet</text:p>
+       <text:p text:style-name="P10">feet</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P136">m</text:p>
+       <text:p text:style-name="P10">m</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.E8" office:value-type="string">
-       <text:p text:style-name="P136">cm</text:p>
+       <text:p text:style-name="P10">cm</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table665.F3"/>
      </table:table-row>
@@ -5165,13 +5166,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table665.C2"/>
       <table:covered-table-cell table:style-name="Table665.C2"/>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P136">feet</text:p>
+       <text:p text:style-name="P10">feet</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P136">m</text:p>
+       <text:p text:style-name="P10">m</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P136">cm</text:p>
+       <text:p text:style-name="P10">cm</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table665.F10"/>
      </table:table-row>
@@ -5449,6 +5450,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P128">OP01 <text:s text:c="4"/>PLATFORM <text:s text:c="2"/>1* <text:s text:c="2"/>1* <text:s text:c="2"/>1* <text:s text:c="4"/>OIL <text:s text:c="3"/>1* <text:s text:c="4"/>STD <text:s text:c="3"/>SHUT <text:s text:c="2"/>NO <text:s text:c="4"/>1* <text:s text:c="4"/>/</text:p>
     <text:p text:style-name="P128">/ <text:s text:c="148"/></text:p>
     <text:p text:style-name="_40_TextBody">Notice how the well location parameters have been defaulted with 1* in this case.</text:p>
+    <text:p text:style-name="_40_TextBody">The following example illustrates how the WELSPECS keyword can be used to change the controlling group for oil production wells previously specified by the WELSPECS keyword that have an oil production rate less than 100.</text:p>
+    <text:p text:style-name="P128">--</text:p>
+    <text:p text:style-name="P128">-- <text:s text:c="6"/>ACTIONX BLOCK <text:s text:c="53"/></text:p>
+    <text:p text:style-name="P128">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="P128">ACTIONX</text:p>
+    <text:p text:style-name="P128">  ACT01    1             /</text:p>
+    <text:p text:style-name="P128">  WOPR     'OP*' &lt; 100.0 /</text:p>
+    <text:p text:style-name="P128">/</text:p>
+    <text:p text:style-name="P128">WELSPECS</text:p>
+    <text:p text:style-name="P128">  '?'      'LOWPRESS'   /</text:p>
+    <text:p text:style-name="P128">/</text:p>
+    <text:p text:style-name="P128">ENDACTIO</text:p>
    </text:section>
   </office:text>
  </office:body>
