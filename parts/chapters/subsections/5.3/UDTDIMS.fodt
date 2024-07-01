@@ -2495,7 +2495,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:table-column-properties style:column-width="1.99cm"/>
   </style:style>
   <style:style style:name="Table1665.A1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -2534,7 +2534,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Table1666.A2" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -2725,9 +2725,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="P11989" style:family="paragraph" style:parent-style-name="_40_TextBody">
    <style:text-properties officeooo:paragraph-rsid="0e1e7086"/>
-  </style:style>
-  <style:style style:name="P11990" style:family="paragraph" style:parent-style-name="_40_TextBody">
-   <style:text-properties officeooo:paragraph-rsid="0e1ee8bb"/>
   </style:style>
   <style:style style:name="P14311" style:family="paragraph" style:parent-style-name="_40_Example">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="0e1e7086"/>
@@ -4228,8 +4225,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838819311"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838819311"/></text:h>
-    <text:p text:style-name="P11989">This keyword defines the dimensions of the User Defined Tables (“UDT”) used by OPM Flow that can be applied to various connection, group, and well keywords in the SCHEDULE section. UDAs are defined by the UDQ keyword that is used to specify values to be constants, SUMMARY variables, as defined in SUMMARY section, or a formula using various mathematical functions together with constants and SUMMARY variables.</text:p>
-    <text:p text:style-name="P11990">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored. </text:p>
+    <text:p text:style-name="P11989">This keyword defines the dimensions of the User Defined Tables (“UDT”) used by OPM Flow that can be used as lookup tables when assigning values to User Defined Quantities ("UDQ") using the UDQ keyword in the SCHEDULE section. UDTs are defined by the UDT keyword in the SCHEDULE section.</text:p>
     <table:table table:name="Table1666" table:style-name="Table1666">
      <table:table-column table:style-name="Table1666.A"/>
      <table:table-column table:style-name="Table1666.B"/>
@@ -4259,7 +4255,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5265">MXUDT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1666.C5" office:value-type="string">
-       <text:p text:style-name="P3230">MXUDA is a positive integer that defines the maximum number of User Defined Tables</text:p>
+       <text:p text:style-name="P3230">MXUDT is a positive integer that defines the maximum number of User Defined Tables</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1666.D5" office:value-type="string">
        <text:p text:style-name="P3485">0</text:p>
@@ -4302,6 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1666.C5" office:value-type="string">
        <text:p text:style-name="P5265">MXDIMS is a positive integer that defines the maximum number of dimensions in any given User Defined Table.</text:p>
+       <text:p text:style-name="P5265">Only one dimensional tables are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1666.D5" office:value-type="string">
        <text:p text:style-name="P5266">0</text:p>
