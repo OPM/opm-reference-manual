@@ -3345,17 +3345,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1533" style:family="text">
-   <style:text-properties style:text-position="0% 100%"/>
-  </style:style>
   <style:style style:name="T2110" style:family="text">
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Gill Sans MT" fo:font-size="9pt" fo:font-weight="normal" fo:background-color="transparent" loext:char-shading-value="0" style:font-name-asian="Times New Roman1" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-name-complex="Times New Roman1" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T2444" style:family="text">
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Gill Sans MT" fo:font-size="9pt" fo:background-color="transparent" loext:char-shading-value="0" style:font-name-asian="Times New Roman1" style:font-size-asian="10pt" style:font-name-complex="Times New Roman1" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="T2709" style:family="text">
-   <style:text-properties style:text-underline-style="none"/>
   </style:style>
   <style:style style:name="T3853" style:family="text">
    <style:text-properties style:text-position="super 58%"/>
@@ -4803,9 +4797,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716519_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716519_3964674244"/></text:h>
     <text:p text:style-name="P11942">The ACTIONX keyword defines a series of conditions that invoke run time processing of ACTION functions and is similar to executing a run time script. This is the general purpose version of the ACTION series of keywords that can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. The ACTION, ACTIONG, ACTIONR, ACTIONS and ACTIONW keywords are not implemented in OPM Flow and are unlikely to be so, as the ACTIONX keyword implements their functionality with greater flexibility. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a ACTIONX section that stipulates the Boolean conditions to test and the resulting SCHEDULE keywords to be executed if the Boolean condition evaluates to true. <text:s/>An ACTIONX Definition Section is terminated by an ENDACTIO keyword on a separate single line. <text:s/></text:p>
-    <text:p text:style-name="P12178">Although this keyword is read by OPM Flow and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting. This is because the ACTIONX keyword enables the user to implement complex functionality and therefore it is advisable to start with simple expressions before adding the desired complexity.</text:p>
-    <text:p text:style-name="P12179"><text:span text:style-name="T2709">See also the PYACTION keyword, also in the SCHEDULE, </text:span>section<text:span text:style-name="T2709"> that implements OPM Flow’s Python scripting facility using the Python scripting language.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of an ACTIONX section that stipulates the Boolean conditions to test and the resulting SCHEDULE keywords to be executed if the Boolean condition evaluates to true. <text:s/>An ACTIONX Definition Section is terminated by an ENDACTIO keyword on a separate single line. <text:s/></text:p>
+    <text:p text:style-name="P12178">Although this keyword is read by OPM Flow and the ACTION and UDQ computational logic and calculations have been implemented, one should use caution when using this facility as it may result in OPM Flow aborting. This is because the ACTIONX keyword enables the user to implement complex functionality and therefore it is advisable to start with simple expressions before adding the desired complexity.</text:p>
+    <text:p text:style-name="P12179">See also the PYACTION keyword in the SCHEDULE section that implements OPM Flow’s Python scripting facility using the standard Python scripting language.</text:p>
     <table:table table:name="Table840" table:style-name="Table840">
      <table:table-column table:style-name="Table840.A"/>
      <table:table-column table:style-name="Table840.B"/>
@@ -4852,8 +4846,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4976">ACTNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table840.C15" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3329">ACTNAME is a character sting of up to length eight, that defines the name of this action definition.</text:p>
-       <text:p text:style-name="P5400">If ACTNAME has been <text:span text:style-name="T2110">previously</text:span> used by any ACTION series keyword, then the previous ACTION series definition will be replace by the definition declared by this ACTIONX Definition Section. </text:p>
+       <text:p text:style-name="P3329">ACTNAME is a character sting of up to eight characters in length, that defines the name of this action definition.</text:p>
+       <text:p text:style-name="P5400">If ACTNAME has previously been used by any ACTION series keyword, then the previous ACTION series definition will be replaced by the definition declared by this ACTIONX Definition Section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4870,7 +4864,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table840.C15" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4976">ACTNSTEP is a positive integer that defines the number times that the ACTNAME definition is executed. <text:s/>ACTIONX definitions are activated at the end of a time step and this parameter is used to set how many time steps the ACTNAME definition will be invoked. The default value of one means that the definition will be executed only once. Use a large value, for example 10,000 for the definition to be executed at every time step.</text:p>
-       <text:p text:style-name="P5281">Noted that the counter only affects successful evaluations; i.e. if ACTNSTEP is set equal to one (the default), then the simulator will test the action at the end of every time step until it evaluates to true.</text:p>
+       <text:p text:style-name="P5281">Note that the counter only affects successful evaluations; i.e. if ACTNSTEP is set equal to one (the default), then the simulator will test the action at the end of every time step until it evaluates to true.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4887,7 +4881,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4986">ACTDELTA</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table840.C15" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4986">ACTDELTA is a real positive value that stipulates the duration of time that the conditions defined on the second record to be satisfied before the ACTIONX action are executed. <text:s/>For example, if ACTDELTA is defaulted the actions will be executed at the end of the time step for which the conditions are met. <text:s/>If set to say 30, then a minimum of 30 days will pass before the actions are executed (assuming field or metric units).</text:p>
+       <text:p text:style-name="P4986">ACTDELTA is a real positive value that defines the minimum duration of time after the conditions defined on the second record have been satisfied before the ACTIONX actions are executed. <text:s/>For example, if ACTDELTA is defaulted the actions will be executed at the end of the time step for which the conditions are met. <text:s/>If set to say 30, then a minimum of 30 days will pass before the actions are executed (assuming field or metric units).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4917,7 +4911,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7624">/</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table840.C13" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7636">R<text:span text:style-name="T1533">ecord terminated by a “/”</text:span></text:p>
+       <text:p text:style-name="P7636">Record terminated by a “/”</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4968,7 +4962,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19305">=: Equal to.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19299">!=: Not equal to </text:p>
+         <text:p text:style-name="P19299">!=: Not equal to.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P5012">For example to test if the field’s gas production rate is less than 600 MMscf/d then one would use:</text:p>
@@ -4976,7 +4970,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P12904"><text:s text:c="5"/>PHASE2 <text:s text:c="6"/>1 <text:s text:c="14"/>/</text:p>
        <text:p text:style-name="P12904"><text:s text:c="5"/>GGPR <text:s/>&apos;FIELD&apos; &lt; 600E3 <text:s text:c="7"/>/</text:p>
        <text:p text:style-name="P12904">/</text:p>
-       <text:p text:style-name="P12904">…...</text:p>
+       <text:p text:style-name="P12904">...</text:p>
        <text:p text:style-name="P12904">ENDACTIO</text:p>
        <text:p text:style-name="P12904"/>
       </table:table-cell>
@@ -4996,18 +4990,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table840.C15" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4989">ACTRHS is a numeric value or a series of character strings, each up to eight characters in length, that defines a constant, an UDQ defined value, or a SUMMARY variable on the right hand side of a Boolean conditional test, as outlined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable549">Table 12.7</text:sequence-ref><text:s/>(see also ACTLHS).</text:p>
-       <text:p text:style-name="P4989">In the case of well quantities on the right hand side the set of matching wells is captured and can be used as a general &quot;well list&quot; with the symbol &apos;?&apos; in subsequent well keywords. For example, to shut-in all oil producing wells (‘OP*’) with a water cut greater than 90% for every time the field water production rate exceeds 60,000 stb/d one would use: </text:p>
+       <text:p text:style-name="P4989">In the case of well quantities the set of matching wells is captured and can be used as a general &quot;well list&quot; with the symbol &apos;?&apos; in subsequent well keywords. For example, to shut-in all oil producing wells (‘OP*’) with a water cut greater than 90% for every time the field water production rate exceeds 60,000 stb/d one would use: </text:p>
        <text:p text:style-name="P14325">ACTIONX</text:p>
        <text:p text:style-name="P14325"><text:s text:c="5"/>MXWATER <text:s text:c="5"/>10000 <text:s text:c="10"/>/</text:p>
        <text:p text:style-name="P14325"><text:s text:c="5"/>GWPR <text:s/>&apos;FIELD&apos; &gt; 60E3 <text:s/>AND <text:s text:c="3"/>/</text:p>
-       <text:p text:style-name="P14325"><text:s text:c="5"/>WWCT ‘OP*’ <text:s/>&gt; 0.90 <text:s text:c="8"/>/</text:p>
+       <text:p text:style-name="P14325"><text:s text:c="5"/>WWCT <text:s/>&apos;OP*&apos; <text:s/><text:s/>&gt; 0.90 <text:s text:c="8"/>/</text:p>
        <text:p text:style-name="P14325">/</text:p>
        <text:p text:style-name="P14325">-- WELL PRODUCTION STATUS <text:s text:c="54"/></text:p>
        <text:p text:style-name="P14325">-- <text:s text:c="77"/></text:p>
        <text:p text:style-name="P14325">-- <text:s/>WELL <text:s text:c="3"/>WELL <text:s text:c="2"/>--LOCATION-- <text:s/>COMPLETION <text:s text:c="36"/></text:p>
        <text:p text:style-name="P14325">-- <text:s/>NAME <text:s text:c="3"/>STAT <text:s text:c="4"/>I <text:s text:c="2"/>J <text:s text:c="3"/>K <text:s/>FIRST LAST <text:s text:c="36"/></text:p>
        <text:p text:style-name="P14325">WELOPEN <text:s text:c="72"/></text:p>
-       <text:p text:style-name="P14325">‘?’ <text:s/><text:s text:c="7"/>SHUT <text:s text:c="26"/>/</text:p>
+       <text:p text:style-name="P14325">'?' <text:s/><text:s text:c="7"/>SHUT <text:s text:c="26"/>/</text:p>
        <text:p text:style-name="P14325">/</text:p>
        <text:p text:style-name="P16772">ENDACTIO</text:p>
        <text:p text:style-name="P16772"/>
@@ -5026,13 +5020,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5012">ANDOR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table840.C15" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5012">An optional defined character string that stipulates a Boolean operator that must be set to either AND or OR if included on this record, that links this record with additional records of this type. For example, to test if the field’s gas production rate is less than 600 MMscf/d after 2020 then one would use:</text:p>
+       <text:p text:style-name="P5012">An optional defined character string that specifies a Boolean operator that must be set to either AND or OR if included on this record, that links this record with additional records of this type. For example, to test if the field’s gas production rate is less than 600 MMscf/d after 2020 then one would use:</text:p>
        <text:p text:style-name="P14118">ACTIONX</text:p>
        <text:p text:style-name="P14118"><text:s text:c="5"/>PHASE2 <text:s text:c="6"/>1 <text:s text:c="14"/>/</text:p>
        <text:p text:style-name="P12904"><text:s text:c="5"/>GGPR <text:s/>&apos;FIELD&apos; &lt; 600E3 AND <text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P12904"><text:s text:c="5"/>YEAR &gt; 2020 <text:s text:c="17"/>/</text:p>
        <text:p text:style-name="P12904">/</text:p>
-       <text:p text:style-name="P12904">……..</text:p>
+       <text:p text:style-name="P12904">...</text:p>
        <text:p text:style-name="P12904">ENDACTIO</text:p>
        <text:p text:style-name="P5012">This item should be left blank if not required.</text:p>
       </table:table-cell>
@@ -5158,10 +5152,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5018">AQUIFER</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table841.B3" office:value-type="string">
-       <text:p text:style-name="P5020">AQUIFER variable consists of two parameters the:</text:p>
+       <text:p text:style-name="P5020">AQUIFER variable consists of two parameters:</text:p>
        <text:list xml:id="list105920444803096" text:continue-list="list105919889445580" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19306">Aquifer SUMMARY variable; for example, Analytical Aquifer Influx Rate, AAQR, and the</text:p>
+         <text:p text:style-name="P19306">Aquifer SUMMARY variable; for example, Analytical Aquifer Influx Rate, AAQR.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19312">Aquifer number consisting of a positive integer greater than zero that defines the aquifer <text:s/>to be used. </text:p>
@@ -5182,10 +5176,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19312">Block SUMMARY variable; for example Block Oil Saturation, BOSAT.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19312">Block I location which should be a positive integer greater than or equal to zero and less than or equal to NX that defines the connection location in the I-direction.</text:p>
+         <text:p text:style-name="P19312">Block I location which should be a positive integer greater than or equal to one and less than or equal to NX that defines the connection location in the I-direction.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19312">Block J location which should be a positive integer greater than or equal to zero and less than or equal to NY that defines the connection location in the J-direction.</text:p>
+         <text:p text:style-name="P19312">Block J location which should be a positive integer greater than or equal to one and less than or equal to NY that defines the connection location in the J-direction.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19312">Block K location which should be a positive integer greater than or equal to one and less than or equal to NZ that defines the connection location in the K-direction.</text:p>
@@ -5199,13 +5193,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5018">CONSTANTS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table841.B4" office:value-type="string">
-       <text:p text:style-name="P3336">CONSTANTS can be any numerical value and can also include an integer constant as a counter secondary variable. This type of variable has the following form: </text:p>
+       <text:p text:style-name="P3336">CONSTANTS can consist of one or optionally two parameters: </text:p>
        <text:list xml:id="list105920710070488" text:continue-list="list105919922157230" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19307">Any numerical value.</text:p>
+         <text:p text:style-name="P19307">A numerical value defining the Constant.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19308">ACTIONX counter as defined by ACTNSTEP in the ACTIONX Definition Section. The default value is zero, but this parameter can be any integer value. For example, if one wanted to activate the action after the third time the Boolean condition was passed then setting ACTNSTEP to one and this parameter to -2 would accomplish this.</text:p>
+         <text:p text:style-name="P19308">An optional numerical value defining the Increment. If not specified then the Increment defaults to zero. The Increment is added to the Constant after each time the action is executed. The Increment can be positive or negative.</text:p>
+         <text:p text:style-name="P19308"></text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5220,7 +5215,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P14120"><text:s text:c="5"/>WIPHASE <text:s text:c="6"/>1 <text:s text:c="14"/>/</text:p>
        <text:p text:style-name="P14120"><text:s text:c="5"/>FPR &lt; 2500 <text:s text:c="11"/><text:s text:c="8"/>/</text:p>
        <text:p text:style-name="P14120">/</text:p>
-       <text:p text:style-name="P14120">…...</text:p>
+       <text:p text:style-name="P14120">...</text:p>
        <text:p text:style-name="P10153"><text:s text:c="7"/>ENDACTIO</text:p>
        <text:p text:style-name="P158"/>
        <text:p text:style-name="P158">The above would action a set of SCHEDULE keywords if the field average pressure fell below 2,500 psia for a run using FIELD units.</text:p>
@@ -5245,7 +5240,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P14120"><text:s text:c="5"/>OILMIN <text:s text:c="7"/>1 <text:s text:c="14"/>/</text:p>
        <text:p text:style-name="P14120"><text:s text:c="5"/>GOPR <text:s/>&apos;FIELD&apos; &lt; 20.0E3 <text:s text:c="7"/>/</text:p>
        <text:p text:style-name="P14120">/</text:p>
-       <text:p text:style-name="P14120">…...</text:p>
+       <text:p text:style-name="P14120">...</text:p>
        <text:p text:style-name="P10151"><text:s text:c="7"/>ENDACTIO</text:p>
       </table:table-cell>
      </table:table-row>
@@ -5272,7 +5267,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P14390"><text:s text:c="5"/>WIPHASE <text:s text:c="6"/>1 <text:s text:c="14"/>/</text:p>
        <text:p text:style-name="P14390"><text:s text:c="5"/>RPR 0 &lt; 2500 <text:s text:c="9"/><text:s text:c="8"/>/</text:p>
        <text:p text:style-name="P14390">/</text:p>
-       <text:p text:style-name="P14390">…...</text:p>
+       <text:p text:style-name="P14390">...</text:p>
        <text:p text:style-name="P10152"><text:s text:c="7"/>ENDACTIO</text:p>
        <text:p text:style-name="P159">Would action a set of SCHEDULE keywords if the field average pressure fell below 2,500 psia for a run using FIELD units.</text:p>
       </table:table-cell>
@@ -5286,11 +5281,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7144">Thus, to set an action for April 1, 2025 one would use:</text:p>
        <text:p text:style-name="P5023"/>
        <text:p text:style-name="P14121">ACTIONX</text:p>
+       <text:p text:style-name="P14121"><text:s text:c="5"/>ACT01   <text:s/>1<text:s text:c="18"/><text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P14121"><text:s text:c="5"/>DAY <text:s/>= 1 <text:s text:c="13"/>AND <text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P14397"><text:s text:c="5"/>MNTH =&apos;APR&apos; <text:s text:c="10"/>AND <text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P14121"><text:s text:c="5"/>YEAR = 2025 <text:s text:c="17"/>/</text:p>
        <text:p text:style-name="P14121">/</text:p>
-       <text:p text:style-name="P14121">……..</text:p>
+       <text:p text:style-name="P14121">...</text:p>
        <text:p text:style-name="P12904">ENDACTIO </text:p>
        <text:p text:style-name="P889"/>
        <text:p text:style-name="P889">Note that the value for the MNTH variable, <text:s/>‘APR’, in the example, can also be entered without the quotes, that is:</text:p>
@@ -5299,11 +5295,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P578">In addition, numerical values for MNTH, similar to DAY and YEAR, are also permitted and are converted to the nearest integer for comparison, so for example:</text:p>
        <text:p text:style-name="P578"/>
        <text:p text:style-name="P14390">ACTIONX</text:p>
+       <text:p text:style-name="P14121"><text:s text:c="5"/>ACT01   <text:s/>1<text:s text:c="18"/><text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P14390"><text:s text:c="5"/>DAY <text:s/>= 0.95 <text:s text:c="10"/>AND <text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P14390"><text:s text:c="5"/>MNTH = 4.40 <text:s text:c="10"/>AND <text:s text:c="3"/>/</text:p>
        <text:p text:style-name="P14390"><text:s text:c="5"/>YEAR = 2024.9 <text:s text:c="15"/>/</text:p>
        <text:p text:style-name="P14390">/</text:p>
-       <text:p text:style-name="_40_Example">……..</text:p>
+       <text:p text:style-name="_40_Example">...</text:p>
        <text:p text:style-name="_40_Example">ENDACTIO</text:p>
        <text:p text:style-name="P888"/>
        <text:p text:style-name="P888">Would again <text:span text:style-name="T2110">result</text:span> in the action taking place on April 1, 2025.</text:p>
@@ -5321,9 +5318,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19314">Well SUMMARY variable; for example, Well Oil Production Rate, WOPR.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19315">Well Name which is a character string of up to eight characters in length that defines the well, which must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+         <text:p text:style-name="P19315">Well Name which is a character string of up to eight characters in length that defines the well name, which must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur. The Well Name may be defaulted ('*'), a well root (e.g 'OP*') or a well list (e.g. '*BLK-1') when used on the LHS of a condition.</text:p>
         </text:list-item>
        </text:list>
+       <text:p text:style-name="P5021">Note that the use of well lists is an OPM Flow specific feature.</text:p>
        <text:p text:style-name="P5021">To reduce the tubing head pressure constraint for when any of the oil producers’ oil rate drop below 100 stb/d then one could use.</text:p>
        <text:p text:style-name="P5021"/>
        <text:p text:style-name="P14120">ACTIONX</text:p>
@@ -5539,7 +5537,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1994.F6" office:value-type="string">
-       <text:p text:style-name="P903">EXIT5</text:p>
+       <text:p text:style-name="P903">EXIT<text:span text:style-name="T3853">5</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1994.1">
@@ -5559,7 +5557,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1994.F6" office:value-type="string">
-       <text:p text:style-name="P977">INCLUDE<text:span text:style-name="T3853">6</text:span></text:p>
+       <text:p text:style-name="P977">INCLUDE<text:span text:style-name="T3853">7</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1994.1">
@@ -5610,7 +5608,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P980">GSATINJE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1994.C4" office:value-type="string">
-       <text:p text:style-name="P979">WELSPECS6</text:p>
+       <text:p text:style-name="P979">WELSPECS<text:span text:style-name="T3853">6</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1994.C4" office:value-type="string">
        <text:p text:style-name="P904"/>
@@ -5803,16 +5801,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="5"/>OPERATOR VARIABLE <text:s/>EXPRESSION</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="7"/></text:p>
-    <text:p text:style-name="P14397">DEFINE <text:s/>WU_WCUT <text:s text:c="2"/>1/(WWCT &apos;OP*&apos;) <text:s text:c="19"/>/ WELL WWCT LIST</text:p>
-    <text:p text:style-name="P14122">DEFINE <text:s/>WU_LIST <text:s text:c="2"/>SORT(WU_WCUT) <text:s text:c="20"/>/ WELL WWCT LIST SORTED</text:p>
+    <text:p text:style-name="P14397">DEFINE <text:s/>WU_WCUT <text:s text:c="2"/>WWCT &apos;OP*&apos; <text:s text:c="23"/>/ WELL WWCT LIST</text:p>
+    <text:p text:style-name="P14122">DEFINE <text:s/>WU_LIST <text:s text:c="2"/>SORTD(WU_WCUT) <text:s text:c="20"/>/ WELL WWCT LIST SORTED</text:p>
     <text:p text:style-name="P14123">/ <text:s text:c="3"/><text:s text:c="49"/>END OF UDQ SECTION</text:p>
     <text:p text:style-name="P14122">--</text:p>
     <text:p text:style-name="P14122">-- <text:s text:c="5"/>DEFINE START OF ACTIONX SECTION</text:p>
     <text:p text:style-name="P14122">--</text:p>
     <text:p text:style-name="P14122">ACTIONX</text:p>
-    <text:p text:style-name="P14122"><text:tab/> <text:s text:c="7"/>WSHUT <text:s text:c="7"/>10 <text:s text:c="55"/>/</text:p>
+    <text:p text:style-name="P14122"><text:s text:c="8"/>WSHUTIN <text:s text:c="7"/>10 <text:s text:c="55"/>/</text:p>
     <text:p text:style-name="P14122"><text:s text:c="8"/>GWPR <text:s/>&apos;FIELD&apos; &gt; 30E3 <text:s/>AND <text:s text:c="45"/>/</text:p>
-    <text:p text:style-name="P14122"><text:s text:c="8"/>WU_LIST ‘OP*’ &gt; 1 <text:s text:c="46"/><text:s text:c="7"/>/ <text:s/></text:p>
+    <text:p text:style-name="P14122"><text:s text:c="8"/>WU_LIST 'OP*' = 1 <text:s text:c="46"/><text:s text:c="7"/>/ <text:s/></text:p>
     <text:p text:style-name="P14122">/</text:p>
     <text:p text:style-name="P14122"/>
     <text:p text:style-name="P14122">--</text:p>
@@ -5827,17 +5825,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904"/>
     <text:p text:style-name="P12904">ENDACTIO</text:p>
     <text:p text:style-name="P12904"><text:soft-page-break/></text:p>
-    <text:p text:style-name="_40_TextBody">Apart from checking that the field’s water production rate is greater than 30,000 stb/d the Boolean conditional also checks that there is more than one well in the sorted well list. Notice also the use of ‘?’ symbol as a substitution of the well name and that the ACTIONX WSHUTIN series of commands will be executed a total of ten times.</text:p>
-    <text:p text:style-name="_40_TextBody">The second example checks to see if the field’s gas rates is below 600 MMscf/d and if the simulation time is greater that January 1, 2030. If it is, then compression is installed by re-setting all the gas producing well’s THP and BHP pressures to 450 psia and 300 psia respectively. In addition all gas wells currently shut-in are tested to see if they can be opened up under the new THP and BHP constraints.</text:p>
+    <text:p text:style-name="_40_TextBody">Apart from checking that the field’s water production rate is greater than 30,000 stb/d the Boolean conditional also checks that there is at least one well in the sorted well list. Notice also the use of ‘?’ symbol as a substitution of the well name and that the ACTIONX WSHUTIN series of commands will be executed a total of ten times.</text:p>
+    <text:p text:style-name="_40_TextBody">The second example checks to see if the field’s gas rate is below 600 MMscf/d and if the simulation time is greater that July 1, 2030. If it is, then compression is installed by re-setting all the gas producing well’s THP and BHP pressures to 450 psia and 300 psia respectively. In addition all gas wells currently shut-in are tested to see if they can be opened up under the new THP and BHP constraints.</text:p>
     <text:p text:style-name="P14124">--</text:p>
     <text:p text:style-name="P14122">-- <text:s text:c="5"/>START ACTIONX FIELD PHASE-3 AUTOMATIC COMPRESSION</text:p>
     <text:p text:style-name="P14122">--</text:p>
     <text:p text:style-name="P14122">ACTIONX</text:p>
-    <text:p text:style-name="P14122"><text:s text:c="6"/><text:tab/>PHASE-3 <text:s text:c="5"/>1 <text:s text:c="56"/>/</text:p>
+    <text:p text:style-name="P14122"><text:s text:c="8"/>PHASE-3 <text:s text:c="5"/>1 <text:s text:c="56"/>/</text:p>
     <text:p text:style-name="P14122"><text:s text:c="8"/>GGPR <text:s/>&apos;FIELD&apos; &lt; 600E3 AND <text:s text:c="45"/>/</text:p>
-    <text:p text:style-name="P12904"><text:s text:c="8"/>DAY <text:s text:c="10"/>= 1 <text:s text:c="4"/>AND <text:s text:c="38"/><text:s text:c="7"/>/</text:p>
-    <text:p text:style-name="P12904"><text:s text:c="8"/>MNTH <text:s text:c="9"/>= JAN <text:s text:c="2"/>AND <text:s text:c="27"/><text:s text:c="16"/><text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P12904"><text:s text:c="8"/>YEAR <text:s text:c="9"/>= 2030 <text:s text:c="50"/>/ <text:s/></text:p>
+    <text:p text:style-name="P12904"><text:s text:c="8"/>DAY <text:s text:c="10"/>&gt;= 1 <text:s text:c="4"/>AND <text:s text:c="44"/>/</text:p>
+    <text:p text:style-name="P12904"><text:s text:c="8"/>MNTH <text:s text:c="9"/>&gt;= JUL <text:s text:c="2"/>AND <text:s text:c="44"/>/</text:p>
+    <text:p text:style-name="P12904"><text:s text:c="8"/>YEAR <text:s text:c="9"/>&gt;= 2030 <text:s text:c="49"/>/</text:p>
     <text:p text:style-name="P14122">/</text:p>
     <text:p text:style-name="P14122"/>
     <text:p text:style-name="P14122">--</text:p>
