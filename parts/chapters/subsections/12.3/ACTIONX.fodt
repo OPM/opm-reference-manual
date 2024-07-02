@@ -4994,7 +4994,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P14325">ACTIONX</text:p>
        <text:p text:style-name="P14325"><text:s text:c="5"/>MXWATER <text:s text:c="5"/>10000 <text:s text:c="10"/>/</text:p>
        <text:p text:style-name="P14325"><text:s text:c="5"/>GWPR <text:s/>&apos;FIELD&apos; &gt; 60E3 <text:s/>AND <text:s text:c="3"/>/</text:p>
-       <text:p text:style-name="P14325"><text:s text:c="5"/>WWCT 'OP*' <text:s/>&gt; 0.90 <text:s text:c="8"/>/</text:p>
+       <text:p text:style-name="P14325"><text:s text:c="5"/>WWCT <text:s/>&apos;OP*&apos; <text:s/><text:s/>&gt; 0.90 <text:s text:c="8"/>/</text:p>
        <text:p text:style-name="P14325">/</text:p>
        <text:p text:style-name="P14325">-- WELL PRODUCTION STATUS <text:s text:c="54"/></text:p>
        <text:p text:style-name="P14325">-- <text:s text:c="77"/></text:p>
@@ -5193,13 +5193,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5018">CONSTANTS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table841.B4" office:value-type="string">
-       <text:p text:style-name="P3336">CONSTANTS can be any numerical value and can also include an integer constant as a counter secondary variable. This type of variable has the following form: </text:p>
+       <text:p text:style-name="P3336">CONSTANTS can consist of one or optionally two parameters: </text:p>
        <text:list xml:id="list105920710070488" text:continue-list="list105919922157230" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19307">Any numerical value.</text:p>
+         <text:p text:style-name="P19307">A numerical value defining the Constant.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19308">ACTIONX counter as defined by ACTNSTEP in the ACTIONX Definition Section. The default value is zero, but this parameter can be any integer value. For example, if one wanted to activate the action after the third time the Boolean condition was passed then setting ACTNSTEP to one and this parameter to -2 would accomplish this.</text:p>
+         <text:p text:style-name="P19308">An optional numerical value defining the Increment. If not specified then the Increment defaults to zero. The Increment is added to the Constant after each time the action is executed. The Increment can be positive or negative.</text:p>
+         <text:p text:style-name="P19308"></text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
