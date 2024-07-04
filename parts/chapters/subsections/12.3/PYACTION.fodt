@@ -3057,9 +3057,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1493" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" fo:font-size="9pt" fo:font-style="normal" style:text-underline-style="none" style:font-size-asian="9pt" style:font-style-asian="normal" style:font-size-complex="9pt" style:font-style-complex="normal"/>
   </style:style>
-  <style:style style:name="T1533" style:family="text">
-   <style:text-properties style:text-position="0% 100%"/>
-  </style:style>
   <style:style style:name="T4328" style:family="text">
    <style:text-properties fo:background-color="transparent" loext:char-shading-value="0"/>
   </style:style>
@@ -4518,8 +4515,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18678" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716661_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716661_3964674244"/></text:h>
     <text:p text:style-name="P12177">The PYACTION keyword is part of OPM Flow’s Python scripting facility that loads a standard Python script file that can be used to define a series of conditions and actions as the simulation proceeds through time. The “included” Python script file is executed by the standard Python interpreter. Thus, OPM Flow’s Python scripting facility offers greater flexibility compared to the commercial simulator’s ACTION series of keywords (ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW and ACTIONX) that can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. Note that OPM Flow has also implemented the commercial simulator’s ACTIONX keyword, but not the ACTION, ACTIONG, ACTIONR, ACTIONS and ACTIONW keywords, as the ACTIONX keyword implements their functionality with greater flexibility. <text:s/></text:p>
-    <text:p text:style-name="P12176">This keyword starts the definition of a PYACTION section that stipulates the name of the action and a <text:s/>string indicating the number of times the action should be run; this is then followed file containing the Python script. Noted that unlike the commercial simulator’s ACTIONX keyword there is no terminating keyword like the commercial simulator’s ENDACTIO keyword. <text:s/></text:p>
-    <text:p text:style-name="P12176">Although this keyword is read by OPM Flow and the script processing has been implemented, one should use caution when using this facility as it may result in OPM Flow aborting. This is because the PYACTION facility allows the user to implement complex functionality and the implementation is new for the 2020-04 release. Users should therefore use caution when using this facility. </text:p>
+    <text:p text:style-name="P12176">This keyword starts the definition of a PYACTION section that specifies the name of the action and a <text:s/>string indicating the number of times the action should be run; this is then followed by the name of the file containing the Python script. Note that unlike an ACTIONX block that is terminated by the ENDACTIO keyword the PYACTION section has no terminating keyword.  <text:s/></text:p>
+    <text:p text:style-name="P12176">Although this keyword is read by OPM Flow and the script processing has been implemented, one should use caution when using this facility as it may result in OPM Flow aborting. This is because the PYACTION facility allows the user to implement complex functionality and the implementation was new for the 2020-04 release. Users should therefore use caution when using this facility. </text:p>
     <table:table table:name="Table1864" table:style-name="Table1864">
      <table:table-column table:style-name="Table1864.A"/>
      <table:table-header-rows>
@@ -4527,8 +4524,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table1864.A1" office:value-type="string">
         <text:p text:style-name="P10212">Note</text:p>
         <text:p text:style-name="P10177">This is an OPM Flow specific keyword for the simulator’s scripting facility using the standard Python interpreter, as such it gives more flexibility than the commercial simulator’s ACTIONX keyword, although OPM Flow also supports this as well.</text:p>
-        <text:p text:style-name="P10374">The keyword should be considered experimental as details of the OPM Flow - Python interface might change for future releases. In particular, the current implementation is quite minimal; however, future releases are expected to add more entry points in the Schedule class which can be used to manipulate the reservoir model as the simulation progresses. <text:s/>As a user you are encouraged to come with wishes in this regard. </text:p>
-        <text:p text:style-name="P10374">The <text:span text:style-name="Source_20_Text">PYACTION</text:span> keyword is a very powerful keyword and allows for any piece of Python code to be included and run, including potentially malicious code. The important point is to scrutinize any <text:span text:style-name="Source_20_Text">PYACTION</text:span> keyword in a deck you receive from other parties. </text:p>
+        <text:p text:style-name="P10374">The keyword should be considered experimental as details of the OPM Flow - Python interface might change for future releases. In particular, the current implementation is quite minimal; however, future releases are expected to add more entry points in the Schedule class which can be used to manipulate the reservoir model as the simulation progresses. <text:s/>Users are encouraged to make suggestions for new features in this regard. </text:p>
+        <text:p text:style-name="P10374">The <text:span text:style-name="Source_20_Text">PYACTION</text:span> keyword is a very powerful keyword and allows any piece of Python code to be included and run, including potentially malicious code. The important point is to scrutinize any <text:span text:style-name="Source_20_Text">PYACTION</text:span> keyword in a deck you receive from other parties. </text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4581,7 +4578,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3337"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.D3" office:value-type="string">
-       <text:p text:style-name="P7622">Not Applicable</text:p>
+       <text:p text:style-name="P7622">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1862.2">
@@ -4606,7 +4603,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.D4" office:value-type="string">
-       <text:p text:style-name="P9085">Not Applicable</text:p>
+       <text:p text:style-name="P9085">SINGLE</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1862.1">
@@ -4617,7 +4614,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7631">/</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.A5" office:value-type="string">
-       <text:p text:style-name="P7645">R<text:span text:style-name="T1533">ecord terminated by a “/”</text:span></text:p>
+       <text:p text:style-name="P7645">Record terminated by a “/”</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.D5" office:value-type="string">
        <text:p text:style-name="P7621">Not Applicable</text:p>
@@ -4645,7 +4642,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5013">/</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.A5" office:value-type="string">
-       <text:p text:style-name="P7646">R<text:span text:style-name="T1533">ecord terminated by a “/”</text:span></text:p>
+       <text:p text:style-name="P7646">Record terminated by a “/”</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.D5" office:value-type="string">
        <text:p text:style-name="P5005">Not Applicable</text:p>
@@ -4667,8 +4664,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14805">Table <text:sequence text:ref-name="refTable602" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.60</text:sequence>: PYACTION Keyword Description</text:p>
     <text:p text:style-name="P12176"/>
-    <text:p text:style-name="P12176">The PYACTION keyword is a result of combining two programming languages, the interactive Python interpreter and OPM Flow’s source code language C++. When combing two languages one extends and embeds one into the other. When extending Python with C++ the functionality implemented in C++ is made available to Python applications, when embedding Python in C++ one can call Python functions from within C++. The PYACTION keyword is based on embedding a Python interpreter in the C++ OPM Flow simulator, but the Python code actually runs as part of the PYACTION keyword is based on wrapping C++ objects in Python, that is extending Python.</text:p>
-    <text:p text:style-name="P12181">In order to fully benefit from the power of the PYACTION keyword one should familiarize oneself with the Python wrapper classes for the various OPM Flow C++ classes. These classes are essential to share the <text:s/>simulator state with the PYACTION run() function. <text:s/>That is, the function provides the interface between the two programming languages. </text:p>
+    <text:p text:style-name="P12176">The PYACTION keyword is a result of combining two programming languages, the interactive Python interpreter and OPM Flow’s source code language C++. When combing two languages one extends and embeds one into the other. When extending Python with C++ the functionality implemented in C++ is made available to Python applications, when embedding Python in C++ one can call Python functions from within C++. The PYACTION keyword is based on embedding a Python interpreter in the C++ OPM Flow simulator, but the Python code actually run as part of the PYACTION keyword is based on wrapping C++ objects in Python, that is extending Python.</text:p>
+    <text:p text:style-name="P12181">In order to fully benefit from the power of the PYACTION keyword one should familiarize oneself with the Python wrapper classes for the various OPM Flow C++ classes. These classes are essential to share the <text:s/>simulator state with the PYACTION script. <text:s/>That is, the function provides the interface between the two programming languages. </text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/><text:span text:style-name="T4328">To learn more about these classes you can use the pydoc utility, </text:span>for example,<text:span text:style-name="T4328"> to learn more about the SummaryState class, </text:span>in a Linux terminal one would<text:span text:style-name="T4328"> issue the </text:span>following bash <text:span text:style-name="T4328">command:</text:span></text:p>
     <text:p text:style-name="P16914">bash% pydoc opm.io.sim.SummaryState </text:p>
     <text:p text:style-name="P14405"/>
