@@ -2780,9 +2780,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P2377" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Gill Sans MT3" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
   </style:style>
-  <style:style style:name="P2531" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties officeooo:paragraph-rsid="108e0b56"/>
-  </style:style>
   <style:style style:name="P2532" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties officeooo:paragraph-rsid="108eaceb"/>
   </style:style>
@@ -3062,9 +3059,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="T4435" style:family="text">
    <style:text-properties fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
-  </style:style>
-  <style:style style:name="T4532" style:family="text">
-   <style:text-properties fo:font-size="9pt" fo:language="en" fo:country="US" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
   </style:style>
   <style:style style:name="T4564" style:family="text">
    <style:text-properties fo:font-size="9pt" fo:font-weight="normal" style:font-size-asian="9pt" style:font-weight-asian="normal" style:font-size-complex="9pt" style:font-weight-complex="normal"/>
@@ -4515,6 +4509,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18678" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716661_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716661_3964674244"/></text:h>
     <text:p text:style-name="P12177">The PYACTION keyword is part of OPM Flow’s Python scripting facility that loads a standard Python script file that can be used to define a series of conditions and actions as the simulation proceeds through time. The “included” Python script file is executed by the standard Python interpreter. Thus, OPM Flow’s Python scripting facility offers greater flexibility compared to the commercial simulator’s ACTION series of keywords (ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW and ACTIONX) that can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. Note that OPM Flow has also implemented the commercial simulator’s ACTIONX keyword, but not the ACTION, ACTIONG, ACTIONR, ACTIONS and ACTIONW keywords, as the ACTIONX keyword implements their functionality with greater flexibility. <text:s/></text:p>
+    <text:p text:style-name="P12176">Note that to use the PYACTION keyword OPM Flow must be built with embedded python enabled in opm-common/CMakeLists.txt. <text:s/></text:p>
+    <text:p text:style-name="P16914">option(OPM_ENABLE_EMBEDDED_PYTHON "Enable embedded python?" ON) </text:p>
+    <text:p text:style-name="P14405"/>
     <text:p text:style-name="P12176">This keyword starts the definition of a PYACTION section that specifies the name of the action and a <text:s/>string indicating the number of times the action should be run; this is then followed by the name of the file containing the Python script. Note that unlike an ACTIONX block that is terminated by the ENDACTIO keyword the PYACTION section has no terminating keyword.  <text:s/></text:p>
     <text:p text:style-name="P12176">Although this keyword is read by OPM Flow and the script processing has been implemented, one should use caution when using this facility as it may result in OPM Flow aborting. This is because the PYACTION facility allows the user to implement complex functionality and the implementation was new for the 2020-04 release. Users should therefore use caution when using this facility. </text:p>
     <table:table table:name="Table1864" table:style-name="Table1864">
@@ -4592,13 +4589,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4982">ACTNSTEP is a defined character string enclosed in quotes that indicates the number of times the action should be performed, and should be set to one of the following:</text:p>
        <text:list xml:id="list105920678043199" text:continue-list="list105920451409501" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19321">FIRST_TRUE: <text:s/>This option forces the action to be run at the end of every time step until the script returns a value of True.</text:p>
-        </text:list-item>
-        <text:list-item>
          <text:p text:style-name="P19359">SINGLE: <text:s/>Here the action script is run only once.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19313">UNLIMITED: <text:s/>If this option is selected then the action is run at the end of every time step.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19321">FIRST_TRUE: <text:s/>This option forces the action to be run at the end of every time step until the script returns a value of True.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4670,27 +4667,24 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P16914">bash% pydoc opm.io.sim.SummaryState </text:p>
     <text:p text:style-name="P14405"/>
     <text:p text:style-name="P12181">The Python script file (FILENAME in the PYACTION keyword) should be a standard Python module<text:note text:id="ftn312" text:note-class="footnote"><text:note-citation>312</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">A Python module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable __name__.</text:p></text:note-body></text:note> that defines the run() function with a pre-defined argument definition and should consist of 100% pure Python. <text:s/>The PYACTION Python module (FILENAME) is imported during processing of the input deck and as such this implies:</text:p>
+        <text:p text:style-name="Footnote">A Python module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable __name__.</text:p></text:note-body></text:note> that defines the PYACTION script and should consist of 100% pure Python. <text:s/>The PYACTION Python module (FILENAME) is imported during processing of the input deck and as such this implies:</text:p>
     <text:list xml:id="list105922455139376" text:continue-list="list105920502858213" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P17174">Basic Python syntax checking is performed during reading the FILENAME script file.</text:p>
+          <text:p text:style-name="P17174">Basic Python syntax checking is performed when the Python module (FILENAME) is read in.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17174">It is verified that the module has the required run() function with the correct format.</text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P17174">Code which is at module level, that is outside of any function call is run immediately at the time import time – this is probably not one wants and should therefore be avoided.</text:p>
+          <text:p text:style-name="P17174">It is verified that the module has the correct format.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P11823">The syntax of the run() command is given in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable603">Table 12.61</text:sequence-ref><text:s/>together with a description of the function’s call variables.</text:p>
+    <text:p text:style-name="P11823">The syntax of the Python module (FILENAME) is given in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable603">Table 12.61</text:sequence-ref><text:s/>together with a description of the Python module opm_embedded.</text:p>
     <table:table table:name="Table1863" table:style-name="Table1863">
      <table:table-column table:style-name="Table1863.A"/>
      <table:table-column table:style-name="Table1863.B"/>
@@ -4698,20 +4692,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table1863.1">
        <table:table-cell table:style-name="Table1863.A1" table:number-columns-spanned="3" office:value-type="string">
-        <text:p text:style-name="P10914">RUN() Function Definition</text:p>
+        <text:p text:style-name="P10914">Python Script Definition</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
        <table:covered-table-cell/>
       </table:table-row>
       <table:table-row table:style-name="Table1863.2">
        <table:table-cell table:style-name="Table1863.A2" table:number-columns-spanned="3" office:value-type="string">
-        <text:p text:style-name="P16808">def run(ecl_state, schedule, report_step, summary_state):</text:p>
         <text:p text:style-name="P16808">#</text:p>
         <text:p text:style-name="P16808"># OPM Flow PYACTION Module Script</text:p>
         <text:p text:style-name="P16808">#</text:p>
-        <text:p text:style-name="P16808">………</text:p>
-        <text:p text:style-name="P16808">………</text:p>
-        <text:p text:style-name="P16808">return</text:p>
+        <text:p text:style-name="P16808">import opm_embedded</text:p>
+        <text:p text:style-name="P16808">ecl_state = opm_embedded.current_ecl_state</text:p>
+        <text:p text:style-name="P16808">schedule = opm_embedded.current_schedule</text:p>
+        <text:p text:style-name="P16808">report_step = opm_embedded.current_report_step</text:p>
+        <text:p text:style-name="P16808">summary_state = opm_embedded.current_summary_state</text:p>
+        <text:p text:style-name="P16808">...</text:p>
+        <text:p text:style-name="P16808">...</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
        <table:covered-table-cell/>
@@ -4736,8 +4733,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5303">ecl_state</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C4" office:value-type="string">
-       <text:p text:style-name="P2531"><text:span text:style-name="T4532">The ecl_state argument </text:span><text:span text:style-name="T4435">is a </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4564">opm.io.ecl_state.EclipseState</text:span></text:span><text:span text:style-name="T4435"> instance which is initialized with all </text:span>the <text:span text:style-name="T4435">static information in the simulation, </text:span>for example the <text:span text:style-name="T4435">3D </text:span>grid <text:span text:style-name="T4435">properties and </text:span>the PVT and saturation <text:span text:style-name="T4435">tables</text:span></text:p>
-       <text:p text:style-name="P2531">T<text:span text:style-name="T4435">his object </text:span>is<text:span text:style-name="T4435"> read </text:span>by<text:span text:style-name="T4435"> the </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">run()</text:span></text:span><text:span text:style-name="T4435"> function </text:span>and the available data should not be modified as any updates will not be passed back to the <text:span text:style-name="T4435">simulator. </text:span><text:span text:style-name="T4532"><text:s/></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents">The ecl_state variable <text:span text:style-name="T4435">is a </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4564">opm.io.ecl_state.EclipseState</text:span></text:span><text:span text:style-name="T4435"> instance which is initialized with all </text:span>the <text:span text:style-name="T4435">static information in the simulation, </text:span>for example the <text:span text:style-name="T4435">3D </text:span>grid <text:span text:style-name="T4435">properties and </text:span>the PVT and saturation <text:span text:style-name="T4435">tables.</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents">T<text:span text:style-name="T4435">his object </text:span>is<text:span text:style-name="T4435"> read </text:span>by<text:span text:style-name="T4435"> the </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">run()</text:span></text:span><text:span text:style-name="T4435"> function </text:span>and the available data should not be modified as any updates will not be passed back to the <text:span text:style-name="T4435">simulator. </text:span><text:s/></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1863.2">
