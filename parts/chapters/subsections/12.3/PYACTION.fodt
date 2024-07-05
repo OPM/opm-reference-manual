@@ -2968,9 +2968,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P16670" style:family="paragraph" style:parent-style-name="Footnote">
    <style:text-properties officeooo:rsid="10c410fe"/>
   </style:style>
-  <style:style style:name="P16808" style:family="paragraph" style:parent-style-name="_40_Code">
-   <style:paragraph-properties fo:margin-left="2.879cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-  </style:style>
   <style:style style:name="P16809" style:family="paragraph" style:parent-style-name="_40_Code">
    <style:paragraph-properties fo:margin-left="2.879cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Mono" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
@@ -3048,20 +3045,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1488" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT3" fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
-  </style:style>
   <style:style style:name="T1493" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" fo:font-size="9pt" fo:font-style="normal" style:text-underline-style="none" style:font-size-asian="9pt" style:font-style-asian="normal" style:font-size-complex="9pt" style:font-style-complex="normal"/>
   </style:style>
   <style:style style:name="T4328" style:family="text">
    <style:text-properties fo:background-color="transparent" loext:char-shading-value="0"/>
-  </style:style>
-  <style:style style:name="T4435" style:family="text">
-   <style:text-properties fo:font-size="9pt" style:font-size-asian="9pt" style:font-size-complex="9pt"/>
-  </style:style>
-  <style:style style:name="T4564" style:family="text">
-   <style:text-properties fo:font-size="9pt" fo:font-weight="normal" style:font-size-asian="9pt" style:font-weight-asian="normal" style:font-size-complex="9pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T6885" style:family="text">
    <style:text-properties style:font-name="Liberation Mono"/>
@@ -4699,16 +4687,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
       <table:table-row table:style-name="Table1863.2">
        <table:table-cell table:style-name="Table1863.A2" table:number-columns-spanned="3" office:value-type="string">
-        <text:p text:style-name="P16808">#</text:p>
-        <text:p text:style-name="P16808"># OPM Flow PYACTION Module Script</text:p>
-        <text:p text:style-name="P16808">#</text:p>
-        <text:p text:style-name="P16808">import opm_embedded</text:p>
-        <text:p text:style-name="P16808">ecl_state = opm_embedded.current_ecl_state</text:p>
-        <text:p text:style-name="P16808">schedule = opm_embedded.current_schedule</text:p>
-        <text:p text:style-name="P16808">report_step = opm_embedded.current_report_step</text:p>
-        <text:p text:style-name="P16808">summary_state = opm_embedded.current_summary_state</text:p>
-        <text:p text:style-name="P16808">...</text:p>
-        <text:p text:style-name="P16808">...</text:p>
+        <text:p text:style-name="_40_Code">#</text:p>
+        <text:p text:style-name="_40_Code"># OPM Flow PYACTION Module Script</text:p>
+        <text:p text:style-name="_40_Code">#</text:p>
+        <text:p text:style-name="_40_Code">import opm_embedded</text:p>
+        <text:p text:style-name="_40_Code">ecl_state = opm_embedded.current_ecl_state</text:p>
+        <text:p text:style-name="_40_Code">schedule = opm_embedded.current_schedule</text:p>
+        <text:p text:style-name="_40_Code">report_step = opm_embedded.current_report_step</text:p>
+        <text:p text:style-name="_40_Code">summary_state = opm_embedded.current_summary_state</text:p>
+        <text:p text:style-name="_40_Code">...</text:p>
+        <text:p text:style-name="_40_Code">...</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
        <table:covered-table-cell/>
@@ -4733,8 +4721,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5303">ecl_state</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C4" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">The ecl_state variable <text:span text:style-name="T4435">is a </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4564">opm.io.ecl_state.EclipseState</text:span></text:span><text:span text:style-name="T4435"> instance which is initialized with all </text:span>the <text:span text:style-name="T4435">static information in the simulation, </text:span>for example the <text:span text:style-name="T4435">3D </text:span>grid <text:span text:style-name="T4435">properties and </text:span>the PVT and saturation <text:span text:style-name="T4435">tables.</text:span></text:p>
-       <text:p text:style-name="Table_20_Contents">T<text:span text:style-name="T4435">his object </text:span>is<text:span text:style-name="T4435"> read </text:span>by<text:span text:style-name="T4435"> the </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">run()</text:span></text:span><text:span text:style-name="T4435"> function </text:span>and the available data should not be modified as any updates will not be passed back to the <text:span text:style-name="T4435">simulator. </text:span><text:s/></text:p>
+       <text:p text:style-name="Table_20_Contents">The ecl_state variable is a opm.io.ecl_state.EclipseState instance which is initialized with all the static information in the simulation, for example the 3D grid properties and the PVT and saturation tables.</text:p>
+       <text:p text:style-name="Table_20_Contents">This object can be read by the Python script but the available data should not be modified as any updates will not be passed back to the simulator. <text:s/></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1863.2">
@@ -4745,11 +4733,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5304">schedule</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C5" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="T1488">The </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">schedule</text:span></text:span><text:span text:style-name="T1488"> argument is a </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">opm.io.sched.Schedule</text:span></text:span><text:span text:style-name="T1488"> instance which has all the </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">SCHEDULE</text:span></text:span><text:span text:style-name="T1488"> information internalized </text:span>(Schedule object)<text:span text:style-name="T1488">. </text:span>Currently, t<text:span text:style-name="T1488">here are </text:span>only a<text:span text:style-name="T1488"> few call points </text:span>in<text:span text:style-name="T1488"> </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">opm.io.sched.Schedule </text:span></text:span><text:span text:style-name="T1488">which can be used to </text:span><text:span text:style-name="Emphasis"><text:span text:style-name="T1493">update</text:span></text:span><text:span text:style-name="T1493"> t</text:span><text:span text:style-name="T1488">he state of the simulation, most notably:</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents">The schedule argument is a opm.io.sched.Schedule instance which has all the SCHEDULE information internalized (Schedule object). Currently, there are only a few call points in opm.io.sched.Schedule which can be used to <text:span text:style-name="Emphasis"><text:span text:style-name="T1493">update</text:span></text:span> the state of the simulation, most notably:</text:p>
+       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.open_well(well_name, report_step)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.shut_well(well_name, report_step)</text:span></text:p>
+       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.stop_well(well_name, report_step)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text"/></text:p>
-       <text:p text:style-name="Table_20_Contents">W<text:span text:style-name="T1488">hich can be used to shut a well at a particular report step. </text:span></text:p>
-       <text:p text:style-name="Table_20_Contents">Having additional call points to the <text:span text:style-name="Source_20_Text">opm.io.ecl_state.EclipseState</text:span> instance in order to <text:span text:style-name="T1488">update the </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">Schedule</text:span></text:span><text:span text:style-name="T1488"> object in more ways is an obvious candidate for improving the </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">PYACTION</text:span></text:span><text:span text:style-name="T1488"> functionality.</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents">Which can be used to open, shut or stop a well at a particular report step (or at the current report step is the report_step argument is not specified). </text:p>
+       <text:p text:style-name="Table_20_Contents">Adding additional call points to the opm.io.sched.Schedule instance in order to update the Schedule object in more ways is an obvious candidate for improving the PYACTION functionality.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1863.2">
@@ -4772,14 +4762,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5305">summary_state</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C7" office:value-type="string">
-       <text:p text:style-name="P2533">The <text:span text:style-name="Source_20_Text">summary_state</text:span> argument is an instance of the <text:span text:style-name="Source_20_Text">opm.io.sim.SummaryState</text:span> class, the purpose of this class is to serve as a container for SUMMARY variables that contain the simulation results; for example, the Field Oil Rate (FOPR) or a well’s Water CuT (WWCT). <text:s/>See the <text:a xlink:type="simple" xlink:href="#11.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc1622_3043861001">SUMMARY SECTION</text:bookmark-ref></text:a><text:s/>for a detailed description of the variables available.</text:p>
-       <text:p text:style-name="P2533">The summary_state variable will typically be the variable one will use to access the state of the simulation. For example, to check if the water cut in well OP01exceeds 0.50 one would use the following statement:</text:p>
-       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">if summary_state[&quot;WWCT:OP</text:span><text:span text:style-name="Source_20_Text">O</text:span><text:span text:style-name="Source_20_Text">1&quot;] &gt; 0.50:</text:span></text:p>
+       <text:p text:style-name="P2533">The summary_state argument is an instance of the opm.io.sim.SummaryState class, the purpose of this class is to serve as a container for SUMMARY variables that contain the simulation results; for example, the Field Oil Rate (FOPR) or a Well’s Water CuT (WWCT).<text:s/>See the <text:a xlink:type="simple" xlink:href="#11.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc1622_3043861001">SUMMARY SECTION</text:bookmark-ref></text:a><text:s/>for a detailed description of the variables available.</text:p>
+       <text:p text:style-name="P2533">The summary_state variable will typically be the variable one will use to access the state of the simulation. For example, to check if the water cut in well OP01 exceeds 0.5 one would use the following statement:</text:p>
+       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">if summary_state.well_var(&quot;OP01&quot;, &quot;WWCT&quot;) &gt; 0.50:</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text"><text:s text:c="4"/>...</text:span></text:p>
-       <text:p text:style-name="P2532"><text:span text:style-name="T1488">The </text:span><text:span text:style-name="Source_20_Text">summary_state</text:span><text:span text:style-name="T1488"> variable can also be </text:span>use to <text:span text:style-name="T1488">update </text:span>variables including UDQ variables<text:span text:style-name="T1488">, i.e:</text:span></text:p>
-       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">summary_state.update_well_var(&quot;OP</text:span><text:span text:style-name="Source_20_Text">0</text:span><text:span text:style-name="Source_20_Text">1&quot;, &quot;WUXX&quot;, 0.25)</text:span></text:p>
+       <text:p text:style-name="P2532">The summary_state variable can also be use to update variables including UDQ variables, i.e:</text:p>
+       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">summary_state.update_well_var(&quot;OP01&quot;, &quot;WUXX&quot;, 0.25)</text:span></text:p>
        <text:p text:style-name="P2377"/>
-       <text:p text:style-name="Table_20_Contents">The above <text:span text:style-name="T1488">assign</text:span>s<text:span text:style-name="T1488"> a value </text:span>of 0.25 <text:span text:style-name="T1488">to the </text:span>well <text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">UDQ</text:span></text:span><text:span text:style-name="T1488"> variable </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1488">WUXX </text:span></text:span><text:span text:style-name="Source_20_Text">for well OP01</text:span><text:span text:style-name="T1488">.</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents">The above assigns a value of 0.25 to the well UDQ variable WUXX for well OP01.</text:p>
        <text:p text:style-name="P2377"/>
       </table:table-cell>
      </table:table-row>
@@ -4789,7 +4779,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12186">See also the PYINPUT and PYEND keywords in the GRID<text:note text:id="ftn313" text:note-class="footnote"><text:note-citation>313</text:note-citation><text:note-body>
         <text:p text:style-name="P16670">Note PYINPUT and PYEND can be used in the GRID, EDIT, PROPS, SOLUTION, SUMMARY and SCHEDULE sections, but is described in the GRID section.</text:p></text:note-body></text:note> section which are also part of OPM Flow’s Python scripting facility, that process standard Python commands that can be used to manipulate and define the simulators input parameters during processing of the input deck. <text:s/>The main purpose of the facility is to script the construction of the various keywords. </text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716663_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716663_3964674244"/></text:h>
-    <text:p text:style-name="P11823">The first example checks if well OP01 has a water cut greater than 0.80 and if so then the well is just in. In the input deck we would have:</text:p>
+    <text:p text:style-name="P11823">The first example checks if well OP01 has a water cut greater than 0.8 and if so then the well is shut in. In the input deck we would have:</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>START OF PYACTION SECTION</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="4"/></text:p>
