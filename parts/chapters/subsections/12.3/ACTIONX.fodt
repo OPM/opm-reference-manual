@@ -5158,7 +5158,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19306">Aquifer SUMMARY variable; for example, Analytical Aquifer Influx Rate, AAQR.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19312">Aquifer number consisting of a positive integer greater than zero that defines the aquifer <text:s/>to be used. </text:p>
+         <text:p text:style-name="P19312">Aquifer number consisting of a positive integer greater than zero that defines the aquifer<text:s/>to be used. </text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P3335"/>
@@ -5176,13 +5176,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19312">Block SUMMARY variable; for example Block Oil Saturation, BOSAT.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19312">Block I location which should be a positive integer greater than or equal to one and less than or equal to NX that defines the connection location in the I-direction.</text:p>
+         <text:p text:style-name="P19312">Block I location which should be a positive integer greater than or equal to one and less than or equal to NX.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19312">Block J location which should be a positive integer greater than or equal to one and less than or equal to NY that defines the connection location in the J-direction.</text:p>
+         <text:p text:style-name="P19312">Block J location which should be a positive integer greater than or equal to one and less than or equal to NY.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19312">Block K location which should be a positive integer greater than or equal to one and less than or equal to NZ that defines the connection location in the K-direction.</text:p>
+         <text:p text:style-name="P19312">Block K location which should be a positive integer greater than or equal to one and less than or equal to NZ.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P5020">The NX, NY, and NZ parameters are defined on the DIMENS keyword in the RUNSPEC section.</text:p>
@@ -5256,7 +5256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19317">Region SUMMARY variable; selected from one of the following only: RPR, RGSAT, ROSAT, RWSAT, RGIP, ROIP, and RWIP. No other region summary fields are permitted in the expressions.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19318">Fluid In-Place region number which is a positive integer greater than or equal to zero that defines the region number. The value should less than or equal to the NTFIP variable on either REGDIMS or TABDIMS keywords in the RUNSPEC section. Note that a zero value indicates the whole model.</text:p>
+         <text:p text:style-name="P19318">Fluid In-Place region number which is a positive integer greater than or equal to zero that defines the region number. The value should less than or equal to the NTFIP variable on either the REGDIMS or TABDIMS keywords in the RUNSPEC section. Note that a zero value indicates the whole model.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19320">Fluid In-Place region family (not used by OPM Flow).</text:p>
@@ -5277,7 +5277,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5023">TIME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table841.B8" office:value-type="string">
-       <text:p text:style-name="P7144">TIME variables consists of one parameter that can have three values: DAY for the current simulation day of the month, MNTH for the current simulation month, and YEAR for the current simulation year.</text:p>
+       <text:p text:style-name="P7144">TIME variable definition consists of one parameter that can have three values: DAY for the current simulation day of the month, MNTH for the current simulation month, and YEAR for the current simulation year.</text:p>
        <text:p text:style-name="P7144">Thus, to set an action for April 1, 2025 one would use:</text:p>
        <text:p text:style-name="P5023"/>
        <text:p text:style-name="P14121">ACTIONX</text:p>
@@ -5408,7 +5408,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19316">Well Segment SUMMARY variable; for example, Segment Oil Flow Rate, SOFR.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19310">Multi-Segment Well which is a character string of up to eight characters in length that defines the well name which must have been declared previously using the WELSPECS and WELSEGS keywords in the SCHEDULE section, otherwise an error may occur.</text:p>
+         <text:p text:style-name="P19310">Multi-Segment Well Name which is a character string of up to eight characters in length that defines the well name which must have been declared previously using the WELSPECS and WELSEGS keywords in the SCHEDULE section, otherwise an error may occur.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19311">Segment Number, which is a positive integer greater than or equal to two and less than or equal to MXSEGS on WSEGDIMS keyword in the RUNSPEC section that defines the segment.</text:p>
@@ -5776,7 +5776,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_SCHEDULE__D_STATUS_12_3"/>Table <text:sequence text:ref-name="refTable550" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.8</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_SCHEDULE__D_STATUS_12_3"/>: ACTIONX Schedule Section Keyword Status</text:p>
     <text:p text:style-name="P12368"/>
-    <text:p text:style-name="P11825">As mentioned previously, <text:s/>the UDQ keyword stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section, <text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables.</text:p>
+    <text:p text:style-name="P11825">As mentioned previously,<text:s/>the UDQ keyword stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables.</text:p>
     <text:p text:style-name="P15817"><text:soft-page-break/></text:p>
     <table:table table:name="Table1992" table:style-name="Table1992">
      <table:table-column table:style-name="Table1992.A"/>
@@ -5791,7 +5791,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P12405"/>
-    <text:p text:style-name="P11825">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:s/>See <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>for a list of keywords that can be used with UDA variables in the <text:a xlink:type="simple" xlink:href="#12.3.59.UDQ - Declare User Define Quantities (“UDQ”)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc161095_2932703077">UDQ - Declare User Define Quantities (“UDQ”)</text:bookmark-ref></text:a><text:s/>keyword section.</text:p>
+    <text:p text:style-name="P11825">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_OPR say, and then use WU_OPR as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:s/>See <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3">Table 12.76</text:reference-ref> for a list of keywords that can be used with UDA variables in the <text:a xlink:type="simple" xlink:href="#12.3.59.UDQ - Declare User Define Quantities (“UDQ”)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc161095_2932703077">UDQ - Declare User Define Quantities (“UDQ”)</text:bookmark-ref></text:a><text:s/>keyword section.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716521_3964674244"/><text:span text:style-name="T1">Example</text:span>s<text:bookmark-end text:name="__RefHeading___Toc716521_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The first example uses the UDQ keyword to sort the oil wells from high water cut to low, via the WU_WLIST variable, and then use the ACTIONX keyword to shut-in the worst offending well when the field’s water production is greater than 30,000 stb/d.</text:p>
     <text:p text:style-name="P12904">--</text:p>
@@ -5802,7 +5802,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">-- <text:s text:c="5"/>OPERATOR VARIABLE <text:s/>EXPRESSION</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="7"/></text:p>
     <text:p text:style-name="P14397">DEFINE <text:s/>WU_WCUT <text:s text:c="2"/>WWCT &apos;OP*&apos; <text:s text:c="23"/>/ WELL WWCT LIST</text:p>
-    <text:p text:style-name="P14122">DEFINE <text:s/>WU_LIST <text:s text:c="2"/>SORTD(WU_WCUT) <text:s text:c="20"/>/ WELL WWCT LIST SORTED</text:p>
+    <text:p text:style-name="P14122">DEFINE <text:s/>WU_LIST <text:s text:c="2"/>SORTD(WU_WCUT) <text:s text:c="19"/>/ WELL WWCT LIST SORTED</text:p>
     <text:p text:style-name="P14123">/ <text:s text:c="3"/><text:s text:c="49"/>END OF UDQ SECTION</text:p>
     <text:p text:style-name="P14122">--</text:p>
     <text:p text:style-name="P14122">-- <text:s text:c="5"/>DEFINE START OF ACTIONX SECTION</text:p>
