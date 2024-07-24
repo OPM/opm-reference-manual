@@ -2762,9 +2762,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
-  <style:style style:name="T1533" style:family="text">
-   <style:text-properties style:text-position="0% 100%"/>
-  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4172,8 +4169,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="IMBNUM">
-
-<text:h text:style-name="P18015" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc129665_83452205"/>IMBNUM – Define the Imbibition Saturation Table Region Numbers<text:bookmark-end text:name="__RefHeading___Toc129665_83452205"/></text:h>
+    <text:h text:style-name="P18015" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc129665_83452205"/>IMBNUM – Define the Imbibition Saturation Table Region Numbers<text:bookmark-end text:name="__RefHeading___Toc129665_83452205"/></text:h>
     <table:table table:name="Table579" table:style-name="Table579">
      <table:table-column table:style-name="Table579.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table579.E"/>
@@ -4253,7 +4249,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19838">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19947">I<text:span text:style-name="T1533">f </text:span>a <text:span text:style-name="T1533">cell is not assigned a</text:span>n<text:span text:style-name="T1533"> IMBNUM region then the default value </text:span>of one <text:span text:style-name="T1533">will be used.</text:span></text:p>
+         <text:p text:style-name="P19947">If a cell is not assigned an IMBNUM region then the default value of one will be used.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4264,8 +4260,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14643">Table <text:sequence text:ref-name="refTable426" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.9</text:sequence>: IMBNUM Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12655">In addition, saturation table assignment may be directional dependent in which case the directional dependent versions of the aforementioned array should be used, that is IMBNUMX, IMBNUMY and IMBNUMZ instead of IMBNUM. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected, the non-reversible versions of the aforementioned arrays should be used, that is IMBNUMX, IMBNUMX-, IMBNUMY, IMBNUMY-, <text:s/>IMBNUMZ and IMBNUMZ-, <text:s/>instead of the IMBNUM keyword. For reference, see <text:a xlink:type="simple" xlink:href="#Table 201" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:sequence-ref text:reference-format="text" text:ref-name="refTable55">Table 5.40: SATOPTS Relative Permeability Function Allocation Keywords</text:sequence-ref></text:a>, that lists the various keywords that may be used with directional dependent relative permeability tables. </text:p>
-    <text:p text:style-name="P11791">Note, currently IMBNUMX-, IMBNUMY-, and IMBNUMZ- are not supported.</text:p>
+    <text:p text:style-name="P12655">In addition, saturation table assignment may be directional dependent in which case the directional dependent versions of the aforementioned array should be used, that is IMBNUMX, IMBNUMY and IMBNUMZ instead of IMBNUM. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected, the non-reversible versions of the aforementioned arrays should be used, that is IMBNUMX, IMBNUMX-, IMBNUMY, IMBNUMY-,<text:s/>IMBNUMZ and IMBNUMZ-,<text:s/>instead of the IMBNUM keyword. For reference, see <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3">Table 5.40</text:reference-ref>, that lists the various keywords that may be used with directional dependent relative permeability tables. </text:p>
+    <text:p text:style-name="P11791">Note, currently IMBNUMX-, IMBNUMY-, and IMBNUMZ- are not supported by OPM Flow.</text:p>
     <text:h text:style-name="P18764" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716297_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716297_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The example below sets three IMBNUM regions for a 4 x 5 x 2 model using the EQUALS keyword.</text:p>
     <text:p text:style-name="P14357">--</text:p>

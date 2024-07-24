@@ -2726,12 +2726,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P14753" style:family="paragraph" style:parent-style-name="Table">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="0cfaa01b"/>
   </style:style>
-  <style:style style:name="P16894" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <loext:graphic-properties draw:fill-hatch-name="hatch"/>
-   <style:paragraph-properties fo:margin-top="0.254cm" fo:margin-bottom="0cm" style:contextual-spacing="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-  </style:style>
   <style:style style:name="P18017" style:family="paragraph" style:parent-style-name="Heading_20_3">
    <style:paragraph-properties fo:break-before="page"/>
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="0cfaa01b"/>
@@ -4198,8 +4192,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="KRNUM">
-
-<text:h text:style-name="P18017" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc273792_2369005893"/>KRNUM – Define the Directional Saturation Table Region Numbers<text:bookmark-end text:name="__RefHeading___Toc273792_2369005893"/></text:h>
+    <text:h text:style-name="P18017" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc273792_2369005893"/>KRNUM – Define the Directional Saturation Table Region Numbers<text:bookmark-end text:name="__RefHeading___Toc273792_2369005893"/></text:h>
     <table:table table:name="Table1306" table:style-name="Table1306">
      <table:table-column table:style-name="Table1306.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table1306.E"/>
@@ -4234,7 +4227,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683882321133"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683882321133"/></text:h>
     <text:p text:style-name="_40_TextBody">The KRNUM keyword defines the direction dependent saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block face, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the relative permeability and capillary pressure in a grid block. <text:s/>The keyword should only be used if Directional Dependent Saturation Function option has been activated by the DIRECT parameter on the SATOPTS keyword in the RUNSPEC section. Otherwise the standard none directional relative permeability curves should be assigned by the SATNUM keyword in the REGIONS section.</text:p>
-    <text:p text:style-name="_40_TextBody">This keyword is not in the standard keyword format due to the cell face (X, X+, Y, Y+, Z, and Z+ for Cartesian grids and R, R+, T, <text:s/>T+ for radial grids) being concatenated to the keyword KRNUM to fully define the keyword. </text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is not in the standard keyword format due to the cell face (X, X+, Y, Y+, Z, and Z+ for Cartesian grids and R, R+, T, <text:s/>T+ for radial grids) being concatenated to the end of the keyword KRNUM to fully define the keyword. </text:p>
     <table:table table:name="Table1307" table:style-name="Table1307">
      <table:table-column table:style-name="Table1307.A"/>
      <table:table-column table:style-name="Table1307.B"/>
@@ -4290,9 +4283,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14753">Table <text:sequence text:ref-name="refTable427" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.10</text:sequence>: KRNUM Keyword Description</text:p>
-    <text:p text:style-name="P16894">If the Directional Dependent Saturation Function option has been activated by the DIRECT parameter on the SATOPTS keyword in the RUNSPEC section, <text:s/>then the KRNUMX, KRNUMY and KRNUMZ form of the keyword should be used. Secondly, if the Non-Reversible End-Point Scaling option is selected by the IRREVERS parameter on the SATOPTS keyword in the RUNSPEC section, then the non-reversible versions of the KRNUM should be used, that is KRNUMX, KRNUMX-, KRNUMY, KRNUMY-, KRNUMZ and KRNUMZ-. For reference, see <text:a xlink:type="simple" xlink:href="davs://blattms@storage.opm-op.com/remote.php/dav/files/blattms/opm-op/Projects/P20-07%20Equinor%20Maintenance/Reference%20Manual/2023-04%20Manual/Table%20201" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:sequence-ref text:reference-format="text" text:ref-name="refTable55">Table 5.40: SATOPTS Relative Permeability Function Allocation Keywords</text:sequence-ref></text:a>, that lists the various keywords that may be used with directional dependent relative permeability tables. </text:p>
-    <text:p text:style-name="P11792">Note, currently KRNUMX-, KRNUMY-, and KRNUMZ- are not supported.</text:p>
-    <text:p text:style-name="P11792"/>
+    <text:p text:style-name="_40_TextBody">If the Directional Dependent Saturation Function option has been activated by the DIRECT parameter on the SATOPTS keyword in the RUNSPEC section,<text:s/>then the KRNUMX, KRNUMY and KRNUMZ versions of the keyword should be used for cartesian grids. Secondly, if the Non-Reversible End-Point Scaling option has also been activated by the IRREVERS parameter on the SATOPTS keyword in the RUNSPEC section, then the non-reversible versions of the KRNUM should be used, that is KRNUMX, KRNUMX-, KRNUMY, KRNUMY-, KRNUMZ and KRNUMZ-. For reference, see <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3">Table 5.40</text:reference-ref>, that lists the various keywords that may be used with directional dependent relative permeability tables. </text:p>
+    <text:p text:style-name="P11792">Note, currently KRNUMX-, KRNUMY-, and KRNUMZ- are not supported by OPM Flow.</text:p>
+    <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18713" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716299_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716299_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The example below sets the directional saturation tables in all three directions using the EQUALS keyword.</text:p>
     <text:p text:style-name="P14357">--</text:p>
@@ -4303,7 +4296,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14043"><text:s text:c="9"/>KRNUMY <text:s text:c="5"/>2 <text:s text:c="11"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / SET Y-DIR TABLES <text:s text:c="5"/></text:p>
     <text:p text:style-name="P14043"><text:s text:c="9"/>KRNUMZ <text:s text:c="5"/>3 <text:s text:c="11"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / SET Z-DIR TABLES <text:s text:c="4"/></text:p>
     <text:p text:style-name="P12938">/</text:p>
-    
    </text:section>
   </office:text>
  </office:body>
