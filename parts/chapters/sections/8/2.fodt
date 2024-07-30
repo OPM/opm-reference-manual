@@ -3261,7 +3261,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Table593" style:family="table">
-   <style:table-properties style:width="15.468cm" table:align="right" fo:background-color="transparent" fo:keep-with-next="auto">
+   <style:table-properties style:width="15.468cm" table:align="right" fo:background-color="transparent" fo:keep-with-next="always">
     <style:background-image/>
    </style:table-properties>
   </style:style>
@@ -5472,9 +5472,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="P346" style:family="paragraph" style:parent-style-name="Table">
    <style:text-properties officeooo:paragraph-rsid="00a7f11b"/>
-  </style:style>
-  <style:style style:name="P347" style:family="paragraph" style:parent-style-name="Table">
-   <style:text-properties officeooo:paragraph-rsid="003af870"/>
   </style:style>
   <style:style style:name="P348" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:paragraph-rsid="18679ae8"/>
@@ -16267,7 +16264,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P88"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1858.B3" office:value-type="string">
-       <text:p text:style-name="P146">SKPRPOLY8</text:p>
+       <text:p text:style-name="P146">SKPRPOLY<text:span text:style-name="T176">8</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1858.C4" office:value-type="string">
        <text:p text:style-name="P88"/>
@@ -16287,7 +16284,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P88"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1858.B3" office:value-type="string">
-       <text:p text:style-name="P146">SKPRWAT8</text:p>
+       <text:p text:style-name="P146">SKPRWAT<text:span text:style-name="T176">8</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1858.C4" office:value-type="string">
        <text:p text:style-name="P88"/>
@@ -18479,16 +18476,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         <text:p text:style-name="P219"><text:span text:style-name="T118">Irreducible Water Saturation:</text:span><text:span text:style-name="T122"> </text:span><text:span text:style-name="T165">The fraction of the pore volume occupied by water in a reservoir at maximum hydrocarbon saturation. It represents water that has not been displaced by hydrocarbons because it is trapped by adhering to rock surfaces, trapped in small pore spaces and narrow interstices, etc. Irreducible water saturation is an equilibrium situation. It differs from residual water saturation, the value measured by core analysis, because of filtrate invasion and the gas expansion that occurs when a core is removed from the bottom of the hole to the surface. Also called immovable water</text:span><text:span text:style-name="T122"><text:note text:id="ftn31" text:note-class="footnote"><text:note-citation>31</text:note-citation><text:note-body>
             <text:p text:style-name="Footnote">https://wiki.seg.org/wiki/Dictionary:Irreducible_water_saturation</text:p></text:note-body></text:note></text:span><text:span text:style-name="T165">. <text:s/>Here the nomenclature for irreducible water saturation is S</text:span><text:span text:style-name="T205">wirr.</text:span></text:p>
         <text:p text:style-name="P220"/>
-        <text:p text:style-name="P217"><text:span text:style-name="T165">Critical Water Saturation:</text:span><text:span text:style-name="T122"> </text:span>D<text:span text:style-name="T122">efines the largest water saturation for which the water relative permeability is zero. <text:s/></text:span></text:p>
+        <text:p text:style-name="P217"><text:span text:style-name="T165">Critical Water Saturation:</text:span><text:span text:style-name="T122"> Defines the largest water saturation for which the water relative permeability is zero. <text:s/></text:span></text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P240"/>
     <text:p text:style-name="P270">In addition to the above <text:span text:style-name="T140">definitions, </text:span>the simulator uses the term SWL, which is lowest water saturation in a relative permeability table. <text:s/>Thus, SWL can represent either the connate water saturation or <text:span text:style-name="T140">the</text:span> <text:span text:style-name="T140">irreducible</text:span> water <text:span text:style-name="T140">saturation in the relative permeability tables and functions. </text:span></text:p>
-    <text:p text:style-name="P229">Secondly, the term irreducible water saturation is replaced by term critical water saturation in the relative permeability tables and function, as both terms are equivalent with regards to the mobility of the water phase. This terminology is also consistent with the critical values of the oil and gas phases, which are dependent on the displacing phase.</text:p>
+    <text:p text:style-name="P229">Secondly, the term irreducible water saturation is replaced by term critical water saturation (SWCR) in the relative permeability tables and function, as both terms are equivalent with regards to the mobility of the water phase. This terminology is also consistent with the critical values of the oil and gas phases, which are dependent on the displacing phase.</text:p>
     <text:p text:style-name="P230">Thirdly, it is not uncommon for SWL to be set equal to the critical water saturation; however, care should be taken in this instance if end-point scaling is being used to ensure that the cell scaled relative permeability curves are as one might expect. <text:s text:c="10"/></text:p>
-    <text:p text:style-name="P268">A typical oil-water relative permeability set of curves is shown in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure8">Figure 8.9</text:sequence-ref><text:s/>indicating the oil end-point data (KRO, KRORW and (1 – SOWCR)) and the water end-point data (KRWR, KRW. SWL and SWCR).</text:p>
+    <text:p text:style-name="P268">A typical set of oil-water relative permeability curves is shown in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure8">Figure 8.9</text:sequence-ref><text:s/>indicating the oil end-point data (KRO, KRORW and (1 – SOWCR)) and the water end-point data (KRWR, KRW. SWL and SWCR).</text:p>
     <text:p text:style-name="P269"/>
     <text:p text:style-name="_40_TextBody"><draw:frame draw:style-name="fr7" draw:name="Frame6" text:anchor-type="paragraph" svg:x="3.41cm" svg:y="0.254cm" svg:width="11.227cm" draw:z-index="50">
       <draw:text-box fo:min-height="9.093cm">
@@ -19538,7 +19535,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P53">SWL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table594.C2" office:value-type="string">
-       <text:p text:style-name="P53">Connate water saturation, that is the smallest water saturation in a water saturation function table.</text:p>
+       <text:p text:style-name="P53">Connate water saturation, that is the lowest water saturation in a water saturation function table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -19595,7 +19592,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P26">KRWR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table594.C9" office:value-type="string">
-       <text:p text:style-name="P53">Relative permeability of water at the residual oil saturation or the residual gas saturation in a gas-water run.</text:p>
+       <text:p text:style-name="P53">Relative permeability of water at the residual oil saturation (or at the residual gas saturation in a gas-water run).</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -19607,7 +19604,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P27">SWLPC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table594.C10" office:value-type="string">
-       <text:p text:style-name="P55">Capillary pressure connate water saturation, that is the smallest water saturation in a water saturation function table to be scaled independently from the SWL relative permeability end-point value.</text:p>
+       <text:p text:style-name="P55">Capillary pressure connate water saturation, that is the lowest water saturation in a water saturation function table to be scaled independently from the SWL relative permeability end-point value.</text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -20614,14 +20611,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
      <table:table-row>
-      <table:table-cell table:style-name="Table593.A2" table:number-rows-spanned="3" office:value-type="string">
+      <table:table-cell table:style-name="Table593.A2" table:number-rows-spanned="4" office:value-type="string">
        <text:p text:style-name="P49">Saturation</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table593.B2" office:value-type="string">
-       <text:p text:style-name="P49">SGCR</text:p>
+       <text:p text:style-name="P49">SOGCR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table593.C2" office:value-type="string">
-       <text:p text:style-name="P28">Critical gas saturation, that is the largest gas saturation for which the gas relative permeability is zero.</text:p>
+       <text:p text:style-name="P28">Critical oil-in-gas saturation, that is the largest oil saturation for which the oil relative permeability is zero in an oil-gas-connate-water system.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -20630,16 +20627,25 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P56">SGL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table593.C3" office:value-type="string">
-       <text:p text:style-name="P54">Connate gas saturation, that is the smallest gas saturation in a gas saturation function table.</text:p>
+       <text:p text:style-name="P54">Connate gas saturation, that is the lowest gas saturation in a gas saturation function table.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row>
+      <table:covered-table-cell table:style-name="Table593.A2"/>
+      <table:table-cell table:style-name="Table593.B3" office:value-type="string">
+       <text:p text:style-name="P56">SGCR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table593.C3" office:value-type="string">
+       <text:p text:style-name="P54">Critical gas saturation, that is the largest gas saturation for which the gas relative permeability is zero.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
       <table:covered-table-cell table:style-name="Table593.A2"/>
       <table:table-cell table:style-name="Table593.B4" office:value-type="string">
-       <text:p text:style-name="P49">SOGCR</text:p>
+       <text:p text:style-name="P49">SGU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table593.C4" office:value-type="string">
-       <text:p text:style-name="P28">Critical oil-in-gas saturation, that is the largest oil saturation for which the oil relative permeability is zero in an oil-gas-connate water system.</text:p>
+       <text:p text:style-name="P28">Maximum gas saturation in a gas saturation table. This is generally set equal to one minus the connate water saturation.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -20660,7 +20666,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P28">KRGR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table593.C6" office:value-type="string">
-       <text:p text:style-name="P28">Relative permeability of gas at the residual oil saturation or the critical water saturation in a gas-water run.</text:p>
+       <text:p text:style-name="P28">Relative permeability of gas at the residual oil saturation (or the critical water saturation in a gas-water run).</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -20685,8 +20691,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P347"><text:soft-page-break/><text:reference-mark-start text:name="REF_TABLE_GAS_OIL_RELATIVE__INITIONS_8_2"/><text:span text:style-name="T6">Table </text:span><text:span text:style-name="T6"><text:sequence text:ref-name="refTable6" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.7</text:sequence></text:span><text:reference-mark-end text:name="REF_TABLE_GAS_OIL_RELATIVE__INITIONS_8_2"/><text:span text:style-name="T6">: </text:span>Gas-Oil Relative Permeability End-Point Data Definitions</text:p>
-    <text:p text:style-name="_40_TextBody">Finally, for two phase gas-water systems, <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure10">Figure 8.11</text:sequence-ref><text:s/>illustrates a typical gas-water relative permeability set of curves indicating the gas end-point data (KRG, KRGR and (1 – SGWCR)) and the water end-point data (KRW, KRW, SWL and SWCR).</text:p>
+    <text:p text:style-name="Table"><text:reference-mark-start text:name="REF_TABLE_GAS_OIL_RELATIVE__INITIONS_8_2"/><text:span text:style-name="T6">Table </text:span><text:span text:style-name="T6"><text:sequence text:ref-name="refTable6" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.7</text:sequence></text:span><text:reference-mark-end text:name="REF_TABLE_GAS_OIL_RELATIVE__INITIONS_8_2"/><text:span text:style-name="T6">: </text:span>Gas-Oil Relative Permeability End-Point Data Definitions</text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/></text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>Finally, for two phase gas-water systems, <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure10">Figure 8.11</text:sequence-ref><text:s/>illustrates a typical set of gas-water relative permeability curves indicating the gas end-point data (KRG, KRGR and (1 – SGCR)) and the water end-point data (KRW, KRWR, SWL and SWCR).</text:p>
     <text:p text:style-name="Text_20_body"><draw:frame draw:style-name="fr7" draw:name="Frame32" text:anchor-type="paragraph" svg:x="3.374cm" svg:y="0.025cm" svg:width="11.485cm" draw:z-index="27">
       <draw:text-box fo:min-height="9.851cm">
        <text:p text:style-name="P109"><draw:frame draw:style-name="fr14" draw:name="Image28" text:anchor-type="as-char" svg:width="11.201cm" style:rel-width="100%" svg:height="9.606cm" style:rel-height="scale" draw:z-index="125"><draw:image draw:mime-type="image/png">
@@ -21722,7 +21729,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P65">SGL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2048.C2" office:value-type="string">
-       <text:p text:style-name="P53">Connate gas saturation, that is the smallest gas saturation in a water saturation function table.</text:p>
+       <text:p text:style-name="P53">Connate gas saturation, that is the lowest gas saturation in a gas saturation function table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -21731,13 +21738,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P67">SGU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2048.C2" office:value-type="string">
-       <text:p text:style-name="P66">Maximum gas <text:span text:style-name="T111">saturation</text:span> in a gas <text:span text:style-name="T111">saturation</text:span> table.</text:p>
+       <text:p text:style-name="P66">Maximum gas saturation in a gas saturation table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
       <table:covered-table-cell table:style-name="Table2048.A2"/>
       <table:table-cell table:style-name="Table2048.B2" office:value-type="string">
-       <text:p text:style-name="P51">SGWCR</text:p>
+       <text:p text:style-name="P51">SGCR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2048.C2" office:value-type="string">
        <text:p text:style-name="P29">Critical gas-in-water saturation, that is the largest gas saturation for which the gas relative permeability is zero in a gas-water system.</text:p>
@@ -21749,7 +21756,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P53">SWL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2048.C2" office:value-type="string">
-       <text:p text:style-name="P53">Connate water saturation, that is the smallest water saturation in a water saturation function table.</text:p>
+       <text:p text:style-name="P53">Connate water saturation, that is the lowest water saturation in a water saturation function table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -21772,8 +21779,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row>
       <table:table-cell table:style-name="Table2048.A2" table:number-rows-spanned="3" office:value-type="string">
-       <text:p text:style-name="P29">Relative</text:p>
-       <text:p text:style-name="P29">Permeability</text:p>
+       <text:p text:style-name="P29">Relative Permeability</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2048.B8" office:value-type="string">
        <text:p text:style-name="P29">KRG</text:p>
@@ -21788,19 +21794,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P29">KRGR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2048.C9" office:value-type="string">
-       <text:p text:style-name="P29">Relative permeability of gas at the residual oil saturation or the critical water saturation in a gas-water run.</text:p>
+       <text:p text:style-name="P29">Relative permeability of gas at the critical water saturation (or the residual oil saturation in a gas-oil run).</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
       <table:covered-table-cell table:style-name="Table2048.A2"/>
-      <table:table-cell table:style-name="Table2048.B10" office:value-type="string">
-       <text:p text:style-name="P26">KRWR</text:p>
+      <table:table-cell table:style-name="Table2048.B9" office:value-type="string">
+       <text:p text:style-name="P29">KRWR</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2048.C10" office:value-type="string">
-       <text:p text:style-name="P53">Relative permeability of water at the residual oil saturation or the residual gas saturation in a gas-water run.</text:p>
+      <table:table-cell table:style-name="Table2048.C9" office:value-type="string">
+       <text:p text:style-name="P29">Relative permeability of water at the residual gas saturation (or the residual oil saturation in a oil-water run).</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table2048.11">
+     <table:table-row>
       <table:table-cell table:style-name="Table2048.A2" office:value-type="string">
        <text:p text:style-name="P191">Capillary</text:p>
        <text:p text:style-name="P191">Pressure</text:p>
