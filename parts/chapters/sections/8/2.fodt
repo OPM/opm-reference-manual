@@ -22086,8 +22086,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table160.D3" office:value-type="string">
        <text:p text:style-name="P59"/>
       </table:table-cell>
-      <table:table-cell table:style-name="Table160.G4" table:number-columns-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table160.G4" office:value-type="string">
        <text:p text:style-name="P60">Pcgw</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table160.D3" office:value-type="string">
+       <text:p text:style-name="P59"/>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -22219,7 +22222,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P63">Table <text:sequence text:ref-name="refTable8" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.9</text:sequence>: Saturation Table Formats and Phases</text:p>
-    <text:p text:style-name="P371"><text:soft-page-break/>Note that only format type can be used in a run, that is one must either use format type one relative permeability keywords to define the required saturation functions, or format two. <text:s/>One cannot combine the <text:s/>keywords from the different format types in the same input deck.</text:p>
+    <text:p text:style-name="P371"><text:soft-page-break/>Note that only one format type can be used in each run to define the required saturation functions, that is one cannot combine the keywords from the different format types in the same input deck.</text:p>
     <text:p text:style-name="P280"><text:span text:style-name="T6"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure11">Figure 8.12</text:sequence-ref></text:span><text:span text:style-name="T6"><text:s/></text:span>shows an unscaled oil-water relative permeability curve from the Volve model, and <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure12">Figure 8.13</text:sequence-ref><text:s/>displays the corresponding scaled relative permeability curves after applying the end-point scaling parameters. Similarly for the gas-oil curves, <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure13">Figure 8.14</text:sequence-ref><text:s/>illustrates the unscaled curves and <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure14">Figure 8.15</text:sequence-ref><text:s/>the scaled curves. The plots indicate that the end-point scaling has been applied correctly.</text:p>
     <table:table table:name="Table2041" table:style-name="Table2041">
      <table:table-column table:style-name="Table2041.A"/>
@@ -26460,7 +26463,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </draw:frame>Figure <text:sequence text:ref-name="refFigure17" text:name="Figure" text:formula="ooow:Figure+1" style:num-format="1">8.18</text:sequence>: : Oil-Water Corey Example (no=3.0, nw=4.0)</text:p>
       </draw:text-box>
      </draw:frame><text:soft-page-break/>As can be seen in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure15">Figure 8.16</text:sequence-ref><text:s/>to <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure17">Figure 8.18</text:sequence-ref>, the Corey exponents less than one result in a concave curve, and values great than one result in a convex curve, where as a value of one gives a <text:span text:style-name="T140">straight</text:span> line.</text:p>
-    <text:p text:style-name="_40_TextBody">Unfortunately, neither OPM Flow nor the commercial simulator, unlike some other simulators, support the direct entry of Corey type curves, and thus Corey curves have to generated outside of the simulator. <text:s/>Fortunately, <text:s/>OPM Flow does support the more advance and flexible LET family of models instead, which are described in the next section.</text:p>
+    <text:p text:style-name="_40_TextBody">Unfortunately, neither OPM Flow nor the commercial simulator, unlike some other simulators, support the direct entry of Corey type curves, and thus Corey curves have to be generated outside of the simulator. <text:s/>Fortunately, OPM Flow does support the more advanced and flexible LET family of models instead, which are described in the next section.</text:p>
     <text:h text:style-name="P352" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc537526_38555213"/>Saturation Table Generation - LET Functions<text:bookmark-end text:name="__RefHeading___Toc537526_38555213"/></text:h>
     <text:p text:style-name="P289">OPM Flow has implemented the LET family of <text:span text:style-name="T122">saturation functions, </text:span>models<text:span text:style-name="T122">, based on the work</text:span> <text:span text:style-name="T122">of</text:span> Lomeland et al<text:span text:style-name="T122">.</text:span><text:span text:style-name="_40_Footnote_5f_Number_5f_In_5f_Text">l</text:span><text:span text:style-name="_40_Footnote_5f_Number_5f_In_5f_Text"><text:note text:id="ftn36" text:note-class="footnote"><text:note-citation>36</text:note-citation><text:note-body>
          <text:p text:style-name="Footnote">Lomeland F., Ebeltoft E. and Thomas W.H., 2005. A New Versatile Relative Permeability Correlation. Paper SCA2005-32 presented at the International Symposium of the Society of Core Analysts held in Toronto, Canada, 21-25 August, 2005.</text:p></text:note-body></text:note></text:span><text:span text:style-name="_40_Footnote_5f_Number_5f_In_5f_Text">,</text:span><text:span text:style-name="_40_Footnote_5f_Number_5f_In_5f_Text"><text:note text:id="ftn37" text:note-class="footnote"><text:note-citation>37</text:note-citation><text:note-body>
