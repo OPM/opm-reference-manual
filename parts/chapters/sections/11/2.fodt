@@ -8613,6 +8613,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T107" style:family="text">
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold"/>
   </style:style>
+  <style:style style:name="T108" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
   <style:style style:name="T182" style:family="text">
    <style:text-properties fo:font-size="8pt" style:font-size-asian="8pt" style:font-size-complex="8pt"/>
   </style:style>
@@ -10032,7 +10035,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P326">To generate a summary vector, the appropriate keyword must be entered in the SUMMARY section of the input data file; only variables explicitly requested will be written to the SUMMARY files. Normally the data is written to the summary file at the end of each successful time step, but as mentioned previously, this can be changed by the <text:a xlink:type="simple" xlink:href="#10.2.4.RPTONLY - Activate the Report Time Steps Only Option for the SUMMARY File|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc210150_2884651453">Error: Reference source not found</text:bookmark-ref></text:a><text:s/>keyword to write out the data only at report time steps, thus reducing the overall size of the SUMMARY files. </text:p>
     <text:p text:style-name="P358">The following sections describe the summary variable mnemonic syntax which defines the type of summary variable object (Aquifer, Field, Group, Well, etc.), the variable format for a given variable object, and the variable names for the various variable objects.</text:p>
     <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311668_2754225602"/>Summary Variable Mnemonic Syntax<text:bookmark-end text:name="__RefHeading___Toc311668_2754225602"/></text:h>
-    <text:p text:style-name="P311">As mentioned earlier, there are literally hundreds of variables that can be written to the SUMMARY file, which can make the process of requesting the data rather complex. Fortunately in most cases, but not always, the variable names follow a four or five letter syntax that defines the variable mnemonic used to describe the data to be written out. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 11.2.1</text:sequence-ref><text:s/>outlines the general syntax employed in deriving the variable mnemonic. </text:p>
+    <text:p text:style-name="P311">As mentioned earlier, there are literally hundreds of variables that can be written to the SUMMARY file, which can make the process of requesting the data rather complex. Fortunately in most cases, but not always, the variable names follow a four or five letter syntax that defines the variable mnemonic used to describe the data to be written out. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 11.2.1</text:sequence-ref><text:s/>outlines the general syntax employed in deriving the variable mnemonic for some of the more commonly used summary variables. </text:p>
     <text:p text:style-name="P311"/>
     <table:table table:name="Table1790" table:style-name="Table1790">
      <table:table-column table:style-name="Table1790.A"/>
@@ -10124,7 +10127,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table1790.A3"/>
       <table:covered-table-cell table:style-name="Table1790.B3"/>
       <table:table-cell table:style-name="Table1790.C4" office:value-type="string">
-       <text:p text:style-name="P299">L1</text:p>
+       <text:p text:style-name="P299">L<text:span text:style-name="T108">1</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1790.D3" office:value-type="string">
        <text:p text:style-name="P315">Analytical Aquifer List</text:p>
@@ -10341,7 +10344,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P225">Well Connection</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1790.C12" office:value-type="string">
-       <text:p text:style-name="P312">P2</text:p>
+       <text:p text:style-name="P312">P<text:span text:style-name="T108">2</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1790.D12" office:value-type="string">
        <text:p text:style-name="P312">Pressure</text:p>
@@ -10382,7 +10385,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P449">Analytical Aquifer Lists are currently not supported by OPM Flow; however the standard analytical and numerical aquifer vectors are supported to a varying degree.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P449">For Field and Region pressures the mnemonic is PR, that is FPR for the field reservoir pressure and RPR for region average pressure. Secondly, <text:s/>a well’s bottom-hole pressure is WBHP and the tubing head pressure is WTHP.</text:p>
+         <text:p text:style-name="P449">For Field and Region pressures the mnemonic is PR, that is FPR for the field reservoir pressure and RPR for region average pressure. Whereas,<text:s/>a well’s bottom-hole pressure is WBHP and its tubing head pressure is WTHP.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -10471,7 +10474,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable1" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.2</text:sequence>: Summary Variable Mnemonics Examples</text:p>
     <text:p text:style-name="P374"/>
-    <text:p text:style-name="P267">And <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable2">Table 11.2.3</text:sequence-ref><text:s/>shows some examples that do not follow the general syntax. <text:s/>Where applicable, each of these keywords would also have a history equivalent mnemonics available in history matching runs, that is: FPRH, FWCTH, WBHPH, <text:s/>WTHPH, <text:s/>WWCTH, etc.</text:p>
+    <text:p text:style-name="P267">And <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable2">Table 11.2.3</text:sequence-ref><text:s/>shows some examples that do not follow the general syntax. <text:s/>Where applicable, each of these keywords would also have an equivalent mnemonic for historical input data available in history matching runs, that is: FWCTH, <text:s/>WBHPH, <text:s/>WTHPH, <text:s/>WWCTH, <text:s/>etc.</text:p>
     <text:p text:style-name="P310"/>
     <table:table table:name="Table1791" table:style-name="Table1791">
      <table:table-column table:style-name="Table1791.A"/>
@@ -10480,7 +10483,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row>
        <table:table-cell table:style-name="Table1791.A1" table:number-columns-spanned="2" office:value-type="string">
         <text:p text:style-name="P221">Summary Variable Mnemonics Examples</text:p>
-        <text:p text:style-name="P227">Not Following the General </text:p>
+        <text:p text:style-name="P227">Not Following the General Syntax</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
       </table:table-row>
@@ -10569,7 +10572,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P389">Table <text:sequence text:ref-name="refTable2" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.3</text:sequence>: Summary Variable Mnemonics Examples Not Following the General Syntax</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311670_2754225602"/>Summary Variable Format<text:bookmark-end text:name="__RefHeading___Toc311670_2754225602"/></text:h>
-    <text:p text:style-name="P269">In addition to the general mnemonic syntax, each object type (Field, Group, Region, Well etc.) has additional syntax governing what specific object (group, well, etc.) should be written out to the SUMMARY file as explained in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 11.2.4</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P269">In addition to the general mnemonic syntax, each object type (Field, Group, Region, Well etc.) has additional syntax governing which specific object (group, well, etc.) should be written out to the SUMMARY file as explained in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 11.2.4</text:sequence-ref>.</text:p>
     <text:p text:style-name="P373"/>
     <table:table table:name="Table1793" table:style-name="Table1793">
      <table:table-column table:style-name="Table1793.A"/>
@@ -10613,7 +10616,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P235">or just for numerical aquifers one, two and three:</text:p>
        <text:p text:style-name="_40_Example">ANQR</text:p>
        <text:p text:style-name="_40_Example">1 <text:s/>2 <text:s/>3 /</text:p>
-       <text:p text:style-name="_40_Example">ANQR</text:p>
+       <text:p text:style-name="_40_Example">ANQT</text:p>
        <text:p text:style-name="_40_Example">1 <text:s/>2 <text:s/>3 /</text:p>
        <text:p text:style-name="P244"/>
       </table:table-cell>
@@ -10621,14 +10624,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-row table:style-name="Table1793.4">
       <table:covered-table-cell table:style-name="Table1793.A2"/>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
-       <text:p text:style-name="P295">Analytical aquifers that have been allocated to an analytical aquifer list via the AQUALIST keyword in the SOLUTION section are identified by the first two characters AL in the variable mnemonic.</text:p>
-       <text:p text:style-name="P295">Aquifer variables for a given aquifer list can be followed by a list of aquifer names and therefore a terminating <text:s/>“/” is required to end the list of aquifers. <text:s/>A blank list requests output for all the aquifers. </text:p>
+       <text:p text:style-name="P295">Analytical aquifer lists defined via the AQUALIST keyword in the SOLUTION section are identified by the first two characters AL in the variable mnemonic.</text:p>
+       <text:p text:style-name="P295">Aquifer variables for aquifer lists can be followed by any number of aquifer list names and therefore a terminating <text:s/>“/” is required to end the list of aquifers. <text:s/>A blank list requests output for all the aquifers. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="P295">For instance to obtain the aquifer influx rate and cumulative influx for all two analytical aquifers list, EAST and WEST in the model, one would use:</text:p>
-       <text:p text:style-name="P298">AAQR</text:p>
+       <text:p text:style-name="P295">For instance to obtain the total aquifer influx rate and cumulative influx for all analytical aquifers in aquifer lists EAST and WEST, one would use:</text:p>
+       <text:p text:style-name="P298">ALQR</text:p>
        <text:p text:style-name="P275">‘EAST’ ‘WEST’/</text:p>
-       <text:p text:style-name="P298">AAQT</text:p>
+       <text:p text:style-name="P298">ALQT</text:p>
        <text:p text:style-name="P296">‘EAST’ ‘WEST’/</text:p>
        <text:p text:style-name="P245"/>
        <text:p text:style-name="P245">Note OPM Flow does not currently support Analytical Aquifer Lists.</text:p>
@@ -10640,7 +10643,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P281">(Grid Cells)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
-       <text:p text:style-name="P279">Block variables are followed by a list of cell (I, J, K) indices, with each line terminated by a <text:s/>“/”., <text:s/>and the list terminated with another terminating <text:s/>“/”. </text:p>
+       <text:p text:style-name="P279">Block variables are followed by a list of cell (I, J, K) indices, with each line terminated by a <text:s/>“/”, <text:s/>and the list terminated with another terminating <text:s/>“/”. </text:p>
        <text:p text:style-name="P243"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10664,7 +10667,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P277">FOPR</text:p>
        <text:p text:style-name="P270">FOPT</text:p>
        <text:p text:style-name="P270">FPR</text:p>
-       <text:p text:style-name="P249">Would export the field oil rate and total, <text:s/>plus the field average reservoir pressure to the SUMMARY file.</text:p>
+       <text:p text:style-name="P249">Would export the field oil production rate and total, <text:s/>plus the field average reservoir pressure to the SUMMARY file.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1793.1">
@@ -10698,7 +10701,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P276">Region variables for a given region can be followed by a list of region numbers and therefore a terminating <text:s/>“/” is required to end the list of regions. <text:s/>A blank list requests output for all the regions. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="P271">For instance to obtain the reservoir pressures and oil totals for all regions:</text:p>
+       <text:p text:style-name="P271">For instance to obtain the reservoir pressures and oil production totals for all regions:</text:p>
        <text:p text:style-name="P272">RPR</text:p>
        <text:p text:style-name="P272">/</text:p>
        <text:p text:style-name="P294">ROPT</text:p>
@@ -10713,10 +10716,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-row table:style-name="Table1793.1">
       <table:covered-table-cell table:style-name="Table1793.A2"/>
       <table:table-cell table:style-name="Table1793.B8" office:value-type="string">
-       <text:p text:style-name="P278">Region variables that are based on flows between regions must be followed by a list of region pair numbers, indicating the two regions. Each region pair is terminated by a <text:s text:c="2"/>“/”. In addition the variable mnemonic should also be terminated by a terminating <text:s/>“/”. </text:p>
+       <text:p text:style-name="P278">Region variables that are based on flows between two regions must be followed by a list of region number pairs, indicating the two regions. Each region pair is terminated by a <text:s text:c="2"/>“/”. In addition the variable mnemonic should also be terminated by a terminating <text:s/>“/”. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="P292">To obtain the oil and water flow between regions one and two, and also three and four, one would use:</text:p>
+       <text:p text:style-name="P292">To obtain the oil and water flow total (or cumulative) between regions one and two, and also three and four, one would use:</text:p>
        <text:p text:style-name="P273">ROFT</text:p>
        <text:p text:style-name="P284">1 <text:s/>2 <text:s/>/</text:p>
        <text:p text:style-name="P282">3 <text:s/>4 <text:s/>/</text:p>
@@ -10744,7 +10747,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P179">To output the oil production rate for all wells, one may use:</text:p>
        <text:p text:style-name="P180">WOPR</text:p>
        <text:p text:style-name="P180">/</text:p>
-       <text:p text:style-name="P179">This would also write out the oil production rate for all well types: producers and injectors, as well as wells declared as gas and water wells.</text:p>
+       <text:p text:style-name="P179">Note, this would write out the oil production rate for all well types: producers and injectors, as well as wells declared as gas and water wells.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1793.1">
@@ -10754,20 +10757,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P303">Well variables for well completion vectors<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
-           <text:p text:style-name="Footnote">The term well connection is used to describe individual connections from the wellbore to the reservoir grid, as opposed to well completions. A well completion is used to describe a set of connections, for example, a well may consist of several completions with each completion consisting of multiple connections. </text:p></text:note-body></text:note>, generally consist of the well mnemonic name suffixed with the letter &quot;L&quot;, for example WOPRL, for the completion oil production rate.</text:p>
+           <text:p text:style-name="Footnote">The term well connection is used to describe individual connections from the wellbore to the reservoir grid, as opposed to well completions. A well completion is used to describe a set of connections, for example, a well may consist of several completions with each completion consisting of multiple connections. </text:p></text:note-body></text:note> generally consist of the well summary mnemonic name suffixed with the letter &quot;L&quot;, for example WOPRL, for the completion oil production rate.</text:p>
        <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the completion number, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
        <text:p text:style-name="P303">A blank list for the completions results in all completions for a well being written out. <text:s/>And a blank list for the well will result in all well completions being written to the SUMMARY file.</text:p>
        <text:p text:style-name="P242">Care should be exercised when defaulting the list of wells and completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="P303">For example, to get the completion oil production rates for well OP01 completions two, three, and four, and for completion two for OP02 one would use:</text:p>
+       <text:p text:style-name="P303">For example, to get the completion oil production rates for well OP01 completions two, three, and four, and for completion two for well OP02 one would use:</text:p>
        <text:p text:style-name="P304">WOPRL</text:p>
        <text:p text:style-name="P304">‘OP01’ 2 /</text:p>
        <text:p text:style-name="P304">‘OP01’ 3 /</text:p>
        <text:p text:style-name="P304">‘OP01’ 4 /</text:p>
        <text:p text:style-name="P304">‘OP02’ 2 /</text:p>
        <text:p text:style-name="P304">/</text:p>
-       <text:p text:style-name="P241">or to get all the oil production rates for all the completions for well OP01:</text:p>
+       <text:p text:style-name="P241">or to get the oil production rates for each of the completions for well OP01:</text:p>
        <text:p text:style-name="P306">WORPL</text:p>
        <text:p text:style-name="P304">‘OP01’ /</text:p>
        <text:p text:style-name="P288">/</text:p>
@@ -10780,12 +10783,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P285">CONNECTIONS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
-       <text:p text:style-name="P289">Connection variables are followed by a list of well names in quotes and completion I, J, K indices, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
+       <text:p text:style-name="P289">Connection variables are followed by a list of well names in quotes and connection I, J, K indices, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
        <text:p text:style-name="P303">A blank list for the connections results in all connections for a well being written out. <text:s/>And a blank list for the well will result in all well connections being written to the SUMMARY file.</text:p>
        <text:p text:style-name="P242">Again, care should be exercised when defaulting the list of wells and connections as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="P285">To request the gas-oil ratio and water cut for the OP01 and OP02 wells for several connections, one would use:</text:p>
+       <text:p text:style-name="P285">To request the connection gas-oil ratio and water cut for wells OP01 and OP02 for several connections, one would use:</text:p>
        <text:p text:style-name="P286">CGOR</text:p>
        <text:p text:style-name="P286">OP01 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
        <text:p text:style-name="P286">OP01 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
@@ -10808,12 +10811,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P305">This type of data is the same as for the Well Completion data, except the Well Connection series of mnemonics are used instead of the well mnemonics.</text:p>
        <text:p text:style-name="P305">Here the connection vectors consist of the connection mnemonic name suffixed with the letter &quot;L&quot;, for example COPRL, for the completion oil production rate. </text:p>
-       <text:p text:style-name="P303">The connection mnemonic is then followed by a list of well names enclosed in quotes and the connection number, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the COMPLUMP keyword in the SCHEDULE section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
+       <text:p text:style-name="P303">The connection mnemonic is then followed by a list of well names enclosed in quotes and the connection I, J, K indices, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the COMPLUMP keyword in the SCHEDULE section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
        <text:p text:style-name="P307">A blank list for the completions results in all completions for a well being written out. <text:s/>However, the well name cannot be defaulted, unlike the other well and connection <text:s/>mnemonics.</text:p>
        <text:p text:style-name="P242">Care should be exercised when defaulting the list of wells and completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="P287">To request the gas-oil ratio and water cut for the OP01 and OP02 wells for several connections that have lumped together in a completion, one would use:</text:p>
+       <text:p text:style-name="P287">To request the gas-oil ratio and water cut for wells OP01 and OP02 for several completions identified by connections that have been lumped into those completions, one would use:</text:p>
        <text:p text:style-name="P288">CGORL</text:p>
        <text:p text:style-name="P288">OP01 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
        <text:p text:style-name="P288">OP01 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
@@ -10838,14 +10841,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P239">Care should be exercised when defaulting the list of wells and segments as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">For example, to get the segment oil production rates for well OP01 segments two, three, and four and for segment two for OP02 one would use:</text:p>
+       <text:p text:style-name="Table_20_Contents">For example, to get the segment oil flow rates for well OP01 segments two, three, and four and for segment two for well OP02 one would use:</text:p>
        <text:p text:style-name="P280">SOFR</text:p>
        <text:p text:style-name="P237">‘OP01’ 2 /</text:p>
        <text:p text:style-name="P237">‘OP01’ 3 /</text:p>
        <text:p text:style-name="P237">‘OP01’ 4 /</text:p>
        <text:p text:style-name="P237">‘OP02’ 2 /</text:p>
        <text:p text:style-name="P237">/</text:p>
-       <text:p text:style-name="P238">or to get all the oil production rates for all the segments for well OP01:</text:p>
+       <text:p text:style-name="P238">or to get all the segment oil flow rates for all the segments for well OP01:</text:p>
        <text:p text:style-name="P240">SOFR</text:p>
        <text:p text:style-name="P280">‘OP01’ /</text:p>
        <text:p text:style-name="P280">/</text:p>
