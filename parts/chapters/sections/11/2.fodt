@@ -28983,8 +28983,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P348">This feature has not been implemented in OPM Flow.</text:p>
     <text:p text:style-name="P348"/>
     <text:h text:style-name="P350" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311712_2754225602"/>Option Specific Variables – Solvent Model<text:bookmark-end text:name="__RefHeading___Toc311712_2754225602"/></text:h>
-    <text:p text:style-name="P348">The SOLVENT keyword in the RUNSPEC section activates the solvent phase in the model and activates the four component solvent model for the run. In addition to this keyword, the oil, water and gases phases should also be declared for the run using the OIL, WATER and GAS keywords. The summary variables for this option are outlined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable19">Table 11.2.21</text:sequence-ref>.</text:p>
-    <text:p text:style-name="P322">Note that not all these variables are available in OPM Flow; however, the simulator will issue a warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
+    <text:p text:style-name="P348">The SOLVENT keyword in the RUNSPEC section activates the solvent phase in the model and activates the four component solvent model for the run. In addition to this keyword, the oil, water and gas phases should also be declared for the run using the OIL, WATER and GAS keywords. The summary variables for this option are outlined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable19">Table 11.2.21</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P322">Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <table:table table:name="Table1810" table:style-name="Table1810">
      <table:table-column table:style-name="Table1810.A"/>
      <table:table-column table:style-name="Table1810.B"/>
@@ -29352,7 +29352,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P329"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311716_2754225602"/>Option Specific Variables – Thermal Model<text:bookmark-end text:name="__RefHeading___Toc311716_2754225602"/></text:h>
     <text:p text:style-name="P356">The temperature option (TEMP keyword in the RUNSPEC section) and the thermal option (THERMAL keyword in the RUNSPEC section) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options. <text:s/>OPM Flow’s thermal implementation is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil TEMP or compositional THERMAL formulations. The THERMAL keyword is used to invoke OPM Flow’s thermal option. The summary variables for this option are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable20">Table 11.2.22</text:sequence-ref>.</text:p>
-    <text:p text:style-name="P360">Note that not all these variables are available in OPM Flow; however, the simulator will issue a warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
+    <text:p text:style-name="P360">Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <table:table table:name="Table1812" table:style-name="Table1812">
      <table:table-column table:style-name="Table1812.A"/>
      <table:table-column table:style-name="Table1812.B"/>
@@ -29658,7 +29658,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P81"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1812.G3" office:value-type="string">
-       <text:p text:style-name="P82">RTIPTHEA4 </text:p>
+       <text:p text:style-name="P82">RTIPTHEA<text:span text:style-name="T108">4</text:span> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1812.G3" office:value-type="string">
        <text:p text:style-name="P82">BTIPTHEA </text:p>
@@ -29700,8 +29700,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="P383">See the THERMAL keyword in the RUNSPEC section for additional information on this feature.</text:p>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311718_2754225602"/>Option Specific Variables – User Define Quantities<text:bookmark-end text:name="__RefHeading___Toc311718_2754225602"/></text:h>
-    <text:p text:style-name="P351">The UDQ keyword in the SCHEDULE section defines variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, summary variables, as defined in the SUMMARY section, <text:s/>or a formula using various mathematical functions together with constants and summary variables. <text:s/></text:p>
-    <text:p text:style-name="P324">The variable names defined by the UDQ keyword in the SCHEDULE section consist of a character string of length eight, that stipulates the name of the user defined variable based on the type of variable. The variable type is defined by the first two characters of the variable name and must be set to one of the following:</text:p>
+    <text:p text:style-name="P351">The UDQ keyword in the SCHEDULE section defines variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, summary variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and summary variables. <text:s/></text:p>
+    <text:p text:style-name="P324">The variable names defined by the UDQ keyword in the SCHEDULE section consist of a character string of up to eight characters in length, which stipulates the name of the user defined variable based on the type of variable. The variable type is defined by the first two characters of the variable name and must be set to one of the following:</text:p>
     <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
@@ -29817,10 +29817,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P210">Notes:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P401">Where XXXXXX is the variable name defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="P401">Where FUXXXXXX, GUXXXXXX, and so forth are the variable names defined by the UDQ keyword in the SCHEDULE section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P402">O<text:span text:style-name="T70">utput of aquifer (AU) and block (BU) summary variables is not supported.</text:span></text:p>
+         <text:p text:style-name="P402"><text:span text:style-name="T70">Output of aquifer (AU) and block (BU) summary variables is not supported.</text:span></text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
