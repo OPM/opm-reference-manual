@@ -10790,15 +10790,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
        <text:p text:style-name="P285">To request the connection gas-oil ratio and water cut for wells OP01 and OP02 for several connections, one would use:</text:p>
        <text:p text:style-name="P286">CGOR</text:p>
-       <text:p text:style-name="P286">OP01 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
-       <text:p text:style-name="P286">OP01 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
-       <text:p text:style-name="P290">OP02 <text:s/>10 10 1 <text:s/>/</text:p>
+       <text:p text:style-name="P286">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
+       <text:p text:style-name="P286">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
+       <text:p text:style-name="P290">‘OP02’ <text:s/>10 10 1 <text:s/>/</text:p>
        <text:p text:style-name="P290">/</text:p>
        <text:p text:style-name="P290"/>
        <text:p text:style-name="P286">CWCT</text:p>
-       <text:p text:style-name="P286">OP01 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
-       <text:p text:style-name="P286">OP01 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
-       <text:p text:style-name="P290">OP02 <text:s/>10 10 1 <text:s/>/</text:p>
+       <text:p text:style-name="P286">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
+       <text:p text:style-name="P286">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
+       <text:p text:style-name="P290">‘OP02’ <text:s/>10 10 1 <text:s/>/</text:p>
        <text:p text:style-name="P286">/</text:p>
       </table:table-cell>
      </table:table-row>
@@ -10810,23 +10810,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P305">This type of data is the same as for the Well Completion data, except the Well Connection series of mnemonics are used instead of the well mnemonics.</text:p>
-       <text:p text:style-name="P305">Here the connection vectors consist of the connection mnemonic name suffixed with the letter &quot;L&quot;, for example COPRL, for the completion oil production rate. </text:p>
-       <text:p text:style-name="P303">The connection mnemonic is then followed by a list of well names enclosed in quotes and the connection I, J, K indices, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the COMPLUMP keyword in the SCHEDULE section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
+       <text:p text:style-name="P305">Here the completion vectors consist of the connection mnemonic name suffixed with the letter &quot;L&quot;, for example COPRL, for the completion oil production rate. </text:p>
+       <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the connection I, J, K indices, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the COMPLUMP keyword in the SCHEDULE section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
        <text:p text:style-name="P307">A blank list for the completions results in all completions for a well being written out. <text:s/>However, the well name cannot be defaulted, unlike the other well and connection <text:s/>mnemonics.</text:p>
        <text:p text:style-name="P242">Care should be exercised when defaulting the list of wells and completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
        <text:p text:style-name="P287">To request the gas-oil ratio and water cut for wells OP01 and OP02 for several completions identified by connections that have been lumped into those completions, one would use:</text:p>
        <text:p text:style-name="P288">CGORL</text:p>
-       <text:p text:style-name="P288">OP01 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
-       <text:p text:style-name="P288">OP01 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
-       <text:p text:style-name="P304">OP02 <text:s/>10 10 1 <text:s/>/</text:p>
+       <text:p text:style-name="P288">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
+       <text:p text:style-name="P288">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
+       <text:p text:style-name="P304">‘OP02’ <text:s/>10 10 1 <text:s/>/</text:p>
        <text:p text:style-name="P304">/</text:p>
        <text:p text:style-name="P304"/>
        <text:p text:style-name="P288">CWCTL</text:p>
-       <text:p text:style-name="P288">OP01 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
-       <text:p text:style-name="P288">OP01 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
-       <text:p text:style-name="P304">OP02 <text:s/>10 10 1 <text:s/>/</text:p>
+       <text:p text:style-name="P288">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>/</text:p>
+       <text:p text:style-name="P288">‘OP01’ <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>/</text:p>
+       <text:p text:style-name="P304">‘OP02’ <text:s/>10 10 1 <text:s/>/</text:p>
        <text:p text:style-name="P288">/</text:p>
       </table:table-cell>
      </table:table-row>
@@ -10859,7 +10859,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P374"/>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311672_2754225602"/>Aquifer Variables<text:bookmark-end text:name="__RefHeading___Toc311672_2754225602"/></text:h>
-    <text:p text:style-name="P376"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable4">Table 11.2.5</text:sequence-ref><text:s/>outlines the aquifer summary variables based on the type of aquifer: analytical, analytical list and numerical. Note that the analytical list aquifer type is just an analytical aquifer “set” defined using the AQULIST keyword in the SOLUTION section, that assigns an analytic aquifer name to a set of aquifer numbers for greater readability in the output. <text:s/>This type of aquifer is not supported by OPM Flow and neither are numerical aquifers.</text:p>
+    <text:p text:style-name="P376"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable4">Table 11.2.5</text:sequence-ref><text:s/>outlines the aquifer summary variables based on the type of aquifer: analytical, analytical list and numerical. Note that the analytical list aquifer type is just an analytical aquifer “set” defined using the AQULIST keyword in the SOLUTION section, that assigns an analytic aquifer list name to a set of aquifer numbers for greater readability in the output. <text:s/>This type of aquifer is not supported by OPM Flow and neither are numerical aquifers.</text:p>
     <text:p text:style-name="P376"/>
     <table:table table:name="Table1796" table:style-name="Table1796">
      <table:table-column table:style-name="Table1796.A"/>
