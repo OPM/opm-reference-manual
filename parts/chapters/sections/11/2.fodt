@@ -10813,7 +10813,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P305">Here the completion vectors consist of the connection mnemonic name suffixed with the letter &quot;L&quot;, for example COPRL, for the completion oil production rate. </text:p>
        <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the connection I, J, K indices, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the COMPLUMP keyword in the SCHEDULE section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
        <text:p text:style-name="P307">A blank list for the completions results in all completions for a well being written out. <text:s/>However, the well name cannot be defaulted, unlike the other well and connection <text:s/>mnemonics.</text:p>
-       <text:p text:style-name="P242">Care should be exercised when defaulting the list of wells and completions as there is the potential to generate large volumes of data.</text:p>
+       <text:p text:style-name="P242">Care should be exercised when defaulting the list of completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
        <text:p text:style-name="P287">To request the gas-oil ratio and water cut for wells OP01 and OP02 for several completions identified by connections that have been lumped into those completions, one would use:</text:p>
@@ -13573,35 +13573,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
-     <table:table-row table:style-name="Table1792.3">
-      <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
-       <text:p text:style-name="P151">Flow</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
-       <text:p text:style-name="P151">Res. Vol. Production Guide Rate</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
-       <text:p text:style-name="P151">VPGR</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.D3" office:value-type="string">
-       <text:p text:style-name="P151"/>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
-       <text:p text:style-name="P151">GVPGR</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
-       <text:p text:style-name="P151">WVPGR</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.D3" office:value-type="string">
-       <text:p text:style-name="P151"/>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.D3" office:value-type="string">
-       <text:p text:style-name="P151"/>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table1792.I3" office:value-type="string">
-       <text:p text:style-name="P151"/>
-      </table:table-cell>
-     </table:table-row>
      <table:table-row table:style-name="Table1792.3">
       <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
        <text:p text:style-name="P151">Flow</text:p>
@@ -18615,7 +18586,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
        <text:p text:style-name="P82">BGSAT</text:p>
-       <text:p text:style-name="P96">BGSAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.D3" office:value-type="string">
        <text:p text:style-name="P97"/>
@@ -25422,10 +25392,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P184">Oil Viscosity </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.C46" office:value-type="string">
-       <text:p text:style-name="P184">OVI </text:p>
+       <text:p text:style-name="P184">OVIS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.D4" office:value-type="string">
-       <text:p text:style-name="P184">SOVI </text:p>
+       <text:p text:style-name="P184">SOVIS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.D4" office:value-type="string">
        <text:p text:style-name="P185"/>
