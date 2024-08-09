@@ -4218,7 +4218,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="WSF">
 
-<text:h text:style-name="P18248" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc524656_3603161511 Copy 1"/>WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)<text:bookmark-end text:name="__RefHeading___Toc524656_3603161511 Copy 1"/></text:h>
+<text:h text:style-name="P18248" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc524656_3603161511 Copy 1"/>WSF - Water Saturation Function Tables (Gas-Water Systems)<text:bookmark-end text:name="__RefHeading___Toc524656_3603161511 Copy 1"/></text:h>
     <table:table table:name="Table2088" table:style-name="Table2088">
      <table:table-column table:style-name="Table2088.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table2088.E"/>
@@ -4252,15 +4252,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18672" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="P12687">The WSF keyword defines the water relative permeability data versus water saturation tables for when gas and water are only present in the input deck. <text:s/>This keyword should only be used if the gas and water phases are present in the run, and can therefore also be used with the CO2STORE model. In addition, the keyword must be used in conjunction with the GSF keyword in the PROPS section, that defines the gas relative permeability and gas-water capillary pressure data versus gas saturation for gas-water systems.</text:p>
+    <text:p text:style-name="P12687">The WSF keyword defines the water relative permeability data versus water saturation tables for when only gas and water are present in the input deck. <text:s/>This keyword should only be used if the gas and water phases are present in the run, and can therefore also be used with the CO2STORE and H2STORE models. In addition, the keyword must be used in conjunction with the GSF keyword in the PROPS section, that defines the gas relative permeability and gas-water capillary pressure data versus gas saturation for gas-water systems.</text:p>
     <table:table table:name="Table947" table:style-name="Table947">
      <table:table-column table:style-name="Table947.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708718208048">
        <table:table-cell table:style-name="Table947.A1" office:value-type="string">
         <text:p text:style-name="P10362">Note</text:p>
-        <text:p text:style-name="P10413">W<text:span text:style-name="T3628">SF is a compositional keyword in the commercial compositional simulator, and will therefore cause an error in the commercial black-oil simulator.</text:span></text:p>
-        <text:p text:style-name="P10341">Currently, both the GSF and WSF keywords can only be used with the CO2STORE model.</text:p>
+        <text:p text:style-name="P10413"><text:span text:style-name="T3628">WSF is a compositional keyword in the commercial compositional simulator, and will therefore cause an error in the commercial black-oil simulator.</text:span></text:p>
+        <text:p text:style-name="P10341">Currently, both the GSF and WSF keywords can only be used with the CO2STORE and H2STORE models.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4310,8 +4310,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4644">SWAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2046.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4433">A columnar vector of real monotonically increasing down the column values starting from zero and terminating at one, that defines the water saturation.</text:p>
-       <text:p text:style-name="P4845">The first entry is the connate water saturation Swc and the last entry should be 1.0.</text:p>
+       <text:p text:style-name="P4433">A columnar vector of real values monotonically increasing down the column starting from the connate water saturation and terminating at one, that defines the water saturation.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4341,7 +4340,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4653">KRW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2046.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4389">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the water relative permeability with respect to gas saturation.</text:p>
+       <text:p text:style-name="P4389">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the water relative permeability with respect to water saturation.</text:p>
        <text:p text:style-name="P5455">Note that the first entry in the column must be zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
