@@ -8753,7 +8753,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P132"/>
-    <text:p text:style-name="_40_TextBody">Note in the case of partially completed wells, the effective permeability thickness of a perforated interval may be substantially greater than the average permeability thickness of the formation opposite the perforation.</text:p>
+    <text:p text:style-name="_40_TextBody">Note in the case of partially completed wells, the effective permeability thickness of a perforated interval may be substantially greater than the average permeability thickness of the formation along the perforation.</text:p>
     <text:p text:style-name="_40_TextBody">Engineers commonly use the Productivity Index (“PI”) as a parameter to defined an oil well’s deliverability, as it is derived relatively easy from field measurements, that is:</text:p>
     <table:table table:name="Table1776" table:style-name="Table1776">
      <table:table-column table:style-name="Table1776.A"/>
@@ -8970,7 +8970,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P98"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">It is significant that this equation is written in terms of the pressure at the drainage radius, p</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, rather than grid block pressure, p</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17">. <text:s/>It must be written this way since PI is a property that is determined by field production tests. One can also relate the above equation to the multilayered extension of the steady-state radial flow <text:s/>equation </text:span><text:span text:style-name="T17"><text:sequence-ref text:reference-format="text" text:ref-name="refText6">(12.7)</text:sequence-ref></text:span><text:span text:style-name="T17">, </text:span>that is</text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">It is significant that this equation for the well drainage area Productivity Index is written in terms of the pressure at the drainage radius, p</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, rather than grid block pressure, p</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17">. <text:s/>It must be written this way since PI is a property that is determined by field production tests. One can also relate the above equation to the multilayered extension of the steady-state radial flow <text:s/>equation </text:span><text:span text:style-name="T17"><text:sequence-ref text:reference-format="text" text:ref-name="refText6">(12.7)</text:sequence-ref></text:span><text:span text:style-name="T17">, </text:span>to give the grid block Productivity Index:</text:p>
     <table:table table:name="Table1778" table:style-name="Table1778">
      <table:table-column table:style-name="Table1778.A"/>
      <table:table-column table:style-name="Table1778.B"/>
@@ -9138,7 +9138,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">On very important point to note is that the productivity index is, in general, not constant for a given well since both relative permeability and drainage radius can be time dependent. <text:s/>This makes PI an inappropriate quantity for computer prediction of production rates, but it is often the only type of data available on well performance. <text:span text:style-name="T17">To overcome this limitation, most simulators </text:span>accept PI data as input, and then immediately convert this assuming steady state radial flow with a uniform mobility throughout the drainage area, resulting in the following equation.</text:p>
+    <text:p text:style-name="_40_TextBody">One very important point to note is that the productivity index is, in general, not constant for a given well since both relative permeability and drainage radius can be time dependent. <text:s/>This makes PI an inappropriate quantity for computer prediction of production rates, but it is often the only type of data available on well performance. <text:span text:style-name="T17">To overcome this limitation, most simulators </text:span>accept well drainage area PI data as input, and then immediately convert this assuming steady state radial flow with a uniform mobility throughout the drainage area, resulting in the following equation.</text:p>
     <table:table table:name="Table1780" table:style-name="Table1780">
      <table:table-column table:style-name="Table1780.A"/>
      <table:table-column table:style-name="Table1780.B"/>
@@ -9195,7 +9195,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
                          <mfrac>
                           <msub>
                            <mi>r</mi>
-                           <mi>e</mi>
+                           <mi>b</mi>
                           </msub>
                           <msub>
                            <mi>r</mi>
@@ -9221,7 +9221,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
                          <mfrac>
                           <msub>
                            <mi>r</mi>
-                           <mi>b</mi>
+                           <mi>e</mi>
                           </msub>
                           <msub>
                            <mi>r</mi>
@@ -9252,9 +9252,9 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
              </mrow>
              <annotation encoding="StarMath 5.0">P I~=~  {SUM FROM{n=1} TO{N} {LEFT ( T sub xy `` M sub{o}~
 
-LEFT( {ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S } 
+LEFT( {ln`` LEFT({r SUB{b}} OVER{r SUB{w}} RIGHT )~+~S } 
 OVER
-{ ln`` LEFT({r SUB{b}} OVER{r SUB{w}} RIGHT )~+~S} RIGHT) right )}} SUB{n}</annotation>
+{ ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S} RIGHT) right )}} SUB{n}</annotation>
             </semantics>
            </math>
           </draw:object><draw:image>
