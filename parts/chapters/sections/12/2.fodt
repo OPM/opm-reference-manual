@@ -7285,7 +7285,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P167">The alternative keyword for implementing the same approach is the WELCNTL keyword, but unfortunately this is currently not implemented in OPM Flow.</text:p>
     <text:p text:style-name="P122"/>
     <text:h text:style-name="P176" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc423069_1189575515"/>Well Productivity<text:bookmark-end text:name="__RefHeading___Toc423069_1189575515"/></text:h>
-    <text:p text:style-name="_40_TextBody">T<text:span text:style-name="T17">hroughout this section the equations are presented in terms of oil production, - or liquid flow, i.e., oil and water. Note that similar equations exists for gas flow in terms of p</text:span><text:span text:style-name="T14">2</text:span><text:span text:style-name="T17"> and pseudo pressure formulations (ψ(p)).</text:span></text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">Throughout this section the equations are presented in terms of oil production, or liquid flow (i.e., oil and water). Note that similar equations exists for gas flow in terms of p</text:span><text:span text:style-name="T14">2</text:span><text:span text:style-name="T17"> and pseudo pressure formulations (ψ(p)).</text:span></text:p>
     <text:p text:style-name="_40_TextBody">Under the assumption of (1) one-dimensional, radial flow into the wellbore, (2) steady-state pressure behavior, and (3) single-phase flow, it can be shown that the flow rate of a well is given by:</text:p>
     <text:p text:style-name="P105"/>
     <table:table table:name="Table1170" table:style-name="Table1170">
@@ -7501,13 +7501,13 @@ LEFT( ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S RIGHT)} RIGHT]</annotation
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P106">Where: <text:tab/></text:p>
-    <text:p text:style-name="P107">q<text:tab/>= production rate, res.bbl./day</text:p>
+    <text:p text:style-name="P107">q<text:tab/>= production rate, rb/day</text:p>
     <text:p text:style-name="P107"><text:span text:style-name="T17">p</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17"><text:tab/>= pressure at the drainage radius of the well, psia</text:span></text:p>
     <text:p text:style-name="P107"><text:span text:style-name="T17">p</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"><text:tab/>= bottom-hole well pressure, psia</text:span></text:p>
     <text:p text:style-name="P107"><text:span text:style-name="T17">r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17"><text:tab/>= drainage radius, ft.</text:span></text:p>
     <text:p text:style-name="P107"><text:span text:style-name="T17">r</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"><text:tab/>= wellbore radius, ft.</text:span></text:p>
     <text:p text:style-name="P107">S<text:tab/>= skin factor, dimensionless</text:p>
-    <text:p text:style-name="P107">kh<text:tab/>= effective permeability thickness, md-ft.</text:p>
+    <text:p text:style-name="P107">kh<text:tab/>= effective permeability thickness, mD.ft.</text:p>
     <text:p text:style-name="P105"/>
     <text:p text:style-name="_40_TextBody">This is extended to multi-phase flow by introduction of relative permeabilities and adjusted to surface conditions by use of the formation volume factor resulting in the following expression for oil production rate:</text:p>
     <table:table table:name="Table1772" table:style-name="Table1772">
@@ -7762,9 +7762,9 @@ LEFT( ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S RIGHT)} RIGHT]
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P98"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">If the modified radial flow equation is written for each perforated interval and summed over all intervals, the resulting equation is the one used to calculate oil production rates in the simulator. One way to specify the flow capacities of wells is to enter r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, r</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17">, s and p</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"> values for the well, with the kh values for each perforated interval. The simulator then determines the other parameter values from calculated pressure and saturation distributions.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">If the modified radial flow equation is written for each perforated interval and summed over all intervals, the resulting equation is the one used to calculate oil production rates in the simulator. One way to specify the flow capacities of wells is to enter r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, r</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17">, S and p</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"> values for the well, with the kh values for each perforated interval. The simulator then determines the other parameter values from the calculated pressure and saturation distributions.</text:span></text:p>
     <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">Because the pressure at the drainage radius is not readily determined in the simulator, it substitutes p</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17"> (a representative pressure of each perforation grid block) for p. That is readily accommodated by replacing the drainage radius by a probe radius as defined by Peaceman</text:span><text:span text:style-name="T17"><text:note text:id="ftn8" text:note-class="footnote"><text:note-citation>8</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">Peaceman, D.W. &quot;Interpretation of Well-Block Pressures in Numerical Reservoir Simulation with Nonsquare Grid Blocks and Anisotropic Permeability.&quot; <text:s/>SPE 10528 presented at the Sixth SPE Symposium on Reservoir Simulation, New Orleans, (February 1982), pp. 553-569.</text:p></text:note-body></text:note></text:span></text:p>
+        <text:p text:style-name="Footnote">Peaceman, D.W. &quot;Interpretation of Well-Block Pressures in Numerical Reservoir Simulation with Nonsquare Grid Blocks and Anisotropic Permeability.&quot; <text:s/>SPE 10528 presented at the Sixth SPE Symposium on Reservoir Simulation, New Orleans, (February 1982), pp. 553-569.</text:p></text:note-body></text:note></text:span> for a vertical well:</text:p>
     <table:table table:name="Table1773" table:style-name="Table1773">
      <table:table-column table:style-name="Table1773.A"/>
      <table:table-column table:style-name="Table1773.B"/>
