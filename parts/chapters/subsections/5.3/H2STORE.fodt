@@ -4451,7 +4451,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P93"><text:span text:style-name="T32">Option (1) has the advantage that it can be used with the VAPWAT and PRECSALT keywords to model the impact of both vaporization of residual water and salt precipitation in the near wellbore region on injectivity of H</text:span><text:span text:style-name="T24">2</text:span><text:span text:style-name="T32"> injection wells. </text:span></text:p>
     <text:p text:style-name="P93"><text:span text:style-name="T32">In option (1), the GAS and WATER (or GASWAT) keywords declare that the gas and water phases are present in the model. When the H2STORE option is used the water phase represents the brine and the gas phase represents H</text:span><text:span text:style-name="T24">2</text:span><text:span text:style-name="T32">. Note that the input and output keywords need to be consistent with this assumption, e.g., GSF (gas saturation function) and WSF (water saturation function) should be used for the H</text:span><text:span text:style-name="T24">2</text:span><text:span text:style-name="T32">-Brine relative permeability, etc. <text:s/></text:span></text:p>
     <text:p text:style-name="P94">Although, the DISGAS and VAPOIL keywords can be used with option (2) to model water vaporization and H<text:span text:style-name="T21">2</text:span> dissolution, salt precipitation is not currently supported with option (2).</text:p>
-    <text:p text:style-name="P93">Option (2) currently has the advantage that it can be used with the DRSDTCON keyword to control convective dissolution of H<text:span text:style-name="T21">2</text:span><text:span text:style-name="T28"> into in-situ brine. Support for the use of DRSDTCON with option (1) is planned to be added in the next release.</text:span></text:p>
     <text:p text:style-name="P91">In option (2), the GAS and OIL keywords declare that the gas and oil phases are present in the model. Internally when H2STORE is used the oil phase refers to the brine and the gas phase to H<text:span text:style-name="T21">2</text:span>. Again, the input <text:soft-page-break/>and output keywords need to be consistent with this assumption, e.g., SGOF (gas-oil relative permeability) is used for the H<text:span text:style-name="T21">2</text:span>-Brine relative permeability, FOIP (Field Oil-In-Place) shows the total amount of brine in the reservoir, etc. </text:p>
     <text:p text:style-name="P91">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>
     <text:p text:style-name="P91"/>
@@ -4699,7 +4698,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P67"><text:span text:style-name="T6">0.</text:span>7<text:span text:style-name="T6"> <text:s text:c="10"/></text:span><text:s text:c="44"/>/</text:p>
     <text:p text:style-name="P36">-- ==============================================================================</text:p>
     <text:p text:style-name="P36"/>
-    <text:p text:style-name="P91">The third part of the example covers initializing the model in the SOLUTION section. Here we set the EQUIL(EQLOPT1 and EQLOPT2) parameters equal to one, to use table number one of the RSVD and RVVD keywords, in order to set the initial dissolved H<text:span text:style-name="T21">2</text:span> and vaporised water versus depth distribution for the model.</text:p>
+    <text:p text:style-name="P91">The third part and final part of the example covers initializing the model in the SOLUTION section. Here we set the EQUIL(EQLOPT1 and EQLOPT2) parameters equal to one, to use table number one of the RSVD and RVVD keywords, in order to set the initial dissolved H<text:span text:style-name="T21">2</text:span> and vaporised water versus depth distribution for the model.</text:p>
     <text:p text:style-name="P41">-- ==============================================================================</text:p>
     <text:p text:style-name="P90">-- </text:p>
     <text:p text:style-name="P90">-- SOLUTION SECTION </text:p>
@@ -4728,23 +4727,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P72"><text:s text:c="9"/>1000.0 <text:s text:c="2"/>0.000 <text:s text:c="4"/></text:p>
     <text:p text:style-name="P72"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>0.000 <text:s text:c="38"/>/ </text:p>
     <text:p text:style-name="P72"/>
-    <text:p text:style-name="P84">T<text:span text:style-name="T29">he </text:span>forth<text:span text:style-name="T29"> and final part of the example sets the maximum dissolution rate for convective </text:span>H<text:span text:style-name="T23">2</text:span><text:span text:style-name="T29"> mixing via the DRSDTCON keyword in the SCHEDULE section.</text:span></text:p>
-    <text:p text:style-name="P36">-- ==============================================================================</text:p>
-    <text:p text:style-name="P73">-- </text:p>
-    <text:p text:style-name="P73">-- SCHEDULE SECTION </text:p>
-    <text:p text:style-name="P73">-- </text:p>
-    <text:p text:style-name="P36">-- ==============================================================================</text:p>
-    <text:p text:style-name="P73">SCHEDULE</text:p>
-    <text:p text:style-name="P73">-- <text:s text:c="128"/></text:p>
-    <text:p text:style-name="P73">-- <text:s text:c="6"/>H2 CONVECTIVE DISSOLUTION PARAMETER</text:p>
-    <text:p text:style-name="P73">--</text:p>
-    <text:p text:style-name="P73">DRSDTCON</text:p>
-    <text:p text:style-name="P73">-- <text:s text:c="6"/>H2 CONV <text:s text:c="49"/></text:p>
-    <text:p text:style-name="P73">-- <text:s text:c="6"/>DISSOLN <text:s text:c="29"/></text:p>
-    <text:p text:style-name="P73">-- <text:s text:c="6"/>-------- <text:s text:c="44"/></text:p>
-    <text:p text:style-name="P73"><text:s text:c="9"/>0.04 <text:s text:c="42"/>/</text:p>
-    <text:p text:style-name="P107"/>
-    <text:p text:style-name="P85">See the DRSDTCON keyword in the SCHEDULE section for further information on this keyword. </text:p>
    </text:section>
   </office:text>
  </office:body>
