@@ -4732,7 +4732,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716879_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716879_3964674244"/></text:h>
-    <text:p text:style-name="P11794">The WSEGVALV keyword defines a multi-segment well segment to be a sub-critical valve Inflow Control Device (“ICD”) as part of a completion for a multi-segment well. Note that the well must have been previously define by the WELSPECS and WELSEGS keywords in the SCHEDULE section and that the data for the keyword should be repeated for each multi-segment completion that contains a sub-critical valve ICD. <text:s/></text:p>
+    <text:p text:style-name="P11794">The WSEGVALV keyword defines a multi-segment well segment to be a sub-critical valve Inflow Control Device (“ICD”) as part of a completion for a multi-segment well. Note that the well must have been previously defined by the WELSPECS and WELSEGS keywords in the SCHEDULE section and that the data for the keyword should be repeated for each multi-segment completion that contains a sub-critical valve ICD. <text:s/></text:p>
     <text:p text:style-name="P11794">An ICD is a well completion component usually installed along the producing section of a well to minimize the unwanted water and gas breakthrough in an oil well, or early water production in a gas well, due to an uneven flow profile over the completed interval. <text:s/>Permeability variations over the producing interval cause the high permeability zones to produce higher quantities of fluids than the lower permeability zones and this uneven producing fluid profile may result in bypassed hydrocarbons. Secondly, for horizontal wells, the pressure loss from the “toe” to the “heel” of the well again results in an uneven fluid profile over the producing interval. In order to rectify this ICDs can be installed so that the well fluids have to flow through an ICD before entering the tubing; thus, creating an additional “designed” pressure loss. <text:s/></text:p>
     <text:p text:style-name="P11716">A sub-critical valve ICD is a type of frictional ICD that adds an additional pressure loss by directing the fluid through a constriction before entering the tubing. The pressure drop is a function of the fluid density, the volumetric flow rate, and the diameter of the constriction. By placing various ICD’s over the production interval one can design a completion that results in a more uniform producing fluid profile throughout the length of the producing interval. </text:p>
     <table:table table:name="Table1851" table:style-name="Table1851">
@@ -4814,7 +4814,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9489">ICDCV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8998">A real positive value greater than zero that defines the dimensionless flow coefficient for the valve (Cv). This a vendor specific value for a given vendor’s ICD.</text:p>
+       <text:p text:style-name="P8998">A real positive value greater than zero that defines the dimensionless flow coefficient for the valve (C<text:span text:style-name="T4092">v</text:span>). This a vendor specific value for a given vendor’s ICD.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4845,9 +4845,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10427">AREAREST</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P702">A real positive value that defines the cross-sectional area of flow in the restricted section of the valve (Ar) and should have a minimum value of 1.0 x 10-10.</text:p>
-       <text:p text:style-name="P703">AREAREST is used to convert the segment volumetric flow rate into the flow velocity at the constriction (υr). </text:p>
-       <text:p text:style-name="P703"/>
+       <text:p text:style-name="P702">A real positive value that defines the cross-sectional area of flow in the restricted section of the valve (A<text:span text:style-name="T4092">r</text:span>) and should have a minimum value of 1.0 x 10<text:span text:style-name="T3853">-10</text:span>.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
+       <text:p text:style-name="P703">AREAREST is used to convert the segment volumetric flow rate into the flow velocity at the constriction (υ<text:span text:style-name="T4092">r</text:span>). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5056,8 +5056,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10427">AREAPIPE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P702">A real positive value that defines the cross-sectional area of flow in the pipe (Ap), as opposed to the restricted section of the valve (Ar).</text:p>
-       <text:p text:style-name="P703">AREAPIPE is used to convert the segment volumetric flow rate into the flow velocity through the pipe (υp). </text:p>
+       <text:p text:style-name="P702">A real positive value that defines the cross-sectional area of flow in the pipe (A<text:span text:style-name="T4092">p</text:span>), as opposed to the restricted section of the valve (A<text:span text:style-name="T4092">r</text:span>).</text:p>
+       <text:p text:style-name="P703">AREAPIPE is used to convert the segment volumetric flow rate into the flow velocity through the pipe (υ<text:span text:style-name="T4092">p</text:span>). </text:p>
        <text:p text:style-name="P2530">The value is used to replace the segment pipe cross-sectional area of flow defined on the WELSEGS keyword in record 2-9, named XAREA. <text:s/>If AREAPIPE is defaulted on this keyword then the equivalent value on the WELSEGS keyword will be used instead.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5112,8 +5112,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10427">AREAMAX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P705">A real positive value that defines the maximum cross-sectional area of flow in the restricted section of the valve (Amax). <text:s/></text:p>
-       <text:p text:style-name="P705">AREAMAX is used to convert the segment volumetric flow rate into the maximum flow velocity at the constriction (υr). <text:s/></text:p>
+       <text:p text:style-name="P705">A real positive value that defines the maximum cross-sectional area of flow in the restricted section of the valve (A<text:span text:style-name="T4092">max</text:span>). <text:s/></text:p>
+       <text:p text:style-name="P705">AREAMAX is used to convert the segment volumetric flow rate into the maximum flow velocity at the constriction (υ<text:span text:style-name="T4092">r</text:span>). <text:s/></text:p>
        <text:p text:style-name="P704">If defaulted then AREAPIPE will be used if defined, otherwise XAREA (item 2-9) on the WELSEGS keyword will be used.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5141,6 +5141,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1740">Notes:</text:p>
        <text:list xml:id="list2686958007" text:style-name="L184">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P19218">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
@@ -5154,7 +5157,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14674">Table <text:sequence text:ref-name="refTable663" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.121</text:sequence>: WSEGVALV Keyword Description</text:p>
     <text:p text:style-name="P11794"/>
-    <text:p text:style-name="P11368">The total number of wells should be defined via the WELLSDIMS keyword and the number of multi-segment wells should be declared on the WSEGDIMS keyword, both keywords are in the RUNSPEC section. In addition, the WELSPECS keyword should be used to define wells, the COMPDAT keyword to define the well completions for both ordinary wells and multi-segment wells, and the COMPSEGS keyword to define a multi-segment segment completions. <text:s/>Finally, the WSEGVALV keyword can then be use to define ICD connections for the well. <text:s/>All the aforementioned keywords are described in the SCHEDULE section. </text:p>
+    <text:p text:style-name="P11368">The total number of wells should be defined via the WELLDIMS keyword and the number of multi-segment wells should be declared on the WSEGDIMS keyword, both keywords are in the RUNSPEC section. In addition, the WELSPECS keyword should be used to define wells, the COMPDAT keyword to define the well completions for both ordinary wells and multi-segment wells, and the COMPSEGS keyword to define a multi-segment segment completions.<text:s/>Finally, the WSEGVALV keyword can then be use to define ICD connections for the well. <text:s/>All the aforementioned keywords are described in the SCHEDULE section. </text:p>
     <text:p text:style-name="P12172">OPM flow calculates the pressure drop across the ICD using a homogeneous sub-critical flow through a constriction model. The model consists of two variables, the pressure drop due to the constriction,<draw:frame draw:style-name="fr66" draw:name="Object186" text:anchor-type="as-char" svg:width="1.565cm" svg:height="0.441cm" draw:z-index="1147"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
@@ -5488,14 +5491,14 @@ newline
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P16492">Where:</text:p>
-    <text:p text:style-name="P16572">C<text:span text:style-name="T4092">1</text:span><text:span text:style-name="T1533"> </text:span>and C2<text:tab/>=<text:tab/>Unit conversion constants as listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable664">Table 12.122</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P16572">C<text:span text:style-name="T4092">1</text:span><text:span text:style-name="T1533"> </text:span>and C<text:span text:style-name="T4092">2</text:span><text:tab/>=<text:tab/>Unit conversion constants as listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable664">Table 12.122</text:sequence-ref>.</text:p>
     <text:p text:style-name="P16572">C<text:span text:style-name="T4092">v</text:span><text:span text:style-name="T1533"><text:tab/>= <text:tab/>Vendor supplied dimensionless flow coefficient for the valve.</text:span></text:p>
     <text:p text:style-name="P16557"><text:span text:style-name="T1533">D</text:span><text:span text:style-name="T1938"><text:tab/>=<text:tab/>Diameter of the pipe.</text:span></text:p>
     <text:p text:style-name="P16557"><text:span text:style-name="T1533">f<text:tab/></text:span><text:span text:style-name="T1938">=<text:tab/>Fanning friction factor.</text:span></text:p>
     <text:p text:style-name="P16557"><text:span text:style-name="T1533">L</text:span><text:span text:style-name="T1938"><text:tab/>=<text:tab/>Segment pipe length.</text:span></text:p>
     <text:p text:style-name="P16555"><text:span text:style-name="T1928">ρ<text:tab/></text:span><text:span text:style-name="T1931">=<text:tab/>Fluid mixture density.</text:span></text:p>
-    <text:p text:style-name="P16555"><text:span text:style-name="T1946">υ</text:span>r<text:span text:style-name="T1932"><text:tab/>=<text:tab/>The flow velocity of the mixture through the constriction.</text:span></text:p>
-    <text:p text:style-name="P16554"><text:span text:style-name="T1945">υ</text:span>p<text:span text:style-name="T1932"><text:tab/>=<text:tab/>The flow velocity of the mixture through the </text:span>segment pipe.</text:p>
+    <text:p text:style-name="P16555"><text:span text:style-name="T1946">υ</text:span><text:span text:style-name="T4092">r</text:span><text:span text:style-name="T1932"><text:tab/>=<text:tab/>The flow velocity of the mixture through the constriction.</text:span></text:p>
+    <text:p text:style-name="P16554"><text:span text:style-name="T1945">υ</text:span><text:span text:style-name="T4092">p</text:span><text:span text:style-name="T1932"><text:tab/>=<text:tab/>The flow velocity of the mixture through the segment pipe.</text:span></text:p>
     <text:p text:style-name="P16547"/>
     <table:table table:name="Table1854" table:style-name="Table1854">
      <table:table-column table:style-name="Table1854.A"/>
@@ -5541,10 +5544,10 @@ newline
        <text:p text:style-name="P7113">C<text:span text:style-name="T4092">1</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1854.A2" office:value-type="string">
-       <text:p text:style-name="P2819"><text:span text:style-name="T1533">2.159 </text:span>x 10-4</text:p>
+       <text:p text:style-name="P2819"><text:span text:style-name="T1533">2.159 </text:span>x 10<text:span text:style-name="T3853">-4</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1854.A2" office:value-type="string">
-       <text:p text:style-name="P2821"><text:span text:style-name="T2483">1.</text:span>0 x 10-5</text:p>
+       <text:p text:style-name="P2821"><text:span text:style-name="T2483">1.0</text:span> x 10<text:span text:style-name="T3853">-5</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1854.A2" office:value-type="string">
        <text:p text:style-name="P2825"><text:span text:style-name="T1533">9.869 x 10</text:span><text:span text:style-name="T3853">-7</text:span></text:p>
@@ -5648,7 +5651,7 @@ newline
     </table:table>
     <text:p text:style-name="P15002">Table <text:sequence text:ref-name="refTable664" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.122</text:sequence>: WELVALV Conversion Factor Constants and Units</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12172">In addition as both υr and υp are dependent on their respective cross-section areas then the volumetric flow (q) through the device requires that:</text:p>
+    <text:p text:style-name="P12172">In addition as both υ<text:span text:style-name="T4092">r</text:span> and υ<text:span text:style-name="T4092">p</text:span> are dependent on their respective cross-section areas then the volumetric flow (q) through the device requires that:</text:p>
     <table:table table:name="Table1853" table:style-name="Table1853">
      <table:table-column table:style-name="Table1853.A"/>
      <table:table-column table:style-name="Table1853.B"/>
@@ -5894,7 +5897,7 @@ newline
     </table:table>
     <text:p text:style-name="P16493">Where:</text:p>
     <text:p text:style-name="P16560">A<text:span text:style-name="T4092">r</text:span><text:span text:style-name="T1533"><text:tab/>=<text:tab/>Cross-sectional are</text:span>a<text:span text:style-name="T1533"> of the constriction. </text:span></text:p>
-    <text:p text:style-name="P16573">C2<text:tab/>=<text:tab/>Unit conversion constants as listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable664">Table 12.122</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P16573">C<text:span text:style-name="T4092">2</text:span><text:tab/>=<text:tab/>Unit conversion constants as listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable664">Table 12.122</text:sequence-ref>.</text:p>
     <text:p text:style-name="P16573">C<text:span text:style-name="T4092">v</text:span><text:span text:style-name="T1533"><text:tab/>= <text:tab/>Vendor supplied dimensionless flow coefficient for the valve.</text:span></text:p>
     <text:p text:style-name="P16556"><text:span text:style-name="T1929">ρ<text:tab/></text:span><text:span text:style-name="T1931">=<text:tab/>Fluid mixture density.</text:span></text:p>
     <text:p text:style-name="P16548">q<text:tab/>= <text:tab/>Volumetric flow rate.</text:p>
@@ -5999,7 +6002,7 @@ newline
     </table:table>
     <text:p text:style-name="P12169"/>
     <text:p text:style-name="P12169">Note if K is greater than 0.1 then the device will be shut.</text:p>
-    <text:p text:style-name="P12170">The setting of the device, that is how open the device is; is related to the restricted area and the maximum restricted area of the device, that is:</text:p>
+    <text:p text:style-name="P12170">The setting of the device, that is how open the device is, is related to the restricted area and the maximum restricted area of the device as follows:</text:p>
     <table:table table:name="Table1857" table:style-name="Table1857">
      <table:table-column table:style-name="Table1857.A"/>
      <table:table-column table:style-name="Table1857.B"/>
@@ -6077,7 +6080,7 @@ newline
     </table:table>
     <text:p text:style-name="P16494">Where:</text:p>
     <text:p text:style-name="P16559">A<text:span text:style-name="T4092">r</text:span><text:span text:style-name="T1533"><text:tab/>=<text:tab/>Cross-sectional are</text:span>a<text:span text:style-name="T1533"> of the constriction.</text:span></text:p>
-    <text:p text:style-name="P16559">Amax<text:span text:style-name="T1533"><text:tab/>=<text:tab/></text:span>Maximum c<text:span text:style-name="T1533">ross-sectional are</text:span>a <text:span text:style-name="T1533">of the constriction.</text:span></text:p>
+    <text:p text:style-name="P16559">A<text:span text:style-name="T4092">max</text:span><text:span text:style-name="T1533"><text:tab/>=<text:tab/></text:span>Maximum c<text:span text:style-name="T1533">ross-sectional are</text:span>a <text:span text:style-name="T1533">of the constriction.</text:span></text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18742" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc393672_1778911700"/>Example<text:bookmark-end text:name="__RefHeading___Toc393672_1778911700"/></text:h>
     <text:p text:style-name="P11602">The following example is based on one producing well segment oil well (OP01) using the WELSPECS, WELSEGS COMPDAT and COMPSEGS keywords, as per the WSEGSICD keyword example (<text:a xlink:type="simple" xlink:href="#12.3.310.1.Example|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc393674_1778911700">Example</text:bookmark-ref></text:a>), and is therefore not repeated here. <text:s/></text:p>
