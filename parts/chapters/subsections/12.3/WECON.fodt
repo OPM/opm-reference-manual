@@ -4640,7 +4640,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716721_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716721_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The WECON keyword defines the economic criteria for production wells that have previously been defined by the WELSPECS and WCONPROD keywords in the SCHEDULE section. </text:p>
-    <text:p text:style-name="_40_TextBody">Note that wells can be allocated to a group when they are specified by the WELSPECS keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the GCONPROD and GECON keywords in the SCHEDULE section and the controls specified by the WECON keyword. Note that GECON is not supported by OPM Flow in the current release.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that wells can be allocated to a group when they are specified by the WELSPECS keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the GCONPROD and GECON keywords in the SCHEDULE section and the economic criteria specified by the WECON keyword. Note that GECON is not supported by OPM Flow in the current release.</text:p>
     <table:table table:name="Table130" table:style-name="Table130">
      <table:table-column table:style-name="Table130.A"/>
      <table:table-column table:style-name="Table130.B"/>
@@ -4715,6 +4715,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P8193">Only option (2) is supported by OPM Flow as STATUS equals AUTO on the COMPDAT keyword is currently not supported by the simulator. Hence, the well be either shut or stopped.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P7479">A value less than or equal to zero switches off this criterion.</text:p>
        <text:p text:style-name="P7479"/>
       </table:table-cell>
@@ -4757,6 +4758,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P8193">Only option (2) is supported by OPM Flow as STATUS equals AUTO on the COMPDAT keyword is currently not supported by the simulator. Hence, the well be either shut or stopped.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P7479">A value less than or equal to zero switches off this criterion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4788,6 +4790,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7713">A real positive value that defines the maximum economic surface water cut, above which an economic action will take place. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P7713">Water cut is defined as:<draw:frame draw:style-name="fr66" draw:name="Object43" text:anchor-type="as-char" svg:width="2.263cm" svg:height="0.931cm" draw:z-index="1195"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
@@ -4898,6 +4901,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7713">A real positive value that defines the maximum economic surface gas-oil ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P7480">A value less than or equal to zero switches off this criterion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4929,6 +4933,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7713">A real positive value that defines the maximum economic surface water-gas ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P7480">A value less than or equal to zero switches off this criterion.</text:p>
        <text:p text:style-name="P8194">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
       </table:table-cell>
@@ -5169,6 +5174,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1612">Notes:</text:p>
        <text:list xml:id="list3690469949" text:style-name="L161">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P19186">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
