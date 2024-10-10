@@ -4430,7 +4430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9624">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2013.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7337">A character string of up to eight characters in length that defines the well name for which the well production targets and constraints flow streams (TARGET) are being adjusted by the CONSTANT parameter.</text:p>
+       <text:p text:style-name="P7337">A character string of up to eight characters in length that defines the well name for which the well target or constraint (CONTROL) is being adjusted by the multipler (FACTOR).</text:p>
        <text:p text:style-name="P7852">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4445,10 +4445,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8818">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2013.C2" office:value-type="string">
-       <text:p text:style-name="P7973">TARGET</text:p>
+       <text:p text:style-name="P7973">CONTROL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2013.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7413">A defined character string that declares the production or injection flow stream for the well, that will be adjusted by multiplying the current value by the CONSTANT parameter. TARGET should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P7413">A defined character string that declares the well target or constraint that will be adjusted by multiplying its current value by the FACTOR defined in (3). CONTROL should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105923621830688" text:continue-list="list105922388989917" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19711">ORAT: the well’s surface oil production rate will be adjusted.</text:p>
@@ -4500,10 +4500,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9885">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2013.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9136">CONSTANT</text:p>
+       <text:p text:style-name="P9136">FACTOR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2013.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7195">A real value that is used to multiply the current TARGET flow stream by to get the adjusted flow stream rate.</text:p>
+       <text:p text:style-name="P7195">A postive real value that defines the FACTOR that is used to multiply the CONTROL specified in (2).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4533,14 +4534,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9884">NTIME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2013.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7443">A positive integer greater than or equal to one that defines the number of report time steps for User Defined Arguments (UDA) variables only, that the TARGET flow stream is multiplied by to get the adjusted flow stream.</text:p>
-       <text:p text:style-name="P8820">The default value of one means that the <text:span text:style-name="T2110">multiplication</text:span> is applied only at the current time step for the UDA variable.</text:p>
+       <text:p text:style-name="P7443">A positive integer greater than or equal to one that defines the number of report time steps for which the well target or constraint (CONTROL) is multiplied by the FACTOR. This is only applied when the FACTOR is specified by a User Defined Argument (UDA).</text:p>
+       <text:p text:style-name="P8820">The default value of one means that the multiplication is applied only at the current time step for the UDA variable.</text:p>
        <text:p text:style-name="P8820">This option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2013.F5" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9137">1.0</text:p>
+       <text:p text:style-name="P9137">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table2013.1">
@@ -4562,6 +4563,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1789">Notes:</text:p>
        <text:list xml:id="list636252592" text:style-name="L186">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P19220">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
@@ -4581,15 +4585,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- WELL TARGET/LIMIT MULTIPLIER <text:s text:c="53"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="_40_Example">-- <text:s/>WELL <text:s text:c="3"/>WELL <text:s text:c="2"/>TARGET <text:s text:c="5"/>REPORT <text:s text:c="50"/></text:p>
-    <text:p text:style-name="_40_Example">-- <text:s/>NAME <text:s text:c="3"/>TARG <text:s text:c="2"/>MULTIPLIER <text:s/>TIMES <text:s text:c="53"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s/>WELL <text:s text:c="3"/>WELL <text:s text:c="2"/>MULT <text:s text:c="3"/>REPORT <text:s text:c="50"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s/>NAME <text:s text:c="3"/>CNTL <text:s text:c="2"/>FACTOR <text:s/>TIMES <text:s text:c="53"/></text:p>
     <text:p text:style-name="_40_Example">WTMULT <text:s text:c="66"/></text:p>
     <text:p text:style-name="_40_Example">OP01 <text:s text:c="7"/>ORAT <text:s text:c="2"/>0.90 <text:s text:c="15"/>/</text:p>
     <text:p text:style-name="_40_Example">OP02 <text:s text:c="7"/>BHP <text:s text:c="3"/>0.95 <text:s text:c="15"/>/</text:p>
     <text:p text:style-name="_40_Example">OP03 <text:s text:c="7"/>LIFT <text:s text:c="2"/>1.25 <text:s text:c="15"/>/</text:p>
     <text:p text:style-name="P14496">/</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">Well OP01 has its current oil rate multiplied by 0.90, well OP02 has its bottom-hole pressure multiplied by 0.95, and well OP03 has its artificial lift quantity increased by 1.25 times.</text:p>
+    <text:p text:style-name="_40_TextBody">Well OP01 has its current oil rate target multiplied by 0.90, well OP02 has its bottom-hole pressure constraint multiplied by 0.95, and well OP03 has its artificial lift quantity increased by 1.25 times.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     
    </text:section>
