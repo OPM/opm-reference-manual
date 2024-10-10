@@ -4263,7 +4263,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18422" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc296623_15761773882"/>Description<text:bookmark-end text:name="__RefHeading___Toc296623_15761773882"/></text:h>
-    <text:p text:style-name="_40_TextBody">The MULTREGT keyword multiplies the diffusivity between two regions by a constant. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGT keyword is read by the simulator. The constant should be a real number. </text:p>
+    <text:p text:style-name="_40_TextBody">The MULTREGD keyword multiplies the diffusivity between two regions by a constant. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGD keyword is read by the simulator. The constant should be a real number. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. </text:p>
     <table:table table:name="Table1395" table:style-name="Table1395">
      <table:table-column table:style-name="Table1395.A"/>
@@ -4370,10 +4370,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4241">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1395.B7" office:value-type="string">
+       <text:p text:style-name="P3659">REGION</text:p>
        <text:p text:style-name="P3659">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1395.C7" office:value-type="string">
-       <text:p text:style-name="P3659">The ARRAY to use for applying the CONSTANT in (2) based on the ARRAY in (1). <text:s/>ARRAY can have the following values:</text:p>
+       <text:p text:style-name="P3659">The REGION ARRAY to use for applying the CONSTANT in (3) based on the regions REGION1 and REGION2 in (1 and 2). <text:s/>REGION ARRAY can have the following values:</text:p>
        <text:list xml:id="list105912015054820" text:continue-list="list105911559142812" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19112">F for the FLUXNUM array</text:p>
@@ -4396,6 +4397,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list xml:id="list2425202354" text:style-name="L66">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19104">Where REGION1 and REGION2 should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19104">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18972">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
