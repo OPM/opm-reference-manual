@@ -4721,6 +4721,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19101">Where the REGION NUMBER should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
         </text:list-item>
         <text:list-item>
+         <text:p text:style-name="P19101">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P19052">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
