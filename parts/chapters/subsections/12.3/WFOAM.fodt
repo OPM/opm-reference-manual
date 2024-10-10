@@ -4325,6 +4325,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1028.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4414">A real positive value that defines the well’s injection foam concentration.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P5488">Units are dependent on the transport phase specified via the FOAMOPT1 variable on the FOAMOPTS keyword in the PROPS section. FOAMOPT1 should be set to either GAS or WATER.</text:p>
        <text:p text:style-name="P5490">Currently OPM Flow only supports injecting foam via the GAS phase.</text:p>
       </table:table-cell>
@@ -4356,10 +4357,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2384">Notes:</text:p>
        <text:list xml:id="list105923138055633" text:continue-list="list105918882253338" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19385">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19379">Note that the total number of individual wells declared by the WELSPECS cannot exceed the value entered via the MXWELS variable on the WELLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19385">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>

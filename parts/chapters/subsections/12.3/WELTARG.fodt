@@ -2801,10 +2801,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P15676" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="06871da6"/>
   </style:style>
-  <style:style style:name="P16041" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="0682c367" officeooo:paragraph-rsid="06871da6"/>
-  </style:style>
   <style:style style:name="P18181" style:family="paragraph" style:parent-style-name="Heading_20_3">
    <style:paragraph-properties fo:break-before="page"/>
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="06871da6"/>
@@ -4380,7 +4376,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716757_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716757_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WELTARG keyword modifies the target and constraints values of both rates and pressures for previously defined wells without having to define all the variables on the well control keywords: WCONPROD, WCONHIST, WCONINJE, or WCONINJH. Variables not changed by the <text:s/>WELTARG keyword remain the same as those previously entered via the well control keywords or previously entered WELTARG keywords. Note that the well must still be initially be fully defined using the WCONPROD or WCONINJE keywords. <text:s/>All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">The WELTARG keyword modifies the target and constraints values of both rates and pressures for previously defined wells without having to define all the variables on the well control keywords: WCONPROD, WCONHIST, WCONINJE, or WCONINJH. Variables not changed by the <text:s/>WELTARG keyword remain the same as those previously entered via the well control keywords or previously entered WELTARG keywords. Note that the well must still be initially fully defined using the WCONPROD or WCONINJE keywords. <text:s/>All the aforementioned keywords are described in the SCHEDULE section.</text:p>
     <table:table table:name="Table125" table:style-name="Table125">
      <table:table-column table:style-name="Table125.A"/>
      <table:table-column table:style-name="Table125.B"/>
@@ -4495,6 +4491,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table125.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P8073">VALUE</text:p>
        <text:p text:style-name="P8073"/>
+       <text:p text:style-name="P8073"/>
        <text:p text:style-name="P8069">Liquid</text:p>
        <text:p text:style-name="P8069">Gas</text:p>
        <text:p text:style-name="P8069">Res Vol</text:p>
@@ -4504,6 +4501,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table125.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7715">A real positive value that defines the value of the variable declared by TARGET</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4548,6 +4546,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1650">Notes:</text:p>
        <text:list xml:id="list3223553220" text:style-name="L170">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P19196">The keyword is followed by any number <text:span text:style-name="T1533">records</text:span> with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
@@ -4587,9 +4588,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14224">WELTARG <text:s text:c="44"/></text:p>
     <text:p text:style-name="P14224">OP01 <text:s text:c="4"/>ORAT <text:s text:c="2"/>2000 <text:s text:c="39"/>/</text:p>
     <text:p text:style-name="P14224">/</text:p>
-    <text:p text:style-name="P16041">From January 1, 2000 to February 1, 2000 well OP01 is open and is on oil rate control and has a target oil rate of 3,000 stb/d, and uses VFPPROD vertical lift table number 9 with a minimum tubing head pressure constraint of 500 psia. After February 1, 2000 the well’s oil rate is reduced to 2,000 stb/d and all the other parameters remain unchanged. </text:p>
-    <text:p text:style-name="P11657"/>
-    
+    <text:p text:style-name="P11086">From January 1, 2000 to February 1, 2000 well OP01 is open and is on oil rate control and has a target oil rate of 3,000 stb/d, and uses VFPPROD vertical lift table number 9 with a minimum tubing head pressure constraint of 500 psia. After February 1, 2000 the well’s oil rate is reduced to 2,000 stb/d and all the other parameters remain unchanged. </text:p>
    </text:section>
   </office:text>
  </office:body>
