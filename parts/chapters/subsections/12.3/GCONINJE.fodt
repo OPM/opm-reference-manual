@@ -4748,6 +4748,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7678">A real positive value that defines the maximum surface injection rate target or constraint for the phase declared by the TYPE variable.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4781,6 +4782,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7679">A real positive value that defines the maximum reservoir volume injection rate target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P8759">Note setting a value here other than the default means that TYPE, item (2) will be the supplement or “make up” phase.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4812,6 +4814,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7698">A real positive value that defines the target or constraint re-injection fraction for the produced phase defined by the TYPE variable. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P7974">For example, if TYPE is equal to GAS and REIN is equal to 0.85, then 85% of the produced gas will be re-injected.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4844,6 +4847,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table134.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7698">A real positive value that defines the target or constraint of the voidage replacement ratio based on all the produced fluids. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P8761">For example, if TYPE is equal to WAT and VREP is equal to 1.00, then 100% of the produced reservoir volume will be re-inject as an equivalent water volume. </text:p>
        <text:p text:style-name="P8759">Note setting a value here other than the default means that TYPE, item (2) will be the supplement phase.</text:p>
       </table:table-cell>
@@ -5012,6 +5016,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1625">Notes:</text:p>
        <text:list xml:id="list1992853609" text:style-name="L129">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P19156">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
