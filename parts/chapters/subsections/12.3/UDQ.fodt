@@ -4494,7 +4494,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>An UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>A UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">User Defined Quantities can be output to the summmary file or used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. </text:p>
     <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table833" table:style-name="Table833">
@@ -4525,7 +4525,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table833.C5" office:value-type="string">
        <text:p text:style-name="P3328">Define the start of UDQ Definition Section. <text:s/>This is then followed on a new line by any number of UDQ records that define the various operations to be performed using the ASSIGN, DEFINE UNITS and UPDATE sub-keywords <text:span text:style-name="T4">for the OPERAT</text:span>OR<text:span text:style-name="T4">.</text:span></text:p>
-       <text:p text:style-name="P2662"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.D5" office:value-type="string">
        <text:p text:style-name="P3484"/>
@@ -4539,22 +4538,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3328">OPERATOR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.C5" office:value-type="string">
-       <text:p text:style-name="P3328">OPERATOR is a character sting that that defines the type of operations to perform, and should be one of the following:</text:p>
+       <text:p text:style-name="P3328">OPERATOR is a defined character sting that specifies the type of operation to perform, and should be one of the following:</text:p>
        <text:list xml:id="list105922185424135" text:continue-list="list105921553895284" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19300">ASSIGN: This option assigns a value to a variable and sets the UPDATE status to OFF.</text:p>
+         <text:p text:style-name="P19300">ASSIGN: Assigns a constant numerical value to the VARIABLE and sets the UPDATE status to OFF.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">DEFINE: In this case a mathematical formula is defined and assigned to a variable. The variable is initialized with the formula and the UPDATE status is set to ON.</text:p>
+         <text:p text:style-name="P19300">DEFINE: Defines a mathematical formula and assigns it to the VARIABLE. The variable is initialized with the formula and the UPDATE status is set to ON.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">UNITS: This option sets the reporting units for a defined variable and has no effect on the calculations. The variable must already have been defined prior to using this option.</text:p>
+         <text:p text:style-name="P19300">UNITS: Sets the reporting units for the VARIABLE. The units have no effect on the calculations. The variable must already have been defined prior to using this option.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">UPDATE: <text:s/>Stipulates when the defined variable should be re-calculated.</text:p>
+         <text:p text:style-name="P19300">UPDATE: Stipulates when the VARIABLE should be re-evaluated.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P2222"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.D5" office:value-type="string">
        <text:p text:style-name="P3575"/>
@@ -4612,16 +4610,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5144">The data type for EXPRESSION is based on the OPERATOR option above, namely if OPERATOR is set to:</text:p>
        <text:list xml:id="list105922836601917" text:continue-list="list105922871205951" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19302">ASSIGN: Then EXPRESSION should be a numerical value.</text:p>
+         <text:p text:style-name="P19302">ASSIGN: The EXPRESSION should be a numerical value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">DEFINE: In this case a mathematical formula is defined as a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
+         <text:p text:style-name="P19302">DEFINE: The EXPRESSSION should be a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19357">UNITS: Then EXPRESSION should be a character string enclosed in quotes if it contains blanks, with a maximum length of eight characters, that declares the units for VARIABLE that will be used for reporting.</text:p>
+         <text:p text:style-name="P19357">UNITS: The EXPRESSION should be a character string (enclosed in quotes if it contains blanks) with a maximum length of eight characters, that declares the units that will used when reporting the VARIABLE.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">UPDATE: In this case EXPRESSION can have the value ON to evaluate VARIABLE at all time steps, OFF to not evaluate VARIABLE, or NEXT to evaluate VARIABLE at the next time step.</text:p>
+         <text:p text:style-name="P19302">UPDATE: The EXPRESSION should be a defined character string (ON, OFF or NEXT): ON to evaluate VARIABLE at all time steps, OFF to not evaluate VARIABLE, or NEXT to evaluate VARIABLE at the next time step.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
