@@ -2959,13 +2959,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P14991" style:family="paragraph" style:parent-style-name="Table">
    <style:text-properties officeooo:paragraph-rsid="162e2d38"/>
   </style:style>
-  <style:style style:name="P16048" style:family="paragraph" style:parent-style-name="_40_TextBody">
-   <style:paragraph-properties fo:break-before="page"/>
-  </style:style>
-  <style:style style:name="P16113" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="040159b7" officeooo:paragraph-rsid="08c45daa"/>
-  </style:style>
   <style:style style:name="P16636" style:family="paragraph" style:parent-style-name="Footnote">
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
@@ -4671,7 +4664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14929"><text:soft-page-break/>Table <text:sequence text:ref-name="refTable613" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.71</text:sequence>: UDQ Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">Currently, the simulator only supports field and well variable names (FU and WU) type variables and simple mathematical formula consisting of opening and closing brackets (<draw:frame draw:style-name="fr66" draw:name="Object65" text:anchor-type="as-char" svg:width="0.52cm" svg:height="0.506cm" draw:z-index="1194"><draw:object>
+    <text:p text:style-name="_40_TextBody">Currently, the simulator only supports field and well variable names (FU and WU) and simple mathematical formula consisting of opening and closing brackets (<draw:frame draw:style-name="fr66" draw:name="Object65" text:anchor-type="as-char" svg:width="0.52cm" svg:height="0.506cm" draw:z-index="1194"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
          <mrow>
@@ -4696,7 +4689,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </draw:image>
      </draw:frame>), and the plus, minus, multiply and divide operators, as illustrated in the examples below.</text:p>
     <text:p text:style-name="_40_TextBody">See also the UDADIMS, UDQDIMS and UDQPARAM keywords in the RUNSPEC section to define the dimensions for the UDQ keyword and associated variables.</text:p>
-    <text:p text:style-name="P16707"/>
     <table:table table:name="Table1203" table:style-name="Table1203">
      <table:table-column table:style-name="Table1203.A"/>
      <table:table-header-rows>
@@ -4709,7 +4701,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P16907">User Defined Quantities and also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>lists the keywords that can be used with UDA variables.</text:p>
+    <text:p text:style-name="P16907">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>lists the keywords that can be used with UDA variables.</text:p>
     <table:table table:name="Table2010" table:style-name="Table2010">
      <table:table-column table:style-name="Table2010.A" table:number-columns-repeated="6"/>
      <table:table-header-rows>
@@ -5043,9 +5035,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14329"><text:soft-page-break/>ASSIGN <text:s text:c="5"/>FUDELTA <text:s text:c="2"/>1E-10 <text:s text:c="11"/>/ <text:s text:c="3"/>Value to avoid dividing by zero errors <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14329"><text:s/></text:p>
     <text:p text:style-name="P12904">/ <text:s/>DEFINE END OF USER DEFINED QUANTITY SECTION</text:p>
-    <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P16048">The next example is a continuation of this example by showing how one can calculate the adjusted field condensate and LPG rates. Note both examples could be merged into a single UDQ definition but have been stated separately for ease of reference.</text:p>
+    <text:p text:style-name="_40_TextBody">The next example is a continuation of this example by showing how one can calculate the adjusted field condensate and LPG rates. Note both examples could be merged into a single UDQ definition but have been stated separately for ease of reference.</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- DEFINE START OF USER DEFINED QUANTITY SECTION</text:p>
     <text:p text:style-name="P12904">--</text:p>
@@ -5080,8 +5071,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13463">UDQDIMS <text:s text:c="44"/></text:p>
     <text:p text:style-name="P13463"><text:s text:c="9"/>50 <text:s text:c="5"/>25 <text:s text:c="5"/>0 <text:s text:c="5"/>50 <text:s text:c="4"/>50 <text:s text:c="4"/>0 <text:s text:c="4"/>0 <text:s text:c="4"/>0 <text:s text:c="4"/>0 <text:s text:c="3"/>0 <text:s text:c="5"/>N <text:s/>/</text:p>
     <text:p text:style-name="P13463"/>
-    <text:p text:style-name="_40_TextBody">And the SCHEDULE section part of the example is shown on the following page.</text:p>
-    <text:p text:style-name="P16113"/>
+    <text:p text:style-name="_40_TextBody">And the SCHEDULE section part of the example is shown below.</text:p>
+    <text:p text:style-name="P13463"/>
     <text:p text:style-name="P14202">SCHEDULE SECTION KEYWORDS</text:p>
     <text:p text:style-name="P12967">-------------------------- </text:p>
     <text:p text:style-name="P13160">-- </text:p>
