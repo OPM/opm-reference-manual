@@ -3052,12 +3052,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T2444" style:family="text">
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Gill Sans MT" fo:font-size="9pt" fo:background-color="transparent" loext:char-shading-value="0" style:font-name-asian="Times New Roman1" style:font-size-asian="10pt" style:font-name-complex="Times New Roman1" style:font-size-complex="10pt"/>
   </style:style>
-  <style:style style:name="T2709" style:family="text">
-   <style:text-properties style:text-underline-style="none"/>
-  </style:style>
-  <style:style style:name="T6872" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT1" fo:font-size="10pt" fo:font-style="italic" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Lucidasans1" style:font-size-complex="12pt" style:font-style-complex="italic"/>
-  </style:style>
   <style:style style:name="fr66" style:family="graphic" style:parent-style-name="Formula">
    <style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:ole-draw-aspect="1"/>
   </style:style>
@@ -4503,9 +4497,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section, <text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>An UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
-    <text:p text:style-name="P12402">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their GOR, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_MXOIL say, and then use WU_MXOIL as a UDA variable on the WCONPROD keyword for the ORAT parameter. See the <text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a><text:s/>in the SCHEDULE section for the list of keywords that can use UDA variables.</text:p>
-    <text:p text:style-name="P12090">Although t<text:span text:style-name="T2709">his keyword is </text:span>read<text:span text:style-name="T2709"> by OPM Flow </text:span>and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>An UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
+    <text:p text:style-name="P12402">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword.<text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their GOR, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_MXOIL say, and then use WU_MXOIL as a UDA variable on the WCONPROD keyword for the ORAT parameter. See <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>for the list of keywords that can use UDA variables.</text:p>
+    <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table833" table:style-name="Table833">
      <table:table-column table:style-name="Table833.A"/>
      <table:table-column table:style-name="Table833.B"/>
@@ -4720,13 +4714,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P16907">User Defined Quantities and also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>list the keywords that can be used with UDA variables.</text:p>
+    <text:p text:style-name="P16907">User Defined Quantities and also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>lists the keywords that can be used with UDA variables.</text:p>
     <table:table table:name="Table2010" table:style-name="Table2010">
      <table:table-column table:style-name="Table2010.A" table:number-columns-repeated="6"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2010.1">
        <table:table-cell table:style-name="Table2010.A1" table:number-columns-spanned="6" office:value-type="string">
-        <text:p text:style-name="P655">ACTIONX <text:s/>- User Defined Argument Keywords</text:p>
+        <text:p text:style-name="P655">UDQ - User Defined Argument Supported Keywords</text:p>
         <text:p text:style-name="P655">Schedule Section Keywords Status</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
@@ -5016,7 +5010,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14991"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>Table <text:sequence text:ref-name="refTable614" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.72</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>: ACTIONX User Defined <text:span text:style-name="T6872">Argument</text:span> Supported Keywords</text:p>
+    <text:p text:style-name="P14991"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>Table <text:sequence text:ref-name="refTable614" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.72</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>: UDQ - User Defined Argument Supported Keywords</text:p>
     <text:p text:style-name="Text_20_body"/>
     <table:table table:name="Table2144" table:style-name="Table2144">
      <table:table-column table:style-name="Table2144.A"/>
