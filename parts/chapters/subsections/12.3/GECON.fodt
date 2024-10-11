@@ -4709,6 +4709,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P96">A real positive value that defines the minimum economic surface oil production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by the AUTO variable item (9) of the WELSPECS keyword.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4740,6 +4741,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P96">A real positive value that defines the minimum economic surface gas production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by the AUTO variable item (9) of the WELSPECS keyword.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria,</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4771,6 +4773,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P96">A real positive value that defines the maximum economic surface water cut, above which an economic action will take place. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P96">Water cut is defined as:<draw:frame draw:style-name="fr1" draw:name="Object44" text:anchor-type="as-char" svg:width="2.263cm" svg:height="0.931cm" draw:z-index="0"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
@@ -4882,6 +4885,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P96">A real positive value that defines the maximum economic surface gas-oil ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4913,6 +4917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P96">A real positive value that defines the maximum economic surface water-gas ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5019,6 +5024,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P97">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P99">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
