@@ -4661,6 +4661,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P39">A real positive value that defines the maximum surface oil production rate constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4730,6 +4731,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P39">A real positive value that defines the maximum surface water production rate constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4777,6 +4779,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P39">A real positive value that defines the maximum surface gas production rate constraint</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4823,6 +4826,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P36">A real positive value that defines the maximum surface liquid (oil plus water) production rate constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4849,7 +4853,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P52">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" office:value-type="string">
-       <text:p text:style-name="P57">LIQRAT</text:p>
+       <text:p text:style-name="P57">LIQACT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P28">A defined character string that defines the action to be taken if LRAT is exceeded. LIQACT should be set to a character string described by the OILACT parameter on this record.</text:p>
@@ -4869,6 +4873,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1148.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P48">A real positive value that defines the maximum reservoir volume production rate constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5021,6 +5026,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P105">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
