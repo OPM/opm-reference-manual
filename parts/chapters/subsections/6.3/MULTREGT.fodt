@@ -4384,10 +4384,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4242">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table304.A2" office:value-type="string">
+       <text:p text:style-name="P3661">REGION</text:p>
        <text:p text:style-name="P3661">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table304.A2" office:value-type="string">
-       <text:p text:style-name="P3661">A single character that defines the ARRAY that is used to specify the regions identified by REGION1 and REGION2. <text:s/>ARRAY can have the following values:</text:p>
+       <text:p text:style-name="P3661">A single character that defines the REGION ARRAY that is used to specify the regions identified by REGION1 and REGION2. <text:s/>REGION ARRAY can have the following values:</text:p>
        <text:list xml:id="list105911461654926" text:continue-list="list105912108003076" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19114">F for the FLUXNUM array</text:p>
@@ -4416,6 +4417,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19107">If REGION1 and REGION2 are equal and positive then all the transmissibilities within that region as well as the transmissibilities between that region and all other regions will be multiplied.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19107">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18975">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>

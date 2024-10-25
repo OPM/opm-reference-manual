@@ -4295,7 +4295,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3659">REGION1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3659">A positive integer value that defines the from REGION number for which the CONSTANT in (2) should be applied.</text:p>
+       <text:p text:style-name="P3659">A positive integer value that defines the from REGION number for which the CONSTANT in (3) should be applied.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P3250">None</text:p>
@@ -4309,7 +4309,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3659">REGION2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3659">A positive integer value that defines the to REGION number for which the CONSTANT in (2) should be applied.</text:p>
+       <text:p text:style-name="P3659">A positive integer value that defines the to REGION number for which the CONSTANT in (3) should be applied.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P3250">None</text:p>
@@ -4337,7 +4337,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4236">DIR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P4236">A character string that defines the direction to apply the thermal conductivity multiplier between the two regions, should be set to one of the following X, Y, Z, XY, YX, XZ, or XYZ.</text:p>
+       <text:p text:style-name="P4236">A character string that defines the direction to apply the thermal conductivity multiplier between the two regions, should be set to one of the following X, Y, Z, XY, XZ, YZ, or XYZ.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.D7" office:value-type="string">
        <text:p text:style-name="P4239">XYZ</text:p>
@@ -4373,10 +4373,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4241">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.B7" office:value-type="string">
+       <text:p text:style-name="P3659">REGION</text:p>
        <text:p text:style-name="P3659">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1397.C7" office:value-type="string">
-       <text:p text:style-name="P3659">The ARRAY to use for applying the CONSTANT in (2) based on the ARRAY in (1). <text:s/>ARRAY can have the following values:</text:p>
+       <text:p text:style-name="P3659">The REGION ARRAY to use for applying the CONSTANT in (3) based on the regions REGION1 and REGION2 in (1 and 2). <text:s/>REGION ARRAY can have the following values:</text:p>
        <text:list xml:id="list105912254054751" text:continue-list="list105912099785144" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19112">F for the FLUXNUM array.</text:p>
@@ -4399,6 +4400,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list xml:id="list1608041977" text:style-name="L67">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19105">Where REGION1 and REGION2 should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19105">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18973">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
