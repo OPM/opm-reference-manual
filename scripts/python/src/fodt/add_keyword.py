@@ -242,7 +242,7 @@ class AddKeyword():
         appendix: bool
     ) -> None:
         self.maindir = helpers.get_maindir(maindir)
-        self.keyword_dir = helpers.get_keyword_dir(keyword_dir, self.maindir)
+        self.keyword_dir = helpers.get_keyword_dir(keyword_dir)
         self.keyword = keyword
         self.chapter = chapter
         self.section = section

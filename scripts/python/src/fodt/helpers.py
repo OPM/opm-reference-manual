@@ -48,7 +48,7 @@ def derive_maindir_from_filename(filename: str) -> Path:
         filename = filename.parent
     # This should never be reached
 
-def get_keyword_dir(keyword_dir: str, maindir: Path) -> str:
+def get_keyword_dir(keyword_dir: str|None) -> Path:
     if keyword_dir is None:
         # Default value for keyword_dir is a relative path like "../../keyword-names"
         keyword_dir = Path(f'../../{Directories.keyword_names}')
