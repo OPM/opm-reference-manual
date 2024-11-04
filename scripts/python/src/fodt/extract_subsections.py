@@ -10,7 +10,7 @@ from pathlib import Path
 
 from fodt.constants import AutomaticStyles, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, InputException, ParsingException
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.xml_helpers import XMLHelper
 
 class PartsHandler(xml.sax.handler.ContentHandler):
@@ -179,10 +179,10 @@ class ExtractSubSections():
         section: int,
     ) -> None:
         parser = xml.sax.make_parser()
-        keyword_file = Helpers.keyword_file(outputdir, chapter, section)
+        keyword_file = helpers.keyword_file(outputdir, chapter, section)
         predefined_keywords = None
         if keyword_file.exists():
-            predefined_keywords = Helpers.read_keyword_order(outputdir, chapter, section)
+            predefined_keywords = helpers.read_keyword_order(outputdir, chapter, section)
         handler = PartsHandler(outputdir, chapter, section, predefined_keywords)
         parser.setContentHandler(handler)
         try:
