@@ -4534,16 +4534,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3328">OPERATOR is a defined character string that specifies the type of operation to perform, and should be one of the following:</text:p>
        <text:list xml:id="list105922185424135" text:continue-list="list105921553895284" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19300">ASSIGN: Assigns a constant numerical value to the VARIABLE and sets the UPDATE status to OFF.</text:p>
+         <text:p text:style-name="P19300">ASSIGN: Assigns a constant numerical value to the UDQ defined by VARIABLE and sets the UPDATE status to OFF.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">DEFINE: Defines a mathematical formula and assigns it to the VARIABLE. The variable is initialized with the formula and the UPDATE status is set to ON.</text:p>
+         <text:p text:style-name="P19300">DEFINE: Defines a mathematical formula and assigns it to the UDQ defined by VARIABLE. The UDQ is initialized with the formula and the UPDATE status is set to ON.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">UNITS: Sets the reporting units for the VARIABLE. The units have no effect on the calculations. The variable must already have been defined prior to using this option.</text:p>
+         <text:p text:style-name="P19300">UNITS: Sets the reporting units for the UDQ defined by VARIABLE. The units have no effect on the calculations. The UDQ must already have been defined prior to using this option.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">UPDATE: Stipulates when the VARIABLE should be re-evaluated.</text:p>
+         <text:p text:style-name="P19300">UPDATE: Stipulates when the UDQ defined by VARIABLE should be evaluated.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4603,16 +4603,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5144">The data type for EXPRESSION is based on the OPERATOR option above, namely if OPERATOR is set to:</text:p>
        <text:list xml:id="list105922836601917" text:continue-list="list105922871205951" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19302">ASSIGN: The EXPRESSION should be a numerical value.</text:p>
+         <text:p text:style-name="P19302">ASSIGN: EXPRESSION should be a numerical value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">DEFINE: The EXPRESSSION should be a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
+         <text:p text:style-name="P19302">DEFINE: EXPRESSSION should be a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19357">UNITS: The EXPRESSION should be a character string (enclosed in quotes if it contains blanks) with a maximum length of eight characters, that declares the units that will used when reporting the VARIABLE.</text:p>
+         <text:p text:style-name="P19357">UNITS: EXPRESSION should be a character string (enclosed in quotes if it contains blanks) with a maximum length of eight characters, that declares the units that will used when reporting the UDQ defined by VARIABLE.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">UPDATE: The EXPRESSION should be a defined character string (ON, OFF or NEXT): ON to evaluate VARIABLE at all time steps, OFF to not evaluate VARIABLE, or NEXT to evaluate VARIABLE at the next time step.</text:p>
+         <text:p text:style-name="P19302">UPDATE: EXPRESSION should be a defined character string (ON, OFF or NEXT): ON to evaluate the UDQ defined by VARIABLE at all time steps, OFF to not evaluate the UDQ, or NEXT to evaluate the UDQ at the next time step.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
