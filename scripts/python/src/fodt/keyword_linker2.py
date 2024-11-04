@@ -24,6 +24,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  end /> tag instead of the full end tag </tag>
         self.start_tag_open = False
         self.in_p = False
+        self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
         self.content = io.StringIO()
         # Create a regex pattern with alternation on the keyword names
@@ -59,8 +60,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
 
     def endElement(self, name: str):
         if name == "text:p":
-            self.in_p = False
-        elif self.in_p and name == "text:a":
+            self.p_recursion -= 1
+            if self.p_recursion == 0:
+                self.in_p = False
+        elif name == "text:a":
             self.in_a = False
         if self.start_tag_open:
             self.content.write("/>")
@@ -94,8 +97,9 @@ class FileHandler(xml.sax.handler.ContentHandler):
             self.start_tag_open = False
         if name == "text:p":
             self.in_p = True
-        elif self.in_p and name == "text:a":
-            # We are already inside an anchor, and we should not insert a new text:a tag here
+            self.p_recursion += 1
+        elif name == "text:a":
+            # We are inside an anchor, and we should not insert another text:a tag here
             self.in_a = True
         self.start_tag_open = True
         self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
@@ -112,6 +116,7 @@ class InsertLinks():
             if not item.is_dir():
                 continue
             logging.info(f"Processing directory: {item}")
+            breakpoint()
             for item2 in item.iterdir():
                 if item2.suffix == f".{FileExtensions.fodt}":
                     keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
@@ -130,7 +135,6 @@ class InsertLinks():
             with open(filename, "w", encoding='utf8') as f:
                 f.write(handler.content.getvalue())
             logging.info(f"{filename.name}: Inserted {num_links_inserted} links.")
-            breakpoint()
         else:
             logging.info(f"{filename.name}: No links inserted.")
 
