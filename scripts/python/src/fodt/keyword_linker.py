@@ -45,6 +45,8 @@ class ExtractURI_Handler(xml.sax.handler.ContentHandler):
         if name == "text:h":
             if self.in_section:
                 self.in_section = False
+                # The keyword URI must be found within the text:h, since we are done parsing
+                # the tag, we raise an exception here to catch an unexpected situation.
                 raise ParsingException("Keyword name not found in document")
         elif self.in_section and name == "text:bookmark-start":
             if self.in_bookmark:
