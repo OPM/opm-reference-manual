@@ -117,6 +117,21 @@ class ProcessChapter:
         uri = ExtractURI(kw_file, keyword).extract()
         return uri
 
+def get_kw_uri_map(maindir: Path, keyword_dir: Path) -> dict[str, str]:
+    kw_uri_map = {}
+    # Assume all directories in keyword_dir are keyword directories on the form xx.yy
+    # where xx is the chapter number and yy is the section number.
+    for item1 in keyword_dir.iterdir():
+        if not item1.is_dir():
+            continue
+        chapter_str = item1.name
+        (chapter, section) = chapter_str.split(".")
+        kw_file = item1 / FileNames.keywords
+        logging.info(f"Processing chapter {chapter_str}")
+        ProcessChapter(maindir, chapter, section, kw_file, kw_uri_map).process()
+    return kw_uri_map
+
+
 # fodt-gen-kw-uri-map
 # -------------------
 #
@@ -138,21 +153,11 @@ class ProcessChapter:
 @click.command()
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
-def gen_kw_uri_map(maindir: str|None, keyword_dir: str|None) -> None:
+def gen_kw_uri_map_cli(maindir: str|None, keyword_dir: str|None) -> None:
     logging.basicConfig(level=logging.INFO)
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
     maindir = helpers.get_maindir(maindir)
-    kw_uri_map = {}
-    # Assume all directories in keyword_dir are keyword directories on the form xx.yy
-    # where xx is the chapter number and yy is the section number.
-    for item1 in keyword_dir.iterdir():
-        if not item1.is_dir():
-            continue
-        chapter_str = item1.name
-        (chapter, section) = chapter_str.split(".")
-        kw_file = item1 / FileNames.keywords
-        logging.info(f"Processing chapter {chapter_str}")
-        ProcessChapter(maindir, chapter, section, kw_file, kw_uri_map).process()
+    kw_uri_map = get_kw_uri_map(maindir, keyword_dir)
 
     with open(maindir / Directories.meta / FileNames.kw_uri_map, "w", encoding='utf8') as f:
         for kw in sorted(kw_uri_map.keys()):
@@ -160,4 +165,4 @@ def gen_kw_uri_map(maindir: str|None, keyword_dir: str|None) -> None:
     logging.info(f"Generated keyword URI map to {maindir / Directories.meta / FileNames.kw_uri_map}")
 
 if __name__ == "__main__":
-    gen_kw_uri_map()
+    gen_kw_uri_map_cli()
