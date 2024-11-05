@@ -37,9 +37,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
     def compile_regex(self) -> re.Pattern:
         # Do not include the keyword name itself in the regex pattern
         pattern = re.compile(
-            r'\b(' + 
+            r'\b(' +
             '|'.join(
-                re.escape(k) for k in self.kw_uri_map.keys() if k != self.keyword_name
+            #    re.escape(k) for k in self.kw_uri_map.keys() if k != self.keyword_name
+                re.escape(k) for k in self.kw_uri_map.keys()
                 ) +
             r')\b'
         )
