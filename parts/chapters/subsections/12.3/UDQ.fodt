@@ -2896,9 +2896,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P12090" style:family="paragraph" style:parent-style-name="_40_TextBody">
    <style:text-properties officeooo:paragraph-rsid="0ee7743f"/>
   </style:style>
-  <style:style style:name="P12402" style:family="paragraph" style:parent-style-name="_40_TextBody">
-   <style:text-properties officeooo:paragraph-rsid="1628bd58"/>
-  </style:style>
   <style:style style:name="P12904" style:family="paragraph" style:parent-style-name="_40_Example">
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
@@ -2961,13 +2958,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="P14991" style:family="paragraph" style:parent-style-name="Table">
    <style:text-properties officeooo:paragraph-rsid="162e2d38"/>
-  </style:style>
-  <style:style style:name="P16048" style:family="paragraph" style:parent-style-name="_40_TextBody">
-   <style:paragraph-properties fo:break-before="page"/>
-  </style:style>
-  <style:style style:name="P16113" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="040159b7" officeooo:paragraph-rsid="08c45daa"/>
   </style:style>
   <style:style style:name="P16636" style:family="paragraph" style:parent-style-name="Footnote">
    <style:text-properties fo:language="en" fo:country="US"/>
@@ -3051,12 +3041,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="T2444" style:family="text">
    <style:text-properties style:use-window-font-color="true" loext:opacity="0%" style:font-name="Gill Sans MT" fo:font-size="9pt" fo:background-color="transparent" loext:char-shading-value="0" style:font-name-asian="Times New Roman1" style:font-size-asian="10pt" style:font-name-complex="Times New Roman1" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="T2709" style:family="text">
-   <style:text-properties style:text-underline-style="none"/>
-  </style:style>
-  <style:style style:name="T6872" style:family="text">
-   <style:text-properties style:font-name="Gill Sans MT1" fo:font-size="10pt" fo:font-style="italic" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Lucidasans1" style:font-size-complex="12pt" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="fr66" style:family="graphic" style:parent-style-name="Formula">
    <style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:ole-draw-aspect="1"/>
@@ -4503,9 +4487,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section, <text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>An UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
-    <text:p text:style-name="P12402">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their GOR, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_MXOIL say, and then use WU_MXOIL as a UDA variable on the WCONPROD keyword for the ORAT parameter. See the <text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a><text:s/>in the SCHEDULE section for the list of keywords that can use UDA variables.</text:p>
-    <text:p text:style-name="P12090">Although t<text:span text:style-name="T2709">his keyword is </text:span>read<text:span text:style-name="T2709"> by OPM Flow </text:span>and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a UDQ section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the UDQ section keyword. <text:s/>A UDQ definition section is terminated by a “/” on a single line. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">User Defined Quantities can be output to the summmary file or used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. </text:p>
+    <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table833" table:style-name="Table833">
      <table:table-column table:style-name="Table833.A"/>
      <table:table-column table:style-name="Table833.B"/>
@@ -4534,7 +4518,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table833.C5" office:value-type="string">
        <text:p text:style-name="P3328">Define the start of UDQ Definition Section. <text:s/>This is then followed on a new line by any number of UDQ records that define the various operations to be performed using the ASSIGN, DEFINE UNITS and UPDATE sub-keywords <text:span text:style-name="T4">for the OPERAT</text:span>OR<text:span text:style-name="T4">.</text:span></text:p>
-       <text:p text:style-name="P2662"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.D5" office:value-type="string">
        <text:p text:style-name="P3484"/>
@@ -4548,22 +4531,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3328">OPERATOR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.C5" office:value-type="string">
-       <text:p text:style-name="P3328">OPERATOR is a character sting that that defines the type of operations to perform, and should be one of the following:</text:p>
+       <text:p text:style-name="P3328">OPERATOR is a defined character string that specifies the type of operation to perform, and should be one of the following:</text:p>
        <text:list xml:id="list105922185424135" text:continue-list="list105921553895284" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19300">ASSIGN: This option assigns a value to a variable and sets the UPDATE status to OFF.</text:p>
+         <text:p text:style-name="P19300">ASSIGN: Assigns a constant numerical value to the UDQ defined by VARIABLE and sets the UPDATE status to OFF.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">DEFINE: In this case a mathematical formula is defined and assigned to a variable. The variable is initialized with the formula and the UPDATE status is set to ON.</text:p>
+         <text:p text:style-name="P19300">DEFINE: Defines a mathematical formula and assigns it to the UDQ defined by VARIABLE. The UDQ is initialized with the formula and the UPDATE status is set to ON.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">UNITS: This option sets the reporting units for a defined variable and has no effect on the calculations. The variable must already have been defined prior to using this option.</text:p>
+         <text:p text:style-name="P19300">UNITS: Sets the reporting units for the UDQ defined by VARIABLE. The units have no effect on the calculations. The UDQ must already have been defined prior to using this option.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19300">UPDATE: <text:s/>Stipulates when the defined variable should be re-calculated.</text:p>
+         <text:p text:style-name="P19300">UPDATE: Stipulates when the UDQ defined by VARIABLE should be evaluated.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P2222"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.D5" office:value-type="string">
        <text:p text:style-name="P3575"/>
@@ -4621,16 +4603,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5144">The data type for EXPRESSION is based on the OPERATOR option above, namely if OPERATOR is set to:</text:p>
        <text:list xml:id="list105922836601917" text:continue-list="list105922871205951" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19302">ASSIGN: Then EXPRESSION should be a numerical value.</text:p>
+         <text:p text:style-name="P19302">ASSIGN: EXPRESSION should be a numerical value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">DEFINE: In this case a mathematical formula is defined as a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
+         <text:p text:style-name="P19302">DEFINE: EXPRESSION should be a mathematical expression. Allowable tokens for the expression are SUMMARY or UDQ variables, real numbers (can be integers or scientific notation), opening and closing brackets '(' and ')', and basic mathematical operators plus '+', minus '-', multiply '*' and divide '/'.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19357">UNITS: Then EXPRESSION should be a character string enclosed in quotes if it contains blanks, with a maximum length of eight characters, that declares the units for VARIABLE that will be used for reporting.</text:p>
+         <text:p text:style-name="P19357">UNITS: EXPRESSION should be a character string (enclosed in quotes if it contains blanks) with a maximum length of eight characters, that declares the units that will used when reporting the UDQ defined by VARIABLE.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">UPDATE: In this case EXPRESSION can have the value ON to evaluate VARIABLE at all time steps, OFF to not evaluate VARIABLE, or NEXT to evaluate VARIABLE at the next time step.</text:p>
+         <text:p text:style-name="P19302">UPDATE: EXPRESSION should be a defined character string (ON, OFF or NEXT): ON to evaluate the UDQ defined by VARIABLE at all time steps, OFF to not evaluate the UDQ, or NEXT to evaluate the UDQ at the next time step.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4682,7 +4664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14929"><text:soft-page-break/>Table <text:sequence text:ref-name="refTable613" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.71</text:sequence>: UDQ Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">Currently, the simulator only supports field and well variable names (FU and WU) type variables and simple mathematical formula consisting of opening and closing brackets (<draw:frame draw:style-name="fr66" draw:name="Object65" text:anchor-type="as-char" svg:width="0.52cm" svg:height="0.506cm" draw:z-index="1194"><draw:object>
+    <text:p text:style-name="_40_TextBody">Currently, the simulator only supports field and well variable names (FU and WU) and simple mathematical formula consisting of opening and closing brackets (<draw:frame draw:style-name="fr66" draw:name="Object65" text:anchor-type="as-char" svg:width="0.52cm" svg:height="0.506cm" draw:z-index="1194"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
          <mrow>
@@ -4707,7 +4689,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </draw:image>
      </draw:frame>), and the plus, minus, multiply and divide operators, as illustrated in the examples below.</text:p>
     <text:p text:style-name="_40_TextBody">See also the UDADIMS, UDQDIMS and UDQPARAM keywords in the RUNSPEC section to define the dimensions for the UDQ keyword and associated variables.</text:p>
-    <text:p text:style-name="P16707"/>
     <table:table table:name="Table1203" table:style-name="Table1203">
      <table:table-column table:style-name="Table1203.A"/>
      <table:table-header-rows>
@@ -4720,13 +4701,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P16907">User Defined Quantities and also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>list the keywords that can be used with UDA variables.</text:p>
+    <text:p text:style-name="P16907">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WCUT say, and then use WU_WCUT as a UDA variable on the WCONPROD keyword for the ORAT parameter. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable614">Table 12.72</text:sequence-ref><text:s/>lists the keywords that can be used with UDA variables.</text:p>
     <table:table table:name="Table2010" table:style-name="Table2010">
      <table:table-column table:style-name="Table2010.A" table:number-columns-repeated="6"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2010.1">
        <table:table-cell table:style-name="Table2010.A1" table:number-columns-spanned="6" office:value-type="string">
-        <text:p text:style-name="P655">ACTIONX <text:s/>- User Defined Argument Keywords</text:p>
+        <text:p text:style-name="P655">UDQ - User Defined Argument Supported Keywords</text:p>
         <text:p text:style-name="P655">Schedule Section Keywords Status</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
@@ -4786,7 +4767,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2451">WAPI</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2451">WINJTEMP</text:p>
+       <text:p text:style-name="P2451">WINJFCNC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
        <text:p text:style-name="P2551">CPIFACT</text:p>
@@ -4802,11 +4783,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2451">GCONPROD</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
-       <text:p text:style-name="P2451">WCONINJE</text:p>
+      <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
+       <text:p text:style-name="P2451">WCONHIST</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2451">WPOLYMER</text:p>
+       <text:p text:style-name="P2451">WINJTEMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
        <text:p text:style-name="P2551">CPIFACTL</text:p>
@@ -4823,10 +4804,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2451">GCONSALE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
-       <text:p text:style-name="P2451">WCONPROD</text:p>
+       <text:p text:style-name="P2451">WCONINJE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2451">WSALT</text:p>
+       <text:p text:style-name="P2451">WPOLYMER</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2552"/>
@@ -4843,10 +4824,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2451">GCONSUMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
-       <text:p text:style-name="P2451">WECON</text:p>
+       <text:p text:style-name="P2451">WCONPROD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2451">WSOLVENT</text:p>
+       <text:p text:style-name="P2451">WSALT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2552"/>
@@ -4862,11 +4843,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
        <text:p text:style-name="P2451">GECON</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">WECONCMF</text:p>
+      <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
+       <text:p text:style-name="P2451">WECON</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">WSURFACT</text:p>
+      <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
+       <text:p text:style-name="P2451">WSOLVENT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2552"/>
@@ -4883,10 +4864,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2451">GRUPFUEL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">WELDRAW</text:p>
+       <text:p text:style-name="P2451">WECONCMF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">WTADD</text:p>
+       <text:p text:style-name="P2451">WSURFACT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2552"/>
@@ -4903,10 +4884,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2451">GRUPSALE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">WELLSTRE</text:p>
+       <text:p text:style-name="P2451">WELDRAW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">WTMULT</text:p>
+       <text:p text:style-name="P2451">WTADD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2552"/>
@@ -4921,6 +4902,26 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
        <text:p text:style-name="P2451">GTADD</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+       <text:p text:style-name="P2451">WELLSTRE</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+       <text:p text:style-name="P2451">WTMULT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
+       <text:p text:style-name="P2552"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2010.F4" office:value-type="string">
+       <text:p text:style-name="P2552"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table2010.1">
+      <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
+       <text:p text:style-name="P2550">10</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+       <text:p text:style-name="P2451">GTMULT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2451">WELTARG</text:p>
@@ -4937,22 +4938,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table2010.1">
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
-       <text:p text:style-name="P2550">10</text:p>
+       <text:p text:style-name="P2550">11</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451">GTMULT</text:p>
+      <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2451">WFOAM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2552"/>
+       <text:p text:style-name="_40_Table_20_Contents"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2552"/>
+       <text:p text:style-name="_40_Table_20_Contents"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.F4" office:value-type="string">
-       <text:p text:style-name="P2552"/>
+       <text:p text:style-name="_40_Table_20_Contents"/>
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
@@ -4985,7 +4986,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2551">WSEGTABL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="P2552"/>
+       <text:p text:style-name="P2551">WSEGVALV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2552"/>
@@ -5016,7 +5017,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14991"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>Table <text:sequence text:ref-name="refTable614" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.72</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>: ACTIONX User Defined <text:span text:style-name="T6872">Argument</text:span> Supported Keywords</text:p>
+    <text:p text:style-name="P14991"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>Table <text:sequence text:ref-name="refTable614" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.72</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>: UDQ - User Defined Argument Supported Keywords</text:p>
     <text:p text:style-name="Text_20_body"/>
     <table:table table:name="Table2144" table:style-name="Table2144">
      <table:table-column table:style-name="Table2144.A"/>
@@ -5054,9 +5055,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14329"><text:soft-page-break/>ASSIGN <text:s text:c="5"/>FUDELTA <text:s text:c="2"/>1E-10 <text:s text:c="11"/>/ <text:s text:c="3"/>Value to avoid dividing by zero errors <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14329"><text:s/></text:p>
     <text:p text:style-name="P12904">/ <text:s/>DEFINE END OF USER DEFINED QUANTITY SECTION</text:p>
-    <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P16048">The next example is a continuation of this example by showing how one can calculate the adjusted field condensate and LPG rates. Note both examples could be merged into a single UDQ definition but have been stated separately for ease of reference.</text:p>
+    <text:p text:style-name="_40_TextBody">The next example is a continuation of this example by showing how one can calculate the adjusted field condensate and LPG rates. Note both examples could be merged into a single UDQ definition but have been stated separately for ease of reference.</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- DEFINE START OF USER DEFINED QUANTITY SECTION</text:p>
     <text:p text:style-name="P12904">--</text:p>
@@ -5091,8 +5091,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13463">UDQDIMS <text:s text:c="44"/></text:p>
     <text:p text:style-name="P13463"><text:s text:c="9"/>50 <text:s text:c="5"/>25 <text:s text:c="5"/>0 <text:s text:c="5"/>50 <text:s text:c="4"/>50 <text:s text:c="4"/>0 <text:s text:c="4"/>0 <text:s text:c="4"/>0 <text:s text:c="4"/>0 <text:s text:c="3"/>0 <text:s text:c="5"/>N <text:s/>/</text:p>
     <text:p text:style-name="P13463"/>
-    <text:p text:style-name="_40_TextBody">And the SCHEDULE section part of the example is shown on the following page.</text:p>
-    <text:p text:style-name="P16113"/>
+    <text:p text:style-name="_40_TextBody">And the SCHEDULE section part of the example is shown below.</text:p>
+    <text:p text:style-name="P13463"/>
     <text:p text:style-name="P14202">SCHEDULE SECTION KEYWORDS</text:p>
     <text:p text:style-name="P12967">-------------------------- </text:p>
     <text:p text:style-name="P13160">-- </text:p>
