@@ -4243,7 +4243,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683886"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683886"/></text:h>
-    <text:p text:style-name="_40_TextBody">The REGDIMS keyword defines the maximum number of regions for various region arrays used in the model. Note that the maximum number of FIPNUM regions can be defined both on this keyword and the TABDIMS keyword, if it set in both locations the maximum value is used. The reason for this type of inconsistency is due to the commercial simulator evolving with time as new features were added, but at the same time having to maintain backward input deck compatibility.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a> keyword defines the maximum number of regions for various region arrays used in the model. Note that the maximum number of <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions can be defined both on this keyword and the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword, if it set in both locations the maximum value is used. The reason for this type of inconsistency is due to the commercial simulator evolving with time as new features were added, but at the same time having to maintain backward input deck compatibility.</text:p>
     <table:table table:name="Table223" table:style-name="Table223">
      <table:table-column table:style-name="Table223.A"/>
      <table:table-column table:style-name="Table223.B"/>
@@ -4273,9 +4273,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3513">NTFIP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3519">A positive integer defining the maximum number of regions in the FIPNUM region array. <text:s/>If additional sets of fluid in-place regions have been defined, as per the FIPxxxxx series of fluid in-place region keywords, then NTFIP should be set to the maximum number of regions in either the FIPNUM or FIPxxxxx associated arrays. </text:p>
-       <text:p text:style-name="P3519">Thus, if the maximum number of regions in the FIPNUM array is 12, and the maximum value in the FIPxxxxx series of arrays is 20, then 20 should be entered for NTFIP.</text:p>
-       <text:p text:style-name="P3517">Note that this parameter may also be set on the TABDIMS keyword as well. If NTFIP is set in both places, then the maximum value is used.</text:p>
+       <text:p text:style-name="P3519">A positive integer defining the maximum number of regions in the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> region array. <text:s/>If additional sets of fluid in-place regions have been defined, as per the FIPxxxxx series of fluid in-place region keywords, then NTFIP should be set to the maximum number of regions in either the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> or FIPxxxxx associated arrays. </text:p>
+       <text:p text:style-name="P3519">Thus, if the maximum number of regions in the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array is 12, and the maximum value in the FIPxxxxx series of arrays is 20, then 20 should be entered for NTFIP.</text:p>
+       <text:p text:style-name="P3517">Note that this parameter may also be set on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword as well. If NTFIP is set in both places, then the maximum value is used.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">1</text:p>
@@ -4290,7 +4290,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
        <text:p text:style-name="P3518">A positive integer defining the total maximum number of fluid in-place regions. </text:p>
-       <text:p text:style-name="P3518">The number of FIPNUM regions are defined by NTFIP. However, if additional sets of fluid in-place regions are required, as per the FIPxxxxx series of fluid in-place region keywords, then these are to be defined here by adding the number of FIPxxxxx arrays to the value NTFIP. <text:s/></text:p>
+       <text:p text:style-name="P3518">The number of <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions are defined by NTFIP. However, if additional sets of fluid in-place regions are required, as per the FIPxxxxx series of fluid in-place region keywords, then these are to be defined here by adding the number of FIPxxxxx arrays to the value NTFIP. <text:s/></text:p>
        <text:p text:style-name="P3518">So for example, if NTFIP equals five and the number of distinct FIPxxxxx regions is three, then the value to enter for NMFIPR is eight.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
@@ -4305,7 +4305,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3513">NRFREG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3514">A positive integer defining the maximum number of independent reservoir regions in the ISOLNUM region array.</text:p>
+       <text:p text:style-name="P3514">A positive integer defining the maximum number of independent reservoir regions in the <text:a xlink:href="#__RefHeading___Toc69656_3218818441">ISOLNUM</text:a> region array.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P2901">0</text:p>
@@ -4319,7 +4319,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3520">MXNFLX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3514">A positive integer defining the maximum number of flux regions in the FLUXNUM region array. MXNFLN can also be defined on the TABDIMS keywords as well. <text:s/>If MXNFLX is defined both here and on the TABDIMS keyword then the maximum value of the two is used.</text:p>
+       <text:p text:style-name="P3514">A positive integer defining the maximum number of flux regions in the <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a> region array. MXNFLN can also be defined on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keywords as well. <text:s/>If MXNFLX is defined both here and on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword then the maximum value of the two is used.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">0</text:p>
@@ -4348,7 +4348,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3513">NTCREG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3514">A positive integer defining the maximum number of regions in the COALNUM <text:s/>region array. <text:s/>This parameter is included for compatibility and should be defaulted as it is not used in OPM Flow.</text:p>
+       <text:p text:style-name="P3514">A positive integer defining the maximum number of regions in the <text:a xlink:href="#__RefHeading___Toc82393_1778172979">COALNUM</text:a> <text:s/>region array. <text:s/>This parameter is included for compatibility and should be defaulted as it is not used in OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">1</text:p>
@@ -4362,7 +4362,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3522">NOPREG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3514">A positive integer defining the maximum number of regions in the OPERNUM region array.</text:p>
+       <text:p text:style-name="P3514">A positive integer defining the maximum number of regions in the <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> region array.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">0</text:p>
@@ -4376,7 +4376,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3522">NWKDREG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3514">A positive integer defining the maximum number of real double-precision work arrays for use with the OPERATE and OPERATER keywords. This parameter is included for compatibility and should be defaulted as it is not used in OPM Flow.</text:p>
+       <text:p text:style-name="P3514">A positive integer defining the maximum number of real double-precision work arrays for use with the <text:a xlink:href="#__RefHeading___Toc99940_2023071304">OPERATE</text:a> and <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keywords. This parameter is included for compatibility and should be defaulted as it is not used in OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">0</text:p>
@@ -4390,7 +4390,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3522">NWKIREG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P5344">A positive integer defining the maximum number of integer work arrays for use with the OPERATE and OPERATER keywords. This parameter is included for compatibility and should be defaulted as it is not used in OPM Flow.</text:p>
+       <text:p text:style-name="P5344">A positive integer defining the maximum number of integer work arrays for use with the <text:a xlink:href="#__RefHeading___Toc99940_2023071304">OPERATE</text:a> and <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keywords. This parameter is included for compatibility and should be defaulted as it is not used in OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">0</text:p>
@@ -4404,7 +4404,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3522">NPLMIX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.A2" office:value-type="string">
-       <text:p text:style-name="P3514">A positive integer defining the maximum number of regions in the PLMIXNUM region array.</text:p>
+       <text:p text:style-name="P3514">A positive integer defining the maximum number of regions in the <text:a xlink:href="#__RefHeading___Toc107258_3812137098">PLMIXNUM</text:a> region array.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table223.D2" office:value-type="string">
        <text:p text:style-name="P3515">1</text:p>
@@ -4424,7 +4424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable52" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.37</text:sequence>: REGDIMS Keyword Description</text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable52" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.37</text:sequence>: <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a> Keyword Description</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683886"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683886"/></text:h>
     <text:p text:style-name="P13696">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13696">-- <text:s text:c="6"/>MAX <text:s text:c="4"/>TOTAL <text:s text:c="2"/>INDEP <text:s text:c="2"/>FLUX <text:s text:c="3"/>TRACK <text:s/>CBM <text:s text:c="3"/>OPERN <text:s/>WORK <text:s/>WORK <text:s/>POLY</text:p>
@@ -4432,7 +4432,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13696">REGDIMS <text:s text:c="72"/></text:p>
     <text:p text:style-name="P13696"><text:s text:c="9"/>9 <text:s text:c="6"/>12 <text:s text:c="5"/>1* <text:s text:c="5"/>1* <text:s text:c="5"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>1* <text:s text:c="2"/>/ <text:s text:c="3"/></text:p>
     <text:p text:style-name="P13696"><text:s text:c="12"/></text:p>
-    <text:p text:style-name="P11389">The above example defines the number of FIPNUM regions to be nine and the number of FIPxxx type of regions to be three (12 – 9), the rest of the region sizes are set to the default values. <text:s/></text:p>
+    <text:p text:style-name="P11389">The above example defines the number of <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions to be nine and the number of FIPxxx type of regions to be three (12 – 9), the rest of the region sizes are set to the default values. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody"/>
     
    </text:section>

@@ -4527,7 +4527,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P35" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683882212"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683882212"/></text:h>
-    <text:p text:style-name="_40_TextBody">The BRINE keyword activates the standard Brine Tracking model and optionally defines the water phase to have various salinities if the ECLMC keyword in the RUNSPEC section has been used to activate the Multi-Component Brine model, that allows for the water phase to have multiple water salinities. <text:s/>Note that the Multi-Component Brine model is not supported by OPM Flow.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword activates the standard Brine Tracking model and optionally defines the water phase to have various salinities if the <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section has been used to activate the Multi-Component Brine model, that allows for the water phase to have multiple water salinities. <text:s/>Note that the Multi-Component Brine model is not supported by OPM Flow.</text:p>
     <table:table table:name="Table1093" table:style-name="Table1093">
      <table:table-column table:style-name="Table1093.A"/>
      <table:table-column table:style-name="Table1093.B"/>
@@ -4559,7 +4559,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P26">SALTS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1093.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P53">An optional character vector string that defines the salts to be tracked for when the Multi-Component Brine model has been activated by the ECLMC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P53">An optional character vector string that defines the salts to be tracked for when the Multi-Component Brine model has been activated by the <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
        <text:p text:style-name="_40_Table_20_Contents">SALTS should be set to one or more of the following salt chemical formulae:</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4714,7 +4714,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table1093.A2"/>
       <table:covered-table-cell table:style-name="Table1093.B2"/>
       <table:table-cell table:style-name="Table1093.C16" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Note that the ECLMC option is currently not available in OPM Flow, so only the BRINE keyword without the optional SALT variables should be declared in the input deck.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that the <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> option is currently not available in OPM Flow, so only the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword without the optional <text:a xlink:href="#__RefHeading___Toc593214_516898843">SALT</text:a> variables should be declared in the input deck.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell table:style-name="Table1093.E2"/>
@@ -4724,7 +4724,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P71">There is no data required for this keyword if the standard Brine Tracking option is being activated and there should be no terminating “/” in this case. However, if the Multi-Component Brine Tracking option has been invoked by the ECLMC keyword, a list of SALTS must be supplied and in this case.</text:p>
+         <text:p text:style-name="P71">There is no data required for this keyword if the standard Brine Tracking option is being activated and there should be no terminating “/” in this case. However, if the Multi-Component Brine Tracking option has been invoked by the <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> keyword, a list of SALTS must be supplied and in this case.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P72">The keyword is terminated by a “/”.</text:p>
@@ -4737,15 +4737,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P29">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.6</text:sequence>: BRINE Keyword Description</text:p>
+    <text:p text:style-name="P29">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.6</text:sequence>: <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> Keyword Description</text:p>
     <text:p text:style-name="P64"/>
-    <text:p text:style-name="P64">See also the PRECSALT and VAPWAT keywords in the RUNSPEC section that activates OPM Flow’s Salt Precipitation model, and the PVTWSALT keyword in the PROPS section to define the water properties with respect to salt concentration.</text:p>
+    <text:p text:style-name="P64">See also the <text:a xlink:href="#__RefHeading___Toc332782_3149455253">PRECSALT</text:a> and <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that activates OPM Flow’s Salt Precipitation model, and the <text:a xlink:href="#__RefHeading___Toc331848_501926209">PVTWSALT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section to define the water properties with respect to salt concentration.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715589_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715589_3964674244"/></text:h>
     <text:p text:style-name="P64">The first example actives the standard Brine model and has no terminating “/”.</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
-    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIVATE STANDARD BRINE MODEL IN THE RUN</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIVATE STANDARD <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> MODEL IN THE RUN</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
-    <text:p text:style-name="_40_Example">BRINE</text:p>
+    <text:p text:style-name="_40_Example"><text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a></text:p>
     <text:p text:style-name="P50"/>
     <text:p text:style-name="P62"><text:soft-page-break/>The second example illustrates how to activate OPM Flow’s Salt Precipitation model.</text:p>
     <text:p text:style-name="P63">--</text:p>

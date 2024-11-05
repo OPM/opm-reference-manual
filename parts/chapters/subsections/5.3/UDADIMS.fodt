@@ -4265,8 +4265,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388193"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388193"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines the dimensions of the User Defined Arguments (“UDA”) used by OPM Flow that can be applied to various connection, group, and well keywords in the SCHEDULE section. UDAs are defined by the UDQ keyword that is used to specify values to be constants, SUMMARY variables, as defined in SUMMARY section, or a formula using various mathematical functions together with constants and SUMMARY variables.</text:p>
-    <text:p text:style-name="P12090">Although t<text:span text:style-name="T2709">his keyword is </text:span>read<text:span text:style-name="T2709"> by OPM Flow </text:span>and the ACTION and UDQ computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines the dimensions of the User Defined Arguments (“UDA”) used by OPM Flow that can be applied to various connection, group, and well keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. UDAs are defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword that is used to specify values to be constants, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables, as defined in <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, or a formula using various mathematical functions together with constants and <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables.</text:p>
+    <text:p text:style-name="P12090">Although t<text:span text:style-name="T2709">his keyword is </text:span>read<text:span text:style-name="T2709"> by OPM Flow </text:span>and the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table829" table:style-name="Table829">
      <table:table-column table:style-name="Table829.A"/>
      <table:table-column table:style-name="Table829.B"/>
@@ -4296,7 +4296,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3482">NMUDA</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table829.C4" office:value-type="string">
-       <text:p text:style-name="P3193">NMUDA is a positive integer that defines the number of arguments in a SCHEDULE section keyword, that are replaced by numeric UDQ values.</text:p>
+       <text:p text:style-name="P3193">NMUDA is a positive integer that defines the number of arguments in a <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keyword, that are replaced by numeric <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> values.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table829.D4" office:value-type="string">
        <text:p text:style-name="P3483">0</text:p>
@@ -4328,13 +4328,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3194">Note that MXUDA differs from NMUDA, for example:</text:p>
        <text:list xml:id="list105909189273979" text:continue-list="list105910102318963" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19085">If only the oil rate argument of, say the WCONPROD keyword is specified by a UDA, then both NMUDA and MXUDA equal one. </text:p>
+         <text:p text:style-name="P19085">If only the oil rate argument of, say the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword is specified by a UDA, then both NMUDA and MXUDA equal one. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19085">However, if a second WCONPROD uses a different UDA, then NMUDA equals two, but MXUDA would still be one. </text:p>
+         <text:p text:style-name="P19085">However, if a second <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> uses a different UDA, then NMUDA equals two, but MXUDA would still be one. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19085">Finally, if the same two distinct UDAs are used separately in two lines of WCONPROD data, then both NMUDA and MXUDA must be set to two.</text:p>
+         <text:p text:style-name="P19085">Finally, if the same two distinct UDAs are used separately in two lines of <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> data, then both NMUDA and MXUDA must be set to two.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P3194">As MXUDA’s default value is 100 then this only needs to be increased <text:s/>where the same UDA is used more than 100 times.</text:p>
@@ -4357,9 +4357,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable65" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.50</text:sequence>: UDADIMS Keyword Description</text:p>
+    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable65" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.50</text:sequence>: <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15724"/>
-    <text:p text:style-name="P11287">Note that OPM Flow has a more restricted UDQ feature set than the commercial simulator, so not all options and functions are currently available.</text:p>
+    <text:p text:style-name="P11287">Note that OPM Flow has a more restricted <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> feature set than the commercial simulator, so not all options and functions are currently available.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715631_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715631_3964674244"/></text:h>
     <text:p text:style-name="P13719">--</text:p>
     <text:p text:style-name="P13719">-- <text:s text:c="6"/>USER DEFINED ARGUMENT DIMENSIONS</text:p>

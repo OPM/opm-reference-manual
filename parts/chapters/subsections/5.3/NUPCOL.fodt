@@ -4221,8 +4221,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388132"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388132"/></text:h>
-    <text:p text:style-name="_40_TextBody">The NUPCOL keyword defines the <text:span text:style-name="T2554">maximum</text:span> number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:p>
-    <text:p text:style-name="_40_TextBody">Wells under group control may suffer from some dependency with other wells in the same group that are under group control. This may cause some oscillation in the production and injection well rates within the group. In order to avoid this, after the number Newton iterations within a time step surpasses NUPCOL, the group well rates are frozen until the time step has converged. <text:s/>Reducing the potential for well rate oscillations within the time step may result in the group targets and limits not being exactly met in this case. Increasing the value of NUPCOL to greater than the default value of 12, will improve the accuracy of the group targets and limits at the expense of computational efficiency.</text:p>
+    <text:p text:style-name="_40_TextBody">The  <text:a xlink:href="#__RefHeading___Toc100030_3115110868">NUPCOL</text:a> keyword defines the <text:span text:style-name="T2554">maximum</text:span> number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:p>
+    <text:p text:style-name="_40_TextBody">Wells under group control may suffer from some dependency with other wells in the same group that are under group control. This may cause some oscillation in the production and injection well rates within the group. In order to avoid this, after the number Newton iterations within a time step surpasses <text:a xlink:href="#__RefHeading___Toc100030_3115110868">NUPCOL</text:a>, the group well rates are frozen until the time step has converged. <text:s/>Reducing the potential for well rate oscillations within the time step may result in the group targets and limits not being exactly met in this case. Increasing the value of <text:a xlink:href="#__RefHeading___Toc100030_3115110868">NUPCOL</text:a> to greater than the default value of 12, will improve the accuracy of the group targets and limits at the expense of computational efficiency.</text:p>
     <text:p text:style-name="_40_TextBody">See also section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>on how to set various other numerical control parameters for OPM Flow.</text:p>
     <table:table table:name="Table339" table:style-name="Table339">
      <table:table-column table:style-name="Table339.A"/>
@@ -4248,7 +4248,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2915">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table339.B2" office:value-type="string">
-       <text:p text:style-name="P3502">NUPCOL</text:p>
+       <text:p text:style-name="P3502"><text:a xlink:href="#__RefHeading___Toc100030_3115110868">NUPCOL</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table339.C2" office:value-type="string">
        <text:p text:style-name="P3231">A positive integer that defines the maximum number of Newton iterations used to update well targets within a time step.</text:p>
@@ -4272,9 +4272,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14947">Table <text:sequence text:ref-name="refTable46" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.31</text:sequence>: NUPCOL Keyword Description</text:p>
+    <text:p text:style-name="P14947">Table <text:sequence text:ref-name="refTable46" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.31</text:sequence>: <text:a xlink:href="#__RefHeading___Toc100030_3115110868">NUPCOL</text:a> Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12479">See also the MINNPCOL keyword in the RUNSPEC section that sets the minimum number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. Note that MINNPCOL is an OPM Flow <text:span text:style-name="T2945">specific</text:span> keyword.</text:p>
+    <text:p text:style-name="P12479">See also the <text:a xlink:href="#__RefHeading___Toc451205_1352344891">MINNPCOL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that sets the minimum number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. Note that <text:a xlink:href="#__RefHeading___Toc451205_1352344891">MINNPCOL</text:a> is an OPM Flow <text:span text:style-name="T2945">specific</text:span> keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388132"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388132"/></text:h>
     <text:p text:style-name="P13691">--</text:p>
     <text:p text:style-name="P13691">-- <text:s text:c="6"/>DEFINE THE MAX NUMBER OF ITERATIONS TO UPDATE WELL FLOW TARGETS</text:p>
@@ -4282,7 +4282,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13691">NUPCOL <text:s text:c="73"/></text:p>
     <text:p text:style-name="P13691"><text:s text:c="9"/>12 <text:s text:c="67"/>/</text:p>
     <text:p text:style-name="P11186"/>
-    <text:p text:style-name="P11195">The above example sets the NUPCOL value to its default value of 12.</text:p>
+    <text:p text:style-name="P11195">The above example sets the <text:a xlink:href="#__RefHeading___Toc100030_3115110868">NUPCOL</text:a> value to its default value of 12.</text:p>
     <text:p text:style-name="P11195"/>
     
    </text:section>
