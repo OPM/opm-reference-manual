@@ -2754,11 +2754,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:paragraph-properties>
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="06566c1a" officeooo:paragraph-rsid="066ec48c"/>
   </style:style>
-  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <loext:graphic-properties draw:fill="none"/>
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.203cm" fo:margin-top="0.076cm" fo:margin-bottom="0.076cm" style:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false" fo:orphans="0" fo:widows="0" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent" style:shadow="none" text:number-lines="false" text:line-number="0" style:writing-mode="lr-tb"/>
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="06566c1a" officeooo:paragraph-rsid="066ec48c"/>
-  </style:style>
   <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.203cm" fo:margin-top="0.076cm" fo:margin-bottom="0.076cm" style:contextual-spacing="false" fo:orphans="0" fo:widows="0" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent" style:shadow="none" text:number-lines="false" text:line-number="0" style:writing-mode="lr-tb"/>
@@ -4863,7 +4858,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P66"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P39">A real positive value that defines the maximum surface injection rate target or constraint. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum surface injection rate target or constraint. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4896,7 +4892,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P49">RESV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P38">A real positive value that defines the maximum reservoir volume injection rate target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum reservoir volume injection rate target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4926,7 +4923,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P51">BHP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P38">A real positive value that defines the maximum bottom-hole pressure target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum bottom-hole pressure target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P53">Note the default value basically means unlimited injection or no constraint and should therefore be avoided as the BHP will result in unrealistic well potentials as well as optimistic injection forecasts for the well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4960,7 +4958,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P51">THP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table118.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P38">A real positive value that defines the maximum tubing head pressure target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum tubing head pressure target or constraint.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5124,6 +5123,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="P114">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P114">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>

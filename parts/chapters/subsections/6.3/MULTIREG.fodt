@@ -4624,9 +4624,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
        <text:p text:style-name="P3658">REGION</text:p>
+       <text:p text:style-name="P3658">NUMBER</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
-       <text:p text:style-name="P3655">REGION is a positive integer representing the region for which the CONSTANT in (2) should be applied.</text:p>
+       <text:p text:style-name="P3655">REGION NUMBER is a positive integer representing the region for which the CONSTANT in (2) should be applied.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.D2" office:value-type="string">
        <text:p text:style-name="P3647">None</text:p>
@@ -4637,10 +4638,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1932">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
+       <text:p text:style-name="P3658">REGION</text:p>
        <text:p text:style-name="P3658">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table146.A2" office:value-type="string">
-       <text:p text:style-name="P3658">The ARRAY to use for applying the CONSTANT in (2) based on the REGION in (3). <text:s/>ARRAY can have the following values:</text:p>
+       <text:p text:style-name="P3658">The REGION ARRAY to use for applying the CONSTANT in (2) based on the REGION NUMBER in (3). <text:s/>REGION ARRAY can have the following values:</text:p>
        <text:list xml:id="list105911656265534" text:continue-list="list105910354815294" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19111">F for the FLUXNUM array</text:p>
@@ -4662,7 +4664,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1458">Notes:</text:p>
        <text:list xml:id="list4140141660" text:style-name="L65">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19103">Where the REGION should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19103">Where the REGION NUMBER should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19103">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18971">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>

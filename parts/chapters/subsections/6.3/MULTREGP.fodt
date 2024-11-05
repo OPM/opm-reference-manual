@@ -4268,10 +4268,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2094">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table302.A2" office:value-type="string">
+       <text:p text:style-name="P3660">REGION</text:p>
        <text:p text:style-name="P3660">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table302.A2" office:value-type="string">
-       <text:p text:style-name="P3660">The ARRAY to use for applying the CONSTANT in (2) based on the REGION in (1). <text:s/>ARRAY can have the following values:</text:p>
+       <text:p text:style-name="P3660">The REGION ARRAY to use for applying the CONSTANT in (2) based on the REGION in (1). <text:s/>ARRAY can have the following values:</text:p>
        <text:list xml:id="list105911181623006" text:continue-list="list105912254054751" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19113">F for the FLUXNUM array.</text:p>
@@ -4294,6 +4295,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list xml:id="list2320241163" text:style-name="L68">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19106">Where the REGION should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19106">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18974">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
