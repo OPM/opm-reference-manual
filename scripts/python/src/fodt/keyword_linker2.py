@@ -24,12 +24,15 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  end /> tag instead of the full end tag </tag>
         self.start_tag_open = False
         self.in_p = False
+        self.is_example_p = []  # Stack of boolean values: If current p tag is an example
         self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
         self.content = io.StringIO()
         # Create a regex pattern with alternation on the keyword names
         self.regex = self.compile_regex()
         self.num_links_inserted = 0
+        self.office_body_found = False
+        self.example_styles = set()  # Set of paragraph styles using fixed width fonts
 
     def compile_regex(self) -> re.Pattern:
         # Do not include the keyword name itself in the regex pattern
@@ -51,20 +54,30 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # NOTE: We need to escape the content before we apply the regex pattern
         #  because it may insert tags (<text:a ...>) that should not be escaped.
         content = XMLHelper.escape(content)
-        if self.in_p and not self.in_a:
-            content = self.regex.sub(self.replace_match_function, content)
+        if self.office_body_found:
+            if self.in_p and not self.in_a:
+                if not self.is_example_p[-1]:
+                    content = self.regex.sub(self.replace_match_function, content)
         self.content.write(content)
+
+    def collect_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
+        # Collect the paragraph styles that use fixed width fonts
+        if "style:name" in attrs.getNames():
+            style_name = attrs.getValue("style:name")
+            self.example_styles.add(style_name)
 
     def endDocument(self):
         pass
 
     def endElement(self, name: str):
-        if name == "text:p":
-            self.p_recursion -= 1
-            if self.p_recursion == 0:
-                self.in_p = False
-        elif name == "text:a":
-            self.in_a = False
+        if self.office_body_found:
+            if name == "text:p":
+                self.p_recursion -= 1
+                if self.p_recursion == 0:
+                    self.in_p = False
+                self.is_example_p.pop()
+            elif name == "text:a":
+                self.in_a = False
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -95,15 +108,31 @@ class FileHandler(xml.sax.handler.ContentHandler):
         if self.start_tag_open:
             self.content.write(">")  # Close the start tag
             self.start_tag_open = False
-        if name == "text:p":
-            self.in_p = True
-            self.p_recursion += 1
-        elif name == "text:a":
-            # We are inside an anchor, and we should not insert another text:a tag here
-            self.in_a = True
+        if not self.office_body_found:
+            if name == "office:body":
+                self.office_body_found = True
+            else:
+                if name == "style:style":
+                    if "style:parent-style-name" in attrs.getNames():
+                         if attrs.getValue("style:parent-style-name") == "_40_Example":
+                            self.collect_style(attrs)
+        else:
+            if name == "text:p":
+                self.in_p = True
+                self.p_recursion += 1
+                self.update_example_stack(attrs)
+            elif name == "text:a":
+                # We are inside an anchor, and we should not insert another text:a tag here
+                self.in_a = True
         self.start_tag_open = True
         self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
+    def update_example_stack(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
+        if "text:style-name" in attrs.getNames():
+            style_name = attrs.getValue("text:style-name")
+            self.is_example_p.append(style_name in self.example_styles)
+        else:
+            self.is_example_p.append(False)
 
 class InsertLinks():
     def __init__(self, maindir: Path, kw_dir: Path, kw_uri_map: dict[str, str]) -> None:
