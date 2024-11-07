@@ -4437,9 +4437,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388271"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388271"/></text:h>
-    <text:p text:style-name="P12491">JFUNCR keyword activates Leverett-J-Function<text:note text:id="ftn119" text:note-class="footnote"><text:note-citation>119</text:note-citation><text:note-body>
-        <text:p text:style-name="P16636"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note> Saturation Table option which is a commonly used technique to normalize capillary pressure base on laboratory measured core plugs porosity and permeability values and the resulting capillary pressure data. This keyword is an extension of the JFUNC keyword in the GRID section that uses the parameters on the JFUNC keyword combined with a cell’s porosity and permeability to perform the scaling globally. <text:s/>In comparison, the JFUNCR allows for the J-Function parameters to be declared per saturation table number, resulting in greater flexibility. </text:p>
-    <text:p text:style-name="P12491">The keyword should only be used if end-point scaling is switched on using the ENDSCALE keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P12491"><text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> keyword activates Leverett-J-Function<text:note text:id="ftn119" text:note-class="footnote"><text:note-citation>119</text:note-citation><text:note-body>
+        <text:p text:style-name="P16636"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note> Saturation Table option which is a commonly used technique to normalize capillary pressure base on laboratory measured core plugs porosity and permeability values and the resulting capillary pressure data. This keyword is an extension of the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that uses the parameters on the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword combined with a cell’s porosity and permeability to perform the scaling globally. <text:s/>In comparison, the <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> allows for the J-Function parameters to be declared per saturation table number, resulting in greater flexibility. </text:p>
+    <text:p text:style-name="P12491">The keyword should only be used if end-point scaling is switched on using the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1299" table:style-name="Table1299">
      <table:table-column table:style-name="Table1299.A"/>
@@ -4490,10 +4490,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3209">A character string that defines which capillary data sets the J-Function option should be applied to, based on the following options:</text:p>
        <text:list xml:id="list105910764988080" text:continue-list="list105910512946926" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19475">WATER: apply the J-Function option to the water-oil capillary pressure data only. </text:p>
+         <text:p text:style-name="P19475"><text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a>: apply the J-Function option to the water-oil capillary pressure data only. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19475">GAS: apply the J-Function option to the gas-oil capillary pressure data only.</text:p>
+         <text:p text:style-name="P19475"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: apply the J-Function option to the gas-oil capillary pressure data only.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19493"><text:span text:style-name="T3628">BOTH: <text:s/>apply the J-Function option to the water-oil and the gas-oil capillary </text:span>pressure data. </text:p>
@@ -4514,7 +4514,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4177">OWSTEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1299.C10" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4177">A positive real number that defines oil-water surface tension used to de-normalized J-Function data entered in the PROPS section. </text:p>
+       <text:p text:style-name="P4177">A positive real number that defines oil-water surface tension used to de-normalized J-Function data entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4544,7 +4544,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4177">OGSTEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1299.C10" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4177">A positive real number that defines oil-gas surface tension used to de-normalized J-Function data entered in the PROPS section. </text:p>
+       <text:p text:style-name="P4177">A positive real number that defines oil-gas surface tension used to de-normalized J-Function data entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4758,19 +4758,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4188">PERM is a character string that sets the permeability array to be used in the transform, based on the following options:</text:p>
        <text:list xml:id="list105911761849142" text:continue-list="list105910764988080" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19475">X: use the PERMX array.</text:p>
+         <text:p text:style-name="P19475">X: use the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19475">XY: use the average of the PERMX and PERMY arrays.</text:p>
+         <text:p text:style-name="P19475">XY: use the average of the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> and <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> arrays.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19475">Y: <text:s/>use the PERMY array.</text:p>
+         <text:p text:style-name="P19475">Y: <text:s/>use the <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19477">Z: use the PERMZ array.</text:p>
+         <text:p text:style-name="P19477">Z: use the <text:a xlink:href="#__RefHeading___Toc45795_719036256">PERMZ</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19478">U: use the PERMJFUN array</text:p>
+         <text:p text:style-name="P19478">U: use the <text:a xlink:href="#__RefHeading___Toc757292_2928331029">PERMJFUN</text:a> array</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4785,7 +4785,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1449">Notes:</text:p>
        <text:list xml:id="list4030422534" text:style-name="L60">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19854">The keyword is followed by exactly NTSFUN rows of data, as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19854">The keyword is followed by exactly NTSFUN rows of data, as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19798">Each row is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4799,7 +4799,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14619">Table <text:sequence text:ref-name="refTable128" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.54</text:sequence>: JFUNCR Keyword Description</text:p>
+    <text:p text:style-name="P14619">Table <text:sequence text:ref-name="refTable128" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.54</text:sequence>: <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> Keyword Description</text:p>
     <text:p text:style-name="P11703"/>
     <text:p text:style-name="P11316"><text:span text:style-name="T93">Just like the relative permeability data capillary pressure data are measured on core plugs </text:span>with varying quality and perhaps from different reservoirs. I<text:span text:style-name="T93">t is therefore necessary to determine averaged data, before employing the data in engineering calculations. This is commonly done by using the Leverett J-function</text:span><text:note text:id="ftn120" text:note-class="footnote"><text:note-citation>120</text:note-citation><text:note-body>
        <text:p text:style-name="P16636"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note><text:span text:style-name="T93">, which is defined as:</text:span></text:p>
@@ -5406,23 +5406,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_EquationWhereList">α<text:tab/>=<text:tab/>porosity power value</text:p>
     <text:p text:style-name="_40_EquationWhereList">β<text:tab/>=<text:tab/>permeability value</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P11156">The JFUNC keyword allows the data entered as capillary pressure in the saturation tables, for example, by using the SGFN and SWFN keywords in the PROPS section to be treated as J-functions instead, and to de-normalize these curves for each active cell in the model using the options and values defined with the JFUNC keyword combined with a cells porosity and permeability values. </text:p>
+    <text:p text:style-name="P11156">The <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword allows the data entered as capillary pressure in the saturation tables, for example, by using the <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> and <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section to be treated as J-functions instead, and to de-normalize these curves for each active cell in the model using the options and values defined with the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword combined with a cells porosity and permeability values. </text:p>
     <table:table table:name="Table1305" table:style-name="Table1305">
      <table:table-column table:style-name="Table1305.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table1305.1">
        <table:table-cell table:style-name="Table1305.A1" office:value-type="string">
         <text:p text:style-name="P10305">Note</text:p>
-        <text:p text:style-name="P10323">If either the JFUNC or JFUNCR keywords are used to activate J-Function scaling then the ENDSCALE keyword in the RUNSPEC section must also be present in the input deck, in order for the dimensionless J-function values entered on the SWFN, SGFN or the SWOF, SGOF, SLGOF keywords to be re-scaled to capillary pressure data.</text:p>
-        <text:p text:style-name="P10313">Note if the ENDSCALE keyword is absent, then like the commercial simulator, <text:s/>J-Function scaling is not performed, and the values entered on the SWFN, SGFN or the SWOF, SGOF, SLGOF keywords are used as entered.</text:p>
+        <text:p text:style-name="P10323">If either the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> or <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> keywords are used to activate J-Function scaling then the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section must also be present in the input deck, in order for the dimensionless J-function values entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> or the <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keywords to be re-scaled to capillary pressure data.</text:p>
+        <text:p text:style-name="P10313">Note if the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword is absent, then like the commercial simulator, <text:s/>J-Function scaling is not performed, and the values entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> or the <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keywords are used as entered.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="_40_TextBody">See also the JFUNC keyword in the GRID section that uses the parameters on the JFUNC keyword combined with a cell’s porosity and permeability to perform the scaling globally. </text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that uses the parameters on the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword combined with a cell’s porosity and permeability to perform the scaling globally. </text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388261"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388261"/></text:h>
-    <text:p text:style-name="P11436">The example below assumes NTSFUN is equal to five on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P11436">The example below assumes NTSFUN is equal to five on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P13889">--</text:p>
     <text:p text:style-name="P13887">-- <text:s text:c="6"/>DEFINE LEVERETT J-FUNCTION PARAMETERS BY SATURATION TABLES</text:p>
     <text:p text:style-name="P13887">-- <text:s text:c="6"/>JFUN <text:s text:c="3"/>OILWAT <text:s/>GASOIL <text:s/>PORO <text:s text:c="3"/>PERM <text:s text:c="3"/>PERM <text:s text:c="37"/></text:p>
@@ -5434,7 +5434,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13888"><text:s text:c="9"/>WATER <text:s text:c="2"/>22.5 <text:s text:c="3"/>1* <text:s text:c="5"/>0.5 <text:s text:c="4"/>0.5 <text:s text:c="4"/>XY <text:s text:c="27"/>/ <text:s text:c="79"/></text:p>
     <text:p text:style-name="P13888"><text:s text:c="9"/>WATER <text:s text:c="2"/>22.5 <text:s text:c="3"/>1* <text:s text:c="5"/>0.5 <text:s text:c="4"/>0.5 <text:s text:c="4"/>XY <text:s text:c="27"/>/ <text:s text:c="79"/></text:p>
     <text:p text:style-name="P15723"/>
-    <text:p text:style-name="P11316">Here the oil-water capillary pressure data entered on the SWFN keyword in the PROPS section are treated as J-Functions, and that the J-Function should be de-normalized using an oil-water surface density of 22.5 dynes/cm, using the default power values and the average of the PERMX and PERMY values for each grid block, for all five tables. Note that since all the JFUNCR parameters are the same for all saturation tables then the JFUNC keyword could be used instead in this instance.</text:p>
+    <text:p text:style-name="P11316">Here the oil-water capillary pressure data entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section are treated as J-Functions, and that the J-Function should be de-normalized using an oil-water surface density of 22.5 dynes/cm, using the default power values and the average of the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> and <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> values for each grid block, for all five tables. Note that since all the <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> parameters are the same for all saturation tables then the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword could be used instead in this instance.</text:p>
     
    </text:section>
   </office:text>

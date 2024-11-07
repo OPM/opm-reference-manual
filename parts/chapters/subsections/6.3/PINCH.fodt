@@ -4457,7 +4457,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P32" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838819"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838819"/></text:h>
-    <text:p text:style-name="_40_TextBody">The PINCH keyword defines the parameters used to control the generation of Non-Neighbor Connections (“NNCs”) in the vertical (K) direction due to layers pinching out. This keyword is applied to all layers in the model as opposed to the PINCHREG keyword that offers more flexibility by applying the pinch-out controls to various regions in the model defined by the PINCHNUM keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword defines the parameters used to control the generation of Non-Neighbor Connections (“NNCs”) in the vertical (K) direction due to layers pinching out. This keyword is applied to all layers in the model as opposed to the <text:a xlink:href="#__RefHeading___Toc74567_718313858">PINCHREG</text:a> keyword that offers more flexibility by applying the pinch-out controls to various regions in the model defined by the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> keyword.</text:p>
     <text:p text:style-name="_40_TextBody">OPM Flow will automatically generate connections between non neighbor cells in the vertical direction based on the parameters on this keyword.</text:p>
     <table:table table:name="Table294" table:style-name="Table294">
      <table:table-column table:style-name="Table294.A"/>
@@ -4538,13 +4538,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P57">PINCHOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table294.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P64">A character string controlling the generation of pinch-outs when the MINPV keyword has been used to deactivate cells with small pore volumes. PINCHOPT can either be set to:</text:p>
+       <text:p text:style-name="P64">A character string controlling the generation of pinch-outs when the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword has been used to deactivate cells with small pore volumes. PINCHOPT can either be set to:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P90">GAP to allow the generation of NNCs across cells that have been made inactive with the MINPV keyword when the thickness is greater than PINCHTHK threshold.</text:p>
+         <text:p text:style-name="P90">GAP to allow the generation of NNCs across cells that have been made inactive with the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword when the thickness is greater than PINCHTHK threshold.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P90">NOGAP to enforce the strict adherence to the PINCHTHK threshold whether or not cells have been made inactive due to the MINPV keyword.</text:p>
+         <text:p text:style-name="P90">NOGAP to enforce the strict adherence to the PINCHTHK threshold whether or not cells have been made inactive due to the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4601,7 +4601,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P91">TOPBOT results in the pinch-out transmissibility being calculated from the half-cell Z-direction transmissibilities of the active cells on either side of the pinched-out layers.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P92">ALL results in the pinch-out transmissibility being calculated from the Z-direction transmissibilities harmonic average of all the cells between the active cells on either side of the pinched-out layers.</text:p>
+         <text:p text:style-name="P92"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> results in the pinch-out transmissibility being calculated from the Z-direction transmissibilities harmonic average of all the cells between the active cells on either side of the pinched-out layers.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4619,16 +4619,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P46">PINCHMUL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table294.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P66">A character string controlling the calculation of the pinch-out transmissibilities when adjustments have been made by the MULTZ keyword. <text:s/>PINCHMUL can either be set to:</text:p>
+       <text:p text:style-name="P66">A character string controlling the calculation of the pinch-out transmissibilities when adjustments have been made by the <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> keyword. <text:s/>PINCHMUL can either be set to:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P92">TOP results in the pinch-out transmissibility being calculated from the active cell at the top of the pinch-out. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P92">ALL results in the pinch-out transmissibility being calculated from the minimum value of the MULTZ of the active cell at the top of the pinch-out and all the inactive cells in the pinch-out vertical column.</text:p>
+         <text:p text:style-name="P92"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> results in the pinch-out transmissibility being calculated from the minimum value of the <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> of the active cell at the top of the pinch-out and all the inactive cells in the pinch-out vertical column.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P47">Note if PINCHCAL has been set equal to ALL then PINCHMUL is reset to TOP, irrespective of the entered value for PINCHMUL.</text:p>
+       <text:p text:style-name="P47">Note if PINCHCAL has been set equal to <text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> then PINCHMUL is reset to TOP, irrespective of the entered value for PINCHMUL.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4652,7 +4652,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P30">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.108</text:sequence>: PINCH Keyword Description</text:p>
+    <text:p text:style-name="P30">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.108</text:sequence>: <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> Keyword Description</text:p>
     <text:h text:style-name="P32" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838819"/><text:soft-page-break/>Examples<text:bookmark-end text:name="__RefHeading___Toc32169_370116838819"/></text:h>
     <text:p text:style-name="P26">The first example below will create NNCs between the cells above and below any cell having vertical thickness less than 0.01 in either feet or metres.</text:p>
     <text:p text:style-name="P27">--</text:p>
@@ -4663,7 +4663,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P27">-- <text:s text:c="6"/>THICKNESS <text:s text:c="2"/>NO GAP <text:s text:c="2"/>GAP <text:s text:c="4"/>CALC <text:s text:c="4"/>CALC</text:p>
     <text:p text:style-name="P27"><text:s text:c="9"/>0.01 <text:s text:c="7"/>1* <text:s text:c="6"/>1* <text:s text:c="5"/>1* <text:s text:c="6"/>1* <text:s text:c="29"/>/ </text:p>
     <text:p text:style-name="P25"/>
-    <text:p text:style-name="P83">For the second example, the MINPV keyword is used to set the minimum pore volume to 500 m3 <text:s/>(metric units) and then the PINCH keyword is invoked with PINCHGAP set equal to GAP, as follows:</text:p>
+    <text:p text:style-name="P83">For the second example, the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword is used to set the minimum pore volume to 500 m3 <text:s/>(metric units) and then the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword is invoked with PINCHGAP set equal to GAP, as follows:</text:p>
     <text:p text:style-name="P28">--</text:p>
     <text:p text:style-name="P28">-- <text:s text:c="6"/>MINIMUM PORE VOLUME FOR ACTIVE CELLS</text:p>
     <text:p text:style-name="P28">--</text:p>
@@ -4677,7 +4677,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P28">-- <text:s text:c="6"/>THICKNESS <text:s text:c="2"/>NO GAP <text:s text:c="2"/>GAP <text:s text:c="4"/>CALC <text:s text:c="4"/>CALC</text:p>
     <text:p text:style-name="P28"><text:s text:c="9"/>0.1 <text:s text:c="8"/>GAP <text:s text:c="6"/>1* <text:s text:c="4"/>1* <text:s text:c="6"/>1* <text:s text:c="29"/>/ </text:p>
     <text:p text:style-name="P85"><text:s/></text:p>
-    <text:p text:style-name="P84">In the above example the MINPV keyword will deactivate all cells with pore volumes less than 500 m3. These deactivated cells are inactive in the model and therefore are not included in the flow calculations; however, by default they will result in no-flow barriers but may not be thin enough for PINCH to create NNCs across them. <text:s/>By setting<text:span text:style-name="T19"> </text:span>PINCHGAP equal to GAP on the PINCH keyword (the default setting), then OPM Flow generates NNCs across the cells that have been deactivated by the MINPV keyword. However, in this case there may be grid blocks in the model with a pore volume greater than MINPV but a thickness less than the pinch-out threshold. These cells will not be deactivated by the PINCH keyword.</text:p>
+    <text:p text:style-name="P84">In the above example the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword will deactivate all cells with pore volumes less than 500 m3. These deactivated cells are inactive in the model and therefore are not included in the flow calculations; however, by default they will result in no-flow barriers but may not be thin enough for <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> to create NNCs across them. <text:s/>By setting<text:span text:style-name="T19"> </text:span>PINCHGAP equal to GAP on the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword (the default setting), then OPM Flow generates NNCs across the cells that have been deactivated by the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword. However, in this case there may be grid blocks in the model with a pore volume greater than <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> but a thickness less than the pinch-out threshold. These cells will not be deactivated by the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword.</text:p>
    </text:section>
   </office:text>
  </office:body>

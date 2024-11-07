@@ -4255,7 +4255,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18411" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715723_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715723_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The LX keyword defines the size of <text:s/>“representative” matrix grid blocks in the X direction via an array in dual porosity and dual permeability runs, for when the VISCD keyword has been used in the RUNSPEC section to activate the dual porosity viscous displacement option. In addition, either the DUALPORO or DUALPERM keyword should be entered in the RUNSPEC section to activate the dual porosity or dual permeability models. <text:s/>The VISCD option is used to model the viscous displacement of fluids from the matrix by the fracture pressure gradient, for when the fracture system has a more moderate permeability, and flow to and from the matrix caused by the fracture pressure gradient acts as an additional production mechanism.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a> keyword defines the size of <text:s/>“representative” matrix grid blocks in the X direction via an array in dual porosity and dual permeability runs, for when the <text:a xlink:href="#__RefHeading___Toc486166_3181922006">VISCD</text:a> keyword has been used in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the dual porosity viscous displacement option. In addition, either the <text:a xlink:href="#__RefHeading___Toc241173_1772380413">DUALPORO</text:a> or <text:a xlink:href="#__RefHeading___Toc241171_1772380413">DUALPERM</text:a> keyword should be entered in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the dual porosity or dual permeability models. <text:s/>The <text:a xlink:href="#__RefHeading___Toc486166_3181922006">VISCD</text:a> option is used to model the viscous displacement of fluids from the matrix by the fracture pressure gradient, for when the fracture system has a more moderate permeability, and flow to and from the matrix caused by the fracture pressure gradient acts as an additional production mechanism.</text:p>
     <text:p text:style-name="P10953">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1365" table:style-name="Table1365">
      <table:table-column table:style-name="Table1365.A"/>
@@ -4298,10 +4298,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2948">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1365.B3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4191">LX</text:p>
+       <text:p text:style-name="P4191"><text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1365.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4191">LX is an array of real numbers describing the “representative” cell size in the X direction for each cell in the model. </text:p>
+       <text:p text:style-name="P4191"><text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a> is an array of real numbers describing the “representative” cell size in the X direction for each cell in the model. </text:p>
        <text:p text:style-name="P4012">Repeat counts may be used, for example 10*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4329,7 +4329,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1450">Notes:</text:p>
        <text:list xml:id="list105912128110687" text:continue-list="list105909977401845" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19011">The number of entries should correspond to the NX x NY x (NZ/2) parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19011">The number of entries should correspond to the NX x NY x (NZ/2) parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18914">The keyword is terminated by a “/”.</text:p>
@@ -4343,9 +4343,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14740">Table <text:sequence text:ref-name="refTable129" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.55</text:sequence>: LX Keyword Description</text:p>
+    <text:p text:style-name="P14740">Table <text:sequence text:ref-name="refTable129" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.55</text:sequence>: <text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15387"/>
-    <text:p text:style-name="P15913">If the VISCD keyword has been used to activate the Dual Porosity Viscous Displacement option and LX has not been specified then LX is set to zero in the calculation of the viscous displacement term. See also the LY, LZ and LTOSIGMA keywords in the GRID section.</text:p>
+    <text:p text:style-name="P15913">If the <text:a xlink:href="#__RefHeading___Toc486166_3181922006">VISCD</text:a> keyword has been used to activate the Dual Porosity Viscous Displacement option and <text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a> has not been specified then <text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a> is set to zero in the calculation of the viscous displacement term. See also the <text:a xlink:href="#__RefHeading___Toc499451_3181922006">LY</text:a>, <text:a xlink:href="#__RefHeading___Toc499453_3181922006">LZ</text:a> and <text:a xlink:href="#__RefHeading___Toc528401_3181922006">LTOSIGMA</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
     <text:p text:style-name="P11201"/>
     <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715725_3964674244"/>Example <text:s text:c="73"/><text:bookmark-end text:name="__RefHeading___Toc715725_3964674244"/></text:h>
     <text:p text:style-name="P13822">--</text:p>
@@ -4364,7 +4364,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13890">-- <text:s text:c="6"/>DEFINE END OF INPUT BOX EDITING OF INPUT ARRAYS</text:p>
     <text:p text:style-name="P13890">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13812">ENDBOX <text:s text:c="80"/><text:s text:c="89"/></text:p>
-    <text:p text:style-name="P15196">The above example defines a subset of the grid and the size of the “representative” matrix cells in the X direction to 10.0 ft.; <text:s/>after which the ENDBOX keyword resets the input to be the full grid.</text:p>
+    <text:p text:style-name="P15196">The above example defines a subset of the grid and the size of the “representative” matrix cells in the X direction to 10.0 ft.; <text:s/>after which the <text:a xlink:href="#__RefHeading___Toc99903_2023071304">ENDBOX</text:a> keyword resets the input to be the full grid.</text:p>
     
    </text:section>
   </office:text>

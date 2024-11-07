@@ -4263,7 +4263,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18422" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc296623_15761773882"/>Description<text:bookmark-end text:name="__RefHeading___Toc296623_15761773882"/></text:h>
-    <text:p text:style-name="_40_TextBody">The MULTREGD keyword multiplies the diffusivity between two regions by a constant. The region number array can be FLUXNUM, MULTNUM or OPERNUM and these arrays must be defined and be available before the MULTREGD keyword is read by the simulator. The constant should be a real number. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc329394_1841740821">MULTREGD</text:a> keyword multiplies the diffusivity between two regions by a constant. The region number array can be <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> or <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> and these arrays must be defined and be available before the <text:a xlink:href="#__RefHeading___Toc329394_1841740821">MULTREGD</text:a> keyword is read by the simulator. The constant should be a real number. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. </text:p>
     <table:table table:name="Table1395" table:style-name="Table1395">
      <table:table-column table:style-name="Table1395.A"/>
@@ -4351,18 +4351,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4233">A character string that defines the type of connections the diffusivity multiplier should be applied to, should be one of the following:</text:p>
        <text:list xml:id="list105911559142812" text:continue-list="list105911656265534" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19253">NNC – Only apply the diffusivity multiplier between REGION1 and REGION2 to non-neighbor connections.</text:p>
+         <text:p text:style-name="P19253"><text:a xlink:href="#__RefHeading___Toc63285_718313858">NNC</text:a> – Only apply the diffusivity multiplier between REGION1 and REGION2 to non-neighbor connections.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19253">NONNC – Do not apply the diffusivity multiplier between REGION1 and REGION2 to non-neighbor connections.</text:p>
+         <text:p text:style-name="P19253"><text:a xlink:href="#__RefHeading___Toc77075_4106839650">NONNC</text:a> – Do not apply the diffusivity multiplier between REGION1 and REGION2 to non-neighbor connections.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19253">ALL - Apply the diffusivity multiplier between REGION1 and REGION2 to all connections.</text:p>
+         <text:p text:style-name="P19253"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> - Apply the diffusivity multiplier between REGION1 and REGION2 to all connections.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
       <table:table-cell table:style-name="Table1395.D7" office:value-type="string">
-       <text:p text:style-name="P4231">ALL</text:p>
+       <text:p text:style-name="P4231"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1395.2">
@@ -4377,13 +4377,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3659">The REGION ARRAY to use for applying the CONSTANT in (3) based on the regions REGION1 and REGION2 in (1 and 2). <text:s/>REGION ARRAY can have the following values:</text:p>
        <text:list xml:id="list105912015054820" text:continue-list="list105911559142812" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19112">F for the FLUXNUM array</text:p>
+         <text:p text:style-name="P19112">F for the <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a> array</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19112">M for the MULTNUM array</text:p>
+         <text:p text:style-name="P19112">M for the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19112">O for the OPERNUM array</text:p>
+         <text:p text:style-name="P19112">O for the <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> array</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4396,7 +4396,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1462">Notes:</text:p>
        <text:list xml:id="list2425202354" text:style-name="L66">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19104">Where REGION1 and REGION2 should be less than or equal to the maximum number of regions as defined on the REGDIMS keyword for the FIPNUM and OPERNUM arrays or the GRIDOPTS keyword for the MULTNUM array in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19104">Where REGION1 and REGION2 should be less than or equal to the maximum number of regions as defined on the <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a> keyword for the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> and <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> arrays or the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword for the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19104">If REGION1 is defaulted then the diffusivities between REGION2 and all other regions will be multiplied. Similarly, if REGION2 is defaulted then the diffusivities between REGION1 and all other regions will be multiplied. If both REGION1 and REGION2 are defaulted then the diffusivities between all pairs of regions will be multiplied.</text:p>
@@ -4408,7 +4408,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19104">If the same combination of REGION1 and REGION2 is repeated then only the latest multiplier will be used regardless of whether the REGION ARRAY specified is the the same or not.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19104">If the GRIDOPTS keyword is not present in the RUNSPEC section or if the GRIDOPTS keyword is present but the maximum number of MULTNUM regions (NRMULT) equals zero then REGION ARRAY will default to F for the FLUXNUM array.</text:p>
+         <text:p text:style-name="P19104">If the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword is not present in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section or if the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword is present but the maximum number of <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> regions (NRMULT) equals zero then REGION ARRAY will default to F for the <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18972">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
@@ -4420,7 +4420,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14683">Table <text:sequence text:ref-name="refTable150" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.76</text:sequence>: MULTREGD Keyword Description</text:p>
+    <text:p text:style-name="P14683">Table <text:sequence text:ref-name="refTable150" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.76</text:sequence>: <text:a xlink:href="#__RefHeading___Toc329394_1841740821">MULTREGD</text:a> Keyword Description</text:p>
     <text:p text:style-name="P11440"/>
     <text:h text:style-name="P18701" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5737_37011683882111"/>Example<text:bookmark-end text:name="__RefHeading___Toc5737_37011683882111"/></text:h>
     <text:p text:style-name="P13904">-- <text:s text:c="80"/></text:p>
@@ -4432,7 +4432,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13904"><text:s text:c="6"/>1* <text:s text:c="6"/>1* <text:s text:c="6"/>1.05 <text:s text:c="3"/>1* <text:s text:c="4"/>&apos;ALL&apos; <text:s text:c="2"/>M <text:s text:c="10"/>/ ALL REGIONS <text:s text:c="10"/></text:p>
     <text:p text:style-name="P13904">/ <text:s text:c="171"/></text:p>
     <text:p text:style-name="P13228"><text:s text:c="198"/></text:p>
-    <text:p text:style-name="P15191">The above example multiplies the diffusivities between all the MULTNUM regions by 1.05 in all directions and for all connections types.</text:p>
+    <text:p text:style-name="P15191">The above example multiplies the diffusivities between all the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> regions by 1.05 in all directions and for all connections types.</text:p>
     <text:p text:style-name="P15191"/>
     
    </text:section>

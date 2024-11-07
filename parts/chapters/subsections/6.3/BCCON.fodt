@@ -4440,8 +4440,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P37" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715653_39646742441"/>Description<text:bookmark-end text:name="__RefHeading___Toc715653_39646742441"/></text:h>
-    <text:p text:style-name="_40_TextBody">The BCCON keyword defines the grid connections for the boundary conditions.</text:p>
-    <text:p text:style-name="_40_TextBody">Together the BCCON and BCPROP keywords define the boundary conditions for the model, and can be used to set boundary conditions for when external influx or efflux volumes are influencing the reservoir pressure and production history. For example, when the average reservoir pressure remains constant throughout the production period due to water influx, or gas migration from an external source. <text:s text:c="3"/></text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#REF_HEADING_KEYWORD_BCCON">BCCON</text:a> keyword defines the grid connections for the boundary conditions.</text:p>
+    <text:p text:style-name="_40_TextBody">Together the <text:a xlink:href="#REF_HEADING_KEYWORD_BCCON">BCCON</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_BCPROP">BCPROP</text:a> keywords define the boundary conditions for the model, and can be used to set boundary conditions for when external influx or efflux volumes are influencing the reservoir pressure and production history. For example, when the average reservoir pressure remains constant throughout the production period due to water influx, or gas migration from an external source. <text:s text:c="3"/></text:p>
     <table:table table:name="Table2228" table:style-name="Table2228">
      <table:table-column table:style-name="Table2228.A"/>
      <table:table-header-rows>
@@ -4625,7 +4625,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P56">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P85">Where NX, NY and NZ are the dimensions of the model as defined on the DIMENS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P85">Where NX, NY and NZ are the dimensions of the model as defined on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P86">Each record must be terminated by a “/” and the keyword is terminated by a “/&quot;.</text:p>
@@ -4639,12 +4639,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P42">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.3.12.1</text:sequence>: BCCON Keyword Description</text:p>
+    <text:p text:style-name="P42">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.3.12.1</text:sequence>: <text:a xlink:href="#REF_HEADING_KEYWORD_BCCON">BCCON</text:a> Keyword Description</text:p>
     <text:p text:style-name="P44"/>
-    <text:p text:style-name="P44"><text:soft-page-break/>See also the AQUFLUX keyword that is supported by OPM Flow in both the SOLUTION and SCHEDULE sections, to define a constant flux analytical aquifer.</text:p>
+    <text:p text:style-name="P44"><text:soft-page-break/>See also the <text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a> keyword that is supported by OPM Flow in both the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> and <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> sections, to define a constant flux analytical aquifer.</text:p>
     <text:p text:style-name="P44"/>
-    <text:p text:style-name="P73">If the BCCON and BCPROP keywords are not present in the input deck, then the boundary conditions for the model are set to be no flow, which is the normal behavior in both OPM Flow and the commercial simulator.</text:p>
-    <text:p text:style-name="P79">The BC keyword has been replaced by the BCCON and BCPROP keywords.</text:p>
+    <text:p text:style-name="P73">If the <text:a xlink:href="#REF_HEADING_KEYWORD_BCCON">BCCON</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_BCPROP">BCPROP</text:a> keywords are not present in the input deck, then the boundary conditions for the model are set to be no flow, which is the normal behavior in both OPM Flow and the commercial simulator.</text:p>
+    <text:p text:style-name="P79">The <text:a xlink:href="#__RefHeading___Toc42110_36712116751">BC</text:a> keyword has been replaced by the <text:a xlink:href="#REF_HEADING_KEYWORD_BCCON">BCCON</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_BCPROP">BCPROP</text:a> keywords.</text:p>
     <text:h text:style-name="P41" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715655_39646742441"/>Examples<text:bookmark-end text:name="__RefHeading___Toc715655_39646742441"/></text:h>
     <text:p text:style-name="P77">The first example shows how to set a constant pressure boundary using TYPE equal to FREE:</text:p>
     <text:p text:style-name="P38">--</text:p>
@@ -4667,8 +4667,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P38">2 <text:s text:c="7"/>FREE <text:s text:c="32"/>/ </text:p>
     <text:p text:style-name="P39">/</text:p>
     <text:p text:style-name="P39"/>
-    <text:p text:style-name="P73">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and TEMP) can be defaulted, as they are ignored when TYPE equals FREE.</text:p>
-    <text:p text:style-name="P77">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the DIMENS keyword in the RUNSPEC section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
+    <text:p text:style-name="P73">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a>) can be defaulted, as they are ignored when TYPE equals FREE.</text:p>
+    <text:p text:style-name="P77">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
     <text:p text:style-name="P38">--</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/>DEFINE BOUNDARY CONDITIONS CONNECTION (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/></text:p>

@@ -4223,7 +4223,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18439" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715835_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715835_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PORO defines the porosity for all the cells in the model via an array. The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45797_719036256">PORO</text:a> defines the porosity for all the cells in the model via an array. The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table92" table:style-name="Table92">
      <table:table-column table:style-name="Table92.A"/>
      <table:table-column table:style-name="Table92.B"/>
@@ -4265,10 +4265,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2927">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table92.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3669">PORO</text:p>
+       <text:p text:style-name="P3669"><text:a xlink:href="#__RefHeading___Toc45797_719036256">PORO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table92.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3669">PORO is an array of real positive numbers that are greater than or equal to zero and less than or equal to one that are the porosity values for each cell in the model.</text:p>
+       <text:p text:style-name="P3669"><text:a xlink:href="#__RefHeading___Toc45797_719036256">PORO</text:a> is an array of real positive numbers that are greater than or equal to zero and less than or equal to one that are the porosity values for each cell in the model.</text:p>
        <text:p text:style-name="P4022">Repeat counts may be used, for example 3000*0.15 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4296,7 +4296,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1424">Notes:</text:p>
        <text:list xml:id="list105911355647213" text:continue-list="list105912592708883" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18904">The keyword is terminated by a “/”.</text:p>
@@ -4310,9 +4310,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable186" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.112</text:sequence>: PORO Keyword Description</text:p>
+    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable186" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.112</text:sequence>: <text:a xlink:href="#__RefHeading___Toc45797_719036256">PORO</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="P15354">See also the NTG, PERMX, PERMY and PERMX keywords to fully define a grid’s properties</text:p>
+    <text:p text:style-name="P15354">See also the <text:a xlink:href="#__RefHeading___Toc33334_784232322">NTG</text:a>, <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a>, <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> and <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> keywords to fully define a grid’s properties</text:p>
     <text:h text:style-name="P18439" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715837_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715837_3964674244"/></text:h>
     <text:p text:style-name="P13552">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13552">-- <text:s text:c="3"/>DEFINE GRID BLOCK POROSITY DATA FOR ALL CELLS (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
@@ -4320,7 +4320,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13552">PORO</text:p>
     <text:p text:style-name="P13552"><text:s text:c="6"/>300*0.300 <text:s text:c="9"/><text:s text:c="55"/>/ <text:s text:c="65"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15087">The above example defines a constant porosity of 0.300 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15087">The above example defines a constant porosity of 0.300 to all 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15087"/>
     
    </text:section>

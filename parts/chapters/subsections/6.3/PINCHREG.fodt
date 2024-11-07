@@ -4353,8 +4353,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388191"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388191"/></text:h>
-    <text:p text:style-name="_40_TextBody">The PINCHREG keyword defines the parameters used to control the generation of Non-Neighbor Connections (“NNCs”) in the vertical (K) direction due to layers pinching out in combination with the PINCHNUM keyword. This allows different regions in the model to use different criteria in controlling the how pinch-outs are generated. <text:s/>The keyword should contain NRPINC records defining the criteria for each pinch-out region defined with the PINCHNUM keyword. <text:s/>NRPINC is the maximum number of PINCHNUM regions defined via the GRIDOPTS keyword in the RUNSPEC section.</text:p>
-    <text:p text:style-name="_40_TextBody">An alternative method to set the pinch-out criteria is to use the PINCH keyword, that applies the criteria to the whole model.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc74567_718313858">PINCHREG</text:a> keyword defines the parameters used to control the generation of Non-Neighbor Connections (“NNCs”) in the vertical (K) direction due to layers pinching out in combination with the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> keyword. This allows different regions in the model to use different criteria in controlling the how pinch-outs are generated. <text:s/>The keyword should contain NRPINC records defining the criteria for each pinch-out region defined with the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> keyword. <text:s/>NRPINC is the maximum number of <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> regions defined via the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody">An alternative method to set the pinch-out criteria is to use the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword, that applies the criteria to the whole model.</text:p>
     <text:p text:style-name="_40_TextBody">OPM Flow will automatically generate connections between non neighbor cells in the vertical direction based on the parameters on this keyword.</text:p>
     <table:table table:name="Table413" table:style-name="Table413">
      <table:table-column table:style-name="Table413.A"/>
@@ -4435,13 +4435,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P132">PINCHOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table413.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5566">A character string controlling the generation of pinch-outs when the MINPV keyword has been used to deactivate cells with small pore volumes. PINCHOPT can either be set to:</text:p>
+       <text:p text:style-name="P5566">A character string controlling the generation of pinch-outs when the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword has been used to deactivate cells with small pore volumes. PINCHOPT can either be set to:</text:p>
        <text:list xml:id="list105912357456212" text:continue-list="list105911407359071" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18848">GAP to allow the generation of NNCs across cells that have been made inactive with the MINPV keyword when the thickness is greater than PINCHTHK threshold.</text:p>
+         <text:p text:style-name="P18848">GAP to allow the generation of NNCs across cells that have been made inactive with the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword when the thickness is greater than PINCHTHK threshold.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18848">NOGAP to enforce the strict adherence to the PINCHTHK threshold whether or not cells have been made inactive due to the MINPV keyword.</text:p>
+         <text:p text:style-name="P18848">NOGAP to enforce the strict adherence to the PINCHTHK threshold whether or not cells have been made inactive due to the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4499,7 +4499,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P18848">TOPBOT results in the pinch-out transmissibility being calculated from the half-cell Z-direction transmissibilities of the active cells on either side of the pinched-out layers.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18848">ALL results in the pinch-out transmissibility being calculated from the Z-direction transmissibilities harmonic average of all the cells between the active cells on either side of the pinched-out layers.</text:p>
+         <text:p text:style-name="P18848"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> results in the pinch-out transmissibility being calculated from the Z-direction transmissibilities harmonic average of all the cells between the active cells on either side of the pinched-out layers.</text:p>
         </text:list-item>
        </text:list>
        <text:list xml:id="list1258723350" text:style-name="L73">
@@ -4522,16 +4522,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P113">PINCHMUL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table413.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5566">A character string controlling the calculation of the pinch-out transmissibilities when adjustments have been made by the MULTZ keyword. <text:s/>PINCHMUL can either be set to:</text:p>
+       <text:p text:style-name="P5566">A character string controlling the calculation of the pinch-out transmissibilities when adjustments have been made by the <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> keyword. <text:s/>PINCHMUL can either be set to:</text:p>
        <text:list xml:id="list105911387932776" text:continue-list="list105910985301717" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P18848">TOP results in the pinch-out transmissibility being calculated from the active cell at the top of the pinch-out. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18848">ALL results in the pinch-out transmissibility being calculated from the minimum value of the MULTZ of the active cell at the top of the pinch-out and all the inactive cells in the pinch-out vertical column.</text:p>
+         <text:p text:style-name="P18848"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> results in the pinch-out transmissibility being calculated from the minimum value of the <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> of the active cell at the top of the pinch-out and all the inactive cells in the pinch-out vertical column.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P2404">Note if PINCHCAL has been set equal to ALL then PINCHMUL is reset to TOP, irrespective of the entered value for PINCHMUL.</text:p>
+       <text:p text:style-name="P2404">Note if PINCHCAL has been set equal to <text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> then PINCHMUL is reset to TOP, irrespective of the entered value for PINCHMUL.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4544,7 +4544,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2408">Notes:</text:p>
        <text:list xml:id="list710289801" text:style-name="L74">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18854">The keyword should contain NRPINC records defining the criteria for each pinch-out region defined with the PINCHNUM keyword. <text:s/>NRPINC is the maximum number of PINCHNUM regions defined via the GRIDOPTS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P18854">The keyword should contain NRPINC records defining the criteria for each pinch-out region defined with the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> keyword. <text:s/>NRPINC is the maximum number of <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> regions defined via the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18855">Each record must be terminated by a “/” there is no keyword terminating “/”.</text:p>
@@ -4558,7 +4558,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14865">Table <text:sequence text:ref-name="refTable184" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.110</text:sequence>: PINCHREG Keyword Description</text:p>
+    <text:p text:style-name="P14865">Table <text:sequence text:ref-name="refTable184" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.110</text:sequence>: <text:a xlink:href="#__RefHeading___Toc74567_718313858">PINCHREG</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15617"/>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388191"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388191"/></text:h>
     <text:p text:style-name="P13932">--</text:p>
@@ -4571,7 +4571,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13937"><text:s text:c="9"/>1.0 <text:s text:c="8"/>1* <text:s text:c="6"/>10 <text:s text:c="5"/>1* <text:s text:c="17"/>/ PINCHNUM 02</text:p>
     <text:p text:style-name="P13937"><text:s text:c="9"/>1.0 <text:s text:c="8"/>NOGAP <text:s text:c="3"/>20 <text:s text:c="5"/>1* <text:s text:c="17"/>/ PINCHNUM 03</text:p>
     <text:p text:style-name="P11811"/>
-    <text:p text:style-name="P11779"><text:span text:style-name="T1533">The above example set</text:span>s <text:span text:style-name="T1533">the </text:span>default pinch-out criteria for grid blocks defined as region one via the PINCHNUM array and different values for regions two and three.<text:span text:style-name="T1533"> </text:span></text:p>
+    <text:p text:style-name="P11779"><text:span text:style-name="T1533">The above example set</text:span>s <text:span text:style-name="T1533">the </text:span>default pinch-out criteria for grid blocks defined as region one via the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> array and different values for regions two and three.<text:span text:style-name="T1533"> </text:span></text:p>
     <text:p text:style-name="P11812"/>
     <text:p text:style-name="P11812"/>
     

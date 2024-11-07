@@ -4241,7 +4241,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715663_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715663_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">COORD defines a set of coordinate lines or pillars for a reservoir grid via an array. <text:s/>A total of 6 x (NX+1) x (NY+1) values must be specified for each coordinate data set (or reservoir). For multiple reservoirs, where <text:s/>NUMRES is greater than one, there must be 6 x (NX+1) x (NY+1) x NUMRES values. In OPM Flow NUMRES can only be set to one.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45757_719036256">COORD</text:a> defines a set of coordinate lines or pillars for a reservoir grid via an array. <text:s/>A total of 6 x (NX+1) x (NY+1) values must be specified for each coordinate data set (or reservoir). For multiple reservoirs, where <text:s/><text:a xlink:href="#__RefHeading___Toc81021_4106839650">NUMRES</text:a> is greater than one, there must be 6 x (NX+1) x (NY+1) x <text:a xlink:href="#__RefHeading___Toc81021_4106839650">NUMRES</text:a> values. In OPM Flow <text:a xlink:href="#__RefHeading___Toc81021_4106839650">NUMRES</text:a> can only be set to one.</text:p>
     <text:p text:style-name="_40_TextBody">For Cartesian geometry, each line is defined by the (x, y, z) coordinates of two distinct points on the line. The lines are entered with I cycling fastest then J. <text:s/>For radial geometry, each line is defined by the (r, theta, z) coordinates of two distinct points on the line. The lines are entered with R cycling fastest then THETA. </text:p>
     <text:p text:style-name="_40_TextBody">The keyword can only be used with Irregular Corner-Point Grids.</text:p>
     <table:table table:name="Table139" table:style-name="Table139">
@@ -4390,7 +4390,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19239">THETA values are in degrees for all units.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17237">Regular Cartesian and Radial grid keywords cannot be used with this keyword, that is: DR, DRV, DTHETA, DTHETAV, DX, DXV, DY, DYV, DZ, INRAD, <text:s/>and TOPS. </text:p>
+         <text:p text:style-name="P17237">Regular Cartesian and Radial grid keywords cannot be used with this keyword, that is: <text:a xlink:href="#__RefHeading___Toc113051_2066951158">DR</text:a>, <text:a xlink:href="#__RefHeading___Toc91991_705534506">DRV</text:a>, <text:a xlink:href="#__RefHeading___Toc120096_2066951158">DTHETA</text:a>, <text:a xlink:href="#__RefHeading___Toc19322_3701168388">DTHETAV</text:a>, <text:a xlink:href="#__RefHeading___Toc92905_705534506">DX</text:a>, <text:a xlink:href="#__RefHeading___Toc55931_3701168388">DXV</text:a>, <text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a>, <text:a xlink:href="#__RefHeading___Toc55933_3701168388">DYV</text:a>, <text:a xlink:href="#__RefHeading___Toc45769_719036256">DZ</text:a>, <text:a xlink:href="#__RefHeading___Toc19324_3701168388">INRAD</text:a>, <text:s/>and <text:a xlink:href="#__RefHeading___Toc55283_3701168388">TOPS</text:a>. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17238">The keyword is terminated by a “/”.</text:p>
@@ -4404,9 +4404,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable88" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.14</text:sequence>: COORD Keyword Description</text:p>
+    <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable88" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.14</text:sequence>: <text:a xlink:href="#__RefHeading___Toc45757_719036256">COORD</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="P15296">See also the SPECGRID, COORDSYS and ZCORN keywords to fully define an Irregular Corner-Point Grid.</text:p>
+    <text:p text:style-name="P15296">See also the SPECGRID, <text:a xlink:href="#__RefHeading___Toc45759_719036256">COORDSYS</text:a> and <text:a xlink:href="#__RefHeading___Toc45757_7190362561">ZCORN</text:a> keywords to fully define an Irregular Corner-Point Grid.</text:p>
     <text:p text:style-name="P15296"/>
     <text:h text:style-name="P18692" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715665_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715665_3964674244"/></text:h>
     <text:p text:style-name="P13598">--</text:p>
@@ -4430,7 +4430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13598"><text:s text:c="9"/>300 <text:s text:c="3"/>400 <text:s text:c="2"/>1000 <text:s text:c="3"/>300 <text:s text:c="3"/>400 <text:s text:c="2"/>5000 </text:p>
     <text:p text:style-name="P13598">/ <text:s text:c="93"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15139">The above example defines vertical coordinate lines for a regular 3 by 2 grid with DX equal to 100 and DY equal to 200.</text:p>
+    <text:p text:style-name="P15139">The above example defines vertical coordinate lines for a regular 3 by 2 grid with <text:a xlink:href="#__RefHeading___Toc92905_705534506">DX</text:a> equal to 100 and <text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a> equal to 200.</text:p>
     
    </text:section>
   </office:text>

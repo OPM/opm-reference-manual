@@ -4223,7 +4223,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18394" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715687_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715687_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">DY defines the size of all grid blocks in the Y direction via an array for each cell in a Cartesian Regular Grid model.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a> defines the size of all grid blocks in the Y direction via an array for each cell in a Cartesian Regular Grid model.</text:p>
     <table:table table:name="Table9" table:style-name="Table9">
      <table:table-column table:style-name="Table9.A"/>
      <table:table-column table:style-name="Table9.B"/>
@@ -4265,10 +4265,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2932">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table9.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3917">DY</text:p>
+       <text:p text:style-name="P3917"><text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table9.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3202">DY is an array of real numbers describing the cell size in the Y direction for each cell in the model. </text:p>
+       <text:p text:style-name="P3202"><text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a> is an array of real numbers describing the cell size in the Y direction for each cell in the model. </text:p>
        <text:p text:style-name="P4001">Repeat counts may be used, for example 10*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4296,7 +4296,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1432">Notes:</text:p>
        <text:list xml:id="list105910508332549" text:continue-list="list105910914595057" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18904">The keyword is terminated by a “/”.</text:p>
@@ -4310,9 +4310,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14850">Table <text:sequence text:ref-name="refTable102" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.28</text:sequence>: DY Keyword Description</text:p>
+    <text:p text:style-name="P14850">Table <text:sequence text:ref-name="refTable102" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.28</text:sequence>: <text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15610"/>
-    <text:p text:style-name="P15280">See also the DX, DZ and TOPS keywords to fully define a Cartesian Regular Grid.</text:p>
+    <text:p text:style-name="P15280">See also the <text:a xlink:href="#__RefHeading___Toc92905_705534506">DX</text:a>, <text:a xlink:href="#__RefHeading___Toc45769_719036256">DZ</text:a> and <text:a xlink:href="#__RefHeading___Toc55283_3701168388">TOPS</text:a> keywords to fully define a Cartesian Regular Grid.</text:p>
     <text:h text:style-name="P18394" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715689_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715689_3964674244"/></text:h>
     <text:p text:style-name="P13455">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13455">-- <text:s text:c="7"/>DEFINE GRID BLOCK Y DIRECTION CELL SIZE (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
@@ -4320,7 +4320,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13455">DY</text:p>
     <text:p text:style-name="P13811"><text:s text:c="10"/>300*1000 <text:s text:c="61"/>/ <text:s text:c="80"/><text:s text:c="89"/></text:p>
     <text:p text:style-name="P15203"/>
-    <text:p text:style-name="P15203">The above example defines the size of the cells in the Y direction based on 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15203">The above example defines the size of the cells in the Y direction based on 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     
    </text:section>
   </office:text>

@@ -4226,7 +4226,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18435" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715821_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715821_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PERMX defines the permeability in the X direction for all the cells in the model via an array. The keyword can be used for all grid types, except for the Radial Grid geometry.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> defines the permeability in the X direction for all the cells in the model via an array. The keyword can be used for all grid types, except for the Radial Grid geometry.</text:p>
     <table:table table:name="Table94" table:style-name="Table94">
      <table:table-column table:style-name="Table94.A"/>
      <table:table-column table:style-name="Table94.B"/>
@@ -4268,10 +4268,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2966">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table94.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3666">PERMX</text:p>
+       <text:p text:style-name="P3666"><text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table94.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3666">PERMX is an array of real positive numbers assigning the permeability in the X direction to each cell in the model. </text:p>
+       <text:p text:style-name="P3666"><text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> is an array of real positive numbers assigning the permeability in the X direction to each cell in the model. </text:p>
        <text:p text:style-name="P4025">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4299,7 +4299,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1474">Notes:</text:p>
        <text:list xml:id="list105911534343481" text:continue-list="list105911715658393" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18904">The keyword is terminated by a “/”.</text:p>
@@ -4313,9 +4313,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14863">Table <text:sequence text:ref-name="refTable179" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.105</text:sequence>: PERMX Keyword Description</text:p>
+    <text:p text:style-name="P14863">Table <text:sequence text:ref-name="refTable179" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.105</text:sequence>: <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> Keyword Description</text:p>
     <text:p text:style-name="P15615"/>
-    <text:p text:style-name="P15299">See also the PERMY and PERMZ keywords to fully define the permeability for the model.</text:p>
+    <text:p text:style-name="P15299">See also the <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> and <text:a xlink:href="#__RefHeading___Toc45795_719036256">PERMZ</text:a> keywords to fully define the permeability for the model.</text:p>
     <text:h text:style-name="P18435" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715823_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715823_3964674244"/></text:h>
     <text:p text:style-name="P13845">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13845">-- <text:s text:c="6"/>DEFINE GRID BLOCK PERMX DATA FOR ALL CELLS (BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
@@ -4323,7 +4323,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13845">PERMX</text:p>
     <text:p text:style-name="P13845"><text:s text:c="9"/>100*500.0 <text:s text:c="2"/>100*50.0 <text:s text:c="2"/>100*200.0 <text:s text:c="38"/>/</text:p>
     <text:p text:style-name="P13050"/>
-    <text:p text:style-name="P15125">The above example defines the PERMX to be 500.0, 50.0, and 200.0 for the first, second and third layers in the model for all 300 cells, as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15125">The above example defines the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> to be 500.0, 50.0, and 200.0 for the first, second and third layers in the model for all 300 cells, as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15125"/>
     <text:p text:style-name="P15715"/>
     
