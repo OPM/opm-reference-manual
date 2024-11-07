@@ -35,6 +35,9 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # Set of paragraph styles using fixed width fonts, intialized with the
         #  "_40_Example" style that is used indirectly by the other example styles
         self.example_styles = {'_40_Example'}
+        # Special span style that have been manually inserted to indicate that
+        # a word should not be treated as a keyword and therefore should not be linked
+        self.not_keyword = False
 
     def compile_regex(self) -> re.Pattern:
         # Also include the keyword name itself in the regex pattern, see discussion
@@ -58,7 +61,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  because it may insert tags (<text:a ...>) that should not be escaped.
         content = XMLHelper.escape(content)
         if self.office_body_found:
-            if self.in_p and not self.in_a:
+            if self.in_p and (not self.in_a) and (not self.not_keyword):
                 if not self.is_example_p[-1]:
                     content = self.regex.sub(self.replace_match_function, content)
         self.content.write(content)
@@ -81,6 +84,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.is_example_p.pop()
             elif name == "text:a":
                 self.in_a = False
+            elif name == "text:span":
+                self.not_keyword = False  # This cannot be nested
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -127,6 +132,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
             elif name == "text:a":
                 # We are inside an anchor, and we should not insert another text:a tag here
                 self.in_a = True
+            elif name == "text:span":
+                if "text:style-name" in attrs.getNames():
+                    style_name = attrs.getValue("text:style-name")
+                    if style_name == "NOT_KEYWORD":
+                        self.not_keyword = True
         self.start_tag_open = True
         self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
