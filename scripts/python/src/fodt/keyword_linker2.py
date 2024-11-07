@@ -64,7 +64,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         if self.office_body_found:
             if self.in_p and (not self.in_a) and (not self.not_keyword):
                 if not self.is_example_p[-1]:
-                    content = self.regex.sub(self.replace_match_function, content)
+                    if not self.is_table_caption(content):
+                        content = self.regex.sub(self.replace_match_function, content)
         self.content.write(content)
 
     def collect_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
@@ -98,6 +99,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
 
     def get_num_links_inserted(self) -> int:
         return self.num_links_inserted
+
+    def is_table_caption(self, content: str) -> bool:
+        # Check if the content is a specific table caption, in that case we should not insert links
+        return re.search(rf'{re.escape(self.keyword_name)} Keyword Description', content)
 
     def replace_match_function(self, match: re.Match) -> str:
         keyword = match.group(0)
