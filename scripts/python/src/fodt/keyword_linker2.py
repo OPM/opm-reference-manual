@@ -43,6 +43,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # Also include the keyword name itself in the regex pattern, see discussion
         # https://github.com/OPM/opm-reference-manual/pull/410
         pattern = re.compile(
+            r'(?<![.\"])'  # Negative lookbehind for a dot or a double quote
             r'\b(' +
             '|'.join(
                 re.escape(k) for k in self.kw_uri_map.keys()
