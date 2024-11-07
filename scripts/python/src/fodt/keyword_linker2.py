@@ -32,14 +32,16 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.regex = self.compile_regex()
         self.num_links_inserted = 0
         self.office_body_found = False
-        self.example_styles = set()  # Set of paragraph styles using fixed width fonts
+        # Set of paragraph styles using fixed width fonts, intialized with the
+        #  "_40_Example" style that is used indirectly by the other example styles
+        self.example_styles = {'_40_Example'}
 
     def compile_regex(self) -> re.Pattern:
-        # Do not include the keyword name itself in the regex pattern
+        # Also include the keyword name itself in the regex pattern, see discussion
+        # https://github.com/OPM/opm-reference-manual/pull/410
         pattern = re.compile(
             r'\b(' +
             '|'.join(
-            #    re.escape(k) for k in self.kw_uri_map.keys() if k != self.keyword_name
                 re.escape(k) for k in self.kw_uri_map.keys()
                 ) +
             r')\b'
