@@ -129,8 +129,31 @@ def get_kw_uri_map(maindir: Path, keyword_dir: Path) -> dict[str, str]:
         kw_file = item1 / FileNames.keywords
         logging.info(f"Processing chapter {chapter_str}")
         ProcessChapter(maindir, chapter, section, kw_file, kw_uri_map).process()
+    add_keyword_aliases(kw_uri_map)
     return kw_uri_map
 
+def add_keyword_aliases(kw_uri_map: dict[str, str]) -> None:
+    # Add aliases for keywords
+    for keyword in ["ENKRVD", "ENPTVD", "IKRG", "IKRGR", "IKRO", "IKRORG", "IKRORW",
+                    "IKRW", "IKRWR", "IMBNUM", "IMKRVD", "IMPTVD", "ISGCR", "ISGL",
+                    "ISGU", "ISOGCR", "ISOWCR", "ISWCR", "ISWL", "ISWU",
+                    "KRG", "KRGR", "KRNUM", "KRO", "KRORG", "KRORW", "KRW", "KRWR",
+                    "SGCR", "SGL", "SGU", "SOGCR", "SOWCR", "SWCR", "SWL", "SWU"]:
+        add_xyz_aliases(kw_uri_map, keyword)
+    for keyword in ["KRNUM"]:
+        add_rt_aliases(kw_uri_map, keyword)
+
+def add_xyz_aliases(kw_uri_map: dict[str, str], keyword: str) -> None:
+    for extension in ["X", "Y", "Z", "X-", "Y-", "Z-"]:
+        add_alias(kw_uri_map, keyword, f"{keyword}{extension}")
+
+def add_rt_aliases(kw_uri_map: dict[str, str], keyword: str) -> None:
+    for extension in ["R", "T", "R-", "T-"]:
+        add_alias(kw_uri_map, keyword, f"{keyword}{extension}")
+
+def add_alias(kw_uri_map: dict[str, str], keyword: str, alias: str) -> None:
+    uri = kw_uri_map[keyword]
+    kw_uri_map[alias] = uri
 
 # fodt-gen-kw-uri-map
 # -------------------
@@ -158,7 +181,6 @@ def gen_kw_uri_map_cli(maindir: str|None, keyword_dir: str|None) -> None:
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
     maindir = helpers.get_maindir(maindir)
     kw_uri_map = get_kw_uri_map(maindir, keyword_dir)
-
     with open(maindir / Directories.meta / FileNames.kw_uri_map, "w", encoding='utf8') as f:
         for kw in sorted(kw_uri_map.keys()):
             f.write(f"{kw} {kw_uri_map[kw]}\n")
