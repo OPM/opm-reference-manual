@@ -46,9 +46,14 @@ class FileHandler(xml.sax.handler.ContentHandler):
             r'(?<![."“])'  # Negative lookbehind for a dot or a double quote
             r'\b(' +
             '|'.join(
-                re.escape(k) for k in self.kw_uri_map.keys()
+                # Need to sort the keys by length in descending order to avoid
+                #  matching a substring of a longer keyword. See
+                # https://github.com/OPM/opm-reference-manual/pull/411#discussion_r1835446631
+                sorted((re.escape(k) for k in self.kw_uri_map.keys()), key=len, reverse=True)
                 ) +
-            r')\b'
+            # NOTE: We cannot use \b here because if the keyword ends with "-" the word boundary
+            #  \b will not match between a space and a hyphen. Instead we use a negative lookahead
+            r')(?!\w)'
         )
         return pattern
 
