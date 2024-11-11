@@ -9,7 +9,7 @@ import click
 
 from fodt.constants import ClickOptions
 from fodt.exceptions import HandlerDoneException
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.xml_handlers import GetUsedStylesHandler
 
 class GetDefinedStylesHandler(xml.sax.handler.ContentHandler):
@@ -158,9 +158,9 @@ def validate(ctx: click.Context, maindir: str, quiet: bool) -> None:
 @click.argument("keyword", type=str, required=True)
 @click.pass_context
 def subsection(ctx: click.Context, section: str, keyword: str) -> None:
-    (chapter, section) = Helpers.split_section(section)
+    (chapter, section) = helpers.split_section(section)
     maindir = ctx.obj["MAIN_DIR"]
-    filename = Helpers.keyword_fodt_file_path(maindir, chapter, section, keyword)
+    filename = helpers.keyword_fodt_file_path(maindir, chapter, section, keyword)
     Validator(filename).validate()
 
 
@@ -169,7 +169,7 @@ def subsection(ctx: click.Context, section: str, keyword: str) -> None:
 @click.pass_context
 def chapter(ctx: click.Context, chapter: str) -> None:
     maindir = ctx.obj["MAIN_DIR"]
-    filename = Helpers.chapter_fodt_file_path(maindir, chapter)
+    filename = helpers.chapter_fodt_file_path(maindir, chapter)
     Validator(filename).validate()
 
 

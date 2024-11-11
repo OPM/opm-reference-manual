@@ -13,7 +13,7 @@ from fodt.constants import (
 )
 from fodt.automatic_styles_filter import AutomaticStylesFilter4
 from fodt.exceptions import ParsingException
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.styles_filter import StylesFilter
 from fodt.xml_helpers import XMLHelper
 
@@ -200,7 +200,7 @@ class ExtractAndRemoveSectionFromChapter:
         parser = xml.sax.make_parser()
         handler = ExtractAndRemoveHandler(self.chapter, self.section)
         parser.setContentHandler(handler)
-        fn = Helpers.chapter_fodt_file_path(self.maindir, self.chapter)
+        fn = helpers.chapter_fodt_file_path(self.maindir, self.chapter)
         parser.parse(fn)
         return (handler.get_section(), handler.get_doc(), handler.get_styles())
 
@@ -228,7 +228,7 @@ class ExtractSection:
         self.create_section_file(section_txt, styles)
 
     def write_updated_chapter(self, doc: str) -> None:
-        fn = Helpers.chapter_fodt_file_path(self.maindir, self.chapter)
+        fn = helpers.chapter_fodt_file_path(self.maindir, self.chapter)
         with open(fn, "w", encoding='utf8') as f:
             f.write(doc)
         logging.info(f"Wrote updated chapter file to {fn}.")
@@ -250,7 +250,7 @@ class ExtractSection:
 def extract_section(maindir: str, section: str) -> None:
     """Extract the appendix from a FODT file."""
     logging.basicConfig(level=logging.INFO)
-    (chapter, section) = Helpers.split_section(section)
+    (chapter, section) = helpers.split_section(section)
     logging.info(f"Extracting section {section} from chapter {chapter}.")
     extractor = ExtractSection(maindir, chapter, section)
     extractor.extract()

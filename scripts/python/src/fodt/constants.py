@@ -53,6 +53,7 @@ class FileExtensions():
 
 class FileNames():
     keywords = "keywords.txt"
+    kw_uri_map = "kw_uri_map.txt"
     main_document = "main.fodt"
     master_styles_fn = "master-styles.xml"
     office_attr_fn = "office_attrs.txt"

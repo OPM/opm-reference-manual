@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 from fodt.constants import Directories, FileNames
-from fodt.helpers import Helpers
+from fodt import helpers
 
 class TestLocateMainDirAndFilename:
     def test_locate_with_absolute_path_exists(self, tmp_path: Path) -> None:
@@ -16,7 +16,7 @@ class TestLocateMainDirAndFilename:
         filename_dir.mkdir()
         filename = filename_dir / "1.fodt"
         filename.touch()
-        result_maindir, result_filename = Helpers.locate_maindir_and_filename(
+        result_maindir, result_filename = helpers.locate_maindir_and_filename(
             str(maindir), str(filename)
         )
         assert result_maindir == maindir
@@ -34,7 +34,7 @@ class TestLocateMainDirAndFilename:
         filename = filename_dir / "1.fodt"
         filename.touch()
         with pytest.raises(FileNotFoundError) as excinfo:
-            Helpers.locate_maindir_and_filename(
+            helpers.locate_maindir_and_filename(
                 str(maindir), str(filename)
             )
         assert (f"Could not find '{FileNames.main_document}' in a directory "
@@ -55,7 +55,7 @@ class TestLocateMainDirAndFilename:
         filename_path = filename_dir / filename
         filename_path.touch()  # Create the file within maindir
         filename_abs_path = maindir / filename_path
-        result_maindir, result_filename = Helpers.locate_maindir_and_filename(
+        result_maindir, result_filename = helpers.locate_maindir_and_filename(
             str(maindir), str(filename_path)
         )
         assert result_maindir == maindir
@@ -75,7 +75,7 @@ class TestLocateMainDirAndFilename:
         filename_path.touch()  # Create the file in CWD
         maindir = tmp_path  # Some dummy path that is not the maindir
         with pytest.raises(FileNotFoundError) as excinfo:
-            Helpers.locate_maindir_and_filename(
+            helpers.locate_maindir_and_filename(
                 str(maindir), str(filename_path)
             )
         assert excinfo.match(
@@ -94,7 +94,7 @@ class TestLocateMainDirAndFilename:
         # Do not create the file, simulating a non-existent file scenario
 
         with pytest.raises(AssertionError):
-            Helpers.locate_maindir_and_filename(
+            helpers.locate_maindir_and_filename(
                 str(maindir), str(filename)
             )
 
@@ -107,7 +107,7 @@ class TestLocateMainDirFromCwd:
         mainfile = maindir / FileNames.main_document
         mainfile.touch()
         os.chdir(str(tmp_path))
-        result = Helpers.locate_maindir_from_current_dir()
+        result = helpers.locate_maindir_from_current_dir()
         assert result == maindir
 
     def test_locate_exists_as_parent(self, tmp_path: Path):
@@ -118,7 +118,7 @@ class TestLocateMainDirFromCwd:
         mainfile = maindir / FileNames.main_document
         mainfile.touch()
         os.chdir(str(maindir))
-        result = Helpers.locate_maindir_from_current_dir()
+        result = helpers.locate_maindir_from_current_dir()
         assert result == maindir
 
     def test_locate_exists_as_sibling_of_parent(self, tmp_path: Path):
@@ -132,5 +132,5 @@ class TestLocateMainDirFromCwd:
         subdir = tmp_path / "subdir"
         subdir.mkdir()
         os.chdir(str(subdir))
-        result = Helpers.locate_maindir_from_current_dir()
+        result = helpers.locate_maindir_from_current_dir()
         assert result == maindir

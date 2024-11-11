@@ -4,7 +4,7 @@ import click
 
 from pathlib import Path
 from fodt.constants import ClickOptions, Directories, TagEvent
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.xml_helpers import XMLHelper
 import xml.sax
 import xml.sax.handler

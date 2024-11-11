@@ -13,7 +13,7 @@ import click
 
 from fodt.constants import ClickOptions, Directories, FileExtensions, KeywordStatus, Regex
 from fodt.create_subdocument import CreateSubDocument3
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.remove_subsections import RemoveSubSections
 from fodt.templates import Templates
 from fodt.xml_helpers import XMLHelper
@@ -241,8 +241,8 @@ class AddKeyword():
         status: KeywordStatus,
         appendix: bool
     ) -> None:
-        self.maindir = Helpers.get_maindir(maindir)
-        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir, self.maindir)
+        self.maindir = helpers.get_maindir(maindir)
+        self.keyword_dir = helpers.get_keyword_dir(keyword_dir)
         self.keyword = keyword
         self.chapter = chapter
         self.section = section
@@ -259,16 +259,16 @@ class AddKeyword():
 
     def add_keyword(self) -> None:
         self.documentdir = Path(self.maindir) / Directories.chapters
-        keyw_list = Helpers.read_keyword_order_v2(self.keyword_dir, self.chapter, self.section)
-        #keyw_list = Helpers.read_keyword_order(self.documentdir, self.chapter, self.section)
+        keyw_list = helpers.read_keyword_order_v2(self.keyword_dir, self.chapter, self.section)
+        #keyw_list = helpers.read_keyword_order(self.documentdir, self.chapter, self.section)
         keywords = set(keyw_list)
         if self.keyword in keywords:
             logging.info(f"Keyword {self.keyword} already exists. Aborting.")
             return
         keywords.add(self.keyword)
         keyw_list = sorted(list(keywords))
-        #Helpers.write_keyword_order(self.documentdir, self.chapter, self.section, keyw_list)
-        Helpers.write_keyword_order_v2(self.keyword_dir, self.chapter, self.section, keyw_list)
+        #helpers.write_keyword_order(self.documentdir, self.chapter, self.section, keyw_list)
+        helpers.write_keyword_order_v2(self.keyword_dir, self.chapter, self.section, keyw_list)
         logging.info(f"Added keyword {self.keyword} to chapter {self.chapter}, section {self.section}.")
         return
 
@@ -296,9 +296,9 @@ class AddKeyword():
     def update_chapter_document(self) -> None:
         logging.info(f"Updating chapter document {self.chapter}.")
         filename = self.documentdir / f"{self.chapter}.{FileExtensions.fodt}"
-        source_file = Helpers.create_backup_document(filename)
+        source_file = helpers.create_backup_document(filename)
         dest_file = filename
-        replace_callback = Helpers.replace_section_callback
+        replace_callback = helpers.replace_section_callback
         # NOTE: This will remove the subsection the first time it is called, and then
         #     if it is called again (for example using add-keyword), it will remove
         #     the inserted <text:section> tag that was inserted by the first call.
@@ -369,7 +369,7 @@ def add_keyword(
     appendix: bool
 ) -> None:
     logging.basicConfig(level=logging.INFO)
-    (chapter, section) = Helpers.split_section(section)
+    (chapter, section) = helpers.split_section(section)
     try:
         status = KeywordStatus[status.upper()]
     except ValueError:
