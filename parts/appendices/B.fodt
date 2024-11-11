@@ -13520,7 +13520,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:list>
        <text:list-item>
         <text:list>
-         <text:list-item>
+         <text:list-item text:start-value="1">
           <text:p text:style-name="P1298">Added a command line argument to control the way OPM Flow treats SKIP100 and SKIP300 keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5329</text:a>). By default OPM Flow behaves like the commercial black-oil simulator. </text:p>
          </text:list-item>
          <text:list-item>
@@ -13593,7 +13593,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1298">Added support for DENAQA and VISCAQA keywords to specify parameters for calculating brine density and viscosity using Ezrokhi's method when using CO2STORE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4091" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4091</text:a>). Also added support for SALTMF to allow the initial salt concentration to be input as a mole fraction. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">Extended the tracer model to include partitioning of tracers into free and solution states whenever dissolved gas/vaporized oil exist (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5268" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5268</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4001" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4001</text:a>). Essentially the tracer linear system has been extended with equations for free and solution tracers with simple mass transfer coupling between them. Both free and solution tracers are now outputted in restart files. </text:p>
+          <text:p text:style-name="P1298">Extended the tracer model to include partitioning of tracers into free and solution states whenever dissolved gas/vaporized oil exist (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5268" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5268</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4001" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4001</text:a>). Essentially the tracer linear system has been extended with equations for free and solution tracers with simple mass transfer coupling between them. Both free and solution tracers are now output to the Restart file. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Added support for output of well level target or constraint summary vectors: WBHPT, W[OGLVW]PRT, and W[OGVW]IRT where O, G, L, V and W represent oil, gas, liquid, reservoir volume and water respectively (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4093" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4093</text:a>). </text:p>
@@ -13611,13 +13611,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1298">A mixing model has been added to the thermal black-oil simulator. The meaning of the TEMP and THERMAL keywords has been changed. TEMP set internal energy = enthalpy (U=H). THERMAL use enthalpy and internal energy (U=H-W). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">Added support for the COPY keyword for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4236" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4236</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1298">Added support for the OPERATE keyword for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4237" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4237</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1298">Added support for the ADDREG, COPYREG, EQUALREG, and MULTIREG keywords for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4238" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4238</text:a>). </text:p>
+          <text:p text:style-name="P1298">Added support for the COPY, OPERATE, ADDREG, COPYREG, EQUALREG, and MULTIREG keywords for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4236" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4236</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4237" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4237</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4238" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4238</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Extended API to allow a source term to be added to a cell (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4241" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4241</text:a>). In particular this allows a source term to be generated by Python code without needing to pass in a DeckRecord. </text:p>
@@ -13653,10 +13647,172 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="P1069">Item1</text:p>
+          <text:p text:style-name="P1298">Support has been added for MPI communication being performed directly between GPUs instead of being sent via the CPU when using a multi-gnu linear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5145" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5145</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1069"/>
+          <text:p text:style-name="P1298">Python bindings can now control whether MPI_Init() and MPI_Finalize() will be called when creating an Opm::Main object (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5325" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5325</text:a>). This allows the Python unit test files to run more than a single unit test.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The fraction of pore-volume whose CNV targets are violated as a new per-iteration quantity is now included in the INFOITER file (--output-extra-convergence-info=iteration), with the column header CnvErrPvFrac (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5302" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5302</text:a>).  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for using hipify on the CUDA code to allow for GPU support on both AMD and Nvidia architectures (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5253" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5253</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The simulator now checks if relaxed tolerances are tighter than the strict tolerances and if so adjusts the relaxed tolerances (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5337" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5337</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The code now resets the group pressure maintenance state to avoid oscillations when the target pressure is reached and the pressure maintenance rate is set to zero (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5350" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5350</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Optimized the memory operations time by overlapping the creation (which includes a host memory copy) of the Jacobian matrix used in the block Jacobi ILU with copying the matrix data to the GPU (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5256" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5256</text:a>).  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">SummaryState Objects are now Aware of Undefined UDQ Values (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5334" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5334</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Previously the code would only start handling oscillations when two phases had oscillating residuals. The code will now start handling oscillations when just one phase is oscillating (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5398" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5398</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added Newton update damping for the situation where the solution for a domain oscillates (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5342" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5342</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Reduced execution time for parallel AMG/CPR simulations. Allowed use of AMG with command line option --matrix-add-well-contributions=false (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5182" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5182</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The code has been updated to only issue warnings the first time the transmissibilities are calculated thus removing spurious and duplicate warnings that can occur when using load balancing (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5351" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5351</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Nearly all exceptions thrown when computing wells will not abort the simulator but result in a timestep chop. Hence those should not be counted as errors and be reported in the PRT file. The simulator now only reports problems for exceptions thrown when updating the well potentials (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5423" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5423</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The well economic (WECON) minimum rates are no longer applied if the well is subject to a zero group rate target or constraint (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5424" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5424</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Directly output the SGMAX, SHMAX, SOMAX, SOMIN and SWHY1 arrays rather than the KRNSW_GO, KRNSW_OW, PCSWM_GO, PCSWM_OW and SOMAX arrays to the Restart file for cases with relative permeability and/or capillary pressure hysteresis (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5402" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5402</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Sphinx documentation has been added for the opm.simulators.BlackOilSimulator Python module (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5243" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5243</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The simulator now more dynamically picks the thread block size when using CUDA giving up to a 50% speed up on linear iterations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5433" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5433</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">If OpenMP is available then the simulator will now default to two threads per process unless the OMP_NUM_THREADS environment variable is set or the command line option --threads-per-process is set. A warning will be issued if both the environment variable and the command line  option are set, but the environment variable will take precedence (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5454" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5454</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support for the --print-properties command line option has been removed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5514" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5514</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Visualization Toolkit (VTK) files can now be output for dry runs by using the --enable-vtk-output=1 --enable-dry-run=1 command line options (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5499" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5499</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Linear solver default parameters have been updated to improve accuracy and performance including: material balance tolerance reduced to 1.0e-7, local well solve control switching is turned on, use implicit IPR is turned on, and enable drift compensation is turned off (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5157" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5157</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A more helpful message is now output if the PETGRID keyword is used to try to load a generic simulation grid (*.GSG) file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5541" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5541</text:a>): "OPM Flow cannot read GSG format grid input, re-export case from Petrel using GRDECL instead." </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The check for active wells as a condition for drift compensation has been removed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5110" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5110</text:a>). For CO2 injection simulation the drift compensation is still beneficial even when wells are no longer active.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The command line option --cpr-reuse-setup now only applies to the CPR preconditioner (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5445" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5445</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The simulator now uses a mobility weighted average of cell level densities for the connection level mixture densities in no-flow producing wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5479" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5479</text:a>). This mobility weighted average approach gives a more monotone pressure build up. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Output cell counts and pore volume fractions to INFOITER file  for cells that: (1) satisfy the strict convergence tolerance, (2) satisfy the relaxed but not the strict convergence tolerance, (3) do not satisfy the relaxed convergence tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5338" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5338</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Consistency checks have been added for oil, gas and water phase saturation functions (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5570" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5570</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5571" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5571</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5572" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5572</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The simulator now avoids computing the default number of domains based on a specific target number of cells per domain if the user choses a specific number of NLDD domains (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5579" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5579</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The simulator now avoids doing unnecessary updates in the numerical aquifer calculations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5632" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5632</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Previously the THP was set to zero if a well was stopped or set to a zero rate (well or group). The THP will now be calculated provided a VFP table is active (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5634" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5634</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Consistency checks have been added for three-point saturation scaling SCALECRS=YES (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5573" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5573</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5640" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5640</text:a>). These checks collectively guarantee a mobile displacing oil saturation in the two phase gas-oil and oil-water systems. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A new convergence monitoring feature (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5590" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5590</text:a>) has been introduced to improve the robustness and efficiency of the simulator based on Moyner et al., 2024 (https://doi.org/10.3997/2214-4609.202437057). The following command line options have been added: --convergence-monitoring enables convergence monitoring, --convergence-monitoring-cut-off=x specifies the cut off limit (default = 6), and --convergence-monitoring-decay-factor=x specifies the decay factor (default = 0.75). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for Python &gt;= 3.8, whilst support has been maintained for Python 3.6 and 3.7 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5644" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5644</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A new strategy for preventing wells from oscillating between being stopped and revived has been introduced (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5659" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5659</text:a>). The cycle of oscillations are broken by requiring that for a well to remained stopped after it is stopped in the local solve, then it should have had zero rate when it entered the local solve, basically meaning that both the global and local solve agree it should be stopped. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">It is no longer necessary to use add well contributions to matrix for NLDD. Also, the CPRW preconditioner is now supported for NLDD (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5341" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5341</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5676" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5676</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The number of pinch-out connections generated will now be reported to the Print file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/767" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#767</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">An error message will now be generated if the COMPSEGS keyword is used before the multi-segment well is defined using the WELSEGS keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4031" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4031</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The reservoir volume rate (RESV) constraint for a history matching producer is evaluated by converting the observed oil, water and gas surface rates to the current reservoir conditions hence its value is not fixed. However, to test if the well is subject to a zero reservoir volume rate constraint it is sufficient to test if all of the observed rates are zero (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4039" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4039</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The path of the Restart file (either absolute or relative to the .DATA file) as specified by the RESTART keyword is now saved for writing to the SMSPEC file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4056" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4056</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Restart file paths of between 73 and 132 characters in length are now also written to the SMSPEC file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4057" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4057</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for formatted FSMSPEC files in the summary utility (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4080" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4080</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Improved the reading of possibly corrupt summary files (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4079" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4079</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The ACTNUM array is now updated immediately after scanning the GRID and EDIT sections (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4082" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4082</text:a>). This avoids problems where cells are deactivated by setting PORO equal to zero while at the same time setting regions numbers for these cells to invalid values (which is not currently supported). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The compatibility with restart files has been improved specifically reading the well closure reason for history matching wells, and not using a guide rate model for wells with a target type of NONE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4090" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4090</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The INIT file output code's assumption that tabulated saturation functions have at most NSSFUN (TABDIMS keyword item 3) rows per saturation region has been relaxed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4066" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4066</text:a>). This allows larger saturation function tables to be output to the INIT file without an error being generated. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for restarting cases with group injection controlled voidage replacement (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4108" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4108</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been expanded for saving/restoring scaling factors for segment level devices (SICDs, AICDs and Valves) to/from the Restart file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/3978" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3978</text:a>).  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Avoid unnecessarily checking if the fluid is saturated in CO2STORE and H2STORE cases (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4125" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4125</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">If the injection fluid temperature has not been set for an injection well then it now defaults to the cell temperature in the upper most completion (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5490" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5490</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4155" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4155</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4152" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4152</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A warning message will now be generated and the well connection will be skipped if the well connection is in a cell that will be deactivated due a pore volume cut off specified by the MINPV or MINPVV keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4174" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4174</text:a>). This also avoids a crash that would have occurred if any such well was re-completed at a later stage in the simulation. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Restart support has been added for DRSDT (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4166" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4166</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The code now uses the failure flag of the tasklet runner to detect a failure while writing output and throw an error if this happens (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5478" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5478</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4178" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4178</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added ESMRY methods to get a list of dates for summary results and obtain the units for a summary vector have been exported to Python (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4184" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4184</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Add support for converting between formatted (.FGRID) and unformatted (.GRID) grid files to the convertECL utility (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4208" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4208</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">An error message will now be generated if an attempt is made to copy an undefined array (for example using the COPY keyword). Similarly, operations on an array (for example the ADD keyword) other than assignment (for example using the EQUALS keyword) will now generate an error message if the array being operated on has not been previously been defined in the input deck (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4109" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4109</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4235" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4235</text:a>). However, operations are allowed on multiplier arrays (MULTX, MULTY, etc.) that have not been explicitly defined in the input deck but have a default value of one (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4235" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4235</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Performance improvements in well name matching on platforms which support the Posix fnmatch() function (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4243" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4243</text:a>). </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
