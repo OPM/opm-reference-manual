@@ -13514,17 +13514,119 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P965">In addition to the above the following new features have been added to the simulator:</text:p>
+    <text:p text:style-name="P965">In addition to the changes to the command line options the following new features have been added to the simulator:</text:p>
     <text:list xml:id="list115021101243246" text:continue-list="list1222433614" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P1298">Item1</text:p>
+          <text:p text:style-name="P1298">Added a command line argument to control the way OPM Flow treats SKIP100 and SKIP300 keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5329</text:a>). By default OPM Flow behaves like the commercial black-oil simulator. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298"/>
+          <text:p text:style-name="P1298">Add summary output vectors for stranded CO2 in the gas phase (GMST) and maximum potential residual trapping (GMTR) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5344" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5344</text:a>, https://docs.opengosim.com/theory/residual_and_stranded/). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for WTMULT to multiply a well target or constraint by a constant (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5411" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5411</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Simulator is now able to make better usage of the Damaris middleware if enabled (https://project.inria.fr/damaris/). Added the ability to pass multiple variables to Damaris using the DamarisWriter class (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5352" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5352</text:a>). A command line option has also been added to limit the variables to be passed using --damaris-limit-variables=&lt;CSV list&gt;. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Restart files can now be output every time step if the command line option --enable-write-all-solutions=true (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5426" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5426</text:a>). The numbering of the restart and summary files will follow the time step index and not the report index. This will not be compatible with restart, but it is sometimes useful to investigate the results at every time step. Note that this doesn't add support for RPTRST BASIC=6.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for automatic chokes (NODEPROP item 3 CHOKE) in extended network models (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4935" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4935</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for using CPR on AMD GPU using the rocSPARSE library (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5408" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5408</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for outputting the RSWSAT and RVWSAT arrays to the Restart file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5483" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5483</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added PSI and OMEGA parameters to DRSDTCON to control the regime and rate of convective mixing (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5491" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5491</text:a>). Now supports GAS/WATER systems in addition to OIL/GAS systems.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added an OPM implementation of the ILU0 preconditioner in CUDA similar to that implemented in CuDILU (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5441" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5441</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for Killough's hysteresis model for both wetting and non-wetting phase hysteresis in a water wet system (EHYSTR item 2 HYSTMOD = 4) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5273" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5273</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added the option to specify the linear solver for subdomains when using the NLDD nonlinear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5553" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5553</text:a>). Previously, the simulator was hardcoded to use the ILU0 solver with the default maximum number of iterations and default reduction tolerance. The new command line options are nldd-local-linear-solver, nldd-local-linear-solver-reduction and nldd-local-linear-solver-max-iter. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Extended implementation of DRSDTCON to apply to multiple PVT regions (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5527" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5527</text:a>). Also added support for deactivation of individual DRSDT, DRVDT and DRSDTCON regions. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added foundations for future experiments using the four-byte float type instead of the eight-byte double type as the primary array element in order to save memory (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5560" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5560</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added separate energy convergence tolerance and energy balance tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5321" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5321</text:a>). Previously the tolerances for mass were used. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support added for RFIP and SFIP mnemonics for the RPTRST keyword to request output of fluid in place volumes at surface and reservoir conditions to the Restart file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5621" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5621</text:a>). Note that FIP is an alias for SFIP. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support added for mnemonic WELLS=N for the RPTSCHED keyword to request output of well reports to the Print file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5626" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5626</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support added for the EQUALREG keyword to specify property arrays by region (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5648" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5648</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added a failure flag to the TaskletRunner allowing errors in a tasklet to be caught and logged (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-models/pull/909" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#909</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for using METIS in addition to Zoltan to partition corner point grids (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#725</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Add support for outputting MULTPV to the Restart file if it is specified in the GRID or EDIT section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4021" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4021</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Add support for WELSPECS, COMPSEGS, WELSEGS, WSEGVALV, WECON, WTEST, WGRUPCON, GCONSUMP, GRUPTREE and EXIT keywords in PYACTION blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4059" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4059</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4061" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4061</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4069" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4069</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4070" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4070</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4071" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4071</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for CNAMES to specify the component names (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5405" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5405</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4091" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4091</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for DENAQA and VISCAQA keywords to specify parameters for calculating brine density and viscosity using Ezrokhi's method when using CO2STORE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4091" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4091</text:a>). Also added support for SALTMF to allow the initial salt concentration to be input as a mole fraction. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Extended the tracer model to include partitioning of tracers into free and solution states whenever dissolved gas/vaporized oil exist (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5268" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5268</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4001" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4001</text:a>). Essentially the tracer linear system has been extended with equations for free and solution tracers with simple mass transfer coupling between them. Both free and solution tracers are now outputted in restart files. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for output of well level target or constraint summary vectors: WBHPT, W[OGLVW]PRT, and W[OGVW]IRT where O, G, L, V and W represent oil, gas, liquid, reservoir volume and water respectively (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4093" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4093</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Initial support for enumerated compositional initialisation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4110" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4110</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for [FGW]GMI[RT] field, group and well gas mass injection rate and injection total summary vectors for use with CO2STORE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4162" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4162</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added a new command line parameter --action-parsing-strictness=normal|low that specifies the parsing strictness for ACTIONX and PYACTION blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5547" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5547</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4167" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4167</text:a>). If the normal (default?) option is selected then keywords that have not been tested for ACTIONX or PYACTION will not be applied. If the low option is selected then OPM Flow will try to apply all keywords, however, the results may not be correct. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A mixing model has been added to the thermal black-oil simulator. The meaning of the TEMP and THERMAL keywords has been changed. TEMP set internal energy = enthalpy (U=H). THERMAL use enthalpy and internal energy (U=H-W). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for the COPY keyword for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4236" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4236</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for the OPERATE keyword for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4237" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4237</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for the ADDREG, COPYREG, EQUALREG, and MULTIREG keywords for data with global storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4238" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4238</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Extended API to allow a source term to be added to a cell (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4241" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4241</text:a>). In particular this allows a source term to be generated by Python code without needing to pass in a DeckRecord. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added parsing support for ZMF keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4200" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4200</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The convertECL utility has been updated to support conversion of LGR output between the unformatted (.LGR) and formatted (.FLGR) file types. </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
