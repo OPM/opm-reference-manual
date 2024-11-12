@@ -13136,6 +13136,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--action-parsing-strictness</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added a new command line parameter that specifies the parsing strictness for ACTIONX and PYACTION blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5547" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5547</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4167" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4167</text:a>).</text:p>
        <text:p text:style-name="P952">A defined character string. Set strictness of parsing process for ActionX and PyAction. Available options are normal (do not apply keywords that have not been tested for ActionX or PyAction) and low (try to apply all keywords, beware: the simulation outcome might be incorrect).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13164,6 +13165,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--convergence-monitoring</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A new convergence monitoring feature (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5590" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5590</text:a>) has been introduced to improve the robustness and efficiency of the simulator based on Moyner et al., 2024 (https://doi.org/10.3997/2214-4609.202437057).</text:p>
        <text:p text:style-name="P952">A boolean value. Enable convergence monitoring.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13206,6 +13208,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--enable-drift-compensation</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Linear solver default parameters have been updated to improve accuracy and performance including: material balance tolerance reduced to 1.0e-7, local well solve control switching is turned on, use implicit IPR is turned on, and enable drift compensation is turned off (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5157" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5157</text:a>).</text:p>
        <text:p text:style-name="P952">A boolean value. Enable partial compensation of systematic mass losses via the source term of the next time step.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
@@ -13234,6 +13237,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--inj-mult-damp-mult</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added damping to the injectivity multipliers defined by the WINJMULT keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5631" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5631</text:a>).</text:p>
        <text:p text:style-name="P952">A real value. Injection multiplier dampening factor (dampening multiplied by this each time oscillation is detected).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13276,6 +13280,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--input-skip-mode</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added a command line argument to control the way OPM Flow treats SKIP100 and SKIP300 keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5329</text:a>). By default OPM Flow behaves like the commercial black-oil simulator.</text:p>
        <text:p text:style-name="P952">A defined character string. Set compatibility mode for the SKIP100/SKIP300 keywords. Options are: 100 (skip SKIP100..ENDSKIP, keep SKIP300..ENDSKIP), 300 (skip SKIP300..ENDSKIP, keep SKIP100..ENDSKIP) or all (skip both SKIP100..ENDSKIP and SKIP300..ENDSKIP).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13346,6 +13351,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--nldd-local-linear-solver</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added the option to specify the linear solver for subdomains when using the NLDD nonlinear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5553" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5553</text:a>). Previously, the simulator was hardcoded to use the ILU0 solver with the default maximum number of iterations and default reduction tolerance. </text:p>
        <text:p text:style-name="P952">A defined character string. Configuration of NLDD local linear solver. Valid options are: ilu0 (default), dilu, cpr_quasiimpes and amg. Alternatively, you can request a configuration to be read from a JSON file by giving the filename here, ending with '.json.'.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13388,6 +13394,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--partition-method</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added support for using METIS in addition to Zoltan to partition corner point grids (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#725</text:a>). </text:p>
        <text:p text:style-name="P952">An integer value. Choose partitioning strategy: 0=simple, 1=Zoltan, 2=METIS.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13399,23 +13406,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">20</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--pri-var-oscilation-threshold</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. The threshold value for the primary variable switching conditions after its meaning has switched to hinder oscillations.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1e-05</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A22&gt;+1" office:value-type="float" office:value="21">
-       <text:p text:style-name="P212">21</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="P901">--tolerance-cnv-energy</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added separate energy convergence tolerance and energy balance tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5321" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5321</text:a>). Previously the tolerances for mass were used. </text:p>
        <text:p text:style-name="P952">A real value. Local energy convergence tolerance (Maximum of local energy errors).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
@@ -13423,8 +13417,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A23&gt;+1" office:value-type="float" office:value="22">
-       <text:p text:style-name="P212">22</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A22&gt;+1" office:value-type="float" office:value="21">
+       <text:p text:style-name="P212">21</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="P901">--tolerance-cnv-energy-relaxed</text:p>
@@ -13437,8 +13431,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A24&gt;+1" office:value-type="float" office:value="23">
-       <text:p text:style-name="P212">23</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A23&gt;+1" office:value-type="float" office:value="22">
+       <text:p text:style-name="P212">22</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="P901">--tolerance-energy-balance</text:p>
@@ -13451,8 +13445,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A25&gt;+1" office:value-type="float" office:value="24">
-       <text:p text:style-name="P212">24</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A24&gt;+1" office:value-type="float" office:value="23">
+       <text:p text:style-name="P212">23</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="P901">--tolerance-energy-balance-relaxed</text:p>
@@ -13465,8 +13459,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A26&gt;+1" office:value-type="float" office:value="25">
-       <text:p text:style-name="P212">25</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A25&gt;+1" office:value-type="float" office:value="24">
+       <text:p text:style-name="P212">24</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="P901">--tolerance-mb</text:p>
@@ -13479,8 +13473,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A27&gt;+1" office:value-type="float" office:value="26">
-       <text:p text:style-name="P212">26</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A26&gt;+1" office:value-type="float" office:value="25">
+       <text:p text:style-name="P212">25</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="P901">--use-implicit-ipr</text:p>
@@ -13490,6 +13484,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="P950">true</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A27&gt;+1" office:value-type="float" office:value="26">
+       <text:p text:style-name="P212">26</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--print-properties</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Support for this command line option has been removed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5514" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5514</text:a>). </text:p>
+       <text:p text:style-name="P952">An integer value. Print the values of the compile time properties at the start of the simulation.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D22" office:value-type="string">
+       <text:p text:style-name="P950">2</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13511,7 +13520,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P681">Notes:</text:p>
        <text:list xml:id="list1222433614" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P982">Cells colored in green in the “No.” column indicate a new command line option or a change to an existing option for this release. </text:p>
+         <text:p text:style-name="P982">Cells colored in green in the “No.” column indicate a new command line option or a change to an existing option for this release. Cells colored green in the "Default" column indicate that the default value for an existing option has been changed.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P982">Cells colored in orange in the “No.” column indicate the command line option is available but is now &quot;hidden&quot; from the main help listing, --help. These options can be listed using the --help-all command line option, that lists all the command line options included in the release, including experimental, obsolete, hidden and deprecated options. </text:p>
@@ -13548,9 +13557,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="P1298">Added a command line argument to control the way OPM Flow treats SKIP100 and SKIP300 keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5329</text:a>). By default OPM Flow behaves like the commercial black-oil simulator. </text:p>
-         </text:list-item>
-         <text:list-item>
           <text:p text:style-name="P1298">Add summary output vectors for stranded CO2 in the gas phase (GMST) and maximum potential residual trapping (GMTR) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5344" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5344</text:a>, https://docs.opengosim.com/theory/residual_and_stranded/). </text:p>
          </text:list-item>
          <text:list-item>
@@ -13581,16 +13587,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1298">Added support for Killough's hysteresis model for both wetting and non-wetting phase hysteresis in a water wet system (EHYSTR item 2 HYSTMOD = 4) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5273" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5273</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">Added the option to specify the linear solver for subdomains when using the NLDD nonlinear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5553" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5553</text:a>). Previously, the simulator was hardcoded to use the ILU0 solver with the default maximum number of iterations and default reduction tolerance. The new command line options are nldd-local-linear-solver, nldd-local-linear-solver-reduction and nldd-local-linear-solver-max-iter. </text:p>
-         </text:list-item>
-         <text:list-item>
           <text:p text:style-name="P1298">Extended implementation of DRSDTCON to apply to multiple PVT regions (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5527" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5527</text:a>). Also added support for deactivation of individual DRSDT, DRVDT and DRSDTCON regions. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Added foundations for future experiments using the four-byte float type instead of the eight-byte double type as the primary array element in order to save memory (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5560" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5560</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1298">Added separate energy convergence tolerance and energy balance tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5321" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5321</text:a>). Previously the tolerances for mass were used. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Support added for RFIP and SFIP mnemonics for the RPTRST keyword to request output of fluid in place volumes at surface and reservoir conditions to the Restart file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5621" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5621</text:a>). Note that FIP is an alias for SFIP. </text:p>
@@ -13603,9 +13603,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Added a failure flag to the TaskletRunner allowing errors in a tasklet to be caught and logged (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-models/pull/909" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#909</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1298">Added support for using METIS in addition to Zoltan to partition corner point grids (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#725</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Add support for outputting MULTPV to the Restart file if it is specified in the GRID or EDIT section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4021" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4021</text:a>). </text:p>
@@ -13630,9 +13627,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">Added support for [FGW]GMI[RT] field, group and well gas mass injection rate and injection total summary vectors for use with CO2STORE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4162" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4162</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1298">Added a new command line parameter --action-parsing-strictness=normal|low that specifies the parsing strictness for ACTIONX and PYACTION blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5547" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5547</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4167" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4167</text:a>). If the normal (default?) option is selected then keywords that have not been tested for ACTIONX or PYACTION will not be applied. If the low option is selected then OPM Flow will try to apply all keywords, however, the results may not be correct. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">A mixing model has been added to the thermal black-oil simulator. The meaning of the TEMP and THERMAL keywords has been changed. TEMP set internal energy = enthalpy (U=H). THERMAL use enthalpy and internal energy (U=H-W). </text:p>
@@ -13728,9 +13722,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1298">If OpenMP is available then the simulator will now default to two threads per process unless the OMP_NUM_THREADS environment variable is set or the command line option --threads-per-process is set. A warning will be issued if both the environment variable and the command line  option are set, but the environment variable will take precedence (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5454" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5454</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">Support for the --print-properties command line option has been removed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5514" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5514</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
           <text:p text:style-name="P1298">Visualization Toolkit (VTK) files can now be output for dry runs by using the --enable-vtk-output=1 --enable-dry-run=1 command line options (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5499" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5499</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
@@ -13767,13 +13758,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1298">Consistency checks have been added for three-point saturation scaling SCALECRS=YES (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5573" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5573</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5640" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5640</text:a>). These checks collectively guarantee a mobile displacing oil saturation in the two phase gas-oil and oil-water systems. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">A new convergence monitoring feature (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5590" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5590</text:a>) has been introduced to improve the robustness and efficiency of the simulator based on Moyner et al., 2024 (https://doi.org/10.3997/2214-4609.202437057). The following command line options have been added: --convergence-monitoring enables convergence monitoring, --convergence-monitoring-cut-off=x specifies the cut off limit (default = 6), and --convergence-monitoring-decay-factor=x specifies the decay factor (default = 0.75). </text:p>
-         </text:list-item>
-         <text:list-item>
           <text:p text:style-name="P1298">Support has been added for Python &gt;= 3.8, whilst support has been maintained for Python 3.6 and 3.7 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5644" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5644</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">A new strategy for preventing wells from oscillating between being stopped and revived has been introduced (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5659" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5659</text:a>). The cycle of oscillations are broken by requiring that for a well to remained stopped after it is stopped in the local solve, then it should have had zero rate when it entered the local solve, basically meaning that both the global and local solve agree it should be stopped. </text:p>
+          <text:p text:style-name="P1298">A new strategy for preventing wells from oscillating between being stopped and revived has been introduced (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5659" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5659</text:a>). The cycle of oscillations are broken by requiring that for a well to remain stopped after it has been stopped in the local solve, that it should have had zero rate when it entered the local solve, meaning that both the global and local solve agree that the well should be stopped. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">It is no longer necessary to use add well contributions to matrix for NLDD. Also, the CPRW preconditioner is now supported for NLDD (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5341" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5341</text:a>,<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5676" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5676</text:a>). </text:p>
