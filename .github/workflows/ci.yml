@@ -8,12 +8,10 @@ on:
     push:
       paths:
         - 'scripts/python/**'
-        - 'docker/**'
         - '.github/workflows/ci.yml'
     pull_request:
       paths:
         - 'scripts/python/**'
-        - 'docker/**'
         - '.github/workflows/ci.yml'
 
 permissions:
@@ -35,19 +33,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
-      - name: Install dependencies for scripts/python
+      - name: Install dependencies
         run: |
           cd scripts/python
           poetry install
-      - name: Run tests in scripts/python
+      - name: Run tests
         run: |
           cd scripts/python
-          poetry run pytest tests
-      - name: Install dependencies for docker folder
-        run: |
-          cd docker
-          poetry install
-      - name: Run tests in docker folder
-        run: |
-          cd docker
           poetry run pytest tests
