@@ -4243,7 +4243,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838813221"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838813221"/></text:h>
-    <text:p text:style-name="P12480">The MINNPCOL keyword defines the min<text:span text:style-name="T2554">imum</text:span> number of Newton iterations within a time step that may be used to update the well production and injection targets, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:p>
+    <text:p text:style-name="P12480">The MINNPCOL keyword defines the <text:span text:style-name="T2554">minimum</text:span> number of Newton iterations within a time step where the well production and injection targets may be updated, after which the well targets will be frozen until the time step calculations have converged and the time step is complete. </text:p>
     <table:table table:name="Table2114" table:style-name="Table2114">
      <table:table-column table:style-name="Table2114.A"/>
      <table:table-header-rows>
@@ -4256,7 +4256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P12480"/>
-    <text:p text:style-name="P12480">Wells under group control may suffer from some dependency with other wells in the same group that are under group control. This may cause some oscillation in the production and injection well rates within the group. In order to avoid this, the NUPCOL keyword in the RUNSPEC section can be used to set the maximum number of Newton iterations within a time step, after which the group well rates are frozen until the time step has converged. <text:s/>Reducing the potential of well rate oscillations within the time step may result in the group targets and limits not being exactly met in this case. Increasing the value of NUPCOL, will improve the accuracy of the group targets and limits at the expense of computational efficiency. Here, the MINNPCOL set the minimum number of Newton iterations. </text:p>
+    <text:p text:style-name="P12480">Wells under group control may suffer from some dependency with other wells in the same group that are under group control. This may cause some oscillation in the production and injection well rates within the group. In order to avoid this, the NUPCOL keyword in the RUNSPEC section can be used to set the maximum number of Newton iterations within a time step, after which the group well rates are frozen until the time step has converged. <text:s/>Reducing the potential for well rate oscillations within the time step may result in the group targets and limits not being exactly met in this case. Increasing the value of NUPCOL, will improve the accuracy of the group targets and limits at the expense of computational efficiency. Here, the MINNPCOL keyword sets the minimum number of Newton iterations within a timestep where the well production and injection targets may be updated. </text:p>
     <text:p text:style-name="P12480">See also section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>on how to set various other numerical control parameters for OPM Flow.</text:p>
     <table:table table:name="Table2115" table:style-name="Table2115">
      <table:table-column table:style-name="Table2115.A"/>
@@ -4285,8 +4285,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3506">MINNPCOL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2115.C2" office:value-type="string">
-       <text:p text:style-name="P3234">A positive integer that defines the minimum number of Newton iterations used to update well targets within a time step.</text:p>
-       <text:p text:style-name="P5280">Note that default value of six is different to the commercial simulator’s default value of three used on the NUPCOL keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3234">A positive integer that defines the minimum number of Newton iterations within a timestep where well targets may be updated.</text:p>
+       <text:p text:style-name="P5280">Note that the default value of six is higher than the commercial black-oil simulator’s default maximum value of three used on the NUPCOL keyword in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2115.D2" office:value-type="string">
        <text:p text:style-name="P5392">6</text:p>
@@ -4314,7 +4314,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13692">MINNPCOL <text:s text:c="73"/></text:p>
     <text:p text:style-name="P13692"><text:s text:c="9"/>6 <text:s text:c="67"/>/</text:p>
     <text:p text:style-name="P11190"/>
-    <text:p text:style-name="P11190"><text:soft-page-break/>The above example sets the default MINNPCOL value to the default value of six.</text:p>
+    <text:p text:style-name="P11190"><text:soft-page-break/>The above example sets the MINNPCOL value to its default value of six.</text:p>
     <text:p text:style-name="P11190"/>
     <text:p text:style-name="_40_TextBody"/>
     
