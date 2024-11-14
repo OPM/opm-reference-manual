@@ -1,5 +1,5 @@
 from pathlib import Path
-from lodocker.helpers import Helpers
+from lodocker import helpers
 
 def test_git_root_exists(tmp_path: Path):
     # Create a dummy git repository in the tmp_path directory
@@ -16,5 +16,5 @@ def test_git_root_exists(tmp_path: Path):
     # Create a main.fodt file
     main_fodt = parts_dir / "main.fodt"
     main_fodt.touch()
-    found_root = Helpers.locate_git_root_from_file(str(run_container))
+    found_root = helpers.locate_git_root_from_path(run_container)
     assert found_root == tmp_path

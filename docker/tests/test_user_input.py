@@ -1,7 +1,7 @@
 import pytest
 from pytest_mock import MockerFixture
-from lodocker.helpers import Helpers
-user_input = Helpers.user_input
+from lodocker import helpers
+user_input = helpers.user_input
 
 def test_default_value(mocker: MockerFixture):
     mocker.patch('builtins.input', return_value='')  # Simulate pressing Enter
