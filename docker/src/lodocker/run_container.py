@@ -9,14 +9,14 @@ import netifaces
 
 from lodocker.colors import green_color
 from lodocker.constants import Paths
-from lodocker.helpers import Helpers
+from lodocker import helpers
 
 class RunContainer:
     def __init__(self):
         self.shared_doc_dir = "parts"
         #self.git_root = Path(__file__).resolve().parents[3]
         # Use cwd instead of __file__ to locate the git root directory
-        self.git_root = Helpers.locate_git_root()
+        self.git_root = helpers.locate_git_root()
         logging.info(f"git_root: {self.git_root}")
         self.document_dir = self.git_root / self.shared_doc_dir
         # The home directory of the user in the Docker container
@@ -93,7 +93,7 @@ class RunContainer:
 
     def run_container(self, filename: str, image_name: str, exec_name: str):
         if platform.system() == "Linux":
-            Helpers.run_command(["xhost", "+"])
+            helpers.run_command(["xhost", "+"])
         args = ["docker", "run"]
         args.extend(["-v", self.doc_mount_string()])
         args.extend(["-v", self.font_mount_string()])
@@ -106,9 +106,9 @@ class RunContainer:
         args.extend([image_name])
         args.extend([exec_name, f"{self.docker_home}/{self.shared_doc_dir}/{filename}"])
         command_str = " ".join(args)
-        exit_code = Helpers.run_command(args)
+        exit_code = helpers.run_command(args)
         if platform.system() == "Linux":
-            Helpers.run_command(["xhost", "-"])
+            helpers.run_command(["xhost", "-"])
         if exit_code == 0:
             logging.info(f"docker run for image {image_name} was successful.")
         else:
@@ -123,7 +123,7 @@ class RunContainer:
         lo_userdir: str,
     ) -> None:
         if platform.system() == "Linux":
-            Helpers.run_command(["xhost", "+"])
+            helpers.run_command(["xhost", "+"])
         args = ["docker", "run"]
         args.extend(["-v", self.doc_mount_string()])
         args.extend(["-v", self.font_mount_string()])
@@ -146,9 +146,9 @@ class RunContainer:
         command_str = " ".join(args)
         print("NOTE: You can also run this \"docker run\" command manually like this: ")
         print(f"{green_color(command_str)}")
-        exit_code = Helpers.run_command(args)
+        exit_code = helpers.run_command(args)
         if platform.system() == "Linux":
-            Helpers.run_command(["xhost", "-"])
+            helpers.run_command(["xhost", "-"])
         if exit_code == 0:
             logging.info(f"docker run for image {image_name} was successful.")
         else:
