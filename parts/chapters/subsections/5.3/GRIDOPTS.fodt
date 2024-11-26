@@ -4221,7 +4221,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683881"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683881"/></text:h>
-    <text:p text:style-name="_40_TextBody">GRIDOPTS activates the negative directional dependent transmissibility multipliers option, defines the maximum number of MULTNUM regions and the number of PINCHNUM regions for the model. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> activates the negative directional dependent transmissibility multipliers option, defines the maximum number of <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> regions and the number of <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> regions for the model. </text:p>
     <table:table table:name="Table159" table:style-name="Table159">
      <table:table-column table:style-name="Table159.A"/>
      <table:table-column table:style-name="Table159.B"/>
@@ -4250,9 +4250,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table159.C4" office:value-type="string">
        <text:p text:style-name="P3448">A character string that activates the negative directional dependent transmissibility multipliers option by setting TRANMULT to YES. Setting the value to NO switches off this option.</text:p>
-       <text:p text:style-name="P3450">OPM Flow uses a positive directional dependent transmissibility formulation to describe the flow between two cells, that is for cell (I, J, K) OPM Flow calculates the x face transmissibility between (I, J, K) and (I +1, J, K) cell face. <text:s/>Modification to the transmissibilities in this case is accomplished by the MULTX, MULTY and MULTZ keywords.</text:p>
-       <text:p text:style-name="P5424">Setting TRANMULT to YES invokes the option to use a negative directional dependent multiplier scheme using the MULTX-, MULTY- and MULTZ- keywords. In this case OPM Flow applies the x face transmissibility between (I - 1, J, K) and (I, J, K) cell face when using the MULTX-, MULTY- and MULTZ- keywords. </text:p>
-       <text:p text:style-name="P5425">Note that if TRANMULT is defaulted, and there are negative directional dependent multiplier keywords in the input deck, then OPM Flow will continue to process the MULTX-, MULTY- and MULTZ keywords correctly. Whereas, the <text:span text:style-name="T2110">commercial</text:span> simulator will terminate with an error.</text:p>
+       <text:p text:style-name="P3450">OPM Flow uses a positive directional dependent transmissibility formulation to describe the flow between two cells, that is for cell (I, J, K) OPM Flow calculates the x face transmissibility between (I, J, K) and (I +1, J, K) cell face. <text:s/>Modification to the transmissibilities in this case is accomplished by the <text:a xlink:href="#__RefHeading___Toc99847_2023071304">MULTX</text:a>, <text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a> and <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> keywords.</text:p>
+       <text:p text:style-name="P5424">Setting TRANMULT to YES invokes the option to use a negative directional dependent multiplier scheme using the <text:a xlink:href="#__RefHeading___Toc80285_17781729791">MULTX-</text:a>, <text:a xlink:href="#__RefHeading___Toc80289_17781729791">MULTY-</text:a> and <text:a xlink:href="#__RefHeading___Toc80293_17781729791">MULTZ-</text:a> keywords. In this case OPM Flow applies the x face transmissibility between (I - 1, J, K) and (I, J, K) cell face when using the <text:a xlink:href="#__RefHeading___Toc80285_17781729791">MULTX-</text:a>, <text:a xlink:href="#__RefHeading___Toc80289_17781729791">MULTY-</text:a> and <text:a xlink:href="#__RefHeading___Toc80293_17781729791">MULTZ-</text:a> keywords. </text:p>
+       <text:p text:style-name="P5425">Note that if TRANMULT is defaulted, and there are negative directional dependent multiplier keywords in the input deck, then OPM Flow will continue to process the <text:a xlink:href="#__RefHeading___Toc80285_17781729791">MULTX-</text:a>, <text:a xlink:href="#__RefHeading___Toc80289_17781729791">MULTY-</text:a> and <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> keywords correctly. Whereas, the <text:span text:style-name="T2110">commercial</text:span> simulator will terminate with an error.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table159.D4" office:value-type="string">
        <text:p text:style-name="P2901">NO</text:p>
@@ -4266,9 +4266,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3451">NRMULT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table159.C4" office:value-type="string">
-       <text:p text:style-name="P3452">A positive integer value that defines the maximum number of MULTNUM regions for the MULTNUM array.</text:p>
-       <text:p text:style-name="P3453">The MULTNUM array is used in the GRID section to define various inter-region transmissibility regions in the model and NRMULT sets the maximum number of regions which is the maximum value of an element in the MULTNUM array.</text:p>
-       <text:p text:style-name="P3454">Inter-region MULTNUM transmissibility multipliers can be defined using the MULTREGT and regional pore volumes multipliers can be set using the MULTREGP keyword.</text:p>
+       <text:p text:style-name="P3452">A positive integer value that defines the maximum number of <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> regions for the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array.</text:p>
+       <text:p text:style-name="P3453">The <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array is used in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section to define various inter-region transmissibility regions in the model and NRMULT sets the maximum number of regions which is the maximum value of an element in the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array.</text:p>
+       <text:p text:style-name="P3454">Inter-region <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> transmissibility multipliers can be defined using the <text:a xlink:href="#__RefHeading___Toc99845_2023071304">MULTREGT</text:a> and regional pore volumes multipliers can be set using the <text:a xlink:href="#__RefHeading___Toc99843_2023071304">MULTREGP</text:a> keyword.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table159.D4" office:value-type="string">
        <text:p text:style-name="P3456">0</text:p>
@@ -4282,9 +4282,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3451">NRPINC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table159.C4" office:value-type="string">
-       <text:p text:style-name="P3452">A positive integer value that defines the maximum number of PINCHNUM regions for the PINCHNUM array.</text:p>
-       <text:p text:style-name="P3455">The PINCHNUM array is used in the GRID section to define various regions in the model and NRPINC sets the maximum of regions which is the maximum value of an element in the PINCHNUM array.</text:p>
-       <text:p text:style-name="P3458">Each regions criteria for setting the pinch out criteria is set by the PINCHREG keyword.</text:p>
+       <text:p text:style-name="P3452">A positive integer value that defines the maximum number of <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> regions for the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> array.</text:p>
+       <text:p text:style-name="P3455">The <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> array is used in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section to define various regions in the model and NRPINC sets the maximum of regions which is the maximum value of an element in the <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a> array.</text:p>
+       <text:p text:style-name="P3458">Each regions criteria for setting the pinch out criteria is set by the <text:a xlink:href="#__RefHeading___Toc74567_718313858">PINCHREG</text:a> keyword.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table159.D4" office:value-type="string">
        <text:p text:style-name="P2901">0</text:p>
@@ -4306,7 +4306,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable33" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.18</text:sequence>: GRIDOPTS Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P11384">See also the MULTNUM, MULTREGP, MULTREGT, PINCHNUM, and PINCHREG keywords.</text:p>
+    <text:p text:style-name="P11384">See also the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc99843_2023071304">MULTREGP</text:a>, <text:a xlink:href="#__RefHeading___Toc99845_2023071304">MULTREGT</text:a>, <text:a xlink:href="#__RefHeading___Toc74565_718313858">PINCHNUM</text:a>, and <text:a xlink:href="#__RefHeading___Toc74567_718313858">PINCHREG</text:a> keywords.</text:p>
     <text:p text:style-name="P11384"/>
     <text:h text:style-name="P18692" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715597_3964674244"/>Example <text:s text:c="79"/><text:bookmark-end text:name="__RefHeading___Toc715597_3964674244"/></text:h>
     <text:p text:style-name="P13640">–-</text:p>
@@ -4315,7 +4315,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13641">GRIDOPTS <text:s text:c="71"/></text:p>
     <text:p text:style-name="P13641"><text:s text:c="8"/>NO <text:s text:c="6"/>9 <text:s text:c="6"/>1* <text:s text:c="51"/>/</text:p>
     <text:p text:style-name="P13641"><text:s text:c="81"/></text:p>
-    <text:p text:style-name="P11385">The above example switches off the negative directional dependent transmissibility multipliers option and defines the maximum of MULTNUM regions to be nine,. The NRPINC parameter is defaulted which means there the maximum number of PINCHREG regions is zero.</text:p>
+    <text:p text:style-name="P11385">The above example switches off the negative directional dependent transmissibility multipliers option and defines the maximum of <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> regions to be nine,. The NRPINC parameter is defaulted which means there the maximum number of <text:a xlink:href="#__RefHeading___Toc74567_718313858">PINCHREG</text:a> regions is zero.</text:p>
     <text:p text:style-name="P11385"/>
     
    </text:section>
