@@ -4244,7 +4244,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18456" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715897_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715897_3964674244"/></text:h>
-    <text:p text:style-name="P12089">TRANR defines the transmissibility in the +R direction for all the cells in the model via an array. The keyword can only be used with Radial Grid geometry grids. The keyword effectively overwrites previously entered and calculated data. The transmissibility overwritten is the +R face transmissibility of each grid block, that is for cell (I, J, K) the transmissibility between cells <text:s/>(I, J, K) <text:s/>and (I+1, J, K).</text:p>
+    <text:p text:style-name="P12089"><text:a xlink:href="#__RefHeading___Toc1306688_4250154414">TRANR</text:a> defines the transmissibility in the +R direction for all the cells in the model via an array. The keyword can only be used with Radial Grid geometry grids. The keyword effectively overwrites previously entered and calculated data. The transmissibility overwritten is the +R face transmissibility of each grid block, that is for cell (I, J, K) the transmissibility between cells <text:s/>(I, J, K) <text:s/>and (I+1, J, K).</text:p>
     <text:p text:style-name="P12093">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1644" table:style-name="Table1644">
      <table:table-column table:style-name="Table1644.A"/>
@@ -4287,10 +4287,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3122">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1644.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4301">TRANR</text:p>
+       <text:p text:style-name="P4301"><text:a xlink:href="#__RefHeading___Toc1306688_4250154414">TRANR</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1644.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4301">TRANR is an array of real positive numbers assigning the transmissibility in the R direction to each cell in the model. </text:p>
+       <text:p text:style-name="P4301"><text:a xlink:href="#__RefHeading___Toc1306688_4250154414">TRANR</text:a> is an array of real positive numbers assigning the transmissibility in the R direction to each cell in the model. </text:p>
        <text:p text:style-name="P4082">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4318,7 +4318,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1708">Notes:</text:p>
        <text:list xml:id="list105911431240628" text:continue-list="list105912689106261" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19025">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19025">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19364">Values not reset by this keyword remain unaltered.</text:p>
@@ -4337,7 +4337,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14670">Table <text:sequence text:ref-name="refTable212" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">7.7</text:sequence>: TRANR Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P15321">See also the TRANTHT and TRANYZ keywords to modify the transmissibilities in the other directions.</text:p>
+    <text:p text:style-name="P15321">See also the <text:a xlink:href="#__RefHeading___Toc1306690_4250154414">TRANTHT</text:a> and TRANYZ keywords to modify the transmissibilities in the other directions.</text:p>
     <text:h text:style-name="P18456" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715899_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715899_3964674244"/></text:h>
     <text:p text:style-name="P13840">--</text:p>
     <text:p text:style-name="P13840">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS</text:p>
@@ -4355,7 +4355,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14307">-- <text:s text:c="6"/>DEFINE END OF INPUT BOX EDITING OF INPUT ARRAYS</text:p>
     <text:p text:style-name="P14307">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P14307">ENDBOX <text:s text:c="8"/></text:p>
-    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>Here the BOX statement is used to define the input grid for the TRANR keyword, which overwrites the transmissibility previously calculated with transmissibility values of zero, resulting in a no-flow boundary in that part of the grid. The ENDBOX keyword resets the input box to the full grid.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>Here the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement is used to define the input grid for the <text:a xlink:href="#__RefHeading___Toc1306688_4250154414">TRANR</text:a> keyword, which overwrites the transmissibility previously calculated with transmissibility values of zero, resulting in a no-flow boundary in that part of the grid. The <text:a xlink:href="#__RefHeading___Toc99903_2023071304">ENDBOX</text:a> keyword resets the input box to the full grid.</text:p>
     
    </text:section>
   </office:text>

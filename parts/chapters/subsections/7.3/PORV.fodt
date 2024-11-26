@@ -4225,7 +4225,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18455" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715893_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715893_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PORV defines the pore volumes for all the cells in the model via an array. The keyword can be used for all grid types, except for the Radial Grid geometry. The keyword effectively overwrites previously entered and calculated data. The area to be modified can be defined via the various grid selection keywords, ADD, BOX, EQUALS, etc., and areas that are not selected remain unchanged.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a> defines the pore volumes for all the cells in the model via an array. The keyword can be used for all grid types, except for the Radial Grid geometry. The keyword effectively overwrites previously entered and calculated data. The area to be modified can be defined via the various grid selection keywords, <text:a xlink:href="#__RefHeading___Toc99893_2023071304">ADD</text:a>, <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a>, <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a>, etc., and areas that are not selected remain unchanged.</text:p>
     <table:table table:name="Table430" table:style-name="Table430">
      <table:table-column table:style-name="Table430.A"/>
      <table:table-column table:style-name="Table430.B"/>
@@ -4267,10 +4267,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2979">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table430.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4298">PORV</text:p>
+       <text:p text:style-name="P4298"><text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table430.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2098">PORV is an array of real positive numbers assigning a pore volume to each cell in the model. Only the values in the currently defined input BOX needed be entered.</text:p>
+       <text:p text:style-name="P2098"><text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a> is an array of real positive numbers assigning a pore volume to each cell in the model. Only the values in the currently defined input <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> needed be entered.</text:p>
        <text:p text:style-name="P1335">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4298,7 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1491">Notes:</text:p>
        <text:list xml:id="list105912689106261" text:continue-list="list105911487998034" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19024">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19024">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19363">Values not reset by this keyword remain unaltered.</text:p>
@@ -4334,7 +4334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13960">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13960">ENDBOX <text:s text:c="8"/></text:p>
     <text:p text:style-name="P15119"/>
-    <text:p text:style-name="P15251">Here the BOX statement is used to define the input grid for the PORV keyword, which overwrites the pore volume previously calculated with pore volume values of zero, resulting in a no-flow boundary in that part of the field between layers 19 and 21, since layer 20 is deactivated. The ENDBOX keyword resets the input box to the full grid.</text:p>
+    <text:p text:style-name="P15251">Here the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement is used to define the input grid for the <text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a> keyword, which overwrites the pore volume previously calculated with pore volume values of zero, resulting in a no-flow boundary in that part of the field between layers 19 and 21, since layer 20 is deactivated. The <text:a xlink:href="#__RefHeading___Toc99903_2023071304">ENDBOX</text:a> keyword resets the input box to the full grid.</text:p>
     <text:p text:style-name="P15077"/>
     <text:p text:style-name="P15077"/>
     
