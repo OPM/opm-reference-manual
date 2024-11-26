@@ -27,6 +27,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.is_example_p = []  # Stack of boolean values: If current p tag is an example
         self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
+        self.in_math = False   # We should not insert links inside math tags
         self.content = io.StringIO()
         # Create a regex pattern with alternation on the keyword names
         self.regex = self.compile_regex()
@@ -43,7 +44,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # Also include the keyword name itself in the regex pattern, see discussion
         # https://github.com/OPM/opm-reference-manual/pull/410
         pattern = re.compile(
-            r'(?<![."“])'  # Negative lookbehind for a dot or a double quote
+            r'(?<![.‘"“])'  # Negative lookbehind for a dot or a single/double quote
             r'\b(' +
             '|'.join(
                 # Need to sort the keys by length in descending order to avoid
@@ -67,7 +68,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  because it may insert tags (<text:a ...>) that should not be escaped.
         content = XMLHelper.escape(content)
         if self.office_body_found:
-            if self.in_p and (not self.in_a) and (not self.not_keyword):
+            if self.in_p and (not self.in_a) and (not self.not_keyword) and (not self.in_math):
                 if not self.is_example_p[-1]:
                     if not self.is_table_caption(content):
                         content = self.regex.sub(self.replace_match_function, content)
@@ -93,6 +94,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.in_a = False
             elif name == "text:span":
                 self.not_keyword = False  # This cannot be nested
+            elif name == "math":
+                self.in_math = False
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -148,6 +151,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     style_name = attrs.getValue("text:style-name")
                     if style_name == "NOT_KEYWORD":
                         self.not_keyword = True
+            elif name == "math":
+                self.in_math = True
         self.start_tag_open = True
         self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
