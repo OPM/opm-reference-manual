@@ -4296,8 +4296,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18375" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14507_37011683882"/>Description<text:bookmark-end text:name="__RefHeading___Toc14507_37011683882"/></text:h>
-    <text:p text:style-name="P12658">The AQUANCON keyword defines how analytical aquifers are connected to the simulation grid, this includes the Carter-Tracy, Fetkovich and Constant Flux analytical aquifers, all of which are implemented in OPM Flow. <text:s/>Carter-Tracy analytical aquifers are characterized by the AQUCT keyword in the GRID section and Fetkovich analytical aquifers are defined by the AQUFETP keyword in the SOLUTION section. Finally, the Constant Flux aquifer is defined by the AQUFLUX keyword in SOLUTION section. </text:p>
-    <text:p text:style-name="P12291">Note that numerical aquifers are connected to the grid using the AQUCON keyword in the GRID section and that both aquifer types dimensions are declared by the AQUDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P12658">The <text:a xlink:href="#__RefHeading___Toc360136_1539708736">AQUANCON</text:a> keyword defines how analytical aquifers are connected to the simulation grid, this includes the Carter-Tracy, Fetkovich and Constant Flux analytical aquifers, all of which are implemented in OPM Flow. <text:s/>Carter-Tracy analytical aquifers are characterized by the <text:a xlink:href="#__RefHeading___Toc120118_846947960">AQUCT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section and Fetkovich analytical aquifers are defined by the <text:a xlink:href="#__RefHeading___Toc4428_421927891">AQUFETP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. Finally, the Constant Flux aquifer is defined by the <text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a> keyword in <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. </text:p>
+    <text:p text:style-name="P12291">Note that numerical aquifers are connected to the grid using the <text:a xlink:href="#__RefHeading___Toc115431_8469479601">AQUCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section and that both aquifer types dimensions are declared by the <text:a xlink:href="#__RefHeading___Toc10103_3701168388">AQUDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table733" table:style-name="Table733">
      <table:table-column table:style-name="Table733.A"/>
      <table:table-column table:style-name="Table733.B"/>
@@ -4344,7 +4344,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1947">AQUID</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table733.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2058">AQUID is a positive integer greater than or equal to one and less than the maximum number of analytical aquifers as defined by the NANAQU variable on the AQUDIMS keyword in the RUNSPEC section, that defines the aquifer to be connected to the grid.</text:p>
+       <text:p text:style-name="P2058">AQUID is a positive integer greater than or equal to one and less than the maximum number of analytical aquifers as defined by the NANAQU variable on the <text:a xlink:href="#__RefHeading___Toc10103_3701168388">AQUDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the aquifer to be connected to the grid.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4478,10 +4478,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2059">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table733.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P2066">AQUFLUX</text:p>
+       <text:p text:style-name="P2066"><text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table733.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2066">AQUFLUX is a positive real value that sets the fraction of the total influx between the aquifer and the defined cells declared on this keyword. If defaulted the cell face area for each cell is applied and if a value is declared then this value is applied to all cells declared by this record.</text:p>
+       <text:p text:style-name="P2066"><text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a> is a positive real value that sets the fraction of the total influx between the aquifer and the defined cells declared on this keyword. If defaulted the cell face area for each cell is applied and if a value is declared then this value is applied to all cells declared by this record.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4562,7 +4562,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1419">Notes:</text:p>
        <text:list xml:id="list2614167807" text:style-name="L48">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19098">Where NX, NY and NZ are the dimensions of the model as defined on the DIMENS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19098">Where NX, NY and NZ are the dimensions of the model as defined on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18960">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
@@ -4584,7 +4584,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table1975.1">
        <table:table-cell table:style-name="Table1975.A1" office:value-type="string">
         <text:p text:style-name="P10243">Note</text:p>
-        <text:p text:style-name="P10248">If the AQUANCON keyword has been utilized in the run deck then OPM Flow will write the <text:s/>AQUIFERA array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
+        <text:p text:style-name="P10248">If the <text:a xlink:href="#__RefHeading___Toc360136_1539708736">AQUANCON</text:a> keyword has been utilized in the run deck then OPM Flow will write the <text:s/>AQUIFERA array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
         <text:p text:style-name="P10248">This is accomplished by setting the AQUIFERA value to 2(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple analytical aquifers then AQUIFERA is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
        </table:table-cell>
       </table:table-row>
@@ -4608,7 +4608,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15966"><text:s text:c="9"/>1 <text:s text:c="4"/>61 <text:s/>61 <text:s text:c="2"/>48 <text:s/>72 <text:s text:c="2"/>12 <text:s/>17 <text:s text:c="3"/>&apos;I+&apos; <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="6"/>&apos;NO&apos; <text:s text:c="7"/>/</text:p>
     <text:p text:style-name="P15966">/</text:p>
     <text:p text:style-name="P15966"><text:s text:c="5"/></text:p>
-    <text:p text:style-name="P11405">See the AQUCT keyword in the GRID section for a complete example on defining and connecting a Carter-Tracy aquifer to a simulation grid.</text:p>
+    <text:p text:style-name="P11405">See the <text:a xlink:href="#__RefHeading___Toc120118_846947960">AQUCT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section for a complete example on defining and connecting a Carter-Tracy aquifer to a simulation grid.</text:p>
     <text:p text:style-name="P11412"/>
     
    </text:section>

@@ -4250,7 +4250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838822"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838822"/></text:h>
-    <text:p text:style-name="_40_TextBody">The FAULTS keyword defines the faults in the grid geometry and the keyword is normally exported with the grid geometry COORD and ZCORN data sets from static earth modeling software. <text:s/>Note that the FAULTS keyword is not required to describe the structural geometry as this is already accounted for in the COORD and ZCORN data sets, but instead lists the fault traces with respect to the grid. Once the fault traces have been defined with the FAULTS keyword then the fault transmissibilities can be modified by the MULTFLT keyword. Note that without the FAULTS keyword one would still get proper cross-fault transmissibilities but they would not be modifiable using MULTFLT keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword defines the faults in the grid geometry and the keyword is normally exported with the grid geometry <text:a xlink:href="#__RefHeading___Toc45757_719036256">COORD</text:a> and <text:a xlink:href="#__RefHeading___Toc45757_7190362561">ZCORN</text:a> data sets from static earth modeling software. <text:s/>Note that the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword is not required to describe the structural geometry as this is already accounted for in the <text:a xlink:href="#__RefHeading___Toc45757_719036256">COORD</text:a> and <text:a xlink:href="#__RefHeading___Toc45757_7190362561">ZCORN</text:a> data sets, but instead lists the fault traces with respect to the grid. Once the fault traces have been defined with the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword then the fault transmissibilities can be modified by the <text:a xlink:href="#__RefHeading___Toc99835_2023071304">MULTFLT</text:a> keyword. Note that without the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword one would still get proper cross-fault transmissibilities but they would not be modifiable using <text:a xlink:href="#__RefHeading___Toc99835_2023071304">MULTFLT</text:a> keyword.</text:p>
     <table:table table:name="Table298" table:style-name="Table298">
      <table:table-column table:style-name="Table298.A"/>
      <table:table-column table:style-name="Table298.B"/>
@@ -4383,10 +4383,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </office:annotation>FLTFACE<office:annotation-end office:name="__Annotation__63370_519381071"/> is a character string enclosed in quotes with a maximum length of two characters, that classifies the fault face.</text:p>
        <text:list xml:id="list105911747312507" text:continue-list="list105909739839503" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19250">If TRANMULT on the GRIDOPTS keyword in the RUNSPEC section is set to NO then FLTFACE can have values of X, Y, or Z.</text:p>
+         <text:p text:style-name="P19250">If TRANSMULT on the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to NO then FLTFACE can have values of X, Y, or Z.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19250">Alternatively, if TRANMULT on the GRIDOPTS keyword in the RUNSPEC section is set to YES then FLTFACE can have values of X, Y, or Z for the positive direction, or X-, Y- or Z- for the negative direction transmissibilities.</text:p>
+         <text:p text:style-name="P19250">Alternatively, if TRANSMULT on the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to YES then FLTFACE can have values of X, Y, or Z for the positive direction, or X-, Y- or Z- for the negative direction transmissibilities.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4399,10 +4399,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1383">Notes:</text:p>
        <text:list xml:id="list1757943734" text:style-name="L54">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19853">Where NX, NY and NZ are the dimensions of the model as defined on the DIMENS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19853">Where NX, NY and NZ are the dimensions of the model as defined on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19960"><text:soft-page-break/>The FAULTDIM keyword in the RUNSPEC defines the maximum number of records (or segments) that can be entered with the FAULTS keyword.</text:p>
+         <text:p text:style-name="P19960"><text:soft-page-break/>The <text:a xlink:href="#__RefHeading___Toc28917_1640804870">FAULTDIM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> defines the maximum number of records (or segments) that can be entered with the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19788">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>

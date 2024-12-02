@@ -4192,8 +4192,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18372" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5743_3701168388"/>Description<text:bookmark-end text:name="__RefHeading___Toc5743_3701168388"/></text:h>
-    <text:p text:style-name="_40_TextBody">ACTNUM specifies which grid blocks are active or inactive. A value of 1 indicates the block is active and a value of 0 indicates the block is inactive. <text:s/>A grid block is inactive if its pore volume is less than the value entered using keyword MINPV. This keyword can be used to make blocks with a pore volume greater than MINPV inactive. Note that a value must be entered for each grid block in the model. Grid blocks are ordered with the I index cycling fastest, followed by the J and K indices. As for all array data repeat counts may be used, for example 100*1; however the full array must be specified.</text:p>
-    <text:p text:style-name="_40_TextBody">Note that a cells activity can also be set using the EQUALS keyword by selection of only those cells that are required to be made inactive.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a> specifies which grid blocks are active or inactive. A value of 1 indicates the block is active and a value of 0 indicates the block is inactive. <text:s/>A grid block is inactive if its pore volume is less than the value entered using keyword <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a>. This keyword can be used to make blocks with a pore volume greater than <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> inactive. Note that a value must be entered for each grid block in the model. Grid blocks are ordered with the I index cycling fastest, followed by the J and K indices. As for all array data repeat counts may be used, for example 100*1; however the full array must be specified.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that a cells activity can also be set using the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword by selection of only those cells that are required to be made inactive.</text:p>
     <table:table table:name="Table16" table:style-name="Table16">
      <table:table-column table:style-name="Table16.A"/>
      <table:table-column table:style-name="Table16.B"/>
@@ -4218,7 +4218,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1920">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table16.A2" office:value-type="string">
-       <text:p text:style-name="P1941">ACTNUM</text:p>
+       <text:p text:style-name="P1941"><text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table16.A2" office:value-type="string">
        <text:p text:style-name="P1943">An array of integers that define the activity of a cell by setting it to 1 for being active or 0 for inactive, for each grid block in the model.</text:p>
@@ -4232,7 +4232,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1416">Notes:</text:p>
        <text:list xml:id="list105909541750891" text:continue-list="list105908911174112" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17112">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX keyword..</text:p>
+         <text:p text:style-name="P17112">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword..</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18899">The keyword is terminated by a “/”.</text:p>
@@ -4261,7 +4261,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">1 1 1 1</text:p>
     <text:p text:style-name="P12904">0 0 0 0 </text:p>
     <text:p text:style-name="P12904">/</text:p>
-    <text:p text:style-name="P15269">Alternatively the EQUALS keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="P15269">Alternatively the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
     <text:p text:style-name="P15269"/>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>-- ARRAY <text:s text:c="3"/>CONSTANT -- <text:s/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

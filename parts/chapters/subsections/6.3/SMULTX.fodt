@@ -4234,8 +4234,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18447" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715855_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715855_3964674244"/></text:h>
-    <text:p text:style-name="P11951">SMULTX multiples the transmissibility between two cell faces in the +X direction between cells in a host base grid and the connecting auto-refined grid cells, via an array, that is the keyword sets the transmissibility multiplier of block (Ihost, Jhost, Khost) in the host base grid, multiplies the transmissibility all the cells (Iauto, Jauto, Kauto) and (I+Iauto, Jauto, Kauto) in the auto-refinement grid. The Auto Refinement option must be enabled to use this keyword via the AUTOREF keyword in the RUNSPEC section.</text:p>
-    <text:p text:style-name="P11951">An alternative to defining the complete array is to use the BOX keyword to define an area of the grid and then use the SMULTX keyword to set the multipliers just for the area defined by the BOX keyword (see the example).</text:p>
+    <text:p text:style-name="P11951"><text:a xlink:href="#__RefHeading___Toc1275010_516898843">SMULTX</text:a> multiples the transmissibility between two cell faces in the +X direction between cells in a host base grid and the connecting auto-refined grid cells, via an array, that is the keyword sets the transmissibility multiplier of block (Ihost, Jhost, Khost) in the host base grid, multiplies the transmissibility all the cells (Iauto, Jauto, Kauto) and (I+Iauto, Jauto, Kauto) in the auto-refinement grid. The Auto Refinement option must be enabled to use this keyword via the <text:a xlink:href="#__RefHeading___Toc161695_1314821763">AUTOREF</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="P11951">An alternative to defining the complete array is to use the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword to define an area of the grid and then use the <text:a xlink:href="#__RefHeading___Toc1275010_516898843">SMULTX</text:a> keyword to set the multipliers just for the area defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword (see the example).</text:p>
     <text:p text:style-name="P11952">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1564" table:style-name="Table1564">
      <table:table-column table:style-name="Table1564.A"/>
@@ -4261,10 +4261,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3106">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1564.B2" office:value-type="string">
-       <text:p text:style-name="P4228">SMULTX+</text:p>
+       <text:p text:style-name="P4228"><text:a xlink:href="#__RefHeading___Toc1275010_516898843">SMULTX</text:a>+</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1564.C2" office:value-type="string">
-       <text:p text:style-name="P4228">SMULTX+ is an array of real positive numbers assigning the transmissibility multipliers in the +X direction to each cell face in the model. </text:p>
+       <text:p text:style-name="P4228"><text:a xlink:href="#__RefHeading___Toc1275010_516898843">SMULTX</text:a>+ is an array of real positive numbers assigning the transmissibility multipliers in the +X direction to each cell face in the model. </text:p>
        <text:p text:style-name="P4072">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1564.D2" office:value-type="string">
@@ -4276,7 +4276,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1690">Notes:</text:p>
        <text:list xml:id="list105911726789403" text:continue-list="list105911355647213" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19018">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19018">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18927">The keyword is terminated by a “/”.</text:p>
@@ -4290,7 +4290,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14665">Table <text:sequence text:ref-name="refTable192" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.118</text:sequence>: SMULTX Keyword Description</text:p>
     <text:p text:style-name="P15519"/>
-    <text:p text:style-name="P15318">See also the MULTX, MULTY and MULTZ keywords for scaling transmissible between grid cells.</text:p>
+    <text:p text:style-name="P15318">See also the <text:a xlink:href="#__RefHeading___Toc99847_2023071304">MULTX</text:a>, <text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a> and <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> keywords for scaling transmissible between grid cells.</text:p>
     <text:h text:style-name="P18447" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715857_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715857_3964674244"/></text:h>
     <text:p text:style-name="P13838">--</text:p>
     <text:p text:style-name="P13838">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS</text:p>
@@ -4309,7 +4309,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14300">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P14300">ENDBOX <text:s text:c="8"/></text:p>
     <text:p text:style-name="P15141"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P15141">The above example defines a 0.3 scaling multiplier for the 18 cells defined by the preceding BOX statement. The ENDBOX keyword resets the input box to the full grid.</text:p>
+    <text:p text:style-name="P15141">The above example defines a 0.3 scaling multiplier for the 18 cells defined by the preceding <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement. The <text:a xlink:href="#__RefHeading___Toc99903_2023071304">ENDBOX</text:a> keyword resets the input box to the full grid.</text:p>
     
    </text:section>
   </office:text>

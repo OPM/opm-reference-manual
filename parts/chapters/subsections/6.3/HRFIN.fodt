@@ -4230,8 +4230,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18407" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_3701168388111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_3701168388111"/></text:h>
-    <text:p text:style-name="_40_TextBody">HRFIN<text:note text:id="ftn116" text:note-class="footnote"><text:note-citation>116</text:note-citation><text:note-body>
-        <text:p text:style-name="P16651">Radial grids are not currently implemented in this version of OPM Flow, <text:s/>but is expected to be incorporated in <text:span text:style-name="T5644">a future</text:span> release.</text:p></text:note-body></text:note> defines the ratio of grid blocks for the DRV keyword in the r-direction via a vector within a Local Grid Refinement (“LGR”) as opposed to defining the size for each cell for a Radial LGR Grid. The LGR <text:s/>keyword in the RUNSPEC section should be activated to indicate an LGR is being used, and the keyword HRFIN should be placed in between the RADIN (or RAFDIN4) and ENDFIN keywords in the GRID section. The DRV keyword in the GRID section defines the radial grid size in terms of the length, that is feet for field units, this keyword defines the length as the ratio of the previous cell size, staring with the inner radius (INRAD).</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc235947_4219267791">HRFIN</text:a><text:note text:id="ftn116" text:note-class="footnote"><text:note-citation>116</text:note-citation><text:note-body>
+        <text:p text:style-name="P16651">Radial grids are not currently implemented in this version of OPM Flow, <text:s/>but is expected to be incorporated in <text:span text:style-name="T5644">a future</text:span> release.</text:p></text:note-body></text:note> defines the ratio of grid blocks for the <text:a xlink:href="#__RefHeading___Toc91991_705534506">DRV</text:a> keyword in the r-direction via a vector within a Local Grid Refinement (“LGR”) as opposed to defining the size for each cell for a Radial <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> Grid. The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> <text:s/>keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to indicate an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is being used, and the keyword <text:a xlink:href="#__RefHeading___Toc235947_4219267791">HRFIN</text:a> should be placed in between the RADIN (or RAFDIN4) and <text:a xlink:href="#__RefHeading___Toc261235_650382403">ENDFIN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. The <text:a xlink:href="#__RefHeading___Toc91991_705534506">DRV</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section defines the radial grid size in terms of the length, that is feet for field units, this keyword defines the length as the ratio of the previous cell size, staring with the inner radius (<text:a xlink:href="#__RefHeading___Toc19324_3701168388">INRAD</text:a>).</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1211" table:style-name="Table1211">
      <table:table-column table:style-name="Table1211.A"/>
@@ -4274,10 +4274,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2942">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1211.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4158">HRFIN</text:p>
+       <text:p text:style-name="P4158"><text:a xlink:href="#__RefHeading___Toc235947_4219267791">HRFIN</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1211.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4158">HRFIN is a vector of real numbers describing the ratio of cell size for the grid blocks in the r-direction in a radial LGR for the DRV keyword. </text:p>
+       <text:p text:style-name="P4158"><text:a xlink:href="#__RefHeading___Toc235947_4219267791">HRFIN</text:a> is a vector of real numbers describing the ratio of cell size for the grid blocks in the r-direction in a radial <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> for the <text:a xlink:href="#__RefHeading___Toc91991_705534506">DRV</text:a> keyword. </text:p>
        <text:p text:style-name="P4008">Repeat counts may be used, for example 2*1.5. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4305,7 +4305,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1444">Notes:</text:p>
        <text:list xml:id="list105910583664803" text:continue-list="list105910747197752" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19241">The number of entries should correspond to the <text:span text:style-name="T2554">N</text:span>R<text:span text:style-name="T2554"> parameter </text:span>minus one on the RADFIN or RADFIN4 keywords in the GRID section</text:p>
+         <text:p text:style-name="P19241">The number of entries should correspond to the <text:span text:style-name="T2554">N</text:span>R<text:span text:style-name="T2554"> parameter </text:span>minus one on the <text:a xlink:href="#__RefHeading___Toc76871_718313858">RADFIN</text:a> or <text:a xlink:href="#__RefHeading___Toc76873_718313858">RADFIN4</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18910">The keyword is terminated by a “/”.</text:p>
@@ -4321,7 +4321,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14737">Table <text:sequence text:ref-name="refTable120" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.46</text:sequence>: HRFIN Keyword Description</text:p>
     <text:p text:style-name="P15561"/>
-    <text:p text:style-name="P15284">See also the DR, DRV, DTHETAV, and DZ keywords in the GRID section to fully define a radial LGR model. </text:p>
+    <text:p text:style-name="P15284">See also the <text:a xlink:href="#__RefHeading___Toc113051_2066951158">DR</text:a>, <text:a xlink:href="#__RefHeading___Toc91991_705534506">DRV</text:a>, <text:a xlink:href="#__RefHeading___Toc19322_3701168388">DTHETAV</text:a>, and <text:a xlink:href="#__RefHeading___Toc45769_719036256">DZ</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section to fully define a radial <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> model. </text:p>
     <text:h text:style-name="P18407" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715711_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715711_3964674244"/></text:h>
     <text:p text:style-name="P13456">--</text:p>
     <text:p text:style-name="P13456">-- <text:s text:c="6"/>INNER RADIUS OF FIRST GRID BLOCK IN THE RADIAL DIRECTION</text:p>
@@ -4333,7 +4333,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13285">HRFIN</text:p>
     <text:p text:style-name="P13798"><text:s text:c="9"/>1.50 <text:s/>2.00 <text:s/>3.00 <text:s/>5.00 <text:s/>7.00 <text:s/>10.00 <text:s text:c="33"/>/ <text:s text:c="77"/></text:p>
     <text:p text:style-name="P15561"/>
-    <text:p text:style-name="P15200">The above example defines the size of the cells in the R direction based on NR equals 7, resulting in NR-1 values on the RADFIN keyword in the GRID section. Note the INRAD keyword to define the inner radius of the radial grid.</text:p>
+    <text:p text:style-name="P15200">The above example defines the size of the cells in the R direction based on NR equals 7, resulting in NR-1 values on the <text:a xlink:href="#__RefHeading___Toc76871_718313858">RADFIN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. Note the <text:a xlink:href="#__RefHeading___Toc19324_3701168388">INRAD</text:a> keyword to define the inner radius of the radial grid.</text:p>
     <text:p text:style-name="P15200"/>
     
    </text:section>
