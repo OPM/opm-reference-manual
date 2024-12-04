@@ -4250,8 +4250,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716159_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716159_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PVDO defines the oil PVT properties for dead oil<text:note text:id="ftn218" text:note-class="footnote"><text:note-citation>218</text:note-citation><text:note-body>
-        <text:p text:style-name="P16650">“Dead” oil is oil that it contains no dissolved gas or a relatively thick oil or residue that has lost its volatile components. </text:p></text:note-body></text:note>. If the oil has a constant and uniform dissolved gas concentration, Gas-Oil Ratio (“GOR”), and if the reservoir pressure never drops below the saturation pressure (bubble point pressure), then the model can be run more efficiently by omitting the GAS and DISGAS keywords from the RUNSPEC section, treating the oil as a dead oil, and defining a constant Rs (GOR) value with keyword RSCONST or RSCONSTT in the PROPS section. This results in the model being run as a dead oil problem with no active gas phase. However, OPM Flow takes into account the constant Rs in the calculations and reporting. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45803_719036256">PVDO</text:a> defines the oil PVT properties for dead oil<text:note text:id="ftn218" text:note-class="footnote"><text:note-citation>218</text:note-citation><text:note-body>
+        <text:p text:style-name="P16650">“Dead” oil is oil that it contains no dissolved gas or a relatively thick oil or residue that has lost its volatile components. </text:p></text:note-body></text:note>. If the oil has a constant and uniform dissolved gas concentration, Gas-Oil Ratio (“GOR”), and if the reservoir pressure never drops below the saturation pressure (bubble point pressure), then the model can be run more efficiently by omitting the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> and <text:a xlink:href="#__RefHeading___Toc39767_2267116897">DISGAS</text:a> keywords from the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, treating the oil as a dead oil, and defining a constant Rs (GOR) value with keyword <text:a xlink:href="#__RefHeading___Toc138398_332691817">RSCONST</text:a> or <text:a xlink:href="#__RefHeading___Toc138400_332691817">RSCONSTT</text:a> in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This results in the model being run as a dead oil problem with no active gas phase. However, OPM Flow takes into account the constant Rs in the calculations and reporting. </text:p>
     <table:table table:name="Table505" table:style-name="Table505">
      <table:table-column table:style-name="Table505.A"/>
      <table:table-column table:style-name="Table505.B"/>
@@ -4383,10 +4383,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1424">Notes:</text:p>
        <text:list xml:id="list105915999318009" text:continue-list="list105917216657446" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19887">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19887">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20021">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20021">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20021">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4403,10 +4403,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable331" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.115</text:sequence>: PVDO Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="_40_TextBody">Note that provided the first table has been entered, subsequent tables may be defaulted, in this case the <text:span text:style-name="T2945">prior</text:span> table is copied to the current table. See the second example for an illustration on how to use this feature. </text:p>
-    <text:p text:style-name="_40_TextBody">See also the RSCONST and RSCONSTT keywords to define the constant Rs for dead oil and PVCDO as an alternative keyword to enter the dead oil properties.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc138398_332691817">RSCONST</text:a> and <text:a xlink:href="#__RefHeading___Toc138400_332691817">RSCONSTT</text:a> keywords to define the constant Rs for dead oil and <text:a xlink:href="#__RefHeading___Toc104054_57619843">PVCDO</text:a> as an alternative keyword to enter the dead oil properties.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716161_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716161_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">The example </text:span>below <text:span text:style-name="T1">defines </text:span>two dead oil PVT tables with variable viscosity and compressibility with respect to pressure, and assumes that NTPVT equals two and NPPVT is greater than or equal to eight on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">The example </text:span>below <text:span text:style-name="T1">defines </text:span>two dead oil PVT tables with variable viscosity and compressibility with respect to pressure, and assumes that NTPVT equals two and NPPVT is greater than or equal to eight on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P14019">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14019">-- <text:s text:c="5"/>OIL PVT TABLE FOR DEAD OIL <text:s text:c="64"/></text:p>
     <text:p text:style-name="P14019">-- <text:s text:c="85"/></text:p>
@@ -4431,7 +4431,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14019"><text:s text:c="10"/>4800 <text:s text:c="3"/>0.9852 <text:s text:c="4"/>1.14 <text:s text:c="26"/></text:p>
     <text:p text:style-name="P14019"><text:s text:c="10"/>5600 <text:s text:c="3"/>0.9774 <text:s text:c="4"/>1.14 <text:s text:c="26"/>/ TABLE NO. 02 <text:s text:c="4"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="_40_TextBody">The second example defines four dead oil PVT tables with variable viscosity and compressibility with respect to pressure, and assumes that NTPVT equals four and NPPVT is greater than or equal to eight on the TABDIMS keyword in the RUNSPEC section. Here table two defaults to table one, and table four defaults to table three.</text:p>
+    <text:p text:style-name="_40_TextBody">The second example defines four dead oil PVT tables with variable viscosity and compressibility with respect to pressure, and assumes that NTPVT equals four and NPPVT is greater than or equal to eight on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Here table two defaults to table one, and table four defaults to table three.</text:p>
     <text:p text:style-name="P14020">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14020">-- <text:s text:c="5"/>OIL PVT TABLE FOR DEAD OIL <text:s text:c="64"/></text:p>
     <text:p text:style-name="P14020">-- <text:s text:c="85"/></text:p>

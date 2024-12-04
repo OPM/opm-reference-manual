@@ -4539,8 +4539,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P57" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716175_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716175_3964674244"/></text:h>
-    <text:p text:style-name="P86">PVTGWO defines the gas PVT properties for wet gas<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
-        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 oAPI.</text:p></text:note-body></text:note> with vaporized water and oil. This keyword should be used when the VAPOIL and VAPWAT keywords have been declared in the RUNSPEC section indicating that vaporized oil and water are present in the wet gas phase. The keyword may be used for oil-water-gas input decks that contain the wet gas with vaporized oil and water phases. </text:p>
+    <text:p text:style-name="P86"><text:a xlink:href="#__RefHeading___Toc356776_4176551521">PVTGWO</text:a> defines the gas PVT properties for wet gas<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
+        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 oAPI.</text:p></text:note-body></text:note> with vaporized water and oil. This keyword should be used when the <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> and <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keywords have been declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that vaporized oil and water are present in the wet gas phase. The keyword may be used for oil-water-gas input decks that contain the wet gas with vaporized oil and water phases. </text:p>
     <text:p text:style-name="P86">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1825" table:style-name="Table1825">
      <table:table-column table:style-name="Table1825.A"/>
@@ -4780,10 +4780,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P94">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P94">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P95">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rw entries as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P95">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rw entries as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P96">Apart from the PRES data there must be same number of entries for each column. </text:p>
@@ -4806,7 +4806,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P49">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.232.1</text:sequence>: PVTGWO Keyword Description</text:p>
     <text:p text:style-name="P86"/>
-    <text:p text:style-name="P86">See also the PVTG keyword in the PROPS section that defines the wet gas PVT properties when <text:s/>vaporized oil is present in the gas phase, and the PVTGW keyword in the PROPS section that defines the dry gas PVT properties when vaporized water is present in the gas phase. As an alternative to using the PVTGWO keyword, the PVTGW and PVTG keywords may be combined to fully define the wet gas PVT properties if both vaporized water and vaporized oil are present in the gas phase.</text:p>
+    <text:p text:style-name="P86">See also the <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section that defines the wet gas PVT properties when <text:s/>vaporized oil is present in the gas phase, and the <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section that defines the dry gas PVT properties when vaporized water is present in the gas phase. As an alternative to using the <text:a xlink:href="#__RefHeading___Toc356776_4176551521">PVTGWO</text:a> keyword, the <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> and <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keywords may be combined to fully define the wet gas PVT properties if both vaporized water and vaporized oil are present in the gas phase.</text:p>
     <text:p text:style-name="P86"/>
     <text:h text:style-name="P88" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716177_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716177_3964674244"/></text:h>
     <text:p text:style-name="P51">-- <text:s text:c="85"/></text:p>
@@ -4846,7 +4846,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P53"><text:s text:c="9"/>2400 <text:s text:c="2"/>0.000163 <text:s text:c="2"/>0.000225 <text:s text:c="2"/>0.004919 <text:s text:c="2"/>0.02370 <text:s text:c="2"/>/</text:p>
     <text:p text:style-name="P53"><text:s text:c="14"/><text:s text:c="45"/>/ TABLE NO. 2</text:p>
     <text:p text:style-name="P55"/>
-    <text:p text:style-name="P86">The above example defines two wet PVT tables assuming NTPVT equals two and NPPVT is greater than or equal to eight on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P86">The above example defines two wet PVT tables assuming NTPVT equals two and NPPVT is greater than or equal to eight on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P86">Notice that there is no terminating “/” for this keyword only for a table and a sub table.</text:p>
     <text:p text:style-name="P86"/>
    </text:section>

@@ -4254,7 +4254,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838831123"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838831123"/></text:h>
-    <text:p text:style-name="_40_TextBody">The ROCKTABH keyword defines the rock compaction hysteresis attributes to be applied for when the rock compaction option has been invoked by the ROCKCOMP keyword in the RUNSPEC section. ROCKTABH defines pore volume and transmissibility multipliers versus pressure that are used in the compaction calculations. If the RKTRMDIR has been activated in the PROPS section, then the transmissibility multiplier is directional dependent and two additional columns are used to define the y and z direction transmissibility multipliers. The keyword should only be used if the Rock Compaction Hysteresis option has been activated by either setting the ROCKOPT parameter on the ROCKCOMP keyword to HYSTER or BOBERG. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc266641_516898843">ROCKTABH</text:a> keyword defines the rock compaction hysteresis attributes to be applied for when the rock compaction option has been invoked by the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. <text:a xlink:href="#__RefHeading___Toc266641_516898843">ROCKTABH</text:a> defines pore volume and transmissibility multipliers versus pressure that are used in the compaction calculations. If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> has been activated in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, then the transmissibility multiplier is directional dependent and two additional columns are used to define the y and z direction transmissibility multipliers. The keyword should only be used if the Rock Compaction Hysteresis option has been activated by either setting the ROCKOPT parameter on the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword to HYSTER or BOBERG. </text:p>
     <text:p text:style-name="P10991">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1507" table:style-name="Table1507">
      <table:table-column table:style-name="Table1507.A"/>
@@ -4302,7 +4302,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4816">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1507.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4418">If the ROCKOPT1 variable has been set to PRESSURE on the ROCKOPTS keyword in the PROPS section, then PRESS should be a columnar vector of real monotonically <text:span text:style-name="T2554">increasing</text:span> down the column values, that define the reference pressure for which the other parameters correspond to.</text:p>
+       <text:p text:style-name="P4418">If the ROCKOPT1 variable has been set to <text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a> on the <text:a xlink:href="#__RefHeading___Toc111814_2939291539">ROCKOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, then PRESS should be a columnar vector of real monotonically <text:span text:style-name="T2554">increasing</text:span> down the column values, that define the reference pressure for which the other parameters correspond to.</text:p>
        <text:p text:style-name="P4818">If ROCKOPT1 has been set to STRESS, then PRESS should be a columnar vector of real monotonically <text:span text:style-name="T2554">de</text:span>creasing down the column values.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4330,7 +4330,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3098">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1507.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4816">PORV</text:p>
+       <text:p text:style-name="P4816"><text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1507.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4418">A columnar vector of real positive values that are either equal or increasing down the column that define the rock pore volume multiplier for a given PRESS.</text:p>
@@ -4363,8 +4363,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4816">TRANS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1507.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4418">If the RKTRMDIR is absent from the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define the x, y, and z directional transmissibility multipliers for the corresponding PRESS.</text:p>
-       <text:p text:style-name="P4418">If the RKTRMDIR is present in the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define only the x directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P4418">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is absent from the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define the x, y, and z directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P4418">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is present in the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define only the x directional transmissibility multipliers for the corresponding PRESS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4395,8 +4395,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10069">TRANSY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1507.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P10154">If the RKTRMDIR is absent from the input deck, then TRANSY is ignored.</text:p>
-       <text:p text:style-name="P4388">If the RKTRMDIR is present in the input deck, then TRANSY is a columnar vector of real positive values that are either equal or increasing down the column that define only the y directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P10154">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is absent from the input deck, then TRANSY is ignored.</text:p>
+       <text:p text:style-name="P4388">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is present in the input deck, then TRANSY is a columnar vector of real positive values that are either equal or increasing down the column that define only the y directional transmissibility multipliers for the corresponding PRESS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4426,8 +4426,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10069">TRANSZ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1507.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P10154">If the RKTRMDIR is absent from the input deck, then TRANSZ is ignored.</text:p>
-       <text:p text:style-name="P4388">If the RKTRMDIR is present in the input deck, then TRANSZ is a columnar vector of real positive values that are either equal or increasing down the column that define only the z directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P10154">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is absent from the input deck, then TRANSZ is ignored.</text:p>
+       <text:p text:style-name="P4388">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is present in the input deck, then TRANSZ is a columnar vector of real positive values that are either equal or increasing down the column that define only the z directional transmissibility multipliers for the corresponding PRESS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4454,10 +4454,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1681">Notes:</text:p>
        <text:list xml:id="list105915817203474" text:continue-list="list105917805242273" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19863">The keyword is followed by NTROCC tables as declared on the ROCKCOMP keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19863">The keyword is followed by NTROCC tables as declared on the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19995">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19995">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19995">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4473,10 +4473,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14778">Table <text:sequence text:ref-name="refTable346" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.130</text:sequence>: ROCKTABH Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11922">Each data set consists of columnar vectors of pore volume and transmissibility multipliers versus pressure that specify the elastic contraction and expansion and of the reservoir rock. The deflation curve is derived from the first data elements on each elastic curve. If the ROCKOPT parameter on the ROCKCOMP keyword has been set to HYSTER, then the dilation curves are extrapolated to infinite pressure, that is the curves are unbounded. However, if ROCKCOMP is set to BOBERG the last points of each elastic curve are used as the dilation curves.</text:p>
+    <text:p text:style-name="P11922">Each data set consists of columnar vectors of pore volume and transmissibility multipliers versus pressure that specify the elastic contraction and expansion and of the reservoir rock. The deflation curve is derived from the first data elements on each elastic curve. If the ROCKOPT parameter on the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword has been set to HYSTER, then the dilation curves are extrapolated to infinite pressure, that is the curves are unbounded. However, if <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> is set to BOBERG the last points of each elastic curve are used as the dilation curves.</text:p>
     <text:p text:style-name="P11556"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838830122"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838830122"/></text:h>
-    <text:p text:style-name="P11263">The example below defines two rock compaction tables, assuming NTROCC is equal to two on the ROCKCOMP keyword and NPPVT is greater than or equal to four on the TABDIMS keyword and that the RKTRMDIR keyword is not present in the input deck.</text:p>
+    <text:p text:style-name="P11263">The example below defines two rock compaction tables, assuming NTROCC is equal to two on the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword and NPPVT is greater than or equal to four on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword and that the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> keyword is not present in the input deck.</text:p>
     <text:p text:style-name="P13397">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P13397">-- <text:s text:c="6"/>ROCK COMPACTION HYSTERESIS TABLES <text:s text:c="65"/></text:p>
     <text:p text:style-name="P13397">-- </text:p>

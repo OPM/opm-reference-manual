@@ -4350,8 +4350,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715963_396467424412"/>Description<text:bookmark-end text:name="__RefHeading___Toc715963_396467424412"/></text:h>
-    <text:p text:style-name="P12640">WATJT activates the water Joule-Thomson effect<text:note text:id="ftn275" text:note-class="footnote"><text:note-citation>275</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">The Joule–Thomson coefficient<text:span text:style-name="T8201"> </text:span>is defined as the change in temperature with respect to an increase in pressure at<text:span text:style-name="T8201"> </text:span>constant enthalpy<text:span text:style-name="T8201">.</text:span></text:p></text:note-body></text:note> in temperature calculations, and defines the water Joule-Thomson Coefficient (“JTC”) at a given reference pressure, for when OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC. </text:p>
+    <text:p text:style-name="P12640"><text:a xlink:href="#__RefHeading___Toc163486_254534176112">WATJT</text:a> activates the water Joule-Thomson effect<text:note text:id="ftn275" text:note-class="footnote"><text:note-citation>275</text:note-citation><text:note-body>
+        <text:p text:style-name="Footnote">The Joule–Thomson coefficient<text:span text:style-name="T8201"> </text:span>is defined as the change in temperature with respect to an increase in pressure at<text:span text:style-name="T8201"> </text:span>constant enthalpy<text:span text:style-name="T8201">.</text:span></text:p></text:note-body></text:note> in temperature calculations, and defines the water Joule-Thomson Coefficient (“JTC”) at a given reference pressure, for when OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a>. </text:p>
     <table:table table:name="Table2136" table:style-name="Table2136">
      <table:table-column table:style-name="Table2136.A"/>
      <table:table-header-rows>
@@ -4364,7 +4364,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12493">This keyword can only be used if OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC section. Note this is different to the commercial simulator that uses the TEMP keyword in the RUNSPEC section to activate the black-oil thermal model, and does not include the Joule-Thomson effect in temperature calculations.</text:p>
+    <text:p text:style-name="P12493">This keyword can only be used if OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note this is different to the commercial simulator that uses the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the black-oil thermal model, and does not include the Joule-Thomson effect in temperature calculations.</text:p>
     <table:table table:name="Table2122" table:style-name="Table2122">
      <table:table-column table:style-name="Table2122.A"/>
      <table:table-column table:style-name="Table2122.B"/>
@@ -4440,7 +4440,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2122.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="Table_20_Contents">WATJTC is a real positive or negative value that defines the water phase Joule-Thomson Coefficient. </text:p>
-       <text:p text:style-name="P1335"><text:span text:style-name="T4435">If the value is defaulted (</text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">1*</text:span></text:span><text:span text:style-name="T4435">) or set to </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">0</text:span></text:span><text:span text:style-name="T4435">, then WATJTC is internally calculated using thermal water density data on the WAT</text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">SDENT keyword in the PROPS section.</text:span></text:span><text:span text:style-name="T4435"> </text:span></text:p>
+       <text:p text:style-name="P1335"><text:span text:style-name="T4435">If the value is defaulted (</text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">1*</text:span></text:span><text:span text:style-name="T4435">) or set to </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">0</text:span></text:span><text:span text:style-name="T4435">, then WATJTC is internally calculated using thermal water density data on the WAT</text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T4435">SDENT keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:span></text:span><text:span text:style-name="T4435"> </text:span></text:p>
        <text:p text:style-name="Table_20_Contents">If a non-zero value is specified, then the WATJTC is assumed to be constant and equal to that value. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4468,7 +4468,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1810">Notes:</text:p>
        <text:list xml:id="list105918048424086" text:continue-list="list105917745214853" text:style-name="L85">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20104">The keyword is followed by NTPVT records as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20104">The keyword is followed by NTPVT records as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20079">Each data set is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -5012,7 +5012,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </draw:frame><text:s/><text:tab/>= <text:tab/>height (m).</text:p>
     <text:p text:style-name="P16610"/>
     <text:h text:style-name="P18481" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715965_396467424412"/>Example<text:bookmark-end text:name="__RefHeading___Toc715965_396467424412"/></text:h>
-    <text:p text:style-name="P12493">The following example shows the WATJT keyword for when the thermal option has been activated by the THERMAL keyword in the RUNSPEC section, and for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set equal to two.</text:p>
+    <text:p text:style-name="P12493">The following example shows the <text:a xlink:href="#__RefHeading___Toc163486_254534176112">WATJT</text:a> keyword for when the thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set equal to two.</text:p>
     <text:p text:style-name="P13982">--</text:p>
     <text:p text:style-name="P13982">-- <text:s text:c="6"/>WATER JOULE-THOMSON COEFFICIENT (OPM FLOW EXTENSION KEYWORD)</text:p>
     <text:p text:style-name="P13982">--</text:p>
@@ -5023,7 +5023,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13982"><text:s text:c="9"/>20.0 <text:s text:c="6"/>1* <text:s text:c="17"/>/ TABLE NO. 01 <text:s text:c="13"/></text:p>
     <text:p text:style-name="P13982"><text:s text:c="9"/>20.0 <text:s text:c="6"/>-0.20 <text:s text:c="14"/>/ TABLE NO. 02</text:p>
     <text:p text:style-name="P11662"/>
-    <text:p text:style-name="P11662">Here the first entry is defaulted, and the simulator will therefore calculate the water JTC internally using the data on the WATDENT keyword in the PROPS section.</text:p>
+    <text:p text:style-name="P11662">Here the first entry is defaulted, and the simulator will therefore calculate the water JTC internally using the data on the <text:a xlink:href="#__RefHeading___Toc173954_2545341761">WATDENT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:p text:style-name="P11324">There is no terminating “/” for this keyword.</text:p>
     
    </text:section>

@@ -4358,8 +4358,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716167_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716167_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PVTG defines the gas PVT properties for wet gas<text:note text:id="ftn219" text:note-class="footnote"><text:note-citation>219</text:note-citation><text:note-body>
-        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 oAPI.</text:p></text:note-body></text:note>. This keyword should be used when the VAPOIL keyword has be declared in the RUNSPEC section indicating that that vaporized oil (more commonly referred to as condensate) is present in the wet gas phase. The keyword may be used for gas-water and oil-water-gas input decks that contain the oil and gas phases. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> defines the gas PVT properties for wet gas<text:note text:id="ftn219" text:note-class="footnote"><text:note-citation>219</text:note-citation><text:note-body>
+        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 oAPI.</text:p></text:note-body></text:note>. This keyword should be used when the <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> keyword has be declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that that vaporized oil (more commonly referred to as condensate) is present in the wet gas phase. The keyword may be used for gas-water and oil-water-gas input decks that contain the oil and gas phases. </text:p>
     <table:table table:name="Table513" table:style-name="Table513">
      <table:table-column table:style-name="Table513.A"/>
      <table:table-column table:style-name="Table513.B" table:number-columns-repeated="2"/>
@@ -4547,10 +4547,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1534">Notes:</text:p>
        <text:list xml:id="list105916232502249" text:continue-list="list105917089770988" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19889">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19889">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20023">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rv entries as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20023">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rv entries as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20114">Apart from the PRESS data there must be same number of entries for each column. </text:p>
@@ -4581,14 +4581,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708707436784">
        <table:table-cell table:style-name="Table2138.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10385">If the VAPWAT keyword in the RUNSPEC section is also present in the input deck, then the PVTG keyword in the PROPS section should be used to define the gas properties as function of pressure and RV, assuming water-saturated gas. Also, in this case, the PVTGW keyword, also in the PROPS section, should also be in the input deck. In this case, PVTGW defines the gas properties as function of pressure and RVW, assuming oil-saturated gas.</text:p>
+        <text:p text:style-name="P10385">If the <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is also present in the input deck, then the <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section should be used to define the gas properties as function of pressure and <text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a>, assuming water-saturated gas. Also, in this case, the <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> keyword, also in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, should also be in the input deck. In this case, <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> defines the gas properties as function of pressure and <text:a xlink:href="#__RefHeading___Toc537756_4287353749">RVW</text:a>, assuming oil-saturated gas.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="Text_20_body"/>
     <text:h text:style-name="P18746" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12509">The first example defines two wet gas PVT tables assuming NTPVT equals two, NPPVT is greater than or equal to eight, and NRPVT greater than or equal to two on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P12509">The first example defines two wet gas PVT tables assuming NTPVT equals two, NPPVT is greater than or equal to eight, and NRPVT greater than or equal to two on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="6"/>GAS PVT TABLE FOR WET GAS WITH VAPORIZED OIL <text:s text:c="70"/></text:p>
     <text:p text:style-name="P13443">-- <text:s text:c="85"/></text:p>
@@ -4628,7 +4628,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13444"><text:s text:c="14"/><text:s text:c="45"/>/ TABLE NO. 2</text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="P11050"/>
-    <text:p text:style-name="P16050">The second example defines four wet gas PVT tables assuming NTPVT equals four, NPPVT is greater than or equal to eight, and NRPVT greater than or equal to two on the TABDIMS keyword in the RUNSPEC section. Here table two defaults to table one, and table four defaults to table three.</text:p>
+    <text:p text:style-name="P16050">The second example defines four wet gas PVT tables assuming NTPVT equals four, NPPVT is greater than or equal to eight, and NRPVT greater than or equal to two on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Here table two defaults to table one, and table four defaults to table three.</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13448">-- <text:s text:c="6"/>GAS PVT TABLE FOR WET GAS WITH VAPORIZED OIL <text:s text:c="70"/></text:p>
     <text:p text:style-name="P13448">-- <text:s text:c="85"/></text:p>

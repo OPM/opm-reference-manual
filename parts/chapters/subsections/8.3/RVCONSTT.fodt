@@ -4244,8 +4244,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716207_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716207_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">RVCONSTT defines a constant Condensate-Gas Ratio (“CGR” or Rv), for each dry gas<text:note text:id="ftn231" text:note-class="footnote"><text:note-citation>231</text:note-citation><text:note-body>
-        <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note> PVT fluid. If the gas has a constant and uniform dissolved condensate concentration, and if the reservoir pressure never drops below the saturation pressure (dew point pressure), then the model can be run more efficiently by omitting the OIL and VAPGAS keywords from the RUNSPEC section, treating the gas as a dry gas, and defining a constant Rv (CGR) value with keywords RVCONST or RVCONSTT in the PROPS section. This results in the model being run as a dry gas problem with no active oil phase. However, OPM Flow takes into account the constant Rv in the calculations and reporting. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc138400_3326918171">RVCONSTT</text:a> defines a constant Condensate-Gas Ratio (“CGR” or Rv), for each dry gas<text:note text:id="ftn231" text:note-class="footnote"><text:note-citation>231</text:note-citation><text:note-body>
+        <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note> PVT fluid. If the gas has a constant and uniform dissolved condensate concentration, and if the reservoir pressure never drops below the saturation pressure (dew point pressure), then the model can be run more efficiently by omitting the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> and VAPGAS keywords from the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, treating the gas as a dry gas, and defining a constant Rv (CGR) value with keywords <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> or <text:a xlink:href="#__RefHeading___Toc138400_3326918171">RVCONSTT</text:a> in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This results in the model being run as a dry gas problem with no active oil phase. However, OPM Flow takes into account the constant Rv in the calculations and reporting. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is ignored by OPM Flow but is documented here for completeness.</text:p>
     <table:table table:name="Table1525" table:style-name="Table1525">
      <table:table-column table:style-name="Table1525.A"/>
@@ -4288,7 +4288,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3100">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1525.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4822">RS</text:p>
+       <text:p text:style-name="P4822"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1525.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4419">A real positive value that defines the dry gas CGR for each dry gas PVT table in the model</text:p>
@@ -4348,10 +4348,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1683">Notes:</text:p>
        <text:list xml:id="list105916217524685" text:continue-list="list105915925695079" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19895">The keyword is followed by NTPVT rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19895">The keyword is followed by NTPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20031">Each row must contain two values representing the RV and PRESS variables. </text:p>
+         <text:p text:style-name="P20031">Each row must contain two values representing the <text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a> and PRESS variables. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20031">Each row is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4366,7 +4366,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14600">Table <text:sequence text:ref-name="refTable354" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.138</text:sequence>: RVCONSTT Keyword Description</text:p>
-    <text:p text:style-name="P16895">See also the RVCONST keyword to define a constant Rv to all the various dry gas PVT tables and the PVDG keyword to enter the dry gas properties. All of the aforementioned keywords are in the PROPS section.</text:p>
+    <text:p text:style-name="P16895">See also the <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> keyword to define a constant Rv to all the various dry gas PVT tables and the <text:a xlink:href="#__RefHeading___Toc104056_57619843">PVDG</text:a> keyword to enter the dry gas properties. All of the aforementioned keywords are in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:p text:style-name="P16893"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716209_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716209_3964674244"/></text:h>
     <text:p text:style-name="Text_20_body">The example sets the dry gas CGR to 5, 6.5 and 8.0 stb/MMscf for PVT tables one, two and three, respectively and the bubble point pressure to 14.7 psia for all three tables.</text:p>

@@ -4217,7 +4217,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31084_784232322"/>Description<text:bookmark-end text:name="__RefHeading___Toc31084_784232322"/></text:h>
-    <text:p text:style-name="_40_TextBody">SGU defines the maximum gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The maximum gas saturation is defined as the maximum gas saturation in a two-phase gas relative permeability table. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a> defines the maximum gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The maximum gas saturation is defined as the maximum gas saturation in a two-phase gas relative permeability table. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table176" table:style-name="Table176">
      <table:table-column table:style-name="Table176.A"/>
@@ -4260,10 +4260,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3036">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table176.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4601">SGU</text:p>
+       <text:p text:style-name="P4601"><text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table176.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3216">SGU is an array of real numbers assigning the maximum gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P3216"><text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a> is an array of real numbers assigning the maximum gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword.</text:p>
        <text:p text:style-name="P4051">Repeat counts may be used, for example 30*0.70 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4291,7 +4291,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1551">Notes:</text:p>
        <text:list xml:id="list105916717426463" text:continue-list="list105916143335560" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19263">Note this the directional independent version of the maximum gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SGUX± , SGUX± and SGU± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19263">Note this the directional independent version of the maximum gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUX</text:a>± , <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUX</text:a>± and <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a>± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18772">If the value for a cell has been defaulted then OPM Flow uses the value from the cell’s relative permeability table. </text:p>
@@ -4310,7 +4310,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14904">Table <text:sequence text:ref-name="refTable369" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.153</text:sequence>: SGU Keyword Description</text:p>
     <text:p text:style-name="P15629"/>
-    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SGUX, SGUY and SGUZ instead of SGU. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SGUX, SGUX-, SGUY, SGUY-, SGUZ and SGUZ-, <text:s/>instead of the SGU keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>, <text:a xlink:href="#__RefHeading___Toc27248_784232322">SWCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWU</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a>, <text:a xlink:href="#__RefHeading___Toc20428_784232322">SGCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a>, <text:a xlink:href="#__RefHeading___Toc30436_784232322">SOWCR</text:a>, and <text:a xlink:href="#__RefHeading___Toc30434_784232322">SOGCR</text:a> <text:s/>saturation grid arrays for the saturation end-points, and the <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a>, KROG, KROW and <text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a> relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUX</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUY</text:a> and <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a>. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUX</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUX-</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUY</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUY-</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUZ</text:a> and <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGUZ-</text:a>, <text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a> keyword.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31086_784232322"/>Example<text:bookmark-end text:name="__RefHeading___Toc31086_784232322"/></text:h>
     <text:p text:style-name="P13573">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13998">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SGU DATA FOR ALL CELLS </text:p>
@@ -4319,7 +4319,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13601">SGU</text:p>
     <text:p text:style-name="P13573"><text:s text:c="9"/>300*0.700 <text:s text:c="56"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13076"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15107">The above example defines a constant connate gas saturation of 0.70 to all 300 cells in <text:soft-page-break/>the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15107">The above example defines a constant connate gas saturation of 0.70 to all 300 cells in <text:soft-page-break/>the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15107"/>
     <text:p text:style-name="P15107"/>
     

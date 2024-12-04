@@ -4277,14 +4277,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18673" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838818 Copy 1 Copy 1 Copy 1 Copy 1"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838818 Copy 1 Copy 1 Copy 1 Copy 1"/></text:h>
-    <text:p text:style-name="P12723">The ZMFVD keyword defines the compositional component mole fractions, for each component, as a function of depth, as such the keyword should have the same number of component columnar vectors as that declared via the COMPS keyword in the RUNSPEC section, and the NCOMPS keyword in the PROPS section. The keyword should only be used if the CO2STORE and GASWAT keywords in the RUNSPEC section have also be activated for the gas-water two component model.</text:p>
+    <text:p text:style-name="P12723">The <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 1">ZMFVD</text:a> keyword defines the compositional component mole fractions, for each component, as a function of depth, as such the keyword should have the same number of component columnar vectors as that declared via the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1">NCOMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section have also be activated for the gas-water two component model.</text:p>
     <table:table table:name="Table2086" table:style-name="Table2086">
      <table:table-column table:style-name="Table2086.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2086.1">
        <table:table-cell table:style-name="Table2086.A1" office:value-type="string">
         <text:p text:style-name="P10233">Note</text:p>
-        <text:p text:style-name="P10189">This is an OPM Flow keyword used with OPM Flow’s CO2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the ZMFVD keyword used in the commercial compositional simulator.</text:p>
+        <text:p text:style-name="P10189">This is an OPM Flow keyword used with OPM Flow’s <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and should not be confused with the more general version of the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 1">ZMFVD</text:a> keyword used in the commercial compositional simulator.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4331,11 +4331,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3164">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2087.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4676">DEPTH</text:p>
+       <text:p text:style-name="P4676"><text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2087.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the depth values for the corresponding compositional component mole fractions.</text:p>
-       <text:p text:style-name="P1160">The default number of DEPTH values is 20, as defined by the NDRXVD parameter on the EQLDIMS keyword in the RUNSPEC section, and which may be used to reset the number of DEPTH values.</text:p>
+       <text:p text:style-name="P1160">The default number of <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> values is 20, as defined by the NDRXVD parameter on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and which may be used to reset the number of <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> values.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4365,8 +4365,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5447">ZCOMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2087.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1156">A series of columnar vectors, with each columnar vector representing a compositional component mole fraction as a function of DEPTH. <text:s/>In addition, the sum of the compositional component mole fractions must sum to one for a given DEPTH value, otherwise an error will occur. Secondly, if the composition is independent of depth, then only one single row may be entered.</text:p>
-       <text:p text:style-name="P1157">Note that the number of columnar vectors, should be the same as that entered via the NCOMPS keyword in the PROPS section, and the COMPS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P1156">A series of columnar vectors, with each columnar vector representing a compositional component mole fraction as a function of <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a>. <text:s/>In addition, the sum of the compositional component mole fractions must sum to one for a given <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> value, otherwise an error will occur. Secondly, if the composition is independent of depth, then only one single row may be entered.</text:p>
+       <text:p text:style-name="P1157">Note that the number of columnar vectors, should be the same as that entered via the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1">NCOMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, and the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
        <text:p text:style-name="P1156">Finally, only the default value of two components are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4408,7 +4408,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14974">Table <text:sequence text:ref-name="refTable417" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.201</text:sequence>: ZMFVD Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18750" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12719">The following example defines how to confirm a two component formulation, together with defining the names of the composition components, as well as the compositional gradient, to be used with the CO2STORE and GASWAT options.</text:p>
+    <text:p text:style-name="P12719">The following example defines how to confirm a two component formulation, together with defining the names of the composition components, as well as the compositional gradient, to be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> options.</text:p>
     <text:p text:style-name="P14541">--</text:p>
     <text:p text:style-name="P14541">-- <text:s text:c="6"/>CONFIRM NUMBER OF COMPOSITIONAL COMPONENTS (OPM FLOW KEYWORD)</text:p>
     <text:p text:style-name="P14541">--</text:p>

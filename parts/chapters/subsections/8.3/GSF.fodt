@@ -4249,7 +4249,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="P12686">The GSF keyword defines the gas relative permeability and gas-water capillary pressure data versus gas saturation tables for when only gas and water are present in the input deck. <text:s/>This keyword should only be used if the gas and water phases are present in the run, and can therefore also be used with the CO2STORE and H2STORE models. In addition, the keyword must be used in conjunction with the WSF keyword in the PROPS section, that defines the water relative permeability versus water saturation for gas-water systems.</text:p>
+    <text:p text:style-name="P12686">The <text:a xlink:href="#__RefHeading___Toc524656_3603161511">GSF</text:a> keyword defines the gas relative permeability and gas-water capillary pressure data versus gas saturation tables for when only gas and water are present in the input deck. <text:s/>This keyword should only be used if the gas and water phases are present in the run, and can therefore also be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> models. In addition, the keyword must be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc524656_3603161511 Copy 1">WSF</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that defines the water relative permeability versus water saturation for gas-water systems.</text:p>
     <table:table table:name="Table770" table:style-name="Table770">
      <table:table-column table:style-name="Table770.A"/>
      <table:table-header-rows>
@@ -4257,7 +4257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table770.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
         <text:p text:style-name="P10412">G<text:span text:style-name="T3628">SF is a compositional keyword in the commercial compositional simulator, and will therefore cause an error in the commercial black-oil simulator.</text:span> </text:p>
-        <text:p text:style-name="P10341">Currently, both the GSF and WSF keywords can only be used with the CO2STORE and H2STORE models.</text:p>
+        <text:p text:style-name="P10341">Currently, both the <text:a xlink:href="#__RefHeading___Toc524656_3603161511">GSF</text:a> and <text:a xlink:href="#__RefHeading___Toc524656_3603161511 Copy 1">WSF</text:a> keywords can only be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> models.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4304,7 +4304,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3159">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4643">SGAS</text:p>
+       <text:p text:style-name="P4643"><text:a xlink:href="#__RefHeading___Toc137369_1317547213">SGAS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4432">A columnar vector of real values monotonically increasing down the column starting from zero and terminating at one minus the connate water saturation, that defines the gas saturation.</text:p>
@@ -4334,7 +4334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3159">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4652">KRG</text:p>
+       <text:p text:style-name="P4652"><text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table946.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4432">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the gas relative permeability.</text:p>
@@ -4395,10 +4395,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1830">Notes:</text:p>
        <text:list xml:id="list105915277746929" text:continue-list="list105914356541914" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19857">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19857">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19989">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19989">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19989">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4414,7 +4414,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14968">Table <text:sequence text:ref-name="refTable260" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.44</text:sequence>: GSF Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12880">See also the <text:a xlink:type="simple" xlink:href="#8.3.365.WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc524656_3603161511 Copy 1">WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)</text:bookmark-ref></text:a><text:s/><text:soft-page-break/>keyword in the PROPS section, that defines the water saturation as a function of water saturation for when only the gas and water phases are present in the model. </text:p>
+    <text:p text:style-name="P12880">See also the <text:a xlink:type="simple" xlink:href="#8.3.365.WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc524656_3603161511 Copy 1">WSF - Water Saturation Tables versus Water Saturation (Gas-Water and CO2STORE Systems)</text:bookmark-ref></text:a><text:s/><text:soft-page-break/>keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that defines the water saturation as a function of water saturation for when only the gas and water phases are present in the model. </text:p>
     <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32169_3701168388301 Copy 1"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_3701168388301 Copy 1"/></text:h>
     <text:p text:style-name="_40_Example">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>GAS RELATIVE PERMEABILITY TABLES (OPM FLOW KEYWORD) <text:s text:c="44"/></text:p>
@@ -4463,7 +4463,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="13"/>0.82 <text:s text:c="3"/>0.4000 <text:s text:c="5"/>0.0</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="13"/>0.85 <text:s text:c="3"/>0.4450 <text:s text:c="5"/>0.0 <text:s text:c="22"/>/ TABLE NO. 02</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11687">The example defines two GSF tables for when gas and water are present in the input deck. In the tables the gas-water capillary pressure data has been set to zero.</text:p>
+    <text:p text:style-name="P11687">The example defines two <text:a xlink:href="#__RefHeading___Toc524656_3603161511">GSF</text:a> tables for when gas and water are present in the input deck. In the tables the gas-water capillary pressure data has been set to zero.</text:p>
     
    </text:section>
   </office:text>

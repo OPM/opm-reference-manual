@@ -4311,7 +4311,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881722"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881722"/></text:h>
-    <text:p text:style-name="_40_TextBody">PVTW defines the water properties for various regions in the model. The number of PVTW vector data sets is defined by the NTPVT parameter on the TABDIMS keyword in the RUNSPEC section and the allocation of the PVTW tables to different grid blocks in the model is done via the PVTNUM keyword in the REGIONS section. One data set consists of one record or line which is terminated by a “/”. If the water phase is active in the model, which is normally the case, then this keyword must be defined in the OPM Flow input deck.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> defines the water properties for various regions in the model. The number of <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> vector data sets is defined by the NTPVT parameter on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and the allocation of the <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> tables to different grid blocks in the model is done via the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section. One data set consists of one record or line which is terminated by a “/”. If the water phase is active in the model, which is normally the case, then this keyword must be defined in the OPM Flow input deck.</text:p>
     <table:table table:name="Table101" table:style-name="Table101">
      <table:table-column table:style-name="Table101.A"/>
      <table:table-column table:style-name="Table101.B"/>
@@ -4702,7 +4702,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1436">Notes:</text:p>
        <text:list xml:id="list105915686264148" text:continue-list="list105917275616168" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20095">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20095">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20050"><text:soft-page-break/>Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4720,7 +4720,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12778"/>
     <text:p text:style-name="P16134"><text:bookmark-start text:name="__RefHeading___Toc716169_39646742441"/>Note that provided the first table has been entered, subsequent tables may be defaulted, in this case the prior table is copied to the current table. See the third example for an illustration on how to use this feature. <text:bookmark-end text:name="__RefHeading___Toc716169_39646742441"/></text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716183_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716183_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following shows the PVTW keyword for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set to one.</text:p>
+    <text:p text:style-name="_40_TextBody">The following shows the <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> keyword for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to one.</text:p>
     <text:p text:style-name="P13976">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13977">-- <text:s text:c="6"/>WATER PVT TABLE <text:s text:c="67"/></text:p>
     <text:p text:style-name="P13976">-- <text:s text:c="85"/></text:p>
@@ -4730,7 +4730,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13977">-- <text:s text:c="6"/>-------- <text:s/>-------- <text:s text:c="2"/>------- <text:s text:c="2"/>------ <text:s text:c="2"/>------ <text:s text:c="38"/></text:p>
     <text:p text:style-name="P14025"><text:s text:c="9"/>4840.0 <text:s text:c="3"/>1.019 <text:s text:c="4"/>2.7E-6 <text:s text:c="4"/>0.370 <text:s text:c="3"/>1* <text:s text:c="8"/>/ TABLE NO. 01 <text:s text:c="13"/></text:p>
     <text:p text:style-name="P15176"/>
-    <text:p text:style-name="P15176">The next example shows the PVTW keyword for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set to three.</text:p>
+    <text:p text:style-name="P15176">The next example shows the <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> keyword for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to three.</text:p>
     <text:p text:style-name="P13978">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13978">-- <text:s text:c="6"/>WATER PVT TABLE <text:s text:c="67"/></text:p>
     <text:p text:style-name="P13978">-- <text:s text:c="85"/></text:p>
@@ -4742,9 +4742,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13977"><text:s text:c="9"/>4840.0 <text:s text:c="3"/>1.019 <text:s text:c="4"/>2.7E-6 <text:s text:c="4"/>0.370 <text:s text:c="3"/>1* <text:s text:c="8"/>/ TABLE NO. 02 <text:s text:c="13"/></text:p>
     <text:p text:style-name="P13977"><text:s text:c="9"/>4940.0 <text:s text:c="3"/>1.030 <text:s text:c="4"/>2.8E-6 <text:s text:c="4"/>0.390 <text:s text:c="3"/>1* <text:s text:c="8"/>/ TABLE NO. 03 <text:s text:c="13"/></text:p>
     <text:p text:style-name="P15021"/>
-    <text:p text:style-name="P15160">The above example defines three water PVT tables and assumes that NTPVT equals three on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15160">The above example defines three water PVT tables and assumes that NTPVT equals three on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15160"/>
-    <text:p text:style-name="P15236">The third, and final example, shows the PVTW keyword for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set to four. Here table two defaults to table one, and table four defaults to table three</text:p>
+    <text:p text:style-name="P15236">The third, and final example, shows the <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> keyword for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to four. Here table two defaults to table one, and table four defaults to table three</text:p>
     <text:p text:style-name="P15236"/>
     <text:p text:style-name="P13983">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13983">-- <text:s text:c="6"/>WATER PVT TABLE <text:s text:c="67"/></text:p>
