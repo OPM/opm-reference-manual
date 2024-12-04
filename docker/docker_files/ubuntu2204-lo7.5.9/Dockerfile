@@ -37,6 +37,13 @@ COPY --chown=$user:$user container/* $home/
 RUN chmod +x $home/start.sh
 RUN chmod +x $home/update-libreoffice-config.sh
 
+# Switch to the $user or else .config will be created as root
+USER $user
+# Create the $home/.config directory and extract the libreoffice-config.tar.gz file into it
+RUN mkdir -p $home/.config && \
+    tar -xzf $home/libreoffice-config.tar.gz -C $home/.config && \
+    rm $home/libreoffice-config.tar.gz
+USER root
 WORKDIR $home
 
 ENV USER=$user
