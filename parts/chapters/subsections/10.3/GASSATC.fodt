@@ -4237,9 +4237,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18522" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716367_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716367_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GASSATC keyword defines the initial equilibration saturated coal gas concentration values for all grid cells in the model. The keyword should only be used if the coal phase has been activated in the model via the COAL keyword in the RUNSPEC section. The keyword is used to re-scale the Langmuir isotherms entered via the LANGMUIR keyword in the PROPS section, in conjunction with a matrix grid blocks initial reservoir pressure. <text:s/>The keyword is optional, and if absent from the input file, the matrix grid block Langmuir isotherm is left unscaled.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc216737_1190369742">GASSATC</text:a> keyword defines the initial equilibration saturated coal gas concentration values for all grid cells in the model. The keyword should only be used if the coal phase has been activated in the model via the <text:a xlink:href="#__RefHeading___Toc234580_3519154785">COAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The keyword is used to re-scale the Langmuir isotherms entered via the <text:a xlink:href="#__RefHeading___Toc214338_2843394514">LANGMUIR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, in conjunction with a matrix grid blocks initial reservoir pressure. <text:s/>The keyword is optional, and if absent from the input file, the matrix grid block Langmuir isotherm is left unscaled.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
-    <text:p text:style-name="_40_TextBody">This is the non-standard method to initialize the model via enumeration and is seldom employed in the industry. The standard methodology is for OPM Flow to initialize a model using the parameters on the EQUIL keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody">This is the non-standard method to initialize the model via enumeration and is seldom employed in the industry. The standard methodology is for OPM Flow to initialize a model using the parameters on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table1139" table:style-name="Table1139">
      <table:table-column table:style-name="Table1139.A"/>
      <table:table-column table:style-name="Table1139.B"/>
@@ -4281,10 +4281,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3070">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1139.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4910">GASSATC</text:p>
+       <text:p text:style-name="P4910"><text:a xlink:href="#__RefHeading___Toc216737_1190369742">GASSATC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1139.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3686">GASSATC is an array of real positive numbers that define the initial equilibration saturated coal gas concentration values to each cell in the model. </text:p>
+       <text:p text:style-name="P3686"><text:a xlink:href="#__RefHeading___Toc216737_1190369742">GASSATC</text:a> is an array of real positive numbers that define the initial equilibration saturated coal gas concentration values to each cell in the model. </text:p>
        <text:p text:style-name="P4057">Repeat counts may be used, for example 20*75.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4312,7 +4312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1591">Notes:</text:p>
        <text:list xml:id="list105918541398829" text:continue-list="list105917839388533" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19031">The number of entries should correspond to number of matrix cells in the model, that is (NX x NY x NZ) divided by two, as per the parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19031">The number of entries should correspond to number of matrix cells in the model, that is (NX x NY x NZ) divided by two, as per the parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18938">The keyword is terminated by a “/”.</text:p>
@@ -4328,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14759">Table <text:sequence text:ref-name="refTable462" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.16</text:sequence>: GASSATC Keyword Description</text:p>
     <text:p text:style-name="P15571"/>
-    <text:p text:style-name="P15307">See also the GASCONC and the GCVD keywords in the SOLUTION section to fully define the initial state of the model.</text:p>
+    <text:p text:style-name="P15307">See also the <text:a xlink:href="#__RefHeading___Toc189444_2330925267">GASCONC</text:a> and the <text:a xlink:href="#__RefHeading___Toc224457_156692946">GCVD</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section to fully define the initial state of the model.</text:p>
     <text:h text:style-name="P18522" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716369_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716369_3964674244"/></text:h>
     <text:p text:style-name="P13849">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13849">-- <text:s text:c="6"/>DEFINE INITIAL EQUILIBRATION SAT COAL GAS CONCENTRATION ALL CELLS MODEL</text:p>

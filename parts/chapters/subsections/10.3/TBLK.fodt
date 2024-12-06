@@ -4334,7 +4334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716479_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716479_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">TBLK keyword defines the initial tracer concentration for all or selected cells in the model, for when the TRACERS keyword in the RUNSPEC section has declared the maximum number of tracers for each phase, and the TRACER keyword in the PROPS section has defined the tracer. <text:s/>This keyword is not in the standard keyword format due to the tracer name being concatenated to the keyword TBLK to fully define the tracer being initialized. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a> keyword defines the initial tracer concentration for all or selected cells in the model, for when the <text:a xlink:href="#__RefHeading___Toc76509_327352552">TRACERS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section has declared the maximum number of tracers for each phase, and the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section has defined the tracer. <text:s/>This keyword is not in the standard keyword format due to the tracer name being concatenated to the keyword <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a> to fully define the tracer being initialized. </text:p>
     <table:table table:name="Table926" table:style-name="Table926">
      <table:table-column table:style-name="Table926.A"/>
      <table:table-column table:style-name="Table926.B"/>
@@ -4380,8 +4380,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4859">NAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table926.C3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4859">A character string of up to eight characters, consisting of TBLK as the first four characters followed by a four letter character string defining the tracer’s name. The fifth character should either be the letter F or the letter S, that indicates the state of the tracer either to be free (F) or in solution (S). For example, <text:s/>TBLKFIGS (free) or TBLKSIGS (solution). </text:p>
-       <text:p text:style-name="P4963">The last three characters of NAME (the effective tracer name) must also match an entry on the TRACER keyword’s NAME parameter, in the PROPS section.</text:p>
+       <text:p text:style-name="P4859">A character string of up to eight characters, consisting of <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a> as the first four characters followed by a four letter character string defining the tracer’s name. The fifth character should either be the letter F or the letter S, that indicates the state of the tracer either to be free (F) or in solution (S). For example, <text:s/>TBLKFIGS (free) or TBLKSIGS (solution). </text:p>
+       <text:p text:style-name="P4963">The last three characters of NAME (the effective tracer name) must also match an entry on the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword’s NAME parameter, in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
        <text:p text:style-name="P4859">Note it is best to void names beginning with the letters F, S, and T as these names may create naming issues in post-processing software.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4396,12 +4396,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5632">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table926.B5" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P40">TBLK</text:p>
+       <text:p text:style-name="P40"><text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table926.C4" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4963">TBLK is an array of real numbers greater than or equal to zero, that are assigned the tracer concentration values for each cell in the model or the current input BOX. </text:p>
+       <text:p text:style-name="P4963"><text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a> is an array of real numbers greater than or equal to zero, that are assigned the tracer concentration values for each cell in the model or the current input <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a>. </text:p>
        <text:p text:style-name="P4066">Repeat counts may be used, for example 200*0.0. </text:p>
-       <text:p text:style-name="P4868">The units for the tracer, if required, are set on the TRACER keyword in the PROPS section. This should be the same as the PHASE in the model.</text:p>
+       <text:p text:style-name="P4868">The units for the tracer, if required, are set on the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This should be the same as the PHASE in the model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4413,16 +4413,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table926.D5" office:value-type="string">
-       <text:p text:style-name="P4865">Liquid: TBLK/stb </text:p>
-       <text:p text:style-name="P4865">Gas: TBLK/Mscf</text:p>
+       <text:p text:style-name="P4865">Liquid: <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a>/stb </text:p>
+       <text:p text:style-name="P4865">Gas: <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a>/Mscf</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table926.D5" office:value-type="string">
-       <text:p text:style-name="P4866">Liquid: TBLK/sm<text:span text:style-name="T3853">3</text:span> </text:p>
-       <text:p text:style-name="P4866">Gas: TBLK/sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P4866">Liquid: <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a>/sm<text:span text:style-name="T3853">3</text:span> </text:p>
+       <text:p text:style-name="P4866">Gas: <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a>/sm<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table926.E5" office:value-type="string">
-       <text:p text:style-name="P4866">Liquid: TBLK/scc </text:p>
-       <text:p text:style-name="P4866">Gas: TBLK/scc</text:p>
+       <text:p text:style-name="P4866">Liquid: <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a>/scc </text:p>
+       <text:p text:style-name="P4866">Gas: <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a>/scc</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4431,7 +4431,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1607">Notes:</text:p>
        <text:list xml:id="list105918423593698" text:continue-list="list1677839868" text:style-name="L100">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19076">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19076">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18993">The keyword is terminated by a “/”.</text:p>
@@ -4447,7 +4447,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14762">Table <text:sequence text:ref-name="refTable503" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.57</text:sequence>: TBLK Keyword Description</text:p>
     <text:p text:style-name="P15572"/>
-    <text:p text:style-name="P10923"><text:span text:style-name="T2709">See also the</text:span> TRACERS keyword in the RUNSPEC section <text:span text:style-name="T2709">to</text:span> declared the maximum number of tracers for each phase, the TRACER keyword in the PROPS section <text:span text:style-name="T2709">to </text:span>define the tracer, and the WTRACER keyword in the SCHEDULE section that defines the wells injecting the tracer.</text:p>
+    <text:p text:style-name="P10923"><text:span text:style-name="T2709">See also the</text:span> <text:a xlink:href="#__RefHeading___Toc76509_327352552">TRACERS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section <text:span text:style-name="T2709">to</text:span> declared the maximum number of tracers for each phase, the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section <text:span text:style-name="T2709">to </text:span>define the tracer, and the <text:a xlink:href="#__RefHeading___Toc97665_3261743917">WTRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that defines the wells injecting the tracer.</text:p>
     <text:p text:style-name="P15809"><text:soft-page-break/></text:p>
     <table:table table:name="Table416" table:style-name="Table416">
      <table:table-column table:style-name="Table416.A"/>
@@ -4455,13 +4455,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708728844704">
        <table:table-cell table:style-name="Table416.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10386"><text:span text:style-name="T3628">Currently, one cannot initialize tracers using the EQUALS keyword. Instead use the </text:span>array format, that is the keyword followed by the required number of values, or the <text:span text:style-name="T3628">TVDP keyword in the SOLUTION section to set the initial tracer concentrations as a function of depth.</text:span></text:p>
+        <text:p text:style-name="P10386"><text:span text:style-name="T3628">Currently, one cannot initialize tracers using the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword. Instead use the </text:span>array format, that is the keyword followed by the required number of values, or the <text:span text:style-name="T3628"><text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section to set the initial tracer concentrations as a function of depth.</text:span></text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P18545" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716481_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716481_3964674244"/></text:h>
-    <text:p text:style-name="P11066">The following TRACERS keyword in the RUNSPEC section declares the number of tracers in the model.</text:p>
+    <text:p text:style-name="P11066">The following <text:a xlink:href="#__RefHeading___Toc76509_327352552">TRACERS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section declares the number of tracers in the model.</text:p>
     <text:p text:style-name="P14070">--</text:p>
     <text:p text:style-name="P14070">-- <text:s text:c="6"/>NUMBER AND TYPE OF TRACERS</text:p>
     <text:p text:style-name="P14070">-- <text:s text:c="6"/>NO OIL <text:s/>NO WAT <text:s/>NO GAS <text:s/>NO ENV <text:s/>DIFF <text:s text:c="3"/>MAX <text:s text:c="3"/>MIN <text:s text:c="3"/>TRACER <text:s text:c="10"/></text:p>
@@ -4469,7 +4469,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14070">TRACERS <text:s text:c="72"/></text:p>
     <text:p text:style-name="P14070"><text:s text:c="9"/>0 <text:s text:c="6"/>0 <text:s text:c="6"/>1 <text:s text:c="6"/>0 <text:s text:c="5"/>&apos;NODIFF&apos; 1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="13"/>/ <text:s text:c="2"/></text:p>
     <text:p text:style-name="P10921"/>
-    <text:p text:style-name="P10921">And the TRACER keyword in the PROPS section declares the tracer name and the phase for the tracer. <text:s text:c="16"/></text:p>
+    <text:p text:style-name="P10921">And the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section declares the tracer name and the phase for the tracer. <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14071">--</text:p>
     <text:p text:style-name="P14071">-- <text:s text:c="6"/>DEFINE TRACER NAMES</text:p>
     <text:p text:style-name="P14071">-- </text:p>
@@ -4480,7 +4480,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14071"><text:s text:c="8"/>&apos;IGS&apos; <text:s text:c="4"/>&apos;GAS&apos; <text:s text:c="35"/>/ INJECTED GAS</text:p>
     <text:p text:style-name="P14071">/ <text:s text:c="6"/></text:p>
     <text:p text:style-name="P10923"/>
-    <text:p text:style-name="P10923">Finally, the TBLK keyword in the SOLUTION section sets the initial tracer grid block concentrations in both the free and solution states.</text:p>
+    <text:p text:style-name="P10923">Finally, the <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section sets the initial tracer grid block concentrations in both the free and solution states.</text:p>
     <text:p text:style-name="P14509">--</text:p>
     <text:p text:style-name="P14509">-- <text:s text:c="6"/>INITIAL TRACER CONCENTRATIONS</text:p>
     <text:p text:style-name="P14509">--</text:p>
@@ -4491,7 +4491,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13161"><text:s text:c="9"/>1000*0.0 <text:s text:c="22"/>/ TRACER SIGS CONCENTRATIONS</text:p>
     <text:p text:style-name="P15474"/>
     <text:p text:style-name="_40_TextBody">Here the initial concentrations are set to zero. </text:p>
-    <text:p text:style-name="_40_TextBody">Then in the SCHEDULE section one can us the WTRACER keyword to define the well injecting the tracer and the tracer concentration being injected,. </text:p>
+    <text:p text:style-name="_40_TextBody">Then in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section one can us the <text:a xlink:href="#__RefHeading___Toc97665_3261743917">WTRACER</text:a> keyword to define the well injecting the tracer and the tracer concentration being injected,. </text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>DEFINE CONCENTRATION OF TRACERS IN THE INJECTION STREAMS, </text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>INJECTION TRACER CONCENTRATIONS NOT DEFINED USING THE WTRACER </text:p>
