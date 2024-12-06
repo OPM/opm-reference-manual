@@ -4407,9 +4407,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P37" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838831512"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838831512"/></text:h>
-    <text:p text:style-name="P68">This keyword defines the initial reservoir temperature versus depth tables for each equilibration region. Note that the RTEMPVD keyword is an alias for TEMPVD, and that both keywords are supported by OPM Flow, in both the PROPS and SOLUTION sections, but are treated as being mutually exclusive.</text:p>
-    <text:p text:style-name="P68">The initial reservoir temperature must be defined when OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC section. Note this is different to the commercial simulator that uses the TEMP keyword in the RUNSPEC section to activate the black-oil temperature model, and the THERMAL keyword to activate the compositional thermal model.</text:p>
-    <text:p text:style-name="P68">The initial reservoir temperature should be defined when OPM Flow’s CO<text:span text:style-name="T47">2</text:span> or H<text:span text:style-name="T47">2</text:span> storage option has been activated by the CO2STORE or H2STORE keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P68">This keyword defines the initial reservoir temperature versus depth tables for each equilibration region. Note that the <text:a xlink:href="#__RefHeading___Toc108628_2939291539">RTEMPVD</text:a> keyword is an alias for <text:a xlink:href="#__RefHeading___Toc108626_2939291539">TEMPVD</text:a>, and that both keywords are supported by OPM Flow, in both the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> and <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> sections, but are treated as being mutually exclusive.</text:p>
+    <text:p text:style-name="P68">The initial reservoir temperature must be defined when OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note this is different to the commercial simulator that uses the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the black-oil temperature model, and the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword to activate the compositional thermal model.</text:p>
+    <text:p text:style-name="P68">The initial reservoir temperature should be defined when OPM Flow’s CO<text:span text:style-name="T47">2</text:span> or H<text:span text:style-name="T47">2</text:span> storage option has been activated by the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table549" table:style-name="Table549">
      <table:table-column table:style-name="Table549.A"/>
      <table:table-column table:style-name="Table549.B"/>
@@ -4451,10 +4451,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P30">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table549.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P31">DEPTH</text:p>
+       <text:p text:style-name="P31"><text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table549.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P27">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the depth for corresponding reservoir temperature parameter TEMP.</text:p>
+       <text:p text:style-name="P27">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the depth for corresponding reservoir temperature parameter <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4481,7 +4481,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P30">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table549.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P28">TEMP</text:p>
+       <text:p text:style-name="P28"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table549.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P27">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the corresponding reservoir temperature for the given depth.</text:p>
@@ -4511,10 +4511,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P73">The keyword is followed by NTEQUIL tables as declared on the EQLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P73">The keyword is followed by NTEQUIL tables as declared on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P74">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the EQlDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P74">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the EQlDIMS keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P74">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4530,7 +4530,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P35">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.31</text:sequence>: RTEMPVD Keyword Description</text:p>
     <text:p text:style-name="P33"/>
-    <text:p text:style-name="P66">See also the RTEMP keyword in the PROPS section for an alternative way to define a uniform initial reservoir temperature.</text:p>
+    <text:p text:style-name="P66">See also the <text:a xlink:href="#__RefHeading___Toc146399_3544483072">RTEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section for an alternative way to define a uniform initial reservoir temperature.</text:p>
     <text:p text:style-name="P65"/>
     <table:table table:name="Table2127" table:style-name="Table2127">
      <table:table-column table:style-name="Table2127.A"/>
@@ -4538,7 +4538,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row>
        <table:table-cell table:style-name="Table2127.A1" office:value-type="string">
         <text:p text:style-name="P62">Note</text:p>
-        <text:p text:style-name="P63">T<text:span text:style-name="T31">he keyword is documented here in the SOLUTION section, the same as the </text:span><text:span text:style-name="T44">commercial</text:span><text:span text:style-name="T31"> simulator, but it can also be used in the PROPS section by OPM Flow.</text:span></text:p>
+        <text:p text:style-name="P63">T<text:span text:style-name="T31">he keyword is documented here in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section, the same as the </text:span><text:span text:style-name="T44">commercial</text:span><text:span text:style-name="T31"> simulator, but it can also be used in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section by OPM Flow.</text:span></text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4567,7 +4567,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P34"><text:s text:c="9"/>3000.0 <text:s text:c="3"/>130.000 <text:s text:c="2"/></text:p>
     <text:p text:style-name="P29"><text:s text:c="9"/>4000.0 <text:s text:c="3"/>160.000 <text:s text:c="32"/>/ TABLE N0. 03 <text:s text:c="7"/></text:p>
     <text:p text:style-name="P33"/>
-    <text:p text:style-name="P33">The above example defines three identical reservoir depth versus temperature tables for the three NTEQUIL regions defined on the EQLDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P33">The above example defines three identical reservoir depth versus temperature tables for the three NTEQUIL regions defined on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P33"/>
    </text:section>
   </office:text>

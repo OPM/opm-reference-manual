@@ -4436,8 +4436,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388199111"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388199111"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines the data to be written to the RESTART file and the frequency at which restart points will be created. In addition to the solution data arrays required to restart a run, the user may request extra data to be written to the restart file for visualization in OPM ResInsight.</text:p>
-    <text:p text:style-name="_40_TextBody">The RPTRST keyword should be followed by a series of character strings that indicate the data to be written. In most cases the character string is the keyword used to load the data in the OPM Flow input deck, for example KRG for the gas relative permeability of each grid block at the requested times. It is anticipated that OPM Flow will support additional functionality as development progresses.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines the data to be written to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file and the frequency at which restart points will be created. In addition to the solution data arrays required to restart a run, the user may request extra data to be written to the restart file for visualization in OPM ResInsight.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc210154_2884651453">RPTRST</text:a> keyword should be followed by a series of character strings that indicate the data to be written. In most cases the character string is the keyword used to load the data in the OPM Flow input deck, for example <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a> for the gas relative permeability of each grid block at the requested times. It is anticipated that OPM Flow will support additional functionality as development progresses.</text:p>
     <table:table table:name="Table716" table:style-name="Table716">
      <table:table-column table:style-name="Table716.A"/>
      <table:table-column table:style-name="Table716.B"/>
@@ -4468,7 +4468,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4938">ALLPROPS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4936">An alias for the BG, BO, BW, DEN, KRG, KRO, KRW, VGAS, VOIL and VWAT mnemonics combined that writes all the associated properties.</text:p>
+       <text:p text:style-name="P4936">An alias for the BG, BO, BW, DEN, <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a>, <text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a>, VGAS, VOIL and VWAT mnemonics combined that writes all the associated properties.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P4942"/>
@@ -4482,7 +4482,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4945">BASIC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">The BASIC mnemonic defines the frequency at which the restart data and the additional requested data is written to the RESTART file. The mnemonic is assigned a value, using the form BASIC=OPTION, where OPTION is an integer variable set to one of the following: </text:p>
+       <text:p text:style-name="Table_20_Contents">The BASIC mnemonic defines the frequency at which the restart data and the additional requested data is written to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file. The mnemonic is assigned a value, using the form BASIC=OPTION, where OPTION is an integer variable set to one of the following: </text:p>
        <text:list xml:id="list105919273011646" text:continue-list="list105918417837053" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19573">OPTION = 0 then output to the restart file is stopped. </text:p>
@@ -4591,7 +4591,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5428">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">FIP</text:p>
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
        <text:p text:style-name="Table_20_Contents">Volumes in place for each phase at surface conditions.</text:p>
@@ -4610,7 +4610,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">FLOWS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at surface conditions for each phase (GAS, OIL, WAT) in the I+, J+ and K+ directions. The Array Name column shows the arrays for just the GAS phase, the other phases will have similar arrays.</text:p>
+       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at surface conditions for each phase (<text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT) in the I+, J+ and K+ directions. The Array Name column shows the arrays for just the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> phase, the other phases will have similar arrays.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P5431">FLOGASI+</text:p>
@@ -4626,7 +4626,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">FLOWS-</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at surface conditions for each phase (GAS, OIL, WAT) in the I-, J- and K- directions. The Array Name column shows the arrays for just the GAS phase, the other phases will have similar arrays.</text:p>
+       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at surface conditions for each phase (<text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT) in the I-, J- and K- directions. The Array Name column shows the arrays for just the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> phase, the other phases will have similar arrays.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P5431">FLOGASI-</text:p>
@@ -4642,7 +4642,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">FLORES</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at reservoir conditions for each phase (GAS, OIL, WAT) in the I+, J+ and K+ directions. The Array Name column shows the arrays for just the GAS phase, the other phases will have similar arrays.</text:p>
+       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at reservoir conditions for each phase (<text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT) in the I+, J+ and K+ directions. The Array Name column shows the arrays for just the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> phase, the other phases will have similar arrays.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P5431">FLRGASI+</text:p>
@@ -4658,7 +4658,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">FLORES-</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at reservoir conditions for each phase (GAS, OIL, WAT) in the I-, J- and K- directions. The Array Name column shows the arrays for just the GAS phase, the other phases will have similar arrays.</text:p>
+       <text:p text:style-name="Table_20_Contents">Inter-block volumetric flows at reservoir conditions for each phase (<text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT) in the I-, J- and K- directions. The Array Name column shows the arrays for just the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> phase, the other phases will have similar arrays.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P5431">FLRGASI-</text:p>
@@ -4677,7 +4677,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">The FREQ mnemonic defines the frequency at which restart data is written when BASIC=3, 4 or 5, using the form FREQ=n.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
-       <text:p text:style-name="P5431"></text:p>
+       <text:p text:style-name="P5431"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table716.1">
@@ -4685,10 +4685,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5428">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4943">KRG</text:p>
+       <text:p text:style-name="P4943"><text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4946">Gas relative permeability at the grid block's gas saturation.</text:p>
+       <text:p text:style-name="P4946">Gas relative permeability at the grid block&apos;s gas saturation.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P4934">GASKR</text:p>
@@ -4699,10 +4699,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5428">15</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4943">KRO</text:p>
+       <text:p text:style-name="P4943"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4946">Oil relative permeability at the grid block's oil saturation.</text:p>
+       <text:p text:style-name="P4946">Oil relative permeability at the grid block&apos;s oil saturation.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P4934">OILKR</text:p>
@@ -4713,10 +4713,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5428">16</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4946">KRW</text:p>
+       <text:p text:style-name="P4946"><text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.A2" office:value-type="string">
-       <text:p text:style-name="P4946">Water relative permeability at the grid block's water saturation.</text:p>
+       <text:p text:style-name="P4946">Water relative permeability at the grid block&apos;s water saturation.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
        <text:p text:style-name="P4949">WATKR</text:p>
@@ -4733,8 +4733,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4946">Bubble point and dew point pressures.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table716.D2" office:value-type="string">
-       <text:p text:style-name="P4949">PBUB</text:p>
-       <text:p text:style-name="P4949">PDEW</text:p>
+       <text:p text:style-name="P4949"><text:a xlink:href="#__RefHeading___Toc135619_1317547213">PBUB</text:a></text:p>
+       <text:p text:style-name="P4949"><text:a xlink:href="#__RefHeading___Toc135623_1317547213">PDEW</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table716.1">
@@ -4915,7 +4915,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable472" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.26</text:sequence>: RPTRST Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">Note, older versions of the commercial simulator used integer values to control the output to the RESTART file, this type of format is not supported by OPM Flow and thus the integers should be converted to the mnemonic format as outlined in <text:span text:style-name="T3628"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable472">Table 10.26</text:sequence-ref></text:span>.</text:p>
+    <text:p text:style-name="_40_TextBody">Note, older versions of the commercial simulator used integer values to control the output to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, this type of format is not supported by OPM Flow and thus the integers should be converted to the mnemonic format as outlined in <text:span text:style-name="T3628"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable472">Table 10.26</text:sequence-ref></text:span>.</text:p>
     <text:p text:style-name="_40_TextBody">Note that OPM Flow automatically writes out all the data required to make a restart run as outlined in the table below:</text:p>
     <table:table table:name="Table718" table:style-name="Table718">
      <table:table-column table:style-name="Table718.A"/>
@@ -4947,7 +4947,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">BIOFILM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Biofilm concentration used when the MICP option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Biofilm concentration used when the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">BIOFILM</text:p>
@@ -4961,7 +4961,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">CALCITE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Calcite concentration used when the MICP option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Calcite concentration used when the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">CALCITE</text:p>
@@ -4972,13 +4972,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2625">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">FOAM</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Foam concentration used when the FOAM option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Foam concentration used when the <text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
-       <text:p text:style-name="P4934">FOAM</text:p>
+       <text:p text:style-name="P4934"><text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
@@ -4990,7 +4990,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">KRNSW_GO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="P2626">Gas-oil relative permeability scaling factor used when the hysteresis option has been activated by the HYSTER variable on the SATOPTS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P2626">Gas-oil relative permeability scaling factor used when the hysteresis option has been activated by the HYSTER variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P2627">KRNSW_GO</text:p>
@@ -5004,7 +5004,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">KRNSW_OW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P2626">Oil-water relative permeability scaling factor used when the hysteresis option has been activated by the HYSTER variable on the SATOPTS keyword in the RUNSPEC section. <text:s text:c="2"/></text:p>
+       <text:p text:style-name="P2626">Oil-water relative permeability scaling factor used when the hysteresis option has been activated by the HYSTER variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. <text:s text:c="2"/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P2627">KRNSW_OW</text:p>
@@ -5018,7 +5018,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">MICROBES</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Microbe concentration used when the MICP option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Microbe concentration used when the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">MICROBES</text:p>
@@ -5032,7 +5032,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">OXYGEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Oxygen concentration used when the MICP option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Oxygen concentration used when the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">OXYGEN</text:p>
@@ -5046,7 +5046,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">PCSWM_GO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4941">Gas-oil capillary pressure scaling factor used when the hysteresis option has been activated by the HYSTER variable on the SATOPTS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4941">Gas-oil capillary pressure scaling factor used when the hysteresis option has been activated by the HYSTER variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4940">PCSWM_GO</text:p>
@@ -5060,7 +5060,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">PCSWM_OW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4941">Oil-Water capillary pressure scaling factor used when the hysteresis option has been activated by the HYSTER variable on the SATOPTS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4941">Oil-Water capillary pressure scaling factor used when the hysteresis option has been activated by the HYSTER variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4940">PCSWM_OW</text:p>
@@ -5071,13 +5071,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">10</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">PERMFACT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4937">Permeability multiplication factor as a function of porosity change used when the PRECSALT option has been activated in the RUNSPEC section</text:p>
+       <text:p text:style-name="P4937">Permeability multiplication factor as a function of porosity change used when the <text:a xlink:href="#__RefHeading___Toc332782_3149455253">PRECSALT</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4935">PERMFACT</text:p>
+       <text:p text:style-name="P4935"><text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5085,13 +5085,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">POLYMER</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4937">Polymer concentration used when the POLYMER option has been activated in the RUNSPEC section</text:p>
+       <text:p text:style-name="P4937">Polymer concentration used when the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4935">POLYMER</text:p>
+       <text:p text:style-name="P4935"><text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5102,7 +5102,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">PPCW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4937">Modified oil-water capillary pressure end-points used when the SWATINIT keyword has been included in the input deck.</text:p>
+       <text:p text:style-name="P4937">Modified oil-water capillary pressure end-points used when the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> keyword has been included in the input deck.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4935">PPCW</text:p>
@@ -5113,13 +5113,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">13</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">PRESSURE</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
        <text:p text:style-name="P4952">Pressure data for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">PRESSURE</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5127,13 +5127,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">RS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
        <text:p text:style-name="P4952">Dissolved gas-oil ratio for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">RS</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5144,7 +5144,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">RSW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Dissolved gas-water ratio for each grid block for use when the DISGASW option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4952">Dissolved gas-water ratio for each grid block for use when the <text:a xlink:href="#__RefHeading___Toc39767_22671168971">DISGASW</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4953">RSW</text:p>
@@ -5158,7 +5158,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">RSWSOL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Dissolved solvent-water ratio for each grid block for use when the SOLVENT and DISGASW options have been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4952">Dissolved solvent-water ratio for each grid block for use when the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> and <text:a xlink:href="#__RefHeading___Toc39767_22671168971">DISGASW</text:a> options have been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4953">RSWSOL</text:p>
@@ -5169,13 +5169,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4955">17</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">RV</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
        <text:p text:style-name="P4952">Vaporized oil-gas ratio for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">RV</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5183,13 +5183,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4955">18</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">RVW</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc537756_4287353749">RVW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Vaporized water-gas ratio for each grid block for use when the VAPWAT option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4952">Vaporized water-gas ratio for each grid block for use when the <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">RVW</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc537756_4287353749">RVW</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5197,13 +5197,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">19</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">SALT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc593214_516898843">SALT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Salt concentration for each grid block for use when the BRINE option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4952">Salt concentration for each grid block for use when the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">SALT</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc593214_516898843">SALT</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5211,13 +5211,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">20</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">SALTP</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc486358_4287353749">SALTP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4952">Precipitated salt volume fraction for each grid block for use when the PRECSALT option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4952">Precipitated salt volume fraction for each grid block for use when the <text:a xlink:href="#__RefHeading___Toc332782_3149455253">PRECSALT</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">SALTP</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc486358_4287353749">SALTP</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5225,13 +5225,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4954">21</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">SGAS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc137369_1317547213">SGAS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
        <text:p text:style-name="P4952">Gas saturation for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">SGAS</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc137369_1317547213">SGAS</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5239,13 +5239,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4955">22</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">SOIL</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc137371_1317547213">SOIL</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
        <text:p text:style-name="P4952">Oil saturation each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">SOIL</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc137371_1317547213">SOIL</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5256,7 +5256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">SOMAX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="P4956">Maximum oil saturation used when the VAPPARS keyword has been included in the input deck.</text:p>
+       <text:p text:style-name="P4956">Maximum oil saturation used when the <text:a xlink:href="#__RefHeading___Toc210172_2884651453">VAPPARS</text:a> keyword has been included in the input deck.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4935">SOMAX</text:p>
@@ -5270,7 +5270,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">SSOLVENT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4937">Solvent saturation for each grid block used when the SOLVENT option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P4937">Solvent saturation for each grid block used when the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
        <text:p text:style-name="P4935">SSOLVENT</text:p>
@@ -5281,13 +5281,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4957">25</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">SWAT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc137373_1317547213">SWAT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
        <text:p text:style-name="P4952">Water saturation for each grid block.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4953">SWAT</text:p>
+       <text:p text:style-name="P4953"><text:a xlink:href="#__RefHeading___Toc137373_1317547213">SWAT</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5295,14 +5295,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4957">26</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.B19" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">TEMP</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.C19" office:value-type="string">
-       <text:p text:style-name="P4950">Temperature of each grid block used when the THERMAL option has been activated in the RUNSPEC section.</text:p>
-       <text:p text:style-name="P4950">OPM Flow also supports the output of temperatures for non-thermal simulations when the TEMP mnemonic is specified.</text:p>
+       <text:p text:style-name="P4950">Temperature of each grid block used when the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P4950">OPM Flow also supports the output of temperatures for non-thermal simulations when the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> mnemonic is specified.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D19" office:value-type="string">
-       <text:p text:style-name="P4948">TEMP</text:p>
+       <text:p text:style-name="P4948"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
@@ -5314,7 +5314,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">UREA</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Urea concentration used when the MICP option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Urea concentration used when the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">UREA</text:p>
@@ -5325,7 +5325,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1598">Notes:</text:p>
        <text:list xml:id="list105919156804686" text:continue-list="list105919023537637" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19292">Only items that are necessary to restart a run are written to the restart file, for example if the SOLVENT option has not been activated in the RUNSPEC section then the SSOLVENT array will not be written to the restart file.</text:p>
+         <text:p text:style-name="P19292">Only items that are necessary to restart a run are written to the restart file, for example if the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> option has not been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section then the SSOLVENT array will not be written to the restart file.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5334,7 +5334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14954">Table <text:sequence text:ref-name="refTable473" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.27</text:sequence>: Data Sets Automatically Written to the RESTART File</text:p>
+    <text:p text:style-name="P14954">Table <text:sequence text:ref-name="refTable473" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.27</text:sequence>: Data Sets Automatically Written to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> File</text:p>
     <text:p text:style-name="P14954"/>
     <text:p text:style-name="P15809"/>
     <table:table table:name="Table2220" table:style-name="Table2220">
@@ -5343,8 +5343,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708726438992">
        <table:table-cell table:style-name="Table2220.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10395"><text:span text:style-name="T3628">Currently</text:span>,<text:span text:style-name="T3628"> OPM Flow distinguishes between those arrays which are required for restarting a run and those which are &quot;merely&quot; for visualization and analysis. However, this classification is imperfect and leads to potentially </text:span>exporting<text:span text:style-name="T3628"> arrays that are incompatible with </text:span>the <text:span text:style-name="T3628">commercial simulator, such as the TEMP array in non-thermal simulation runs.</text:span></text:p>
-        <text:p text:style-name="P10396">If one is willing to forego the ability to restart an OPM Flow simulation run, using the commercial simulator, e.g., simulating the historic period using OPM Flow and the prediction period using the commercial simulator, then additional arrays are available, including the PBUB and PDEW vectors generated by the PBPD option, by using the following command line option:</text:p>
+        <text:p text:style-name="P10395"><text:span text:style-name="T3628">Currently</text:span>,<text:span text:style-name="T3628"> OPM Flow distinguishes between those arrays which are required for restarting a run and those which are &quot;merely&quot; for visualization and analysis. However, this classification is imperfect and leads to potentially </text:span>exporting<text:span text:style-name="T3628"> arrays that are incompatible with </text:span>the <text:span text:style-name="T3628">commercial simulator, such as the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> array in non-thermal simulation runs.</text:span></text:p>
+        <text:p text:style-name="P10396">If one is willing to forego the ability to restart an OPM Flow simulation run, using the commercial simulator, e.g., simulating the historic period using OPM Flow and the prediction period using the commercial simulator, then additional arrays are available, including the <text:a xlink:href="#__RefHeading___Toc135619_1317547213">PBUB</text:a> and <text:a xlink:href="#__RefHeading___Toc135623_1317547213">PDEW</text:a> vectors generated by the PBPD option, by using the following command line option:</text:p>
         <text:p text:style-name="P16919"><text:span text:style-name="Source_20_Text"><text:span text:style-name="T6559">--enable-opm-rst-file=true</text:span></text:span></text:p>
        </table:table-cell>
       </table:table-row>
@@ -5382,7 +5382,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">XMFCO2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">CO2 liquid-phase mole fractions written when the CO2STORE option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">CO2 liquid-phase mole fractions written when the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">XMFCO2</text:p>
@@ -5396,7 +5396,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">XMFH2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">H2 liquid-phase mole fractions written when the H2STORE option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">H2 liquid-phase mole fractions written when the <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">XMFH2</text:p>
@@ -5410,7 +5410,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">YMFWAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Water gas-phase mole fractions written when either the CO2STORE or H2STORE option has been activated in the RUNSPEC section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Water gas-phase mole fractions written when either the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="P4934">YMFWAT</text:p>
@@ -5421,7 +5421,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1598">Notes:</text:p>
        <text:list xml:id="list105919156804686" text:continue-list="list105919023537637" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19292">The above OPM Flow specific data are only written to the restart file if the --enable-opm-rst-file=true command line option has been specified and the specified options have been activated in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19292">The above OPM Flow specific data are only written to the restart file if the --enable-opm-rst-file=true command line option has been specified and the specified options have been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5430,7 +5430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14954">Table <text:sequence text:ref-name="refTable473" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.27</text:sequence>: Data Sets Automatically Written to the RESTART File for Visualization Only</text:p>
+    <text:p text:style-name="P14954">Table <text:sequence text:ref-name="refTable473" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.27</text:sequence>: Data Sets Automatically Written to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> File for Visualization Only</text:p>
     <text:p text:style-name="P14954"/>
 <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716403_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716403_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The first example request that the standard restart data be written out every month.</text:p>

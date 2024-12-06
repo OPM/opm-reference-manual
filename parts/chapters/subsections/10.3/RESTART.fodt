@@ -4342,7 +4342,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838834"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838834"/></text:h>
-    <text:p text:style-name="_40_TextBody">The RESTART keyword defines the parameters to restart the simulation from a previous run that has written a RESTART file out to disk. Only restarting from RESTART files is permitted by OPM Flow; restarting from SAVE files is not implemented.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> keyword defines the parameters to restart the simulation from a previous run that has written a <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file out to disk. Only restarting from <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> files is permitted by OPM Flow; restarting from <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> files is not implemented.</text:p>
     <table:table table:name="Table618" table:style-name="Table618">
      <table:table-column table:style-name="Table618.A"/>
      <table:table-column table:style-name="Table618.B"/>
@@ -4370,7 +4370,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4927">RSNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.A2" office:value-type="string">
-       <text:p text:style-name="P4928">The RSNAME variable is a character string that defines the root name of the RESTART file to be read into the current input deck.</text:p>
+       <text:p text:style-name="P4928">The RSNAME variable is a character string that defines the root name of the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file to be read into the current input deck.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.D2" office:value-type="string">
        <text:p text:style-name="P4929">None</text:p>
@@ -4384,7 +4384,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4927">RSNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.A2" office:value-type="string">
-       <text:p text:style-name="P3221">A positive integer that defines the restart point on the RESTART file to be read and to be used to initialize the model.</text:p>
+       <text:p text:style-name="P3221">A positive integer that defines the restart point on the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file to be read and to be used to initialize the model.</text:p>
        <text:p text:style-name="P4930">When OPM Flow writes a restart point a message is printed to the *.PRT file indicating the time step the restart was written out.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.D2" office:value-type="string">
@@ -4399,8 +4399,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4932">RSTYPE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.A2" office:value-type="string">
-       <text:p text:style-name="P5362">A defined character sting set to SAVE to read the restart data from the SAVE file, otherwise defaulted to 1* to read the data from the RESTART file.</text:p>
-       <text:p text:style-name="P4933">The SAVE file option is not supported by OPM Flow and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P5362">A defined character sting set to <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> to read the restart data from the <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file, otherwise defaulted to 1* to read the data from the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file.</text:p>
+       <text:p text:style-name="P4933">The <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file option is not supported by OPM Flow and should be defaulted with 1*.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.D2" office:value-type="string">
        <text:p text:style-name="P4931">1*</text:p>
@@ -4414,7 +4414,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4932">RSFORMAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.A2" office:value-type="string">
-       <text:p text:style-name="P4932">A defined character string that defines the format of the SAVE file to be read if RSTYPE has been set to SAVE, and should be set to one of the following:</text:p>
+       <text:p text:style-name="P4932">A defined character string that defines the format of the <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file to be read if RSTYPE has been set to <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a>, and should be set to one of the following:</text:p>
        <text:list xml:id="list105918417837053" text:continue-list="list105917525948841" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19291">FORMATTED: If the file is formatted as ASCII i.e. a text file, as oppose to a binary file. <text:s/>The option can be abbreviated to just the letter F. </text:p>
@@ -4435,10 +4435,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1383">Notes:</text:p>
        <text:list xml:id="list2151941570" text:style-name="L107">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19736">OPM Flow can only restart runs from a RESTART file, the commercial simulator&apos;s SAVE file format is not supported.</text:p>
+         <text:p text:style-name="P19736">OPM Flow can only restart runs from a <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, the commercial simulator&apos;s <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file format is not supported.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17089">Note that due to the complexities of the RESTART file, OPM Flow may not always be able to restart from the commercial simulators RESTART file.</text:p>
+         <text:p text:style-name="P17089">Note that due to the complexities of the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, OPM Flow may not always be able to restart from the commercial simulators <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19917"><text:s/>The keyword is terminated by a “/”.</text:p>
@@ -4459,26 +4459,26 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P17299"><text:soft-page-break/>Copy the existing data file that created the RESTART file and give it a new name. For example if the RESTART file is from a case named NOR-OPM-A01.DATA, then the copied data file could be named NOR-OPM-A01-R1.DATA. </text:p>
+          <text:p text:style-name="P17299"><text:soft-page-break/>Copy the existing data file that created the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file and give it a new name. For example if the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file is from a case named NOR-OPM-A01.DATA, then the copied data file could be named NOR-OPM-A01-R1.DATA. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17300">Edit the copied data file (NOR-OPM-A01-R1.DATA) and delete all equilibration keywords (EQUIL, RSVD, etc.) or the enumeration equilibration keywords (PRESSURE, SGAS, SOIL. SWAT, etc.) in the SOLUTION section used to initialize the model. </text:p>
+          <text:p text:style-name="P17300">Edit the copied data file (NOR-OPM-A01-R1.DATA) and delete all equilibration keywords (<text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a>, <text:a xlink:href="#__RefHeading___Toc137363_1317547213">RSVD</text:a>, etc.) or the enumeration equilibration keywords (<text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a>, <text:a xlink:href="#__RefHeading___Toc137369_1317547213">SGAS</text:a>, <text:a xlink:href="#__RefHeading___Toc137371_1317547213">SOIL</text:a>. <text:a xlink:href="#__RefHeading___Toc137373_1317547213">SWAT</text:a>, etc.) in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section used to initialize the model. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17299">In the SOLUTION section of NOR-OPM-A01-R1.DATA file insert the RESTART keyword, using NOR-OPM-A01 as RSNAME and the required RSNUM value for the time step to restart from. </text:p>
+          <text:p text:style-name="P17299">In the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section of NOR-OPM-A01-R1.DATA file insert the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> keyword, using NOR-OPM-A01 as RSNAME and the required RSNUM value for the time step to restart from. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17299">In the SCHEDULE section of NOR-OPM-A01-R1.DATA file insert the SKIPREST keyword at the very beginning of the SCHEDULE section. The SKIPREST keyword causes the simulator to only read in data it requires for restarting the run up to the RESTART point (RSNUM). Note that certain keywords always need to be present in a restart run in the SCHEDULE section as the data is not stored on the RESTART file, for example the VFP tables (VFPPROD and VFPINJ keywords). The SKIPREST keyword automatically processes the input deck and reads the required data. <text:s/></text:p>
+          <text:p text:style-name="P17299">In the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section of NOR-OPM-A01-R1.DATA file insert the <text:a xlink:href="#__RefHeading___Toc117631_2179381650">SKIPREST</text:a> keyword at the very beginning of the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. The <text:a xlink:href="#__RefHeading___Toc117631_2179381650">SKIPREST</text:a> keyword causes the simulator to only read in data it requires for restarting the run up to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> point (RSNUM). Note that certain keywords always need to be present in a restart run in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section as the data is not stored on the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, for example the VFP tables (<text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> keywords). The <text:a xlink:href="#__RefHeading___Toc117631_2179381650">SKIPREST</text:a> keyword automatically processes the input deck and reads the required data. <text:s/></text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17299">In the SCHEDULE section of NOR-OPM-A01-R1.DATA file after the RESTART point make any required changes, save the file and run the NOR-OPM-A01-R1.DATA with OPM Flow.</text:p>
+          <text:p text:style-name="P17299">In the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section of NOR-OPM-A01-R1.DATA file after the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> point make any required changes, save the file and run the NOR-OPM-A01-R1.DATA with OPM Flow.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P11229">See also RPTRST, RPTSCHED and SKIPREST keywords.</text:p>
+    <text:p text:style-name="P11229">See also <text:a xlink:href="#__RefHeading___Toc210154_2884651453">RPTRST</text:a>, <text:a xlink:href="#__RefHeading___Toc268459_1366622701">RPTSCHED</text:a> and <text:a xlink:href="#__RefHeading___Toc117631_2179381650">SKIPREST</text:a> keywords.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683881"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683881"/></text:h>
     <text:p text:style-name="P11225">The example below defines a restart from the previously run NOR-OPM-A01 case at time step number 40. <text:s/></text:p>
     <text:p text:style-name="P13413">-- ==============================================================================</text:p>
@@ -4495,7 +4495,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13340">RESTART</text:p>
     <text:p text:style-name="P14066"><text:s text:c="9"/>&apos;NOR-OPM-A01&apos; <text:s text:c="9"/>40 <text:s text:c="7"/>1* <text:s text:c="7"/>1* <text:s text:c="4"/>/ </text:p>
     <text:p text:style-name="P15472"/>
-    <text:p text:style-name="P15472">In addition in the SCHEDULE section the SKIPREST keyword should be used to correctly read in the schedule data up to the RESTART point.</text:p>
+    <text:p text:style-name="P15472">In addition in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section the <text:a xlink:href="#__RefHeading___Toc117631_2179381650">SKIPREST</text:a> keyword should be used to correctly read in the schedule data up to the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> point.</text:p>
     <text:p text:style-name="P15472"/>
     <text:p text:style-name="P13413">-- ==============================================================================</text:p>
     <text:p text:style-name="P13413">-- </text:p>
@@ -4508,7 +4508,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14067">--</text:p>
     <text:p text:style-name="P14067">SKIPREST</text:p>
     <text:p text:style-name="P14067"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P11330">Note is advisable to place the SKIPREST keyword at the very beginning of the SCHEDULE section.</text:p>
+    <text:p text:style-name="P11330">Note is advisable to place the <text:a xlink:href="#__RefHeading___Toc117631_2179381650">SKIPREST</text:a> keyword at the very beginning of the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P11227"><text:s/></text:p>
     <text:p text:style-name="P11227"/>
     
