@@ -4330,7 +4330,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838817223"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838817223"/></text:h>
-    <text:p text:style-name="_40_TextBody">ROCK defines the rock compressibility for various regions in the model. The number of ROCK vector data sets is defined by the NTPVT parameter on the TABDIMS keyword in the RUNSPEC section and the allocation of the ROCK tables to different grid blocks in the model is done via the PVTNUM keyword in the REGIONS section. One data set consists of one record or line which is terminated by a “/”.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> defines the rock compressibility for various regions in the model. The number of <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> vector data sets is defined by the NTPVT parameter on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and the allocation of the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> tables to different grid blocks in the model is done via the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section. One data set consists of one record or line which is terminated by a “/”.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword must be defined in the OPM Flow input deck.</text:p>
     <table:table table:name="Table107" table:style-name="Table107">
      <table:table-column table:style-name="Table107.A"/>
@@ -4518,10 +4518,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1536">Notes:</text:p>
        <text:list xml:id="list105916354200382" text:continue-list="list105915686264148" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20096">The keyword is followed by NTPVT vectors as declared by the NTPVT parameter on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20096">The keyword is followed by NTPVT vectors as declared by the NTPVT parameter on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P16690">Note, however, that if ROCKOPTS(ROCKOPT3) parameter has been used to set the allocation of the ROCK data via the ROCKNUM array, then the number of ROCK vectors should correspond to the value entered on TABDIMS(NTROCC) in the RUNSPEC section. Similarly, if the ROCKOPTS(ROCKOPT3) has been used to set the assignment of the ROCK data via the SATNUM array, then the number of vectors should correspond to the value entered via the TABDIMS(NTSFUN) parameter, since the tables will be allocated via the SATNUM array.</text:p>
+       <text:p text:style-name="P16690">Note, however, that if <text:a xlink:href="#__RefHeading___Toc111814_2939291539">ROCKOPTS</text:a>(ROCKOPT3) parameter has been used to set the allocation of the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> data via the <text:a xlink:href="#__RefHeading___Toc118210_2939291539">ROCKNUM</text:a> array, then the number of <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> vectors should correspond to the value entered on <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTROCC) in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Similarly, if the <text:a xlink:href="#__RefHeading___Toc111814_2939291539">ROCKOPTS</text:a>(ROCKOPT3) has been used to set the assignment of the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> data via the <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> array, then the number of vectors should correspond to the value entered via the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTSFUN) parameter, since the tables will be allocated via the <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> array.</text:p>
        <text:list xml:id="list105916044875306" text:continue-numbering="true" text:style-name="L17">
         <text:list-item>
          <text:p text:style-name="P20050">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4954,15 +4954,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708709422992">
        <table:table-cell table:style-name="Table2143.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10338">If the Rock Compaction option has been activated via the ROCKCOMP keyword in the RUNSPEC section, then the ROCKTAB keyword in the PROPS section should be used instead of ROCK keyword.</text:p>
+        <text:p text:style-name="P10338">If the Rock Compaction option has been activated via the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then the <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section should be used instead of <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> keyword.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P12642"/>
-    <text:p text:style-name="P12641">See also the ROCKOPTS and ROCKTAB keywords in the PROPS section.</text:p>
+    <text:p text:style-name="P12641">See also the <text:a xlink:href="#__RefHeading___Toc111814_2939291539">ROCKOPTS</text:a> and <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716191_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716191_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following shows the ROCK keyword for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set to one.</text:p>
+    <text:p text:style-name="_40_TextBody">The following shows the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> keyword for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to one.</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>ROCK COMPRESSIBILITY <text:s text:c="64"/></text:p>
     <text:p text:style-name="P13330">-- <text:s text:c="85"/></text:p>
@@ -4977,7 +4977,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14354">ROCK <text:s text:c="83"/></text:p>
     <text:p text:style-name="P14355"><text:s text:c="9"/>3966.9 <text:s text:c="3"/>5.0E-06 <text:s text:c="32"/>/ ROCK COMPRESSIBILITY <text:s text:c="14"/></text:p>
     <text:p text:style-name="P15238"/>
-    <text:p text:style-name="P15238">The next example shows the ROCK keyword for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set to three.</text:p>
+    <text:p text:style-name="P15238">The next example shows the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> keyword for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to three.</text:p>
     <text:p text:style-name="P14355">--</text:p>
     <text:p text:style-name="P14355">-- <text:s text:c="6"/>ROCK COMPRESSIBILITY <text:s text:c="64"/></text:p>
     <text:p text:style-name="P13332">-- <text:s text:c="85"/></text:p>
@@ -4994,8 +4994,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13330"><text:s text:c="9"/>3966.9 <text:s text:c="3"/>5.5E-06 <text:s text:c="23"/>/ ROCK COMPRESSIBILITY REGION 2 <text:s text:c="7"/></text:p>
     <text:p text:style-name="P13330"><text:s text:c="9"/>4566.9 <text:s text:c="3"/>6.0E-06 <text:s text:c="23"/>/ ROCK COMPRESSIBILITY REGION 3 <text:s text:c="7"/></text:p>
     <text:p text:style-name="P15526"/>
-    <text:p text:style-name="_40_TextBody">The above example defines three ROCK tables and assumes that NTPVT equals three on the TABDIMS keyword in the RUNSPEC section.</text:p>
-    <text:p text:style-name="P12643">There is no terminating “/” for this keyword, and thus the number entries must match the value entered via the TABDIMS(NTPVT), TABDIMS(NTROCC), or TABDIMS(NTSFUN) parameters, depending on the option selected via the ROCKOPTS keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The above example defines three <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> tables and assumes that NTPVT equals three on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="P12643">There is no terminating “/” for this keyword, and thus the number entries must match the value entered via the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTPVT), <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTROCC), or <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTSFUN) parameters, depending on the option selected via the <text:a xlink:href="#__RefHeading___Toc111814_2939291539">ROCKOPTS</text:a> keyword.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/></text:p>
     

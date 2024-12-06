@@ -4215,8 +4215,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18498" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716257_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716257_3964674244"/></text:h>
-    <text:p text:style-name="P12247">SWATINIT defines the initial water saturation for all the cells in the model via an array. The keyword can be used with all grid types. SWATINIT is used to initialize the model by setting each grid block’s initial water saturation (“Sw”). If the array is present in the input deck, then OPM Flow will re-scale the water-oil capillary pressure curves entered via the SWFN saturation functions in the PROPS section, so that the resulting initialized Sw matches the values in the SWATINIT array.</text:p>
-    <text:p text:style-name="P12247">Normally the SWATINIT array is generated in the static earth model when calculating the hydrocarbons in-place. volumes using Saturation Height Functions (“SHF”) derived from capillary pressure functions. Static earth models do not directly use capillary pressure in these type of calculations as individual cell pressures are not required. There is therefore some potential for inconsistencies to arise between the two sets of formulations. <text:s/>This is normally manifested by extreme scaling in the scaled capillary pressure values calculated by the simulator. If this is the case then the PPCWMAX keyword can be used to set a maximum scaled capillary pressure value. Note that as large values of scaled capillary pressures can result in numerical issues, a more technically sound approach would be to resolve these inconsistencies before continuing with the model build. <text:s/></text:p>
+    <text:p text:style-name="P12247"><text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> defines the initial water saturation for all the cells in the model via an array. The keyword can be used with all grid types. <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> is used to initialize the model by setting each grid block’s initial water saturation (“Sw”). If the array is present in the input deck, then OPM Flow will re-scale the water-oil capillary pressure curves entered via the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> saturation functions in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, so that the resulting initialized Sw matches the values in the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> array.</text:p>
+    <text:p text:style-name="P12247">Normally the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> array is generated in the static earth model when calculating the hydrocarbons in-place. volumes using Saturation Height Functions (“SHF”) derived from capillary pressure functions. Static earth models do not directly use capillary pressure in these type of calculations as individual cell pressures are not required. There is therefore some potential for inconsistencies to arise between the two sets of formulations. <text:s/>This is normally manifested by extreme scaling in the scaled capillary pressure values calculated by the simulator. If this is the case then the <text:a xlink:href="#__RefHeading___Toc150617_332691817">PPCWMAX</text:a> keyword can be used to set a maximum scaled capillary pressure value. Note that as large values of scaled capillary pressures can result in numerical issues, a more technically sound approach would be to resolve these inconsistencies before continuing with the model build. <text:s/></text:p>
     <table:table table:name="Table1895" table:style-name="Table1895">
      <table:table-column table:style-name="Table1895.A"/>
      <table:table-column table:style-name="Table1895.B"/>
@@ -4258,10 +4258,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3135">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1895.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5318">SWATINIT</text:p>
+       <text:p text:style-name="P5318"><text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1895.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5318">SWATINIT is an array of real positive numbers that are greater than or equal to zero and less than or equal to one, that define the initial water saturation values to each cell in the model. </text:p>
+       <text:p text:style-name="P5318"><text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> is an array of real positive numbers that are greater than or equal to zero and less than or equal to one, that define the initial water saturation values to each cell in the model. </text:p>
        <text:p text:style-name="P4083">Repeat counts may be used, for example 3000*0.15 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4289,7 +4289,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1760">Notes:</text:p>
        <text:list xml:id="list105917102021621" text:continue-list="list105913725695410" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19028">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19028">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19028">The keyword is terminated by a “/”.</text:p>
@@ -4304,7 +4304,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14814">Table <text:sequence text:ref-name="refTable400" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.184</text:sequence>: SWATINIT Keyword Description</text:p>
-    <text:p text:style-name="P15322">See also the PPCWMAX to control the re-scaling of the capillary pressure entries on the SWFN saturation function keyword in the PROPS section. </text:p>
+    <text:p text:style-name="P15322">See also the <text:a xlink:href="#__RefHeading___Toc150617_332691817">PPCWMAX</text:a> to control the re-scaling of the capillary pressure entries on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> saturation function keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
     <text:h text:style-name="P18498" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716259_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716259_3964674244"/></text:h>
     <text:p text:style-name="P13603">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13603">-- <text:s text:c="7"/>DEFINE GRID BLOCK INITIAL SW DATA FOR ALL CELLS </text:p>
@@ -4313,7 +4313,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14376">SWATINIT</text:p>
     <text:p text:style-name="P13603"><text:s text:c="10"/>300*0.300 <text:s text:c="59"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13153"><text:soft-page-break/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15943">The above example defines a constant initial water saturation of 0.300 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15943">The above example defines a constant initial water saturation of 0.300 to all 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     
    </text:section>
   </office:text>

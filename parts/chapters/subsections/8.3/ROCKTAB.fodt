@@ -4253,7 +4253,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683883112"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683883112"/></text:h>
-    <text:p text:style-name="_40_TextBody">The ROCKTAB keyword defines the rock compaction attributes to be applied when the rock compaction option has been invoked by the ROCKCOMP keyword in the RUNSPEC section. ROCKTAB defines pore volume and transmissibility multipliers versus pressure that are used in the compaction calculations. If the RKTRMDIR has been activated in the PROPS section, then the transmissibility multiplier is directional dependent and two additional columns are used to define the y and z direction transmissibility multipliers.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keyword defines the rock compaction attributes to be applied when the rock compaction option has been invoked by the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> defines pore volume and transmissibility multipliers versus pressure that are used in the compaction calculations. If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> has been activated in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, then the transmissibility multiplier is directional dependent and two additional columns are used to define the y and z direction transmissibility multipliers.</text:p>
     <table:table table:name="Table592" table:style-name="Table592">
      <table:table-column table:style-name="Table592.A"/>
      <table:table-column table:style-name="Table592.B"/>
@@ -4300,7 +4300,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4815">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table592.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4377">If the ROCKOPT1 variable has been set to PRESSURE on the ROCKOPTS keyword in the PROPS section, then PRESS should be a columnar vector of real monotonically <text:span text:style-name="T2554">increasing</text:span> down the column values, that define the reference pressure for which the other parameters correspond to.</text:p>
+       <text:p text:style-name="P4377">If the ROCKOPT1 variable has been set to <text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a> on the <text:a xlink:href="#__RefHeading___Toc111814_2939291539">ROCKOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, then PRESS should be a columnar vector of real monotonically <text:span text:style-name="T2554">increasing</text:span> down the column values, that define the reference pressure for which the other parameters correspond to.</text:p>
        <text:p text:style-name="P4817">If ROCKOPT1 has been set to STRESS, then PRESS should be a columnar vector of real monotonically <text:span text:style-name="T2554">decreasing</text:span> down the column values.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4328,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3025">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table592.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4815">PORV</text:p>
+       <text:p text:style-name="P4815"><text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table592.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4377">A columnar vector of real positive values that are either equal or increasing down the column that define the rock pore volume multiplier for a given PRESS.</text:p>
@@ -4361,8 +4361,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4815">TRANS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table592.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4378">If the RKTRMDIR is absent from the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define the x, y, and z directional transmissibility multipliers for the corresponding PRESS.</text:p>
-       <text:p text:style-name="P4378">If the RKTRMDIR is present in the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define only the x directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P4378">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is absent from the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define the x, y, and z directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P4378">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is present in the input deck, then TRANS is a columnar vector of real positive values that are either equal or increasing down the column that define only the x directional transmissibility multipliers for the corresponding PRESS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4393,8 +4393,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10070">TRANSY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table592.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P10155">If the RKTRMDIR is absent from the input deck, then TRANSY is ignored.</text:p>
-       <text:p text:style-name="P4379">If the RKTRMDIR is present in the input deck, then TRANSY is a columnar vector of real positive values that are either equal or increasing down the column that define only the y directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P10155">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is absent from the input deck, then TRANSY is ignored.</text:p>
+       <text:p text:style-name="P4379">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is present in the input deck, then TRANSY is a columnar vector of real positive values that are either equal or increasing down the column that define only the y directional transmissibility multipliers for the corresponding PRESS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4424,8 +4424,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10070">TRANSZ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table592.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P10155">If the RKTRMDIR is absent from the input deck, then TRANSZ is ignored.</text:p>
-       <text:p text:style-name="P4379">If the RKTRMDIR is present in the input deck, then TRANSZ is a columnar vector of real positive values that are either equal or increasing down the column that define only the z directional transmissibility multipliers for the corresponding PRESS.</text:p>
+       <text:p text:style-name="P10155">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is absent from the input deck, then TRANSZ is ignored.</text:p>
+       <text:p text:style-name="P4379">If the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> is present in the input deck, then TRANSZ is a columnar vector of real positive values that are either equal or increasing down the column that define only the z directional transmissibility multipliers for the corresponding PRESS.</text:p>
        <text:p text:style-name="P4379"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4453,10 +4453,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1540">Notes:</text:p>
        <text:list xml:id="list105917805242273" text:continue-list="list105916867972621" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19862">The keyword is followed by NTROCC tables as declared on the ROCKCOMP keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19862">The keyword is followed by NTROCC tables as declared on the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19994">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19994">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19994">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4473,7 +4473,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14898">Table <text:sequence text:ref-name="refTable345" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.129</text:sequence>: ROCKTAB Keyword Description</text:p>
     <text:p text:style-name="P14898"/>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683883012"/>Examples<text:bookmark-end text:name="__RefHeading___Toc32169_37011683883012"/></text:h>
-    <text:p text:style-name="P11260">The example below defines two rock compaction tables, assuming NTROCC is equal to two on the ROCKCOMP keyword and NPPVT is greater than or equal to five on the TABDIMS keyword and that the RKTRMDIR keyword is present in the input deck.</text:p>
+    <text:p text:style-name="P11260">The example below defines two rock compaction tables, assuming NTROCC is equal to two on the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword and NPPVT is greater than or equal to five on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword and that the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> keyword is present in the input deck.</text:p>
     <text:p text:style-name="P13391">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P13391">-- <text:s text:c="6"/>ROCK COMPACTION TABLES <text:s text:c="65"/></text:p>
     <text:p text:style-name="P13391">-- </text:p>
@@ -4495,7 +4495,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13391"><text:s text:c="9"/>4500.0 <text:s text:c="2"/>1.0000 <text:s text:c="2"/>1.0000 <text:s text:c="2"/>1.0000 <text:s text:c="2"/>1.0000</text:p>
     <text:p text:style-name="P13391"><text:soft-page-break/><text:s text:c="9"/>4750.0 <text:s text:c="2"/>1.0100 <text:s text:c="2"/>1.0100 <text:s text:c="2"/>1.0100 <text:s text:c="2"/>1.0100 <text:s text:c="7"/>/ TABLE NO. 02</text:p>
     <text:p text:style-name="P13391"/>
-    <text:p text:style-name="P11260">As the x, y and z directional transmissibility multipliers are identical in the above example, we could eliminate the RKTRMDIR keyword from the input deck and enter the data in the three column format, as shown on the next page.</text:p>
+    <text:p text:style-name="P11260">As the x, y and z directional transmissibility multipliers are identical in the above example, we could eliminate the <text:a xlink:href="#__RefHeading___Toc111812_2939291539">RKTRMDIR</text:a> keyword from the input deck and enter the data in the three column format, as shown on the next page.</text:p>
     <text:p text:style-name="P11260"/>
     <text:p text:style-name="P16106">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P13391">-- <text:s text:c="6"/>ROCK COMPACTION TABLES <text:s text:c="65"/></text:p>

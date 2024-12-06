@@ -4241,8 +4241,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716199_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716199_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">RSCONSTT defines a constant Gas-Oil Ratio (“GOR”), for each dead oil<text:note text:id="ftn229" text:note-class="footnote"><text:note-citation>229</text:note-citation><text:note-body>
-        <text:p text:style-name="P16650">“Dead” oil is oil that it contains no dissolved gas or a relatively thick oil or residue that has lost its volatile components. </text:p></text:note-body></text:note> PVT fluid in the model. If the oil has a constant and uniform dissolved gas concentration, GOR, and if the reservoir pressure never drops below the saturation pressure (bubble point pressure), then the model can be run more efficiently by omitting the GAS and DISGAS keywords from the RUNSPEC section, treating the oil as a dead oil, and defining a constant Rs (GOR) value with keywords RSCONST or RSCONSTT in the PROPS section. This results in the model being run as a dead oil problem with no active gas phase. However, OPM Flow takes into account the constant Rs in the calculations and reporting. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc138400_332691817">RSCONSTT</text:a> defines a constant Gas-Oil Ratio (“GOR”), for each dead oil<text:note text:id="ftn229" text:note-class="footnote"><text:note-citation>229</text:note-citation><text:note-body>
+        <text:p text:style-name="P16650">“Dead” oil is oil that it contains no dissolved gas or a relatively thick oil or residue that has lost its volatile components. </text:p></text:note-body></text:note> PVT fluid in the model. If the oil has a constant and uniform dissolved gas concentration, GOR, and if the reservoir pressure never drops below the saturation pressure (bubble point pressure), then the model can be run more efficiently by omitting the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> and <text:a xlink:href="#__RefHeading___Toc39767_2267116897">DISGAS</text:a> keywords from the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, treating the oil as a dead oil, and defining a constant Rs (GOR) value with keywords <text:a xlink:href="#__RefHeading___Toc138398_332691817">RSCONST</text:a> or <text:a xlink:href="#__RefHeading___Toc138400_332691817">RSCONSTT</text:a> in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This results in the model being run as a dead oil problem with no active gas phase. However, OPM Flow takes into account the constant Rs in the calculations and reporting. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table787" table:style-name="Table787">
      <table:table-column table:style-name="Table787.A"/>
@@ -4285,7 +4285,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3027">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table787.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4820">RS</text:p>
+       <text:p text:style-name="P4820"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table787.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4390">A real positive columnar vector that defines the dead oil GOR for each oil PVT table in the model</text:p>
@@ -4345,10 +4345,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1542">Notes:</text:p>
        <text:list xml:id="list105917374750906" text:continue-list="list105917057904961" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19894">The keyword is followed by NTPVT rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19894">The keyword is followed by NTPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20030">Each row must contain two values representing the RS and PRESS variables. </text:p>
+         <text:p text:style-name="P20030">Each row must contain two values representing the <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> and PRESS variables. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20030">Each row is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4364,7 +4364,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14899">Table <text:sequence text:ref-name="refTable350" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.134</text:sequence>: RSCONSTT Keyword Description</text:p>
     <text:p text:style-name="P15626"/>
-    <text:p text:style-name="P15383">See also the RSCONST keyword to define a constant Rs to all the various dead oil PVT tables and the PVDO and PVCDO keywords to enter the dead oil properties. All of the aforementioned keywords are in the PROPS section.</text:p>
+    <text:p text:style-name="P15383">See also the <text:a xlink:href="#__RefHeading___Toc138398_332691817">RSCONST</text:a> keyword to define a constant Rs to all the various dead oil PVT tables and the <text:a xlink:href="#__RefHeading___Toc45803_719036256">PVDO</text:a> and <text:a xlink:href="#__RefHeading___Toc104054_57619843">PVCDO</text:a> keywords to enter the dead oil properties. All of the aforementioned keywords are in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:p text:style-name="P11212"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716201_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716201_3964674244"/></text:h>
     <text:p text:style-name="Text_20_body">The example sets the dead oil GOR to 5, 6.5 and 8.0 scf/stb for PVT tables one, two and three, respectively and the bubble point pressure to 14.7 psia for all three tables.</text:p>

@@ -4351,18 +4351,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18462" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881954 Copy 1"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881954 Copy 1"/></text:h>
-    <text:p text:style-name="_40_TextBody">The DIFFCGAS keyword defines the gas diffusion coefficients assuming the standard mole fraction formulation for each compositional component in the model and for each PVT region, for when the Molecular Diffusion option has been activated by the DIFFUSE keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1">DIFFCGAS</text:a> keyword defines the gas diffusion coefficients assuming the standard mole fraction formulation for each compositional component in the model and for each PVT region, for when the Molecular Diffusion option has been activated by the <text:a xlink:href="#__RefHeading___Toc349951_1539708736">DIFFUSE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <text:p text:style-name="P12729">This keyword is optional as OPM Flow will automatically calculate the coefficients assuming the mole fraction formulation, as described by Sandve et al.<text:note text:id="ftn183" text:note-class="footnote"><text:note-citation>183</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">Tor Harald Sandve, Sarah E. Gasda, Atgeirr Rasmussen, <text:span text:style-name="T7193">and</text:span> Alf Birger Rustad. Convective dissolution in field scale CO<text:span text:style-name="T4092">2</text:span> storage simulation using the OPM Flow simulator. Submitted to TCCS 11 – Trondheim Conference on CO<text:span text:style-name="T4092">2</text:span> Capture, Transport and Storage Trondheim, Norway – June 21-23, 2021.</text:p></text:note-body></text:note>, if the DIFFAGAS and DIFFCGAS keywords are absent from the input deck. <text:s/>The keyword thus allows one to overwrite the automatically calculated values.</text:p>
-    <text:p text:style-name="_40_TextBody">The keyword should only be used if the CO2STORE or H2STORE keyword and either the GASWAT or the GAS and WATER keywords in the RUNSPEC section, have also been activated for the gas-water two component model. </text:p>
-    <text:p text:style-name="_40_TextBody">See also the DIFFAGAS and DIFFAWAT keywords that assume a mass fraction formulation for diffusion rather than the standard mole fraction formulation assumed by the DIFFCGAS and DIFFCWAT keywords. The DIFFAGAS and DIFFAWAT keywords cannot be used in combination with the DIFFCGAS and DIFFCWAT keywords. </text:p>
+        <text:p text:style-name="Footnote">Tor Harald Sandve, Sarah E. Gasda, Atgeirr Rasmussen, <text:span text:style-name="T7193">and</text:span> Alf Birger Rustad. Convective dissolution in field scale CO<text:span text:style-name="T4092">2</text:span> storage simulation using the OPM Flow simulator. Submitted to TCCS 11 – Trondheim Conference on CO<text:span text:style-name="T4092">2</text:span> Capture, Transport and Storage Trondheim, Norway – June 21-23, 2021.</text:p></text:note-body></text:note>, if the <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFAGAS_8_3">DIFFAGAS</text:a> and <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1">DIFFCGAS</text:a> keywords are absent from the input deck. <text:s/>The keyword thus allows one to overwrite the automatically calculated values.</text:p>
+    <text:p text:style-name="_40_TextBody">The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> keyword and either the <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> or the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> and <text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, have also been activated for the gas-water two component model. </text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFAGAS_8_3">DIFFAGAS</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFAWAT_8_3">DIFFAWAT</text:a> keywords that assume a mass fraction formulation for diffusion rather than the standard mole fraction formulation assumed by the <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1">DIFFCGAS</text:a> and <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1 Copy 1">DIFFCWAT</text:a> keywords. The <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFAGAS_8_3">DIFFAGAS</text:a> and <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFAWAT_8_3">DIFFAWAT</text:a> keywords cannot be used in combination with the <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1">DIFFCGAS</text:a> and <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1 Copy 1">DIFFCWAT</text:a> keywords. </text:p>
     <table:table table:name="Table2316" table:style-name="Table2316">
      <table:table-column table:style-name="Table2316.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2316.1">
        <table:table-cell table:style-name="Table2316.A1" office:value-type="string">
         <text:p text:style-name="P10236">Note</text:p>
-        <text:p text:style-name="P10190">This is an OPM Flow keyword used with OPM Flow’s CO2STORE or H2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the DIFFCGAS keyword used in the commercial compositional simulator.</text:p>
+        <text:p text:style-name="P10190">This is an OPM Flow keyword used with OPM Flow’s <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and should not be confused with the more general version of the <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1">DIFFCGAS</text:a> keyword used in the commercial compositional simulator.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4471,7 +4471,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1841">Notes:</text:p>
        <text:list xml:id="list105915081732839" text:continue-list="list105915031982016" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20091">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20091">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20067">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4493,13 +4493,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708695992416">
        <table:table-cell table:style-name="Table2315.A1" office:value-type="string">
         <text:p text:style-name="P10364">Note</text:p>
-        <text:p text:style-name="P10204">The option has been tested in combination with the CO2STORE keyword, but not for the general case at this point.</text:p>
+        <text:p text:style-name="P10204">The option has been tested in combination with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> keyword, but not for the general case at this point.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P11213"/>
-    <text:p text:style-name="P12731"><text:soft-page-break/>See also the DIFFUSE keyword in the RUNSPEC section to activate the Molecular Diffusion option and the DIFFCWAT keyword in the PROPS section that defines the water diffusion coefficients for each compositional component in the model and for each PVT region. Finally, for gas-oil systems the DIFFC keyword in the PROPS section should be used.</text:p>
+    <text:p text:style-name="P12731"><text:soft-page-break/>See also the <text:a xlink:href="#__RefHeading___Toc349951_1539708736">DIFFUSE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the Molecular Diffusion option and the <text:a xlink:href="#__RefHeading___Toc314077_1539708736 Copy 1 Copy 1">DIFFCWAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section that defines the water diffusion coefficients for each compositional component in the model and for each PVT region. Finally, for gas-oil systems the <text:a xlink:href="#__RefHeading___Toc314077_1539708736">DIFFC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section should be used.</text:p>
     <text:p text:style-name="P12732">Normally diffusion coefficients are measured in laboratory units, that is cm<text:span text:style-name="T3853">2</text:span>/s, for ease of use, <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable245">Table 8.29</text:sequence-ref><text:s/>outlines the conversion factors for converting the laboratory measured diffusion coefficients to those used by the simulator.</text:p>
     <table:table table:name="Table2317" table:style-name="Table2317" table:template-name="Default Style">
      <table:table-column table:style-name="Table2317.A" table:number-columns-repeated="3"/>
@@ -4553,7 +4553,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable245" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.29</text:sequence>: Diffusivity Conversion Factors</text:p>
     <text:h text:style-name="P18345" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12427">The example below is based on field units, with NTPVT equal to three on the TABDIMS keyword.</text:p>
+    <text:p text:style-name="P12427">The example below is based on field units, with NTPVT equal to three on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword.</text:p>
     <text:p text:style-name="P14546">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14546">-- <text:s text:c="6"/>PVT REGION GAS COMPONENT DIFFUSION COEFFICIENTS (OPM FLOW KEYWORD) <text:s text:c="67"/></text:p>
     <text:p text:style-name="P14546">-- <text:s text:c="85"/></text:p>

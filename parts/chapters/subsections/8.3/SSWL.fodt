@@ -4235,7 +4235,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31100_7842323224"/>Description<text:bookmark-end text:name="__RefHeading___Toc31100_7842323224"/></text:h>
-    <text:p text:style-name="P11784">SSWL defines the surfactant connate water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword and the surfactant phase has been activated by the SURFACT keyword in the RUNSPEC section. The connate water saturation is defined as the minimum water saturation in a two-phase water relative permeability table. <text:s/>SSWL scales the surfactant oil relative permeability to water and gas data.</text:p>
+    <text:p text:style-name="P11784"><text:a xlink:href="#__RefHeading___Toc837484_4250154414">SSWL</text:a> defines the surfactant connate water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword and the surfactant phase has been activated by the <text:a xlink:href="#__RefHeading___Toc863854_4250154414">SURFACT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The connate water saturation is defined as the minimum water saturation in a two-phase water relative permeability table. <text:s/><text:a xlink:href="#__RefHeading___Toc837484_4250154414">SSWL</text:a> scales the surfactant oil relative permeability to water and gas data.</text:p>
     <text:p text:style-name="P11784">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1596" table:style-name="Table1596">
      <table:table-column table:style-name="Table1596.A"/>
@@ -4278,10 +4278,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3114">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1596.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4610">SSWL</text:p>
+       <text:p text:style-name="P4610"><text:a xlink:href="#__RefHeading___Toc837484_4250154414">SSWL</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1596.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3228">SSWL is an array of real numbers assigning the connate water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
+       <text:p text:style-name="P3228"><text:a xlink:href="#__RefHeading___Toc837484_4250154414">SSWL</text:a> is an array of real numbers assigning the connate water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword.</text:p>
        <text:p text:style-name="P4079">Repeat counts may be used, for example 30*0.15 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4325,7 +4325,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14787">Table <text:sequence text:ref-name="refTable394" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.178</text:sequence>: SSWL Keyword Description</text:p>
     <text:p text:style-name="P15584"/>
-    <text:p text:style-name="P11784">End-point scaling allows the entered surfactant relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SSWL, SSWCR, SSWU, SSGL, SSGCR, SSGU, SSOWCR, and SSOGCR saturation grid arrays for the saturation end-points, and the SKRG, SKROG, SKROW and SKRW relative permeability grid cell arrays for the relative permeability end-point data.</text:p>
+    <text:p text:style-name="P11784">End-point scaling allows the entered surfactant relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the <text:a xlink:href="#__RefHeading___Toc837484_4250154414">SSWL</text:a>, <text:a xlink:href="#__RefHeading___Toc837495_4250154414">SSWCR</text:a>, <text:a xlink:href="#__RefHeading___Toc837482_4250154414">SSWU</text:a>, <text:a xlink:href="#__RefHeading___Toc811291_4250154414">SSGL</text:a>, <text:a xlink:href="#__RefHeading___Toc811289_4250154414">SSGCR</text:a>, SSGU, <text:a xlink:href="#__RefHeading___Toc830913_4250154414">SSOWCR</text:a>, and <text:a xlink:href="#__RefHeading___Toc817831_4250154414">SSOGCR</text:a> saturation grid arrays for the saturation end-points, and the SKRG, SKROG, SKROW and <text:a xlink:href="#__RefHeading___Toc537530_38555213">SKRW</text:a> relative permeability grid cell arrays for the relative permeability end-point data.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31102_7842323223"/>Example<text:bookmark-end text:name="__RefHeading___Toc31102_7842323223"/></text:h>
     <text:p text:style-name="P13593">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13995">-- <text:s text:c="6"/>DEFINE GRID BLOCK END-POINT SSWL DATA FOR ALL CELLS <text:s text:c="26"/></text:p>
@@ -4334,7 +4334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13593">SSWL</text:p>
     <text:p text:style-name="P13593"><text:s text:c="9"/>300*0.150 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13136"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15146">The above example defines a constant surfactant connate water saturation of 0.15 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15146">The above example defines a constant surfactant connate water saturation of 0.15 to all 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15146"/>
     <text:p text:style-name="P15146"/>
     

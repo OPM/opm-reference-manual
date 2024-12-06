@@ -4255,7 +4255,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716217_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716217_3964674244"/></text:h>
-    <text:p text:style-name="P11949">SKRO defines the scaling parameter for the surfactant oil relative permeability value at the connate water saturation (SWL), for all the cells in the model via an array. <text:s/>The ENDSCALE keyword in the RUNSPEC section should be activated to enable end-point scaling and the use of this keyword. In addition, the Surfactant option must be enabled by either the SURFST or SURFSTES keywords in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P11949"><text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a> defines the scaling parameter for the surfactant oil relative permeability value at the connate water saturation (<text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>), for all the cells in the model via an array. <text:s/>The <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to enable end-point scaling and the use of this keyword. In addition, the Surfactant option must be enabled by either the <text:a xlink:href="#__RefHeading___Toc1173151_4250154414">SURFST</text:a> or <text:a xlink:href="#__RefHeading___Toc1173153_4250154414">SURFSTES</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P11953">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1559" table:style-name="Table1559">
      <table:table-column table:style-name="Table1559.A"/>
@@ -4298,10 +4298,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3105">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1559.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4584">SKRO</text:p>
+       <text:p text:style-name="P4584"><text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1559.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3699">SKRO is an array of positive real numbers which are greater than zero and less than or equal to 1.0, that are the assigned scaling SKRO values for each cell in the model. </text:p>
+       <text:p text:style-name="P3699"><text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a> is an array of positive real numbers which are greater than zero and less than or equal to 1.0, that are the assigned scaling <text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a> values for each cell in the model. </text:p>
        <text:p text:style-name="P4071">Repeat counts may be used, for example 50*0.500.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4329,7 +4329,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1689">Notes:</text:p>
        <text:list xml:id="list105917367663336" text:continue-list="list105915429706974" text:style-name="L87">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19069">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19069">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18986">The keyword is terminated by a “/”.</text:p>
@@ -4345,10 +4345,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14580">Table <text:sequence text:ref-name="refTable374" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.158</text:sequence>: SKRO Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P11470">End-point scaling allows the entered surfactant relative permeability functions to be scale on the relative permeability values using the SKRO, SKRORG, SKRORW, SKRW and SKRWR surfactant relative permeability grid cell arrays for the relative permeability end-point data. </text:p>
+    <text:p text:style-name="P11470">End-point scaling allows the entered surfactant relative permeability functions to be scale on the relative permeability values using the <text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a>, <text:a xlink:href="#__RefHeading___Toc70189_3358172232">SKRORG</text:a>, <text:a xlink:href="#__RefHeading___Toc70191_3358172232">SKRORW</text:a>, <text:a xlink:href="#__RefHeading___Toc537530_38555213">SKRW</text:a> and <text:a xlink:href="#__RefHeading___Toc70193_3358172232">SKRWR</text:a> surfactant relative permeability grid cell arrays for the relative permeability end-point data. </text:p>
     <text:p text:style-name="P11470"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716219_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716219_3964674244"/></text:h>
-    <text:p text:style-name="P16432">The example defines an input box for the whole grid and for layers one to three, for layer one SKRO is set equal to 0.850, for layer two SKRO equals 0.875, and for layer three SKRO equals 0.900.</text:p>
+    <text:p text:style-name="P16432">The example defines an input box for the whole grid and for layers one to three, for layer one <text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a> is set equal to 0.850, for layer two <text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a> equals 0.875, and for layer three <text:a xlink:href="#__RefHeading___Toc1255617_516898843">SKRO</text:a> equals 0.900.</text:p>
     <text:p text:style-name="P13837">--</text:p>
     <text:p text:style-name="P13837">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS (NX=100, NY=100)</text:p>
     <text:p text:style-name="P13837">-- <text:s text:c="6"/></text:p>

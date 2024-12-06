@@ -4263,8 +4263,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716155_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716155_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PVDG defines the gas PVT properties for dry gas<text:note text:id="ftn217" text:note-class="footnote"><text:note-citation>217</text:note-citation><text:note-body>
-        <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note>. If the gas has a constant and uniform vaporized oil concentration, Condensate-Gas Ratio (“CGR”), and if the reservoir pressure never drops below the saturation pressure (dew point pressure), then the model can be run more efficiently by omitting the OIL and VAPOIL keywords from the RUNSPEC section, treating the gas as a dry gas, and defining a constant Rv (CGR) value with keyword RVCONST or RVCONSTT in the PROPS section. This results in the model being run with as a dry gas problem with no active oil (condensate) phase. However, OPM Flow takes into account the constant Rv in the calculations and reporting.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc104056_57619843">PVDG</text:a> defines the gas PVT properties for dry gas<text:note text:id="ftn217" text:note-class="footnote"><text:note-citation>217</text:note-citation><text:note-body>
+        <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note>. If the gas has a constant and uniform vaporized oil concentration, Condensate-Gas Ratio (“CGR”), and if the reservoir pressure never drops below the saturation pressure (dew point pressure), then the model can be run more efficiently by omitting the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> and <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> keywords from the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, treating the gas as a dry gas, and defining a constant Rv (CGR) value with keyword <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> or <text:a xlink:href="#__RefHeading___Toc138400_3326918171">RVCONSTT</text:a> in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This results in the model being run with as a dry gas problem with no active oil (condensate) phase. However, OPM Flow takes into account the constant Rv in the calculations and reporting.</text:p>
     <table:table table:name="Table509" table:style-name="Table509">
      <table:table-column table:style-name="Table509.A"/>
      <table:table-column table:style-name="Table509.B"/>
@@ -4396,10 +4396,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1532">Notes:</text:p>
        <text:list xml:id="list105917216657446" text:continue-list="list105915288793120" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19886">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19886">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20020">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20020">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20020">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4417,10 +4417,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15624"/>
     <text:p text:style-name="P15378">Note that provided the first table has been entered, subsequent tables may be defaulted, in this case the prior table is copied to the current table. See the second example for an illustration on how to use this feature. </text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P15378">See also the RVCONST and RVCONSTT keywords to define the constant Rv for dry gas.</text:p>
+    <text:p text:style-name="P15378">See also the <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> and <text:a xlink:href="#__RefHeading___Toc138400_3326918171">RVCONSTT</text:a> keywords to define the constant Rv for dry gas.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716157_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716157_3964674244"/></text:h>
-    <text:p text:style-name="P11328">The first example below defines two dry gas PVT tables assuming NTPVT equals two and NPPVT is greater than or equal to 22 on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P11328">The first example below defines two dry gas PVT tables assuming NTPVT equals two and NPPVT is greater than or equal to 22 on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P14016">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14016">-- <text:s text:c="6"/>GAS PVT TABLE FOR DRY GAS <text:s text:c="71"/></text:p>
     <text:p text:style-name="P14016">-- <text:s text:c="85"/></text:p>
@@ -4476,7 +4476,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13073"><text:s text:c="9"/>6000.0 <text:s text:c="4"/>0.5837 <text:s text:c="3"/>0.0285 <text:s text:c="22"/>/ TABLE N0. 02 <text:s text:c="46"/><text:s text:c="77"/></text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P16084">The second example defines four dry gas PVT tables assuming NTPVT equals four and NPPVT is greater than or equal to 22 on the TABDIMS keyword in the RUNSPEC section. Here table two defaults to table one, and table four defaults to table three.</text:p>
+    <text:p text:style-name="P16084">The second example defines four dry gas PVT tables assuming NTPVT equals four and NPPVT is greater than or equal to 22 on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Here table two defaults to table one, and table four defaults to table three.</text:p>
     <text:p text:style-name="P14018">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14018">-- <text:s text:c="6"/>GAS PVT TABLE FOR DRY GAS <text:s text:c="71"/></text:p>
     <text:p text:style-name="P14018">-- <text:s text:c="85"/></text:p>

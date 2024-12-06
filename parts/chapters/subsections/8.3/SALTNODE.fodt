@@ -4260,7 +4260,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5751_3701168388"/>Description<text:bookmark-end text:name="__RefHeading___Toc5751_3701168388"/></text:h>
-    <text:p text:style-name="_40_TextBody">SALTNODE defines the salt concentration value based on a cells PVTNUM number. The SALTNODE property is used in the calculation of a polymer viscosity when the polymer and the salt options has been activated by the POLYMER and BRINE keywords in the RUNSPEC section. In the RUNSPEC section the number of PVTNUM functions is declared by NTPVT variable on the TABDIMS keyword and allocated to individual cells by the PVTNUM property array in the REGIONS section. <text:s/>NPPVT on the TABDIMS keyword in the RUNSPEC section defines the maximum number of rows (or pressure values) in the PVT tables and also sets the maximum number of entries for each SALNODE data set. <text:s/>The number of values for each data set must correspond to the number of polymer solution adsorption entries on the PLYADSS keyword. For example if there are three sets of PVT tables and four values on the PLYADSS keyword, <text:s/>then three SALTNODE data sets with four values of salt concentrations need to be entered.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc13101_421927891">SALTNODE</text:a> defines the salt concentration value based on a cells <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> number. The <text:a xlink:href="#__RefHeading___Toc13101_421927891">SALTNODE</text:a> property is used in the calculation of a polymer viscosity when the polymer and the salt options has been activated by the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> and <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. In the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section the number of <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> functions is declared by NTPVT variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword and allocated to individual cells by the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> property array in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section. <text:s/>NPPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section defines the maximum number of rows (or pressure values) in the PVT tables and also sets the maximum number of entries for each SALNODE data set. <text:s/>The number of values for each data set must correspond to the number of polymer solution adsorption entries on the <text:a xlink:href="#__RefHeading___Toc121089_57619843">PLYADSS</text:a> keyword. For example if there are three sets of PVT tables and four values on the <text:a xlink:href="#__RefHeading___Toc121089_57619843">PLYADSS</text:a> keyword, <text:s/>then three <text:a xlink:href="#__RefHeading___Toc13101_421927891">SALTNODE</text:a> data sets with four values of salt concentrations need to be entered.</text:p>
     <text:p text:style-name="P11021">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table29" table:style-name="Table29">
      <table:table-column table:style-name="Table29.A"/>
@@ -4309,10 +4309,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3029">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table29.A2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4313">SALTNODE</text:p>
+       <text:p text:style-name="P4313"><text:a xlink:href="#__RefHeading___Toc13101_421927891">SALTNODE</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table29.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4323">A real monotonically increasing positive columnar vector defining the salt concentration for a given PVTNUM table.</text:p>
+       <text:p text:style-name="P4323">A real monotonically increasing positive columnar vector defining the salt concentration for a given <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> table.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4352,9 +4352,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14900">Table <text:sequence text:ref-name="refTable357" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.141</text:sequence>: SALTNODE Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P15394">An alternative manner of entering the salt concentrations is by utilizing the PVTNUM region array by using the ADSALNOD keyword in the PROPS section. </text:p>
+    <text:p text:style-name="P15394">An alternative manner of entering the salt concentrations is by utilizing the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region array by using the <text:a xlink:href="#__RefHeading___Toc4416_421927891">ADSALNOD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5753_3701168388"/>Example<text:bookmark-end text:name="__RefHeading___Toc5753_3701168388"/></text:h>
-    <text:p text:style-name="_40_TextBody">Given three sets of relative permeability tables and four values on the PLYADSS keyword and two SALNODE data sets with four values of salt concentrations then the data should be entered as follows:</text:p>
+    <text:p text:style-name="_40_TextBody">Given three sets of relative permeability tables and four values on the <text:a xlink:href="#__RefHeading___Toc121089_57619843">PLYADSS</text:a> keyword and two SALNODE data sets with four values of salt concentrations then the data should be entered as follows:</text:p>
     <text:p text:style-name="P13967">-- <text:s text:c="71"/></text:p>
     <text:p text:style-name="P13967">-- <text:s text:c="3"/>SETS SALT CONCENTRATION FOR POLYMER SOLUTION ADSORPTION</text:p>
     <text:p text:style-name="P13967">-- <text:s text:c="3"/>VIA PVTNUM ARRAY ALLOCATION</text:p>
@@ -4370,7 +4370,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13967"><text:s text:c="6"/>3.0</text:p>
     <text:p text:style-name="P13967"><text:soft-page-break/><text:s text:c="6"/>7.5 </text:p>
     <text:p text:style-name="P13967"><text:s text:c="6"/>15.0 <text:s text:c="5"/>/ PVTNUM TABLE NO. 02</text:p>
-    <text:p text:style-name="Text_20_body"><text:s/>See also the ADSALNOD keyword.</text:p>
+    <text:p text:style-name="Text_20_body"><text:s/>See also the <text:a xlink:href="#__RefHeading___Toc4416_421927891">ADSALNOD</text:a> keyword.</text:p>
     
    </text:section>
   </office:text>

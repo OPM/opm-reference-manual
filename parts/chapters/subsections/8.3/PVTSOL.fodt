@@ -4429,9 +4429,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="P12749"><text:span text:style-name="T1">PVTSOL defines the live oil PVT properties as a function of CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1"> mass fraction. The keyword automatically invokes the simulator’s </text:span>CO2 Dynamic EOR Model<text:note text:id="ftn223" text:note-class="footnote"><text:note-citation>223</text:note-citation><text:note-body>
+    <text:p text:style-name="P12749"><text:span text:style-name="T1"><text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> defines the live oil PVT properties as a function of CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1"> mass fraction. The keyword automatically invokes the simulator’s </text:span>CO2 Dynamic EOR Model<text:note text:id="ftn223" text:note-class="footnote"><text:note-citation>223</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">T. H. Sandve, O. Sævareid and I. Aavatsmark: “Improved Extended Blackoil Formulation -- <text:s/>for CO2 EOR Simulations.” in ECMOR XVII – The 17th European Conference on the -- Mathematics of Oil Recovery, <text:s/>September 2020. <text:s text:c="4"/></text:p></text:note-body></text:note>,<text:span text:style-name="T1"> that uses a fourth component to model the injected CO</text:span><text:span text:style-name="T4124">2.</text:span><text:span text:style-name="T1763">, for use in evaluating CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> Enhanced Oil Recovery (“EOR”) projects. Normally CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> EOR projects are evaluated via compositional simulators to account for the mass transfer of the various components and phases. Unfortunately, compositional models are computationally expensive compared to the black-oil approach, which for field studies is challenging, especially if an ensemble approach is being used to capture the uncertainties. Previous extended black-oil formulations often poorly represent the PVT properties of the oil-CO</text:span><text:span text:style-name="T4124">2</text:span><text:span text:style-name="T1763"> mixtures, resulting in poor agreement with the compositional formulation. </text:span></text:p>
-    <text:p text:style-name="P12747">To overcome the limitations of the standard four component black-oil formulation, OPM Flow uses an improved extended black-oil formulation, the CO2 Dynamic EOR Model, with the black-oil properties dependent on the fraction of CO2 in the cell, as described by the PVTSOL keyword. This approach models the oil-CO2 mixture more accurately and thus give results closer to the compositional simulator. Data for the keyword should normally be derived from laboratory or numerical slim-tube experiments based on one-dimensional compositional Equation Of State (“EOS”) simulations. </text:p>
+    <text:p text:style-name="P12747">To overcome the limitations of the standard four component black-oil formulation, OPM Flow uses an improved extended black-oil formulation, the CO2 Dynamic EOR Model, with the black-oil properties dependent on the fraction of CO2 in the cell, as described by the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword. This approach models the oil-CO2 mixture more accurately and thus give results closer to the compositional simulator. Data for the keyword should normally be derived from laboratory or numerical slim-tube experiments based on one-dimensional compositional Equation Of State (“EOS”) simulations. </text:p>
     <text:p text:style-name="P12747">Note, if this keyword is absent from the input deck then the CO2 Standard EOR Model is used instead.</text:p>
     <text:p text:style-name="P15928"/>
     <table:table table:name="Table2329" table:style-name="Table2329">
@@ -4618,10 +4618,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1178"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2329.D2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P638">RS</text:p>
+       <text:p text:style-name="P638"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2329.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1178">RS is a real monotonically increasing down the column values that defines the saturated gas-oil ratio (“GOR”) or Rs, <text:s/>for the given value of PRESS and for a given saturated value of CO2.</text:p>
+       <text:p text:style-name="P1178"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> is a real monotonically increasing down the column values that defines the saturated gas-oil ratio (“GOR”) or Rs, <text:s/>for the given value of PRESS and for a given saturated value of CO2.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4652,10 +4652,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1178"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2329.D2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1174">RV</text:p>
+       <text:p text:style-name="P1174"><text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2329.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1178">RV is a real monotonically increasing down the column values that defines the saturated condensate-gas ratio (“CGR”) or Rv, <text:s/>for the given value of PRESS and for a given saturated value of CO2.</text:p>
+       <text:p text:style-name="P1178"><text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a> is a real monotonically increasing down the column values that defines the saturated condensate-gas ratio (“CGR”) or Rv, <text:s/>for the given value of PRESS and for a given saturated value of CO2.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5171,10 +5171,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1843">Notes:</text:p>
        <text:list xml:id="list3488524412" text:style-name="L93">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19909">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19909">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20055">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rs entries as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20055">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rs entries as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20117">Except for the CO2 column, there must be same number of entries for each column.</text:p>
@@ -5194,7 +5194,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14574">Table <text:sequence text:ref-name="refTable337" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.121</text:sequence>: PVTSOL Keyword Description</text:p>
     <text:p text:style-name="P15384"/>
-    <text:p text:style-name="P15384">See also the PVDS keyword in the PROPS section that can also be used to model CO2 injection, using the SOLVENT model (CO2 Standard EOR), this is the conventional approach, and does not take into account black-oil properties being dependent on the fraction of CO2.</text:p>
+    <text:p text:style-name="P15384">See also the <text:a xlink:href="#__RefHeading___Toc104058_57619843">PVDS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section that can also be used to model CO2 injection, using the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> model (CO2 Standard EOR), this is the conventional approach, and does not take into account black-oil properties being dependent on the fraction of CO2.</text:p>
     <text:p text:style-name="P15928"/>
     <table:table table:name="Table2330" table:style-name="Table2330">
      <table:table-column table:style-name="Table2330.A"/>
@@ -5203,9 +5203,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708708151568">
        <table:table-cell table:style-name="Table2330.A1" office:value-type="string">
         <text:p text:style-name="P10366">Note</text:p>
-        <text:p text:style-name="P10414">In the CO2 Dynamic EOR Model the oil properties within a cell are dependent on the CO2 saturation in the cell. However, the model is not restricted to just CO2 utilization, as long as the appropriate oil-injection-gas dependent properties are entered in the model via the PVTSOL keyword.</text:p>
-        <text:p text:style-name="P10414">Thus, N2 or other miscible gases may be used instead of CO2, provided due care is taken in generating the required data for the PVTSOL keyword.</text:p>
-        <text:p text:style-name="P10414">Another example would be a gas-condensate re-cycling project where the produced gas is stripped of the liquids and then re-injected back into the reservoir in order to maintain the reservoir pressure. Here, the CO2 fraction in the PVTSOL keyword would be replaced by the lean injected gas fraction. Again the other properties would be derived from laboratory or numerical slim-tube experiments based on one-dimensional compositional EOS simulations. <text:s/></text:p>
+        <text:p text:style-name="P10414">In the CO2 Dynamic EOR Model the oil properties within a cell are dependent on the CO2 saturation in the cell. However, the model is not restricted to just CO2 utilization, as long as the appropriate oil-injection-gas dependent properties are entered in the model via the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword.</text:p>
+        <text:p text:style-name="P10414">Thus, N2 or other miscible gases may be used instead of CO2, provided due care is taken in generating the required data for the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword.</text:p>
+        <text:p text:style-name="P10414">Another example would be a gas-condensate re-cycling project where the produced gas is stripped of the liquids and then re-injected back into the reservoir in order to maintain the reservoir pressure. Here, the CO2 fraction in the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword would be replaced by the lean injected gas fraction. Again the other properties would be derived from laboratory or numerical slim-tube experiments based on one-dimensional compositional <text:a xlink:href="#REF_HEADING_KEYWORD_EOS_8_3">EOS</text:a> simulations. <text:s/></text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -5287,7 +5287,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13173"><text:s text:c="11"/>…………….………….….…….…….…….…….……….………….…….…….…….………….…….……….……………….……….…...…….…….….…….…………... <text:s text:c="7"/><text:s text:c="10"/><text:s text:c="77"/></text:p>
     <text:p text:style-name="P14556"><text:s text:c="10"/>4061.05 <text:s/>1.2145 <text:s/>4.3773e-01 <text:s/>0.6633 <text:s text:c="3"/>4.2745e-09 <text:s/>1.0000 <text:s/>1.0000 <text:s/>1.4288e-01 <text:s/>6.2211e-02 /</text:p>
     <text:p text:style-name="P14556">/</text:p>
-    <text:p text:style-name="P12747"><text:soft-page-break/>The above example defines one oil PVT Properties for Live Oil versus CO2 Mass Fraction table, and assumes that NTPVT equals one the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P12747"><text:soft-page-break/>The above example defines one oil PVT Properties for Live Oil versus CO2 Mass Fraction table, and assumes that NTPVT equals one the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     
    </text:section>
   </office:text>

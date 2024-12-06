@@ -4451,7 +4451,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P43" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716145_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716145_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The PPCWMAX keyword defines the maximum capillary pressure allowed when scaling the capillary pressure tables to match the inputted SWATINIT array. This is primary used for when the SWATINIT array has values of water saturation above the connate water saturation significantly outside than capillary pressure transition zone, that is high on the structure. In this case OPM Flow may generate large values for the capillary pressure which may result in numerical converge problems. This keyword sets the maximum allowable calculated capillary pressure and how the water saturation should be treated when the limit is exceeded.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc150617_332691817">PPCWMAX</text:a> keyword defines the maximum capillary pressure allowed when scaling the capillary pressure tables to match the inputted <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> array. This is primary used for when the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> array has values of water saturation above the connate water saturation significantly outside than capillary pressure transition zone, that is high on the structure. In this case OPM Flow may generate large values for the capillary pressure which may result in numerical converge problems. This keyword sets the maximum allowable calculated capillary pressure and how the water saturation should be treated when the limit is exceeded.</text:p>
     <table:table table:name="Table791" table:style-name="Table791">
      <table:table-column table:style-name="Table791.A"/>
      <table:table-column table:style-name="Table791.B"/>
@@ -4496,7 +4496,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P31">PCWO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table791.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P27">A columnar vector of real values that defines the maximum allowable capillary pressure for each SATNUM region.</text:p>
+       <text:p text:style-name="P27">A columnar vector of real values that defines the maximum allowable capillary pressure for each <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> region.</text:p>
        <text:p text:style-name="P32">The default value of infinity means there is no limit applied.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4530,10 +4530,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P28">A columnar vector of character strings that should be set to:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P78">NO: To ignore the SWATINIT value for the offending cell for when PCWO is exceeded. In this cases the capillary pressure for the block is set to the maximum (PCWO) and the water saturation is re-calculated based on PCWO.</text:p>
+         <text:p text:style-name="P78">NO: To ignore the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> value for the offending cell for when PCWO is exceeded. In this cases the capillary pressure for the block is set to the maximum (PCWO) and the water saturation is re-calculated based on PCWO.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P79">YES: To set the SWATINIT value to the connate water saturation for the offending cell for when PCWO is exceeded. In this case <text:s/>the capillary pressure is set to the maximum value of the appropriate SATNUM table and the initial water saturation is calculated to be consistent with the tables maximum capillary pressure. <text:s/>This results in the capillary pressures not being re-scale for the offending cell.</text:p>
+         <text:p text:style-name="P79">YES: To set the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> value to the connate water saturation for the offending cell for when PCWO is exceeded. In this case <text:s/>the capillary pressure is set to the maximum value of the appropriate <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> table and the initial water saturation is calculated to be consistent with the tables maximum capillary pressure. <text:s/>This results in the capillary pressures not being re-scale for the offending cell.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4548,7 +4548,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P80">The keyword is followed by NTSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P80">The keyword is followed by NTSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P81">Each row show contain two values representing PCWO and OPTN values.</text:p>
@@ -4576,7 +4576,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table792.A1" office:value-type="string">
         <text:p text:style-name="P74">Note</text:p>
         <text:p text:style-name="_40_TextNote">Using this keyword to limit the re-scaled grid block capillary pressure values will effect the fluids in-place when the simulator has to re-calculate values due to the capillary pressure limit being exceeded.</text:p>
-        <text:p text:style-name="_40_TextNote">In addition, the high grid block capillary pressures may be indicative of an inconsistency between the tabular SATNUM capillary pressure values and the provided SWATINIT array water saturations. This inconsistency may be a result of the SWATINIT array being derived using a saturation height function, as is customary in static modeling software, and the numerical models tabulated capillary pressure. Rather than resetting the maximum calculated capillary pressure using the PPCWMAX keyword, <text:s/>it may be more appropriate to investigate the reason for the high capillary pressures values first, prior to applying the keyword.</text:p>
+        <text:p text:style-name="_40_TextNote">In addition, the high grid block capillary pressures may be indicative of an inconsistency between the tabular <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> capillary pressure values and the provided <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> array water saturations. This inconsistency may be a result of the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> array being derived using a saturation height function, as is customary in static modeling software, and the numerical models tabulated capillary pressure. Rather than resetting the maximum calculated capillary pressure using the <text:a xlink:href="#__RefHeading___Toc150617_332691817">PPCWMAX</text:a> keyword, <text:s/>it may be more appropriate to investigate the reason for the high capillary pressures values first, prior to applying the keyword.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4593,7 +4593,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P42"><text:s text:c="9"/>125.0 <text:s text:c="4"/>YES <text:s text:c="36"/>/ TABLE NO 02</text:p>
     <text:p text:style-name="P42"><text:s text:c="9"/>135.0 <text:s text:c="4"/>YES <text:s text:c="36"/>/ TABLE NO 03</text:p>
     <text:p text:style-name="P39"/>
-    <text:p text:style-name="P39">The above example sets the maximum capillary pressure for three saturation regions to 100, 125 and 135 <text:s text:c="2"/>with SWATINIT reset to the connate water saturation for when the capillary pressure limit is exceeded.</text:p>
+    <text:p text:style-name="P39">The above example sets the maximum capillary pressure for three saturation regions to 100, 125 and 135 <text:s text:c="2"/>with <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> reset to the connate water saturation for when the capillary pressure limit is exceeded.</text:p>
    </text:section>
   </office:text>
  </office:body>

@@ -4249,7 +4249,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838831112"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838831112"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SLGOF keyword defines the oil and gas relative permeability and oil-gas capillary pressure versus liquid saturation tables for when oil and gas are present in the input deck. <text:s/>This keyword should only be used if both oil and gas are present in the run.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keyword defines the oil and gas relative permeability and oil-gas capillary pressure versus liquid saturation tables for when oil and gas are present in the input deck. <text:s/>This keyword should only be used if both oil and gas are present in the run.</text:p>
     <table:table table:name="Table488" table:style-name="Table488">
      <table:table-column table:style-name="Table488.A"/>
      <table:table-column table:style-name="Table488.B"/>
@@ -4294,7 +4294,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4637">SLIQ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table488.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4398">A columnar vector of real monotonically increasing down the column values starting from zero and terminating at one, that defines the liquid <text:s/>saturation, that is the connate water saturation (SWL) plus the oil saturation.</text:p>
+       <text:p text:style-name="P4398">A columnar vector of real monotonically increasing down the column values starting from zero and terminating at one, that defines the liquid <text:s/>saturation, that is the connate water saturation (<text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>) plus the oil saturation.</text:p>
        <text:p text:style-name="P4828">The first entry should correspond to residual liquid, that is Swc + Sorg and the last entry should be 1.0 to correspond to a gas saturation of zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4322,7 +4322,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3038">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table488.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4650">KRG</text:p>
+       <text:p text:style-name="P4650"><text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table488.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4398">A columnar vector of real values that are either equal or decreasing down the column and that are greater than or equal to zero and less than or equal to one that defines the gas relative permeability..</text:p>
@@ -4352,11 +4352,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4466">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table488.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4482">KRO</text:p>
+       <text:p text:style-name="P4482"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table488.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4382">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the oil relative permeability with respect to gas and connate water saturation.</text:p>
-       <text:p text:style-name="P4475">When water is active in the run, the last entry the column, that is at krog(Sg = 0), must be the same as the first entry in the corresponding SWOF <text:s/>table, that is at krow(So = 1 - Swco). </text:p>
+       <text:p text:style-name="P4475">When water is active in the run, the last entry the column, that is at krog(Sg = 0), must be the same as the first entry in the corresponding <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a> <text:s/>table, that is at krow(So = 1 - Swco). </text:p>
        <text:p text:style-name="P4473">The first value in the column should be zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4414,10 +4414,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1553">Notes:</text:p>
        <text:list xml:id="list105916859705866" text:continue-list="list105916531525712" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19820">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19820">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20083">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20083">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20084"><text:soft-page-break/>Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4474,7 +4474,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14029"><text:s text:c="9"/>0.50000 <text:s text:c="3"/>0.00000 <text:s/>0.8000 <text:s text:c="4"/>0.0000</text:p>
     <text:p text:style-name="P14029"><text:s text:c="9"/>0.80000 <text:s text:c="3"/>0.00000 <text:s/>0.9000 <text:s text:c="4"/>0.0000 <text:s text:c="12"/>/ TABLE No. 02 </text:p>
     <text:p text:style-name="P13311"/>
-    <text:p text:style-name="P11493">The example defines two SLGOF tables for use when oil, gas and water are present in the run.</text:p>
+    <text:p text:style-name="P11493">The example defines two <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> tables for use when oil, gas and water are present in the run.</text:p>
     <text:p text:style-name="P15260"/>
     
    </text:section>

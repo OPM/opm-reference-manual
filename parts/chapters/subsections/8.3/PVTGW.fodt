@@ -4516,8 +4516,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P53" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716171_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716171_3964674244"/></text:h>
-    <text:p text:style-name="P86">PVTGW defines the gas PVT properties for dry gas<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
-        <text:p text:style-name="P52">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:p></text:note-body></text:note> with vaporized water. This keyword should be used when the VAPWAT keyword has be declared in the RUNSPEC section indicating that that vaporized water is present in the dry gas phase. The keyword may be used for gas-water and oil-water-gas input decks that contain the dry gas and vaporized water phases. </text:p>
+    <text:p text:style-name="P86"><text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> defines the gas PVT properties for dry gas<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
+        <text:p text:style-name="P52">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:p></text:note-body></text:note> with vaporized water. This keyword should be used when the <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keyword has be declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that that vaporized water is present in the dry gas phase. The keyword may be used for gas-water and oil-water-gas input decks that contain the dry gas and vaporized water phases. </text:p>
     <table:table table:name="Table1822" table:style-name="Table1822">
      <table:table-column table:style-name="Table1822.A"/>
      <table:table-header-rows>
@@ -4717,10 +4717,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P94">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P94">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P95">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rw entries as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P95">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rw entries as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P96">Apart from the PRES data there must be same number of entries for each column. </text:p>
@@ -4751,14 +4751,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row>
        <table:table-cell table:style-name="Table2139.A1" office:value-type="string">
         <text:p text:style-name="P80">Note</text:p>
-        <text:p text:style-name="P81">If both the VAPWAT and VAPOIL keywords have been declared in the RUNSPEC section indicating that both vaporized water and vaporized oil are present in the wet gas, then the PVTGW keyword should be used along with the PVTG keyword in the PROPS section to fully define the wet gas PVT properties. The PVTGW keyword should be used to define the gas properties as a function of pressure and water-gas ratio (RVW), assuming oil-saturated gas. The PVTG keyword should be used to define the gas properties as a function of pressure and oil-gas ratio (RV), assuming water-saturated gas.</text:p>
-        <text:p text:style-name="P81">Alternatively, the PVTGWO keyword in the PROPS section may be used instead of the PVTGW and PVTG keywords to fully define the wet gas PVT properties.</text:p>
+        <text:p text:style-name="P81">If both the <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> and <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> keywords have been declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that both vaporized water and vaporized oil are present in the wet gas, then the <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> keyword should be used along with the <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section to fully define the wet gas PVT properties. The <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> keyword should be used to define the gas properties as a function of pressure and water-gas ratio (<text:a xlink:href="#__RefHeading___Toc537756_4287353749">RVW</text:a>), assuming oil-saturated gas. The <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keyword should be used to define the gas properties as a function of pressure and oil-gas ratio (<text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a>), assuming water-saturated gas.</text:p>
+        <text:p text:style-name="P81">Alternatively, the <text:a xlink:href="#__RefHeading___Toc356776_4176551521">PVTGWO</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section may be used instead of the <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> and <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keywords to fully define the wet gas PVT properties.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="_40_TextBody">See also the PVTG keyword in the PROPS section that defines the wet gas PVT for when vaporized oil is present in the gas phase. <text:s/>Alternatively, the PVTGWO keyword in the PROPS section may be utilized instead of PVTG and PVTGW to fully define the wet gas PVT properties, for when both vaporized oil and water are present in the gas phase.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section that defines the wet gas PVT for when vaporized oil is present in the gas phase. <text:s/>Alternatively, the <text:a xlink:href="#__RefHeading___Toc356776_4176551521">PVTGWO</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section may be utilized instead of <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a> and <text:a xlink:href="#__RefHeading___Toc355649_3149455253">PVTGW</text:a> to fully define the wet gas PVT properties, for when both vaporized oil and water are present in the gas phase.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P87" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716173_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716173_3964674244"/></text:h>
     <text:p text:style-name="P48">-- <text:s text:c="85"/></text:p>
@@ -4798,7 +4798,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P49"><text:s text:c="9"/>2400 <text:s text:c="4"/>0.000163 <text:s text:c="5"/>0.004919 <text:s text:c="5"/>0.02370 <text:s text:c="5"/>/</text:p>
     <text:p text:style-name="P49"><text:s text:c="14"/><text:s text:c="45"/>/ TABLE NO. 2</text:p>
     <text:p text:style-name="P51"/>
-    <text:p text:style-name="P85">The above example defines two dry gas PVT tables assuming NTPVT equals two and NPPVT is greater than or equal to eight on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P85">The above example defines two dry gas PVT tables assuming NTPVT equals two and NPPVT is greater than or equal to eight on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P85">Notice that there is no terminating “/” for this keyword only for a table and a sub table.</text:p>
     <text:p text:style-name="P85"/>
    </text:section>

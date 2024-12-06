@@ -4318,7 +4318,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716269_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716269_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The TRACER keyword defines a series of passive tracers that are associated with a phase (oil, water, or gas) in the model. The maximum number of tracers for each phase are declared on the TRACERS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword defines a series of passive tracers that are associated with a phase (oil, water, or gas) in the model. The maximum number of tracers for each phase are declared on the <text:a xlink:href="#__RefHeading___Toc76509_327352552">TRACERS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table571" table:style-name="Table571">
      <table:table-column table:style-name="Table571.A"/>
      <table:table-column table:style-name="Table571.B"/>
@@ -4366,8 +4366,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4856">A three letter character string defining the tracer’s name.</text:p>
-       <text:p text:style-name="P5357">NAME is used by the TNUM keyword in the REGIONS section, and unlike other keywords, the TNUM keyword itself must be concatenated with the phase and the name of the tracer defined by NAME.</text:p>
-       <text:p text:style-name="P5357">Similarly for the TVDP keyword in the SOLUTION section, where the TVDP keyword itself must be concatenated with the either letter F (for free) or S (for solution), followed by the name of the tracer defined by NAME.</text:p>
+       <text:p text:style-name="P5357">NAME is used by the <text:a xlink:href="#__RefHeading___Toc95487_3812137098">TNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section, and unlike other keywords, the <text:a xlink:href="#__RefHeading___Toc95487_3812137098">TNUM</text:a> keyword itself must be concatenated with the phase and the name of the tracer defined by NAME.</text:p>
+       <text:p text:style-name="P5357">Similarly for the <text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section, where the <text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keyword itself must be concatenated with the either letter F (for free) or S (for solution), followed by the name of the tracer defined by NAME.</text:p>
        <text:p text:style-name="P4856">Note it is best to void names beginning with the letters F, S, and T as these names may create naming issues in post-processing software.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4385,7 +4385,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4856">PHASE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4856">A three letter character string that defines the tracer given by NAME to a particular fluid phase. The character should be set to OIL, WAT or GAS.</text:p>
+       <text:p text:style-name="P4856">A three letter character string that defines the tracer given by NAME to a particular fluid phase. The character should be set to <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT or <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4401,7 +4401,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4856">UNITS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4869">The units for the tracer. This can be any unit but should be consistent with values entered via the TBLK and TVDP keywords in the SOLUTION section. <text:s/>The default values are the same as the PHASE in the model.</text:p>
+       <text:p text:style-name="P4869">The units for the tracer. This can be any unit but should be consistent with values entered via the <text:a xlink:href="#__RefHeading___Toc198434_3325167686">TBLK</text:a> and <text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. <text:s/>The default values are the same as the PHASE in the model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4434,8 +4434,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9327">SOLPHASE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9319">A three or four letter character string defining the partitioned tracer’s solution phase. The character string should be set to OIL, WAT, GAS or MULT.</text:p>
-       <text:p text:style-name="P9320">Note that SOLPHASE only needs to be defined if the partitioned tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P9319">A three or four letter character string defining the partitioned tracer’s solution phase. The character string should be set to <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> or MULT.</text:p>
+       <text:p text:style-name="P9320">Note that SOLPHASE only needs to be defined if the partitioned tracer option has been activate with the <text:a xlink:href="#__RefHeading___Toc264979_2928331029">PARTTRAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4451,8 +4451,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9327">KPNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9322">The table number to be used with the partitioned tracers defined by the PARTTRAC, TRACERKP and TRACERKM keywords.</text:p>
-       <text:p text:style-name="P9320">Note that KPNUM only needs to be defined if the partitioned tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P9322">The table number to be used with the partitioned tracers defined by the <text:a xlink:href="#__RefHeading___Toc264979_2928331029">PARTTRAC</text:a>, <text:a xlink:href="#__RefHeading___Toc1279807_4250154414">TRACERKP</text:a> and <text:a xlink:href="#__RefHeading___Toc1279805_4250154414">TRACERKM</text:a> keywords.</text:p>
+       <text:p text:style-name="P9320">Note that KPNUM only needs to be defined if the partitioned tracer option has been activate with the <text:a xlink:href="#__RefHeading___Toc264979_2928331029">PARTTRAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4469,8 +4469,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9327">ADSPHASE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table571.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9321">A three letter character string defining the phase used for the adsorption calculation for when the MULT option has been for SOLPHASE. The character string should be set to OIL, WAT, GAS or ALL.</text:p>
-       <text:p text:style-name="P9320">Note that ADSPHASE only needs to be defined if the partitioned tracer option has been activate with the PARTTRAC keyword in the RUNSPEC section. </text:p>
+       <text:p text:style-name="P9321">A three letter character string defining the phase used for the adsorption calculation for when the MULT option has been for SOLPHASE. The character string should be set to <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> or <text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a>.</text:p>
+       <text:p text:style-name="P9320">Note that ADSPHASE only needs to be defined if the partitioned tracer option has been activate with the <text:a xlink:href="#__RefHeading___Toc264979_2928331029">PARTTRAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4496,7 +4496,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable410" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.194</text:sequence>: TRACER Keyword Description</text:p>
     <text:p text:style-name="P11136"/>
-    <text:p text:style-name="P11034">See also the TNUM keyword in the REGION section that defines tracer regions, and the TVDP keyword in the SOLUTION section that sets the initial tracer saturation for all the cells as a function of depth.</text:p>
+    <text:p text:style-name="P11034">See also the <text:a xlink:href="#__RefHeading___Toc95487_3812137098">TNUM</text:a> keyword in the REGION section that defines tracer regions, and the <text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section that sets the initial tracer saturation for all the cells as a function of depth.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716271_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716271_3964674244"/></text:h>
     <text:p text:style-name="P13025">--</text:p>
     <text:p text:style-name="P13025">-- <text:s text:c="6"/>DEFINE TRACER NAMES</text:p>
