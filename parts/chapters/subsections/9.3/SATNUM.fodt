@@ -4189,7 +4189,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838823211"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838823211"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SATNUM keyword defines the saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the relative permeability and capillary pressure in a grid block.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> keyword defines the saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (<text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106876_335817223">SOF2</text:a>, <text:a xlink:href="#__RefHeading___Toc106878_335817223">SOF3</text:a>, <text:a xlink:href="#__RefHeading___Toc765497_4250154414">SOF32D</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> and <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>) are used to calculate the relative permeability and capillary pressure in a grid block.</text:p>
     <table:table table:name="Table313" table:style-name="Table313">
      <table:table-column table:style-name="Table313.A"/>
      <table:table-column table:style-name="Table313.B"/>
@@ -4214,11 +4214,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3065">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table313.A2" office:value-type="string">
-       <text:p text:style-name="P3950">SATNUM</text:p>
+       <text:p text:style-name="P3950"><text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table313.A2" office:value-type="string">
-       <text:p text:style-name="P3950">SATNUM defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
-       <text:p text:style-name="P3950">The maximum number of SATNUM regions is set by the NTSFUN variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3950"><text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
+       <text:p text:style-name="P3950">The maximum number of <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> regions is set by the NTSFUN variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table313.D2" office:value-type="string">
        <text:p text:style-name="P4127">1</text:p>
@@ -4229,10 +4229,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">Notes:</text:p>
        <text:list xml:id="list105918027020441" text:continue-list="list105918482410847" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19383">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19383">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19383">If a cell<text:span text:style-name="T1533"> is not assigned a SATNUM region then the default value will be used.</text:span></text:p>
+         <text:p text:style-name="P19383">If a cell<text:span text:style-name="T1533"> is not assigned a <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> region then the default value will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19847">The keyword is terminated by a “/”.</text:p>
@@ -4246,7 +4246,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P15000"><text:span text:style-name="T1">Table </text:span><text:span text:style-name="T1"><text:sequence text:ref-name="refTable438" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.21</text:sequence></text:span><text:span text:style-name="T1">: </text:span>SATNUM Keyword Description</text:p>
     <text:h text:style-name="P18514" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716321_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716321_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below sets three SATNUM regions for a 4 x 5 x 2 model. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets three <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> regions for a 4 x 5 x 2 model. </text:p>
     <text:p text:style-name="P14051">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P14051">-- <text:s text:c="6"/>DEFINE SATNUM REGIONS FOR ALL CELLS <text:s text:c="27"/></text:p>
     <text:p text:style-name="P14051">-- </text:p>
@@ -4254,7 +4254,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14051"><text:s text:c="9"/>2 <text:s/>2 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>2 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P14051"><text:s text:c="9"/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P14051">/ <text:s text:c="7"/></text:p>
-    <text:p text:style-name="_40_TextBody">Alternatively the EQUALS keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="_40_TextBody">Alternatively the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
     <text:p text:style-name="P14357">--</text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

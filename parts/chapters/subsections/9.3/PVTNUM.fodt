@@ -4259,7 +4259,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18512" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683882321"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683882321"/></text:h>
-    <text:p text:style-name="_40_TextBody">The PVTNUM keyword defines the PVT region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of PVT tables (DENSITY, PVDG, PVDO, PVTG, PVTO, PVCO, PVTW and ROCK) are used to calculate the PVT properties in a grid block.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword defines the PVT region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of PVT tables (<text:a xlink:href="#__RefHeading___Toc45799_719036256">DENSITY</text:a>, <text:a xlink:href="#__RefHeading___Toc104056_57619843">PVDG</text:a>, <text:a xlink:href="#__RefHeading___Toc45803_719036256">PVDO</text:a>, <text:a xlink:href="#__RefHeading___Toc104060_57619843">PVTG</text:a>, <text:a xlink:href="#__RefHeading___Toc104062_57619843">PVTO</text:a>, <text:a xlink:href="#__RefHeading___Toc325700_501926209">PVCO</text:a>, <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> and <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a>) are used to calculate the PVT properties in a grid block.</text:p>
     <table:table table:name="Table314" table:style-name="Table314">
      <table:table-column table:style-name="Table314.A"/>
      <table:table-column table:style-name="Table314.B"/>
@@ -4284,11 +4284,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3053">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table314.A2" office:value-type="string">
-       <text:p text:style-name="P3937">PVTNUM</text:p>
+       <text:p text:style-name="P3937"><text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table314.A2" office:value-type="string">
-       <text:p text:style-name="P3937">PVTNUM defines an array of positive integers assigning a grid cell to a particular PVT region. </text:p>
-       <text:p text:style-name="P3937">The maximum number of PVTNUM regions is set by the NTPVT variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3937"><text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> defines an array of positive integers assigning a grid cell to a particular PVT region. </text:p>
+       <text:p text:style-name="P3937">The maximum number of <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions is set by the NTPVT variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table314.D2" office:value-type="string">
        <text:p text:style-name="P4115">1</text:p>
@@ -4299,13 +4299,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1571">Notes:</text:p>
        <text:list xml:id="list105918555473506" text:continue-list="list105918745265061" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20120">The EQULNUM and PVTNUM arrays need to be consistent, that is the all cells with the same <text:span text:style-name="T1533">PVT</text:span>NUM can only belong to one <text:span text:style-name="T1533">EQL</text:span>NUM region.</text:p>
+         <text:p text:style-name="P20120">The EQULNUM and <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> arrays need to be consistent, that is the all cells with the same <text:span text:style-name="T1533">PVT</text:span>NUM can only belong to one <text:span text:style-name="T1533">EQL</text:span>NUM region.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19943">I<text:span text:style-name="T1533">f </text:span>a <text:span text:style-name="T1533">cell is not assigned a PVTNUM region then the default value will be used.</text:span></text:p>
+         <text:p text:style-name="P19943">I<text:span text:style-name="T1533">f </text:span>a <text:span text:style-name="T1533">cell is not assigned a <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region then the default value will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19834">The keyword is terminated by a “/”.</text:p>
@@ -4325,14 +4325,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708720775024">
        <table:table-cell table:style-name="Table315.A1" office:value-type="string">
         <text:p text:style-name="P10272">Note</text:p>
-        <text:p text:style-name="P10163">Care should be taken that cells in different PVTNUM regions are not in communication, since the fluid properties are associated with a cell. If for example, a rbbl or a rm3 of oil flows from PVTNUM region 1 to PVTNUM region 2, <text:s/>then the oil properties of that oil will change from the PVT 1 data set to the PVT data set 2. <text:s/>This will result in material balance errors, that may or may not cause numerical issues.</text:p>
-        <text:p text:style-name="P10163">To avoid this one should use the MULTNUM (or FLUXNUM, or OPERNUM) array with the MULTREGT array to ensure that the various PVTNUM regions are not in communication. </text:p>
+        <text:p text:style-name="P10163">Care should be taken that cells in different <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication, since the fluid properties are associated with a cell. If for example, a rbbl or a rm3 of oil flows from <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 1 to <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 2, <text:s/>then the oil properties of that oil will change from the PVT 1 data set to the PVT data set 2. <text:s/>This will result in material balance errors, that may or may not cause numerical issues.</text:p>
+        <text:p text:style-name="P10163">To avoid this one should use the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> (or <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a>, or <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a>) array with the <text:a xlink:href="#__RefHeading___Toc99845_2023071304">MULTREGT</text:a> array to ensure that the various <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication. </text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P18512" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716313_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716313_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below sets three PVTNUM regions for a 4 x 5 x 2 model. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets three <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions for a 4 x 5 x 2 model. </text:p>
     <text:p text:style-name="P13384">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13384">-- <text:s text:c="6"/>DEFINE PVTNUM REGION FOR ALL CELLS <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13384">-- </text:p>
@@ -4341,7 +4341,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13384"><text:s text:c="9"/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P13384">/ <text:s text:c="7"/></text:p>
     <text:p text:style-name="P15270"/>
-    <text:p text:style-name="P16048">Alternatively the EQUALS keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="P16048">Alternatively the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
     <text:p text:style-name="P14357">--</text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
@@ -4351,7 +4351,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13384"><text:s text:c="9"/>PVTNUM <text:s text:c="5"/>3 <text:s text:c="11"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>2 <text:s text:c="2"/>2 <text:s/>/ SET REGION 3 <text:s text:c="5"/></text:p>
     <text:p text:style-name="P13384">/ </text:p>
     <text:p text:style-name="P11329"/>
-    <text:p text:style-name="P12273">There third example shows how to ensure the various PVT regions are isolated. First of all define the MULTNUM array in the GRID section and ensure all the regions are isolated.</text:p>
+    <text:p text:style-name="P12273">There third example shows how to ensure the various PVT regions are isolated. First of all define the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section and ensure all the regions are isolated.</text:p>
     <text:p text:style-name="P13384">-- ==============================================================================</text:p>
     <text:p text:style-name="P13384">-- </text:p>
     <text:p text:style-name="P13384">-- GRID SECTION </text:p>
@@ -4376,7 +4376,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13908"><text:s text:c="9"/>1* <text:s text:c="6"/>1* <text:s text:c="6"/>0.0 <text:s text:c="4"/>1* <text:s text:c="4"/>&apos;ALL&apos; <text:s text:c="2"/>M <text:s text:c="7"/>/ ALL REGIONS SEALED <text:s text:c="9"/></text:p>
     <text:p text:style-name="P13384">/ <text:s text:c="64"/><text:s/></text:p>
     <text:p text:style-name="P11259"/>
-    <text:p text:style-name="P11501">Then in the REGIONS section copy the MULTNUM array to the PVTNUM array.</text:p>
+    <text:p text:style-name="P11501">Then in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section copy the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array to the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> array.</text:p>
     <text:p text:style-name="P13411">-- ==============================================================================</text:p>
     <text:p text:style-name="P13411">-- </text:p>
     <text:p text:style-name="P13411">-- REGIONS SECTION </text:p>

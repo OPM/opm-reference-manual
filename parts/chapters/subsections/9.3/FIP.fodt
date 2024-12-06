@@ -4273,8 +4273,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18503" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838823211113"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838823211113"/></text:h>
-    <text:p text:style-name="_40_TextBody">The FIP keyword defines the fluid in-place name and the associated region numbers for each grid block. The simulator can print out summaries of the fluid in-place in each region, the current flow rates between regions, and the cumulative flows between regions. <text:s/><text:s/>This keyword is not in the standard keyword format due to the fluid in-place name being concatenated to the keyword FIP to fully define the keyword. </text:p>
-    <text:p text:style-name="P12400"><text:span text:style-name="T1">Note that </text:span>the total number of FIP and FIPNUM regions must be defined by the NMFIPR variable on the REGDIMS keyword, or the NTFIP variable on the TABDIMS keyword. Both keywords are in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> keyword defines the fluid in-place name and the associated region numbers for each grid block. The simulator can print out summaries of the fluid in-place in each region, the current flow rates between regions, and the cumulative flows between regions. <text:s/><text:s/>This keyword is not in the standard keyword format due to the fluid in-place name being concatenated to the keyword <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> to fully define the keyword. </text:p>
+    <text:p text:style-name="P12400"><text:span text:style-name="T1">Note that </text:span>the total number of <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> and <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions must be defined by the NMFIPR variable on the <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a> keyword, or the NTFIP variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword. Both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table1290" table:style-name="Table1290">
      <table:table-column table:style-name="Table1290.A"/>
      <table:table-column table:style-name="Table1290.B"/>
@@ -4302,7 +4302,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4875">FIPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1290.C3" office:value-type="string">
-       <text:p text:style-name="P4857">A character string of up to eight characters, consisting of FIP as the first three characters followed by up to a five letter character string defining the fluid in-place’s name. </text:p>
+       <text:p text:style-name="P4857">A character string of up to eight characters, consisting of <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> as the first three characters followed by up to a five letter character string defining the fluid in-place’s name. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1290.D3" office:value-type="string">
        <text:p text:style-name="P4874">None</text:p>
@@ -4313,11 +4313,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4874">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1290.B3" office:value-type="string">
-       <text:p text:style-name="P3938">FIPNUM</text:p>
+       <text:p text:style-name="P3938"><text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1290.C3" office:value-type="string">
-       <text:p text:style-name="P3939">FIPNUM defines an array of positive integers greater than or equal to one, that assigns a grid cell to a particular fluid in-place region named by FIPNAME. <text:s/></text:p>
-       <text:p text:style-name="P3961">The maximum number of FIP and FIPNUM regions is set by the REGDIMS(NMFIPR) or the TABDIMS(NTFIP) keywords(variables) in the RUNSPEC section. If both REGDIMS(NMFIPR) and TABDIMS(NTFIP) have been defined then the maximum of the two is used.</text:p>
+       <text:p text:style-name="P3939"><text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> defines an array of positive integers greater than or equal to one, that assigns a grid cell to a particular fluid in-place region named by FIPNAME. <text:s/></text:p>
+       <text:p text:style-name="P3961">The maximum number of <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> and <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions is set by the <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a>(NMFIPR) or the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTFIP) keywords(variables) in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. If both <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a>(NMFIPR) and <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTFIP) have been defined then the maximum of the two is used.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1290.D3" office:value-type="string">
        <text:p text:style-name="P4116">1</text:p>
@@ -4328,10 +4328,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1572">Notes:</text:p>
        <text:list xml:id="list105918168707541" text:continue-list="list105917166749808" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19967">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19967">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19944">I<text:span text:style-name="T1533">f </text:span>a <text:span text:style-name="T1533">cell is n</text:span>ot assigned a FIP region number by the end of the REGION section then the fault value of one will be used.</text:p>
+         <text:p text:style-name="P19944">I<text:span text:style-name="T1533">f </text:span>a <text:span text:style-name="T1533">cell is n</text:span>ot assigned a <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> region number by the end of the REGION section then the fault value of one will be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19835">The keyword is terminated by a “/”.</text:p>
@@ -4345,39 +4345,39 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14751">Table <text:sequence text:ref-name="refTable421" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.4</text:sequence>: FIP Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="_40_TextBody">The keyword behaves the same as the FIPNUM keyword except the full name of the keyword, including the concatenated characters, are used as the property region name. For example, if we wish define a fluid in-place region name called UNIT, then the keyword would be FIPUNIT. </text:p>
+    <text:p text:style-name="_40_TextBody">The keyword behaves the same as the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> keyword except the full name of the keyword, including the concatenated characters, are used as the property region name. For example, if we wish define a fluid in-place region name called UNIT, then the keyword would be FIPUNIT. </text:p>
     <table:table table:name="Table417" table:style-name="Table417">
      <table:table-column table:style-name="Table417.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708719704928">
        <table:table-cell table:style-name="Table417.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10416"><text:span text:style-name="T3628">The commercial simulator prints out </text:span>a fluid in-place report if the FIP option on the RPTSCHED keyword is set equal to three, that is: FIP=3. This option is currently not available in OPM Flow.</text:p>
+        <text:p text:style-name="P10416"><text:span text:style-name="T3628">The commercial simulator prints out </text:span>a fluid in-place report if the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> option on the <text:a xlink:href="#__RefHeading___Toc268459_1366622701">RPTSCHED</text:a> keyword is set equal to three, that is: <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a>=3. This option is currently not available in OPM Flow.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P16909">The region property data for FIP arrays can be written to the SUMMARY file, and the RSM file if requested, similar to the FIPNUM regions, with some caveats:</text:p>
+    <text:p text:style-name="P16909">The region property data for <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> arrays can be written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file, and the RSM file if requested, similar to the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions, with some caveats:</text:p>
     <text:list xml:id="list105917532096126" text:continue-list="list105918156689554" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="P17171"><text:soft-page-break/>Only SUMMARY keywords for regions may be used, that is the SUMMARY variable name must begin with the letter R.</text:p>
+          <text:p text:style-name="P17171"><text:soft-page-break/>Only <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> keywords for regions may be used, that is the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable name must begin with the letter R.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17171">The SUMMARY variable name must consist of a character string length of exactly five characters, if less than five characters, then the “_” character should be used to fill out the SUMMARY variable name. For example, instead of RPRUNIT, use RPR__UNI, or instead of ROIPUNIT, use ROIP_UNI.</text:p>
+          <text:p text:style-name="P17171">The <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable name must consist of a character string length of exactly five characters, if less than five characters, then the “_” character should be used to fill out the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable name. For example, instead of RPRUNIT, use RPR__UNI, or instead of ROIPUNIT, use ROIP_UNI.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17171">Only the first three characters of the FIP region name should be concatenated with the SUMMARY variable name. This means if the FIP region name is UNIT, the FIP keyword would be FIPUNIT; however, to access the regional pressures for FIPUNIT, one should use RPR__UNI, or to access the regional oil in-place one would use ROIP_UNI. </text:p>
+          <text:p text:style-name="P17171">Only the first three characters of the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> region name should be concatenated with the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable name. This means if the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> region name is UNIT, the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> keyword would be FIPUNIT; however, to access the regional pressures for FIPUNIT, one should use RPR__UNI, or to access the regional oil in-place one would use ROIP_UNI. </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">See also the FIPOWG keyword in the REGIONS section that automatically defines the fluid-in-place regions at the start of the run based the gas, oil and water zones at the time the model was initialized.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc93831_3812137098">FIPOWG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section that automatically defines the fluid-in-place regions at the start of the run based the gas, oil and water zones at the time the model was initialized.</text:p>
     <text:h text:style-name="P18503" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716291_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716291_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The example below defines a region name of UNIT and sets three FIPUNIT regions for a 4 x 5 x 2 model. </text:p>
     <text:p text:style-name="P13279">-- <text:s text:c="77"/></text:p>
@@ -4387,7 +4387,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13279"><text:s text:c="9"/>2 <text:s/>2 <text:s/>1 <text:s/>1 <text:s/>2 <text:s/>2 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P13279"><text:s text:c="9"/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P13279">/ <text:s text:c="7"/></text:p>
-    <text:p text:style-name="P12254">The second example is based on the Norne model that defines two FIP regions based on geological layers and numerical layers using the EQUALS keyword. </text:p>
+    <text:p text:style-name="P12254">The second example is based on the Norne model that defines two <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> regions based on geological layers and numerical layers using the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword. </text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>FIPGL BASED ON GEOLOGICAL LAYERS</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
@@ -4427,7 +4427,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FIPNL <text:s text:c="5"/>21 <text:s text:c="12"/>1 <text:s/>46 <text:s text:c="3"/>1 112 <text:s text:c="2"/>21 <text:s/>21 <text:s text:c="2"/>/ <text:s/>Tilje 2</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FIPNL <text:s text:c="5"/>22 <text:s text:c="12"/>1 <text:s/>46 <text:s text:c="3"/>1 112 <text:s text:c="2"/>22 <text:s/>22 <text:s text:c="2"/>/ <text:s/>Tilje 1</text:p>
     <text:p text:style-name="_40_Example">/ <text:s text:c="82"/></text:p>
-    <text:p text:style-name="P12254">Then in order to get the reservoir pressure for the regions and the in-place oil volumes SUMMARY variables written to the SUMMARY file, one would use the following SUMMARY variable names in the SUMMARY section</text:p>
+    <text:p text:style-name="P12254">Then in order to get the reservoir pressure for the regions and the in-place oil volumes <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file, one would use the following <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable names in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section</text:p>
     <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
     <text:p text:style-name="_40_Example">-- SUMMARY SECTION </text:p>
@@ -4444,7 +4444,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">/</text:p>
     <text:p text:style-name="_40_Example">RPR__NL</text:p>
     <text:p text:style-name="_40_Example">/</text:p>
-    <text:p text:style-name="P12253">Notice how the “_” character has been used to extend the SUMMARY variable name to five characters.</text:p>
+    <text:p text:style-name="P12253">Notice how the “_” character has been used to extend the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable name to five characters.</text:p>
     
    </text:section>
   </office:text>
