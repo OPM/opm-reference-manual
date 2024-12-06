@@ -4197,7 +4197,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232111"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The EQLNUM keyword defines the equilibration region numbers for each grid block. The equilibration data for various regions are defined in the SOLUTION section. For example, the EQUIL keyword in the SOLUTION section defines the initial pressures and fluid contacts for each equilibration region identified by the EQLNUM region array.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> keyword defines the equilibration region numbers for each grid block. The equilibration data for various regions are defined in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. For example, the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section defines the initial pressures and fluid contacts for each equilibration region identified by the <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> region array.</text:p>
     <table:table table:name="Table310" table:style-name="Table310">
      <table:table-column table:style-name="Table310.A"/>
      <table:table-column table:style-name="Table310.B"/>
@@ -4222,11 +4222,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3053">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table310.A2" office:value-type="string">
-       <text:p text:style-name="P3937">EQLNUM</text:p>
+       <text:p text:style-name="P3937"><text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table310.A2" office:value-type="string">
-       <text:p text:style-name="P3937">EQLNUM defines an array of positive integers assigning a grid cell to a particular equilibration region. </text:p>
-       <text:p text:style-name="P3937">The maximum number of EQLNUM regions is set by the NTEQUL variable on the EQLDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3937"><text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> defines an array of positive integers assigning a grid cell to a particular equilibration region. </text:p>
+       <text:p text:style-name="P3937">The maximum number of <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> regions is set by the NTEQUL variable on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table310.D2" office:value-type="string">
        <text:p text:style-name="P4115">1</text:p>
@@ -4237,10 +4237,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1571">Notes:</text:p>
        <text:list xml:id="list105917166749808" text:continue-list="list105917064821507" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19732">The EQLNUM and PVTNUM arrays need to be consistent, that is the all cells with the same EQLNUM can only belong to one PVTNUM region.</text:p>
+         <text:p text:style-name="P19732">The <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> and <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> arrays need to be consistent, that is the all cells with the same <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> can only belong to one <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19943">If a cell<text:span text:style-name="T1533"> is not assigned a EQ</text:span>L<text:span text:style-name="T1533">NUM region </text:span>number <text:span text:style-name="T1533">then the default value will be used.</text:span></text:p>
@@ -4257,7 +4257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14602">Table <text:sequence text:ref-name="refTable420" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.3</text:sequence>: EQLNUM Keyword Description</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716289_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716289_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below sets three EQLNUM regions for a 4 x 5 x 2 model. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets three <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> regions for a 4 x 5 x 2 model. </text:p>
     <text:p text:style-name="P13384">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13384">-- <text:s text:c="6"/>DEFINE EQLNUM REGIONS FOR ALL CELLS <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13384">-- </text:p>
@@ -4266,7 +4266,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13384"><text:s text:c="9"/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P13384">/ <text:s text:c="7"/></text:p>
     <text:p text:style-name="P13384"/>
-    <text:p text:style-name="_40_TextBody">Alternatively the EQUALS keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="_40_TextBody">Alternatively the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
     <text:p text:style-name="P14356">--</text:p>
     <text:p text:style-name="P14356">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14356">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

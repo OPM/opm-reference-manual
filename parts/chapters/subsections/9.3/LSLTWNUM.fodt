@@ -4225,8 +4225,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232115"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232115"/></text:h>
-    <text:p text:style-name="_40_TextBody">The LSLTWNUM keyword defines the saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (SWFN, SOF3 and related keywords) are used to calculate the relative permeability and capillary pressure in a grid block. The keyword should only be used if the Low Salinity option for the Brine model and the Surfactant Wettability option have been activated by the LOWSALT and SURFACTW keywords, respectively, in the RUNSPEC section.</text:p>
-    <text:p text:style-name="_40_TextBody">The water wet curves are calculated as a weighted average of the low salinity saturation tables (allocated by this keyword) and the high salinity water wet saturation tables (allocated by the SURFWNUM keyword in the REGIONS section), using the weights provided by the LSALTFNC keyword in the PROPS section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc355130_2843394514">LSLTWNUM</text:a> keyword defines the saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (<text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106878_335817223">SOF3</text:a> and related keywords) are used to calculate the relative permeability and capillary pressure in a grid block. The keyword should only be used if the Low Salinity option for the Brine model and the Surfactant Wettability option have been activated by the <text:a xlink:href="#__RefHeading___Toc331072_2843394514">LOWSALT</text:a> and <text:a xlink:href="#__RefHeading___Toc863864_4250154414">SURFACTW</text:a> keywords, respectively, in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody">The water wet curves are calculated as a weighted average of the low salinity saturation tables (allocated by this keyword) and the high salinity water wet saturation tables (allocated by the <text:a xlink:href="#__RefHeading___Toc1179776_4250154414">SURFWNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section), using the weights provided by the <text:a xlink:href="#__RefHeading___Toc338141_2843394514">LSALTFNC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1337" table:style-name="Table1337">
      <table:table-column table:style-name="Table1337.A"/>
@@ -4252,11 +4252,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3058">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1337.B2" office:value-type="string">
-       <text:p text:style-name="P3944">LSLTWNUM</text:p>
+       <text:p text:style-name="P3944"><text:a xlink:href="#__RefHeading___Toc355130_2843394514">LSLTWNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1337.C2" office:value-type="string">
-       <text:p text:style-name="P3944">LSLTWNUM defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
-       <text:p text:style-name="P3944">The maximum number of LSLTWNUM regions is set by the NTSFUN variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3944"><text:a xlink:href="#__RefHeading___Toc355130_2843394514">LSLTWNUM</text:a> defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
+       <text:p text:style-name="P3944">The maximum number of <text:a xlink:href="#__RefHeading___Toc355130_2843394514">LSLTWNUM</text:a> regions is set by the NTSFUN variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1337.D2" office:value-type="string">
        <text:p text:style-name="P4121">1</text:p>
@@ -4267,10 +4267,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1577">Notes:</text:p>
        <text:list xml:id="list105918114382652" text:continue-list="list105917278248021" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19971">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19971">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19949">If a cell<text:span text:style-name="T1533"> is not assigned a LSLTWNUM region then the default value will be used.</text:span></text:p>
+         <text:p text:style-name="P19949">If a cell<text:span text:style-name="T1533"> is not assigned a <text:a xlink:href="#__RefHeading___Toc355130_2843394514">LSLTWNUM</text:a> region then the default value will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19840">The keyword is terminated by a “/”.</text:p>
@@ -4284,7 +4284,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14644">Table <text:sequence text:ref-name="refTable428" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.11</text:sequence>: LSLTWNUM Keyword Description</text:p>
     <text:h text:style-name="P18507" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716301_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716301_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below sets three LSLTWNUM regions for the model. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets three <text:a xlink:href="#__RefHeading___Toc355130_2843394514">LSLTWNUM</text:a> regions for the model. </text:p>
     <text:p text:style-name="P14357">--</text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
