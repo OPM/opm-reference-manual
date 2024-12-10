@@ -4203,7 +4203,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232113"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232113"/></text:h>
-    <text:p text:style-name="_40_TextBody">The IMBNUM keyword defines the imbibition saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the relative permeability and capillary pressure in a grid block.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> keyword defines the imbibition saturation tables (relative permeability and capillary pressure tables) region numbers for each grid block, as such there must be one entry for each cell in the model. The region number specifies which set of relative permeability tables (<text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106876_335817223">SOF2</text:a>, <text:a xlink:href="#__RefHeading___Toc106878_335817223">SOF3</text:a>, <text:a xlink:href="#__RefHeading___Toc765497_4250154414">SOF32D</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> and <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>) are used to calculate the relative permeability and capillary pressure in a grid block.</text:p>
     <table:table table:name="Table580" table:style-name="Table580">
      <table:table-column table:style-name="Table580.A"/>
      <table:table-column table:style-name="Table580.B"/>
@@ -4228,11 +4228,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3056">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table580.A2" office:value-type="string">
-       <text:p text:style-name="P3942">IMBNUM</text:p>
+       <text:p text:style-name="P3942"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table580.A2" office:value-type="string">
-       <text:p text:style-name="P3942">IMBNUM defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
-       <text:p text:style-name="P3942">The maximum number of IMBNUM regions is set by the NTSFUN variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3942"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
+       <text:p text:style-name="P3942">The maximum number of <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> regions is set by the NTSFUN variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table580.D2" office:value-type="string">
        <text:p text:style-name="P4119">1</text:p>
@@ -4243,13 +4243,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1575">Notes:</text:p>
        <text:list xml:id="list105918319844797" text:continue-list="list105917877749627" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19969">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19969">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19838">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19947">If a cell is not assigned an IMBNUM region then the default value of one will be used.</text:p>
+         <text:p text:style-name="P19947">If a cell is not assigned an <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> region then the default value of one will be used.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4260,10 +4260,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14643">Table <text:sequence text:ref-name="refTable426" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.9</text:sequence>: IMBNUM Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12655">In addition, saturation table assignment may be directional dependent in which case the directional dependent versions of the aforementioned array should be used, that is IMBNUMX, IMBNUMY and IMBNUMZ instead of IMBNUM. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected, the non-reversible versions of the aforementioned arrays should be used, that is IMBNUMX, IMBNUMX-, IMBNUMY, IMBNUMY-,<text:s/>IMBNUMZ and IMBNUMZ-,<text:s/>instead of the IMBNUM keyword. For reference, see <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3">Table 5.40</text:reference-ref>, that lists the various keywords that may be used with directional dependent relative permeability tables. </text:p>
-    <text:p text:style-name="P11791">Note, currently IMBNUMX-, IMBNUMY-, and IMBNUMZ- are not supported by OPM Flow.</text:p>
+    <text:p text:style-name="P12655">In addition, saturation table assignment may be directional dependent in which case the directional dependent versions of the aforementioned array should be used, that is <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a> and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a>. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected, the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX-</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY-</text:a>,<text:s/><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ-</text:a>,<text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> keyword. For reference, see <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3">Table 5.40</text:reference-ref>, that lists the various keywords that may be used with directional dependent relative permeability tables. </text:p>
+    <text:p text:style-name="P11791">Note, currently <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX-</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY-</text:a>, and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ-</text:a> are not supported by OPM Flow.</text:p>
     <text:h text:style-name="P18764" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716297_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716297_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below sets three IMBNUM regions for a 4 x 5 x 2 model using the EQUALS keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets three <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> regions for a 4 x 5 x 2 model using the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword.</text:p>
     <text:p text:style-name="P14357">--</text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

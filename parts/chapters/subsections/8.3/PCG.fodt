@@ -4249,8 +4249,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716089_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716089_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PCG defines the maximum drainage gas-oil capillary pressure values for all the cells in the model via an array. <text:s/>The ENDSCALE keyword in the RUNSPEC section should be activated to enable end-point scaling and the use of this keyword. The keyword can be used with all grid types. </text:p>
-    <text:p text:style-name="P11020">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. See also the IPCG keyword for the equivalent imbibition functionality.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc77040_621662414">PCG</text:a> defines the maximum drainage gas-oil capillary pressure values for all the cells in the model via an array. <text:s/>The <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to enable end-point scaling and the use of this keyword. The keyword can be used with all grid types. </text:p>
+    <text:p text:style-name="P11020">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. See also the <text:a xlink:href="#__RefHeading___Toc77038_621662414">IPCG</text:a> keyword for the equivalent imbibition functionality.</text:p>
     <table:table table:name="Table445" table:style-name="Table445">
      <table:table-column table:style-name="Table445.A"/>
      <table:table-column table:style-name="Table445.B"/>
@@ -4292,10 +4292,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3006">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table445.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4594">PCG</text:p>
+       <text:p text:style-name="P4594"><text:a xlink:href="#__RefHeading___Toc77040_621662414">PCG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table445.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3683">PCG is an array of positive real numbers assigning the maximum drainage <text:s/>gas-oil capillary pressure values for each cell in the model. </text:p>
+       <text:p text:style-name="P3683"><text:a xlink:href="#__RefHeading___Toc77040_621662414">PCG</text:a> is an array of positive real numbers assigning the maximum drainage <text:s/>gas-oil capillary pressure values for each cell in the model. </text:p>
        <text:p text:style-name="P4047">Repeat counts may be used, for example 30*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4323,10 +4323,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1518">Notes:</text:p>
        <text:list xml:id="list105916626116816" text:continue-list="list105914799622515" text:style-name="L87">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19067">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19067">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19284">I<text:span text:style-name="T1533">f the HYSTER on the SATOPTS keyword in the RUNSPEC section has been activated to invoke hysteresis then PC</text:span>G<text:span text:style-name="T1533"> scales the drainage curve </text:span>and IPCG scales the imbibition curve.</text:p>
+         <text:p text:style-name="P19284">I<text:span text:style-name="T1533">f the HYSTER on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section has been activated to invoke hysteresis then PC</text:span>G<text:span text:style-name="T1533"> scales the drainage curve </text:span>and <text:a xlink:href="#__RefHeading___Toc77038_621662414">IPCG</text:a> scales the imbibition curve.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19067">The keyword is terminated by a “/”.</text:p>
@@ -4494,7 +4494,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:tab/>=<text:tab/>the maximum capillary pressure from the PCG array for a given cell.</text:p>
+     </draw:frame><text:tab/>=<text:tab/>the maximum capillary pressure from the <text:a xlink:href="#__RefHeading___Toc77040_621662414">PCG</text:a> array for a given cell.</text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object17" text:anchor-type="as-char" svg:width="0.915cm" svg:height="0.474cm" draw:z-index="1063"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
@@ -4624,7 +4624,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13600">--</text:p>
     <text:p text:style-name="P13988">PCG</text:p>
     <text:p text:style-name="P13568"><text:s text:c="9"/>100*50.0 <text:s/>100*75.0 <text:s/>100*125.0 <text:s text:c="40"/>/ <text:s text:c="80"/></text:p>
-    <text:p text:style-name="Text_20_body">The above example defines the PCW for 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="Text_20_body">The above example defines the <text:a xlink:href="#__RefHeading___Toc84164_621662414">PCW</text:a> for 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     
    </text:section>
   </office:text>

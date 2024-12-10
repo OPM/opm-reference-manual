@@ -4391,7 +4391,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P45" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838831113"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838831113"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SOF2 keyword defines the oil relative permeability versus oil saturation tables for when oil and gas or oil and water are present in the input deck. <text:s/>The keyword is also used to define the relative permeability of the miscible hydrocarbon phase in SOLVENT runs. This keyword should only be used if oil is present in the run.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc106876_335817223">SOF2</text:a> keyword defines the oil relative permeability versus oil saturation tables for when oil and gas or oil and water are present in the input deck. <text:s/>The keyword is also used to define the relative permeability of the miscible hydrocarbon phase in <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> runs. This keyword should only be used if oil is present in the run.</text:p>
     <table:table table:name="Table491" table:style-name="Table491">
      <table:table-column table:style-name="Table491.A"/>
      <table:table-column table:style-name="Table491.B"/>
@@ -4433,11 +4433,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P25">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table491.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P33">SOIL</text:p>
+       <text:p text:style-name="P33"><text:a xlink:href="#__RefHeading___Toc137371_1317547213">SOIL</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table491.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P28">A columnar vector of real monotonically increasing down the column values starting from zero and terminating at one, that defines the oil or the hydrocarbon solvent saturation.</text:p>
-       <text:p text:style-name="P34">For two phase runs the oil saturation should be entered and for when the SOLVENT option has been activated in the RUNSPEC section the total hydrocarbon phase (including the solvent) should be entered, that is SOIL = So + Sg + Ss.</text:p>
+       <text:p text:style-name="P34">For two phase runs the oil saturation should be entered and for when the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section the total hydrocarbon phase (including the solvent) should be entered, that is <text:a xlink:href="#__RefHeading___Toc137371_1317547213">SOIL</text:a> = So + Sg + Ss.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4464,11 +4464,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P30">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table491.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P32">KRO</text:p>
+       <text:p text:style-name="P32"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table491.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P27">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the oil relative permeability with respect to gas and connate water saturation.</text:p>
-       <text:p text:style-name="P35">For two phase runs the oil relative permeability should be entered and for when the SOLVENT option has been activated in the RUNSPEC section the relative permeability of the miscible hydrocarbon phase with respect to water.</text:p>
+       <text:p text:style-name="P35">For two phase runs the oil relative permeability should be entered and for when the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section the relative permeability of the miscible hydrocarbon phase with respect to water.</text:p>
        <text:p text:style-name="P31">The last value in the column should be zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4496,10 +4496,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P76">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P76">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P77">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P77">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P78">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4515,7 +4515,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P39">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.165</text:sequence>: SOF2 Keyword Description</text:p>
     <text:p text:style-name="P38"/>
-    <text:p text:style-name="P41">Note this keyword should only be used for when the SOLVENT keyword in the RUNSPEC section has been activated. It should not be use for two-phase oil-water runs.</text:p>
+    <text:p text:style-name="P41">Note this keyword should only be used for when the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section has been activated. It should not be use for two-phase oil-water runs.</text:p>
     <text:h text:style-name="P46" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838830113"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838830113"/></text:h>
     <text:p text:style-name="P43">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P43">-- <text:s text:c="6"/>OIL RELATIVE PERMEABILITY TABLES (SOF2) <text:s text:c="44"/></text:p>
@@ -4562,7 +4562,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P43"><text:s text:c="12"/>0.80 <text:s text:c="5"/>0.784664 </text:p>
     <text:p text:style-name="P43"><text:s text:c="12"/>0.85 <text:s text:c="5"/>1.000000 <text:s text:c="28"/>/ TABLE NO. 02</text:p>
     <text:p text:style-name="P37"/>
-    <text:p text:style-name="P42">The example defines two SOF2 tables for when oil and gas or oil and water are present in the input deck. </text:p>
+    <text:p text:style-name="P42">The example defines two <text:a xlink:href="#__RefHeading___Toc106876_335817223">SOF2</text:a> tables for when oil and gas or oil and water are present in the input deck. </text:p>
     <text:p text:style-name="P44"/>
    </text:section>
   </office:text>

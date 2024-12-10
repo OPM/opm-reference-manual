@@ -4352,7 +4352,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18376" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14507_370116838821"/>Description<text:bookmark-end text:name="__RefHeading___Toc14507_370116838821"/></text:h>
-    <text:p text:style-name="P12291">AQUCON keyword defines how numerical aquifers are connected to the simulation grid and these type of <text:s/>aquifers are characterized by the AQUNUM keyword in the GRID section. Analytical aquifers are connected to the simulation grid by the AQUANCON keyword in the GRID section, this includes the Carter-Tracy and Fetkovich analytical aquifers, both of which are implemented in OPM Flow. Both aquifer types dimensions are declared by the AQUDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P12291"><text:a xlink:href="#__RefHeading___Toc115431_8469479601">AQUCON</text:a> keyword defines how numerical aquifers are connected to the simulation grid and these type of <text:s/>aquifers are characterized by the <text:a xlink:href="#__RefHeading___Toc4430_421927891">AQUNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. Analytical aquifers are connected to the simulation grid by the <text:a xlink:href="#__RefHeading___Toc360136_1539708736">AQUANCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section, this includes the Carter-Tracy and Fetkovich analytical aquifers, both of which are implemented in OPM Flow. Both aquifer types dimensions are declared by the <text:a xlink:href="#__RefHeading___Toc10103_3701168388">AQUDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table1937" table:style-name="Table1937">
      <table:table-column table:style-name="Table1937.A"/>
      <table:table-column table:style-name="Table1937.B"/>
@@ -4399,7 +4399,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1961">AQUID</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1937.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2061">AQUID is a positive integer greater than or equal to one and less than or equal to the maximum number of numerical aquifers as defined by the MXNAQN variable on the AQUDIMS keyword in the RUNSPEC section, that defines the aquifer to be connected to the grid.</text:p>
+       <text:p text:style-name="P2061">AQUID is a positive integer greater than or equal to one and less than or equal to the maximum number of numerical aquifers as defined by the MXNAQN variable on the <text:a xlink:href="#__RefHeading___Toc10103_3701168388">AQUDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the aquifer to be connected to the grid.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4572,7 +4572,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2071">AQUOPT1 is a defined integer value set to either zero or one, that defines the area to be used in calculating the connection transmissibility between the aquifer and the grid cells:</text:p>
        <text:list xml:id="list105911314915959" text:continue-list="list105910425429718" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19358">A value of zero means the cross-sectional defined on the AQUNUM keyword will be used, whereas,</text:p>
+         <text:p text:style-name="P19358">A value of zero means the cross-sectional defined on the <text:a xlink:href="#__RefHeading___Toc4430_421927891">AQUNUM</text:a> keyword will be used, whereas,</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19361"><text:span text:style-name="T1">A value of one means the </text:span><text:span text:style-name="T2299">cross-sectional </text:span><text:span text:style-name="T1">defined by the </text:span>grid <text:span text:style-name="T1">cell </text:span>connections<text:span text:style-name="T1"> defined by this record will be used.</text:span></text:p>
@@ -4660,7 +4660,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1774">Notes:</text:p>
        <text:list xml:id="list105911268203942" text:continue-list="list2614167807" text:style-name="L48">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19099">Where NX, NY and NZ are the dimensions of the model as defined on the DIMENS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19099">Where NX, NY and NZ are the dimensions of the model as defined on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18961">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
@@ -4683,7 +4683,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table1938.1">
        <table:table-cell table:style-name="Table1938.A1" office:value-type="string">
         <text:p text:style-name="P10242">Note</text:p>
-        <text:p text:style-name="P10247">If the AQUCON keyword has been utilized in the run deck then OPM Flow will write the AQUIFERN array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
+        <text:p text:style-name="P10247">If the <text:a xlink:href="#__RefHeading___Toc115431_8469479601">AQUCON</text:a> keyword has been utilized in the run deck then OPM Flow will write the AQUIFERN array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
         <text:p text:style-name="P10247">This is accomplished by setting the AQUIFERN value to 2(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple numerical aquifers then AQUIFERN is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
         <text:p text:style-name="P10245">Finally, for cells representing the numerical aquifers themselves, <text:s/>AQUIFERN is set to minus AQUID.</text:p>
        </table:table-cell>
@@ -4709,7 +4709,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15967"><text:s text:c="9"/>1 <text:s text:c="4"/>61 <text:s/>61 <text:s text:c="2"/>48 <text:s/>72 <text:s text:c="2"/>12 <text:s/>17 <text:s text:c="3"/>&apos;I+&apos; <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>&apos;NO&apos; <text:s text:c="7"/>/</text:p>
     <text:p text:style-name="P15967">/</text:p>
     <text:p text:style-name="P15967"><text:s text:c="5"/></text:p>
-    <text:p text:style-name="P11409">See the AQUNUM keyword in the GRID section for a complete example on defining and connecting a numerical aquifer to a simulation grid.</text:p>
+    <text:p text:style-name="P11409">See the <text:a xlink:href="#__RefHeading___Toc4430_421927891">AQUNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section for a complete example on defining and connecting a numerical aquifer to a simulation grid.</text:p>
     <text:p text:style-name="P11621"/>
     
    </text:section>

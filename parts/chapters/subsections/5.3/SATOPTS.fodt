@@ -4494,22 +4494,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838821"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838821"/></text:h>
-    <text:p text:style-name="_40_TextBody">SATOPTS keyword activates OPM Flow’s relative permeability assignment options. The relative permeability functions are defined using the either the:</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword activates OPM Flow’s relative permeability assignment options. The relative permeability functions are defined using the either the:</text:p>
     <text:list xml:id="list105909479698519" text:continue-list="list1607295457" text:style-name="L27">
      <text:list-item text:start-value="1">
-      <text:p text:style-name="P17290">SWOF, SGOF, SLGOF series of saturation functions, or the </text:p>
+      <text:p text:style-name="P17290"><text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> series of saturation functions, or the </text:p>
      </text:list-item>
      <text:list-item>
-      <text:p text:style-name="P17290">SWFN, SGFN, SGWFN, SOF2, SOF3, SOF32D series of functions.</text:p>
+      <text:p text:style-name="P17290"><text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106872_335817223">SGWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106876_335817223">SOF2</text:a>, <text:a xlink:href="#__RefHeading___Toc106878_335817223">SOF3</text:a>, <text:a xlink:href="#__RefHeading___Toc765497_4250154414">SOF32D</text:a> series of functions.</text:p>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">The allocation of the relative permeability tables to the grid cells is dependent on the options selected on this keyword (SATOPTS). </text:p>
-    <text:p text:style-name="_40_TextBody">If the DIRECT option as been activated and the IRREVERS has not been invoked on the SATOPTS keyword, then different relative permeability functions are used for each x, y, and z directions. Here the KRNUMX, <text:s/>KRNUMY and KRNUMZ keywords are used for Cartesian grids to allocate the relative permeability tables to the cells. For Radial grids the KRNUMR, KRNUMT and KRNUMZ keywords should be used. <text:s/>This results in the same relative permeability curves being used in both the xi to xi – 1 and the xi to xi + 1 flow directions. Similarly for the y direction the same curves are used for the yi to yi – 1 and the yi to yi + 1 flow directions. And again for the z direction, the same relative permeability function is used for flow in the zi to zi – 1 and the zi to zi + 1 flow directions.</text:p>
-    <text:p text:style-name="_40_TextBody">If the DIRECT option as been activated and the IRREVERS has been invoked on the SATOPTS keyword, then KRNUMX, <text:s/>KRNUMY and KRNUMZ keywords are used for Cartesian grids to allocate the relative permeability tables in the xi to xi + 1, <text:s/>yi to yi + 1, <text:s/>zi to zi + 1, flow directions, respectively. For Radial grids the KRNUMR, KRNUMT and KRNUMZ keywords should be used. <text:s/>For flow in the xi to xi – 1 flow directions, etc., the KRNUMX-, <text:s/>KRNUMY- and KRNUMZ- keywords are used for Cartesian grids and the KRNUMR-, KRNUMT- and KRNUMZ- are used for radial grids.</text:p>
-    <text:p text:style-name="P11390">T<text:span text:style-name="T1533">he HYSTER option activates the relative permeability hysteresis option of the non-wetting phases (liquid and vapour) </text:span>may show hysteretic behavior in that their values depend on whether the non-wetting phase saturation is increasing or decreasing. For this option the user specifies two sets of saturation functions, one for a drainage process (decreasing wetting phase saturation) and one for an imbibition process (increasing wetting phase saturation). The SATNUM and IMBNUM keywords should then be used to identify which saturation table applies to drainage and imbibition. For a process starting at the maximum wetting phase saturation, on the drainage curve, with the wetting phase saturation decreasing, the drainage curve is followed. Similarly for a process starting at the minimum wetting phase saturation with the wetting phase saturation increasing, the imbibition curve is followed. If the drainage or imbibition process is reversed at some point, then the data does not necessarily run back over its previous values.<text:span text:style-name="T4328"> In </text:span>OPM Flow the <text:span text:style-name="T4328">Carlson</text:span><text:span text:style-name="T4328"><text:note text:id="ftn99" text:note-class="footnote"><text:note-citation>99</text:note-citation><text:note-body>
+    <text:p text:style-name="_40_TextBody">The allocation of the relative permeability tables to the grid cells is dependent on the options selected on this keyword (<text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a>). </text:p>
+    <text:p text:style-name="_40_TextBody">If the DIRECT option as been activated and the IRREVERS has not been invoked on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword, then different relative permeability functions are used for each x, y, and z directions. Here the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords are used for Cartesian grids to allocate the relative permeability tables to the cells. For Radial grids the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords should be used. <text:s/>This results in the same relative permeability curves being used in both the xi to xi – 1 and the xi to xi + 1 flow directions. Similarly for the y direction the same curves are used for the yi to yi – 1 and the yi to yi + 1 flow directions. And again for the z direction, the same relative permeability function is used for flow in the zi to zi – 1 and the zi to zi + 1 flow directions.</text:p>
+    <text:p text:style-name="_40_TextBody">If the DIRECT option as been activated and the IRREVERS has been invoked on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword, then <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords are used for Cartesian grids to allocate the relative permeability tables in the xi to xi + 1, <text:s/>yi to yi + 1, <text:s/>zi to zi + 1, flow directions, respectively. For Radial grids the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords should be used. <text:s/>For flow in the xi to xi – 1 flow directions, etc., the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> keywords are used for Cartesian grids and the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR-</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT-</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> are used for radial grids.</text:p>
+    <text:p text:style-name="P11390">T<text:span text:style-name="T1533">he HYSTER option activates the relative permeability hysteresis option of the non-wetting phases (liquid and vapour) </text:span>may show hysteretic behavior in that their values depend on whether the non-wetting phase saturation is increasing or decreasing. For this option the user specifies two sets of saturation functions, one for a drainage process (decreasing wetting phase saturation) and one for an imbibition process (increasing wetting phase saturation). The <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUM</text:a> keywords should then be used to identify which saturation table applies to drainage and imbibition. For a process starting at the maximum wetting phase saturation, on the drainage curve, with the wetting phase saturation decreasing, the drainage curve is followed. Similarly for a process starting at the minimum wetting phase saturation with the wetting phase saturation increasing, the imbibition curve is followed. If the drainage or imbibition process is reversed at some point, then the data does not necessarily run back over its previous values.<text:span text:style-name="T4328"> In </text:span>OPM Flow the <text:span text:style-name="T4328">Carlson</text:span><text:span text:style-name="T4328"><text:note text:id="ftn99" text:note-class="footnote"><text:note-citation>99</text:note-citation><text:note-body>
         <text:p text:style-name="P16654">Carlson, F. M. (1981) SPE 10157, presented at the 56th Annual SPE Fall Meeting, San Antonio, 1981</text:p></text:note-body></text:note></text:span><text:span text:style-name="T4328"> </text:span>model is <text:span text:style-name="T4328">used to describe relative permeability hysteresis and the Killough</text:span><text:note text:id="ftn100" text:note-class="footnote"><text:note-citation>100</text:note-citation><text:note-body>
-        <text:p text:style-name="P16640">Killough, J. E. “Reservoir Simulation with History-dependent Saturation Functions,” paper SPE 5106, Society of Petroleum Engineers Journal (1976) 16, No. 1, 37-48.</text:p></text:note-body></text:note><text:span text:style-name="T4328"> model is used for capillary pressure.</text:span> See also the EHYSTR keyword used to define the hysteresis model that is applied.</text:p>
-    <text:p text:style-name="P11391">If the DIRECT option as been activated and the IRREVERS has not been invoked on the SATOPTS keyword, then the same set are keywords as for the DIRECT only option are used to assign the drainage relative permeability curves, that is: KRNUMX, <text:s/>KRNUMY, etc., plus the IMBNUMX, IMBNUMY, and <text:s/>IMBNUMZ, keywords for the imbibition curves. If the DIRECT option as been activated and the IRREVERS has been <text:soft-page-break/>invoked on the SATOPTS keyword, then the same set are keywords as for the DIRECT and IRREVERS option are used to assign the drainage relative permeability curves, that is: KRNUMX, <text:s/>KRNUMX-, etc., plus the IMBNUMX, IMBNUMY, MBNUMZ, <text:s/>IMBNUMX-, IMBNUMY-, IMBNUMZ- keywords for the imbibition curves. See <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable55">Table 5.40</text:sequence-ref><text:s/>for the various relative permeability table allocation keywords for the various combination of DIRECT, IRREVERS and HYSTER command options.</text:p>
+        <text:p text:style-name="P16640">Killough, J. E. “Reservoir Simulation with History-dependent Saturation Functions,” paper SPE 5106, Society of Petroleum Engineers Journal (1976) 16, No. 1, 37-48.</text:p></text:note-body></text:note><text:span text:style-name="T4328"> model is used for capillary pressure.</text:span> See also the <text:a xlink:href="#__RefHeading___Toc67396_621662414">EHYSTR</text:a> keyword used to define the hysteresis model that is applied.</text:p>
+    <text:p text:style-name="P11391">If the DIRECT option as been activated and the IRREVERS has not been invoked on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword, then the same set are keywords as for the DIRECT only option are used to assign the drainage relative permeability curves, that is: <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a>, etc., plus the <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a>, and <text:s/><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a>, keywords for the imbibition curves. If the DIRECT option as been activated and the IRREVERS has been <text:soft-page-break/>invoked on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword, then the same set are keywords as for the DIRECT and IRREVERS option are used to assign the drainage relative permeability curves, that is: <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, etc., plus the <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a>, MBNUMZ, <text:s/><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX-</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY-</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ-</text:a> keywords for the imbibition curves. See <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable55">Table 5.40</text:sequence-ref><text:s/>for the various relative permeability table allocation keywords for the various combination of DIRECT, IRREVERS and HYSTER command options.</text:p>
     <text:p text:style-name="P11196">The keyword should be followed by one or more of the following keyword options.</text:p>
     <table:table table:name="Table200" table:style-name="Table200">
      <table:table-column table:style-name="Table200.A"/>
@@ -4541,7 +4541,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table200.C4" office:value-type="string">
        <text:p text:style-name="P3407">A character string that activates the directional relative permeability assignment option. </text:p>
-       <text:p text:style-name="P3408">If the DIRECT command is stated then directional relative permeability assignment is activated and different relative permeability function are assigned to the x, y and z directions. In this case the KRNUMX, KRNUMY and KRNUMZ keywords are used for Cartesian grids to allocate the relative permeability tables. For Radial grids the KRNUMR, KRNUMT and KRNUMZ keywords should be used. </text:p>
+       <text:p text:style-name="P3408">If the DIRECT command is stated then directional relative permeability assignment is activated and different relative permeability function are assigned to the x, y and z directions. In this case the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords are used for Cartesian grids to allocate the relative permeability tables. For Radial grids the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords should be used. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table200.D4" office:value-type="string">
        <text:p text:style-name="P3533">None</text:p>
@@ -4557,7 +4557,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table200.C4" office:value-type="string">
        <text:p text:style-name="P3408">A character string the activates reversible directional relative permeability assignment option. </text:p>
        <text:p text:style-name="P3190">If IRREVERS is stated then the relative permeability assignment is set to non-reversible and results in different sets of relative permeability tables being applied for flow from the xI to xI + 1 direction and the xI to the xI – 1 direction, for all directions (x, y, z). </text:p>
-       <text:p text:style-name="P3190">in this case the KRNUMX, <text:s/>KRNUMY and KRNUMZ keywords are used for Cartesian grids to allocate the relative permeability tables in the xi to xi + 1 flow directions etc. For Radial grids the KRNUMR, KRNUMT and KRNUMZ keywords should be used. <text:s/>For flow in the xi to xi – 1 flow directions, etc., the KRNUMX-, <text:s/>KRNUMY- and KRNUMZ- keywords are used for Cartesian grids and the KRNUMR-, KRNUMT- and KRNUMZ- are used for radial grids. </text:p>
+       <text:p text:style-name="P3190">in this case the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords are used for Cartesian grids to allocate the relative permeability tables in the xi to xi + 1 flow directions etc. For Radial grids the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords should be used. <text:s/>For flow in the xi to xi – 1 flow directions, etc., the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> keywords are used for Cartesian grids and the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR-</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT-</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> are used for radial grids. </text:p>
        <text:p text:style-name="P5783">Only the default option is supported by OPM Flow, that is non-reversible <text:s/>permeability tables are not supported.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table200.D4" office:value-type="string">
@@ -4574,8 +4574,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table200.C4" office:value-type="string">
        <text:p text:style-name="P3535">A character string that activates the hysteresis option.</text:p>
-       <text:p text:style-name="P10148">If the HYSTER and DIRECT options have activated and the IRREVERS has not been invoked on the SATOPTS keyword, then different relative permeability functions are used for each x, y, and z directions and for the drainage and imbibition processes. Here the drainage relative permeability curves are allocated via the KRNUMX, <text:s/>KRNUMX and KRNUMZ keywords for Cartesian grids and the KRNUMR, KRNUMT and KRNUMZ keywords for radial grids. The imbibition relative permeability curves are allocated via the IMBNUMX, <text:s/>IMBNUMY and IMBNUMZ keywords for Cartesian grids and the IMBNUMR, IMBNUMT and IMBNUMZ keywords for radial grids.</text:p>
-       <text:p text:style-name="P10150">If the HYSTER, DIRECT and IRREVERS options have activated, then different relative permeability functions are used for each x, y, and z directions, flow direction and for the drainage and imbibition processes. Then in addition to aforementioned relative permeability curves allocation keywords for the xi to xi + 1 flow direction etc., the xi to xi – 1 flow directions keywords, KRNUMX-, <text:s/>KRNUMY- and KRNUMZ- are used for Cartesian grids and the KRNUMR-, KRNUMT- and KRNUMZ- are used for radial grids. <text:s/>The imbibition relative permeability curves are allocated via the IMBNUMX-, <text:s/>IMBNUMY- and IMBNUMZ keywords for Cartesian grids and the IMBNUMR, IMBNUMT and IMBNUMZ keywords for radial grids.</text:p>
+       <text:p text:style-name="P10148">If the HYSTER and DIRECT options have activated and the IRREVERS has not been invoked on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword, then different relative permeability functions are used for each x, y, and z directions and for the drainage and imbibition processes. Here the drainage relative permeability curves are allocated via the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords for Cartesian grids and the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> keywords for radial grids. The imbibition relative permeability curves are allocated via the <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a> and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> keywords for Cartesian grids and the IMBNUMR, IMBNUMT and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> keywords for radial grids.</text:p>
+       <text:p text:style-name="P10150">If the HYSTER, DIRECT and IRREVERS options have activated, then different relative permeability functions are used for each x, y, and z directions, flow direction and for the drainage and imbibition processes. Then in addition to aforementioned relative permeability curves allocation keywords for the xi to xi + 1 flow direction etc., the xi to xi – 1 flow directions keywords, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> are used for Cartesian grids and the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR-</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT-</text:a> and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> are used for radial grids. <text:s/>The imbibition relative permeability curves are allocated via the <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX-</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY-</text:a> and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> keywords for Cartesian grids and the IMBNUMR, IMBNUMT and <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> keywords for radial grids.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table200.D4" office:value-type="string">
        <text:p text:style-name="P3537">None</text:p>
@@ -4615,7 +4615,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14679">Table <text:sequence text:ref-name="refTable54" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.39</text:sequence>: SATOPTS Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11392">For clarity the following table outlines the keywords that should be used in allocating the relative permeability tables for the various SATOPTS options.</text:p>
+    <text:p text:style-name="P11392">For clarity the following table outlines the keywords that should be used in allocating the relative permeability tables for the various <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> options.</text:p>
     <table:table table:name="Table201" table:style-name="Table201">
      <table:table-column table:style-name="Table201.A"/>
      <table:table-column table:style-name="Table201.B"/>
@@ -4639,15 +4639,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3409">DIRECT Flow in all directions</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1903">KRNUMX</text:p>
-       <text:p text:style-name="P1903">KRNUMY</text:p>
-       <text:p text:style-name="P1903">KRNUMZ</text:p>
+       <text:p text:style-name="P1903"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a></text:p>
+       <text:p text:style-name="P1903"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a></text:p>
+       <text:p text:style-name="P1903"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table201.D2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1905">KRNUMR </text:p>
-       <text:p text:style-name="P1905">KRNUMT</text:p>
-       <text:p text:style-name="P1905">KRNUMZ </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a> </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4662,24 +4662,24 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" table:number-columns-spanned="2" office:value-type="string">
        <text:p text:style-name="P1903"/>
-       <text:p text:style-name="P1903">KRNUMX, </text:p>
-       <text:p text:style-name="P1903">KRNUMY</text:p>
-       <text:p text:style-name="P1903"><text:soft-page-break/>KRNUMZ</text:p>
+       <text:p text:style-name="P1903"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, </text:p>
+       <text:p text:style-name="P1903"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a></text:p>
+       <text:p text:style-name="P1903"><text:soft-page-break/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a></text:p>
        <text:p text:style-name="P1903"/>
-       <text:p text:style-name="P1904">KRNUMX-</text:p>
-       <text:p text:style-name="P1904">KRNUMY- <text:s/></text:p>
-       <text:p text:style-name="P1904">KRNUMZ-</text:p>
+       <text:p text:style-name="P1904"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a></text:p>
+       <text:p text:style-name="P1904"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a> <text:s/></text:p>
+       <text:p text:style-name="P1904"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table201.D2" table:number-columns-spanned="2" office:value-type="string">
        <text:p text:style-name="P1905"/>
-       <text:p text:style-name="P1905">KRNUMR </text:p>
-       <text:p text:style-name="P1905">KRNUMT</text:p>
-       <text:p text:style-name="P1905"><text:soft-page-break/>KRNUMZ </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a> </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a></text:p>
+       <text:p text:style-name="P1905"><text:soft-page-break/><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> </text:p>
        <text:p text:style-name="P1905"/>
-       <text:p text:style-name="P1910">KRNUMR- </text:p>
-       <text:p text:style-name="P1910">KRNUMT- <text:s/></text:p>
-       <text:p text:style-name="P1910">KRNUMZ- </text:p>
+       <text:p text:style-name="P1910"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR-</text:a> </text:p>
+       <text:p text:style-name="P1910"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT-</text:a> <text:s/></text:p>
+       <text:p text:style-name="P1910"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4692,27 +4692,27 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" office:value-type="string">
        <text:p text:style-name="P1848">Drainage</text:p>
-       <text:p text:style-name="P1905">KRNUMX</text:p>
-       <text:p text:style-name="P1905">KRNUMY</text:p>
-       <text:p text:style-name="P1905">KRNUMZ</text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" office:value-type="string">
        <text:p text:style-name="P1848">Imbibition</text:p>
-       <text:p text:style-name="P1905">IMBNUMX</text:p>
-       <text:p text:style-name="P1905">IMBNUMY</text:p>
-       <text:p text:style-name="P1905">IMBNUMZ</text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" office:value-type="string">
        <text:p text:style-name="P1848">Drainage</text:p>
-       <text:p text:style-name="P1905">KRNUMR </text:p>
-       <text:p text:style-name="P1905">KRNUMT</text:p>
-       <text:p text:style-name="P1905">KRNUMZ</text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a> </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.D2" office:value-type="string">
        <text:p text:style-name="P1848">Imbibition</text:p>
        <text:p text:style-name="P1905">IMBNUMR </text:p>
        <text:p text:style-name="P1905">IMBNUMT</text:p>
-       <text:p text:style-name="P1905">IMBNUMZ </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> </text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708664990128">
@@ -4726,43 +4726,43 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" office:value-type="string">
        <text:p text:style-name="P1848">Drainage</text:p>
-       <text:p text:style-name="P1905">KRNUMX</text:p>
-       <text:p text:style-name="P1905">KRNUMY</text:p>
-       <text:p text:style-name="P1905">KRNUMZ</text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a></text:p>
        <text:p text:style-name="P1905"/>
-       <text:p text:style-name="P1906">KRNUMX-, </text:p>
-       <text:p text:style-name="P1906">KRNUMY- <text:s/></text:p>
-       <text:p text:style-name="P1906">KRNUMZ-</text:p>
+       <text:p text:style-name="P1906"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, </text:p>
+       <text:p text:style-name="P1906"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a> <text:s/></text:p>
+       <text:p text:style-name="P1906"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" office:value-type="string">
        <text:p text:style-name="P1848">Imbibition</text:p>
-       <text:p text:style-name="P1905">IMBNUMX</text:p>
-       <text:p text:style-name="P1905">IMBNUMY</text:p>
-       <text:p text:style-name="P1905">IMBNUMZ</text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a></text:p>
        <text:p text:style-name="P1905"/>
-       <text:p text:style-name="P1907">IMBNUMX-</text:p>
-       <text:p text:style-name="P1907">IMBNUMY- <text:s/></text:p>
-       <text:p text:style-name="P1341">IMBNUMZ-</text:p>
+       <text:p text:style-name="P1907"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX-</text:a></text:p>
+       <text:p text:style-name="P1907"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY-</text:a> <text:s/></text:p>
+       <text:p text:style-name="P1341"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ-</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.A2" office:value-type="string">
        <text:p text:style-name="P1848">Drainage</text:p>
-       <text:p text:style-name="P1905">KRNUMR </text:p>
-       <text:p text:style-name="P1905">KRNUMT</text:p>
-       <text:p text:style-name="P1905">KRNUMZ </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR</text:a> </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT</text:a></text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a> </text:p>
        <text:p text:style-name="P1905"/>
-       <text:p text:style-name="P1908">KRNUMR- </text:p>
-       <text:p text:style-name="P1908">KRNUMT- <text:s/></text:p>
-       <text:p text:style-name="P1908">KRNUMZ- </text:p>
+       <text:p text:style-name="P1908"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMR-</text:a> </text:p>
+       <text:p text:style-name="P1908"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMT-</text:a> <text:s/></text:p>
+       <text:p text:style-name="P1908"><text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table201.D2" office:value-type="string">
        <text:p text:style-name="P1848">Imbibition</text:p>
        <text:p text:style-name="P1905">IMBNUMR </text:p>
        <text:p text:style-name="P1905">IMBNUMT</text:p>
-       <text:p text:style-name="P1905">IMBNUMZ </text:p>
+       <text:p text:style-name="P1905"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a> </text:p>
        <text:p text:style-name="P1905"/>
        <text:p text:style-name="P1909">IMBNUMR- </text:p>
        <text:p text:style-name="P1909">IMBNUMT- <text:s/></text:p>
-       <text:p text:style-name="P1852"><text:span text:style-name="T2710">IMBNUMZ</text:span>-</text:p>
+       <text:p text:style-name="P1852"><text:span text:style-name="T2710"><text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a></text:span>-</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708664991392">
@@ -4783,17 +4783,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560"><text:reference-mark-start text:name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3"/>Table <text:sequence text:ref-name="refTable55" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.40</text:sequence><text:reference-mark-end text:name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3"/>: SATOPTS Relative Permeability Function Allocation Keywords</text:p>
+    <text:p text:style-name="P14560"><text:reference-mark-start text:name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3"/>Table <text:sequence text:ref-name="refTable55" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.40</text:sequence><text:reference-mark-end text:name="REF_TABLE_SATOPS_RELATIVE___KEYWORDS_5_3"/>: <text:span text:style-name="NOT_KEYWORD">SATOPTS</text:span> Relative Permeability Function Allocation Keywords</text:p>
     <text:p text:style-name="P10921"/>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838821"/>Examples<text:bookmark-end text:name="__RefHeading___Toc32169_370116838821"/></text:h>
-    <text:p text:style-name="P11393">The first example actives the directional relative permeability assignment option only and hence the following keywords are used to allocate the relative permeability arrays for Cartesian grids: KRNUMX, KRNUMY, and KRNUMZ.</text:p>
+    <text:p text:style-name="P11393">The first example actives the directional relative permeability assignment option only and hence the following keywords are used to allocate the relative permeability arrays for Cartesian grids: <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a>, and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a>.</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P13708">-- <text:s text:c="6"/>ACTIVATE RELATIVE PERMEABILITY ASSIGNMENT HYSTERESIS OPTIONS <text:s text:c="42"/></text:p>
     <text:p text:style-name="P13708">-- <text:s text:c="6"/>DIRECTTIONAL(DIRECT) IRREVERSIBLE(IRREVERS) HYSTERESIS(HYSTER) <text:s text:c="34"/></text:p>
     <text:p text:style-name="P13708">SATOPTS <text:s text:c="71"/></text:p>
     <text:p text:style-name="P13708"><text:s text:c="9"/>&apos;DIRECT&apos; <text:s text:c="61"/>/</text:p>
     <text:p text:style-name="P13708"/>
-    <text:p text:style-name="P11305">The next example actives the directional irreversible relative permeability assignment options, and hence the following keywords are used to allocate the relative permeability arrays for Cartesian grids: KRNUMX, KRNUMY, KRNUMZ, KRNUMX-, KRNUMY- <text:s text:c="2"/>and KRNUMZ-.</text:p>
+    <text:p text:style-name="P11305">The next example actives the directional irreversible relative permeability assignment options, and hence the following keywords are used to allocate the relative permeability arrays for Cartesian grids: <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a> <text:s text:c="2"/>and <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a>.</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>ACTIVATE RELATIVE PERMEABILITY ASSIGNMENT HYSTERESIS OPTIONS <text:s text:c="42"/></text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>DIRECTTIONAL(DIRECT) IRREVERSIBLE(IRREVERS) HYSTERESIS(HYSTER) <text:s text:c="34"/></text:p>
@@ -4807,14 +4807,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13709">SATOPTS <text:s text:c="71"/></text:p>
     <text:p text:style-name="P12904"><text:s text:c="9"/>&apos;DIRECT&apos; <text:s text:c="2"/>&apos;IRREVERS&apos; <text:s text:c="2"/>&apos;HYSTER&apos; <text:s text:c="37"/>/ <text:s text:c="79"/></text:p>
     <text:p text:style-name="P11394"/>
-    <text:p text:style-name="P11589">In this case the drainage relative permeability curves are allocated by the KRNUMX, KRNUMY, KRNUMZ, KRNUMX-, KRNUMY-, KRNUMZ- keywords, and the imbibition relative permeability curves are allocated <text:s/>by the IMBNUMX, IMBNUMY, IMBNUMZ, IMBNUMX-, IMBNUMY-, IMBNUMZ- keywords.</text:p>
+    <text:p text:style-name="P11589">In this case the drainage relative permeability curves are allocated by the <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMX-</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMY-</text:a>, <text:a xlink:href="#__RefHeading___Toc273792_2369005893">KRNUMZ-</text:a> keywords, and the imbibition relative permeability curves are allocated <text:s/>by the <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMX-</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMY-</text:a>, <text:a xlink:href="#__RefHeading___Toc129665_83452205">IMBNUMZ-</text:a> keywords.</text:p>
     <table:table table:name="Table202" table:style-name="Table202">
      <table:table-column table:style-name="Table202.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708664902128">
        <table:table-cell table:style-name="Table202.A1" office:value-type="string">
         <text:p text:style-name="P10267">Note</text:p>
-        <text:p text:style-name="P10257">This keyword activates how relative permeability curves are assigned in the model. The ENDSCALE keyword allows the end-point scaling also to vary with direction, flow direction and hysteresis process, resulting in a great deal of flexibility.</text:p>
+        <text:p text:style-name="P10257">This keyword activates how relative permeability curves are assigned in the model. The <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword allows the end-point scaling also to vary with direction, flow direction and hysteresis process, resulting in a great deal of flexibility.</text:p>
         <text:p text:style-name="P10286">Whether or not all these features should be used though is another question.</text:p>
        </table:table-cell>
       </table:table-row>

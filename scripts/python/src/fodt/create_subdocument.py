@@ -6,7 +6,7 @@ from pathlib import Path
 from fodt.automatic_styles_filter import AutomaticStylesFilter2, AutomaticStylesFilter3
 from fodt.constants import Directories, FileExtensions, FileNames, MetaSections
 from fodt.exceptions import InputException
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.xml_helpers import XMLHelper
 from fodt.styles_filter import StylesFilter
 
@@ -36,7 +36,7 @@ class CreateSubDocument():
             logging.info(f"Created FODT subdocument {outputfile}")
 
     def create_subsection_template(self, part: str, part_extra: str|None) -> str:
-        template = Helpers.read_keyword_template()
+        template = helpers.read_keyword_template()
         part_bookmark = f"{part}_{part_extra}" if part_extra is not None else part
         template = re.sub(r"###KEYWORD_NAME_BOOKMARK###", part_bookmark, template)
         template = re.sub(r"###KEYWORD_NAME###", part, template)
@@ -165,8 +165,8 @@ class CreateSubDocument2(CreateSubDocument):
         self.outputdir = self.documentdir / Directories.subsections
         self.is_chapter = False
         parts = self.get_parts()
-        keyw_list = Helpers.read_keyword_order(self.documentdir, chapter, section)
-        self.keywords = Helpers.keywords_inverse_map(keyw_list)
+        keyw_list = helpers.read_keyword_order(self.documentdir, chapter, section)
+        self.keywords = helpers.keywords_inverse_map(keyw_list)
         self.add_keyword = False
         self.create_documents(parts)
 
@@ -202,7 +202,7 @@ class CreateSubDocument3(CreateSubDocument):
         self.is_chapter = False
         parts = [self.keyword]
         parts_extra = [f"{self.chapter}_{self.section}"]
-        keyw_list = Helpers.read_keyword_order_v2(self.keyword_dir, chapter, section)
-        self.keywords = Helpers.keywords_inverse_map(keyw_list)
+        keyw_list = helpers.read_keyword_order_v2(self.keyword_dir, chapter, section)
+        self.keywords = helpers.keywords_inverse_map(keyw_list)
         self.add_keyword = True
         self.create_documents(parts, parts_extra)

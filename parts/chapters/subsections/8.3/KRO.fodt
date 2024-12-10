@@ -4308,7 +4308,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716031_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716031_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">KRO defines the scaling parameter for the drainage oil relative permeability value at the connate water saturation (SWL), for all the cells in the model via an array. <text:s/>The ENDSCALE keyword in the RUNSPEC section should be activated to enable end-point scaling and the use of this keyword. The SCALCERS keyword in the PROPS section defines the options used in the re-scaling process, the options are two point scaling and three point scaling.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> defines the scaling parameter for the drainage oil relative permeability value at the connate water saturation (<text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>), for all the cells in the model via an array. <text:s/>The <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to enable end-point scaling and the use of this keyword. The SCALCERS keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section defines the options used in the re-scaling process, the options are two point scaling and three point scaling.</text:p>
     <table:table table:name="Table457" table:style-name="Table457">
      <table:table-column table:style-name="Table457.A"/>
      <table:table-column table:style-name="Table457.B"/>
@@ -4350,10 +4350,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2998">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table457.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4579">KRO</text:p>
+       <text:p text:style-name="P4579"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table457.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3678">KRO is an array of positive real numbers which are greater than zero and less than or equal to 1.0, that are the assigned scaling KRO values for each cell in the model. </text:p>
+       <text:p text:style-name="P3678"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> is an array of positive real numbers which are greater than zero and less than or equal to 1.0, that are the assigned scaling <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> values for each cell in the model. </text:p>
        <text:p text:style-name="P4043">Repeat counts may be used, for example 50*0.500.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4381,13 +4381,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1510">Notes:</text:p>
        <text:list xml:id="list105914610668343" text:continue-list="list105914426795456" text:style-name="L87">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19062">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19062">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19062">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19060">Note this the directional independent version of the keyword used with the end-point scaling option. If directional end-point scaling has been activated then the KROX±, KROY± and KROZ± series of the keywords should be used. </text:p>
+         <text:p text:style-name="P19060">Note this the directional independent version of the keyword used with the end-point scaling option. If directional end-point scaling has been activated then the <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROX</text:a>±, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROY</text:a>± and <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROZ</text:a>± series of the keywords should be used. </text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4400,7 +4400,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14687">Table <text:sequence text:ref-name="refTable293" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.77</text:sequence>: KRO Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">For the two point scaling option and for the KRORW or KRORG oil relative permeability arrays NOT being present in the input deck the kro value for a grid block is scaled by:</text:p>
+    <text:p text:style-name="_40_TextBody">For the two point scaling option and for the <text:a xlink:href="#__RefHeading___Toc70191_335817223">KRORW</text:a> or <text:a xlink:href="#__RefHeading___Toc70189_335817223">KRORG</text:a> oil relative permeability arrays NOT being present in the input deck the kro value for a grid block is scaled by:</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <table:table table:name="Table458" table:style-name="Table458">
      <table:table-column table:style-name="Table458.A"/>
@@ -4555,7 +4555,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AA==
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:tab/>=<text:tab/>the scaling oil relative permeability value from the KRO array for a given</text:p>
+     </draw:frame><text:tab/>=<text:tab/>the scaling oil relative permeability value from the <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> array for a given</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>cell.</text:p>
     <text:p text:style-name="_40_EquationWhereList"><draw:frame draw:style-name="fr66" draw:name="Object31" text:anchor-type="as-char" svg:width="0.961cm" svg:height="0.474cm" draw:z-index="1032"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -4638,9 +4638,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </draw:frame><text:tab/>=<text:tab/>the maximum oil relative permeability from a grid block’s oil relative table,</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>that is at the critical water saturation (Swcr).</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P11269">If the KRORW or KRORG keywords are present in the input deck then the scaling matches the relative permeability at the critical saturation of the displacing phase. </text:p>
+    <text:p text:style-name="P11269">If the <text:a xlink:href="#__RefHeading___Toc70191_335817223">KRORW</text:a> or <text:a xlink:href="#__RefHeading___Toc70189_335817223">KRORG</text:a> keywords are present in the input deck then the scaling matches the relative permeability at the critical saturation of the displacing phase. </text:p>
     <text:p text:style-name="P11269"/>
-    <text:p text:style-name="P16056">If three point scaling option has been selected via the SCALECRS keyword in the PROPS section the critical displacing phase is defined as:</text:p>
+    <text:p text:style-name="P16056">If three point scaling option has been selected via the <text:a xlink:href="#__RefHeading___Toc2086108_3315222525">SCALECRS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section the critical displacing phase is defined as:</text:p>
     <table:table table:name="Table459" table:style-name="Table459">
      <table:table-column table:style-name="Table459.A"/>
      <table:table-column table:style-name="Table459.B"/>
@@ -4663,10 +4663,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1223">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table459.A2" office:value-type="string">
-       <text:p text:style-name="P1237">KRORW</text:p>
+       <text:p text:style-name="P1237"><text:a xlink:href="#__RefHeading___Toc70191_335817223">KRORW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table459.C2" office:value-type="string">
-       <text:p text:style-name="P1231">S <text:span text:style-name="T4092">critical</text:span> = 1.0 – <text:s/>SWCR - SGL</text:p>
+       <text:p text:style-name="P1231">S <text:span text:style-name="T4092">critical</text:span> = 1.0 – <text:s/><text:a xlink:href="#__RefHeading___Toc27248_784232322">SWCR</text:a> - <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table459.1">
@@ -4674,20 +4674,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1223">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table459.A2" office:value-type="string">
-       <text:p text:style-name="P1237">KRORG</text:p>
+       <text:p text:style-name="P1237"><text:a xlink:href="#__RefHeading___Toc70189_335817223">KRORG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table459.C2" office:value-type="string">
-       <text:p text:style-name="P1231">S <text:span text:style-name="T4092">critical</text:span> = 1.0 – SGCR - SWL</text:p>
+       <text:p text:style-name="P1231">S <text:span text:style-name="T4092">critical</text:span> = 1.0 – <text:a xlink:href="#__RefHeading___Toc20428_784232322">SGCR</text:a> - <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14687">Table <text:sequence text:ref-name="refTable294" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.78</text:sequence>: Critical Displacement Relationships </text:p>
     <text:p text:style-name="P11269"/>
-    <text:p text:style-name="P11477">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SWUX, SWUY and SWUZ instead of SWU, There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SWUX, SWUX-, SWUY, SWUY-, SWUZ and SWUZ-, <text:s/>instead of the SWU keyword.</text:p>
-    <text:p text:style-name="P11464">End-point scaling also allows the entered relative permeability functions to be scale on the relative permeability values using the KRG, KRGR, KRO, KRORG, KRORW, KRW and KRWR relative permeability grid cell arrays for the relative permeability end-point data. <text:s/>In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is KROX, KROY and KROZ instead of KRO, There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is KROX, KROX-, KROY, KROY-, KROZ and KROZ-, <text:s/>instead of the KRO keyword. </text:p>
-    <text:p text:style-name="P11464">If the hysteresis model option has been activated on the SATOPTS keyword in the RUNSPEC section, then the equivalent imbibition arrays suffixed with the letter I, for example IKRO, can be used to define the KRO for the relative permeability imbibition tables.</text:p>
+    <text:p text:style-name="P11477">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>, <text:a xlink:href="#__RefHeading___Toc27248_784232322">SWCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWU</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a>, <text:a xlink:href="#__RefHeading___Toc20428_784232322">SGCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a>, <text:a xlink:href="#__RefHeading___Toc30436_784232322">SOWCR</text:a>, and <text:a xlink:href="#__RefHeading___Toc30434_784232322">SOGCR</text:a> <text:s/>saturation grid arrays for the saturation end-points, In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUX</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUY</text:a> and <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWU</text:a>, There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUX</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUX-</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUY</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUY-</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUZ</text:a> and <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWUZ-</text:a>, <text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWU</text:a> keyword.</text:p>
+    <text:p text:style-name="P11464">End-point scaling also allows the entered relative permeability functions to be scale on the relative permeability values using the <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a>, <text:a xlink:href="#__RefHeading___Toc70187_335817223">KRGR</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a>, <text:a xlink:href="#__RefHeading___Toc70189_335817223">KRORG</text:a>, <text:a xlink:href="#__RefHeading___Toc70191_335817223">KRORW</text:a>, <text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a> and <text:a xlink:href="#__RefHeading___Toc70193_335817223">KRWR</text:a> relative permeability grid cell arrays for the relative permeability end-point data. <text:s/>In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROX</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROY</text:a> and <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a>, There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROX</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROX-</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROY</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROY-</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROZ</text:a> and <text:a xlink:href="#__RefHeading___Toc97395_621662414">KROZ-</text:a>, <text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> keyword. </text:p>
+    <text:p text:style-name="P11464">If the hysteresis model option has been activated on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then the equivalent imbibition arrays suffixed with the letter I, for example <text:a xlink:href="#__RefHeading___Toc97395_6216624141">IKRO</text:a>, can be used to define the <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> for the relative permeability imbibition tables.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716033_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716033_3964674244"/></text:h>
-    <text:p text:style-name="P16435">The first example defines an input box for the whole grid and for layers one to three, for layer one KRO is set equal to 0.855, for layer two KRO equals 0.875, and for layer three KRO equals 0.900.</text:p>
+    <text:p text:style-name="P16435">The first example defines an input box for the whole grid and for layers one to three, for layer one <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> is set equal to 0.855, for layer two <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> equals 0.875, and for layer three <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a> equals 0.900.</text:p>
     <text:p text:style-name="P13836">--</text:p>
     <text:p text:style-name="P13836">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS (NX=100, NY=100)</text:p>
     <text:p text:style-name="P13836">-- <text:s text:c="6"/></text:p>
@@ -4705,7 +4705,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14001">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13566">ENDBOX <text:s text:c="4"/></text:p>
     <text:p text:style-name="P144"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P16048">The next example does exactly the same thing using the EQUALS keyword instead.</text:p>
+    <text:p text:style-name="P16048">The next example does exactly the same thing using the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword instead.</text:p>
     <text:p text:style-name="P13771">--</text:p>
     <text:p text:style-name="P13771">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P13771">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

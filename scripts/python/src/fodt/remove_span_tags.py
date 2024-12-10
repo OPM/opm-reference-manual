@@ -9,7 +9,7 @@ from pathlib import Path
 import click
 
 from fodt.constants import ClickOptions
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.xml_helpers import XMLHelper
 
 class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
@@ -354,10 +354,10 @@ def remove_version_span_tags(
     if filename is not None:
         filename = Path(filename)
         assert filename.is_absolute()
-        maindir, filename = Helpers.locate_maindir_and_filename(maindir, filename)
+        maindir, filename = helpers.locate_maindir_and_filename(maindir, filename)
     else:
         # Convert maindir to an absolute path
-        maindir = Helpers.get_maindir(maindir)
+        maindir = helpers.get_maindir(maindir)
         maindir = Path(maindir).absolute()
         assert maindir.is_dir()
     RemoveSpanTags(maindir, filename, max_files).remove_span_tags()

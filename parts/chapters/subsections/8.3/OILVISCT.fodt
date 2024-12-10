@@ -4246,8 +4246,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716085_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716085_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">OILVISCT defines the oil viscosity as a function of temperature for when OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC section. The reference pressure and solution gas-oil ratio of the oil for this table is given by the VISCREF keyword in the PROPS section. Note this is an OPM Flow keyword used with OPM Flow’s black-oil thermal model that is not available in the commercial simulator’s black-oil thermal formulation.</text:p>
-    <text:p text:style-name="_40_TextBody">This keyword can only be used if OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC section. Note this is different to the commercial simulator that uses the TEMP keyword in the RUNSPEC section to activate the black-oil thermal model.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc107282_57619843">OILVISCT</text:a> defines the oil viscosity as a function of temperature for when OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The reference pressure and solution gas-oil ratio of the oil for this table is given by the <text:a xlink:href="#__RefHeading___Toc121487_83452205">VISCREF</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. Note this is an OPM Flow keyword used with OPM Flow’s black-oil thermal model that is not available in the commercial simulator’s black-oil thermal formulation.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword can only be used if OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note this is different to the commercial simulator that uses the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the black-oil thermal model.</text:p>
     <table:table table:name="Table517" table:style-name="Table517">
      <table:table-column table:style-name="Table517.A"/>
      <table:table-column table:style-name="Table517.B"/>
@@ -4289,7 +4289,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3004">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table517.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4551">TEMP</text:p>
+       <text:p text:style-name="P4551"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table517.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4352">A columnar vector of real monotonically increasing down the column values that defines the temperature values.</text:p>
@@ -4323,8 +4323,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10052">VIS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table517.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4352">A columnar vector of real increasing down the column values that defines the oil viscosity for the corresponding temperature values (TEMP).</text:p>
-       <text:p text:style-name="P4564">VIS should be given at the reference pressure and solution gas-oil ratio as defined by <text:s/>PRESS and RS variables on the VISCREF keyword. </text:p>
+       <text:p text:style-name="P4352">A columnar vector of real increasing down the column values that defines the oil viscosity for the corresponding temperature values (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a>).</text:p>
+       <text:p text:style-name="P4564">VIS should be given at the reference pressure and solution gas-oil ratio as defined by <text:s/>PRESS and <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> variables on the <text:a xlink:href="#__RefHeading___Toc121487_83452205">VISCREF</text:a> keyword. </text:p>
        <text:p text:style-name="P4564"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4352,10 +4352,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1516">Notes:</text:p>
        <text:list xml:id="list105916426476828" text:continue-list="list105916417128178" text:style-name="L85">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19904">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19904">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20037">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20037">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20037">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4374,7 +4374,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15464">There is no terminating “/” for this keyword.</text:p>
     <text:p text:style-name="P15464"/>
     <text:h text:style-name="P18708" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716087_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716087_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following example shows the OILVISCT keyword for when the thermal option has been activated by the THERMAL keyword in the RUNSPEC section and for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set equal to one.</text:p>
+    <text:p text:style-name="_40_TextBody">The following example shows the <text:a xlink:href="#__RefHeading___Toc107282_57619843">OILVISCT</text:a> keyword for when the thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set equal to one.</text:p>
     <text:p text:style-name="P14007">--</text:p>
     <text:p text:style-name="P14007">-- <text:s text:c="6"/>OIL VISCOSITY VERSUS TEMPERATURE TABLES (OPM FLOW EXTENSION KEYWORD)</text:p>
     <text:p text:style-name="P14007">--</text:p>

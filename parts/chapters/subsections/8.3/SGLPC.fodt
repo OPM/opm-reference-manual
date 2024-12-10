@@ -4231,7 +4231,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31080_7842323222"/>Description<text:bookmark-end text:name="__RefHeading___Toc31080_7842323222"/></text:h>
-    <text:p text:style-name="_40_TextBody">SGLPC defines the connate gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The connate gas saturation is defined as the minimum gas saturation in a two-phase gas relative permeability table. <text:s/>The keyword only applies the scaling to the drainage capillary pressure tables, unlike the SGL keyword that applies the scaling to both the capillary pressure and relative permeability tables. The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc170136_1371377330">SGLPC</text:a> defines the connate gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The connate gas saturation is defined as the minimum gas saturation in a two-phase gas relative permeability table. <text:s/>The keyword only applies the scaling to the drainage capillary pressure tables, unlike the <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> keyword that applies the scaling to both the capillary pressure and relative permeability tables. The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table910" table:style-name="Table910">
      <table:table-column table:style-name="Table910.A"/>
      <table:table-column table:style-name="Table910.B"/>
@@ -4273,17 +4273,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2994">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table910.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4597">SGLPC</text:p>
+       <text:p text:style-name="P4597"><text:a xlink:href="#__RefHeading___Toc170136_1371377330">SGLPC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table910.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3212">SGLPC is an array of real numbers assigning the connate gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
-       <text:p text:style-name="P4628">If SGLPC is omitted from the input deck the values will be defaulted to those on the SGL series of keywords. If the SGL series of keywords are missing from the input deck then the values are taken from the cell allocated capillary pressure table.</text:p>
+       <text:p text:style-name="P3212"><text:a xlink:href="#__RefHeading___Toc170136_1371377330">SGLPC</text:a> is an array of real numbers assigning the connate gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword.</text:p>
+       <text:p text:style-name="P4628">If <text:a xlink:href="#__RefHeading___Toc170136_1371377330">SGLPC</text:a> is omitted from the input deck the values will be defaulted to those on the <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> series of keywords. If the <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> series of keywords are missing from the input deck then the values are taken from the cell allocated capillary pressure table.</text:p>
        <text:p text:style-name="P4040">Repeat counts may be used, for example 30*0.03 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table910.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4613">Taken from SGL or from the cell allocated capillary pressure table.</text:p>
+       <text:p text:style-name="P4613">Taken from <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> or from the cell allocated capillary pressure table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708711926768">
@@ -4305,7 +4305,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1506">Notes:</text:p>
        <text:list xml:id="list105916143335560" text:continue-list="list105916289097544" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19262">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SGLX± , SGLY± and SGZ± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19262">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLX</text:a>± , <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLY</text:a>± and SGZ± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19280">The keyword is terminated by a “/”.</text:p>
@@ -4321,7 +4321,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14564">Table <text:sequence text:ref-name="refTable366" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.150</text:sequence>: SGLPC Keyword Description</text:p>
     <text:p text:style-name="P15032"/>
-    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KRGR, KRO, KRORG, KRORW, KRW and KRWR relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SGLX, SGLY and SGLZ instead of SGL or SGLPC. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SGLX, SGLX-, SGLY, SGLY-, SGLZ and SGLZ-, <text:s/>instead of the SGL or SGLPC keywords.</text:p>
+    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>, <text:a xlink:href="#__RefHeading___Toc27248_784232322">SWCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWU</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a>, <text:a xlink:href="#__RefHeading___Toc20428_784232322">SGCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a>, <text:a xlink:href="#__RefHeading___Toc30436_784232322">SOWCR</text:a>, and <text:a xlink:href="#__RefHeading___Toc30434_784232322">SOGCR</text:a> <text:s/>saturation grid arrays for the saturation end-points, and the <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a>, <text:a xlink:href="#__RefHeading___Toc70187_335817223">KRGR</text:a>, <text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a>, <text:a xlink:href="#__RefHeading___Toc70189_335817223">KRORG</text:a>, <text:a xlink:href="#__RefHeading___Toc70191_335817223">KRORW</text:a>, <text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a> and <text:a xlink:href="#__RefHeading___Toc70193_335817223">KRWR</text:a> relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLX</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLY</text:a> and <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> or <text:a xlink:href="#__RefHeading___Toc170136_1371377330">SGLPC</text:a>. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLX</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLX-</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLY</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLY-</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLZ</text:a> and <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGLZ-</text:a>, <text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> or <text:a xlink:href="#__RefHeading___Toc170136_1371377330">SGLPC</text:a> keywords.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P11696">M<text:span text:style-name="T2554">issing </text:span>Some F<text:span text:style-name="T2554">unctionality - </text:span>Use with Caution.</text:p>
@@ -4335,7 +4335,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13601">SGLPC</text:p>
     <text:p text:style-name="P13564"><text:s text:c="9"/>300*0.030 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13066"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15108">The above example defines a constant connate gas saturation of 0.03 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15108">The above example defines a constant connate gas saturation of 0.03 to all 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P98"/>
     
    </text:section>

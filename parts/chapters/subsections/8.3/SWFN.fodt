@@ -4451,7 +4451,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P55" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388311111"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388311111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SWFN keyword defines the water relative permeability and water-oil capillary pressure data versus water saturation tables for when water is present in the input deck. <text:s/>This keyword should only be used if water is present in the run.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keyword defines the water relative permeability and water-oil capillary pressure data versus water saturation tables for when water is present in the input deck. <text:s/>This keyword should only be used if water is present in the run.</text:p>
     <table:table table:name="Table499" table:style-name="Table499">
      <table:table-column table:style-name="Table499.A"/>
      <table:table-column table:style-name="Table499.B"/>
@@ -4493,7 +4493,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P84">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table499.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P65">SWAT</text:p>
+       <text:p text:style-name="P65"><text:a xlink:href="#__RefHeading___Toc137373_1317547213">SWAT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table499.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P65">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values starting from zero and terminating at one, that defines the water <text:s/>saturation.</text:p>
@@ -4523,7 +4523,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P84">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table499.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P65">KRW</text:p>
+       <text:p text:style-name="P65"><text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table499.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P65">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the water relative permeability with respect to gas saturation.</text:p>
@@ -4558,7 +4558,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table499.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P65">A columnar vector of real values that are either equal or increasing down the column that defines the water-oil relative capillary pressure.</text:p>
-       <text:p text:style-name="P65">If the SWATINIT keyword has been used to initialize the model then columnar vector has to be strictly monotonically increasing.</text:p>
+       <text:p text:style-name="P65">If the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> keyword has been used to initialize the model then columnar vector has to be strictly monotonically increasing.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4585,10 +4585,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P65">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P83">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P83">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P83">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P83">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P83">Items (2) and (3) may be defaulted, in which case linear interpolation or constant extrapolation will be used to calculate the missing values. At least two values must be entered for item (2), and at least one value must be entered for item (3).</text:p>
@@ -4653,7 +4653,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P63"><text:s text:c="12"/>0.95 <text:s text:c="4"/>0.40960 <text:s text:c="4"/>0.0</text:p>
     <text:p text:style-name="P63"><text:s text:c="12"/>1.00 <text:s text:c="4"/>0.52200 <text:s text:c="4"/>0.0 <text:s text:c="22"/>/ TABLE NO. 2</text:p>
     <text:p text:style-name="P61"/>
-    <text:p text:style-name="P61">The example defines two SWFN tables for use when water is present in the run. </text:p>
+    <text:p text:style-name="P61">The example defines two <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> tables for use when water is present in the run. </text:p>
     <text:p text:style-name="P64"/>
    </text:section>
   </office:text>

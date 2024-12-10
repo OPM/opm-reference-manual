@@ -4222,7 +4222,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_3701168388232118"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_3701168388232118"/></text:h>
-    <text:p text:style-name="P11820">The WH2NUM keyword defines the two phase Water-Alternating-Gas (“WAG”) hysteresis tables (relative permeability and capillary pressure tables) region numbers for each grid block, for when the hysteresis option has been activated by the WAGHYSTR variable on the SATOPTS keyword in the RUNSPEC section. The region number specifies which set of relative permeability tables (SGFN, SWFN, SOF2, SOF3, SOF32D, SGOF, SLGOF and SWOF) are used to calculate the relative permeability and capillary pressure in a grid block. Note that this keyword if the two phase water relative permeabilities WAG option.</text:p>
+    <text:p text:style-name="P11820">The <text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a> keyword defines the two phase Water-Alternating-Gas (“WAG”) hysteresis tables (relative permeability and capillary pressure tables) region numbers for each grid block, for when the hysteresis option has been activated by the <text:a xlink:href="#__RefHeading___Toc207827_2026549522">WAGHYSTR</text:a> variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The region number specifies which set of relative permeability tables (<text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106876_335817223">SOF2</text:a>, <text:a xlink:href="#__RefHeading___Toc106878_335817223">SOF3</text:a>, <text:a xlink:href="#__RefHeading___Toc765497_4250154414">SOF32D</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> and <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>) are used to calculate the relative permeability and capillary pressure in a grid block. Note that this keyword if the two phase water relative permeabilities WAG option.</text:p>
     <text:p text:style-name="P12024">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1716" table:style-name="Table1716">
      <table:table-column table:style-name="Table1716.A"/>
@@ -4248,14 +4248,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3129">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1716.B2" office:value-type="string">
-       <text:p text:style-name="P3956">WH2NUM</text:p>
+       <text:p text:style-name="P3956"><text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1716.C2" office:value-type="string">
-       <text:p text:style-name="P3956">WH2NUM defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
-       <text:p text:style-name="P3956">The maximum number of WH2NUM regions is set by the NTSFUN variable on the TABDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3956"><text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a> defines an array of positive integers assigning a grid cell to a particular saturation table region. </text:p>
+       <text:p text:style-name="P3956">The maximum number of <text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a> regions is set by the NTSFUN variable on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1716.D2" office:value-type="string">
-       <text:p text:style-name="P5270">Taken from cell allocated SATNUM</text:p>
+       <text:p text:style-name="P5270">Taken from cell allocated <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708721554112">
@@ -4263,10 +4263,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2509">Notes:</text:p>
        <text:list xml:id="list105918688990564" text:continue-list="list105917728798157" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19384">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19384">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19384">If a cell<text:span text:style-name="T1533"> is not assigned a WH2NUM region then the default value will be used.</text:span></text:p>
+         <text:p text:style-name="P19384">If a cell<text:span text:style-name="T1533"> is not assigned a <text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a> region then the default value will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19852">The keyword is terminated by a “/”.</text:p>
@@ -4278,9 +4278,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14990"><text:span text:style-name="T1">Table </text:span><text:span text:style-name="T1"><text:sequence text:ref-name="refTable445" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.28</text:sequence></text:span><text:span text:style-name="T1">: WH2NUM</text:span> Keyword Description</text:p>
+    <text:p text:style-name="P14990"><text:span text:style-name="T1">Table </text:span><text:span text:style-name="T1"><text:sequence text:ref-name="refTable445" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.28</text:sequence></text:span><text:span text:style-name="T1">: <text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a></text:span> Keyword Description</text:p>
     <text:h text:style-name="P18517" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716335_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716335_3964674244"/></text:h>
-    <text:p text:style-name="P11968">The example below sets three WH2NUM regions for a model. </text:p>
+    <text:p text:style-name="P11968">The example below sets three <text:a xlink:href="#__RefHeading___Toc1046874_487874538">WH2NUM</text:a> regions for a model. </text:p>
     <text:p text:style-name="P14358">--</text:p>
     <text:p text:style-name="P14358">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14358">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

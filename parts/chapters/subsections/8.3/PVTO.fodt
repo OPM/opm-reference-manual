@@ -4351,8 +4351,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716179_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716179_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PVTO defines the oil PVT properties for live oil<text:note text:id="ftn222" text:note-class="footnote"><text:note-citation>222</text:note-citation><text:note-body>
-        <text:p text:style-name="P16647">“Live” oil is oil that contains gas in solution, which is normally the case for most conventional oil reservoirs. However, for oil reservoirs classified as heavy oil reservoirs, the in situ dissolved gas may be negligible and oil would then be classified as gas-free oil which <text:span text:style-name="T4396">is </text:span>commonly referred to as “dead” oil.</text:p></text:note-body></text:note> and the keyword should only be used if the there is both oil and gas phases in the model. This keyword should be used when the DISGAS keyword has be declared in the RUNSPEC section indicating that dissolved gas (more commonly referred to as solution gas) is present in the oil. The keyword may be used for oil-water and oil-water-gas input decks.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc104062_57619843">PVTO</text:a> defines the oil PVT properties for live oil<text:note text:id="ftn222" text:note-class="footnote"><text:note-citation>222</text:note-citation><text:note-body>
+        <text:p text:style-name="P16647">“Live” oil is oil that contains gas in solution, which is normally the case for most conventional oil reservoirs. However, for oil reservoirs classified as heavy oil reservoirs, the in situ dissolved gas may be negligible and oil would then be classified as gas-free oil which <text:span text:style-name="T4396">is </text:span>commonly referred to as “dead” oil.</text:p></text:note-body></text:note> and the keyword should only be used if the there is both oil and gas phases in the model. This keyword should be used when the <text:a xlink:href="#__RefHeading___Toc39767_2267116897">DISGAS</text:a> keyword has be declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that dissolved gas (more commonly referred to as solution gas) is present in the oil. The keyword may be used for oil-water and oil-water-gas input decks.</text:p>
     <table:table table:name="Table515" table:style-name="Table515">
      <table:table-column table:style-name="Table515.A"/>
      <table:table-column table:style-name="Table515.B" table:number-columns-repeated="2"/>
@@ -4398,14 +4398,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4797">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table515.D2" table:number-rows-spanned="2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4799">RS</text:p>
+       <text:p text:style-name="P4799"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table515.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4373">A real monotonically increasing down the column values that defines the saturated gas-oil ratio (“GOR”) or Rs, <text:s/>that defines the oil formation volume factor and the oil viscosity for the tabulated corresponding pressure for stated saturated RS.</text:p>
-       <text:p text:style-name="P4765">For a given RS the variability of the oil formation volume factor and the oil viscosity with respect to the saturated RS and pressure is optionally included as a sub table under PRSU, FVFU and VISU columns, that is it is not necessary to repeat RS for each sub table entry. However, each sub table must be terminated by a “/”.</text:p>
-       <text:p text:style-name="P4769">The under-saturated PRSU entries are optional, except for perhaps the last RS entry to define the PVT properties above the initial saturation pressure.</text:p>
-       <text:p text:style-name="P4800">If there are no following under-saturated PRSU entries then the RS entry row should be terminated by a “/”, if there are under-saturated PRSU entries then the last PRSU entry row should be terminated by a “/”.</text:p>
+       <text:p text:style-name="P4373">A real monotonically increasing down the column values that defines the saturated gas-oil ratio (“GOR”) or Rs, <text:s/>that defines the oil formation volume factor and the oil viscosity for the tabulated corresponding pressure for stated saturated <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>.</text:p>
+       <text:p text:style-name="P4765">For a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> the variability of the oil formation volume factor and the oil viscosity with respect to the saturated <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> and pressure is optionally included as a sub table under PRSU, FVFU and VISU columns, that is it is not necessary to repeat <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> for each sub table entry. However, each sub table must be terminated by a “/”.</text:p>
+       <text:p text:style-name="P4769">The under-saturated PRSU entries are optional, except for perhaps the last <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> entry to define the PVT properties above the initial saturation pressure.</text:p>
+       <text:p text:style-name="P4800">If there are no following under-saturated PRSU entries then the <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> entry row should be terminated by a “/”, if there are under-saturated PRSU entries then the last PRSU entry row should be terminated by a “/”.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4440,8 +4440,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P16759">PRSU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table515.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4803">PRSS is a real columnar vector of real monotonically increasing down the column values that defines the oil phase saturation pressure (bubble-point pressure), that defines the oil formation volume factor and the oil viscosity for the corresponding PRSS pressure for a given saturated RS.</text:p>
-       <text:p text:style-name="P4804">PRSU is a real columnar vector of real monotonically increasing down the column values that defines the oil phase under-saturated pressure that defines the oil formation volume factor and the oil viscosity for the corresponding PRSU pressure for a given saturated RS. </text:p>
+       <text:p text:style-name="P4803">PRSS is a real columnar vector of real monotonically increasing down the column values that defines the oil phase saturation pressure (bubble-point pressure), that defines the oil formation volume factor and the oil viscosity for the corresponding PRSS pressure for a given saturated <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>.</text:p>
+       <text:p text:style-name="P4804">PRSU is a real columnar vector of real monotonically increasing down the column values that defines the oil phase under-saturated pressure that defines the oil formation volume factor and the oil viscosity for the corresponding PRSU pressure for a given saturated <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>. </text:p>
        <text:p text:style-name="P4800">Note that PRSU should be greater than PRSS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4477,8 +4477,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P16761">FVFU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table515.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4374">FVFS is a columnar vector of real increasing down the column values that defines the corresponding oil phase saturated formation volume factor for a given pressure (PRSS) and for a given RS. </text:p>
-       <text:p text:style-name="P4375">FVFU is a columnar vector of real decreasing down the column values that defines the corresponding oil phase under-saturated formation volume factor for a given pressure (PRSU) and for a given RS. </text:p>
+       <text:p text:style-name="P4374">FVFS is a columnar vector of real increasing down the column values that defines the corresponding oil phase saturated formation volume factor for a given pressure (PRSS) and for a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>. </text:p>
+       <text:p text:style-name="P4375">FVFU is a columnar vector of real decreasing down the column values that defines the corresponding oil phase under-saturated formation volume factor for a given pressure (PRSU) and for a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4512,8 +4512,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10084">VISU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table515.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4374">VISS a columnar vector of real increasing down the column values that defines the corresponding oil phase saturated viscosity for a given pressure (PRSS) and for a given RS. If this is the only entry for a given RS and PRSS then the record should be terminate by a “/”.</text:p>
-       <text:p text:style-name="P4794">VISU a columnar vector of real decreasing from VISS down the column values that defines the corresponding oil phase under-saturated viscosity for a given pressure (PRSU) and for a given RS. <text:s/>If this is the only entry for a given RS and PRSU then the record should be terminate by a “/”.</text:p>
+       <text:p text:style-name="P4374">VISS a columnar vector of real increasing down the column values that defines the corresponding oil phase saturated viscosity for a given pressure (PRSS) and for a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>. If this is the only entry for a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> and PRSS then the record should be terminate by a “/”.</text:p>
+       <text:p text:style-name="P4794">VISU a columnar vector of real decreasing from VISS down the column values that defines the corresponding oil phase under-saturated viscosity for a given pressure (PRSU) and for a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a>. <text:s/>If this is the only entry for a given <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> and PRSU then the record should be terminate by a “/”.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4541,13 +4541,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1535">Notes:</text:p>
        <text:list xml:id="list105916691228349" text:continue-list="list105916973645275" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19891">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19891">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20026">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rs entries as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20026">Each table must contain a minimum of two rows and a maximum of NPPVT rows and NRPVT Rs entries as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20116">Apart from the RS data there must be same number of entries for each column.</text:p>
+         <text:p text:style-name="P20116">Apart from the <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> data there must be same number of entries for each column.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20027">Each sub table defining the under saturated oil properties must be terminated by <text:s/>“/”.</text:p>
@@ -4569,7 +4569,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Text_20_body"><text:bookmark-start text:name="__RefHeading___Toc716181_3964674244"/>Note that provided the first table has been entered, subsequent tables may be defaulted, in this case the prior table is copied to the current table. See the second example for an illustration on how to use this feature. <text:bookmark-end text:name="__RefHeading___Toc716181_3964674244"/></text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:h text:style-name="P18766" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P15076">The first example defines live oil PVT tables assuming NTPVT equals two, NPPVT is greater than or equal to two, and NRPVT is greater than or equal to 18 on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15076">The first example defines live oil PVT tables assuming NTPVT equals two, NPPVT is greater than or equal to two, and NRPVT is greater than or equal to 18 on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P13328">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13328">-- <text:s text:c="6"/>OIL PVT TABLE FOR LIVE OIL <text:s text:c="64"/></text:p>
     <text:p text:style-name="P13328">-- <text:s text:c="85"/></text:p>
@@ -4627,7 +4627,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13328"><text:s text:c="20"/>6242.0 <text:s text:c="3"/>1.83040 <text:s text:c="2"/>0.3186 <text:s/>/ </text:p>
     <text:p text:style-name="P13327"><text:s text:c="48"/>/ TABLE NO. 2 <text:s text:c="84"/></text:p>
     <text:p text:style-name="P15162">Notice that there must be at least two entries for the last Rs value to enable the <text:soft-page-break/>simulator to interpolate over the undersaturated pressure region. </text:p>
-    <text:p text:style-name="P16030">The second example defines live oil PVT tables assuming NTPVT equals four, NPPVT is greater than or equal to two, and NRPVT is greater than or equal to 13 on the TABDIMS keyword in the RUNSPEC section. Here, tables two to four all default to table number one.</text:p>
+    <text:p text:style-name="P16030">The second example defines live oil PVT tables assuming NTPVT equals four, NPPVT is greater than or equal to two, and NRPVT is greater than or equal to 13 on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Here, tables two to four all default to table number one.</text:p>
     <text:p text:style-name="P13329">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P13329">-- <text:s text:c="6"/>OIL PVT TABLE FOR LIVE OIL <text:s text:c="64"/></text:p>
     <text:p text:style-name="P13329">-- <text:s text:c="85"/></text:p>

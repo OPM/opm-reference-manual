@@ -11,7 +11,7 @@ from typing import Callable
 
 from fodt.xml_helpers import XMLHelper
 from fodt.exceptions import HandlerDoneException, InputException, ParsingException
-from fodt.helpers import Helpers
+from fodt import helpers
 
 class PartsHandler(xml.sax.handler.ContentHandler):
     def __init__(
@@ -150,7 +150,7 @@ class RemoveSubSections():
     ) -> None:
         logging.info(f"Removing parts from {filename}.")
         outputdir = Path(outputfn).parent
-        keywords = Helpers.read_keyword_order_v2(keyword_dir, chapter, section)
+        keywords = helpers.read_keyword_order_v2(keyword_dir, chapter, section)
         parser = xml.sax.make_parser()
         handler = PartsHandler(outputfn, chapter, section, keywords, replace_callback)
         parser.setContentHandler(handler)

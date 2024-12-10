@@ -4326,8 +4326,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881954"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881954"/></text:h>
-    <text:p text:style-name="P12425">The DIFFC keyword defines the molecular weight of the fluids and diffusion coefficients between phases for each PVT region, for when the Molecular Diffusion option has been activated by the DIFFUSE keyword in the RUNSPEC section. This keyword is optional as OPM Flow will automatically calculate the coefficients, as described by Sandve et al.<text:note text:id="ftn182" text:note-class="footnote"><text:note-citation>182</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">Tor Harald Sandve1, Sarah E. Gasda, Atgeirr Rasmussen, <text:span text:style-name="T7193">and</text:span> Alf Birger Rustad. Convective dissolution in field scale CO<text:span text:style-name="T4092">2</text:span> storage simulation using the OPM Flow simulator. Submitted to TCCS 11 – Trondheim Conference on CO<text:span text:style-name="T4092">2</text:span> Capture, Transport and Storage Trondheim, Norway – June 21-23, 2021.</text:p></text:note-body></text:note>, if the DIFFC keyword is absent from the input deck. <text:s/>The keyword thus allows one to overwrite the automatically calculated values.</text:p>
+    <text:p text:style-name="P12425">The <text:a xlink:href="#__RefHeading___Toc314077_1539708736">DIFFC</text:a> keyword defines the molecular weight of the fluids and diffusion coefficients between phases for each PVT region, for when the Molecular Diffusion option has been activated by the <text:a xlink:href="#__RefHeading___Toc349951_1539708736">DIFFUSE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. This keyword is optional as OPM Flow will automatically calculate the coefficients, as described by Sandve et al.<text:note text:id="ftn182" text:note-class="footnote"><text:note-citation>182</text:note-citation><text:note-body>
+        <text:p text:style-name="Footnote">Tor Harald Sandve1, Sarah E. Gasda, Atgeirr Rasmussen, <text:span text:style-name="T7193">and</text:span> Alf Birger Rustad. Convective dissolution in field scale CO<text:span text:style-name="T4092">2</text:span> storage simulation using the OPM Flow simulator. Submitted to TCCS 11 – Trondheim Conference on CO<text:span text:style-name="T4092">2</text:span> Capture, Transport and Storage Trondheim, Norway – June 21-23, 2021.</text:p></text:note-body></text:note>, if the <text:a xlink:href="#__RefHeading___Toc314077_1539708736">DIFFC</text:a> keyword is absent from the input deck. <text:s/>The keyword thus allows one to overwrite the automatically calculated values.</text:p>
     <table:table table:name="Table1997" table:style-name="Table1997">
      <table:table-column table:style-name="Table1997.A"/>
      <table:table-column table:style-name="Table1997.B"/>
@@ -4614,7 +4614,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1792">Notes:</text:p>
        <text:list xml:id="list105915031982016" text:continue-list="list105914973564258" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20090">The keyword is followed by NTPVT tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20090">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20066">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4637,16 +4637,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708695847568">
        <table:table-cell table:style-name="Table1998.A1" office:value-type="string">
         <text:p text:style-name="P10347">Note</text:p>
-        <text:p text:style-name="P10203">The option has been tested in combination with the CO2STORE keyword, but not for the general case at this point.</text:p>
+        <text:p text:style-name="P10203">The option has been tested in combination with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> keyword, but not for the general case at this point.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P11207"/>
-    <text:p text:style-name="_40_TextBody">See also the DIFFUSE keyword in the RUNSPEC section to activate the Molecular Diffusion option.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc349951_1539708736">DIFFUSE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the Molecular Diffusion option.</text:p>
     <text:p text:style-name="P15246"/>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716149_39646742441"/>Example<text:bookmark-end text:name="__RefHeading___Toc716149_39646742441"/></text:h>
-    <text:p text:style-name="P12426">The example below is based on field units, with NTPVT equal to three on the TABDIMS keyword.</text:p>
+    <text:p text:style-name="P12426">The example below is based on field units, with NTPVT equal to three on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword.</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>PVT REGION MOLECULAR DIFFUSION TABLES <text:s text:c="67"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="85"/></text:p>

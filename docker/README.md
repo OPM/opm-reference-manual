@@ -51,9 +51,8 @@ NOTE: The actual tag name of the Docker image is not necessarily the same as the
 ### `lodocker-run-container`
 
 This script runs LibreOffice from a Docker container. You should supply the file name you
-want to open in LibreOffice as the first argument to the script. The file names are
-relative to directory `../parts` (as seen from this directory, i.e. the directory containing
-this `README.md` file). You can also supply the
+want to open in LibreOffice as the first argument to the script. The file name is
+relative to directory `parts` directory in the Git root directory of the `opm-reference-manual` repository, see example below. You can also supply the
 directory of the Dockerfile you used to build the image (see `lodocker-build-image`) as an
 optional argument to the script. So
 

@@ -4254,8 +4254,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715737_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715737_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">MINPORV defines a minimum threshold pore volume that makes all grid blocks whose pore volume is below this value inactive in the model (inactive cells are not used in OPM Flow calculations). Note this keyword is different to the MINPVV keyword in the GRID section, that sets a minimum threshold pore volume for individual cells in the model. </text:p>
-    <text:p text:style-name="_40_TextBody">This keyword is an alias for the MINPV keyword in the GRID section, and thus provides the same functionality.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc77711_2479612490">MINPORV</text:a> defines a minimum threshold pore volume that makes all grid blocks whose pore volume is below this value inactive in the model (inactive cells are not used in OPM Flow calculations). Note this keyword is different to the <text:a xlink:href="#__RefHeading___Toc132765_2319858807">MINPVV</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section, that sets a minimum threshold pore volume for individual cells in the model. </text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is an alias for the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section, and thus provides the same functionality.</text:p>
     <table:table table:name="Table293" table:style-name="Table293">
      <table:table-column table:style-name="Table293.A"/>
      <table:table-column table:style-name="Table293.B"/>
@@ -4297,10 +4297,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2927">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table293.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4199">MINPORV</text:p>
+       <text:p text:style-name="P4199"><text:a xlink:href="#__RefHeading___Toc77711_2479612490">MINPORV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table293.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4199">MINPORV is a real positive number that defines the minimum pore volume for a cell to be active in the model.</text:p>
+       <text:p text:style-name="P4199"><text:a xlink:href="#__RefHeading___Toc77711_2479612490">MINPORV</text:a> is a real positive number that defines the minimum pore volume for a cell to be active in the model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4343,9 +4343,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable136" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.62</text:sequence>: MINPORV Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="P12506">The MINPORV, MINPV, and MINPVV keywords only apply their minimum threshold pore volume values to active cells. Thus, cells that have been made inactive via setting their ACTNUM values to zero, remain inactive, even if their pore volume exceeds the values set by the MINPORV, MINPV, and MINPVV keywords.</text:p>
-    <text:p text:style-name="P12507">Secondly, although the MINPORV keyword allows one to set a minimum threshold pore volume below the default value, this is not recommended, as cells with small pore volumes can cause significant numerical convergence errors. <text:s/>Thus, in <text:span text:style-name="T2945">practice</text:span>, values greater than the default values are normally applied to eliminate cells that have relatively small pore volumes. In addition, the simulator reports the total pore volume and the number of cells made inactive, as well as the pore volume reduction, when the keyword is invoked; allowing one to run some sensitivities to the minimum pore volume value.</text:p>
-    <text:p text:style-name="P12506">See also the PINCH keyword for the treatment of inactive grid cells and pinch-outs.</text:p>
+    <text:p text:style-name="P12506">The <text:a xlink:href="#__RefHeading___Toc77711_2479612490">MINPORV</text:a>, <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a>, and <text:a xlink:href="#__RefHeading___Toc132765_2319858807">MINPVV</text:a> keywords only apply their minimum threshold pore volume values to active cells. Thus, cells that have been made inactive via setting their <text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a> values to zero, remain inactive, even if their pore volume exceeds the values set by the <text:a xlink:href="#__RefHeading___Toc77711_2479612490">MINPORV</text:a>, <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a>, and <text:a xlink:href="#__RefHeading___Toc132765_2319858807">MINPVV</text:a> keywords.</text:p>
+    <text:p text:style-name="P12507">Secondly, although the <text:a xlink:href="#__RefHeading___Toc77711_2479612490">MINPORV</text:a> keyword allows one to set a minimum threshold pore volume below the default value, this is not recommended, as cells with small pore volumes can cause significant numerical convergence errors. <text:s/>Thus, in <text:span text:style-name="T2945">practice</text:span>, values greater than the default values are normally applied to eliminate cells that have relatively small pore volumes. In addition, the simulator reports the total pore volume and the number of cells made inactive, as well as the pore volume reduction, when the keyword is invoked; allowing one to run some sensitivities to the minimum pore volume value.</text:p>
+    <text:p text:style-name="P12506">See also the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword for the treatment of inactive grid cells and pinch-outs.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715739_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715739_3964674244"/></text:h>
     <text:p text:style-name="P13894">--</text:p>
     <text:p text:style-name="P13894">-- <text:s text:c="6"/>MINIMUM PORE VOLUME FOR ACTIVE CELLS</text:p>

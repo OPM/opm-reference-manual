@@ -4204,8 +4204,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683882321131"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683882321131"/></text:h>
-    <text:p text:style-name="_40_TextBody">The MISCNUM keyword defines the miscibility region number mixing tables as defined by the TLMIXPAR keyword in the PROPS section, for when the miscibility option has been activated by the MISCIBLE keyword in the RUNSPEC section. MISCNUM also allocates miscible residual oil saturation versus water saturation tables (SORWMIS keyword in the PROPS section) used to calculate the relative permeability and PVT properties for a grid cell.</text:p>
-    <text:p text:style-name="_40_TextBody">Note that although this keyword can only be used when the miscibility option is active, it is not necessary to use this keyword even if the MISCIBLE keyword in the RUNSPEC has been activated as the default value of one will be applied to all grid blocks. Secondly, a value of zero for a grid cell results in immiscible fluids in that grid cell.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a> keyword defines the miscibility region number mixing tables as defined by the <text:a xlink:href="#__RefHeading___Toc121483_83452205">TLMIXPAR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, for when the miscibility option has been activated by the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. <text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a> also allocates miscible residual oil saturation versus water saturation tables (<text:a xlink:href="#__RefHeading___Toc121477_83452205">SORWMIS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section) used to calculate the relative permeability and PVT properties for a grid cell.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that although this keyword can only be used when the miscibility option is active, it is not necessary to use this keyword even if the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> has been activated as the default value of one will be applied to all grid blocks. Secondly, a value of zero for a grid cell results in immiscible fluids in that grid cell.</text:p>
     <table:table table:name="Table582" table:style-name="Table582">
      <table:table-column table:style-name="Table582.A"/>
      <table:table-column table:style-name="Table582.B"/>
@@ -4230,12 +4230,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3061">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table582.A2" office:value-type="string">
-       <text:p text:style-name="P3947">MISCNUM</text:p>
+       <text:p text:style-name="P3947"><text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table582.A2" office:value-type="string">
-       <text:p text:style-name="P3947">MISCNUM defines an array of positive integers greater than or equal to zero, that assign a grid cell to a particular table of mixing parameters as defined by the TLMIXPAR and SORWMIS keywords.</text:p>
+       <text:p text:style-name="P3947"><text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a> defines an array of positive integers greater than or equal to zero, that assign a grid cell to a particular table of mixing parameters as defined by the <text:a xlink:href="#__RefHeading___Toc121483_83452205">TLMIXPAR</text:a> and <text:a xlink:href="#__RefHeading___Toc121477_83452205">SORWMIS</text:a> keywords.</text:p>
        <text:p text:style-name="P4876">A value of zero sets the fluids within a grid cell to be immiscible.</text:p>
-       <text:p text:style-name="P3947">The maximum number of MISCNUM regions is set by the NTMIS variable on the MISCIBLE keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P3947">The maximum number of <text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a> regions is set by the NTMIS variable on the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table582.D2" office:value-type="string">
        <text:p text:style-name="P4124">1</text:p>
@@ -4246,10 +4246,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1580">Notes:</text:p>
        <text:list xml:id="list105918647676757" text:continue-list="list105918464455782" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19974">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19974">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19952">If a cell<text:span text:style-name="T1533"> is not assigned a MISCNUM region then the default value </text:span>of one <text:span text:style-name="T1533">will be used.</text:span></text:p>
+         <text:p text:style-name="P19952">If a cell<text:span text:style-name="T1533"> is not assigned a <text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a> region then the default value </text:span>of one <text:span text:style-name="T1533">will be used.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19843">The keyword is terminated by a “/”.</text:p>
@@ -4263,9 +4263,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14647">Table <text:sequence text:ref-name="refTable432" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">9.15</text:sequence>: MISCNUM Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">See also the TLMIXPAR and SORWMIS keyword in the PROPS section.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc121483_83452205">TLMIXPAR</text:a> and <text:a xlink:href="#__RefHeading___Toc121477_83452205">SORWMIS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:h text:style-name="P18510" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716309_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716309_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below sets three MISCNUM regions in the model on a layer by layer basis, using the EQUALS keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The example below sets three <text:a xlink:href="#__RefHeading___Toc129667_83452205">MISCNUM</text:a> regions in the model on a layer by layer basis, using the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword.</text:p>
     <text:p text:style-name="P14357">--</text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

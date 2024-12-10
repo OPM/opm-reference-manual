@@ -4235,7 +4235,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc31100_7842323222"/>Description<text:bookmark-end text:name="__RefHeading___Toc31100_7842323222"/></text:h>
-    <text:p text:style-name="_40_TextBody">SWLPC defines the connate water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section. The connate water saturation is defined as the minimum water saturation in a two-phase water relative permeability table. <text:s/>The keyword only applies the scaling to the drainage capillary pressures tables, unlike the SWL keyword that applies the scaling to both the capillary pressure and relative permeability tables. The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc179514_1371377330">SWLPC</text:a> defines the connate water saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The connate water saturation is defined as the minimum water saturation in a two-phase water relative permeability table. <text:s/>The keyword only applies the scaling to the drainage capillary pressures tables, unlike the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a> keyword that applies the scaling to both the capillary pressure and relative permeability tables. The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table914" table:style-name="Table914">
      <table:table-column table:style-name="Table914.A"/>
      <table:table-column table:style-name="Table914.B"/>
@@ -4277,17 +4277,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3046">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table914.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4605">SWLPC</text:p>
+       <text:p text:style-name="P4605"><text:a xlink:href="#__RefHeading___Toc179514_1371377330">SWLPC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table914.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3220">SWLPC is an array of real numbers assigning the connate water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
-       <text:p text:style-name="P4630">If SWLPC is omitted from the input deck the values will be defaulted to those on the SWL series of keywords. If the SWL series of keywords are missing from the input deck then the values are taken from the cell allocated capillary pressure table.</text:p>
+       <text:p text:style-name="P3220"><text:a xlink:href="#__RefHeading___Toc179514_1371377330">SWLPC</text:a> is an array of real numbers assigning the connate water saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword.</text:p>
+       <text:p text:style-name="P4630">If <text:a xlink:href="#__RefHeading___Toc179514_1371377330">SWLPC</text:a> is omitted from the input deck the values will be defaulted to those on the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a> series of keywords. If the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a> series of keywords are missing from the input deck then the values are taken from the cell allocated capillary pressure table.</text:p>
        <text:p text:style-name="P4055">Repeat counts may be used, for example 30*0.03 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table914.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4621">Taken from SGL or from the cell allocated capillary pressure table.</text:p>
+       <text:p text:style-name="P4621">Taken from <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> or from the cell allocated capillary pressure table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708716070512">
@@ -4309,7 +4309,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1564">Notes:</text:p>
        <text:list xml:id="list105918019536072" text:continue-list="list105917935031757" text:style-name="L98">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19266">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the SWLX± , SWLY± and SWZ± series of keyword should be used.</text:p>
+         <text:p text:style-name="P19266">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLX</text:a>± , <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLY</text:a>± and SWZ± series of keyword should be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19283">The keyword is terminated by a “/”.</text:p>
@@ -4325,7 +4325,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14562">Table <text:sequence text:ref-name="refTable404" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.188</text:sequence>: SWLPC Keyword Description</text:p>
     <text:p text:style-name="P15030"/>
-    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the SWL, SWCR, SWU, SGL, SGCR, SGU, SOWCR, and SOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is SWLX, SWLY and SWLZ instead of SWL or SWLPC. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is SWLX, SWLX-, SWLY, SWLY-, SWLZ and SWLZ-, <text:s/>instead of the SWL or SWLPC keywords.</text:p>
+    <text:p text:style-name="_40_TextBody">End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a>, <text:a xlink:href="#__RefHeading___Toc27248_784232322">SWCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323221">SWU</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a>, <text:a xlink:href="#__RefHeading___Toc20428_784232322">SGCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_784232322">SGU</text:a>, <text:a xlink:href="#__RefHeading___Toc30436_784232322">SOWCR</text:a>, and <text:a xlink:href="#__RefHeading___Toc30434_784232322">SOGCR</text:a> <text:s/>saturation grid arrays for the saturation end-points, and the <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a>, KROG, KROW and <text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a> relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLX</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLY</text:a> and <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a> or <text:a xlink:href="#__RefHeading___Toc179514_1371377330">SWLPC</text:a>. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLX</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLX-</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLY</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLY-</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLZ</text:a> and <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWLZ-</text:a>, <text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc22881_7842323221">SWL</text:a> or <text:a xlink:href="#__RefHeading___Toc179514_1371377330">SWLPC</text:a> keywords.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P11696">M<text:span text:style-name="T2554">issing </text:span>Some F<text:span text:style-name="T2554">unctionality - </text:span>Use with Caution.</text:p>
@@ -4339,7 +4339,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13602">SWLPC</text:p>
     <text:p text:style-name="P13577"><text:s text:c="9"/>300*0.150 <text:s text:c="61"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13079"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15106">The above example defines a constant connate water saturation of 0.15 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15106">The above example defines a constant connate water saturation of 0.15 to all 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P96"/>
     
    </text:section>

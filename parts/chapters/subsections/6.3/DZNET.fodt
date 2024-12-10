@@ -4230,7 +4230,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18396" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715697_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715697_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">DZNET defines the net thickness of all grid blocks in the Z direction via an array for each cell in a Cartesian Regular Grid model.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc272339_1772380413">DZNET</text:a> defines the net thickness of all grid blocks in the Z direction via an array for each cell in a Cartesian Regular Grid model.</text:p>
     <table:table table:name="Table1091" table:style-name="Table1091">
      <table:table-column table:style-name="Table1091.A"/>
      <table:table-column table:style-name="Table1091.B"/>
@@ -4272,17 +4272,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2935">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1091.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3920">DZNET</text:p>
+       <text:p text:style-name="P3920"><text:a xlink:href="#__RefHeading___Toc272339_1772380413">DZNET</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1091.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3205">DZNET is an array of real numbers describing the net thickness in the Z direction for each cell in the model. </text:p>
+       <text:p text:style-name="P3205"><text:a xlink:href="#__RefHeading___Toc272339_1772380413">DZNET</text:a> is an array of real numbers describing the net thickness in the Z direction for each cell in the model. </text:p>
        <text:p text:style-name="P4004">Repeat counts may be used, for example 10*100.0. </text:p>
-       <text:p text:style-name="P4095">If the value for a grid block is not defined then the grid block size (DZ) is assigned to the missing values.</text:p>
+       <text:p text:style-name="P4095">If the value for a grid block is not defined then the grid block size (<text:a xlink:href="#__RefHeading___Toc45769_719036256">DZ</text:a>) is assigned to the missing values.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1091.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4096">DZ</text:p>
+       <text:p text:style-name="P4096"><text:a xlink:href="#__RefHeading___Toc45769_719036256">DZ</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708673450304">
@@ -4304,7 +4304,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1435">Notes:</text:p>
        <text:list xml:id="list105910061821474" text:continue-list="list105911628992086" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19008">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19008">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18906">The keyword is terminated by a “/”.</text:p>
@@ -4320,7 +4320,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14736">Table <text:sequence text:ref-name="refTable105" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.31</text:sequence>: DZNET Keyword Description</text:p>
     <text:p text:style-name="P15560"/>
-    <text:p text:style-name="P15282">See also the DX, DY, DZ, NTG and TOPS keywords to fully define a Cartesian Regular Grid.</text:p>
+    <text:p text:style-name="P15282">See also the <text:a xlink:href="#__RefHeading___Toc92905_705534506">DX</text:a>, <text:a xlink:href="#__RefHeading___Toc45767_719036256">DY</text:a>, <text:a xlink:href="#__RefHeading___Toc45769_719036256">DZ</text:a>, <text:a xlink:href="#__RefHeading___Toc33334_784232322">NTG</text:a> and <text:a xlink:href="#__RefHeading___Toc55283_3701168388">TOPS</text:a> keywords to fully define a Cartesian Regular Grid.</text:p>
     <text:h text:style-name="P18396" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715699_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715699_3964674244"/></text:h>
     <text:p text:style-name="P13035">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13035">-- <text:s text:c="6"/>DEFINE GRID BLOCK Z DIRECTION NET THICKNESS(BASED ON NX x NY x NZ = 300) <text:s text:c="27"/></text:p>
@@ -4328,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13035">DZNET</text:p>
     <text:p text:style-name="P13035"><text:s text:c="9"/>100*15.0 <text:s text:c="2"/>100*25.0 <text:s text:c="2"/>00*45.0 <text:s text:c="41"/>/ <text:s text:c="2"/></text:p>
     <text:p text:style-name="P13035"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15560">The above example defines the net thickness of the cells in the Z direction based on 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15560">The above example defines the net thickness of the cells in the Z direction based on 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15137"/>
     
    </text:section>

@@ -4479,8 +4479,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716187_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716187_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PVZG defines the gas PVT properties for dry gas<text:note text:id="ftn224" text:note-class="footnote"><text:note-citation>224</text:note-citation><text:note-body>
-        <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note> via the gas compressibility factor (z-factor), instead of the gas formation volume factor. If the gas has a constant and uniform vaporized oil concentration, Condensate-Gas Ratio (“CGR”), and if the reservoir pressure never drops below the saturation pressure (dew point pressure), then the model can be run more efficiently by omitting the OIL and VAPOIL keywords from the RUNSPEC section, treating the gas as a dry gas, and defining a constant Rv (CGR) value with keyword RVCONST or RVCONSTT in the PROPS section. This results in the model being run with as a dry gas problem with no active oil (condensate) phase. However, OPM Flow takes into account the constant Rv in the calculations and reporting.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc350298_501926209">PVZG</text:a> defines the gas PVT properties for dry gas<text:note text:id="ftn224" text:note-class="footnote"><text:note-citation>224</text:note-citation><text:note-body>
+        <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note> via the gas compressibility factor (z-factor), instead of the gas formation volume factor. If the gas has a constant and uniform vaporized oil concentration, Condensate-Gas Ratio (“CGR”), and if the reservoir pressure never drops below the saturation pressure (dew point pressure), then the model can be run more efficiently by omitting the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> and <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> keywords from the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, treating the gas as a dry gas, and defining a constant Rv (CGR) value with keyword <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> or <text:a xlink:href="#__RefHeading___Toc138400_3326918171">RVCONSTT</text:a> in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This results in the model being run with as a dry gas problem with no active oil (condensate) phase. However, OPM Flow takes into account the constant Rv in the calculations and reporting.</text:p>
     <text:p text:style-name="P11026">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1473" table:style-name="Table1473">
      <table:table-column table:style-name="Table1473.A"/>
@@ -4523,7 +4523,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5243">1-1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1473.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5244">RTEMP</text:p>
+       <text:p text:style-name="P5244"><text:a xlink:href="#__RefHeading___Toc146399_3544483072">RTEMP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1473.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4667">Single real positive value that defines the reservoir temperature for the data in the following records.</text:p>
@@ -4668,10 +4668,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1677">Notes:</text:p>
        <text:list xml:id="list105915740906722" text:continue-list="list105917096887274" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19893">The keyword is followed by NTPVT data sets as declared on the TABDIMS keyword in the RUNSPEC section and each data set consists of two records, with items 1-1 to 1-2 representing record one items and 2-1 to 2-3 representing record number two items, <text:soft-page-break/>etc., in the “No.” column in this table. </text:p>
+         <text:p text:style-name="P19893">The keyword is followed by NTPVT data sets as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and each data set consists of two records, with items 1-1 to 1-2 representing record one items and 2-1 to 2-3 representing record number two items, <text:soft-page-break/>etc., in the “No.” column in this table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20029">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the TABDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20029">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20029">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4686,7 +4686,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14776">Table <text:sequence text:ref-name="refTable340" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.124</text:sequence>: PVZG Keyword Description</text:p>
-    <text:p text:style-name="_40_TextBody">See also the RVCONST and RVCONSTT keywords to define the constant Rv for dry gas.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> and <text:a xlink:href="#__RefHeading___Toc138400_3326918171">RVCONSTT</text:a> keywords to define the constant Rv for dry gas.</text:p>
     <text:p text:style-name="_40_TextBody">T<text:span text:style-name="T93">he ideal gas law provides a relationship between the pressure, the temperature and the specific volume of an ideal gas </text:span>(pure component)<text:span text:style-name="T93">. This relationship is modified by use of a compressibility factor, Z</text:span><text:span text:style-name="T93"><text:note text:id="ftn225" text:note-class="footnote"><text:note-citation>225</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Standing, M. B.:” Volumetric and Phase Behaviour of Oil Field Hydrocarbon Systems”, Renihold Publishing Corp., New York City (1952).</text:p></text:note-body></text:note></text:span><text:span text:style-name="T93">, to account for deviations, from ideal, </text:span>to the <text:span text:style-name="T93">behavior of real gases. <text:s/></text:span>The PVT relation for a real gas can be defined by:</text:p>
     <table:table table:name="Table1478" table:style-name="Table1478">
@@ -5723,7 +5723,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </draw:image>
      </draw:frame><text:tab/>= gas constant (10.73 or 8.314)</text:p>
     <text:p text:style-name="P15242"/>
-    <text:p text:style-name="P15706">R<text:span text:style-name="T4328">TEMP on this keyword is the </text:span><text:span text:style-name="T4328"><draw:frame draw:style-name="fr66" draw:name="Object858" text:anchor-type="as-char" svg:width="0.482cm" svg:height="0.39cm" draw:z-index="1119"><draw:object>
+    <text:p text:style-name="P15706">R<text:span text:style-name="T4328"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> on this keyword is the </text:span><text:span text:style-name="T4328"><draw:frame draw:style-name="fr66" draw:name="Object858" text:anchor-type="as-char" svg:width="0.482cm" svg:height="0.39cm" draw:z-index="1119"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <mi mathvariant="italic">Ti</mi>
@@ -5819,7 +5819,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14017"><text:s text:c="9"/>3750.0 <text:s text:c="3"/>0.898350 <text:s text:c="4"/>0.0223 <text:s text:c="55"/></text:p>
     <text:p text:style-name="P14017"><text:s text:c="9"/>4000.0 <text:s text:c="3"/>1.025120 <text:s text:c="4"/>0.0277 <text:s text:c="20"/>/ TABLE NO 01 <text:s text:c="13"/></text:p>
     <text:p text:style-name="P15111"/>
-    <text:p text:style-name="_40_TextBody">The above example defines two dry PVZG tables assuming NTPVT equals two and NPPVT is greater than or equal to 17 on the TABDIMS keyword in the RUNSPEC section. There is no terminating “/” for this keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The above example defines two dry <text:a xlink:href="#__RefHeading___Toc350298_501926209">PVZG</text:a> tables assuming NTPVT equals two and NPPVT is greater than or equal to 17 on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. There is no terminating “/” for this keyword.</text:p>
     
    </text:section>
   </office:text>

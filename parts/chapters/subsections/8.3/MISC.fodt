@@ -4254,7 +4254,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716075_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716075_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">MISC defines the transformation between the miscible and immiscible relative permeability models, for when the MISCIBLE and SOLVENT keywords in the RUNSPEC section have been activated. The keyword can only be used with the MISCIBLE option and for when the oil, water, gas and solvent phases are active in the model. </text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc130943_3324804330">MISC</text:a> defines the transformation between the miscible and immiscible relative permeability models, for when the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> and <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section have been activated. The keyword can only be used with the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> option and for when the oil, water, gas and solvent phases are active in the model. </text:p>
     <table:table table:name="Table866" table:style-name="Table866">
      <table:table-column table:style-name="Table866.A"/>
      <table:table-column table:style-name="Table866.B"/>
@@ -4296,7 +4296,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3003">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table866.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4631">SSOL</text:p>
+       <text:p text:style-name="P4631"><text:a xlink:href="#__RefHeading___Toc210160_2884651453">SSOL</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table866.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real monotonically increasing down the column values starting from zero and terminating at one, that defines the solvent fraction with respect to the solvent and gas saturation, and is defined by:</text:p>
@@ -4399,10 +4399,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P16729">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table866.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P16767">MISC</text:p>
+       <text:p text:style-name="P16767"><text:a xlink:href="#__RefHeading___Toc130943_3324804330">MISC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table866.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real equal or increasing down the column values that are greater than or equal to zero and less then one, <text:s/>that define the corresponding miscibility for the corresponding solvent fraction SSOL.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real equal or increasing down the column values that are greater than or equal to zero and less then one, <text:s/>that define the corresponding miscibility for the corresponding solvent fraction <text:a xlink:href="#__RefHeading___Toc210160_2884651453">SSOL</text:a>.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">The first entry in the columnar vector should be zero and the last entry should be one to fully define the miscible-immiscible relationship.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4430,10 +4430,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1515">Notes:</text:p>
        <text:list xml:id="list105915063156547" text:continue-list="list105914319924147" text:style-name="L84">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19874">The keyword is followed by NTMISC tables as declared on the MISCIBLE keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19874">The keyword is followed by NTMISC tables as declared on the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20007">Each table must contain a minimum of two rows and a maximum of NSMISC rows as declared on the MISCIBLE keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20007">Each table must contain a minimum of two rows and a maximum of NSMISC rows as declared on the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20007">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4471,7 +4471,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14004"><text:s text:c="10"/>0.6000 <text:s text:c="4"/>1.0000 <text:s text:c="4"/></text:p>
     <text:p text:style-name="P14004"><text:s text:c="10"/>1.0000 <text:s text:c="4"/>1.0000 <text:s text:c="31"/>/ TABLE NO. 02</text:p>
     <text:p text:style-name="P10924"/>
-    <text:p text:style-name="P11039">The above example defines two solvent miscible-immiscible transform tables assuming NTMISC equals two and NSMISC is greater than or equal to four on the MISCIBLE keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P11039">The above example defines two solvent miscible-immiscible transform tables assuming NTMISC equals two and NSMISC is greater than or equal to four on the <text:a xlink:href="#__RefHeading___Toc61978_4106839650">MISCIBLE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P100"/>
     <text:p text:style-name="_40_TextBody"/>
     

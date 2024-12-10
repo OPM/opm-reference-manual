@@ -4281,7 +4281,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody">Turns on the Constrained Pressure Residual (“CPR”)<text:note text:id="ftn66" text:note-class="footnote"><text:note-citation>66</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Wallis, J. R., Little, T. E., and Nolen, J. S.: &quot;Constrained Residual Acceleration of Conjugate Residual Methods,&quot; paper SPE 13536 presented at the SPE Reservoir Simulation Symposium, Dallas, Texas, USA (February 10-13, 1985).</text:p></text:note-body></text:note>,<text:span text:style-name="T6786"> </text:span><text:span text:style-name="T6786"><text:note text:id="ftn67" text:note-class="footnote"><text:note-citation>67</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">R. Scheichl, M. Roland, J. Wendebourg, Decoupling and block preconditioning for sedimentary basin simulations, Computational Geosciences 7 (2003) 295{318.</text:p></text:note-body></text:note></text:span><text:span text:style-name="T6786"><text:s/></text:span>and <text:note text:id="ftn68" text:note-class="footnote"><text:note-citation>68</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">Klemetsdal, Ø.S., Møyner, O. &amp; Lie, KA. Accelerating multiscale simulation of complex geomodels by use of dynamically adapted basis functions. Comput Geosci 24, 459–476 (2020). https://doi.org/10.1007/s10596-019-9827-z.</text:p></text:note-body></text:note><text:s/>preconditioner linear solver option, and declares how the solver should be applied. <text:s/>The keyword is equivalent to using the OPM Flow command line parameter <text:s/>--linear-solver= “cprw”. Note that if the command line has been used, then this will take precedence over the CPR keyword.</text:p>
+        <text:p text:style-name="Footnote">Klemetsdal, Ø.S., Møyner, O. &amp; Lie, KA. Accelerating multiscale simulation of complex geomodels by use of dynamically adapted basis functions. Comput Geosci 24, 459–476 (2020). https://doi.org/10.1007/s10596-019-9827-z.</text:p></text:note-body></text:note><text:s/>preconditioner linear solver option, and declares how the solver should be applied. <text:s/>The keyword is equivalent to using the OPM Flow command line parameter <text:s/>--linear-solver= “cprw”. Note that if the command line has been used, then this will take precedence over the <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> keyword.</text:p>
     <table:table table:name="Table2130" table:style-name="Table2130">
      <table:table-column table:style-name="Table2130.A"/>
      <table:table-column table:style-name="Table2130.B"/>
@@ -4309,13 +4309,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5406">CPROPTN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2130.C2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines how the CPR linear solver should be applied, and should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines how the <text:span text:style-name="NOT_KEYWORD">CPR</text:span> linear solver should be applied, and should be set to one of the following:</text:p>
        <text:list xml:id="list105908332116787" text:continue-list="list105909999375172" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P16992">ORIGINAL: Here the solver is applied for the whole of the simulation. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">ADAPTIVE: This option applies the more <text:span text:style-name="T2110">computational</text:span> demanding CPR linear solver, only in parts of the run that would benefit from its use, for example when linear convergence is challenging.</text:p>
+         <text:p text:style-name="P16992">ADAPTIVE: This option applies the more <text:span text:style-name="T2110">computational</text:span> demanding <text:span text:style-name="NOT_KEYWORD">CPR</text:span> linear solver, only in parts of the run that would benefit from its use, for example when linear convergence is challenging.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P1131">Note that OPM Flow only supports the ORIGINAL option, which is the default value in OPM Flow, whereas the default value in the commercial simulator is ADAPTIVE. .</text:p>
@@ -4349,7 +4349,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13535">/ <text:s/></text:p>
     <text:p text:style-name="P13535"><text:s text:c="60"/></text:p>
     <text:p text:style-name="P12517">The above example activates the Constrained Pressure Residual preconditioner linear solver using the default option, that is the ORIGINAL option for OPM Flow. </text:p>
-    <text:p text:style-name="P12517"><text:soft-page-break/>To enable the CPR preconditioner linear solver option using the command line parameter, use:</text:p>
+    <text:p text:style-name="P12517"><text:soft-page-break/>To enable the <text:span text:style-name="NOT_KEYWORD">CPR</text:span> preconditioner linear solver option using the command line parameter, use:</text:p>
     <text:p text:style-name="P12517"/>
     <text:p text:style-name="P16804">flow --linear-solver=&quot;cpr&quot; CASENAME.DATA </text:p>
     <text:p text:style-name="Text_20_body"/>

@@ -4250,7 +4250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683883111"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683883111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SGOF keyword defines the oil and gas relative permeability and oil-gas capillary versus gas saturation tables for when oil and gas are present in the input deck. <text:s/>This keyword should only be used if both oil and gas are present in the run.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a> keyword defines the oil and gas relative permeability and oil-gas capillary versus gas saturation tables for when oil and gas are present in the input deck. <text:s/>This keyword should only be used if both oil and gas are present in the run.</text:p>
     <table:table table:name="Table482" table:style-name="Table482">
      <table:table-column table:style-name="Table482.A"/>
      <table:table-column table:style-name="Table482.B"/>
@@ -4292,7 +4292,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3035">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table482.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4635">SGAS</text:p>
+       <text:p text:style-name="P4635"><text:a xlink:href="#__RefHeading___Toc137369_1317547213">SGAS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table482.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4394">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values starting from zero and terminating at one, that defines the gas saturation.</text:p>
@@ -4322,7 +4322,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3035">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table482.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4648">KRG</text:p>
+       <text:p text:style-name="P4648"><text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table482.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4395">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the gas relative permeability.</text:p>
@@ -4352,11 +4352,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4464">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table482.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4471">KRO</text:p>
+       <text:p text:style-name="P4471"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table482.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4380">A columnar vector of real values that are either equal or decreasing down the column and that are greater than or equal to zero and less than or equal to one that defines the oil relative permeability with respect to gas and connate water saturation.</text:p>
-       <text:p text:style-name="P4472">When water is active in the run, the first entry the column, that is at krog(Sg = 0), must be the same as the first entry in the corresponding SWOF <text:s/>table, that is at krow(So = 1 - Swco). </text:p>
+       <text:p text:style-name="P4472">When water is active in the run, the first entry the column, that is at krog(Sg = 0), must be the same as the first entry in the corresponding <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a> <text:s/>table, that is at krow(So = 1 - Swco). </text:p>
        <text:p text:style-name="P4473">The last value in the column should be zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4414,10 +4414,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1550">Notes:</text:p>
        <text:list xml:id="list105917839273743" text:continue-list="list105916678860190" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19866">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19866">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19999">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19999">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19998">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4434,7 +4434,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14697">Table <text:sequence text:ref-name="refTable367" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.151</text:sequence>: SGOF Keyword Description</text:p>
     <text:p text:style-name="P10921"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683883011"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683883011"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following example is based on NTSFUN equals two on the TABDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody">The following example is based on NTSFUN equals two on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P13309">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P13309">-- <text:s text:c="6"/>GAS-OIL RELATIVE PERMEABILITY TABLES (SGOF) <text:s text:c="65"/></text:p>
     <text:p text:style-name="P13309">SGOF</text:p>
@@ -4482,7 +4482,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13309"><text:s text:c="9"/>0.50000 <text:s text:c="2"/>0.800000 <text:s/>0.00000 <text:s text:c="3"/>0.0000</text:p>
     <text:p text:style-name="P13309"><text:s text:c="9"/>0.80000 <text:s text:c="2"/>0.900000 <text:s/>0.00000 <text:s text:c="3"/>0.0000 <text:s text:c="12"/>/ TABLE No. 02 </text:p>
     <text:p text:style-name="P11491"/>
-    <text:p text:style-name="P11491">The example defines two SGOF tables for use when oil, gas and water are present in the run.</text:p>
+    <text:p text:style-name="P11491">The example defines two <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a> tables for use when oil, gas and water are present in the run.</text:p>
     <text:p text:style-name="P11491"/>
     
    </text:section>

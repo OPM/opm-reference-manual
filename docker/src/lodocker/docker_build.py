@@ -6,20 +6,20 @@ import click
 import colorama
 
 from lodocker.colors import green_color
-from lodocker.helpers import ClickHelpers, Helpers
+from lodocker import helpers, click_helpers
 
 def get_dev_build_command(dockerfile_dirname: str):
-    build_type = Helpers.user_input(
+    build_type = helpers.user_input(
         options=["debug", "release"],
         prompt="Please select a build type",
         default="debug",
     )
-    git_tag_name = Helpers.user_input(
+    git_tag_name = helpers.user_input(
         prompt="Please select a git tag name",
         default="libreoffice-7.6.5.1",
         custom_value=True,
     )
-    tag_name = Helpers.get_tag_name_from_docker_dirname(dockerfile_dirname)
+    tag_name = helpers.get_tag_name_from_docker_dirname(dockerfile_dirname)
     if tag_name is None:
         logging.error("Aborting docker build.")
         return
@@ -35,7 +35,7 @@ def get_dev_build_command(dockerfile_dirname: str):
 @click.command()
 @click.option(
     '--dir', 'dockerfile_dirname',
-    callback=ClickHelpers.directory_callback,
+    callback=click_helpers.directory_callback,
     expose_value=True,
     is_eager=False,
     prompt=False,
@@ -45,17 +45,17 @@ def get_dev_build_command(dockerfile_dirname: str):
 def build_docker_image(dockerfile_dirname: str):
     logging.basicConfig(level=logging.INFO)
     colorama.init(autoreset=True)
-    if Helpers.is_dev_container(dockerfile_dirname):
+    if helpers.is_dev_container(dockerfile_dirname):
         command, tag_name = get_dev_build_command(dockerfile_dirname)
     else:
-        tag_name = Helpers.get_tag_name_from_docker_dirname(dockerfile_dirname)
+        tag_name = helpers.get_tag_name_from_docker_dirname(dockerfile_dirname)
         if tag_name is None:
             logging.error("Aborting docker build.")
             return
         dockerfile = Path("docker_files") / dockerfile_dirname / "Dockerfile"
         command = ["docker", "build", "-f", str(dockerfile), "-t", tag_name, "."]
     command_str = " ".join(command)
-    exit_code = Helpers.run_command(command)
+    exit_code = helpers.run_command(command)
     if exit_code == 0:
         logging.info(f"docker build for tag {tag_name} was successful.")
     else:

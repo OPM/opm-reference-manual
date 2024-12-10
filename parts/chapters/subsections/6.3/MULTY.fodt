@@ -4214,8 +4214,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18427" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715779_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715779_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">MULTY multiples the transmissibility between two cell faces in the +Y direction for all the cells in the model via an array, that is the keyword sets the transmissibility multiplier of block (I, J, K) between the cells (I, J, K) and (I, J+1, K). </text:p>
-    <text:p text:style-name="_40_TextBody">An alternative to defining the complete array is to use the BOX keyword to define an area of the grid and then use the MULTY keyword to set the multipliers just for the area defined by the BOX keyword (see the example).</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a> multiples the transmissibility between two cell faces in the +Y direction for all the cells in the model via an array, that is the keyword sets the transmissibility multiplier of block (I, J, K) between the cells (I, J, K) and (I, J+1, K). </text:p>
+    <text:p text:style-name="_40_TextBody">An alternative to defining the complete array is to use the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword to define an area of the grid and then use the <text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a> keyword to set the multipliers just for the area defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword (see the example).</text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used for all grid types, except for the Radial Grid geometry. </text:p>
     <table:table table:name="Table360" table:style-name="Table360">
      <table:table-column table:style-name="Table360.A"/>
@@ -4241,10 +4241,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2959">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table360.A2" office:value-type="string">
-       <text:p text:style-name="P4225">MULTY+</text:p>
+       <text:p text:style-name="P4225"><text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a>+</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table360.A2" office:value-type="string">
-       <text:p text:style-name="P4230">MULTY+ is an array of real positive numbers assigning the transmissibility multipliers in the +Y direction to each cell face in the model. </text:p>
+       <text:p text:style-name="P4230"><text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a>+ is an array of real positive numbers assigning the transmissibility multipliers in the +Y direction to each cell face in the model. </text:p>
        <text:p text:style-name="P4020">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table360.D2" office:value-type="string">
@@ -4256,7 +4256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1468">Notes:</text:p>
        <text:list xml:id="list105910991151219" text:continue-list="list105910532099253" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19007">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18904">The keyword is terminated by a “/”.</text:p>
@@ -4270,7 +4270,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14628">Table <text:sequence text:ref-name="refTable158" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.84</text:sequence>: MULTY Keyword Description</text:p>
     <text:p text:style-name="P15455"/>
-    <text:p text:style-name="P15294">See also the MULTY-, MULTX, MULTX-, MULTZ and MULTZ- keywords for scaling transmissible between grid cells.</text:p>
+    <text:p text:style-name="P15294">See also the <text:a xlink:href="#__RefHeading___Toc80289_17781729791">MULTY-</text:a>, <text:a xlink:href="#__RefHeading___Toc99847_2023071304">MULTX</text:a>, <text:a xlink:href="#__RefHeading___Toc80285_17781729791">MULTX-</text:a>, <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> and <text:a xlink:href="#__RefHeading___Toc80293_17781729791">MULTZ-</text:a> keywords for scaling transmissible between grid cells.</text:p>
     <text:h text:style-name="P18427" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715781_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715781_3964674244"/></text:h>
     <text:p text:style-name="P13829">--</text:p>
     <text:p text:style-name="P13829">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS</text:p>
@@ -4289,7 +4289,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13913">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13913">ENDBOX <text:s text:c="8"/></text:p>
     <text:p text:style-name="P15128"/>
-    <text:p text:style-name="P15128">The above example defines a 0.3 scaling multiplier for the 18 cells defined by the preceding BOX statement. The ENDBOX keyword resets the input box to the full grid.</text:p>
+    <text:p text:style-name="P15128">The above example defines a 0.3 scaling multiplier for the 18 cells defined by the preceding <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement. The <text:a xlink:href="#__RefHeading___Toc99903_2023071304">ENDBOX</text:a> keyword resets the input box to the full grid.</text:p>
     
    </text:section>
   </office:text>

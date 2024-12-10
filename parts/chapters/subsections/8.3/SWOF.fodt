@@ -4262,7 +4262,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683883111111"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683883111111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SWOF keyword defines the water and oil relative permeability and water-oil capillary pressure data versus water saturation tables for when water and oil are present in the input deck. <text:s/>This keyword should only be used if water and oil are present in the run.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a> keyword defines the water and oil relative permeability and water-oil capillary pressure data versus water saturation tables for when water and oil are present in the input deck. <text:s/>This keyword should only be used if water and oil are present in the run.</text:p>
     <table:table table:name="Table502" table:style-name="Table502">
      <table:table-column table:style-name="Table502.A"/>
      <table:table-column table:style-name="Table502.B"/>
@@ -4304,7 +4304,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3047">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4642">SWAT</text:p>
+       <text:p text:style-name="P4642"><text:a xlink:href="#__RefHeading___Toc137373_1317547213">SWAT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4404">A columnar vector of real monotonically increasing down the column values starting from zero and terminating at one, that defines the water saturation.</text:p>
@@ -4335,7 +4335,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4460">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4486">KRW</text:p>
+       <text:p text:style-name="P4486"><text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4387">A columnar vector of real values that are either equal or increasing down the column and that are greater than or equal to zero and less than or equal to one that defines the water relative permeability with respect to gas saturation.</text:p>
@@ -4366,11 +4366,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4843">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4846">KRO</text:p>
+       <text:p text:style-name="P4846"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4387">A columnar vector of real values that are either equal or decreasing down the column and that are greater than or equal to zero and less than or equal to one that defines the oil relative permeability with respect to oil and water saturation.</text:p>
-       <text:p text:style-name="P4480">When gas is active in the run, the first entry the column, that is at krow(So = 1-Swc), must be the same as the first entry in the corresponding SGOF or SLGOF table, that is at krog(Sg = 0). </text:p>
+       <text:p text:style-name="P4480">When gas is active in the run, the first entry the column, that is at krow(So = 1-Swc), must be the same as the first entry in the corresponding <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a> or <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> table, that is at krog(Sg = 0). </text:p>
        <text:p text:style-name="P4480">The first value in the column should be one.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4402,7 +4402,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table502.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4404">A columnar vector of real values that are either equal or decreasing down the column that defines the water-oil relative capillary pressure.</text:p>
-       <text:p text:style-name="P4462">If the SWATINIT keyword has been used to initialize the model then columnar vector has to be strictly monotonically increasing.</text:p>
+       <text:p text:style-name="P4462">If the <text:a xlink:href="#__RefHeading___Toc323952_1728001293">SWATINIT</text:a> keyword has been used to initialize the model then columnar vector has to be strictly monotonically increasing.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4429,10 +4429,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1565">Notes:</text:p>
        <text:list xml:id="list105916447265414" text:continue-list="list105917514995485" text:style-name="L18">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19871">The keyword is followed by NTSFUN tables as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19871">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20004">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as <text:soft-page-break/>declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20004">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as <text:soft-page-break/>declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19998">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4449,7 +4449,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14703">Table <text:sequence text:ref-name="refTable405" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.189</text:sequence>: SWOF Keyword Description</text:p>
     <text:p text:style-name="P11499"/>
     <text:h text:style-name="P18767" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683883011111"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683883011111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following example is <text:span text:style-name="T1">based on NTSFUN equals two on the TABDIMS keyword in the RUNSPEC section.</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">The following example is <text:span text:style-name="T1">based on NTSFUN equals two on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:span></text:p>
     <text:p text:style-name="P14035">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P14035">-- <text:s text:c="6"/>WATER-OIL RELATIVE PERMEABILITY TABLES (SWOF) <text:s text:c="65"/></text:p>
     <text:p text:style-name="P14035">-- </text:p>
@@ -4506,7 +4506,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14035"><text:s text:c="9"/>0.699099 <text:s text:c="2"/>0.4973 <text:s text:c="3"/>0.0000 <text:s text:c="3"/>0.000000</text:p>
     <text:p text:style-name="P14035"><text:s text:c="9"/>0.700000 <text:s text:c="2"/>0.5000 <text:s text:c="3"/>0.0000 <text:s text:c="3"/>0.000000</text:p>
     <text:p text:style-name="P14035"><text:s text:c="9"/>1.000000 <text:s text:c="2"/>0.9000 <text:s text:c="3"/>0.0000 <text:s text:c="3"/>0.000000 <text:s text:c="10"/>/ TABLE NO. 01</text:p>
-    <text:p text:style-name="P12460">The example defines two SWOF tables for use when water and oil are present in the run. In the tables the water-oil capillary pressure data has been set to zero.</text:p>
+    <text:p text:style-name="P12460">The example defines two <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a> tables for use when water and oil are present in the run. In the tables the water-oil capillary pressure data has been set to zero.</text:p>
     
    </text:section>
   </office:text>

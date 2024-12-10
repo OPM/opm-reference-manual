@@ -4220,7 +4220,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18475" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc31080_78423232211"/>Description<text:bookmark-end text:name="__RefHeading___Toc31080_78423232211"/></text:h>
-    <text:p text:style-name="_40_TextBody">ISGLPC defines the imbibition connate gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the ENDSCALE keyword in the RUNSPEC section and the hysteresis model option has been activated on the SATOPTS keyword in the RUNSPEC section. The connate gas saturation is defined as the minimum gas saturation in a two-phase gas relative permeability table. <text:s/>The keyword only applies the scaling to the imbibition capillary pressures tables, unlike the ISGL keyword that applies the scaling to both the capillary pressure and relative permeability tables. The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc170134_1371377330">ISGLPC</text:a> defines the imbibition connate gas saturation for all the cells in the model via an array when the end-point scaling option has been invoked via the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and the hysteresis model option has been activated on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The connate gas saturation is defined as the minimum gas saturation in a two-phase gas relative permeability table. <text:s/>The keyword only applies the scaling to the imbibition capillary pressures tables, unlike the <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGL</text:a> keyword that applies the scaling to both the capillary pressure and relative permeability tables. The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table912" table:style-name="Table912">
      <table:table-column table:style-name="Table912.A"/>
      <table:table-column table:style-name="Table912.B"/>
@@ -4262,17 +4262,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2994">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table912.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4597">ISGLPC</text:p>
+       <text:p text:style-name="P4597"><text:a xlink:href="#__RefHeading___Toc170134_1371377330">ISGLPC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table912.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3212">ISGLPC is an array of real numbers assigning the connate gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword.</text:p>
-       <text:p text:style-name="P4628">If ISGLPC is omitted from the input deck the values will be defaulted to those on the ISGL series of keywords. If the ISGL series of keywords are missing from the input deck then the values are taken from the cell allocated capillary pressure table.</text:p>
+       <text:p text:style-name="P3212"><text:a xlink:href="#__RefHeading___Toc170134_1371377330">ISGLPC</text:a> is an array of real numbers assigning the connate gas saturation values to each cell in the model. The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword.</text:p>
+       <text:p text:style-name="P4628">If <text:a xlink:href="#__RefHeading___Toc170134_1371377330">ISGLPC</text:a> is omitted from the input deck the values will be defaulted to those on the <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGL</text:a> series of keywords. If the <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGL</text:a> series of keywords are missing from the input deck then the values are taken from the cell allocated capillary pressure table.</text:p>
        <text:p text:style-name="P4040">Repeat counts may be used, for example 30*0.03 </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table912.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4613">Taken from SGL or from the cell allocated capillary pressure table.</text:p>
+       <text:p text:style-name="P4613">Taken from <text:a xlink:href="#__RefHeading___Toc22881_784232322">SGL</text:a> or from the cell allocated capillary pressure table.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708700764976">
@@ -4294,13 +4294,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1506">Notes:</text:p>
        <text:list xml:id="list105915825171561" text:continue-list="list105915375360508" text:style-name="L88">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17036">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P17036">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17036">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17036">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the ISGLX± , ISGLY± and ISGZ± series of keywords should be used. </text:p>
+         <text:p text:style-name="P17036">Note this the directional independent version of the connate gas saturation array used with the end-point scaling option. If directional end-point scaling has been activated then the <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLX</text:a>± , <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLY</text:a>± and ISGZ± series of keywords should be used. </text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4313,7 +4313,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14564">Table <text:sequence text:ref-name="refTable281" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.65</text:sequence>: ISGLPC Keyword Description</text:p>
     <text:p text:style-name="P15032"/>
-    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the ISWL, ISWCR, ISWU, ISGL, ISGCR, ISGU, ISOWCR, and ISOGCR <text:s/>saturation grid arrays for the saturation end-points, and the KRG, KROG, KROW and KRW relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is ISGLX, ISGLY and ISGLZ instead of ISGL or ISGLPC. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is ISGLX, ISGLX-, ISGLY, ISGLY-, ISGLZ and ISGLZ-, <text:s/>instead of the ISGL or ISGLPC keywords.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>End-point scaling allows the entered relative permeability functions to be re-scaled based on the saturation end-points allocated to each cell by the <text:a xlink:href="#__RefHeading___Toc22881_78423232211">ISWL</text:a>, <text:a xlink:href="#__RefHeading___Toc27248_7842323221">ISWCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_78423232211">ISWU</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGL</text:a>, <text:a xlink:href="#__RefHeading___Toc64693_2379415017">ISGCR</text:a>, <text:a xlink:href="#__RefHeading___Toc22883_7842323222">ISGU</text:a>, <text:a xlink:href="#__RefHeading___Toc30436_7842323221">ISOWCR</text:a>, and <text:a xlink:href="#__RefHeading___Toc30434_7842323221">ISOGCR</text:a> <text:s/>saturation grid arrays for the saturation end-points, and the <text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a>, KROG, KROW and <text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a> relative permeability grid cell arrays for the relative permeability end-point data. In addition end-point scaling may be directional dependent in which case the directional dependent versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLX</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLY</text:a> and <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLZ</text:a> instead of <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGL</text:a> or <text:a xlink:href="#__RefHeading___Toc170134_1371377330">ISGLPC</text:a>. There is also the facility to make the directional end-point scaling reversible or non-reversible and if the non-reversible option is selected the non-reversible versions of the aforementioned arrays should be used, that is <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLX</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLX-</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLY</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLY-</text:a>, <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLZ</text:a> and <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGLZ-</text:a>, <text:s/>instead of the <text:a xlink:href="#__RefHeading___Toc22881_7842323222">ISGL</text:a> or <text:a xlink:href="#__RefHeading___Toc170134_1371377330">ISGLPC</text:a> keywords.</text:p>
     <text:p text:style-name="P11696">M<text:span text:style-name="T2554">issing </text:span>Some F<text:span text:style-name="T2554">unctionality - </text:span>Use with Caution.</text:p>
     <text:p text:style-name="P11790"/>
     <text:h text:style-name="P18707" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc31082_78423232211"/>Example<text:bookmark-end text:name="__RefHeading___Toc31082_78423232211"/></text:h>
@@ -4323,7 +4323,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13564">ISGLPC</text:p>
     <text:p text:style-name="P13564"><text:s text:c="9"/>300*0.030 <text:s text:c="58"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13066"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="_40_TextBody">The above example defines a constant connate gas saturation of 0.03 to all 300 cells in the model as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody">The above example defines a constant connate gas saturation of 0.03 to all 300 cells in the model as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P98"/>
     
    </text:section>

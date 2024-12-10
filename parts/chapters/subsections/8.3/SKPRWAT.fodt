@@ -4332,8 +4332,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18497" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716815_39646742441211"/>Description<text:bookmark-end text:name="__RefHeading___Toc716815_39646742441211"/></text:h>
-    <text:p text:style-name="P12624">This keyword, SKPRWAT, describes the relationship of a water injection well&apos;s injected water skin pressure as a function of water throughput and water velocity, for the simulator&apos;s Polymer Molecular Weight Transport option. The table is a two dimensional table that relates the water throughput values and water velocity values to derive the resulting wellbore skin pressure of the injected water, which is then used to calculate the total wellbore skin pressure based on the polymer concentration.</text:p>
-    <text:p text:style-name="P12624">This keyword should only be used if the POLYMER and POLYMW keywords in the RUNSPEC section are also activated. </text:p>
+    <text:p text:style-name="P12624">This keyword, <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a>, describes the relationship of a water injection well&apos;s injected water skin pressure as a function of water throughput and water velocity, for the simulator&apos;s Polymer Molecular Weight Transport option. The table is a two dimensional table that relates the water throughput values and water velocity values to derive the resulting wellbore skin pressure of the injected water, which is then used to calculate the total wellbore skin pressure based on the polymer concentration.</text:p>
+    <text:p text:style-name="P12624">This keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> and <text:a xlink:href="#__RefHeading___Toc38609_22671168971">POLYMW</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section are also activated. </text:p>
     <table:table table:name="Table2249" table:style-name="Table2249">
      <table:table-column table:style-name="Table2249.A"/>
      <table:table-header-rows>
@@ -4393,7 +4393,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9974">SKPRWNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2250.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7862">A positive integer value greater than zero and less than or equal to the NTSKWAT variable, as defined on the PINTDIMS keyword in the RUNSPEC section, that defines the SKPRWAT Polymer Molecular Weight Model water injection skin pressure table number.</text:p>
+       <text:p text:style-name="P7862">A positive integer value greater than zero and less than or equal to the NTSKWAT variable, as defined on the <text:a xlink:href="#__RefHeading___Toc637730_5168988431">PINTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> Polymer Molecular Weight Model water injection skin pressure table number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4499,7 +4499,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1823">Notes:</text:p>
        <text:list xml:id="list105917519778845" text:continue-list="list105916649624016" text:style-name="L91">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19136">The keyword should be terminated by a “/”, but may be repeated up to NTSKWAT times, as per the PINTDIMS keyword in the RUNSPEC section, to allow for the input of multiple tables.</text:p>
+         <text:p text:style-name="P19136">The keyword should be terminated by a “/”, but may be repeated up to NTSKWAT times, as per the <text:a xlink:href="#__RefHeading___Toc637730_5168988431">PINTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, to allow for the input of multiple tables.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4512,13 +4512,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14962">Table <text:sequence text:ref-name="refTable373" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.157</text:sequence>: SKPRWAT Keyword Description</text:p>
     <text:p text:style-name="P15772"/>
-    <text:p text:style-name="P12621">Unlike other PROPS section table keywords, that enable multiple tables following the keyword to be entered, the SKPRWAT keyword requires that the keyword itself must be repeated for each table, as is shown in the example on the following page.</text:p>
-    <text:p text:style-name="P12613">The WSKPTAB keyword in the SCHEDULE section may be used to assign the SKPRPOLY<text:span text:style-name="T1"> and </text:span>SKPRWAT<text:span text:style-name="T1"> tables to water injections wells, that enable the calculation of the wellbore skin pressure based on the fluids being injected.</text:span></text:p>
-    <text:p text:style-name="P12624">See also the SKPRPOLY, PLYMWINJ, and PLYVMH keywords, in the PROPS section, that are the additional property keywords required for the Polymer Molecular Weight Transport option. In addition, see also the WPMITAB keyword in the SCHEDULE section, that assigns the PLYMWINJ tables to the water injection wells. </text:p>
-    <text:p text:style-name="P12604">Note that the standard polymer property data keywords: PLYROCK, PLYADS, PLYMAX, etc., are still required to fully describe the polymer fluid. <text:s/></text:p>
+    <text:p text:style-name="P12621">Unlike other <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section table keywords, that enable multiple tables following the keyword to be entered, the <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> keyword requires that the keyword itself must be repeated for each table, as is shown in the example on the following page.</text:p>
+    <text:p text:style-name="P12613">The <text:a xlink:href="#__RefHeading___Toc121649_241258616011">WSKPTAB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section may be used to assign the <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a><text:span text:style-name="T1"> and </text:span><text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a><text:span text:style-name="T1"> tables to water injections wells, that enable the calculation of the wellbore skin pressure based on the fluids being injected.</text:span></text:p>
+    <text:p text:style-name="P12624">See also the <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a>, <text:a xlink:href="#__RefHeading___Toc473331_2124352571">PLYMWINJ</text:a>, and <text:a xlink:href="#__RefHeading___Toc473331_21243525712">PLYVMH</text:a> keywords, in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that are the additional property keywords required for the Polymer Molecular Weight Transport option. In addition, see also the <text:a xlink:href="#__RefHeading___Toc121649_24125861601">WPMITAB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, that assigns the <text:a xlink:href="#__RefHeading___Toc473331_2124352571">PLYMWINJ</text:a> tables to the water injection wells. </text:p>
+    <text:p text:style-name="P12604">Note that the standard polymer property data keywords: <text:a xlink:href="#__RefHeading___Toc110216_2939291539">PLYROCK</text:a>, <text:a xlink:href="#__RefHeading___Toc121087_57619843">PLYADS</text:a>, <text:a xlink:href="#__RefHeading___Toc110214_2939291539">PLYMAX</text:a>, etc., are still required to fully describe the polymer fluid. <text:s/></text:p>
     <text:p text:style-name="P11681"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716817_39646742441211"/>Example<text:bookmark-end text:name="__RefHeading___Toc716817_39646742441211"/></text:h>
-    <text:p text:style-name="P11349">Given NTSKWAT equals two on the PINTDIMS keyword in the RUNSPEC section, <text:s/>then two SKPRWAT tables are required to be entered:</text:p>
+    <text:p text:style-name="P11349">Given NTSKWAT equals two on the <text:a xlink:href="#__RefHeading___Toc637730_5168988431">PINTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>then two <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> tables are required to be entered:</text:p>
     <text:p text:style-name="P13352">--</text:p>
     <text:p text:style-name="P13352">-- <text:s text:c="6"/>POLYMER MOLECULAR WEIGHT MODEL WATER INJECTION SKIN TABLE </text:p>
     <text:p text:style-name="P13352">-- <text:s text:c="6"/>(OPM FLOW PROPS KEYWORD)</text:p>
@@ -4558,7 +4558,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13352"><text:s text:c="9"/>0.0 <text:s text:c="4"/>50.0 <text:s text:c="3"/>100.0 <text:s text:c="2"/>200.0 / PRESS(THRUPUT=3, VELOCITY=1 TO N)</text:p>
     <text:p text:style-name="P13352">/ <text:s text:c="16"/></text:p>
     <text:p text:style-name="P13352"><text:s text:c="6"/></text:p>
-    <text:p text:style-name="P11680">As mentioned previously, the SKPRWAT keyword requires that the keyword itself must be repeated for each table, as is shown in the above example.</text:p>
+    <text:p text:style-name="P11680">As mentioned previously, the <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> keyword requires that the keyword itself must be repeated for each table, as is shown in the above example.</text:p>
     <text:p text:style-name="P11238"/>
     
    </text:section>

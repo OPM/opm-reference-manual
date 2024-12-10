@@ -7,26 +7,26 @@ import fodt.string_functions
 from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
 from fodt.create_subdocument import CreateSubDocument2
 from fodt.extract_subsections import ExtractSubSections
-from fodt.helpers import Helpers
+from fodt import helpers
 from fodt.remove_subsections import RemoveSubSections
 
 class Splitter():
     def __init__(self, maindir: str, keyword_dir: str, chapter: int, section: int) -> None:
         self.chapter = chapter
         self.section = section
-        self.maindir = Helpers.get_maindir(maindir)
-        self.keyword_dir = Helpers.get_keyword_dir(keyword_dir, self.maindir)
+        self.maindir = helpers.get_maindir(maindir)
+        self.keyword_dir = helpers.get_keyword_dir(keyword_dir)
         self.metadata_dir = self.maindir / Directories.meta
         assert self.maindir.is_dir()
 
     def create_backup_main_document(self) -> None:
-        self.source_file = Helpers.create_backup_document(self.filename)
+        self.source_file = helpers.create_backup_document(self.filename)
 
     def create_main_document(self) -> None:
         logging.info(f"Creating main document in {self.outputdir}.")
         self.destfile = self.outputdir / self.filename.name
         self.create_backup_main_document()
-        replace_callback = Helpers.replace_section_callback
+        replace_callback = helpers.replace_section_callback
         remover = RemoveSubSections(
             self.source_file,
             self.destfile,
