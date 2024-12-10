@@ -4343,8 +4343,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P38" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716483_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716483_3964674244"/></text:h>
     <text:p text:style-name="P64">This keyword defines the initial reservoir temperature for each cell in the model. The keyword is used to explicitly define the initial reservoir temperature via the Enumeration Initialization method rather than defining a uniform initial temperature or defining temperature versus depth tables.</text:p>
-    <text:p text:style-name="P64">The initial reservoir temperature must be defined when OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC section. Note this is different to the commercial simulator that uses the TEMP keyword in the RUNSPEC section to activate the black-oil temperature model, and the THERMAL keyword to activate the compositional thermal model.</text:p>
-    <text:p text:style-name="P64">The initial reservoir temperature should be defined when OPM Flow’s CO<text:span text:style-name="T37">2</text:span> or H<text:span text:style-name="T37">2</text:span> storage option has been activated by the CO2STORE or H2STORE keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P64">The initial reservoir temperature must be defined when OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note this is different to the commercial simulator that uses the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the black-oil temperature model, and the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword to activate the compositional thermal model.</text:p>
+    <text:p text:style-name="P64">The initial reservoir temperature should be defined when OPM Flow’s CO<text:span text:style-name="T37">2</text:span> or H<text:span text:style-name="T37">2</text:span> storage option has been activated by the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="_40_TextBody">The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table795" table:style-name="Table795">
      <table:table-column table:style-name="Table795.A"/>
@@ -4387,10 +4387,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P25">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table795.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P31">TEMPI</text:p>
+       <text:p text:style-name="P31"><text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table795.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P26">TEMPI is an array of real positive numbers assigning the initial temperature to each cell in the model. </text:p>
+       <text:p text:style-name="P26"><text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a> is an array of real positive numbers assigning the initial temperature to each cell in the model. </text:p>
        <text:p text:style-name="P29">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4418,7 +4418,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P68">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P68">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P69">The keyword is terminated by a “/”.</text:p>
@@ -4434,7 +4434,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P35">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.58</text:sequence>: TEMPI Keyword Description</text:p>
     <text:p text:style-name="P36"/>
-    <text:p text:style-name="P30">See also the RTEMP keyword in the PROPS section and the RTEMPVD keyword in the SOLUTION section for alternative ways to initialize the model’s initial temperature.</text:p>
+    <text:p text:style-name="P30">See also the <text:a xlink:href="#__RefHeading___Toc146399_3544483072">RTEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section and the <text:a xlink:href="#__RefHeading___Toc108628_2939291539">RTEMPVD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section for alternative ways to initialize the model’s initial temperature.</text:p>
     <text:h text:style-name="P38" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716485_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716485_3964674244"/></text:h>
     <text:p text:style-name="P33">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P34">-- <text:s text:c="6"/>DEFINE GRID BLOCK TEMPERATURE FOR ALL CELLS </text:p>
@@ -4443,7 +4443,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P33">TEMPI</text:p>
     <text:p text:style-name="P33"><text:s text:c="9"/>100*212.0 <text:s text:c="2"/>100*215.0 <text:s text:c="2"/>100*220.0 <text:s text:c="36"/>/</text:p>
     <text:p text:style-name="P33"><text:s text:c="60"/></text:p>
-    <text:p text:style-name="P39">The above example defines the initial temperature to be 212.0, 215.0, and 220.0 oF for the first, second and third layers in the model for all 300 cells, as defined by the DIMENS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P39">The above example defines the initial temperature to be 212.0, 215.0, and 220.0 oF for the first, second and third layers in the model for all 300 cells, as defined by the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P39"/>
    </text:section>
   </office:text>

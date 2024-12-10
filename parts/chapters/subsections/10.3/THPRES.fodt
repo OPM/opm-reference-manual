@@ -4290,8 +4290,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716487_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716487_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The THPRES defines the threshold pressure between various equilibration regions that have been defined by the EQLNUM keyword in the REGIONS section. The threshold pressure defines the potential difference between two regions which must be exceeded before flow can occur between the two regions. Once flow occurs the potential between the two regions is reduced by the threshold pressure. </text:p>
-    <text:p text:style-name="_40_TextBody">This option must be activated by THPRES variable on EQLOPTS keyword in the RUNSPEC section in order to utilize this feature. Note that the irreversible option, as defined by IRREVER variable on EQLOPTS keyword in the RUNSPEC section, is not supported.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> defines the threshold pressure between various equilibration regions that have been defined by the <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section. The threshold pressure defines the potential difference between two regions which must be exceeded before flow can occur between the two regions. Once flow occurs the potential between the two regions is reduced by the threshold pressure. </text:p>
+    <text:p text:style-name="_40_TextBody">This option must be activated by <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> variable on <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section in order to utilize this feature. Note that the irreversible option, as defined by IRREVER variable on <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, is not supported.</text:p>
     <table:table table:name="Table628" table:style-name="Table628">
      <table:table-column table:style-name="Table628.A"/>
      <table:table-column table:style-name="Table628.B"/>
@@ -4336,7 +4336,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4965">EQLNUM1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table628.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3669">EQLNUM1 is an a positive integer that is greater or equal to one and less than or equal to NTEQUL on the EQLDIMS keyword in the RUNSPEC section, that defines the “from” equilibration region number.</text:p>
+       <text:p text:style-name="P3669">EQLNUM1 is an a positive integer that is greater or equal to one and less than or equal to NTEQUL on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the “from” equilibration region number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4366,7 +4366,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9329">EQLNUM2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table628.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3669">EQLNUM1 is an a positive integer that is greater or equal to one and less than or equal to NTEQUL on the EQLDIMS keyword in the RUNSPEC section, that defines the “to” equilibration region number.</text:p>
+       <text:p text:style-name="P3669">EQLNUM1 is an a positive integer that is greater or equal to one and less than or equal to NTEQUL on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the “to” equilibration region number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4393,12 +4393,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9336">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table628.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9329">THPRES</text:p>
+       <text:p text:style-name="P9329"><text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table628.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9323">THPRES defines the threshold pressure from EQLNUM1 to EQLNUM2 and from EQLNUM2 to EQLNUM1.</text:p>
+       <text:p text:style-name="P9323"><text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> defines the threshold pressure from EQLNUM1 to EQLNUM2 and from EQLNUM2 to EQLNUM1.</text:p>
        <text:p text:style-name="P9324">The default value of 1* sets the threshold pressure to a value that initially prevents flow between the two equilibration regions. Any subsequent production or injection in either of the two equilibration regions will therefore result in flow between the two regions. Thus, this default initially isolates the two equilibration regions.</text:p>
-       <text:p text:style-name="P9325">If a equilibration region number pair has not been explicitly defined by this keyword the THPRES is set to zero, for no threshold pressure.</text:p>
+       <text:p text:style-name="P9325">If a equilibration region number pair has not been explicitly defined by this keyword the <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> is set to zero, for no threshold pressure.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4438,7 +4438,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable506" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.60</text:sequence>: THPRES Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="_40_TextBody">See also the MULTREGT keyword in the GRID section that uses the transmissibility between the MULTNUM, FLUXNUM or OPERNUM region arrays to control the flow between various regions within the model.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc99845_2023071304">MULTREGT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that uses the transmissibility between the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a> or <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> region arrays to control the flow between various regions within the model.</text:p>
     <table:table table:name="Table629" table:style-name="Table629">
      <table:table-column table:style-name="Table629.A"/>
      <table:table-header-rows>
@@ -4446,13 +4446,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708729111904">
        <table:table-cell table:style-name="Table629.A1" office:value-type="string">
         <text:p text:style-name="P10274">Note</text:p>
-        <text:p text:style-name="P10164">Care should be taken that cells in different EQLNUM regions are not in communication, as this will result in an unstable initial equilibration.</text:p>
+        <text:p text:style-name="P10164">Care should be taken that cells in different <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> regions are not in communication, as this will result in an unstable initial equilibration.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716489_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716489_3964674244"/></text:h>
-    <text:p text:style-name="P10921">Given NTEQUL is equal to six on the EQLDIMS keyword in the RUNSPEC section,</text:p>
+    <text:p text:style-name="P10921">Given NTEQUL is equal to six on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section,</text:p>
     <text:p text:style-name="P14081">--</text:p>
     <text:p text:style-name="P14081">-- <text:s text:c="6"/>EQLNUM <text:s/>EQLNUM <text:s/>THPRES <text:s text:c="44"/></text:p>
     <text:p text:style-name="P14081">-- <text:s text:c="6"/>FROM <text:s text:c="3"/>TO <text:s text:c="5"/>VALUE <text:s text:c="45"/></text:p>
@@ -4466,7 +4466,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13581">/ </text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
     <text:p text:style-name="_40_TextBody">The above example defines the threshold pressures between equilibration regions one and two, one and three and one and four. As the threshold pressures between regions one and five and one and six (as well as other combinations), have not been explicitly set in the example, the threshold pressures for these combinations are set to zero.</text:p>
-    <text:p text:style-name="_40_TextBody">However, as the irreversible option, as defined by IRREVER variable on EQLOPTS keyword in the RUNSPEC section, is not supported, then example can be simplified to:</text:p>
+    <text:p text:style-name="_40_TextBody">However, as the irreversible option, as defined by IRREVER variable on <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, is not supported, then example can be simplified to:</text:p>
     <text:p text:style-name="P14082">--</text:p>
     <text:p text:style-name="P14082">-- <text:s text:c="6"/>EQLNUM <text:s/>EQLNUM <text:s/>THPRES <text:s text:c="44"/></text:p>
     <text:p text:style-name="P14082">-- <text:s text:c="6"/>FROM <text:s text:c="3"/>TO <text:s text:c="5"/>VALUE <text:s text:c="45"/></text:p>

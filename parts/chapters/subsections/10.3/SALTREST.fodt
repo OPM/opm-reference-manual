@@ -4227,7 +4227,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18537" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716427_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716427_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The SALTREST keyword defines restart salt concentration values for all grid cells in the model and should be used in runs that are using the RESTART facility, where the initial run has not used the Low Salt or Brine options. <text:s/>This allows for initial runs that have used the standard water PVT properties via the PVTW keyword in the PROPS section, to be restarted with salt dependent water properties. <text:s/>The keyword should only be used if the salt (brine) phase has been activated in the current restart run (not the initial run) via the BRINE keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc599543_516898843">SALTREST</text:a> keyword defines restart salt concentration values for all grid cells in the model and should be used in runs that are using the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> facility, where the initial run has not used the Low Salt or Brine options. <text:s/>This allows for initial runs that have used the standard water PVT properties via the <text:a xlink:href="#__RefHeading___Toc2086106_3315222525">PVTW</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, to be restarted with salt dependent water properties. <text:s/>The keyword should only be used if the salt (brine) phase has been activated in the current restart run (not the initial run) via the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1530" table:style-name="Table1530">
      <table:table-column table:style-name="Table1530.A"/>
@@ -4270,10 +4270,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3101">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1530.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4915">SALTREST</text:p>
+       <text:p text:style-name="P4915"><text:a xlink:href="#__RefHeading___Toc599543_516898843">SALTREST</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1530.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3697">SALTREST is an array of real positive numbers that are greater than or equal to zero assigning the restart salt concentration values to each cell in the model. </text:p>
+       <text:p text:style-name="P3697"><text:a xlink:href="#__RefHeading___Toc599543_516898843">SALTREST</text:a> is an array of real positive numbers that are greater than or equal to zero assigning the restart salt concentration values to each cell in the model. </text:p>
        <text:p text:style-name="P4069">Repeat counts may be used, for example 20*15.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4301,7 +4301,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1684">Notes:</text:p>
        <text:list xml:id="list105919148850653" text:continue-list="list105919785309944" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19038">The number of entries should correspond to the NX x NY x NZ parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19038">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18943">The keyword is terminated by a “/”.</text:p>
@@ -4317,7 +4317,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14779">Table <text:sequence text:ref-name="refTable485" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.39</text:sequence>: SALTREST Keyword Description</text:p>
     <text:p text:style-name="P15578"/>
-    <text:p text:style-name="P15316">See also the PVTWSALT keyword in the PROPS section and the RESTART keyword in the SOLUTION section.</text:p>
+    <text:p text:style-name="P15316">See also the <text:a xlink:href="#__RefHeading___Toc331848_501926209">PVTWSALT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section and the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section.</text:p>
     <text:h text:style-name="P18537" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716429_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716429_3964674244"/></text:h>
     <text:p text:style-name="P13859">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13859">-- <text:s text:c="6"/>DEFINE RESTART SALTREST VALUES FOR ALL CELLS IN THE MODEL</text:p>

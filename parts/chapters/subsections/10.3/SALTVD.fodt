@@ -4329,7 +4329,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716435_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716435_3964674244"/></text:h>
-    <text:p text:style-name="P11858">The SALTVD keyword defines the initial salt concentration versus depth tables for each equilibration region for when the salt (brine) phase has been activated in the model via the BRINE keyword in the RUNSPEC section, and the EQLOPT1 variable has been set to a positive integer on the EQUIL keyword in the SOLUTION section. <text:s/>Secondly, the keyword should also be used to set the initial salt concentration versus depth if OPM Flow’s PRECSALT keyword in the RUNSPEC section has been used to activate the simulators Salt Precipitation model. </text:p>
+    <text:p text:style-name="P11858">The <text:a xlink:href="#__RefHeading___Toc605882_516898843">SALTVD</text:a> keyword defines the initial salt concentration versus depth tables for each equilibration region for when the salt (brine) phase has been activated in the model via the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and the EQLOPT1 variable has been set to a positive integer on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. <text:s/>Secondly, the keyword should also be used to set the initial salt concentration versus depth if OPM Flow’s <text:a xlink:href="#__RefHeading___Toc332782_3149455253">PRECSALT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section has been used to activate the simulators Salt Precipitation model. </text:p>
     <table:table table:name="Table1676" table:style-name="Table1676">
      <table:table-column table:style-name="Table1676.A"/>
      <table:table-column table:style-name="Table1676.B"/>
@@ -4371,7 +4371,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4672">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1676.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4676">DEPTH</text:p>
+       <text:p text:style-name="P4676"><text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1676.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4668">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the depth for corresponding salt concentrations SALTCON.</text:p>
@@ -4406,8 +4406,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1676.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4668">A columnar vector of real monotonically increasing down the column values that defines the corresponding salt concentration within the water phase for the given depth. There should be one columnar vector for each type of salt. <text:s/></text:p>
        <text:p text:style-name="P4676">For the standard Brine Model there is only one salt type and therefore there should be only one columnar vector of SALTCON.</text:p>
-       <text:p text:style-name="P5306">However, if the BRINE keyword has been invoked with the ECLMC keyword in the RUNSPEC section, then there should one columnar SALTCON vector for each declared salt type.</text:p>
-       <text:p text:style-name="P2846">It is recommended to provide initial salt concentrations less then or equal to values provided by SALTSOL keyword in the PROPS section.</text:p>
+       <text:p text:style-name="P5306">However, if the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword has been invoked with the <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then there should one columnar SALTCON vector for each declared salt type.</text:p>
+       <text:p text:style-name="P2846">It is recommended to provide initial salt concentrations less then or equal to values provided by <text:a xlink:href="#__RefHeading___Toc681417_1466963378">SALTSOL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4434,10 +4434,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1731">Notes:</text:p>
        <text:list xml:id="list105918054624796" text:continue-list="list105918518472898" text:style-name="L90">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19920">The keyword is followed by NTEQUIL tables as declared on the EQLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19920">The keyword is followed by NTEQUIL tables as declared on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20063">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the EQlDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20063">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the EQlDIMS keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20063">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4461,14 +4461,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table1830.1">
        <table:table-cell table:style-name="Table1830.A1" office:value-type="string">
         <text:p text:style-name="P10214">Note</text:p>
-        <text:p text:style-name="P10178">This is the initial salt concentration contained within the water phase, see the SALTPVD keyword in the SOLUTION section that defines the initial salt volume fraction that has been precipitated into the pore space.</text:p>
+        <text:p text:style-name="P10178">This is the initial salt concentration contained within the water phase, see the <text:a xlink:href="#__RefHeading___Toc613572_1667959253">SALTPVD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section that defines the initial salt volume fraction that has been precipitated into the pore space.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P11767"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716437_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716437_3964674244"/></text:h>
-    <text:p text:style-name="P11176">The first example activates the standard Brine Tracking model using the BRINE keyword in the RUNSPEC section and sets the number of equilibrium regions to three (NTEQUIL set to 3 on the EQLDIMS keyword also in the RUNSPEC), that is:</text:p>
+    <text:p text:style-name="P11176">The first example activates the standard Brine Tracking model using the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and sets the number of equilibrium regions to three (NTEQUIL set to 3 on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword also in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a>), that is:</text:p>
     <text:p text:style-name="P13404">-- ==============================================================================</text:p>
     <text:p text:style-name="P13404">-- </text:p>
     <text:p text:style-name="P13404">-- RUNSPEC SECTION </text:p>
@@ -4485,7 +4485,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14326">--</text:p>
     <text:p text:style-name="P14326">BRINE</text:p>
     <text:p text:style-name="P12106"/>
-    <text:p text:style-name="P12106">Then in the SOLUTION section the SALTVD keyword would be of the form:</text:p>
+    <text:p text:style-name="P12106">Then in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section the <text:a xlink:href="#__RefHeading___Toc605882_516898843">SALTVD</text:a> keyword would be of the form:</text:p>
     <text:p text:style-name="P13404">-- ==============================================================================</text:p>
     <text:p text:style-name="P13404">-- </text:p>
     <text:p text:style-name="P13404">-- SOLUTION SECTION </text:p>
@@ -4506,7 +4506,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>8000.0 <text:s text:c="3"/>1.400 <text:s text:c="31"/>/ EQUIL REGN 03 <text:s text:c="4"/></text:p>
     <text:p text:style-name="_40_Example"/>
     <text:p text:style-name="P14326"/>
-    <text:p text:style-name="P12106">The next example shows how the SALTVD keyword is entered when both the ECLMC and BRINE keywords have activated the Multi-Component Brine model in the RUNSPEC section, that is: </text:p>
+    <text:p text:style-name="P12106">The next example shows how the <text:a xlink:href="#__RefHeading___Toc605882_516898843">SALTVD</text:a> keyword is entered when both the <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> and <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keywords have activated the Multi-Component Brine model in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that is: </text:p>
     <text:p text:style-name="P11175"/>
     <text:p text:style-name="P16109">-- ==============================================================================</text:p>
     <text:p text:style-name="P13404">-- </text:p>
@@ -4531,7 +4531,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13511">BRINE <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13531"><text:s text:c="9"/>NACL <text:s text:c="3"/>CACL <text:s text:c="3"/>MGC03 <text:s text:c="48"/>/ <text:s text:c="150"/><text:s text:c="61"/></text:p>
     <text:p text:style-name="P15225"/>
-    <text:p text:style-name="P15225">The above example activates the Multi-Component Brine model with three different water salinities for three equilibrium regions. In this case the resulting SALTVD keyword would be of the form:</text:p>
+    <text:p text:style-name="P15225">The above example activates the Multi-Component Brine model with three different water salinities for three equilibrium regions. In this case the resulting <text:a xlink:href="#__RefHeading___Toc605882_516898843">SALTVD</text:a> keyword would be of the form:</text:p>
     <text:p text:style-name="P15225"/>
     <text:p text:style-name="P13418">-- ==============================================================================</text:p>
     <text:p text:style-name="P13418">-- </text:p>
@@ -4552,7 +4552,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14450"><text:s text:c="9"/>5000.0 <text:s text:c="3"/>1.400 <text:s text:c="3"/>0.640 <text:s text:c="4"/>0.002 <text:s text:c="9"/></text:p>
     <text:p text:style-name="P14450"><text:s text:c="9"/>8000.0 <text:s text:c="3"/>1.400 <text:s text:c="3"/>0.640 <text:s text:c="4"/>0.002 <text:s text:c="12"/>/ EQUIL REGN 03 <text:s text:c="2"/></text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">In this case there are three data sets, on one for each equilibrium region and three SALTCON columnar vectors, one for each salt type (NACL, CACL and MGC03) declared via the BRINE keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="_40_TextBody">In this case there are three data sets, on one for each equilibrium region and three SALTCON columnar vectors, one for each salt type (NACL, CACL and MGC03) declared via the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <text:p text:style-name="P12206">Note that the Multi-Component Brine model <text:span text:style-name="T1">is not available in OPM Flow.</text:span></text:p>
     <text:p text:style-name="P14450"/>
     
