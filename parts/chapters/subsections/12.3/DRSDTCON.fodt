@@ -2739,21 +2739,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Heading_20_4">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="14166dac"/>
   </style:style>
-  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" style:text-underline-style="none" officeooo:rsid="0fec137f" officeooo:paragraph-rsid="1424d2bb"/>
-  </style:style>
-  <style:style style:name="P40" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="01830747" officeooo:paragraph-rsid="1424d2bb"/>
-  </style:style>
-  <style:style style:name="P41" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="019c9e46" officeooo:paragraph-rsid="1424d2bb"/>
-  </style:style>
-  <style:style style:name="P42" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="01a02e63" officeooo:paragraph-rsid="1424d2bb"/>
-  </style:style>
-  <style:style style:name="P43" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="1424d2bb"/>
-  </style:style>
   <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Heading_20_4">
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
@@ -2895,9 +2880,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="P73" style:family="paragraph" style:parent-style-name="_40_TextBody">
    <style:text-properties officeooo:paragraph-rsid="1426749c"/>
-  </style:style>
-  <style:style style:name="P74" style:family="paragraph" style:parent-style-name="_40_TextBody">
-   <style:text-properties officeooo:paragraph-rsid="1424d2bb"/>
   </style:style>
   <style:style style:name="P75" style:family="paragraph" style:parent-style-name="_40_Example">
    <style:text-properties officeooo:paragraph-rsid="1424d2bb"/>
@@ -5275,75 +5257,48 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P38" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716561_39646742441"/>Example<text:bookmark-end text:name="__RefHeading___Toc716561_39646742441"/></text:h>
-    <text:p text:style-name="P74">The example below is similar to that shown under the CO2STORE keyword in the RUNSPEC section. In the RUNSPEC section one declares that the carbon dioxide storage model is active for the run to account for both carbon dioxide and water phase solubility using OPM Flow’s CO<text:span text:style-name="T30">2</text:span>-Brine PVT model. </text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P40">-- </text:p>
-    <text:p text:style-name="P40">-- RUNSPEC SECTION </text:p>
-    <text:p text:style-name="P40">-- </text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P40">RUNSPEC</text:p>
-    <text:p text:style-name="P40">-- ------------------------------------------------------------------------------ -- FLUID TYPES AND TRACER OPTIONS <text:s text:c="24"/></text:p>
-    <text:p text:style-name="P40">-- ------------------------------------------------------------------------------ --</text:p>
-    <text:p text:style-name="P40">-- <text:s text:c="6"/>OIL PHASE IS PRESENT IN THE RUN BUT IS THE BRINE PHASE FOR CO2STORE</text:p>
-    <text:p text:style-name="P40">--</text:p>
-    <text:p text:style-name="P40">OIL <text:s text:c="75"/></text:p>
-    <text:p text:style-name="P40">--</text:p>
-    <text:p text:style-name="P40">-- <text:s text:c="6"/>GAS PHASE IS PRESENT IN THE RUN BUT IS THE CO2 PHASE FOR CO2STORE</text:p>
-    <text:p text:style-name="P40">--</text:p>
-    <text:p text:style-name="P40">GAS <text:s text:c="154"/>-- </text:p>
-    <text:p text:style-name="P39">-- <text:s text:c="6"/>ACTIVATE CO2 STORAGE IN THE MODEL (OPM FLOW CO2 STORAGE KEYWORD)</text:p>
-    <text:p text:style-name="P42">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P42">CO2STORE <text:s text:c="75"/></text:p>
-    <text:p text:style-name="P41"><text:s text:c="59"/></text:p>
-    <text:p text:style-name="P74">The second part of the example covers the data required for the PROPS section, in which the input keywords need to be consistent with the OIL phase referring to the Brine and the GAS to CO<text:span text:style-name="T30">2</text:span>; that is <text:s/>SGOF (gas-oil relative permeability) is used for the CO<text:span text:style-name="T30">2</text:span>-Brine relative permeability,.</text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P75">-- </text:p>
-    <text:p text:style-name="P75">-- PROPS SECTION </text:p>
-    <text:p text:style-name="P75">--</text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P75">PROPS </text:p>
-    <text:p text:style-name="P75">--</text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>ROCK COMPRESSIBILITY <text:s text:c="64"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="85"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>REFERENCE PRESSURE IS TAKEN FROM THE HCPV WEIGHTED RESERVOIR PRESSURE <text:s text:c="5"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="85"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>REF PRES <text:s/>CF <text:s text:c="72"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>BARSA <text:s text:c="4"/>1/BARSA <text:s text:c="67"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>-------- <text:s/>-------- <text:s text:c="66"/></text:p>
-    <text:p text:style-name="P75">ROCK <text:s text:c="83"/></text:p>
-    <text:p text:style-name="P75"><text:s text:c="9"/>1.0000 <text:s text:c="3"/>1.0E-06 <text:s text:c="32"/>/ ROCK COMPRESSIBILITY</text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="84"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>GAS-OIL RELATIVE PERMEABILITY TABLES (SGOF) – CO2STORE PHASES <text:s text:c="64"/></text:p>
-    <text:p text:style-name="P75">SGOF</text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>SG <text:s text:c="8"/>KRG <text:s text:c="6"/>KROG <text:s text:c="5"/>PCOG <text:s text:c="52"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>FRAC <text:s text:c="26"/>PSIA <text:s text:c="49"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>------- <text:s text:c="2"/>-------- <text:s/>------- <text:s text:c="2"/>------- <text:s text:c="47"/></text:p>
-    <text:p text:style-name="P75"><text:s text:c="9"/>0.00000 <text:s text:c="2"/>0.000000 <text:s/>1.00000 <text:s text:c="3"/>0.0000 </text:p>
-    <text:p text:style-name="P75"><text:s text:c="9"/>1.00000 <text:s text:c="2"/>1.000000 <text:s/>0.00000 <text:s text:c="3"/>0.0000 <text:s text:c="12"/>/ TABLE No. 01 <text:s text:c="7"/></text:p>
-    <text:p text:style-name="P43">-- <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P43">-- <text:s text:c="6"/>SET SALINITY FOR ALL CELLS (OPM FLOW KEYWORD) </text:p>
-    <text:p text:style-name="P43">-- <text:s text:c="85"/></text:p>
-    <text:p text:style-name="P43">SALINITY <text:s text:c="19"/></text:p>
-    <text:p text:style-name="P90"><text:span text:style-name="T6">0.</text:span>7<text:span text:style-name="T6"> <text:s text:c="10"/></text:span><text:s text:c="44"/>/</text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P76"><text:soft-page-break/>No other data is required to define the fluid and rock properties in the PROPS section as the data is generated from internal analytic correlations and models by the simulator. Finally, note that units for salinity are to the 10<text:span text:style-name="T29">-3</text:span>, thus for metric units we have 10<text:span text:style-name="T29">-3</text:span> x kg-M/kg.</text:p>
-    <text:p text:style-name="P77">T<text:span text:style-name="T21">he third and final part of the example sets the maximum dissolution rate for convective CO</text:span><text:span text:style-name="T31">2</text:span><text:span text:style-name="T21"> mixing via the DRSDTCON keyword in the SCHEDULE section.</text:span></text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P75">-- </text:p>
-    <text:p text:style-name="P75">-- SCHEDULE SECTION </text:p>
-    <text:p text:style-name="P75">-- </text:p>
-    <text:p text:style-name="P40">-- ==============================================================================</text:p>
-    <text:p text:style-name="P75">SCHEDULE</text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="128"/></text:p>
-    <text:p text:style-name="P75">-- <text:s text:c="6"/>CO2 CONVECTIVE DISSOLUTION PARAMETER</text:p>
-    <text:p text:style-name="P75">--</text:p>
-    <text:p text:style-name="P75">DRSDTCON</text:p>
-    <text:p text:style-name="P89">-- <text:s text:c="6"/>CO2 CONV <text:s text:c="49"/></text:p>
-    <text:p text:style-name="P89">-- <text:s text:c="6"/>CHI <text:s text:c="29"/></text:p>
-    <text:p text:style-name="P89">-- <text:s text:c="6"/>-------- <text:s text:c="44"/></text:p>
-    <text:p text:style-name="P89"><text:s text:c="9"/>0.04 <text:s text:c="4"/>0.33 <text:s text:c="4"/>3.0E-09 <text:s/>ALL <text:s text:c="28"/>/</text:p>
-    <text:p text:style-name="P74"/>
-    <text:p text:style-name="P74">See also the CO2STORE keyword in the RUNSPEC section for further information on OPM Flow’s CO<text:span text:style-name="T30">2</text:span> storage facility.</text:p>
+    <text:p text:style-name="_40_TextBody">The example below is similar to that shown under the CO2STORE keyword in the RUNSPEC section. In the RUNSPEC section one declares that the carbon dioxide storage model is active for the run to account for both carbon dioxide and water phase solubility using OPM Flow’s CO<text:span text:style-name="T30">2</text:span>-Brine PVT model. </text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- RUNSPEC SECTION </text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">RUNSPEC</text:p>
+    <text:p text:style-name="_40_Example">-- ------------------------------------------------------------------------------</text:p>
+    <text:p text:style-name="_40_Example">--  FLUID TYPES AND TRACER OPTIONS </text:p>
+    <text:p text:style-name="_40_Example">-- ------------------------------------------------------------------------------</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIVATE CO2 STORAGE IN THE MODEL (OPM FLOW CO2 STORAGE KEYWORD)</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">CO2STORE</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIVATE GAS-WATER THE MODEL (OPM FLOW KEYWORD)</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">GASWAT</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DISSOLVED GAS IN WATER IS PRESENT IN THE RUN (OPM FLOW KEYWORD)</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">DISGASW</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>VAPORIZED WATER IN DRY/WET GAS IS PRESENT IN THE RUN (OPM FLOW KEYWORD)</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">VAPWAT</text:p>
+    <text:p text:style-name="_40_Example"></text:p>
+    <text:p text:style-name="_40_TextBody">The second part of the example sets the maximum dissolution rate for convective CO<text:span text:style-name="T31">2</text:span> mixing via the DRSDTCON keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- SCHEDULE SECTION </text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">SCHEDULE</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="128"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>CO2 CONVECTIVE DISSOLUTION PARAMETERS</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">DRSDTCON</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>CHI <text:s text:c="5"/>PSI <text:s text:c="5"/>OMEGA <text:s text:c="3"/>OPTION</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>0.04 <text:s text:c="4"/>0.33 <text:s text:c="4"/>3.0E-09 <text:s/>ALL <text:s text:c="28"/>/</text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">See also the CO2STORE keyword in the RUNSPEC section for further information on OPM Flow’s CO<text:span text:style-name="T30">2</text:span> storage facility.</text:p>
    </text:section>
   </office:text>
  </office:body>
