@@ -4207,8 +4207,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838819131211"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838819131211"/></text:h>
-    <text:p text:style-name="P12201">This keyword is similar to the ALL keyword in the SUMMARY section, in that it results in a group of summary variables to be written out to the SUMMARY file. In this case the keyword activates the writing out of a set of data vectors that give the production and injections status of all the wells in the named groups, as well as the number of wells in the drilling queue and the number of workover events occurring within a time step for the requested groups. Both instantaneous and cumulative well counts and events for the groups are written out as tabulated in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable538">Table 11.29</text:sequence-ref>. </text:p>
-    <text:p text:style-name="P12165">Note that GMWSET should be followed by a list of group names enclosed in quotes and therefore a terminating <text:s/>“/” is required to end the list of groups. <text:s/>A blank list requests output for all groups.</text:p>
+    <text:p text:style-name="P12201">This keyword is similar to the <text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, in that it results in a group of summary variables to be written out to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file. In this case the keyword activates the writing out of a set of data vectors that give the production and injections status of all the wells in the named groups, as well as the number of wells in the drilling queue and the number of workover events occurring within a time step for the requested groups. Both instantaneous and cumulative well counts and events for the groups are written out as tabulated in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable538">Table 11.29</text:sequence-ref>. </text:p>
+    <text:p text:style-name="P12165">Note that <text:a xlink:href="#__RefHeading___Toc110660_3115110868">GMWSET</text:a> should be followed by a list of group names enclosed in quotes and therefore a terminating <text:s/>“/” is required to end the list of groups. <text:s/>A blank list requests output for all groups.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
     <table:table table:name="Table1848" table:style-name="Table1848">
      <table:table-column table:style-name="Table1848.A"/>
@@ -4639,11 +4639,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14996">Table <text:sequence text:ref-name="refTable538" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.29</text:sequence>: GMWSET <text:s/>- Standard Field and Group Well Status Summary Variables</text:p>
+    <text:p text:style-name="P14996">Table <text:sequence text:ref-name="refTable538" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.29</text:sequence>: <text:a xlink:href="#__RefHeading___Toc110660_3115110868">GMWSET</text:a> <text:s/>- Standard Field and Group Well Status Summary Variables</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12164">See also the FMWSET keyword in the SUMMARY schedule that has similar functionality but at the field level.</text:p>
+    <text:p text:style-name="P12164">See also the <text:a xlink:href="#__RefHeading___Toc110662_3115110868">FMWSET</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> schedule that has similar functionality but at the field level.</text:p>
     <text:h text:style-name="P18549" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716507_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716507_3964674244"/></text:h>
-    <text:p text:style-name="P12165"><text:span text:style-name="T1">The </text:span>first <text:span text:style-name="T1">example </text:span>below <text:span text:style-name="T1">exports </text:span>all t<text:span text:style-name="T1">he </text:span>group<text:span text:style-name="T1"> standard well status variables to the SUMMARY file.</text:span></text:p>
+    <text:p text:style-name="P12165"><text:span text:style-name="T1">The </text:span>first <text:span text:style-name="T1">example </text:span>below <text:span text:style-name="T1">exports </text:span>all t<text:span text:style-name="T1">he </text:span>group<text:span text:style-name="T1"> standard well status variables to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:span></text:p>
     <text:p text:style-name="P13424">-- ==============================================================================</text:p>
     <text:p text:style-name="P13424">-- </text:p>
     <text:p text:style-name="P13424">-- SUMMARY SECTION </text:p>
@@ -4664,7 +4664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14108">--</text:p>
     <text:p text:style-name="P14108">SEPARATE </text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="_40_TextBody">The second example exports all the group standard well status variables for just the PLAT1 and PLT2 groups only to the SUMMARY file. <text:s text:c="3"/></text:p>
+    <text:p text:style-name="_40_TextBody">The second example exports all the group standard well status variables for just the PLAT1 and PLT2 groups only to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file. <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14109">--</text:p>
     <text:p text:style-name="P14109">-- <text:s text:c="6"/>EXPORT WELL STATUS VECTORS FOR NAMED GROUPS TO FILE</text:p>
     <text:p text:style-name="P14109">--</text:p>
