@@ -4250,7 +4250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716513_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716513_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines a time interval for writing out the SUMMARY data to the SUMMARY file and the RSM file, if the RUNSUM keyword has also been activated in the SUMMARY section. Only the data for the first time step in the time interval is written out and the other time steps are skipped until the next time interval, except for report time steps. Note that report time steps data are always written out regardless of the setting on this keyword. <text:s/>This enables the size of the SUMMARY files to be reduced depending on the size of the time interval. However, the keyword will produce irregular time steps reports of the SUMMARY data.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines a time interval for writing out the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> data to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file and the RSM file, if the <text:a xlink:href="#__RefHeading___Toc210156_2884651453">RUNSUM</text:a> keyword has also been activated in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section. Only the data for the first time step in the time interval is written out and the other time steps are skipped until the next time interval, except for report time steps. Note that report time steps data are always written out regardless of the setting on this keyword. <text:s/>This enables the size of the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> files to be reduced depending on the size of the time interval. However, the keyword will produce irregular time steps reports of the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> data.</text:p>
     <table:table table:name="Table640" table:style-name="Table640">
      <table:table-column table:style-name="Table640.A"/>
      <table:table-column table:style-name="Table640.B"/>
@@ -4295,8 +4295,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4973">SUMSTEP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table640.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3669">SUMSTEP is a real positive number that defines the time interval for which the first time step of data will be written to the SUMMARY file (and the RSM file if RSM output has been activated).</text:p>
-       <text:p text:style-name="P4975">For example, if SUMSTEP is set to 30 days, and if the simulator takes time steps of 0, 5, 10, 16, <text:s/>24, 30, 40, 45, 60, 90 days. Then the SUMMARY data will be written out at time steps 0, 30, 40 and 60 days.</text:p>
+       <text:p text:style-name="P3669">SUMSTEP is a real positive number that defines the time interval for which the first time step of data will be written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file (and the RSM file if RSM output has been activated).</text:p>
+       <text:p text:style-name="P4975">For example, if SUMSTEP is set to 30 days, and if the simulator takes time steps of 0, 5, 10, 16, <text:s/>24, 30, 40, 45, 60, 90 days. Then the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> data will be written out at time steps 0, 30, 40 and 60 days.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4336,7 +4336,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable542" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.33</text:sequence>: SUMTHIN Keyword Description</text:p>
     <text:p text:style-name="P15440"/>
-    <text:p text:style-name="P15296">See also the RPTONLY keyword in the SUMMARY section that forces the SUMMARY data to be only written out at report time steps, as oppose to all time steps or SUMSTEP time intervals.</text:p>
+    <text:p text:style-name="P15296">See also the <text:a xlink:href="#__RefHeading___Toc210150_2884651453">RPTONLY</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section that forces the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> data to be only written out at report time steps, as oppose to all time steps or SUMSTEP time intervals.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716515_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716515_3964674244"/></text:h>
     <text:p text:style-name="P14117">--</text:p>
     <text:p text:style-name="P14117">-- <text:s text:c="6"/>DEFINE SUMMARY DATA REPORTING TIME STEP INTERVAL</text:p>
@@ -4345,7 +4345,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14117">SUMTHIN <text:s text:c="57"/></text:p>
     <text:p text:style-name="P13584"><text:s text:c="9"/>30.0 <text:s text:c="45"/>/ <text:s text:c="65"/>/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P13032"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15087">The above example defines the SUMMARY file time step interval to be 30 days for both field and metric units.</text:p>
+    <text:p text:style-name="P15087">The above example defines the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file time step interval to be 30 days for both field and metric units.</text:p>
     <text:p text:style-name="P15087"/>
     
    </text:section>
