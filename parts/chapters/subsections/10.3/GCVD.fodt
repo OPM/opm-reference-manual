@@ -4252,7 +4252,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716371_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716371_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GCVD keyword defines the initial coal gas concentration versus depth tables for each equilibration region for when the coal phase has been activated in the run via the COAL keyword in the RUNSPEC section. The keyword may be used in conjunction with the GASCONC keyword in the SOLUTION section, to fully describe the initial state of the model. Note both GASCONC and GCVD are optional as the simulator will calculate the coal gas concentration based on the equilibrium concentration and the block pressure.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc224457_156692946">GCVD</text:a> keyword defines the initial coal gas concentration versus depth tables for each equilibration region for when the coal phase has been activated in the run via the <text:a xlink:href="#__RefHeading___Toc234580_3519154785">COAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The keyword may be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc189444_2330925267">GASCONC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section, to fully describe the initial state of the model. Note both <text:a xlink:href="#__RefHeading___Toc189444_2330925267">GASCONC</text:a> and <text:a xlink:href="#__RefHeading___Toc224457_156692946">GCVD</text:a> are optional as the simulator will calculate the coal gas concentration based on the equilibrium concentration and the block pressure.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1153" table:style-name="Table1153">
      <table:table-column table:style-name="Table1153.A"/>
@@ -4295,7 +4295,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3071">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1153.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4890">DEPTH</text:p>
+       <text:p text:style-name="P4890"><text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1153.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P4408">A columnar vector of real monotonically increasing down the column <text:s text:c="2"/>values that defines the depth values for the corresponding coal gas concentration, GCVALS.</text:p>
@@ -4328,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10083">GCVALS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1153.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4408">A columnar vector of real values that defines the coal gas concentration values at the corresponding DEPTH. </text:p>
+       <text:p text:style-name="P4408">A columnar vector of real values that defines the coal gas concentration values at the corresponding <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a>. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4355,10 +4355,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1592">Notes:</text:p>
        <text:list xml:id="list105917957933830" text:continue-list="list105918652211167" text:style-name="L85">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20125">The keyword is followed by NTEQUL records as declared on the EQLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20125">The keyword is followed by NTEQUL records as declared on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20039">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the EQLDIMS keyword in the RUNSPEC section. </text:p>
+         <text:p text:style-name="P20039">Each table must contain a minimum of two rows and a maximum of NDRXVD rows as declared on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20106">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4374,10 +4374,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14760">Table <text:sequence text:ref-name="refTable463" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.17</text:sequence>: GCVD Keyword Description</text:p>
     <text:p text:style-name="P14760"/>
-    <text:p text:style-name="P10983">See also the GASCONC and GASSATC keywords in the SOLUTION section. </text:p>
+    <text:p text:style-name="P10983">See also the <text:a xlink:href="#__RefHeading___Toc189444_2330925267">GASCONC</text:a> and <text:a xlink:href="#__RefHeading___Toc216737_1190369742">GASSATC</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. </text:p>
     <text:p text:style-name="P10983"/>
     <text:h text:style-name="P18715" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716373_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716373_3964674244"/></text:h>
-    <text:p text:style-name="P15664">Given NTEQUL equals three and NDRXVD is greater than or equal to two on the EQLDIMS keyword in the RUNSPEC section, then the following example defines the coal gas concentration versus depth functions.</text:p>
+    <text:p text:style-name="P15664">Given NTEQUL equals three and NDRXVD is greater than or equal to two on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then the following example defines the coal gas concentration versus depth functions.</text:p>
     <text:p text:style-name="P14057">--</text:p>
     <text:p text:style-name="P14057">-- <text:s text:c="6"/>DEPTH <text:s text:c="3"/>GC <text:s text:c="48"/></text:p>
     <text:p text:style-name="P14057">-- <text:s text:c="15"/>MSCF/FT <text:s text:c="50"/></text:p>

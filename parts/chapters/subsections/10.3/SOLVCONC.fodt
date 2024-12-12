@@ -4237,9 +4237,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18541" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716459_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716459_3964674244"/></text:h>
-    <text:p text:style-name="P11782">The SOLVCONC keyword defines the initial coal solvent concentration values for all matrix grid cells in the model and should be used in conjunction with the SCVD keyword in the SOLUTION section, to fully describe the initial state of the model. The keyword should only be used if the coal phase has been activated in the model via the COAL keyword in the RUNSPEC section. Note both SOLVCONC and SCVD are optional as the simulator will calculate the coal solvent concentration based on the equilibrium concentration and the block pressure.</text:p>
+    <text:p text:style-name="P11782">The <text:a xlink:href="#__RefHeading___Toc771984_4250154414">SOLVCONC</text:a> keyword defines the initial coal solvent concentration values for all matrix grid cells in the model and should be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc650470_516898843">SCVD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section, to fully describe the initial state of the model. The keyword should only be used if the coal phase has been activated in the model via the <text:a xlink:href="#__RefHeading___Toc234580_3519154785">COAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note both <text:a xlink:href="#__RefHeading___Toc771984_4250154414">SOLVCONC</text:a> and <text:a xlink:href="#__RefHeading___Toc650470_516898843">SCVD</text:a> are optional as the simulator will calculate the coal solvent concentration based on the equilibrium concentration and the block pressure.</text:p>
     <text:p text:style-name="P11782">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
-    <text:p text:style-name="P11782">This is the non-standard method to initialize the model via enumeration and is seldom employed in the industry. The standard methodology is for OPM Flow to initialize a model using the parameters on the EQUIL keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
+    <text:p text:style-name="P11782">This is the non-standard method to initialize the model via enumeration and is seldom employed in the industry. The standard methodology is for OPM Flow to initialize a model using the parameters on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword combined with other keywords to fully describe the initial state of the model. <text:s/>The keyword can be used with all grid types.</text:p>
     <table:table table:name="Table1579" table:style-name="Table1579">
      <table:table-column table:style-name="Table1579.A"/>
      <table:table-column table:style-name="Table1579.B"/>
@@ -4281,10 +4281,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3109">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1579.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4917">SOLVCONC</text:p>
+       <text:p text:style-name="P4917"><text:a xlink:href="#__RefHeading___Toc771984_4250154414">SOLVCONC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1579.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3700">SOLVCONC is an array of real positive numbers that define the initial equilibration coal solvent concentration values to each matrix cell in the model. </text:p>
+       <text:p text:style-name="P3700"><text:a xlink:href="#__RefHeading___Toc771984_4250154414">SOLVCONC</text:a> is an array of real positive numbers that define the initial equilibration coal solvent concentration values to each matrix cell in the model. </text:p>
        <text:p text:style-name="P4075">Repeat counts may be used, for example 20*75.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4312,7 +4312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1693">Notes:</text:p>
        <text:list xml:id="list105919931198346" text:continue-list="list105919814208343" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19044">The number of entries should correspond to number of matrix cells in the model, that is (NX x NY x NZ) divided by two, as per the parameters on the DIMENS keyword in the RUNSPEC section, unless the BOX keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the BOX statement.</text:p>
+         <text:p text:style-name="P19044">The number of entries should correspond to number of matrix cells in the model, that is (NX x NY x NZ) divided by two, as per the parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18950">The keyword is terminated by a “/”.</text:p>
@@ -4328,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14784">Table <text:sequence text:ref-name="refTable494" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.48</text:sequence>: SOLVCONC Keyword Description</text:p>
     <text:p text:style-name="P15581"/>
-    <text:p text:style-name="P11782">See also the SCVD keyword in the SOLUTION section to fully define the initial state of the model.</text:p>
+    <text:p text:style-name="P11782">See also the <text:a xlink:href="#__RefHeading___Toc650470_516898843">SCVD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section to fully define the initial state of the model.</text:p>
     <text:h text:style-name="P18541" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716461_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716461_3964674244"/></text:h>
     <text:p text:style-name="P13861">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13861">-- <text:s text:c="6"/>DEFINE INITIAL EQUILIBRATION COAL SOLVENT CONCENTRATION FOR ALL CELLS</text:p>

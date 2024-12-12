@@ -4319,7 +4319,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14507_3701168388231111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14507_3701168388231111"/></text:h>
-    <text:p text:style-name="P12658">The AQANCON keyword defines how analytical aquifers are connected to a Local Grid Refinement (&quot;LGR&quot;) grid, this includes the Carter-Tracy, Fetkovich and Constant Flux analytical aquifers, all of which are implemented in OPM Flow. <text:s/>Carter-Tracy analytical aquifers are characterized by the AQUCT keyword in the GRID section and Fetkovich analytical aquifers are defined by either the AQUFET or AQUFETP keywords in the SOLUTION section. Finally, the Constant Flux aquifer is defined by the AQUFLUX keyword in SOLUTION section. </text:p>
+    <text:p text:style-name="P12658">The AQANCON keyword defines how analytical aquifers are connected to a Local Grid Refinement (&quot;LGR&quot;) grid, this includes the Carter-Tracy, Fetkovich and Constant Flux analytical aquifers, all of which are implemented in OPM Flow. <text:s/>Carter-Tracy analytical aquifers are characterized by the <text:a xlink:href="#__RefHeading___Toc120118_846947960">AQUCT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section and Fetkovich analytical aquifers are defined by either the <text:a xlink:href="#__RefHeading___Toc197384_1310555686">AQUFET</text:a> or <text:a xlink:href="#__RefHeading___Toc4428_421927891">AQUFETP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. Finally, the Constant Flux aquifer is defined by the <text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a> keyword in <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table2185" table:style-name="Table2185">
      <table:table-column table:style-name="Table2185.A"/>
@@ -4368,7 +4368,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">AQUID</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2062">AQUID is a positive integer greater than or equal to one and less than the maximum number of analytical aquifers as defined by the NANAQU variable on the AQUDIMS keyword in the RUNSPEC section, that defines the aquifer to be connected to the grid.</text:p>
+       <text:p text:style-name="P2062">AQUID is a positive integer greater than or equal to one and less than the maximum number of analytical aquifers as defined by the NANAQU variable on the <text:a xlink:href="#__RefHeading___Toc10103_3701168388">AQUDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the aquifer to be connected to the grid.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4384,8 +4384,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">LGRNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1965">A character string of up to eight characters in length that defines the name of the LGR that will connect to an analytical aquifer AQUID.</text:p>
-       <text:p text:style-name="P1965">The LGR must have been previously defined by the either the CARFIN (Cartesian LGR grid) keyword, or the RADIN/RADIN4 (radial LGR grid) keyword in the GRID section.</text:p>
+       <text:p text:style-name="P1965">A character string of up to eight characters in length that defines the name of the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> that will connect to an analytical aquifer AQUID.</text:p>
+       <text:p text:style-name="P1965">The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> must have been previously defined by the either the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> (Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid) keyword, or the RADIN/RADIN4 (radial <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid) keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4401,7 +4401,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">I1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1965">A positive integer that defines the LGR&apos;s lower bound of the cells in the I-direction to be connected to the aquifer, and must be greater than or equal to one and less than or equal to I2 and NX on the CARFIN keyword for Cartesian grids.</text:p>
+       <text:p text:style-name="P1965">A positive integer that defines the LGR&apos;s lower bound of the cells in the I-direction to be connected to the aquifer, and must be greater than or equal to one and less than or equal to I2 and NX on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword for Cartesian grids.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4417,7 +4417,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">I2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s upper bound of the of the cells in the I-direction to be connected to the aquifer, and must be greater than or equal to II and less than or equal to NX on the CARFIN keyword for Cartesian grids.</text:p>
+       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s upper bound of the of the cells in the I-direction to be connected to the aquifer, and must be greater than or equal to II and less than or equal to NX on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword for Cartesian grids.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4433,7 +4433,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">J1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s lower bound of the cells in the J-direction to be connected to the aquifer, and must be greater than or equal to one and less than or equal to J2 and NY on the CARFIN keyword for Cartesian grids.</text:p>
+       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s lower bound of the cells in the J-direction to be connected to the aquifer, and must be greater than or equal to one and less than or equal to J2 and NY on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword for Cartesian grids.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4449,7 +4449,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">J2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s upper bound of the cells in the J-direction to be connected to the aquifer, and must be greater than or equal to JI and less than or equal to NY on the CARFIN keyword for Cartesian grids.</text:p>
+       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s upper bound of the cells in the J-direction to be connected to the aquifer, and must be greater than or equal to JI and less than or equal to NY on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword for Cartesian grids.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4466,7 +4466,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">K1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s lower bound of the cells in the K-direction to be to be connected to the aquifer, and must be greater than or equal to one and less than or equal to K2 and NZ on the CARFIN keyword for Cartesian grids.</text:p>
+       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s lower bound of the cells in the K-direction to be to be connected to the aquifer, and must be greater than or equal to one and less than or equal to K2 and NZ on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword for Cartesian grids.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4482,7 +4482,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1965">K2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s upper bound of the cells in the K-direction to be connected to the aquifer, and must be greater than or equal to KI and less than or equal to NZ on the CARFIN keyword for Cartesian grids.</text:p>
+       <text:p text:style-name="P1966">A positive integer that defines the LGR&apos;s upper bound of the cells in the K-direction to be connected to the aquifer, and must be greater than or equal to KI and less than or equal to NZ on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword for Cartesian grids.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4519,10 +4519,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2320">10</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P2072">AQUFLUX</text:p>
+       <text:p text:style-name="P2072"><text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2185.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2072">AQUFLUX is a positive real value that sets the fraction of the total influx between the aquifer and the defined cells declared on this keyword. If defaulted the cell face for each cell is applied and if a values is declared then this values is applied to all cells declared by this record.</text:p>
+       <text:p text:style-name="P2072"><text:a xlink:href="#__RefHeading___Toc202105_1310555686">AQUFLUX</text:a> is a positive real value that sets the fraction of the total influx between the aquifer and the defined cells declared on this keyword. If defaulted the cell face for each cell is applied and if a values is declared then this values is applied to all cells declared by this record.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4603,7 +4603,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1827">Notes:</text:p>
        <text:list xml:id="list105919370096669" text:continue-list="list105911268203942" text:style-name="L48">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19100">Where NX, NY and NZ are the dimensions of the LGRNAME as defined on the CARFIN keyword in the GRID section, or the NR, NTHEATA and NZ dimensions on the RADFIN keyword in the GRID section.</text:p>
+         <text:p text:style-name="P19100">Where NX, NY and NZ are the dimensions of the LGRNAME as defined on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section, or the NR, NTHEATA and NZ dimensions on the <text:a xlink:href="#__RefHeading___Toc76871_718313858">RADFIN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18962">Each record must be terminated by a “/” and the keyword is terminated by a “/”.</text:p>
@@ -4626,7 +4626,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table2265.1">
        <table:table-cell table:style-name="Table2265.A1" office:value-type="string">
         <text:p text:style-name="P10330">Note</text:p>
-        <text:p text:style-name="P10335">If the AQANCONL keyword has been utilized in the run deck then OPM Flow will write the <text:s/>AQUIFERA array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
+        <text:p text:style-name="P10335">If the <text:a xlink:href="#__RefHeading___Toc177536_342906880911111">AQANCONL</text:a> keyword has been utilized in the run deck then OPM Flow will write the <text:s/>AQUIFERA array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
         <text:p text:style-name="P10335">This is accomplished by setting the AQUIFERA value to 2(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple analytical aquifers then AQUIFERA is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
        </table:table-cell>
       </table:table-row>
@@ -4634,7 +4634,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18720" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715649_396467424421111"/>Example<text:bookmark-end text:name="__RefHeading___Toc715649_396467424421111"/></text:h>
-    <text:p text:style-name="P11113">The following example defines aquifer number one connected to the J- face of various cells in the LGROP001 LGR, and a second basal aquifer connected to the K+ face. </text:p>
+    <text:p text:style-name="P11113">The following example defines aquifer number one connected to the J- face of various cells in the LGROP001 <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>, and a second basal aquifer connected to the K+ face. </text:p>
     <text:p text:style-name="P15969">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P15969">-- <text:s text:c="21"/>LGR ANALYTIC AQUIFER CONNECTION <text:s text:c="27"/></text:p>
     <text:p text:style-name="P15969">-- <text:s text:c="77"/></text:p>
@@ -4646,7 +4646,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15970"><text:s text:c="9"/>2 <text:s text:c="3"/>LGROP001 <text:s text:c="2"/>1 <text:s/>10 <text:s text:c="2"/>1 <text:s text:c="2"/>15 <text:s text:c="2"/>20 <text:s/>20 <text:s text:c="3"/>K+ <text:s text:c="5"/>1* <text:s text:c="4"/>1.0 <text:s text:c="4"/>&apos;NO&apos; /</text:p>
     <text:p text:style-name="P15970">/ <text:s text:c="4"/></text:p>
     <text:p text:style-name="P15969"><text:s text:c="5"/></text:p>
-    <text:p text:style-name="P11411">See the AQUCT keyword in the GRID section for a complete example on defining and connecting a Carter-Tracy aquifer to a simulation grid.</text:p>
+    <text:p text:style-name="P11411">See the <text:a xlink:href="#__RefHeading___Toc120118_846947960">AQUCT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section for a complete example on defining and connecting a Carter-Tracy aquifer to a simulation grid.</text:p>
     <text:p text:style-name="P11162"/>
     
    </text:section>
