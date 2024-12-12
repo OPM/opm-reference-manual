@@ -4262,7 +4262,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716559_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716559_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">DRSDT defines the maximum rate at which the solution gas-oil ratio (Rs) can be increased in a grid cell. The keyword is similar in functionality to the DRSDTR keyword, that defines the maximum rate at which Rs can be increased in a grid cell by region. Both keywords should only be used if the OIL, GAS, and DISGAS keywords in the RUNSPEC section have been invoked to allow oil, gas and dissolved gas to be present in the model. <text:s/><text:s/>The keyword only affects the behavior of an increasing Rs, for example when gas is being injected into an oil reservoir, and is subject to the availability of free gas and the ability of the undersaturated oil to adsorb this gas.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc117623_2179381650">DRSDT</text:a> defines the maximum rate at which the solution gas-oil ratio (Rs) can be increased in a grid cell. The keyword is similar in functionality to the <text:a xlink:href="#__RefHeading___Toc135414_4268459800">DRSDTR</text:a> keyword, that defines the maximum rate at which Rs can be increased in a grid cell by region. Both keywords should only be used if the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, and <text:a xlink:href="#__RefHeading___Toc39767_2267116897">DISGAS</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section have been invoked to allow oil, gas and dissolved gas to be present in the model. <text:s/><text:s/>The keyword only affects the behavior of an increasing Rs, for example when gas is being injected into an oil reservoir, and is subject to the availability of free gas and the ability of the undersaturated oil to adsorb this gas.</text:p>
     <table:table table:name="Table643" table:style-name="Table643">
      <table:table-column table:style-name="Table643.A"/>
      <table:table-column table:style-name="Table643.B"/>
@@ -4342,18 +4342,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5579">DRSDT2 is a defined character string that defines whether the DRSDT1 is applied to either all grid blocks or just those grid blocks containing free gas:</text:p>
        <text:list xml:id="list105920735918405" text:continue-list="list105921378370709" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18857">ALL: means the DRSDT1 maximum rate at which Rs is allowed to increase in a grid cell is applied to all grid blocks.</text:p>
+         <text:p text:style-name="P18857"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a>: means the DRSDT1 maximum rate at which Rs is allowed to increase in a grid cell is applied to all grid blocks.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18857">FREE: <text:s/>means the DRSDT1 maximum rate at which Rs is allowed to increase in a grid cell is applied to grid blocks only containing free gas.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P5588">Note if the keyword is not present in the input deck then DRSDT2 is set to the default value of ALL.</text:p>
+       <text:p text:style-name="P5588">Note if the keyword is not present in the input deck then DRSDT2 is set to the default value of <text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table643.F5" office:value-type="string">
-       <text:p text:style-name="P9343">ALL</text:p>
+       <text:p text:style-name="P9343"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708741363072">
@@ -4375,7 +4375,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14709">Table <text:sequence text:ref-name="refTable562" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.20</text:sequence>: DRSDT Keyword Description</text:p>
     <text:p text:style-name="P15537"/>
     <text:p text:style-name="_40_TextBody">Note this keyword can be used in history matching field performance to control the availability of the movable gas phase.</text:p>
-    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>See also the VAPPARS keyword in the SOLUTION section and the DRSDTR, DRVDT and DRVDTR keywords in the SCHEDULE section that controls how vaporized oil is treated and the rate at which the dissolved phase ratio increases within a grid block.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>See also the <text:a xlink:href="#__RefHeading___Toc210172_2884651453">VAPPARS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section and the <text:a xlink:href="#__RefHeading___Toc135414_4268459800">DRSDTR</text:a>, <text:a xlink:href="#__RefHeading___Toc117625_2179381650">DRVDT</text:a> and <text:a xlink:href="#__RefHeading___Toc135416_4268459800">DRVDTR</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that controls how vaporized oil is treated and the rate at which the dissolved phase ratio increases within a grid block.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18728" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716561_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716561_3964674244"/></text:h>
     <text:p text:style-name="P11526">The first example prevents the solution gas-oil ratio from increasing and applies this to all grid cells.</text:p>

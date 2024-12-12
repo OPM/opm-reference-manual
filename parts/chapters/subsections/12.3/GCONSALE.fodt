@@ -4426,7 +4426,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881915"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881915"/></text:h>
-    <text:p text:style-name="_40_TextBody">GCONSALE defines group sales gas production targets and constraints for when the gas production from an oil field group is exported under a Gas Sales Agreement (“GSA”) and the oil field group also has oil production targets and constraints.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc178287_2026549522">GCONSALE</text:a> defines group sales gas production targets and constraints for when the gas production from an oil field group is exported under a Gas Sales Agreement (“GSA”) and the oil field group also has oil production targets and constraints.</text:p>
     <text:p text:style-name="P12261">Note that the keyword should not be used to control sales gas for a gas field group, as the gas injection rate is used to control the sales gas production with this keyword, that is:</text:p>
     <table:table table:name="Table1004" table:style-name="Table1004">
      <table:table-column table:style-name="Table1004.A"/>
@@ -4595,8 +4595,8 @@ newline
        <text:p text:style-name="P9616">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1902.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7329">A character string of up to eight characters in length that defines the group name for which the group gas sales target and constraints are being defined. The group named FIELD is the top most group and should be used to set the gas sales targets and constraints for the field.</text:p>
-       <text:p text:style-name="P7843">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P7329">A character string of up to eight characters in length that defines the group name for which the group gas sales target and constraints are being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should be used to set the gas sales targets and constraints for the field.</text:p>
+       <text:p text:style-name="P7843">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4623,7 +4623,7 @@ newline
         </text:list-item>
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P8738">Note that if GSALE has been set to switch off both gas sales and gas re-injection, then the GCONINJE keyword in the SCHEDULE section may be used to re-enable gas re-injection again.</text:p>
+       <text:p text:style-name="P8738">Note that if GSALE has been set to switch off both gas sales and gas re-injection, then the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section may be used to re-enable gas re-injection again.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4654,7 +4654,7 @@ newline
        <text:p text:style-name="P9869">GSALEMAX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1902.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9015">A real positive value that must be greater than GSALE that defines the maximum allowed gas sales rate. If GSALE exceeds GSALEMAX then the action defined by the ACTION variable on this keyword is implemented at the end of the current time step.</text:p>
+       <text:p text:style-name="P9015">A real positive value that must be greater than GSALE that defines the maximum allowed gas sales rate. If GSALE exceeds GSALEMAX then the action defined by the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> variable on this keyword is implemented at the end of the current time step.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4691,7 +4691,7 @@ newline
          <text:p text:style-name="P19688">If the group’s maximum gas production rate constraint is constraining the gas rate, then reset the constraint to satisfy the group’s minimum gas sales rate (GSALEMIN), else:</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19629">If the group has active subordinate dedicated gas producers, as defined by the WGASPROD keyword in the SCHEDULE section, <text:s/>then reset their gas target rates to satisfy GSALEMIN, else:</text:p>
+         <text:p text:style-name="P19629">If the group has active subordinate dedicated gas producers, as defined by the <text:a xlink:href="#__RefHeading___Toc121396_332691817">WGASPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, <text:s/>then reset their gas target rates to satisfy GSALEMIN, else:</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19633">If there are subordinate dedicated gas producers for the group in a drilling queue, open the next dedicated well and set the well’s gas rate to satisfy GSALEMIN. Note that only wells that are subordinate to the group and are not under gas rate control or group prioritization are considered for opening.</text:p>
@@ -4715,10 +4715,10 @@ newline
        <text:p text:style-name="P9961">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1902.C2" office:value-type="string">
-       <text:p text:style-name="P7741">ACTION</text:p>
+       <text:p text:style-name="P7741"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1902.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9015">A defined character string that defines the action to be taken if the maximum gas sales rate, GSALEMAX, is violated. ACTION should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9015">A defined character string that defines the action to be taken if the maximum gas sales rate, GSALEMAX, is violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105920164991387" text:continue-list="list105920191171022" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19511">NONE: no action is taken. </text:p>
@@ -4736,10 +4736,10 @@ newline
          <text:p text:style-name="P19627">PLUG: plug back the worst offending well. This option is not implemented in OPM Flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19693">RATE: the group’s production rate target is reduced to equal GSALEMAX, after accounting for fuel gas (GCONSUMP keyword) and the current rate of re-injection. This will also place the group on gas production control.</text:p>
+         <text:p text:style-name="P19693">RATE: the group’s production rate target is reduced to equal GSALEMAX, after accounting for fuel gas (<text:a xlink:href="#__RefHeading___Toc188037_2026549522">GCONSUMP</text:a> keyword) and the current rate of re-injection. This will also place the group on gas production control.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19634">END: stop the simulation at the end of the report step.</text:p>
+         <text:p text:style-name="P19634"><text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a>: stop the simulation at the end of the report step.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P7961">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
@@ -4755,7 +4755,7 @@ newline
        <text:p text:style-name="P1763">Notes:</text:p>
        <text:list xml:id="list1404317945" text:style-name="L132">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19159">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4771,8 +4771,8 @@ newline
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable574" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.32</text:sequence>: GCONSALE Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12261">GCONSALE can also be used with the GCONINJE keyword in the SCHEDULE section in order to apply additional limits, for example by applying a maximum group injection rate. In this scenario,<text:s/>the TARGET variable on the GCONINJE keyword must be set to “REIN”, and if desired, a re-injection fraction (REIN on the GCONINJE keyword), or any other constraint.</text:p>
-    <text:p text:style-name="P12262">See also the GCONSUMP in the SCHEDULE section that defines the fuel gas requirements for groups.</text:p>
+    <text:p text:style-name="P12261"><text:a xlink:href="#__RefHeading___Toc178287_2026549522">GCONSALE</text:a> can also be used with the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section in order to apply additional limits, for example by applying a maximum group injection rate. In this scenario,<text:s/>the TARGET variable on the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword must be set to “REIN”, and if desired, a re-injection fraction (REIN on the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword), or any other constraint.</text:p>
+    <text:p text:style-name="P12262">See also the <text:a xlink:href="#__RefHeading___Toc188037_2026549522">GCONSUMP</text:a> in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that defines the fuel gas requirements for groups.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716601_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716601_3964674244"/></text:h>
     <text:p text:style-name="P12263">The following examples sets the field gas sales target rate:</text:p>
     <text:p text:style-name="P14470">--</text:p>

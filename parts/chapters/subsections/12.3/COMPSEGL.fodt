@@ -4499,7 +4499,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716551_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716551_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMSEGSL keyword defines how a multi-segment well is connected to the reservoir by defining or modifying existing well connections in an LGR. Note that well must have been previously define by the WELSPECL keyword in the SCHEDULE section and the well connections must have been previously defined via the COMPDATL keyword in the SCHEDULE section. The COMPSEGL keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The COMSEGSL keyword defines how a multi-segment well is connected to the reservoir by defining or modifying existing well connections in an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>. Note that well must have been previously define by the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the well connections must have been previously defined via the <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. The <text:a xlink:href="#__RefHeading___Toc97659_3261743917">COMPSEGL</text:a> keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
     <text:p text:style-name="P12025">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table751" table:style-name="Table751">
      <table:table-column table:style-name="Table751.A"/>
@@ -4548,7 +4548,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table751.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7285">A character string of up to eight characters in length that defines the well name for which a multi-segment well is being defined.</text:p>
-       <text:p text:style-name="P7809">Note that the well name (WELNAME) must have been declared previously using the WELSPECL keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7809">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4645,7 +4645,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9528"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table751.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7375">A positive integer greater than or equal to one and less than or equal to MXBRAN on WSEGDIMS keyword in the RUNSPEC section that defines the branch number of the defined I, J and K connection.</text:p>
+       <text:p text:style-name="P7375">A positive integer greater than or equal to one and less than or equal to MXBRAN on <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the branch number of the defined I, J and K connection.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4754,7 +4754,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P5105">that defines the end of the range of the connections depending on the value of DIRECT. </text:p>
-       <text:p text:style-name="P5105">For example, <text:s/>if DIRECT is equal to Y or J then the IEND will be associated with the J-direction. The value may be positive or negative but must be calculated to remain within the grid. For example for NY is set 100 on the DIMENS keyword in the RUNSPEC section and J on this record set to 50, then IEND most range between -49 to +50.</text:p>
+       <text:p text:style-name="P5105">For example, <text:s/>if DIRECT is equal to Y or J then the IEND will be associated with the J-direction. The value may be positive or negative but must be calculated to remain within the grid. For example for NY is set 100 on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and J on this record set to 50, then IEND most range between -49 to +50.</text:p>
        <text:p text:style-name="P7910">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4880,10 +4880,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1617">Notes:</text:p>
        <text:list xml:id="list3441274967" text:style-name="L118">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19147">Each multi-segment wells must be defined by a separate COMPSEGL keyword that consists of two records, with entries 1-1 to 1-2 representing record one items and 2-1 to 2-13 representing record number two items in the “No.” column in this table. </text:p>
+         <text:p text:style-name="P19147">Each multi-segment wells must be defined by a separate <text:a xlink:href="#__RefHeading___Toc97659_3261743917">COMPSEGL</text:a> keyword that consists of two records, with entries 1-1 to 1-2 representing record one items and 2-1 to 2-13 representing record number two items in the “No.” column in this table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19147">Record number two of the keyword, items 2-1 to 2-13 is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the WSEGDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19147">Record number two of the keyword, items 2-1 to 2-13 is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19147">Each of the records are terminated by a “/” and is explicitly shown in the above rows and the keyword should be terminated by a “/”.</text:p>
@@ -4899,10 +4899,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14653">Table <text:sequence text:ref-name="refTable558" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.16</text:sequence>: COMPSEGL Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11521">The total number of wells and completions should be defined via the WELLSDIMS keyword and the number of multi-segment wells and completions should be declared on the WSEGDIMS keyword, both keywords are in the RUNSPEC section. </text:p>
-    <text:p text:style-name="P11335">See also the WELSPECL keyword to define wells in an LGR, the COMPDATL keyword to define the well connections for both ordinary wells and multi-segment wells with an LGR, and the COMPSEGS keyword to define a multi-segment connections in the global grid. All the aforementioned keywords are described in the SCHEDULE section. </text:p>
+    <text:p text:style-name="P11521">The total number of wells and completions should be defined via the WELLSDIMS keyword and the number of multi-segment wells and completions should be declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword, both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+    <text:p text:style-name="P11335">See also the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword to define wells in an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>, the <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword to define the well connections for both ordinary wells and multi-segment wells with an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>, and the <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keyword to define a multi-segment connections in the global grid. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:h text:style-name="P18557" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716553_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716553_3964674244"/></text:h>
-    <text:p text:style-name="P11335">The following example defines the completions for two oil producing segment oil wells (OP01 and OP02) using the COMPSEGS keywords. <text:s text:c="3"/></text:p>
+    <text:p text:style-name="P11335">The following example defines the completions for two oil producing segment oil wells (OP01 and OP02) using the <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords. <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14133">-- <text:s text:c="6"/>COMPLETION SEGMENT SPECIFICATION DATA <text:s text:c="52"/></text:p>
     <text:p text:style-name="P14133">-- <text:s text:c="76"/></text:p>
     <text:p text:style-name="P14133">-- WELL <text:s text:c="56"/></text:p>
@@ -4925,7 +4925,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14135"><text:s text:c="8"/>LGR01 <text:s/>5 <text:s/>10 <text:s text:c="2"/>2 <text:s text:c="3"/>2 <text:s text:c="3"/>3437.5 <text:s/>3637.5 <text:s text:c="31"/>/</text:p>
     <text:p text:style-name="P12904">/ </text:p>
     <text:p text:style-name="P11333"/>
-    <text:p text:style-name="P11333">Note that the COMPDATL keyword in the SCHEDULE section must also be defines for this well.</text:p>
+    <text:p text:style-name="P11333">Note that the <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section must also be defines for this well.</text:p>
     
    </text:section>
   </office:text>

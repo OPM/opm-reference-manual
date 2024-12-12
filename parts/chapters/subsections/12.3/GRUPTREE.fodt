@@ -4225,7 +4225,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838835"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838835"/></text:h>
-    <text:p text:style-name="_40_TextBody">GRUPTREE defines the group hierarchy of groups that have been created by having wells assigned to them via the WELSPECS keyword in the SCHEDULE section, By default three group levels are defined that sets the wells as level three, reporting directly to defined groups at level two, and the level two groups reporting to the FIELD group at level one. <text:s/>If a different configuration is required then the GRUPTREE keyword should be used to define the group hierarchy by defining a lower level group that reports directly to a higher level group. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> defines the group hierarchy of groups that have been created by having wells assigned to them via the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, By default three group levels are defined that sets the wells as level three, reporting directly to defined groups at level two, and the level two groups reporting to the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group at level one. <text:s/>If a different configuration is required then the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword should be used to define the group hierarchy by defining a lower level group that reports directly to a higher level group. <text:s/></text:p>
     <table:table table:name="Table681" table:style-name="Table681">
      <table:table-column table:style-name="Table681.A"/>
      <table:table-column table:style-name="Table681.B"/>
@@ -4253,8 +4253,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5136">LOWER</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table681.A2" office:value-type="string">
-       <text:p text:style-name="P7298">A character string of up to eight characters in length that defines the group name which belongs to the HIGHER group. The group named FIELD is the top most group and should NOT be used as as a group name for the LOWER group name.</text:p>
-       <text:p text:style-name="P7503">Undefined group relationships are automatically assigned to the FIELD group.</text:p>
+       <text:p text:style-name="P7298">A character string of up to eight characters in length that defines the group name which belongs to the HIGHER group. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should NOT be used as as a group name for the LOWER group name.</text:p>
+       <text:p text:style-name="P7503">Undefined group relationships are automatically assigned to the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table681.D2" office:value-type="string">
        <text:p text:style-name="P5137">None</text:p>
@@ -4268,8 +4268,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5136">HIGHER</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table681.A2" office:value-type="string">
-       <text:p text:style-name="P7298">A character string of up to eight characters in length that defines the HIGHER group name that the LOWER group belongs to. The group named FIELD is the top most group and can be used as as the HIGHER group name.</text:p>
-       <text:p text:style-name="P7503">Undefined group relationships are automatically assigned to the FIELD group.</text:p>
+       <text:p text:style-name="P7298">A character string of up to eight characters in length that defines the HIGHER group name that the LOWER group belongs to. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and can be used as as the HIGHER group name.</text:p>
+       <text:p text:style-name="P7503">Undefined group relationships are automatically assigned to the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table681.D2" office:value-type="string">
        <text:p text:style-name="P5137">None</text:p>
@@ -4292,9 +4292,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable586" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.44</text:sequence>: GRUPTREE Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="P11231">A group hierarchy can have any number of levels but groups that have other groups as LOWER groups cannot also have wells for the HIGHER group. Thus, <text:s/>a group either contains wells or has LOWER groups</text:p>
-    <text:p text:style-name="P11232">See also the GCONPROD and GCONINJE for defining group production and injection volumes, and the WELSPECS keywords to allocate wells to groups. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P11232">See also the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> for defining group production and injection volumes, and the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keywords to allocate wells to groups. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838833"/>Examples<text:bookmark-end text:name="__RefHeading___Toc32169_370116838833"/></text:h>
-    <text:p text:style-name="_40_TextBody">The first example defines PLAT01 and PLAT03 reporting to the FIELD level (default if these records are omitted) and PLAT02 reporting to PLAT01. </text:p>
+    <text:p text:style-name="_40_TextBody">The first example defines PLAT01 and PLAT03 reporting to the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> level (default if these records are omitted) and PLAT02 reporting to PLAT01. </text:p>
     <text:p text:style-name="P14186">--</text:p>
     <text:p text:style-name="P14186">-- <text:s text:c="6"/>DEFINE GROUP TREE HIERARCHY</text:p>
     <text:p text:style-name="P14186">-- <text:s text:c="77"/></text:p>
@@ -4389,7 +4389,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            InKLIQvAMkMWERljyAIsMWQRkVsMWQCWGbKIyBhDFmCJIYuI3GLIArDMkEVExhiyAEsMWUTk
            FkMWgGWGLCIyxpAFWGLIIiK3GLIALDNkEZExhizAEkMWEbnFkAVgmSGLiIwxZAGWGLKIyC2G
            LADLDFlEZIwhC7DEkEVEbjFkAVhmyBI4v/t2aGnBP37x8dO935P8+Sf33zPLT//43fCF9/76
-           xx9mv37rMf/wu8z3SMgYsgBLDFl6y18+fpOK/fvfPv5j+LX/+J9/fXY9/bXc9/zv/3yX+dzX
+           xx9mv37rMf/wu8z3SMgYsgBLDFl6y18+fpOK/fvfPv5j+<text:a xlink:href="#__RefHeading___Toc499449_3181922006">LX</text:a>/+J9/fXY9/bXc9/zv/3yX+dzX
            56eWv1aajiELwDJDlsAZhhf5IcUPP377j/TZ7z5++83k11e/55JvfvHx18+v+Pbjl4ufm/3M
            rc+tPeZtAJN5PAkXQxZgiSFLb1kZslzkhyNbQ5ZJvvnnys+R5mPIArDMkCVwtgYm//2Tjz+k
            L5j+jZbN77lk+Jr7v5mS+VkPGQc7s4FJ6fM0aAkfQxZgiSFLb1kasvzz4zd/Sp/458eP777+

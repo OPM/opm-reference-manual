@@ -4333,8 +4333,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716819_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716819_3964674244"/></text:h>
-    <text:p text:style-name="P11484">The WPOLYMER keyword defines a water injection well’s polymer and salt injection stream concentrations that are to be used for when the polymer and salt options have been activated by the POLYMER and BRINE keywords in the RUNSPEC section. </text:p>
-    <text:p text:style-name="P11587">Note that if the Brine option has not be activated by the BRINE keyword in the RUNSPEC section, then the salt concentrations in the third column are ignored. Secondly, if the brine phase is declared but the polymer phase has not been made active, then the WSALT keyword in the SCHEDULE section can be used to set the salt concentration.</text:p>
+    <text:p text:style-name="P11484">The <text:a xlink:href="#__RefHeading___Toc121643_2412586160">WPOLYMER</text:a> keyword defines a water injection well’s polymer and salt injection stream concentrations that are to be used for when the polymer and salt options have been activated by the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> and <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+    <text:p text:style-name="P11587">Note that if the Brine option has not be activated by the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then the salt concentrations in the third column are ignored. Secondly, if the brine phase is declared but the polymer phase has not been made active, then the <text:a xlink:href="#__RefHeading___Toc950256_4263943340">WSALT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section can be used to set the salt concentration.</text:p>
     <text:p text:style-name="P11581">Currently the Brine option is not implemented in OPM Flow and therefore both the SALTCON and GRPSALT variables on this keyword are ignored.</text:p>
     <table:table table:name="Table695" table:style-name="Table695">
      <table:table-column table:style-name="Table695.A"/>
@@ -4384,7 +4384,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table695.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7280">A character string of up to eight characters in length that defines the well name for which the well connection data is being defined.</text:p>
-       <text:p text:style-name="P7804">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7804">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4493,7 +4493,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1612">Notes:</text:p>
        <text:list xml:id="list105922840747396" text:continue-list="list2367859752" text:style-name="L178">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19207">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4511,9 +4511,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15674"/>
     <text:p text:style-name="P15737">Water injection wells that are not declared via this keyword have their concentrations defaulted to zero. <text:s/></text:p>
     <text:p text:style-name="P15380"/>
-    <text:p text:style-name="P15380">See also the GCONPROD and GCONINJE keywords to define a group’s production and injection targets and constraints, and the WCONINJE keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15380">See also the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keywords to define a group’s production and injection targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716821_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716821_3964674244"/></text:h>
-    <text:p text:style-name="P11092">The following example defines the polymer and salt injection stream concentrations for three water injection wells for when the polymer option has been activated by the POLYMER keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="P11092">The following example defines the polymer and salt injection stream concentrations for three water injection wells for when the polymer option has been activated by the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <text:p text:style-name="P14252">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14252">-- <text:s text:c="6"/>DEFINE WATER INJECTION WELL POLYMER AND SALT CONCENTRATIONS <text:s text:c="71"/></text:p>
     <text:p text:style-name="P14252">-- <text:s text:c="85"/></text:p>

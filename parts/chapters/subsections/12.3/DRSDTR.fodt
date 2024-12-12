@@ -4265,8 +4265,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716563_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716563_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">DRSDTR defines the maximum rate at which the solution gas-oil ratio (Rs) can be increased in a grid cell for various regions in the model. <text:s/>The keyword is similar in functionality to the DRSDT keyword, that defines the maximum rate at which Rs can be increased in a grid cell for all cells in the model. The number of DRSDTR vector data sets is defined by the NTPVT parameter on the TABDIMS keyword in the RUNSPEC section and the allocation of the DRSDTR records to different grid blocks in the model is done via the PVTNUM keyword in the REGION section. One data set consists of one record or line which is terminated by a “/”.</text:p>
-    <text:p text:style-name="_40_TextBody">DRSDTR should only be used if the OIL, GAS, and DISGAS keywords in the RUNSPEC section have been invoked to allow oil, gas and dissolved gas to be present in the model. <text:s/><text:s/>The keyword only affects the behavior of an increasing Rs, for example when gas is being injected into an oil reservoir, and is subject to the availability of free gas and the ability of the undersaturated oil to adsorb this gas.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc135414_4268459800">DRSDTR</text:a> defines the maximum rate at which the solution gas-oil ratio (Rs) can be increased in a grid cell for various regions in the model. <text:s/>The keyword is similar in functionality to the <text:a xlink:href="#__RefHeading___Toc117623_2179381650">DRSDT</text:a> keyword, that defines the maximum rate at which Rs can be increased in a grid cell for all cells in the model. The number of <text:a xlink:href="#__RefHeading___Toc135414_4268459800">DRSDTR</text:a> vector data sets is defined by the NTPVT parameter on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and the allocation of the <text:a xlink:href="#__RefHeading___Toc135414_4268459800">DRSDTR</text:a> records to different grid blocks in the model is done via the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword in the REGION section. One data set consists of one record or line which is terminated by a “/”.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc135414_4268459800">DRSDTR</text:a> should only be used if the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, and <text:a xlink:href="#__RefHeading___Toc39767_2267116897">DISGAS</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section have been invoked to allow oil, gas and dissolved gas to be present in the model. <text:s/><text:s/>The keyword only affects the behavior of an increasing Rs, for example when gas is being injected into an oil reservoir, and is subject to the availability of free gas and the ability of the undersaturated oil to adsorb this gas.</text:p>
     <table:table table:name="Table375" table:style-name="Table375">
      <table:table-column table:style-name="Table375.A"/>
      <table:table-column table:style-name="Table375.B"/>
@@ -4347,18 +4347,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5580">DRSDT2 is a defined character string that defines whether the DRSDT1 is applied to either all grid blocks or just those grid blocks containing free gas:</text:p>
        <text:list xml:id="list105919713995805" text:continue-list="list105920735918405" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18858">ALL: means the DRSDT1 maximum rate at which Rs is allowed to increase in a grid cell is applied to all grid blocks.</text:p>
+         <text:p text:style-name="P18858"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a>: means the DRSDT1 maximum rate at which Rs is allowed to increase in a grid cell is applied to all grid blocks.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18858">FREE: <text:s/>means the DRSDT1 maximum rate at which Rs is allowed to increase in a grid cell is applied to grid blocks only containing free gas.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P5589">Note if the keyword is not present in the input deck then DRSDT2 is set to the default value of ALL.</text:p>
+       <text:p text:style-name="P5589">Note if the keyword is not present in the input deck then DRSDT2 is set to the default value of <text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table375.F5" office:value-type="string">
-       <text:p text:style-name="P9342">ALL</text:p>
+       <text:p text:style-name="P9342"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708741758704">
@@ -4366,7 +4366,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2410">Notes:</text:p>
        <text:list xml:id="list803937410" text:style-name="L122">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20089">The keyword is followed by NTPVT records as declared on the TABDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20089">The keyword is followed by NTPVT records as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item text:start-value="1">
          <text:p text:style-name="P20141">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4383,10 +4383,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14710">Table <text:sequence text:ref-name="refTable564" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.22</text:sequence>: DRSDTR Keyword Description</text:p>
     <text:p text:style-name="P15538"/>
     <text:p text:style-name="_40_TextBody">Note this keyword can be used in history matching field performance to control the availability of the movable gas phase.</text:p>
-    <text:p text:style-name="_40_TextBody">See also the VAPPARS keyword in the SOLUTION section and the DRSDT, DRVDT and DRVDTR keywords in the SCHEDULE section that controls how vaporized oil is treated and the rate at which the dissolved phase ratio increases within a grid block.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc210172_2884651453">VAPPARS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section and the <text:a xlink:href="#__RefHeading___Toc117623_2179381650">DRSDT</text:a>, <text:a xlink:href="#__RefHeading___Toc117625_2179381650">DRVDT</text:a> and <text:a xlink:href="#__RefHeading___Toc135416_4268459800">DRVDTR</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that controls how vaporized oil is treated and the rate at which the dissolved phase ratio increases within a grid block.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored but is documented here for completeness, as it is expected to be available in the next release of OPM Flow.</text:p>
     <text:h text:style-name="P18563" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716565_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716565_3964674244"/></text:h>
-    <text:p text:style-name="P11527">The first example prevents the solution gas-oil ratio from increasing and applies this to all regions for when NTPVT on the TABDIMS keyword in the RUNSPEC section is set to three.</text:p>
+    <text:p text:style-name="P11527">The first example prevents the solution gas-oil ratio from increasing and applies this to all regions for when NTPVT on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section is set to three.</text:p>
     <text:p text:style-name="P14087">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P14088"><text:soft-page-break/>-- <text:s text:c="6"/>SOLUTION GAS (RS) MAXIMUM RATE OF INCREASE BY REGION <text:s text:c="43"/>-- <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14087">DRSDTR</text:p>
@@ -4397,7 +4397,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13101"><text:s text:c="9"/>0.0000 <text:s text:c="3"/>ALL <text:s text:c="36"/>/ <text:s text:c="76"/></text:p>
     <text:p text:style-name="P13101"><text:s text:c="9"/>0.0000 <text:s text:c="3"/>ALL <text:s text:c="36"/>/ <text:s text:c="76"/></text:p>
     <text:p text:style-name="P15073"/>
-    <text:p text:style-name="_40_TextBody">The second example below prevents the solution gas-oil ratio from increasing and applies this to all grid cells in PVTNUM region one. For PVTNUM regions one and two the keyword applies 0.0005 Mscf/stb/d as the maximum rate at which the solution gas-oil ratio is allowed to increase in a grid cell, and applies this to only cells containing free gas.</text:p>
+    <text:p text:style-name="_40_TextBody">The second example below prevents the solution gas-oil ratio from increasing and applies this to all grid cells in <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region one. For <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions one and two the keyword applies 0.0005 Mscf/stb/d as the maximum rate at which the solution gas-oil ratio is allowed to increase in a grid cell, and applies this to only cells containing free gas.</text:p>
     <text:p text:style-name="P14087">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P14088">-- <text:s text:c="6"/>SOLUTION GAS (RS) MAXIMUM RATE OF INCREASE BY REGION <text:s text:c="43"/>-- <text:s text:c="3"/></text:p>
     <text:p text:style-name="P14087">DRSDTR</text:p>

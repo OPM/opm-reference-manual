@@ -4239,8 +4239,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_3701168388351"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_3701168388351"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword advances the simulation to a given report date after which additional keywords may be entered to instruct OPM Flow to perform additional functions via the SCHEDULE section keywords, or further DATES data sets or keywords may be entered to advance the simulator to the next report date.</text:p>
-    <text:p text:style-name="_40_TextBody">If the DATES keyword is to be used during the simulation, then the START keyword in the RUNSPEC section must be declared to set the start date for the run. </text:p>
+    <text:p text:style-name="_40_TextBody">This keyword advances the simulation to a given report date after which additional keywords may be entered to instruct OPM Flow to perform additional functions via the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keywords, or further <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> data sets or keywords may be entered to advance the simulator to the next report date.</text:p>
+    <text:p text:style-name="_40_TextBody">If the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword is to be used during the simulation, then the <text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section must be declared to set the start date for the run. </text:p>
     <table:table table:name="Table647" table:style-name="Table647">
      <table:table-column table:style-name="Table647.A"/>
      <table:table-column table:style-name="Table647.B"/>
@@ -4307,12 +4307,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5114">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table647.A2" office:value-type="string">
-       <text:p text:style-name="P5115">TIME</text:p>
+       <text:p text:style-name="P5115"><text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table647.A2" office:value-type="string">
        <text:p text:style-name="P5115">A numeric character string that defines the time for the data set in the form of:</text:p>
        <text:p text:style-name="P5114">HH:MM:SS.SSSS</text:p>
-       <text:p text:style-name="P5116">The default value means in most cases this parameter can be defaulted. TIME is normally used when detailed DST matching is performed to enable the pressures and rates to be stated at specific dates and times.</text:p>
+       <text:p text:style-name="P5116">The default value means in most cases this parameter can be defaulted. <text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a> is normally used when detailed DST matching is performed to enable the pressures and rates to be stated at specific dates and times.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table647.D2" office:value-type="string">
        <text:p text:style-name="P5114">00:00:00</text:p>
@@ -4323,7 +4323,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1619">Notes:</text:p>
        <text:list xml:id="list105919864707044" text:continue-list="list105918496844995" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20100">The keyword is followed by a number of data sets (or rows) representing one DATE record per row.</text:p>
+         <text:p text:style-name="P20100">The keyword is followed by a number of data sets (or rows) representing one <text:a xlink:href="#__RefHeading___Toc210146_2884651453">DATE</text:a> record per row.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20100">Each record (or row) is terminated by a “/” and the keyword is terminated by a “/”.</text:p>
@@ -4337,12 +4337,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable561" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.19</text:sequence>: DATES Keyword Description</text:p>
     <text:p text:style-name="P11337"/>
-    <text:p text:style-name="P11570">Note that OPM Flow uses the standard Gregorian calendar and therefore leap years are accounted for in the DATES keyword. Thus, it is more accurate to use the DATES keyword to progress the simulator through time if one is matching actual production data.</text:p>
-    <text:p text:style-name="P11342">See also the TIME and TSTEP keywords in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P11570">Note that OPM Flow uses the standard Gregorian calendar and therefore leap years are accounted for in the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword. Thus, it is more accurate to use the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword to progress the simulator through time if one is matching actual production data.</text:p>
+    <text:p text:style-name="P11342">See also the <text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a> and <text:a xlink:href="#__RefHeading___Toc118323_1596574740">TSTEP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P11337">Whenever possible it is a good idea to always set the start date to be at the beginning of the year, as like most simulators, OPM Flow reports are always stated at the number of days from the start date (and sometimes at a given date). If the start date is at the beginning of the year, then calculating the actual date is relatively straight forward and simple.</text:p>
     <text:p text:style-name="P10921"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_3701168388351"/>Examples<text:bookmark-end text:name="__RefHeading___Toc14501_3701168388351"/></text:h>
-    <text:p text:style-name="_40_TextBody">Given a start date of January 1, 2020 set via the START keyword in the RUNSPEC section, the following example advances the simulator from the start date of January 1, 2020 to January 1, 2021, using quarterly reporting time steps.</text:p>
+    <text:p text:style-name="_40_TextBody">Given a start date of January 1, 2020 set via the <text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, the following example advances the simulator from the start date of January 1, 2020 to January 1, 2021, using quarterly reporting time steps.</text:p>
     <text:p text:style-name="P14136">-- ==============================================================================</text:p>
     <text:p text:style-name="P14136">-- </text:p>
     <text:p text:style-name="P14136">-- SCHEDULE SECTION </text:p>

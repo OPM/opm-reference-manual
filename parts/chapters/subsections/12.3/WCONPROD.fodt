@@ -4869,7 +4869,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P95" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716717_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716717_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WCONPROD keyword defines production targets and constraints for wells that have previously been defined by the WELSPECS keyword in the SCHEDULE section. Note that wells can be allocated to a group when they are specified by the WELSPECS keyword. <text:s/>Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells using this keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword defines production targets and constraints for wells that have previously been defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. Note that wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword. <text:s/>Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells using this keyword.</text:p>
     <table:table table:name="Table115" table:style-name="Table115">
      <table:table-column table:style-name="Table115.A"/>
      <table:table-column table:style-name="Table115.B"/>
@@ -4917,7 +4917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table115.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well production targets and constraints data are being defined.</text:p>
-       <text:p text:style-name="P39">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P39">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4939,7 +4939,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P129">OPEN: the well is open to flow and will attempt to produce the required production volumes.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P130">STOP: the well is “stopped” at the surface and will not produce any fluids to surface; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to <text:s/>all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable on the WELSPECS keyword to NO. In this case the well’s behavior will be similar to the SHUT option described below.</text:p>
+         <text:p text:style-name="P130">STOP: the well is “stopped” at the surface and will not produce any fluids to surface; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to <text:s/>all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to NO. In this case the well’s behavior will be similar to the SHUT option described below.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P131">SHUT: the well is shut at the surface and downhole, this results in no flow at the surface and no cross flow downhole. </text:p>
@@ -4986,19 +4986,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P134">BHP: the target rate is set to the bottom-hole pressure as defined by item (9).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P134">THP: the target rate is set to the tubing head pressure as defined by item (10). If this option is selected then the vertical lift performance tables must be entered via the VFPPROD keyword in the SCHEDULE section and allocated to the well via item (11).</text:p>
+         <text:p text:style-name="P134">THP: the target rate is set to the tubing head pressure as defined by item (10). If this option is selected then the vertical lift performance tables must be entered via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and allocated to the well via item (11).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P135">GRUP: the well is under group control and produces its share of the group&apos;s target as set using the GCONPROD keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="P135">GRUP: the well is under group control and produces its share of the group&apos;s target as set using the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P114">Here the default tokens of <text:span text:style-name="T26">1* </text:span>or<text:span text:style-name="T26"> &apos;&apos;</text:span> may be used, and both default tokens behave in the same manner; however, the actual default value used when TARGET is defaulted is dependent on the data entered on this keyword as described below:</text:p>
        <text:list text:continue-list="list163647945637600" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P137">If the well’s group parameters have not been defined via the GCONPROD keyword, in the SCHEDULE section, then TARGET is set to the first non-defaulted hydrocarbon rate (ORAT, GRAT, LRAT, or RESV). If all the rates are defaulted and a value for BHP is entered, then TARGET is set to BHP control. Similarly, if BHP is also defaulted, and THP has been entered, then TARGET is set to THP control. Finally, if all parameters are defaulted, then the default value for BHP, one atmosphere, will be used with BHP control. </text:p>
+         <text:p text:style-name="P137">If the well’s group parameters have not been defined via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword, in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then TARGET is set to the first non-defaulted hydrocarbon rate (ORAT, GRAT, LRAT, or RESV). If all the rates are defaulted and a value for BHP is entered, then TARGET is set to BHP control. Similarly, if BHP is also defaulted, and THP has been entered, then TARGET is set to THP control. Finally, if all parameters are defaulted, then the default value for BHP, one atmosphere, will be used with BHP control. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P138">If, <text:span text:style-name="T26">and only if</text:span>, the well’s group parameters have been defined via the GCONPROD keyword, then TARGET is set equal to GRUP, <text:s/>and the remaining parameters on the WCONPROD keyword are used as well constraints.</text:p>
+         <text:p text:style-name="P138">If, <text:span text:style-name="T26">and only if</text:span>, the well’s group parameters have been defined via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword, then TARGET is set equal to GRUP, <text:s/>and the remaining parameters on the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword are used as well constraints.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">Note the default value of one atmosphere should be avoided as the BHP will result in unrealistic well potentials as well as optimistic production forecasts for the well.</text:p>
@@ -5244,7 +5244,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table115.C20" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P33">A positive integer greater than or equal to zero that defines the vertical lift performance tables to be used for calculating the tubing head pressure for the well. </text:p>
-       <text:p text:style-name="P57">If a non-zero value is entered then the vertical lift performance tables must be entered via the VFPPROD keyword in the SCHEDULE section and allocated to the well via this item. <text:s/></text:p>
+       <text:p text:style-name="P57">If a non-zero value is entered then the vertical lift performance tables must be entered via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and allocated to the well via this item. <text:s/></text:p>
        <text:p text:style-name="P57">The default value of zero implies no vertical lift performance tables and in this case TARGET cannot be set to THP and in addition item (10) should be defaulted or set to zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5261,10 +5261,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P55">ALQ-WELL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table115.C20" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P56">A real positive value that defines the artificial lift quantity to be used in conjunction with the VFPPROD assigned to the well via the VFPTAB variable. <text:s/></text:p>
+       <text:p text:style-name="P56">A real positive value that defines the artificial lift quantity to be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> assigned to the well via the VFPTAB variable. <text:s/></text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P56">VFPTAB vertical lift performance table and the artificial lift quantity ALQ-WELL are used with the well fluid rates to calculate the well’s tubing head pressures values from the bottom-hole pressure.</text:p>
-       <text:p text:style-name="P59">Note that the units for ALQ-WELL are dependent on the associated variable on the VFPPROD keyword.</text:p>
+       <text:p text:style-name="P59">Note that the units for ALQ-WELL are dependent on the associated variable on the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5414,7 +5414,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P136">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="P136">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P136">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -5430,7 +5430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P91">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.80</text:sequence>: WCONPROD Keyword Description</text:p>
     <text:p text:style-name="P79"/>
-    <text:p text:style-name="P79">See also the GCONPROD and GCONINJE keywords to define a group’s production and injection targets and constraints, and the WCONINJE keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P79">See also the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keywords to define a group’s production and injection targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P78"/>
     <text:h text:style-name="P96" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716719_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716719_3964674244"/></text:h>
     <text:p text:style-name="Text_20_body">The following example defines the production targets and constraints for five wells as follows:</text:p>
@@ -5446,9 +5446,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P85">OP04 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT 20E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>500.0 <text:s text:c="19"/>/</text:p>
     <text:p text:style-name="P85">OP05 <text:s text:c="4"/>SHUT <text:s text:c="2"/>GRUP 20E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>500.0 <text:s text:c="19"/>/</text:p>
     <text:p text:style-name="P80">/ <text:s text:c="157"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P92">Well OP01 is open and is on group control, subject to a maximum oil rate constraint of 5,000 stb/d and a minimum bottom-hole pressure of 500 psia. OP02 is also open and on group control but it’s maximum oil rate constraint has been set 10,000 stb/d, and is subject to a minimum bottom-hole pressure limit of 200 psia and a minimum tubing head pressure limit of 500 psia using VFPPROD vertical lift table number two. Well OP03 is very similar to OP02, but with a 15,000 stb/d maximum oil constraint and using VFPPROD vertical lift table number three with an artificial lift parameter of 10. The next well is not on group control. Well OP04 is open and has an oil rate target of 20,000 stb/d, subject to a minimum bottom-hole pressure of 500 psia. <text:s/>Finally, well OP05 is shut and will not be brought back on production despite being put under group control, as the well has been declared shut.</text:p>
+    <text:p text:style-name="P92">Well OP01 is open and is on group control, subject to a maximum oil rate constraint of 5,000 stb/d and a minimum bottom-hole pressure of 500 psia. OP02 is also open and on group control but it’s maximum oil rate constraint has been set 10,000 stb/d, and is subject to a minimum bottom-hole pressure limit of 200 psia and a minimum tubing head pressure limit of 500 psia using <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> vertical lift table number two. Well OP03 is very similar to OP02, but with a 15,000 stb/d maximum oil constraint and using <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> vertical lift table number three with an artificial lift parameter of 10. The next well is not on group control. Well OP04 is open and has an oil rate target of 20,000 stb/d, subject to a minimum bottom-hole pressure of 500 psia. <text:s/>Finally, well OP05 is shut and will not be brought back on production despite being put under group control, as the well has been declared shut.</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P77">The next example defines the production targets and constraints for five wells, of which well OP01 is under group control as the well’s group target and constraints have been set with the GCONPROD keyword, and wells OP02 to OP05 belong to groups that have not had their group constraints set by GCONPROD.</text:p>
+    <text:p text:style-name="P77">The next example defines the production targets and constraints for five wells, of which well OP01 is under group control as the well’s group target and constraints have been set with the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword, and wells OP02 to OP05 belong to groups that have not had their group constraints set by <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a>.</text:p>
     <text:p text:style-name="P82">--</text:p>
     <text:p text:style-name="P83">-- <text:s text:c="6"/>GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
     <text:p text:style-name="P83">-- <text:s text:c="77"/></text:p>

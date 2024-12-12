@@ -4318,9 +4318,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716543_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716543_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMPLUMP keyword assigns connections, as defined by the COMPDAT keyword in the SCHEDULE section, to completion intervals. This “lumping” of the connections to various completion intervals allows automatic workovers and economic criteria to be applied to the completions (that is a set of connections) as opposed to the connections. <text:s/>This allows for a more realistic approach for workovers operations. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword assigns connections, as defined by the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, to completion intervals. This “lumping” of the connections to various completion intervals allows automatic workovers and economic criteria to be applied to the completions (that is a set of connections) as opposed to the connections. <text:s/>This allows for a more realistic approach for workovers operations. </text:p>
     <text:p text:style-name="_40_TextBody">For example, if the water cut criteria for working over a well was set to 95%, and the average grid block connection thickness was one meter, <text:s/>then once a well’s water cut reached 95% the worst offending one meter connection would be shut-in. If the well’s actual perforation interval was 10 meters and the 10 connections were lumped as one completion, then when the water cut limit of 95% is reach, the completion would be shut-in, that is all of the 10 connections within the completion would be shut-in.</text:p>
-    <text:p text:style-name="_40_TextBody">As the keyword is used to lump connections into a completions, the simulator adds together the contribution from all connections in the completion and uses the total values to test the economic limits. <text:s/>Note that a connection can only belong to one completion. <text:s/>In addition, completions can be used instead of connections in the WELOPEN and WPIMULT keywords if the completions have been defined by COMPLUMP for a well.</text:p>
+    <text:p text:style-name="_40_TextBody">As the keyword is used to lump connections into a completions, the simulator adds together the contribution from all connections in the completion and uses the total values to test the economic limits. <text:s/>Note that a connection can only belong to one completion. <text:s/>In addition, completions can be used instead of connections in the <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> and <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords if the completions have been defined by <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> for a well.</text:p>
     <table:table table:name="Table657" table:style-name="Table657">
      <table:table-column table:style-name="Table657.A"/>
      <table:table-column table:style-name="Table657.B"/>
@@ -4368,7 +4368,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table657.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7283">A character string of up to eight characters in length that defines the well name for which the well connection data are being defined.</text:p>
-       <text:p text:style-name="P7807">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7807">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4454,7 +4454,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7902">ICOMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table657.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7577">An integer greater than or equal to one and less than or equal to MXCONS as defined on the WELLDIMS keyword in the RUNSPEC section, that defines the completion number of the currently defined set of connections.</text:p>
+       <text:p text:style-name="P7577">An integer greater than or equal to one and less than or equal to MXCONS as defined on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the completion number of the currently defined set of connections.</text:p>
        <text:p text:style-name="P7928">If I, J, K1, K2 are all set to zero or defaulted to 1*, then all connections in the well have the same completion number of ICOMP.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4485,9 +4485,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable556" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.14</text:sequence>: COMPLUMP Keyword Description</text:p>
     <text:p text:style-name="P15694"/>
     <text:p text:style-name="P15408">Multiple grid block connections can be defined on one record for vertical wells by assigning different values to K1 and K2, for deviated and horizontal wells this may not be possible and therefore each grid block connection must be separately defined by setting K1 equal to K2.</text:p>
-    <text:p text:style-name="P15343">See also the COMPDAT keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15343">See also the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18555" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716545_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716545_3964674244"/></text:h>
-    <text:p text:style-name="P11070">The following example defines the connections for two vertical oil wells using the COMPDAT keyword and the re-allocation of the connections to completions intervals using the COMPLUMP keyword.</text:p>
+    <text:p text:style-name="P11070">The following example defines the connections for two vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword and the re-allocation of the connections to completions intervals using the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword.</text:p>
     <text:p text:style-name="P13373">--</text:p>
     <text:p text:style-name="P13373">-- <text:s text:c="6"/>WELL CONNECTION DATA <text:s text:c="26"/></text:p>
     <text:p text:style-name="P13373">-- <text:s text:c="77"/></text:p>

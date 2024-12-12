@@ -4320,7 +4320,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716547_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716547_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMPORD keyword defines how the well connection data entered on the COMPDAT keyword in the SCHEDULE section are to be ordered for a well.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97657_3261743917">COMPORD</text:a> keyword defines how the well connection data entered on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section are to be ordered for a well.</text:p>
     <table:table table:name="Table659" table:style-name="Table659">
      <table:table-column table:style-name="Table659.A"/>
      <table:table-column table:style-name="Table659.B"/>
@@ -4368,7 +4368,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table659.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7284">A character string of up to eight characters in length that defines the well name for which the well connection data are being defined.</text:p>
-       <text:p text:style-name="P7808">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7808">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4381,16 +4381,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7158">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table659.C2" office:value-type="string">
-       <text:p text:style-name="P7933">COMPORD</text:p>
+       <text:p text:style-name="P7933"><text:a xlink:href="#__RefHeading___Toc97657_3261743917">COMPORD</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table659.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7374">A character string that defines the method for ordering the well connections given on the COMPDAT keyword, and should be set to DEPTH, INPUT, or TRACK.</text:p>
+       <text:p text:style-name="P7374">A character string that defines the method for ordering the well connections given on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword, and should be set to <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a>, INPUT, or TRACK.</text:p>
        <text:list xml:id="list105919391057719" text:continue-list="list105920103524438" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19498">DEPTH: The connections are ordered by a connection’s true vertical depth from the shallowest to the deepest. If multiple connections are at the same depth then these connections are sub ordered by the sequence they were entered on the COMPDAT keyword.</text:p>
+         <text:p text:style-name="P19498"><text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a>: The connections are ordered by a connection’s true vertical depth from the shallowest to the deepest. If multiple connections are at the same depth then these connections are sub ordered by the sequence they were entered on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19578">INPUT: This option results in the connections being ordered in the same sequence as entered via the COMPDAT keyword. In this case <text:span text:style-name="T1533">the connections should be declared in the correct sequence, starting with the connection nearest the well head and then working along the wellbore towards the bottom or toe of the well.</text:span></text:p>
+         <text:p text:style-name="P19578">INPUT: This option results in the connections being ordered in the same sequence as entered via the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword. In this case <text:span text:style-name="T1533">the connections should be declared in the correct sequence, starting with the connection nearest the well head and then working along the wellbore towards the bottom or toe of the well.</text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19590"><office:annotation office:name="__Annotation__113235_1126630271" loext:resolved="false">
@@ -4404,7 +4404,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            <meta:creator-initials>DBx</meta:creator-initials>
            <text:p text:style-name="P20244"><text:span text:style-name="T8541">Reply to Atgeirr Rasmussen (09/20/2017, 11:54): &quot;...&quot;</text:span></text:p>
            <text:p><text:span text:style-name="T8542">Yes, we need to document this but I think this can wait until we get the first release out, otherwise we will never finish. I’ll keep the comments so we can trackt it.</text:span></text:p>
-          </office:annotation><office:annotation-end office:name="__Annotation__113235_1126630271"/><office:annotation-end office:name="__Annotation__105056_3650259404"/>: This option enables OPM Flow to trace the well connections through the grid to obtain the correct order for the connections. If the supplied COMPDAT indicates the well is vertical (via the DIRECT variable being equal to Z on the COMPDAT keyword) then the DEPTH option will be applied instead.</text:p>
+          </office:annotation><office:annotation-end office:name="__Annotation__113235_1126630271"/><office:annotation-end office:name="__Annotation__105056_3650259404"/>: This option enables OPM Flow to trace the well connections through the grid to obtain the correct order for the connections. If the supplied <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> indicates the well is vertical (via the DIRECT variable being equal to Z on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword) then the <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> option will be applied instead.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P2545">All options are now <text:span text:style-name="T2554">supported by OPM Flow</text:span>.</text:p>
@@ -4436,7 +4436,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable557" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.15</text:sequence>: COMPORD Keyword Description</text:p>
     <text:p text:style-name="P15693"/>
-    <text:p text:style-name="P15342">See also the COMPDAT keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15342">See also the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P15254"/>
     <table:table table:name="Table660" table:style-name="Table660">
      <table:table-column table:style-name="Table660.A"/>
@@ -4451,7 +4451,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P11134"><text:soft-page-break/></text:p>
     <text:h text:style-name="P18726" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716549_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716549_3964674244"/></text:h>
-    <text:p text:style-name="P11071">The following example defines the connections for two vertical oil wells using the COMPDAT keyword and the COMPORD to defined the connection ordering for the wells.</text:p>
+    <text:p text:style-name="P11071">The following example defines the connections for two vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword and the <text:a xlink:href="#__RefHeading___Toc97657_3261743917">COMPORD</text:a> to defined the connection ordering for the wells.</text:p>
     <text:p text:style-name="P12981">--</text:p>
     <text:p text:style-name="P13377">-- <text:s text:c="6"/>WELL CONNECTION DATA <text:s text:c="26"/></text:p>
     <text:p text:style-name="P13377">-- <text:s text:c="77"/></text:p>
@@ -4470,7 +4470,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14132">OP01 <text:s text:c="4"/>DEPTH <text:s text:c="44"/>/</text:p>
     <text:p text:style-name="P14132">OP02 <text:s text:c="4"/>DEPTH <text:s text:c="44"/>/</text:p>
     <text:p text:style-name="P14132">/ <text:s text:c="2"/></text:p>
-    <text:p text:style-name="P11519">The DEPTH option has been chosen because both wells are vertical. Also one could use the following format instead for the COMPORD:</text:p>
+    <text:p text:style-name="P11519">The <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> option has been chosen because both wells are vertical. Also one could use the following format instead for the <text:a xlink:href="#__RefHeading___Toc97657_3261743917">COMPORD</text:a>:</text:p>
     <text:p text:style-name="P14132">--</text:p>
     <text:p text:style-name="P14132">-- <text:s text:c="6"/>DEFINE WELL CONNECTION ORDERING <text:s text:c="24"/></text:p>
     <text:p text:style-name="P14132">-- <text:s text:c="77"/></text:p>
@@ -4480,7 +4480,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14132">* <text:s text:c="7"/>DEPTH <text:s text:c="44"/>/</text:p>
     <text:p text:style-name="P14132">/ <text:s text:c="2"/></text:p>
     <text:p text:style-name="P11334"/>
-    <text:p text:style-name="P11334">as both wells should utilize the DEPTH option. This version would set all wells in the model to DEPTH connection ordering.</text:p>
+    <text:p text:style-name="P11334">as both wells should utilize the <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> option. This version would set all wells in the model to <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> connection ordering.</text:p>
     <text:p text:style-name="P11520"/>
     
    </text:section>

@@ -4732,7 +4732,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716879_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716879_3964674244"/></text:h>
-    <text:p text:style-name="P11794">The WSEGVALV keyword defines a multi-segment well segment to be a sub-critical valve Inflow Control Device (“ICD”) as part of a completion for a multi-segment well. Note that the well must have been previously defined by the WELSPECS and WELSEGS keywords in the SCHEDULE section and that the data for the keyword should be repeated for each multi-segment completion that contains a sub-critical valve ICD. <text:s/></text:p>
+    <text:p text:style-name="P11794">The <text:a xlink:href="#__RefHeading___Toc1091865_4263943340">WSEGVALV</text:a> keyword defines a multi-segment well segment to be a sub-critical valve Inflow Control Device (“ICD”) as part of a completion for a multi-segment well. Note that the well must have been previously defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and that the data for the keyword should be repeated for each multi-segment completion that contains a sub-critical valve ICD. <text:s/></text:p>
     <text:p text:style-name="P11794">An ICD is a well completion component usually installed along the producing section of a well to minimize the unwanted water and gas breakthrough in an oil well, or early water production in a gas well, due to an uneven flow profile over the completed interval. <text:s/>Permeability variations over the producing interval cause the high permeability zones to produce higher quantities of fluids than the lower permeability zones and this uneven producing fluid profile may result in bypassed hydrocarbons. Secondly, for horizontal wells, the pressure loss from the “toe” to the “heel” of the well again results in an uneven fluid profile over the producing interval. In order to rectify this ICDs can be installed so that the well fluids have to flow through an ICD before entering the tubing; thus, creating an additional “designed” pressure loss. <text:s/></text:p>
     <text:p text:style-name="P11716">A sub-critical valve ICD is a type of frictional ICD that adds an additional pressure loss by directing the fluid through a constriction before entering the tubing. The pressure drop is a function of the fluid density, the volumetric flow rate, and the diameter of the constriction. By placing various ICD’s over the production interval one can design a completion that results in a more uniform producing fluid profile throughout the length of the producing interval. </text:p>
     <table:table table:name="Table1851" table:style-name="Table1851">
@@ -4782,7 +4782,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7327">A character string of up to eight characters in length that defines the well name for which a multi-segment well is being defined.</text:p>
-       <text:p text:style-name="P7841">Note that the well name (WELNAME) must have been declared previously using both the WELSPECS and WELSEGS keywords in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7841">Note that the well name (WELNAME) must have been declared previously using both the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4798,7 +4798,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7529">ISEG1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7407">A positive integer greater than or equal to two and less than or equal to MXSEGS on the WSEGDIMS keyword in the RUNSPEC section that defines the segment containing the sub-critical valve.</text:p>
+       <text:p text:style-name="P7407">A positive integer greater than or equal to two and less than or equal to MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the segment containing the sub-critical valve.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4878,7 +4878,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P5300">A real positive value greater than or equal to zero that defines the additional pipe length for the frictional pressure drop (L).</text:p>
-       <text:p text:style-name="P5467">If set to zero then there is no additional pressure loss due to friction, whereas, <text:s/>if set to the default (1*), then the segment pipe length is calculated from the corresponding WELSEGS keyword.</text:p>
+       <text:p text:style-name="P5467">If set to zero then there is no additional pressure loss due to friction, whereas, <text:s/>if set to the default (1*), then the segment pipe length is calculated from the corresponding <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4909,7 +4909,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="Table_20_Contents">A real positive value that defines the pipe internal diameter of the segment used to calculate the pressure drop due to friction (D).</text:p>
-       <text:p text:style-name="Table_20_Contents">The value is used to replace the segment pipe internal diameter defined on the WELSEGS keyword in record 2-7, also named ID. <text:s/>If ID is defaulted on this keyword then the equivalent value on the WELSEGS keyword will be used instead.</text:p>
+       <text:p text:style-name="Table_20_Contents">The value is used to replace the segment pipe internal diameter defined on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword in record 2-7, also named ID. <text:s/>If ID is defaulted on this keyword then the equivalent value on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword will be used instead.</text:p>
        <text:p text:style-name="Table_20_Contents">Note for non-circular pipe segments use the equivalent diameter instead, that is:</text:p>
        <text:p text:style-name="P7562"><draw:frame draw:style-name="fr68" draw:name="Object184" text:anchor-type="as-char" svg:y="-0.586cm" svg:width="6.966cm" svg:height="0.873cm" draw:z-index="831"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -5025,7 +5025,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="Table_20_Contents">A real positive value that defines the pipe absolute roughness for this segment. </text:p>
-       <text:p text:style-name="Table_20_Contents">The value is used to replace the segment pipe absolute roughness defined on the WELSEGS keyword in record 2-8, also named EPSILON. <text:s/>If EPSILON is defaulted on this keyword then the equivalent value on the WELSEGS keyword will be used instead.</text:p>
+       <text:p text:style-name="Table_20_Contents">The value is used to replace the segment pipe absolute roughness defined on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword in record 2-8, also named EPSILON. <text:s/>If EPSILON is defaulted on this keyword then the equivalent value on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword will be used instead.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5058,7 +5058,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P702">A real positive value that defines the cross-sectional area of flow in the pipe (A<text:span text:style-name="T4092">p</text:span>), as opposed to the restricted section of the valve (A<text:span text:style-name="T4092">r</text:span>).</text:p>
        <text:p text:style-name="P703">AREAPIPE is used to convert the segment volumetric flow rate into the flow velocity through the pipe (υ<text:span text:style-name="T4092">p</text:span>). </text:p>
-       <text:p text:style-name="P2530">The value is used to replace the segment pipe cross-sectional area of flow defined on the WELSEGS keyword in record 2-9, named XAREA. <text:s/>If AREAPIPE is defaulted on this keyword then the equivalent value on the WELSEGS keyword will be used instead.</text:p>
+       <text:p text:style-name="P2530">The value is used to replace the segment pipe cross-sectional area of flow defined on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword in record 2-9, named XAREA. <text:s/>If AREAPIPE is defaulted on this keyword then the equivalent value on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword will be used instead.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5114,7 +5114,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1851.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P705">A real positive value that defines the maximum cross-sectional area of flow in the restricted section of the valve (A<text:span text:style-name="T4092">max</text:span>). <text:s/></text:p>
        <text:p text:style-name="P705">AREAMAX is used to convert the segment volumetric flow rate into the maximum flow velocity at the constriction (υ<text:span text:style-name="T4092">r</text:span>). <text:s/></text:p>
-       <text:p text:style-name="P704">If defaulted then AREAPIPE will be used if defined, otherwise XAREA (item 2-9) on the WELSEGS keyword will be used.</text:p>
+       <text:p text:style-name="P704">If defaulted then AREAPIPE will be used if defined, otherwise XAREA (item 2-9) on the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword will be used.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5141,7 +5141,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1740">Notes:</text:p>
        <text:list xml:id="list2686958007" text:style-name="L184">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19218">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -5157,7 +5157,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14674">Table <text:sequence text:ref-name="refTable663" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.121</text:sequence>: WSEGVALV Keyword Description</text:p>
     <text:p text:style-name="P11794"/>
-    <text:p text:style-name="P11368">The total number of wells should be defined via the WELLDIMS keyword and the number of multi-segment wells should be declared on the WSEGDIMS keyword, both keywords are in the RUNSPEC section. In addition, the WELSPECS keyword should be used to define wells, the COMPDAT keyword to define the well completions for both ordinary wells and multi-segment wells, and the COMPSEGS keyword to define a multi-segment segment completions.<text:s/>Finally, the WSEGVALV keyword can then be use to define ICD connections for the well. <text:s/>All the aforementioned keywords are described in the SCHEDULE section. </text:p>
+    <text:p text:style-name="P11368">The total number of wells should be defined via the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword and the number of multi-segment wells should be declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword, both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. In addition, the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword should be used to define wells, the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword to define the well completions for both ordinary wells and multi-segment wells, and the <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keyword to define a multi-segment segment completions.<text:s/>Finally, the <text:a xlink:href="#__RefHeading___Toc1091865_4263943340">WSEGVALV</text:a> keyword can then be use to define ICD connections for the well. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:p text:style-name="P12172">OPM flow calculates the pressure drop across the ICD using a homogeneous sub-critical flow through a constriction model. The model consists of two variables, the pressure drop due to the constriction,<draw:frame draw:style-name="fr66" draw:name="Object186" text:anchor-type="as-char" svg:width="1.565cm" svg:height="0.441cm" draw:z-index="1147"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
@@ -6083,7 +6083,7 @@ newline
     <text:p text:style-name="P16559">A<text:span text:style-name="T4092">max</text:span><text:span text:style-name="T1533"><text:tab/>=<text:tab/></text:span>Maximum c<text:span text:style-name="T1533">ross-sectional are</text:span>a <text:span text:style-name="T1533">of the constriction.</text:span></text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18742" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc393672_1778911700"/>Example<text:bookmark-end text:name="__RefHeading___Toc393672_1778911700"/></text:h>
-    <text:p text:style-name="P11602">The following example is based on one producing well segment oil well (OP01) using the WELSPECS, WELSEGS COMPDAT and COMPSEGS keywords, as per the WSEGSICD keyword example (<text:a xlink:type="simple" xlink:href="#12.3.310.1.Example|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc393674_1778911700">Example</text:bookmark-ref></text:a>), and is therefore not repeated here. <text:s/></text:p>
+    <text:p text:style-name="P11602">The following example is based on one producing well segment oil well (OP01) using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a>, <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> and <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords, as per the <text:a xlink:href="#__RefHeading___Toc124296_23127940">WSEGSICD</text:a> keyword example (<text:a xlink:type="simple" xlink:href="#12.3.310.1.Example|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc393674_1778911700">Example</text:bookmark-ref></text:a>), and is therefore not repeated here. <text:s/></text:p>
     <text:p text:style-name="P14346">--</text:p>
     <text:p text:style-name="P14346">-- <text:s text:c="6"/>MULTI-SEGMENT WELL ICD SEGMENT SPECIFICATION DATA <text:s text:c="52"/></text:p>
     <text:p text:style-name="P14346">-- <text:s text:c="76"/></text:p>
@@ -6099,7 +6099,7 @@ newline
     <text:p text:style-name="P14345">OP01 <text:s text:c="5"/>25 <text:s/>0.850 <text:s text:c="2"/>0.100 <text:s/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>OPEN <text:s/>1* <text:s/>/</text:p>
     <text:p text:style-name="P14345">/ <text:s text:c="76"/><text:span text:style-name="T4"><text:s text:c="77"/></text:span></text:p>
     <text:p text:style-name="P15786"/>
-    <text:p text:style-name="P15902">Here segments 7, 12 and 17 have the same type of sub-critical valves with their pipe properties taken from the WELSEGS keyword used to define well OP01 as a multi-segment well. Similarly, segments 22 to 25 have the same ICD properties, and again the pipe properties are taken from the WELSEGS keyword.</text:p>
+    <text:p text:style-name="P15902">Here segments 7, 12 and 17 have the same type of sub-critical valves with their pipe properties taken from the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword used to define well OP01 as a multi-segment well. Similarly, segments 22 to 25 have the same ICD properties, and again the pipe properties are taken from the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword.</text:p>
     <text:p text:style-name="P15788"/>
     
    </text:section>
