@@ -15,6 +15,7 @@ from fodt.exceptions import HandlerDoneException, ParsingException
 from fodt import helpers, keyword_uri_map_generator
 from fodt.xml_helpers import XMLHelper
 
+
 class FileHandler(xml.sax.handler.ContentHandler):
     def __init__(self, keyword_name: str, kw_uri_map: dict[str, str]) -> None:
         self.keyword_name = keyword_name
@@ -39,12 +40,15 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # Special span style that have been manually inserted to indicate that
         # a word should not be treated as a keyword and therefore should not be linked
         self.not_keyword = False
+        # A temporary character buffer to store content between start and end tags
+        self.char_buf = ""
 
     def compile_regex(self) -> re.Pattern:
         # Also include the keyword name itself in the regex pattern, see discussion
         # https://github.com/OPM/opm-reference-manual/pull/410
         pattern = re.compile(
             r'(?<![.‘"“])'  # Negative lookbehind for a dot or a single/double quote
+            r'(?<!&quot;)'    # Negative lookbehind: no HTML double-quote entity before keyword
             r'\b(' +
             '|'.join(
                 # Need to sort the keys by length in descending order to avoid
@@ -54,7 +58,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 ) +
             # NOTE: We cannot use \b here because if the keyword ends with "-" the word boundary
             #  \b will not match between a space and a hyphen. Instead we use a negative lookahead
-            r')(?!\w)'
+            r')(?!\w)(?!&apos;)' # Negative lookaheads: no word char or &apos; after the keyword
         )
         return pattern
 
@@ -64,15 +68,15 @@ class FileHandler(xml.sax.handler.ContentHandler):
         if self.start_tag_open:
             self.content.write(">")
             self.start_tag_open = False
-        # NOTE: We need to escape the content before we apply the regex pattern
-        #  because it may insert tags (<text:a ...>) that should not be escaped.
-        content = XMLHelper.escape(content)
-        if self.office_body_found:
-            if self.in_p and (not self.in_a) and (not self.not_keyword) and (not self.in_math):
-                if not self.is_example_p[-1]:
-                    if not self.is_table_caption(content):
-                        content = self.regex.sub(self.replace_match_function, content)
-        self.content.write(content)
+        # NOTE: Do not write characters immediately to the content buffer, instead
+        #  add the content to the content stack. This is a quick fix to be able to
+        #  detect if a keyword is followed by an apostrophe, for example "LGR's" or
+        #  if the keyword is within quotes, for example "&quot;LGR&quot;". In those cases
+        #  content would be split between multiple characters() calls.
+        # TODO: This does not handle cases with interleaved tags, for example <text:a>
+        #  and <text:span> tags.
+
+        self.char_buf += content
 
     def collect_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # Collect the paragraph styles that use fixed width fonts
@@ -81,9 +85,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
             self.example_styles.add(style_name)
 
     def endDocument(self):
-        pass
+        assert(self.char_buf == "")  # All content should have been written to the content buffer
 
     def endElement(self, name: str):
+        self.maybe_write_characters()
         if self.office_body_found:
             if name == "text:p":
                 self.p_recursion -= 1
@@ -112,6 +117,19 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # Check if the content is a specific table caption, in that case we should not insert links
         return re.search(rf'{re.escape(self.keyword_name)} Keyword Description', content)
 
+    def maybe_write_characters(self) -> None:
+        if len(self.char_buf) > 0:
+            # NOTE: We need to escape the content before we apply the regex pattern
+            #  because it may insert tags (<text:a ...>) that should not be escaped.
+            characters = XMLHelper.escape(self.char_buf)
+            if self.office_body_found:
+                if self.in_p and (not self.in_a) and (not self.not_keyword) and (not self.in_math):
+                    if not self.is_example_p[-1]:
+                        if not self.is_table_caption(characters):
+                            characters = self.regex.sub(self.replace_match_function, characters)
+            self.content.write(characters)
+            self.char_buf = ""
+
     def replace_match_function(self, match: re.Match) -> str:
         keyword = match.group(0)
         uri = self.kw_uri_map[keyword]
@@ -127,6 +145,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.content.write(XMLHelper.header)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
+        self.maybe_write_characters()
         if self.start_tag_open:
             self.content.write(">")  # Close the start tag
             self.start_tag_open = False
@@ -165,12 +184,17 @@ class FileHandler(xml.sax.handler.ContentHandler):
 
 class InsertLinks():
     def __init__(
-        self, maindir: Path, subsection: str, kw_dir: Path, kw_uri_map: dict[str, str]
+        self,
+        maindir: Path,
+        subsection: str|None,
+        filename: str|None,
+        kw_dir: Path, kw_uri_map: dict[str, str]
     ) -> None:
         self.maindir = maindir
         self.kw_dir = kw_dir
         self.kw_uri_map = kw_uri_map
         self.subsection = subsection
+        self.filename = filename
 
     def insert_links(self) -> None:
         for item in self.kw_dir.iterdir():
@@ -183,6 +207,10 @@ class InsertLinks():
             logging.info(f"Processing directory: {item}")
             for item2 in item.iterdir():
                 if item2.suffix == f".{FileExtensions.fodt}":
+                    if self.filename:
+                        if item2.name != self.filename:
+                            logging.info(f"Skipping file: {item2.name}")
+                            continue
                     keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
                     self.insert_links_in_file(item2, keyword_name)
 
@@ -228,7 +256,11 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 # SHELL USAGE:
 #
 # fodt-link-keyword \
-#    --maindir=<main_dir> --keyword_dir=<keyword_dir> --subsection=<subsection> --use-map-file
+#    --maindir=<main_dir> \
+#    --keyword_dir=<keyword_dir> \
+#    --subsection=<subsection> \
+#    --filename=<filename> \
+#    --use-map-file
 #
 # DESCRIPTION:
 #
@@ -242,7 +274,8 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #   links.
 #
 #   If --subsection is not given, the script will process all subsections. If --subsection
-#   is given, the script will only process the specified subsection.
+#   is given, the script will only process the specified subsection, or if --filename is
+#   given, the script will only process the specified file within the specified subsection.
 #
 # EXAMPLES:
 #
@@ -253,15 +286,24 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #
 #    fodt-link-keywords
 #
-#  Same as above, but will process all subsections.
+#  Same as above, but will process all subsections. And,
+#
+#    fodt-link-keywords --subsection=10.3 --filename=AQANCONL.fodt
+#
+#  Will process only the file "AQANCONL.fodt" in subsection 10.3.
 #
 @click.command()
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
 @click.option('--subsection', help='The subsection to process')
 @click.option('--use-map-file', is_flag=True, help='Use the mapping file "meta/kw_uri_map.txt"')
+@click.option('--filename', help='The filename to process')
 def link_keywords(
-        maindir: str|None, keyword_dir: str|None, subsection: str|None, use_map_file: bool
+    maindir: str|None,
+    keyword_dir: str|None,
+    subsection: str|None,
+    filename: str|None,
+    use_map_file: bool
 ) -> None:
     logging.basicConfig(level=logging.INFO)
     maindir = helpers.get_maindir(maindir)
@@ -271,7 +313,7 @@ def link_keywords(
     else:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
     kw_dir = maindir / Directories.chapters / Directories.subsections
-    InsertLinks(maindir, subsection, kw_dir, kw_uri_map).insert_links()
+    InsertLinks(maindir, subsection, filename, kw_dir, kw_uri_map).insert_links()
 
 if __name__ == "__main__":
     link_keywords()

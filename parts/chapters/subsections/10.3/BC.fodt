@@ -4395,8 +4395,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715653_39646742441"/>Description<text:bookmark-end text:name="__RefHeading___Toc715653_39646742441"/></text:h>
-    <text:p text:style-name="P12586">The BC keyword defines the boundary conditions for the model, and can be used to set boundary conditions for when external influx or efflux volumes are influencing the reservoir pressure and production history. For example, when the average reservoir pressure remains constant throughout the production period due to water influx, or gas migration from an external source. <text:s text:c="2"/></text:p>
-    <text:p text:style-name="P12586">The BC keyword has been replaced by the BCCON keyword in the GRID section that defines the boundary condition connections and the BCPROP keyword in the SCHEDULE section that defines the boundary condition properties. <text:s text:c="2"/></text:p>
+    <text:p text:style-name="P12586">The <text:a xlink:href="#__RefHeading___Toc42110_36712116751">BC</text:a> keyword defines the boundary conditions for the model, and can be used to set boundary conditions for when external influx or efflux volumes are influencing the reservoir pressure and production history. For example, when the average reservoir pressure remains constant throughout the production period due to water influx, or gas migration from an external source. <text:s text:c="2"/></text:p>
+    <text:p text:style-name="P12586">The <text:a xlink:href="#__RefHeading___Toc42110_36712116751">BC</text:a> keyword has been replaced by the <text:a xlink:href="#REF_HEADING_KEYWORD_BCCON">BCCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that defines the boundary condition connections and the <text:a xlink:href="#REF_HEADING_KEYWORD_BCPROP">BCPROP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that defines the boundary condition properties. <text:s text:c="2"/></text:p>
     <table:table table:name="Table2228" table:style-name="Table2228">
      <table:table-column table:style-name="Table2228.A"/>
      <table:table-header-rows>
@@ -4571,7 +4571,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">A defined character string that defines the type of boundary condition to be applied, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105918777521634" text:continue-list="list105917364723722" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17087">DIRICHLET: for a user defined boundary conditions. In this case, items (1) through (7) must be set, together with PHASE for the fluid type, and PRESS and TEMP for the constant pressure and temperature boundary conditions.</text:p>
+         <text:p text:style-name="P17087">DIRICHLET: for a user defined boundary conditions. In this case, items (1) through (7) must be set, together with PHASE for the fluid type, and PRESS and <text:span text:style-name="NOT_KEYWORD">TEMP</text:span> for the constant pressure and temperature boundary conditions.</text:p>
          <text:p text:style-name="P17087">This option is currently not supported but will be available in the next release. <text:s/></text:p>
         </text:list-item>
         <text:list-item>
@@ -4601,13 +4601,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">A defined character string that sets fluid type used in the boundary calculations, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105917646912826" text:continue-list="list105918777521634" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17087">GAS: the gas phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
+         <text:p text:style-name="P17087"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: the gas phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17087">OIL: the oil phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
+         <text:p text:style-name="P17087"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: the oil phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17087">WATER or WAT: the water phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
+         <text:p text:style-name="P17087"><text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> or WAT: the water phase will be used to control the boundary conditions for when the TYPE has been set to DIRICHLET or RATE.</text:p>
         </text:list-item>
          <text:p text:style-name="P17087">P<text:span text:style-name="T1">HASE must be declared if TYPE has been set to either </text:span>DIRICHLET<text:span text:style-name="T1"> or RATE.</text:span></text:p>
        </text:list>
@@ -4661,7 +4661,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7235">PRESS is a real positive value that defines the constant pressure boundary condition. <text:s/>PRESS should only be entered if TYPE has been set to DIRICHLET. If the pressure at the boundary is less than PRESS, then the fluid type declared via PHASE will flow across the boundary.</text:p>
-       <text:p text:style-name="P8855">The default value of 1* will use the simulator&apos;s calculated value based on data entered via the EQUIL keyword in the SOLUTION section.</text:p>
+       <text:p text:style-name="P8855">The default value of 1* will use the simulator&apos;s calculated value based on data entered via the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4688,11 +4688,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2312">12</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">TEMP</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NOT_KEYWORD">TEMP</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P535">TEMP is a real positive number that defines the constant temperature boundary condition. TEMP should only be entered if TYPE has been set to DIRICHLET.</text:p>
-       <text:p text:style-name="P8856">The default value of 1* will use the simulator&apos;s calculated value based on data entered via one of the following reservoir temperature keywords: RTEMP, RTEMPA, RTEMPVD, TEMPI, or TEMPVD, in the SOLUTION section. Note that all of the aforementioned reservoir temperature keywords, except for TEMPI, may also be used in the PROPS section as well.</text:p>
+       <text:p text:style-name="P535"><text:span text:style-name="NOT_KEYWORD">TEMP</text:span> is a real positive number that defines the constant temperature boundary condition. <text:span text:style-name="NOT_KEYWORD">TEMP</text:span> should only be entered if TYPE has been set to DIRICHLET.</text:p>
+       <text:p text:style-name="P8856">The default value of 1* will use the simulator&apos;s calculated value based on data entered via one of the following reservoir temperature keywords: <text:a xlink:href="#__RefHeading___Toc146399_3544483072">RTEMP</text:a>, <text:a xlink:href="#__RefHeading___Toc111818_29392915391">RTEMPA</text:a>, <text:a xlink:href="#__RefHeading___Toc108628_2939291539">RTEMPVD</text:a>, <text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a>, or <text:a xlink:href="#__RefHeading___Toc108626_2939291539">TEMPVD</text:a>, in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. Note that all of the aforementioned reservoir temperature keywords, except for <text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a>, may also be used in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section as well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4719,7 +4719,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1816">Notes:</text:p>
        <text:list xml:id="list105917546513785" text:continue-list="list105917102021621" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19097">Where NX, NY and NZ are the dimensions of the model as defined on the DIMENS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19097">Where NX, NY and NZ are the dimensions of the model as defined on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19029">Each record must be terminated by a “/” and the keyword is terminated by a “/&quot;.</text:p>
@@ -4735,9 +4735,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14955">Table <text:sequence text:ref-name="refTable456" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.10</text:sequence>: BC Keyword Description</text:p>
     <text:p text:style-name="P15766"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P15766">See also the <text:a xlink:type="simple" xlink:href="#10.3.12.AQUFLUX - Define Constant Flux Analytical Aquifer|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc202105_1310555686">AQUFLUX - Define Constant Flux Analytical Aquifer</text:bookmark-ref></text:a><text:s/>keyword that is supported by OPM Flow in both the SOLUTION and SCHEDULE sections, to define the aquifer influx with greater flexibility.</text:p>
+    <text:p text:style-name="P15766">See also the <text:a xlink:type="simple" xlink:href="#10.3.12.AQUFLUX - Define Constant Flux Analytical Aquifer|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc202105_1310555686">AQUFLUX - Define Constant Flux Analytical Aquifer</text:bookmark-ref></text:a><text:s/>keyword that is supported by OPM Flow in both the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> and <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> sections, to define the aquifer influx with greater flexibility.</text:p>
     <text:p text:style-name="P15766"/>
-    <text:p text:style-name="P15766">If the BC keyword is not present in the input deck, then the boundary conditions for the model are set to be no flow, which is the normal behavior in both OPM Flow and the commercial simulator.</text:p>
+    <text:p text:style-name="P15766">If the <text:a xlink:href="#__RefHeading___Toc42110_36712116751">BC</text:a> keyword is not present in the input deck, then the boundary conditions for the model are set to be no flow, which is the normal behavior in both OPM Flow and the commercial simulator.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc715655_39646742441"/>Examples<text:bookmark-end text:name="__RefHeading___Toc715655_39646742441"/></text:h>
     <text:p text:style-name="P12587">The first example shows how to set a constant pressure boundary using TYPE equal to FREE:</text:p>
     <text:p text:style-name="P13788">--</text:p>
@@ -4750,8 +4750,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13788"><text:s text:c="9"/>1 <text:s text:c="2"/>1* <text:s text:c="2"/>1 <text:s text:c="2"/>1 <text:s text:c="3"/>1 <text:s text:c="2"/>1* <text:s text:c="2"/>Y <text:s text:c="4"/>FREE <text:s text:c="32"/>/ </text:p>
     <text:p text:style-name="P14398">/</text:p>
     <text:p text:style-name="P13168"><text:s text:c="75"/></text:p>
-    <text:p text:style-name="P12586">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and TEMP) can be defaulted, as they are ignored for when TYPE equals FREE.</text:p>
-    <text:p text:style-name="P12587">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the DIMENS keyword in the RUNSPEC section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
+    <text:p text:style-name="P12586">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and <text:span text:style-name="NOT_KEYWORD">TEMP</text:span>) can be defaulted, as they are ignored for when TYPE equals FREE.</text:p>
+    <text:p text:style-name="P12587">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
     <text:p text:style-name="P13788">--</text:p>
     <text:p text:style-name="P13788">-- <text:s text:c="6"/>DEFINE MODEL BOUNDARY CONDITIONS (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
     <text:p text:style-name="P13788">-- <text:s text:c="6"/></text:p>
