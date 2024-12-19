@@ -59,7 +59,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 ) +
             # NOTE: We cannot use \b here because if the keyword ends with "-" the word boundary
             #  \b will not match between a space and a hyphen. Instead we use a negative lookahead
-            r')(?!\w)(?!&apos;)' # Negative lookaheads: no word char or &apos; after the keyword
+            # Negative lookaheads: no word char, "-" or &apos; after the keyword
+            r')(?![\w-])(?!&apos;)'
         )
         return pattern
 
