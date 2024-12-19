@@ -4367,7 +4367,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838819151"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838819151"/></text:h>
-    <text:p text:style-name="_40_TextBody">GCONSUMP defines the group gas consumption rate either as an actual rate or as a percentage of the group’s production. In both oil and gas fields produced gas is commonly used as fuel to support the processing and utility facilities needed to run the plant.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc188037_2026549522">GCONSUMP</text:a> defines the group gas consumption rate either as an actual rate or as a percentage of the group’s production. In both oil and gas fields produced gas is commonly used as fuel to support the processing and utility facilities needed to run the plant.</text:p>
     <text:p text:style-name="_40_TextBody">In addition to defining gas consumption, the keyword can also be used to define the group’s gas import rate, if required. This is used to import gas into the model from other sources (fields, reservoirs etc.) that are not included in the current run. For example, if a several fields are supplying gas to a power plant (field A, B and C), but only one is being modeled in the current import deck (A), then production from the other two fields (B and C) can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from fields B and C are fixed, and therefore field A acts like a “swing” producer to match the gas demand target. </text:p>
     <table:table table:name="Table1900" table:style-name="Table1900">
      <table:table-column table:style-name="Table1900.A"/>
@@ -4415,8 +4415,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9615">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1900.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9267">A character string of up to eight characters in length that defines the group name for which the group gas consumption is being defined. The group named FIELD is the top most group and should be used to set the fuel consumption for the field.</text:p>
-       <text:p text:style-name="P7842">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P9267">A character string of up to eight characters in length that defines the group name for which the group gas consumption is being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should be used to set the fuel consumption for the field.</text:p>
+       <text:p text:style-name="P7842">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4519,7 +4519,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1762">Notes:</text:p>
        <text:list xml:id="list4167901598" text:style-name="L133">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19160">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4535,7 +4535,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable575" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.33</text:sequence>: GCONSUMP Keyword Description</text:p>
     <text:p text:style-name="P12259"/>
-    <text:p text:style-name="P12259">If the group is acting under Group Gas Sales control via the GCONSALE keyword in the SCHEDULE section, then the sales gas is calculated by:</text:p>
+    <text:p text:style-name="P12259">If the group is acting under Group Gas Sales control via the <text:a xlink:href="#__RefHeading___Toc178287_2026549522">GCONSALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then the sales gas is calculated by:</text:p>
     <table:table table:name="Table1006" table:style-name="Table1006">
      <table:table-column table:style-name="Table1006.A"/>
      <table:table-column table:style-name="Table1006.B"/>
@@ -4655,7 +4655,7 @@ newline
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">If the group is acting under Group Gas Re-Injection control via the GCONINJE keyword in the SCHEDULE section, then the group gas injection rate calculated by:</text:p>
+    <text:p text:style-name="_40_TextBody">If the group is acting under Group Gas Re-Injection control via the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then the group gas injection rate calculated by:</text:p>
     <table:table table:name="Table1007" table:style-name="Table1007">
      <table:table-column table:style-name="Table1007.A"/>
      <table:table-column table:style-name="Table1007.B"/>

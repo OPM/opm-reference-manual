@@ -4332,7 +4332,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838819231"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838819231"/></text:h>
     <text:p text:style-name="_40_TextBody">This keyword activates reporting of a well’s depth pressure and fluid rates profile to the RFT file for the requested wells at the time the keyword is activated. Data written out by the simulator is used to match the field measured data collected from both the Repeat Formation Tester (“RFT”) tool and various Production Logging Tools (“PLT”). </text:p>
-    <text:p text:style-name="_40_TextBody">See the WRFT keyword in the SCHEDULE section for a brief description of the RFT data set. This keyword also actives the writing out of each well connection’s fluid rates, connection factors and KH data, etc., as the PLT data. The PLT data is used to compare with measured data from wire line production logging tools.</text:p>
+    <text:p text:style-name="_40_TextBody">See the <text:a xlink:href="#__RefHeading___Toc268467_1366622701">WRFT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section for a brief description of the RFT data set. This keyword also actives the writing out of each well connection’s fluid rates, connection factors and KH data, etc., as the PLT data. The PLT data is used to compare with measured data from wire line production logging tools.</text:p>
     <table:table table:name="Table674" table:style-name="Table674">
      <table:table-column table:style-name="Table674.A"/>
      <table:table-column table:style-name="Table674.B"/>
@@ -4380,7 +4380,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table674.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7345">A columnar vector of character strings of up to eight characters in length for each item, <text:s/>that defines the well name for which the RFT data should be written to the RFT file. </text:p>
-       <text:p text:style-name="P8256">Note that the WELNAME must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P8256">Note that the WELNAME must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
        <text:p text:style-name="P8254">If the WELNAME is left blank then the data is written out for all wells at the time they are first opened to flow. </text:p>
        <text:p text:style-name="P8254">If the WELNAME is given, then the RFT data for the well at the time step the keyword is invoked is written out.</text:p>
       </table:table-cell>
@@ -4477,7 +4477,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19685">TIMESTEP: write out the multi-segment well data at the current reporting time step and all subsequent time steps. </text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P883">Note the commercial simulator also uses MULTISEG to control the output of “rivers” for when the RIVERS Model has been enabled via the RIVRDIMS keyword in the RUNSPEC section. OPM Flow does not support the RIVERS Model.</text:p>
+       <text:p text:style-name="P883">Note the commercial simulator also uses MULTISEG to control the output of “rivers” for when the RIVERS Model has been enabled via the <text:a xlink:href="#__RefHeading___Toc681201_501926209">RIVRDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. OPM Flow does not support the RIVERS Model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4503,7 +4503,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable658" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.116</text:sequence>: WRFTPLT Keyword Description</text:p>
     <text:p text:style-name="P12595"/>
-    <text:p text:style-name="P11361">See also the WRFT keyword in the SCHEDULE section that has less flexible reporting options.</text:p>
+    <text:p text:style-name="P11361">See also the <text:a xlink:href="#__RefHeading___Toc268467_1366622701">WRFT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that has less flexible reporting options.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716829_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716829_3964674244"/></text:h>
     <text:p text:style-name="P11250">The first example activates RFT output at the current reporting time step for all the wells that are opened to flow, otherwise the RFT data is written out the first time a well is opened. </text:p>
     <text:p text:style-name="P16006">--</text:p>

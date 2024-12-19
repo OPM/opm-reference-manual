@@ -4614,10 +4614,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18675" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="P12680">This keyword starts the definition of an ACTIONW section that stipulates the Boolean conditions to test the nominated well parameters, and the resulting SCHEDULE keywords to be executed, if the Boolean condition evaluates to true. <text:s/>An ACTIONW Definition Section is terminated by an ENDACTIO keyword on a separate line. <text:s/>Here, the keyword defines a series of conditions applied to wells only, that invoke run time processing of ACTION functions, and is similar to executing a run time script for conditions and variables at the well level. <text:s/>The ACTION series of keywords (ACTION, ACTIONG, ACTIONR, ACTIONS and ACTIONW) can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. </text:p>
-    <text:p text:style-name="P12512">Note that one should use caution when using this facility as it may result in the simulator aborting, because the ACTIONW keyword enables the user to implement complex functionality and therefore it is advisable to start with simple expressions before adding the desired complexity.</text:p>
-    <text:p text:style-name="P11904">See also the PYACTION keyword in the SCHEDULE that implements OPM Flow’s Python scripting facility using the Python scripting language.</text:p>
-    <text:p text:style-name="P12180">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped; use the ACTIONX keyword instead.</text:p>
+    <text:p text:style-name="P12680">This keyword starts the definition of an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> section that stipulates the Boolean conditions to test the nominated well parameters, and the resulting <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> keywords to be executed, if the Boolean condition evaluates to true. <text:s/>An <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section is terminated by an <text:a xlink:href="#__RefHeading___Toc109407_332691817">ENDACTIO</text:a> keyword on a separate line. <text:s/>Here, the keyword defines a series of conditions applied to wells only, that invoke run time processing of <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> functions, and is similar to executing a run time script for conditions and variables at the well level. <text:s/>The <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> series of keywords (<text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a>, <text:a xlink:href="#__RefHeading___Toc152219_2992482751">ACTIONG</text:a>, <text:a xlink:href="#__RefHeading___Toc152221_2992482751">ACTIONR</text:a>, <text:a xlink:href="#__RefHeading___Toc152223_2992482751">ACTIONS</text:a> and <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a>) can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. </text:p>
+    <text:p text:style-name="P12512">Note that one should use caution when using this facility as it may result in the simulator aborting, because the <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> keyword enables the user to implement complex functionality and therefore it is advisable to start with simple expressions before adding the desired complexity.</text:p>
+    <text:p text:style-name="P11904">See also the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> that implements OPM Flow’s Python scripting facility using the Python scripting language.</text:p>
+    <text:p text:style-name="P12180">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped; use the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword instead.</text:p>
     <table:table table:name="Table2128" table:style-name="Table2128">
      <table:table-column table:style-name="Table2128.A"/>
      <table:table-column table:style-name="Table2128.B"/>
@@ -4641,11 +4641,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
      <table:table-row table:style-name="Table2128.2">
       <table:table-cell table:style-name="Table2128.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4983">ACTIONW</text:p>
+       <text:p text:style-name="P4983"><text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2128.C12" office:value-type="string">
-       <text:p text:style-name="P3338">Defines the start of an ACTIONW Definition Section. <text:s/>This is followed on a new line by the ACTIONW record that stipulates the conditions for which the defined action will be executed, and then this is followed by the various operations to be performed if the condition is satisfied.</text:p>
+       <text:p text:style-name="P3338">Defines the start of an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section. <text:s/>This is followed on a new line by the <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> record that stipulates the conditions for which the defined action will be executed, and then this is followed by the various operations to be performed if the condition is satisfied.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D8" office:value-type="string">
        <text:p text:style-name="P4978"/>
@@ -4660,7 +4660,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.C12" office:value-type="string">
        <text:p text:style-name="P3338">A character sting of up to eight characters in length that defines the name of this action definition.</text:p>
-       <text:p text:style-name="P5400">If ACTNAME has previously been used by any ACTION series keyword, then the previous ACTION definitions will be replaced by the definition declared by this ACTIONW Definition Section. </text:p>
+       <text:p text:style-name="P5400">If ACTNAME has previously been used by any <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> series keyword, then the previous <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> definitions will be replaced by the definition declared by this <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D8" office:value-type="string">
        <text:p text:style-name="P4978">None</text:p>
@@ -4674,8 +4674,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5402">ACTWELL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.C12" office:value-type="string">
-       <text:p text:style-name="P7342">A character string of up to eight characters in length that defines the well name for which the ACTIONW Definition Section is being defined.</text:p>
-       <text:p text:style-name="P7856">Note that the well name (ACTWELL) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7342">A character string of up to eight characters in length that defines the well name for which the <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section is being defined.</text:p>
+       <text:p text:style-name="P7856">Note that the well name (ACTWELL) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D8" office:value-type="string">
        <text:p text:style-name="P4978">None</text:p>
@@ -4690,9 +4690,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4990">ACTLHS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.C12" office:value-type="string">
-       <text:p text:style-name="P4992">A character string of up to eight characters in length that stipulates a well SUMMARY variable on the left hand side of a Boolean conditional test. For example, WOPR that stands for the Well Oil Production Rate. </text:p>
-       <text:p text:style-name="P7142">In addition, ACTLHS can also be a well User Defined Quantity (“UDQ”) defined by the <text:a xlink:type="simple" xlink:href="#12.3.59.UDQ - Declare User Define Quantities (“UDQ”)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc161095_2932703077">UDQ - Declare User Define Quantities (“UDQ”)</text:bookmark-ref></text:a><text:s/>keyword in the SCHEDULE section. In this case, the first two characters of ACTLHS must be set to WU and the UDQ variable must have previously been declared with the UDQ keyword.</text:p>
-       <text:p text:style-name="P4993">A complete list of well SUMMARY vectors that can be used with ACTIONW keyword by OPM Flow and the commercial black-oil simulator is summarized in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable547">Table 12.5</text:sequence-ref>. <text:s/></text:p>
+       <text:p text:style-name="P4992">A character string of up to eight characters in length that stipulates a well <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable on the left hand side of a Boolean conditional test. For example, WOPR that stands for the Well Oil Production Rate. </text:p>
+       <text:p text:style-name="P7142">In addition, ACTLHS can also be a well User Defined Quantity (“UDQ”) defined by the <text:a xlink:type="simple" xlink:href="#12.3.59.UDQ - Declare User Define Quantities (“UDQ”)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc161095_2932703077">UDQ - Declare User Define Quantities (“UDQ”)</text:bookmark-ref></text:a><text:s/>keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. In this case, the first two characters of ACTLHS must be set to WU and the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variable must have previously been declared with the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword.</text:p>
+       <text:p text:style-name="P4993">A complete list of well <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vectors that can be used with <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> keyword by OPM Flow and the commercial black-oil simulator is summarized in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable547">Table 12.5</text:sequence-ref>. <text:s/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D8" office:value-type="string">
        <text:p text:style-name="P5006">Not Applicable</text:p>
@@ -4766,7 +4766,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4983">ACTNSTEP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.C12" office:value-type="string">
-       <text:p text:style-name="P4983">A positive integer that defines the maximum number times that the ACTNAME action is to be executed.<text:s/>The ACTIONW action is excuted at the end of each time step if at least one well satisfies the Boolean condition until the action has been executed the specified number of times. The default value of one means that the definition will be executed only once. One can use a large value, for example 10,000 for the definition to be executed at every time step.</text:p>
+       <text:p text:style-name="P4983">A positive integer that defines the maximum number times that the ACTNAME action is to be executed.<text:s/>The <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> action is excuted at the end of each time step if at least one well satisfies the Boolean condition until the action has been executed the specified number of times. The default value of one means that the definition will be executed only once. One can use a large value, for example 10,000 for the definition to be executed at every time step.</text:p>
        <text:p text:style-name="P5282">Note that the counter only affects successful evaluations; i.e. if ACTNSTEP is set equal to one (the default), then the simulator will test the action at the end of every time step until it evaluates to true.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D8" office:value-type="string">
@@ -4827,7 +4827,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5014"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.C11" office:value-type="string">
-       <text:p text:style-name="P5405">The next section contains any number of standard SCHEDULE keywords that will be executed if the Boolean expression evaluates to true. <text:s/>For example, to reduce the tubing head pressure constraint when any of the oil producers’ oil rate drop below 100 stb/d then one could use:</text:p>
+       <text:p text:style-name="P5405">The next section contains any number of standard <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> keywords that will be executed if the Boolean expression evaluates to true. <text:s/>For example, to reduce the tubing head pressure constraint when any of the oil producers’ oil rate drop below 100 stb/d then one could use:</text:p>
        <text:p text:style-name="P5405"/>
        <text:p text:style-name="P16784">ACTIONW</text:p>
        <text:p text:style-name="P16784"><text:s/>ACT03 &apos;OP*&apos; <text:s/>WOPR &lt; 100.0 10000 <text:s text:c="2"/>/ </text:p>
@@ -4841,8 +4841,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P14396">/ <text:s text:c="75"/></text:p>
        <text:p text:style-name="_40_Example">ENDACTIO</text:p>
        <text:p text:style-name="P2559"/>
-       <text:p text:style-name="P2561">In theory, most SCHEDULE keywords can be used in an ACTIONW Definition Section here, except for the time stepping keywords, i.e, TSTEP and DATES. </text:p>
-       <text:p text:style-name="P2561">See the ACTIONX keyword for a list of the SCHEDULE keywords that are known to work with the ACTION series of keywords. <text:s/></text:p>
+       <text:p text:style-name="P2561">In theory, most <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> keywords can be used in an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section here, except for the time stepping keywords, i.e, <text:a xlink:href="#__RefHeading___Toc118323_1596574740">TSTEP</text:a> and <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a>. </text:p>
+       <text:p text:style-name="P2561">See the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword for a list of the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> keywords that are known to work with the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> series of keywords. <text:s/></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D11" office:value-type="string">
        <text:p text:style-name="P5006">Not Applicable</text:p>
@@ -4850,11 +4850,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table2128.2">
       <table:table-cell table:style-name="Table2128.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3385">ENDACTIO</text:p>
+       <text:p text:style-name="P3385"><text:a xlink:href="#__RefHeading___Toc109407_332691817">ENDACTIO</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2128.C12" office:value-type="string">
-       <text:p text:style-name="P3338">Define the end of ACTIONW Definition Section.</text:p>
+       <text:p text:style-name="P3338">Define the end of <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2128.D9" office:value-type="string">
        <text:p text:style-name="P5006">Not Applicable</text:p>
@@ -4865,7 +4865,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1812">Notes:</text:p>
        <text:list xml:id="list105919015156480" text:continue-list="list3579254658" text:style-name="L76">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19802">There is no terminating “/” for this keyword, instead the ENDACTIO keyword terminates the keyword.</text:p>
+         <text:p text:style-name="P19802">There is no terminating “/” for this keyword, instead the <text:a xlink:href="#__RefHeading___Toc109407_332691817">ENDACTIO</text:a> keyword terminates the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4876,7 +4876,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14951">Table <text:sequence text:ref-name="refTable546" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.4</text:sequence>: ACTIONW Keyword Description</text:p>
     <text:p text:style-name="P12512"/>
-    <text:p text:style-name="P12515">The well SUMMARY vectors that can be used with the ACTIONW keyword by OPM Flow and the <text:s/>commercial black-oil simulator are outlined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable547">Table 12.5</text:sequence-ref>. </text:p>
+    <text:p text:style-name="P12515">The well <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vectors that can be used with the <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> keyword by OPM Flow and the <text:s/>commercial black-oil simulator are outlined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable547">Table 12.5</text:sequence-ref>. </text:p>
     <table:table table:name="Table2129" table:style-name="Table2129">
      <table:table-column table:style-name="Table2129.A"/>
      <table:table-column table:style-name="Table2129.B"/>
@@ -4887,10 +4887,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         <text:p text:style-name="P10841">No.</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table2129.A1" office:value-type="string">
-        <text:p text:style-name="P10843">Well SUMMARY Vector Description</text:p>
+        <text:p text:style-name="P10843">Well <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> Vector Description</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table2129.C1" office:value-type="string">
-        <text:p text:style-name="P10842">SUMMARY</text:p>
+        <text:p text:style-name="P10842"><text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a></text:p>
         <text:p text:style-name="Table_20_Heading">Mnemonic</text:p>
        </table:table-cell>
       </table:table-row>
@@ -5253,10 +5253,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2417">Notes:</text:p>
        <text:list xml:id="list105920612414065" text:continue-list="list105918954930012" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17067">Cells under the No. column not colored show that the SUMMARY vector is functional within an ACTIONW block.</text:p>
+         <text:p text:style-name="P17067">Cells under the No. column not colored show that the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vector is functional within an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> block.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18885">Cells under the No. column colored orange show that the SUMMARY vector is currently not supported within an ACTIONW block.</text:p>
+         <text:p text:style-name="P18885">Cells under the No. column colored orange show that the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vector is currently not supported within an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> block.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5264,11 +5264,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14951">Table <text:sequence text:ref-name="refTable547" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.5</text:sequence>: ACTIONW Supported Well SUMMARY Variables</text:p>
+    <text:p text:style-name="P14951">Table <text:sequence text:ref-name="refTable547" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.5</text:sequence>: <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Supported Well <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> Variables</text:p>
     <text:p text:style-name="P12512"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P12512">See also the ACTDIMS and UDADIMS keywords in the RUNSPEC section to define the dimensions for the ACTION series of keywords and associated variables. In addition, the EXIT keyword in the SCHEDULE section that allows for terminating the simulation for when a condition within an ACTIONW definition is satisfied</text:p>
-    <text:p text:style-name="P12515">Although most SCHEDULE section keywords should work with the ACTIONW keyword, <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_ACTIONX_SCHEDULE__D_STATUS_12_3">Table 12.8</text:reference-ref> under the description of<text:s/><text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a> shows the status of keywords that have been tested and known to work, together with keywords that are currently planned to be implemented.</text:p>
-    <text:p text:style-name="P12512">As mentioned previously,<text:s/>the UDQ keyword stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, SUMMARY variables, as defined in the SUMMARY section,<text:s/>or a formula using various mathematical functions together with constants and SUMMARY variables.</text:p>
+    <text:p text:style-name="P12512">See also the <text:a xlink:href="#__RefHeading___Toc4408_421927891">ACTDIMS</text:a> and <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to define the dimensions for the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> series of keywords and associated variables. In addition, the <text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that allows for terminating the simulation for when a condition within an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> definition is satisfied</text:p>
+    <text:p text:style-name="P12515">Although most <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keywords should work with the <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> keyword, <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_ACTIONX_SCHEDULE__D_STATUS_12_3">Table 12.8</text:reference-ref> under the description of<text:s/><text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a> shows the status of keywords that have been tested and known to work, together with keywords that are currently planned to be implemented.</text:p>
+    <text:p text:style-name="P12512">As mentioned previously,<text:s/>the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables can be constants, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables.</text:p>
     <text:p text:style-name="P15895"/>
     <table:table table:name="Table2131" table:style-name="Table2131">
      <table:table-column table:style-name="Table2131.A"/>
@@ -5276,17 +5276,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708738098432">
        <table:table-cell table:style-name="Table2131.A1" office:value-type="string">
         <text:p text:style-name="P10350">Note</text:p>
-        <text:p text:style-name="P10391">Within an ACTIONW Definition Section any UDQ variables utilizing well variables, must have their associated wells previously fully defined in the commercial simulator, otherwise an error will occur. For example, if a well’s GOR is being used as part of a UDQ definition, then the well must be fully characterized prior to declaring the UDQ definition.</text:p>
+        <text:p text:style-name="P10391">Within an <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> Definition Section any <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables utilizing well variables, must have their associated wells previously fully defined in the commercial simulator, otherwise an error will occur. For example, if a well’s GOR is being used as part of a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> definition, then the well must be fully characterized prior to declaring the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> definition.</text:p>
         <text:p text:style-name="P10391">This restriction does not apply to OPM Flow; however, it should be considered if the same deck is to be run with both simulators.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P12406"/>
-    <text:p text:style-name="P12512">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the SCHEDULE section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the UDQ keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their water cut, then one can define the function using the UDQ keyword that results in a UDQ variable, WU_WOPR say, and then use WU_WOPR as a UDA variable on the WCONPROD keyword for the ORAT parameter. See <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3">Table 12.76</text:reference-ref><text:s/>for a list of keywords that can be used with UDA variables in the <text:a xlink:type="simple" xlink:href="#12.3.59.UDQ - Declare User Define Quantities (“UDQ”)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc161095_2932703077">UDQ - Declare User Define Quantities (“UDQ”)</text:bookmark-ref></text:a><text:s/>keyword section.</text:p>
+    <text:p text:style-name="P12512">User Defined Quantities can also be used as User Defined Arguments (“UDA”) in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section with various group, well, and connection keywords. In this case, the UDA variables are used to replace numerical values on these keywords by UDA variables that have been defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword. <text:s/>For example, if we wish to make the oil rate for certain wells to be a function of their water cut, then one can define the function using the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword that results in a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variable, WU_WOPR say, and then use WU_WOPR as a UDA variable on the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword for the ORAT parameter. See <text:reference-ref text:reference-format="text" text:ref-name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3">Table 12.76</text:reference-ref><text:s/>for a list of keywords that can be used with UDA variables in the <text:a xlink:type="simple" xlink:href="#12.3.59.UDQ - Declare User Define Quantities (“UDQ”)|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc161095_2932703077">UDQ - Declare User Define Quantities (“UDQ”)</text:bookmark-ref></text:a><text:s/>keyword section.</text:p>
     <text:p text:style-name="P11744"/>
     <text:h text:style-name="P18753" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716521_39646742441"/><text:span text:style-name="T1">Example</text:span>s<text:bookmark-end text:name="__RefHeading___Toc716521_39646742441"/></text:h>
-    <text:p text:style-name="P12512">The first example uses the ACTIONW keyword to re-complete a gas injection well, GI01, when the well’s bottom-hole pressure exceeds the fracture pressure of the formation, and to open up a structurally higher zone in the well. The keyword NEXTSTEP is used to set the next step to 0.1 days to avoid convergence issues due to a well event.</text:p>
+    <text:p text:style-name="P12512">The first example uses the <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> keyword to re-complete a gas injection well, GI01, when the well’s bottom-hole pressure exceeds the fracture pressure of the formation, and to open up a structurally higher zone in the well. The keyword <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> is used to set the next step to 0.1 days to avoid convergence issues due to a well event.</text:p>
     <text:p text:style-name="P14395">--</text:p>
     <text:p text:style-name="P14395">-- <text:s text:c="6"/>ACTIONW WELL COMMANDS</text:p>
     <text:p text:style-name="P14395">--</text:p>
@@ -5314,7 +5314,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14395">/ <text:s text:c="78"/></text:p>
     <text:p text:style-name="P14395">ENDACTIO</text:p>
     <text:p text:style-name="P12513"/>
-    <text:p text:style-name="P12513">The second example shows how to reduce a producing well's deliverability due to water production. Here, well OP01<text:span text:style-name="T2945">’s productivity index is reduced by 2% when the well’s liquid production total is greater than 100,000 stb. The reduction is repeated 300 times and each time the action is executed the ACTRHS constant is increased by 10,000 stb. <text:s/></text:span></text:p>
+    <text:p text:style-name="P12513">The second example shows how to reduce a producing well&apos;s deliverability due to water production. Here, well OP01<text:span text:style-name="T2945">’s productivity index is reduced by 2% when the well’s liquid production total is greater than 100,000 stb. The reduction is repeated 300 times and each time the action is executed the ACTRHS constant is increased by 10,000 stb. <text:s/></text:span></text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIONW WELL COMMANDS</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
@@ -5334,7 +5334,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">ENDACTIO</text:p>
     <text:p text:style-name="P14518"/>
     <text:p text:style-name="P12514"/>
-    <text:p text:style-name="P16085">The final example is similar to the previous example, and shows how to nest ACTIONW blocks and how to apply ACTIONW to all the oil producers when the Boolean condition are satisfied. </text:p>
+    <text:p text:style-name="P16085">The final example is similar to the previous example, and shows how to nest <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> blocks and how to apply <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> to all the oil producers when the Boolean condition are satisfied. </text:p>
     <text:p text:style-name="P14520">--</text:p>
     <text:p text:style-name="P14520">-- <text:s text:c="6"/>ACTIONW WELL COMMANDS</text:p>
     <text:p text:style-name="P14520">--</text:p>
@@ -5363,7 +5363,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14521">ENDACTIO</text:p>
     <text:p text:style-name="P14521">ENDACTIO</text:p>
     <text:p text:style-name="P14519"/>
-    <text:p text:style-name="P12514">In this case the outer ACTIONW checks if the liquid production for each OP* well is great than the calculated ACTRHS constant, if it is, then inner ACTIONW reduces all the selected wells’ productivity indices by 2%, provided the well’s productivity index is greater than five.</text:p>
+    <text:p text:style-name="P12514">In this case the outer <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> checks if the liquid production for each OP* well is great than the calculated ACTRHS constant, if it is, then inner <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> reduces all the selected wells’ productivity indices by 2%, provided the well’s productivity index is greater than five.</text:p>
     <text:p text:style-name="P11702"/>
     <text:p text:style-name="P14408"/>
     

@@ -4444,8 +4444,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716613_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716613_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GECONT keyword defines tracer economic criteria for production groups, including the field level group FIELD, that have previously been defined by the GCONPROD keywords in the SCHEDULE section, for tracers define by the TRACER keyword in the PROPS section. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody">Note that wells are allocated to a group when they are specified by the WELSPECS keyword and wells can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the GCONPROD and CECON keywords in the SCHEDULE section and the controls specified by the WECON keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc299954_156692946">GECONT</text:a> keyword defines tracer economic criteria for production groups, including the field level group <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a>, that have previously been defined by the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, for tracers define by the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">Note that wells are allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and wells can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc27331_3671211675">CECON</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the controls specified by the <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword.</text:p>
     <text:p text:style-name="P10964">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1160" table:style-name="Table1160">
      <table:table-column table:style-name="Table1160.A"/>
@@ -4493,8 +4493,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9582">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1160.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7295">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named FIELD is the top most group and should be used to set targets and constraints for the field.</text:p>
-       <text:p text:style-name="P7818">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P7295">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should be used to set targets and constraints for the field.</text:p>
+       <text:p text:style-name="P7818">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4507,10 +4507,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8027">1-2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1160.C2" office:value-type="string">
-       <text:p text:style-name="P7907">ACTION</text:p>
+       <text:p text:style-name="P7907"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1160.C4" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9296">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. ACTION should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9296">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105920756196792" text:continue-list="list105921758142026" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19447">NONE: no action is taken. </text:p>
@@ -4522,10 +4522,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19453">+CON: close the worst offending connection and all below it in the worst offending well. If connections have been grouped as completions then the worst offending completion and all below it in the worst offending well will be closed. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19458">WELL: shut or stop the well as per the AUTO variable on the WELSPECS keyword.</text:p>
+         <text:p text:style-name="P19458">WELL: shut or stop the well as per the AUTO variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19461">PLUG: <text:s/>plug back the worst offending well based on the plug back length and options defined on the WPLUG keyword in the SCHEDULE.</text:p>
+         <text:p text:style-name="P19461">PLUG: <text:s/>plug back the worst offending well based on the plug back length and options defined on the <text:a xlink:href="#__RefHeading___Toc628135_4263943340">WPLUG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a>.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P9045">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
@@ -4542,10 +4542,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8027">1-3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1160.C2" office:value-type="string">
-       <text:p text:style-name="P7953">END</text:p>
+       <text:p text:style-name="P7953"><text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1160.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9296">A defined character string that defines if the simulation should terminate if <text:s/>all the producing wells in the group, including the FIELD group, are shut or stopped. END should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9296">A defined character string that defines if the simulation should terminate if <text:s/>all the producing wells in the group, including the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group, are shut or stopped. <text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105921293955694" text:continue-list="list105920756196792" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19447">NO: no action is taken and the run continues. </text:p>
@@ -4747,7 +4747,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1629">Notes:</text:p>
        <text:list xml:id="list1727754777" text:style-name="L137">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19163">GECONT keyword consists of two records, with entries 1-1 to 1-5 representing record one items and 2-1 to 2-8 representing record number two items, <text:s/>in the “No.” column in this table. <text:s/>A maximum of three type two records can be entered following a type one record. </text:p>
+         <text:p text:style-name="P19163"><text:a xlink:href="#__RefHeading___Toc299954_156692946">GECONT</text:a> keyword consists of two records, with entries 1-1 to 1-5 representing record one items and 2-1 to 2-8 representing record number two items, <text:s/>in the “No.” column in this table. <text:s/>A maximum of three type two records can be entered following a type one record. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19373">Each type one and type two records are terminate by a “/” as indicated in the table, and a group data set is terminated by a further “/”, after which additional group data sets can be entered stating with a record of type one followed by type two.</text:p>
@@ -4766,7 +4766,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14766">Table <text:sequence text:ref-name="refTable579" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.37</text:sequence>: GECONT Keyword Description</text:p>
     <text:p text:style-name="P15336"/>
-    <text:p text:style-name="P15336">See also the WELSPECS keyword to define a wells shut-in or stop options, GCONPROD for group controls, and WECON for setting a well’s economic criteria. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15336">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a wells shut-in or stop options, <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> for group controls, and <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> for setting a well’s economic criteria. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18574" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716615_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716615_3964674244"/></text:h>
     <text:p text:style-name="P11078">The following example defines the tracer economic criteria for the field and two groups, FLTBLK1 and FLTBLK,.</text:p>
     <text:p text:style-name="P13002">-- </text:p>

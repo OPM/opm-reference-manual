@@ -4372,7 +4372,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716811_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716811_3964674244"/></text:h>
-    <text:p text:style-name="P12031">The WPIMULTL keyword defines a well connection multiplier factor that scales the existing well connection values, for a well in a Local Grid Refinement (“LGR”). The resulting effect is scale the well’s productivity at the reporting time step the keyword is entered. <text:s/></text:p>
+    <text:p text:style-name="P12031">The <text:a xlink:href="#__RefHeading___Toc628077_4263943340">WPIMULTL</text:a> keyword defines a well connection multiplier factor that scales the existing well connection values, for a well in a Local Grid Refinement (“LGR”). The resulting effect is scale the well’s productivity at the reporting time step the keyword is entered. <text:s/></text:p>
     <text:p text:style-name="P12032">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1732" table:style-name="Table1732">
      <table:table-column table:style-name="Table1732.A"/>
@@ -4421,7 +4421,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1732.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7320">A character string of up to eight characters in length that defines the well name for which the well and well connection status data is being defined.</text:p>
-       <text:p text:style-name="P7834">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7834">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4453,9 +4453,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9634">LGRNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1732.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the LGR name for which the well LGR connection multiplier factor (PIMULT) is being defined.</text:p>
-       <text:p text:style-name="P7806">Note that the well name (LGRNAME) must have been declared previously using the WELSPECL keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
-       <text:p text:style-name="P7922">If defaulted with 1* the LGR on the WELSPECL keyword will be utilized.</text:p>
+       <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> name for which the well <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> connection multiplier factor (PIMULT) is being defined.</text:p>
+       <text:p text:style-name="P7806">Note that the well name (LGRNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7922">If defaulted with 1* the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> on the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword will be utilized.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4527,12 +4527,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <dc:date>2017-10-03T12:34:29.541000000</dc:date>
          <meta:creator-initials>DBx</meta:creator-initials>
          <text:p text:style-name="P20244"><text:span text:style-name="T8541">Reply to Atgeirr Rasmussen (09/22/2017, 14:29): &quot;...&quot;</text:span></text:p>
-         <text:p><text:span text:style-name="T8542">Only WELOPEN and WPIMULT use completions, so added additional text to both and the COMPLUMP keywords for clarification</text:span></text:p>
+         <text:p><text:span text:style-name="T8542">Only <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> and <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> use completions, so added additional text to both and the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keywords for clarification</text:span></text:p>
         </office:annotation></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1732.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P8210">An integer less than or equal to NZ that defines the UPPER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P8210">Connections are lumped into completions via the COMPLUMP keyword, and K1 refers to the first completion number, as defined by the COMPLUMP keyword, and all the connections contained within the K1 completion</text:p>
+       <text:p text:style-name="P8210">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K1 refers to the first completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K1 completion</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4550,7 +4550,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1732.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7419">An integer less than or equal to NZ that defines the LOWER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P7419">Connections are lumped into completions via the COMPLUMP keyword, and K2 refers to the last completion number, as defined by the COMPLUMP keyword, and all the connections contained within the K2 completion</text:p>
+       <text:p text:style-name="P7419">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K2 refers to the last completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K2 completion</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4574,13 +4574,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14721">Table <text:sequence text:ref-name="refTable653" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.111</text:sequence>: WPIMULT Keyword Description</text:p>
+    <text:p text:style-name="P14721">Table <text:sequence text:ref-name="refTable653" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.111</text:sequence>: <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> Keyword Description</text:p>
     <text:p text:style-name="P11665"/>
     <text:p text:style-name="P11665">If variables I, J K, K1 and K2 are all defaulted with a negative value or 1*, <text:s/>then PIMULT is applied to all the well connections in the well. If variables I, J K, K1 and K2 are set to zero (meaning any or all values), or a positive value then PIMULT is applied to the defined connections. The defined connections are those with the I, J, K variables in the specified location and a completion number in the range specified by K1 and K2. </text:p>
-    <text:p text:style-name="P11665">Note, that PIMULT is applied at the time the WPIMULT keyword is entered and is cumulative if applied to the same well connections, provided there are intervening report time steps between consecutive WPIMULT keywords. Consequently, if there are no intervening report time steps between consecutive WPIMULT keywords utilizing the same well connections, then only the last set is applied.</text:p>
-    <text:p text:style-name="P11575">See also the PIMULTAB keyword that defines productivity index multiplier versus water cut tables that are used to scaled a well’s connection factors based on a wells connection current producing water cut. The keyword is documented in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P11665">Note, that PIMULT is applied at the time the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword is entered and is cumulative if applied to the same well connections, provided there are intervening report time steps between consecutive <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords. Consequently, if there are no intervening report time steps between consecutive <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords utilizing the same well connections, then only the last set is applied.</text:p>
+    <text:p text:style-name="P11575">See also the <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> keyword that defines productivity index multiplier versus water cut tables that are used to scaled a well’s connection factors based on a wells connection current producing water cut. The keyword is documented in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18628" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716813_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716813_3964674244"/></text:h>
-    <text:p text:style-name="P11103">The following example defines two vertical oil wells using the WELSPECS keyword and their associated connection data. </text:p>
+    <text:p text:style-name="P11103">The following example defines two vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and their associated connection data. </text:p>
     <text:p text:style-name="P13378">--</text:p>
     <text:p text:style-name="P13378">-- <text:s text:c="6"/>WELL LGR SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P12986">--</text:p>
@@ -4617,7 +4617,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12986">OP02 <text:s text:c="4"/>0.750 <text:s/>OP01LGR <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>10 <text:s text:c="3"/>1* <text:s text:c="3"/>1* <text:s text:c="9"/>/</text:p>
     <text:p text:style-name="P12986">OP03 <text:s text:c="4"/>1.100 <text:s/>OP02LGR <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s text:c="3"/>1 <text:s text:c="4"/>2 <text:s text:c="10"/>/</text:p>
     <text:p text:style-name="P14420">/ <text:s text:c="155"/><text:span text:style-name="T1"><text:s text:c="77"/></text:span><text:s text:c="126"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15478">In this example the WPIMULT scales the well productivity of well OP01 by 1.25, scales all the well connection factors in layer 10 only by 0.75 for well OP02, and for OP03, scales all the connections in completions one and two by 1.100. <text:s/></text:p>
+    <text:p text:style-name="P15478">In this example the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> scales the well productivity of well OP01 by 1.25, scales all the well connection factors in layer 10 only by 0.75 for well OP02, and for OP03, scales all the connections in completions one and two by 1.100. <text:s/></text:p>
     
    </text:section>
   </office:text>

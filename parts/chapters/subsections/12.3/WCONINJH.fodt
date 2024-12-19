@@ -4458,8 +4458,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716713_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716713_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WCONINJH keyword defines injection rates and pressures for wells that have been declared history matching wells by the use of this keyword. History matching wells are handled differently then ordinary wells that use the WCONINJE keyword for controlling their injection targets and constraints. However, the wells still need to be defined like ordinary injection wells using the WELSPECS keyword in the SCHEDULE section. </text:p>
-    <text:p text:style-name="P12644">Note that although wells can be allocated to a group when they are specified by the WELSPECS keyword, history matching wells cannot operate under group control. Field and group reporting is still consistent for all wells allocated to a group, but history matching wells cannot be under group control.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keyword defines injection rates and pressures for wells that have been declared history matching wells by the use of this keyword. History matching wells are handled differently then ordinary wells that use the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword for controlling their injection targets and constraints. However, the wells still need to be defined like ordinary injection wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:p text:style-name="P12644">Note that although wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword, history matching wells cannot operate under group control. Field and group reporting is still consistent for all wells allocated to a group, but history matching wells cannot be under group control.</text:p>
     <table:table table:name="Table120" table:style-name="Table120">
      <table:table-column table:style-name="Table120.A"/>
      <table:table-column table:style-name="Table120.B"/>
@@ -4507,7 +4507,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table120.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7301">A character string of up to eight characters in length that defines the well name for which the wells observed injection rates and pressures are being defined.</text:p>
-       <text:p text:style-name="P7822">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7822">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
        <text:p text:style-name="P7822"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4527,10 +4527,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7390">A defined character string that defines the type of injection well. TYPE should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105921977818329" text:continue-list="list105921328212898" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19524">GAS: for a gas injection well. </text:p>
+         <text:p text:style-name="P19524"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: for a gas injection well. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19552">OIL: for an oil injection well. </text:p>
+         <text:p text:style-name="P19552"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: for an oil injection well. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19552">WAT: for a water injection well. </text:p>
@@ -4559,7 +4559,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19524">OPEN: the well is open for injection and will attempt to inject the <text:s/>observed injection volumes.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19654">STOP: the well is “stopped” at the surface and will not inject fluids; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable on the WELSPECS keyword to NO. In this case the well’s behavior will be similar to the SHUT option described below.</text:p>
+         <text:p text:style-name="P19654">STOP: the well is “stopped” at the surface and will not inject fluids; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to NO. In this case the well’s behavior will be similar to the SHUT option described below.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19654">SHUT: the well is shut at the surface and downhole, this results in no injection and no cross flow downhole. </text:p>
@@ -4679,7 +4679,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table120.C12" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7687">A positive integer greater than or equal to zero that defines the vertical lift performance tables to be used for calculating the tubing head pressure for the well. </text:p>
-       <text:p text:style-name="P8046">If a non-zero value is entered then the vertical lift performance tables must be entered via the VFPINJ keyword in the SCHEDULE section and allocated to the well via this item. <text:s/></text:p>
+       <text:p text:style-name="P8046">If a non-zero value is entered then the vertical lift performance tables must be entered via the <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and allocated to the well via this item. <text:s/></text:p>
        <text:p text:style-name="P8046">The default value of zero implies no vertical lift performance table initially. If this value is then reset to be greater than zero then the table will be used to calculate the well’s tubing head pressure. Subsequently, the default is to use the previously declared table number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4798,9 +4798,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable621" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.79</text:sequence>: WCONINJH Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P15413">This keyword should be repeated at various time steps to fully describe the historical injection performance of the wells. For example, as most production and injection data is reconciled on a monthly basis, then monthly time steps covering the injection history of the wells should be used with WCONINJH keyword entered on a monthly basis.</text:p>
+    <text:p text:style-name="P15413">This keyword should be repeated at various time steps to fully describe the historical injection performance of the wells. For example, as most production and injection data is reconciled on a monthly basis, then monthly time steps covering the injection history of the wells should be used with <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keyword entered on a monthly basis.</text:p>
     <text:p text:style-name="P15413"/>
-    <text:p text:style-name="Text_20_body">History matching well are converted to ordinary wells by restating a well’s control mode <text:soft-page-break/>using either the <text:s/>WCONINJE or WELTARG keywords in the SCHEDULE section.</text:p>
+    <text:p text:style-name="Text_20_body">History matching well are converted to ordinary wells by restating a well’s control mode <text:soft-page-break/>using either the <text:s/><text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> or <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18603" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716715_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716715_3964674244"/></text:h>
     <text:p text:style-name="Text_20_body">The following example below shows the observed gas rates for the GI01 gas injector for the first quarter of 2000.</text:p>
     <text:p text:style-name="_40_Example">-- ------------------------------------------------------------------------------</text:p>
@@ -4836,7 +4836,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">GI01 <text:s text:c="4"/>GAS <text:s text:c="3"/>OPEN <text:s/>17.2E3 <text:s/>1* <text:s text:c="3"/>5489 <text:s text:c="2"/>1* <text:s text:c="3"/>4* <text:s text:c="3"/>1* <text:s/>/</text:p>
     <text:p text:style-name="P14534">/ </text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12709">Well GI01is declared as a gas injection well under gas rate control as TARGET variable is defaulted to rate control by using 1* (the last entry on the record). In addition, the well uses vertical lift table VFPINJ number 12 (as shown at January 1, 2000) to calculate the tubing head pressures for the well. Note that it is not necessary to declare the VFPINJ table number if it remains the same for subsequent time steps and thus the default 1* is used to indicate the last entry should be used.</text:p>
+    <text:p text:style-name="P12709">Well GI01is declared as a gas injection well under gas rate control as TARGET variable is defaulted to rate control by using 1* (the last entry on the record). In addition, the well uses vertical lift table <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> number 12 (as shown at January 1, 2000) to calculate the tubing head pressures for the well. Note that it is not necessary to declare the <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> table number if it remains the same for subsequent time steps and thus the default 1* is used to indicate the last entry should be used.</text:p>
     <text:p text:style-name="P178"/>
     
    </text:section>

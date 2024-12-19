@@ -4427,7 +4427,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716911_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716911_3964674244"/></text:h>
-    <text:p text:style-name="P12063">This keyword, WVFPEXP, defines how Vertical Flow Performance (“VFP”) tables are interpolated and can be used to resolve certain issues with wells operating under tubing head pressure control. For example, setting the VFP table to interpolate explicitly, that is using the previous time step results of the gas and water ratios for an oil well, may improve convergence. The default is to use implicit interpolation that uses the current time step values and may result in solution convergence oscillations in solving the linear equations. The WCONPROD keyword is used to allocate the VFPPROD tables to specific production wells. <text:s/>Note that one VFP table can be allocated to one or more wells; however, WVFPEXP is applied to a well’s allocated VFP table, not to all wells that use the same table, unless specifically requested. <text:s/>All the aforementioned keywords are in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P12063">This keyword, <text:a xlink:href="#__RefHeading___Toc1457781_4263943340">WVFPEXP</text:a>, defines how Vertical Flow Performance (“VFP”) tables are interpolated and can be used to resolve certain issues with wells operating under tubing head pressure control. For example, setting the VFP table to interpolate explicitly, that is using the previous time step results of the gas and water ratios for an oil well, may improve convergence. The default is to use implicit interpolation that uses the current time step values and may result in solution convergence oscillations in solving the linear equations. The <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword is used to allocate the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> tables to specific production wells. <text:s/>Note that one VFP table can be allocated to one or more wells; however, <text:a xlink:href="#__RefHeading___Toc1457781_4263943340">WVFPEXP</text:a> is applied to a well’s allocated VFP table, not to all wells that use the same table, unless specifically requested. <text:s/>All the aforementioned keywords are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <table:table table:name="Table1984" table:style-name="Table1984">
      <table:table-column table:style-name="Table1984.A"/>
      <table:table-column table:style-name="Table1984.B"/>
@@ -4475,7 +4475,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1984.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7341">A character string of up to eight characters in length that defines the well name for which the well<text:span text:style-name="T2110">’</text:span>s VFP interpolation options are being defined.</text:p>
-       <text:p text:style-name="P7855">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7855">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4493,7 +4493,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9563"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1984.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P16787">A defined character string of length three that defines the how the well’s VFPPROD tables are to be interpolated and should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P16787">A defined character string of length three that defines the how the well’s <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> tables are to be interpolated and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105923742707914" text:continue-list="list105923621830688" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19539">IMP: For this option the simulator interpolates a well’s VFP table implicitly, that is the latest gas fraction (GOR, GLR, etc.), water fraction (WCUT, WOR etc.), and ALQ is used to determine the required pressure. This is the most accurate option but may lead to oscillating behavior during the Newton/Linear iterations. This is the default behavior.</text:p>
@@ -4525,7 +4525,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19541">NO: For this option the check is not performed.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19541">YES: In this case the check is performed. Hence, if a well under THP control is found to operating on the horizontal stabilized portion of the VLP curve, then the well is SHUT or STOPPED depending on the AUTO parameter on the WELSPECS keyword.</text:p>
+         <text:p text:style-name="P19541">YES: In this case the check is performed. Hence, if a well under THP control is found to operating on the horizontal stabilized portion of the VLP curve, then the well is SHUT or STOPPED depending on the AUTO parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P1015">This option is specific to the <text:span text:style-name="T2110">commercial</text:span> simulator<text:span text:style-name="T2110">’s VFPi program that can generate VFPF tables where the unstable part of the VFP curves to the left of the minimum is replaced with a horizontal line at the minimum BHP value. </text:span></text:p>
@@ -4604,7 +4604,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable673" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.131</text:sequence>: WVFPEXP Keyword Description</text:p>
     <text:h text:style-name="P18635" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P11708">The following example defines two oil wells using the WELSPECS and WCONPROD keywords, together with the WVFPEXP keyword that declares how the VFPPROD table lookup should be performed.</text:p>
+    <text:p text:style-name="P11708">The following example defines two oil wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keywords, together with the <text:a xlink:href="#__RefHeading___Toc1457781_4263943340">WVFPEXP</text:a> keyword that declares how the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table lookup should be performed.</text:p>
     <text:p text:style-name="P13739">--</text:p>
     <text:p text:style-name="P13739">-- WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P13739"><text:soft-page-break/>-- <text:s text:c="77"/></text:p>
@@ -4632,7 +4632,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14157">&apos;OP* <text:s text:c="2"/>&apos; <text:s/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>YES1 <text:s text:c="2"/>1* <text:s text:c="46"/>/</text:p>
     <text:p text:style-name="P14157">/ <text:s text:c="145"/></text:p>
     <text:p text:style-name="P13164"><text:s text:c="78"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15781">Here both wells are declared as initially shut on the WELSPECS keyword and use VFPPROD table number one as declared on the WCONPROD keyword. The WFVPEXP keyword declares all wells with a name beginning with OP to use implicit lookup and the wells are prevented from changing from rate control to THP control provided they can produce at a higher rate under THP control. </text:p>
+    <text:p text:style-name="P15781">Here both wells are declared as initially shut on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and use <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table number one as declared on the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword. The WFVPEXP keyword declares all wells with a name beginning with OP to use implicit lookup and the wells are prevented from changing from rate control to THP control provided they can produce at a higher rate under THP control. </text:p>
     <text:p text:style-name="P15792"/>
     
    </text:section>
