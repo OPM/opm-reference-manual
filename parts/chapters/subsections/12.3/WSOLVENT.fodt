@@ -4231,7 +4231,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716881_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716881_3964674244"/></text:h>
-    <text:p text:style-name="P11541">WSOLVENT defines a gas injection well’s solvent fraction in the injection stream that is to be used when the Solvent option has been activated by the SOLVENT keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="P11541"><text:a xlink:href="#__RefHeading___Toc121647_2412586160">WSOLVENT</text:a> defines a gas injection well’s solvent fraction in the injection stream that is to be used when the Solvent option has been activated by the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <table:table table:name="Table697" table:style-name="Table697">
      <table:table-column table:style-name="Table697.A"/>
      <table:table-column table:style-name="Table697.B"/>
@@ -4279,7 +4279,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table697.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7314">A character string of up to eight characters in length that defines the well name of a gas injection well for which the solvent fraction data is being defined.</text:p>
-       <text:p text:style-name="P7830">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7830">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4323,7 +4323,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1660">Notes:</text:p>
        <text:list xml:id="list105924226802067" text:continue-list="list105923236068611" text:style-name="L178">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19209">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4340,9 +4340,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14716">Table <text:sequence text:ref-name="refTable666" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.124</text:sequence>: WSOLVENT Keyword Description</text:p>
     <text:p text:style-name="P15542"/>
     <text:p text:style-name="_40_TextBody">Gas injection wells that are not declared via this keyword have their solvent fractions set to zero. </text:p>
-    <text:p text:style-name="P15327">See also the GCONINJE keyword to define a group’s injection targets and constraints, and the WCONINJE keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15327">See also the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword to define a group’s injection targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716883_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716883_3964674244"/></text:h>
-    <text:p text:style-name="P11093">The following example defines the solvent fractions for three gas injection wells for when the solvent option has been activated by the SOLVENT keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="P11093">The following example defines the solvent fractions for three gas injection wells for when the solvent option has been activated by the <text:a xlink:href="#__RefHeading___Toc62787_1778172979">SOLVENT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <text:p text:style-name="P14261">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14261">-- <text:s text:c="6"/>DEFINE GAS INJECTION WELL SOLVENT FRACTION <text:s text:c="69"/></text:p>
     <text:p text:style-name="P14261">-- <text:s text:c="85"/></text:p>

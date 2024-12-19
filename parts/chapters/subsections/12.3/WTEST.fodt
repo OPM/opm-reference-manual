@@ -4374,7 +4374,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716897_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716897_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WTEST keyword outlines the testing procedures to be applied to wells that are closed for various reasons to see if the wells are capable flowing under the current operating conditions. The keyword can be applied to single wells or groups of wells.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121925_2556401936">WTEST</text:a> keyword outlines the testing procedures to be applied to wells that are closed for various reasons to see if the wells are capable flowing under the current operating conditions. The keyword can be applied to single wells or groups of wells.</text:p>
     <table:table table:name="Table708" table:style-name="Table708">
      <table:table-column table:style-name="Table708.A"/>
      <table:table-column table:style-name="Table708.B"/>
@@ -4422,7 +4422,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table708.A3" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7280">A character string of up to eight characters in length that defines the well name of the well to be tested.</text:p>
-       <text:p text:style-name="P7804">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7804">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4435,10 +4435,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7548">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table708.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7549">TIME</text:p>
+       <text:p text:style-name="P7549"><text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table708.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7251">A real value greater than zero that defines the minimum period of time that must elapse between well tests. The next well test is performed at the beginning of the next time step after the specified period of time has elapsed since the previous well test, for example if TIME is set equal to 365.25 (days), the test is performed approximately every year.</text:p>
+       <text:p text:style-name="P7251">A real value greater than zero that defines the minimum period of time that must elapse between well tests. The next well test is performed at the beginning of the next time step after the specified period of time has elapsed since the previous well test, for example if <text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a> is set equal to 365.25 (days), the test is performed approximately every year.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4478,10 +4478,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P19686">Here, <text:s/>if the well has at least one connection open then the well is opened. </text:p>
-       <text:p text:style-name="P19686">If a well has no open connections, then those connections that have been closed due to an economic limit test ("ELT"), are all individually tested and reopened if they meet the ELT criteria as defined by the WECON, CECON and WECONINJ keywords in the SCHEDULE section. And the well is opened if it has at least one open connection. Where the ELT applies to ORAT, GRAT, WCUT, GOR and WGR etc.</text:p>
+       <text:p text:style-name="P19686">If a well has no open connections, then those connections that have been closed due to an economic limit test (&quot;ELT&quot;), are all individually tested and reopened if they meet the ELT criteria as defined by the <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a>, <text:a xlink:href="#__RefHeading___Toc27331_3671211675">CECON</text:a> and <text:a xlink:href="#__RefHeading___Toc949620_487874538">WECONINJ</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. And the well is opened if it has at least one open connection. Where the ELT applies to ORAT, GRAT, WCUT, GOR and WGR etc.</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item>
-         <text:p text:style-name="P19537">G: meaning the well was closed due to a group economic constraint, as per the GECON, GECONT, GCONCAL, GCONPRI, GCONPROD, and GCONSALE, keywords in the SCHEDULE section, then the well is tested to see if it can flow, if it can, then it is put back on production, otherwise it remains closed. </text:p>
+         <text:p text:style-name="P19537">G: meaning the well was closed due to a group economic constraint, as per the <text:a xlink:href="#__RefHeading___Toc134876_2055188184">GECON</text:a>, <text:a xlink:href="#__RefHeading___Toc299954_156692946">GECONT</text:a>, <text:a xlink:href="#__RefHeading___Toc254086_1190369742">GCONCAL</text:a>, <text:a xlink:href="#__RefHeading___Toc659214_1190369742">GCONPRI</text:a>, <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a>, and <text:a xlink:href="#__RefHeading___Toc178287_2026549522">GCONSALE</text:a>, keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then the well is tested to see if it can flow, if it can, then it is put back on production, otherwise it remains closed. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19538"><text:soft-page-break/>D: <text:s/>not supported by OPM Flow.</text:p>
@@ -4521,10 +4521,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8262">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table708.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8266">START</text:p>
+       <text:p text:style-name="P8266"><text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table708.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7450">A real positive value that defines the start up time used to prorate the rate at which the well is put back on production. If START is large compared to the time step size, then the well is brought on gradually, if it is less than the time step size, then the well is opened faster. The rate is prorated based on the following:</text:p>
+       <text:p text:style-name="P7450">A real positive value that defines the start up time used to prorate the rate at which the well is put back on production. If <text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a> is large compared to the time step size, then the well is brought on gradually, if it is less than the time step size, then the well is opened faster. The rate is prorated based on the following:</text:p>
        <text:p text:style-name="P8264"><draw:frame draw:style-name="fr67" draw:name="Object256" text:anchor-type="paragraph" svg:y="0.152cm" svg:width="5.482cm" svg:height="0.984cm" draw:z-index="268"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
@@ -4683,7 +4683,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable669" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.127</text:sequence>: WTEST Keyword Description</text:p>
     <text:p text:style-name="P15674"/>
-    <text:p text:style-name="P15325">See also the WELSPECS keyword to define a wells shut-in or stop options, WECON for setting a well’s economic criteria, <text:s/>GCONPROD and GCONINJE for group controls, and GECON for setting a group’s economic criteria. <text:s/>All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15325">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a wells shut-in or stop options, <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> for setting a well’s economic criteria, <text:s/><text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> for group controls, and <text:a xlink:href="#__RefHeading___Toc134876_2055188184">GECON</text:a> for setting a group’s economic criteria. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc121927_2556401936"/>Example<text:bookmark-end text:name="__RefHeading___Toc121927_2556401936"/></text:h>
     <text:p text:style-name="P11067">The following example defines test criteria for all gas wells (‘GP*’) and three oil wells (OP01, OP02, and OP03).</text:p>
     <text:p text:style-name="P13731">--</text:p>

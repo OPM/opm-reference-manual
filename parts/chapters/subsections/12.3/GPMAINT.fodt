@@ -4621,7 +4621,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881916"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881916"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GPMAINT keyword defines the groups under pressure maintenance control, the associated flow rate and pressure targets, and fluid in-place regions associated with pressure maintenance, as well as various pressure maintenance controls. GPMAINT allows for various regions, as defined by the FIPNUM or FIP keywords in the REGIONS section, to have their average reservoir pressure maintained at a specified value.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> keyword defines the groups under pressure maintenance control, the associated flow rate and pressure targets, and fluid in-place regions associated with pressure maintenance, as well as various pressure maintenance controls. <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> allows for various regions, as defined by the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> or <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section, to have their average reservoir pressure maintained at a specified value.</text:p>
     <table:table table:name="Table1988" table:style-name="Table1988">
      <table:table-column table:style-name="Table1988.A"/>
      <table:table-column table:style-name="Table1988.B"/>
@@ -4668,8 +4668,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9621">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1988.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7334">A character string of up to eight characters in length that defines the group name for which the group’s associated FIPNUM region will have a targeted average reservoir pressure maintained. <text:s/>The group named FIELD is the top most group and can also be used to set pressure target for the whole field.</text:p>
-       <text:p text:style-name="P7849">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P7334">A character string of up to eight characters in length that defines the group name for which the group’s associated <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> region will have a targeted average reservoir pressure maintained. <text:s/>The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and can also be used to set pressure target for the whole field.</text:p>
+       <text:p text:style-name="P7849">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4686,31 +4686,31 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9131">GRPCNTL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1988.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7411">A defined character string of length four, that sets the production or injection control for the group, used to maintain the average pressure for the FIPNUM region. GRPCNTL should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P7411">A defined character string of length four, that sets the production or injection control for the group, used to maintain the average pressure for the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> region. GRPCNTL should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105921651487454" text:continue-list="list105920646257133" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19512">NONE: the group will no longer maintain the average reservoir pressure for the FIPNUM region by adjusting production and injection rates.</text:p>
+         <text:p text:style-name="P19512">NONE: the group will no longer maintain the average reservoir pressure for the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> region by adjusting production and injection rates.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19611">GINJ: GRPNAME’s gas in situ reservoir volume injection rate (RESV) will be adjusted in order to maintain FIPNUM’s average reservoir pressure.</text:p>
+         <text:p text:style-name="P19611">GINJ: GRPNAME’s gas in situ reservoir volume injection rate (RESV) will be adjusted in order to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19611">GINS: GRPNAME’s gas surface rate (GRAT) will be used to maintain FIPNUM’s average reservoir pressure.</text:p>
+         <text:p text:style-name="P19611">GINS: GRPNAME’s gas surface rate (GRAT) will be used to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19636">OINJ: GRPNAME<text:span text:style-name="T2110">’s </text:span>oil in situ reservoir volume injection rate (RESV) will be adjusted in order to maintain FIPNUM’s average reservoir pressure.</text:p>
+         <text:p text:style-name="P19636">OINJ: GRPNAME<text:span text:style-name="T2110">’s </text:span>oil in situ reservoir volume injection rate (RESV) will be adjusted in order to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19636">OINS: GRPNAME’s oil surface rate (ORAT) will be used to maintain FIPNUM’s average reservoir pressure.</text:p>
+         <text:p text:style-name="P19636">OINS: GRPNAME’s oil surface rate (ORAT) will be used to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19636">PROD: GRPNAME<text:span text:style-name="T2110">’s </text:span>total in situ reservoir volume production rate (RESV) will be adjusted in order to maintain FIPNUM’s average reservoir pressure. Note that group cannot be under prioritization group control, as per the GCONPRI keyword in the SCHEDULE section, with this option.</text:p>
+         <text:p text:style-name="P19636">PROD: GRPNAME<text:span text:style-name="T2110">’s </text:span>total in situ reservoir volume production rate (RESV) will be adjusted in order to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure. Note that group cannot be under prioritization group control, as per the <text:a xlink:href="#__RefHeading___Toc659214_1190369742">GCONPRI</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, with this option.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19636">WINJ: GRPNAME<text:span text:style-name="T2110">’s </text:span>water in situ reservoir volume injection rate (RESV) will be adjusted in order to maintain FIPNUM’s average reservoir pressure</text:p>
+         <text:p text:style-name="P19636">WINJ: GRPNAME<text:span text:style-name="T2110">’s </text:span>water in situ reservoir volume injection rate (RESV) will be adjusted in order to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19636">WINS: GRPNAME’s water surface rate (WRAT) will be used to maintain FIPNUM’s average reservoir pressure.</text:p>
+         <text:p text:style-name="P19636">WINS: GRPNAME’s water surface rate (WRAT) will be used to maintain <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>’s average reservoir pressure.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4736,23 +4736,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P15886"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1988.C2" office:value-type="string">
-       <text:p text:style-name="P8798">FIPNUM</text:p>
+       <text:p text:style-name="P8798"><text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a></text:p>
        <text:p text:style-name="P9559"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1988.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3960">A positive integer value that defines the region for which pressure maintenance is to be applied by GRPNAME, where FIPNUM may be define as per the:</text:p>
+       <text:p text:style-name="P3960">A positive integer value that defines the region for which pressure maintenance is to be applied by GRPNAME, where <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> may be define as per the:</text:p>
        <text:list xml:id="list105921441107397" text:continue-list="list105921651487454" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P18896">FIPNUM keyword in the REGIONS section.</text:p>
+         <text:p text:style-name="P18896"><text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18897">The FIP keyword in the REGIONS section, used to define the fluid in-place name and the associated region numbers for each grid block. This option is used in conjunction with FIPNAME (item (4)) to define the name of fluid in-place region and FIPNUM, which in this case is the region number associated with FIPNAME.</text:p>
+         <text:p text:style-name="P18897">The <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section, used to define the fluid in-place name and the associated region numbers for each grid block. This option is used in conjunction with FIPNAME (item (4)) to define the name of fluid in-place region and <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>, which in this case is the region number associated with FIPNAME.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18897">Alternatively, a value of zero may be entered, in which case pressure maintenance is applied to the whole field.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P3962">The maximum number of FIPNUM and FIP regions is set by the REGDIMS(NMFIPR) or the TABDIMS(NTFIP) keywords(variables) in the RUNSPEC section. If both REGDIMS(NMFIPR) and TABDIMS(NTFIP) have been defined then the maximum of the two is used.</text:p>
+       <text:p text:style-name="P3962">The maximum number of <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> and <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> regions is set by the <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a>(NMFIPR) or the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTFIP) keywords(variables) in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. If both <text:a xlink:href="#__RefHeading___Toc70161_327352552">REGDIMS</text:a>(NMFIPR) and <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a>(NTFIP) have been defined then the maximum of the two is used.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4769,8 +4769,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9968">FIPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1988.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7260">A character string of up to five characters in length, defining the fluid in-place’s name, as defined by the FIP keyword in the REGIONS section. For example, if the FIP keyword has been used to define a FIP group or family, named FIPBLK-A, then FIPNAME would be set to BLK-A.</text:p>
-       <text:p text:style-name="P8800">The default value of 1* means that FIPNUM on this keyword applies to the standard FIPNUM array and not to the FIP defined group regions.</text:p>
+       <text:p text:style-name="P7260">A character string of up to five characters in length, defining the fluid in-place’s name, as defined by the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section. For example, if the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> keyword has been used to define a <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> group or family, named FIPBLK-A, then FIPNAME would be set to BLK-A.</text:p>
+       <text:p text:style-name="P8800">The default value of 1* means that <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> on this keyword applies to the standard <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array and not to the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> defined group regions.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4798,7 +4798,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1988.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7729">A real positive value that defines the average hydrocarbon pore volume weighted reservoir pressure target for the region, for which GRPNAME should attempt to satisfy.</text:p>
-       <text:p text:style-name="P8801">Note that the average pressure report in the RPTSCHED series of reports is a pore volume weight average reservoir pressure, not the <text:s/>average hydrocarbon pore volume weighted reservoir pressure specified by TARGET on this keyword. Thus, there will be small differences between the two numbers. </text:p>
+       <text:p text:style-name="P8801">Note that the average pressure report in the <text:a xlink:href="#__RefHeading___Toc268459_1366622701">RPTSCHED</text:a> series of reports is a pore volume weight average reservoir pressure, not the <text:s/>average hydrocarbon pore volume weighted reservoir pressure specified by TARGET on this keyword. Thus, there will be small differences between the two numbers. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4868,7 +4868,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1988.C11" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7730">A real positive value that defines the time interval used to control the flow rates in order to maintain the TARGET average hydrocarbon pore volume pressure for the region. See equation <text:sequence-ref text:reference-format="text" text:ref-name="refText217">(12.26)</text:sequence-ref>.</text:p>
        <text:p text:style-name="P7731">Larger values of BETA reduce the tendency for the regional pressure to oscillate, but consequently decrease the rate at which the pressure reaches its target value. <text:s/>This is because the pressure error is measured at the end of the previous time step, resulting in a “delay” in the response. <text:s/>Also, the larger the time steps the greater the propensity for the pressure to oscillate for given ALPHA and BETA.</text:p>
-       <text:p text:style-name="P7735">As a guide BETA should be set to a value that is at least as large as the maximum time step size (see the TUNING keyword in the SCHEDULE section and section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>for setting the maximum time step size).</text:p>
+       <text:p text:style-name="P7735">As a guide BETA should be set to a value that is at least as large as the maximum time step size (see the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>for setting the maximum time step size).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4908,7 +4908,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable583" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.41</text:sequence>: GPMAINT Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12363">The GPMAINT keyword utilizes control theory<text:note text:id="ftn305" text:note-class="footnote"><text:note-citation>305</text:note-citation><text:note-body>
+    <text:p text:style-name="P12363">The <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> keyword utilizes control theory<text:note text:id="ftn305" text:note-class="footnote"><text:note-citation>305</text:note-citation><text:note-body>
         <text:p text:style-name="P16679">John Doyle, Bruce Francis, Allen Tannenbaum, Feedback Control Theory, Macmillan Publishing Co., 1990.</text:p></text:note-body></text:note>, <text:note text:id="ftn306" text:note-class="footnote"><text:note-citation>306</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Karl J. Åström; Richard M. Murray (2008). Feedback Systems: An Introduction for Scientists and Engineers. Princeton University Press. ISBN 978-0-691-13576-2.</text:p></text:note-body></text:note>, <text:note text:id="ftn307" text:note-class="footnote"><text:note-citation>307</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Andrei, Neculai (2005)., Modern Control Theory – A Historical Perspective, Research Institute for Informatics, <text:s/>Center for Advanced Modeling and Optimization,8-10, Averescu Avenue, Bucharest 1, Romania.</text:p></text:note-body></text:note><text:s/>and <text:note text:id="ftn308" text:note-class="footnote"><text:note-citation>308</text:note-citation><text:note-body>
@@ -5177,7 +5177,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P16565"><text:soft-page-break/><text:span text:style-name="T1533"><text:tab/><text:tab/>pressure for the region from the </text:span><text:span text:style-name="T1868">preceding</text:span><text:span text:style-name="T1533"> completed time step.</text:span></text:p>
     <text:p text:style-name="P16565">Q<text:tab/>=<text:tab/>the new in situ reservoir volume rate.</text:p>
     <text:p text:style-name="P16565">Q<text:span text:style-name="T4092">i</text:span><text:span text:style-name="T1533"><text:tab/>= <text:tab/>the </text:span><text:span text:style-name="T1868">initial</text:span><text:span text:style-name="T1533"> in situ reservoir volume rate at the time the keyword was</text:span></text:p>
-    <text:p text:style-name="P16565"><text:span text:style-name="T1533"><text:tab/><text:tab/>activated in the input. Subsequent GPMAINT keywords will reset Q</text:span><text:span text:style-name="T4092">i</text:span><text:span text:style-name="T1533">.</text:span></text:p>
+    <text:p text:style-name="P16565"><text:span text:style-name="T1533"><text:tab/><text:tab/>activated in the input. Subsequent <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> keywords will reset Q</text:span><text:span text:style-name="T4092">i</text:span><text:span text:style-name="T1533">.</text:span></text:p>
     <text:p text:style-name="P16565"><text:span text:style-name="T2000">α</text:span><text:span text:style-name="T1862"><text:tab/>=<text:tab/>the proportionality constant used to control the flow rates, the ALPHA</text:span></text:p>
     <text:p text:style-name="P16565"><text:span text:style-name="T1862"><text:tab/><text:tab/>parameter in </text:span><text:span text:style-name="T1862"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable583">Table 12.41</text:sequence-ref></text:span><text:span text:style-name="T1862">.</text:span></text:p>
     <text:p text:style-name="P16551">β<text:tab/>= <text:s/><text:tab/>the time interval parameter used to control the flow rates, the BETA</text:p>
@@ -5304,8 +5304,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         AAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
        </office:binary-data>
       </draw:image>
-     </draw:frame>term in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText217">(12.26)</text:sequence-ref><text:s/>is the cumulative sum of the <text:span text:style-name="T1533">average hydrocarbon pore volume weighted reservoir pressure </text:span>error <text:span text:style-name="T1533">for the region,</text:span> times the time step length, from when the last GPMAINT keyword was entered, up to the <text:span text:style-name="T1868">preceding</text:span><text:span text:style-name="T1533"> completed time step.</text:span></text:p>
-    <text:p text:style-name="P12364"><text:span text:style-name="T1533">The </text:span>objective of equation<text:span text:style-name="T1533"> </text:span><text:span text:style-name="T1533"><text:sequence-ref text:reference-format="text" text:ref-name="refText217">(12.26)</text:sequence-ref></text:span><text:span text:style-name="T1533"><text:s/>is to stabilize </text:span>the injection/production rates for the group for when there are changes to<text:span text:style-name="T1533"> </text:span>the average <text:span text:style-name="T1533">hydrocarbon pore volume weighted reservoir </text:span>pressure<text:span text:style-name="T1533"> </text:span>target set by the initial and subsequent GPMAINT keywords, or by any group constraints applied afterwards. In addition, if the pressure error is small <draw:frame draw:style-name="fr66" draw:name="Object255" text:anchor-type="as-char" svg:width="2.538cm" svg:height="0.49cm" draw:z-index="1178"><draw:object>
+     </draw:frame>term in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText217">(12.26)</text:sequence-ref><text:s/>is the cumulative sum of the <text:span text:style-name="T1533">average hydrocarbon pore volume weighted reservoir pressure </text:span>error <text:span text:style-name="T1533">for the region,</text:span> times the time step length, from when the last <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> keyword was entered, up to the <text:span text:style-name="T1868">preceding</text:span><text:span text:style-name="T1533"> completed time step.</text:span></text:p>
+    <text:p text:style-name="P12364"><text:span text:style-name="T1533">The </text:span>objective of equation<text:span text:style-name="T1533"> </text:span><text:span text:style-name="T1533"><text:sequence-ref text:reference-format="text" text:ref-name="refText217">(12.26)</text:sequence-ref></text:span><text:span text:style-name="T1533"><text:s/>is to stabilize </text:span>the injection/production rates for the group for when there are changes to<text:span text:style-name="T1533"> </text:span>the average <text:span text:style-name="T1533">hydrocarbon pore volume weighted reservoir </text:span>pressure<text:span text:style-name="T1533"> </text:span>target set by the initial and subsequent <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> keywords, or by any group constraints applied afterwards. In addition, if the pressure error is small <draw:frame draw:style-name="fr66" draw:name="Object255" text:anchor-type="as-char" svg:width="2.538cm" svg:height="0.49cm" draw:z-index="1178"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <mrow>
@@ -5369,7 +5369,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          KQBfAAAAAAABAAEAKQCMAAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
         </office:binary-data>
        </draw:image>
-      </draw:frame>then the equation should result in approximately the same rates as the previous time step, if the GPMAINT has been previously entered. </text:p>
+      </draw:frame>then the equation should result in approximately the same rates as the previous time step, if the <text:a xlink:href="#__RefHeading___Toc192979_2026549522">GPMAINT</text:a> has been previously entered. </text:p>
     <text:p text:style-name="P12365"><text:span text:style-name="T1533">However, </text:span>if <text:span text:style-name="T1533">the first time the keyword is entered </text:span>coincides with the start of injection<text:span text:style-name="T1533">, </text:span>then Qi in <text:span text:style-name="T1533">equation </text:span><text:sequence-ref text:reference-format="text" text:ref-name="refText217">(12.26)</text:sequence-ref><text:s/>by definition will be zero, and the injection rate will start from zero and increase as calculated by the equation. The ALPHA and BETA parameters in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable583">Table 12.41</text:sequence-ref><text:s/>can be used to control how the rate is built up to meet the desired average hydrocarbon pore volume weighted reservoir pressure target.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true">Examples</text:h>
     <text:p text:style-name="P12366">The first example uses the gas surface rate to maintain the fields’ average hydrocarbon pore volume pressure at <text:s/>225 barsa, with the ALPHA and BETA parameters set to 40.0 and 70.0 respectively. <text:s/></text:p>
@@ -5381,7 +5381,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14433">GPMAINT <text:s text:c="50"/></text:p>
     <text:p text:style-name="P14433">FIELD <text:s text:c="3"/>GINS <text:s text:c="2"/>0 <text:s text:c="6"/>1* <text:s text:c="5"/>225 <text:s text:c="4"/>40.0 <text:s text:c="2"/>70.0 <text:s text:c="7"/>/</text:p>
     <text:p text:style-name="P11766">/ <text:s text:c="78"/></text:p>
-    <text:p text:style-name="P11766">The second example uses group’s BLK-A gas surface rate to maintain the average hydrocarbon pore volume pressure at 200 barsa for FIPNUM regions one to four, with the ALPHA and BETA parameters set to 40.0 and 70.0 respectively. </text:p>
+    <text:p text:style-name="P11766">The second example uses group’s BLK-A gas surface rate to maintain the average hydrocarbon pore volume pressure at 200 barsa for <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> regions one to four, with the ALPHA and BETA parameters set to 40.0 and 70.0 respectively. </text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="P14434">-- <text:s text:c="6"/>GROUP PRESSURE MAINTENANCE TARGETS AND CONTROLS <text:s text:c="52"/></text:p>
     <text:p text:style-name="P14434">-- <text:s text:c="77"/></text:p>
@@ -5398,7 +5398,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14434">BLK-B <text:s text:c="3"/>WINJ <text:s text:c="2"/>3 <text:s text:c="6"/>FLT-B <text:s text:c="2"/>215 <text:s text:c="4"/>30.0 <text:s text:c="2"/>65.0 <text:s text:c="7"/>/</text:p>
     <text:p text:style-name="P14434">BLK-B <text:s text:c="3"/>WINJ <text:s text:c="2"/>4 <text:s text:c="6"/>FLT-B <text:s text:c="2"/>215 <text:s text:c="4"/>30.0 <text:s text:c="2"/>65.0 <text:s text:c="7"/>/</text:p>
     <text:p text:style-name="P14434">/ <text:s/></text:p>
-    <text:p text:style-name="P11766">For group BLK-B, water in situ reservoir volume injection rate (RESV) is used to maintain FIP group/family <text:s/>FLT-B’s average reservoir pressure at 215 barsa for FIPFLT-B regions one to four. Here the ALPHA and BETA parameters set to 30.0 and 65.0 respectively. </text:p>
+    <text:p text:style-name="P11766">For group BLK-B, water in situ reservoir volume injection rate (RESV) is used to maintain <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> group/family <text:s/>FLT-B’s average reservoir pressure at 215 barsa for FIPFLT-B regions one to four. Here the ALPHA and BETA parameters set to 30.0 and 65.0 respectively. </text:p>
     <text:p text:style-name="P171"/>
     
    </text:section>

@@ -4215,7 +4215,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_37011683883511"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_37011683883511"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword advances the simulation to a given report time after which additional keywords may be entered to instruct OPM Flow to perform additional functions via the SCHEDULE section keywords, or further TSTEP keywords may be entered to advance the simulator to the next report time.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword advances the simulation to a given report time after which additional keywords may be entered to instruct OPM Flow to perform additional functions via the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keywords, or further <text:a xlink:href="#__RefHeading___Toc118323_1596574740">TSTEP</text:a> keywords may be entered to advance the simulator to the next report time.</text:p>
     <table:table table:name="Table679" table:style-name="Table679">
      <table:table-column table:style-name="Table679.A"/>
      <table:table-column table:style-name="Table679.B"/>
@@ -4257,7 +4257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3091">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table679.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3547">TSTEP </text:p>
+       <text:p text:style-name="P3547"><text:a xlink:href="#__RefHeading___Toc118323_1596574740">TSTEP</text:a> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table679.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P2818">A vector of real positive numbers that define the length of the time intervals to subsequent report steps.</text:p>
@@ -4301,10 +4301,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable607" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.65</text:sequence>: TSTEP Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P11343">See also the DATES and TIME keywords in the SCHEDULE section. Note that since OPM Flow uses the standard Gregorian calendar and therefore leap years are accounted for in the DATES keyword. Thus, it is more accurate to use the DATES keyword to progress the simulator through time if one is matching actual production data.</text:p>
+    <text:p text:style-name="P11343">See also the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> and <text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. Note that since OPM Flow uses the standard Gregorian calendar and therefore leap years are accounted for in the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword. Thus, it is more accurate to use the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword to progress the simulator through time if one is matching actual production data.</text:p>
     <text:p text:style-name="P11339">Whenever possible it is a good idea to always set the start date to be at the beginning of the year, as like most simulators, OPM Flow reports are always stated at the number of days from the start date (and sometimes at a given date). If the start date is at the beginning of the year, then calculating the actual date is relatively straight forward and simple.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716673_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716673_3964674244"/></text:h>
-    <text:p text:style-name="Text_20_body">The first example shows how to advance the simulation via the reporting time steps from the given start date of January 1, 2022 set via the START keyword in the RUNSPEC section, to the next year, without any actions or reporting taking place.</text:p>
+    <text:p text:style-name="Text_20_body">The first example shows how to advance the simulation via the reporting time steps from the given start date of January 1, 2022 set via the <text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, to the next year, without any actions or reporting taking place.</text:p>
     <text:p text:style-name="P14139">-- ==============================================================================</text:p>
     <text:p text:style-name="P14139">-- </text:p>
     <text:p text:style-name="P14139">-- SCHEDULE SECTION </text:p>
@@ -4380,7 +4380,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13344"><text:s text:c="9"/>4*91.3125</text:p>
     <text:p text:style-name="P14138">/ <text:s text:c="70"/></text:p>
     <text:p text:style-name="P13468"/>
-    <text:p text:style-name="P11533">Again, if the simulated production targets are actual production data or the results are going to be used in economic evaluations then the DATES keyword may be more useful in advancing the simulation via the reporting time steps, as the exact dates will be honored.</text:p>
+    <text:p text:style-name="P11533">Again, if the simulated production targets are actual production data or the results are going to be used in economic evaluations then the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword may be more useful in advancing the simulation via the reporting time steps, as the exact dates will be honored.</text:p>
     
    </text:section>
   </office:text>

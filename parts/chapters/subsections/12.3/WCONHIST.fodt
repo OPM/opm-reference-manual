@@ -4763,8 +4763,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P78" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716703_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716703_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WCONHIST keyword defines production rates and pressures for wells that have been declared history matching wells by the use of this keyword. History matching wells are handled differently then ordinary wells that use the WCONPROD keyword for controlling their production targets and constraints. However, the wells still need to be defined like ordinary production wells using the WELSPECS keyword in the SCHEDULE section. </text:p>
-    <text:p text:style-name="_40_TextBody">Note that although wells can be allocated to a group when they are specified by the WELSPECS keyword, history matching wells cannot operate under group control. Field and group reporting is still consistent for all wells allocated to a group, but history matching wells cannot be under group control.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a> keyword defines production rates and pressures for wells that have been declared history matching wells by the use of this keyword. History matching wells are handled differently then ordinary wells that use the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword for controlling their production targets and constraints. However, the wells still need to be defined like ordinary production wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:p text:style-name="_40_TextBody">Note that although wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword, history matching wells cannot operate under group control. Field and group reporting is still consistent for all wells allocated to a group, but history matching wells cannot be under group control.</text:p>
     <table:table table:name="Table122" table:style-name="Table122">
      <table:table-column table:style-name="Table122.A"/>
      <table:table-column table:style-name="Table122.B"/>
@@ -4812,7 +4812,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table122.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P27">A character string of up to eight characters in length that defines the well name for which the wells observed production rates and pressures are being defined.</text:p>
-       <text:p text:style-name="P34">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P34">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4834,7 +4834,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P111">OPEN: the well is open to flow and will attempt to produce the required production volumes.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P112">STOP: the well is “stopped” at the surface and will not produce any fluids to surface; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to <text:s/>all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable on the WELSPECS keyword to NO. In this case the well’s behavior will be similar to the SHUT option described below.</text:p>
+         <text:p text:style-name="P112">STOP: the well is “stopped” at the surface and will not produce any fluids to surface; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to <text:s/>all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to NO. In this case the well’s behavior will be similar to the SHUT option described below.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P112">SHUT: the well is shut at the surface and downhole, this results in no flow at the surface and no cross flow downhole. </text:p>
@@ -4880,7 +4880,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:list text:style-name="L1">
         <text:list-header>
-         <text:p text:style-name="P117">Note the TARGET control mode may be reset using the WHISTCTL keyword in the SCHEDULE section, from the time the WHISTCTL is invoked, thus avoiding changing the control mode on all subsequent WCONHIST keywords.</text:p>
+         <text:p text:style-name="P117">Note the TARGET control mode may be reset using the <text:a xlink:href="#__RefHeading___Toc268465_1366622701">WHISTCTL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, from the time the <text:a xlink:href="#__RefHeading___Toc268465_1366622701">WHISTCTL</text:a> is invoked, thus avoiding changing the control mode on all subsequent <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a> keywords.</text:p>
         </text:list-header>
        </text:list>
       </table:table-cell>
@@ -5002,7 +5002,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table122.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P30">A positive integer greater than or equal to zero that defines the vertical lift performance tables to be used for calculating the tubing head pressure for the well. </text:p>
-       <text:p text:style-name="P44">If a non-zero value is entered then the vertical lift performance tables must be entered via the VFPPROD keyword in the SCHEDULE section and allocated to the well via this item. <text:s/></text:p>
+       <text:p text:style-name="P44">If a non-zero value is entered then the vertical lift performance tables must be entered via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and allocated to the well via this item. <text:s/></text:p>
        <text:p text:style-name="P45">The default value of zero implies no vertical lift performance table initially. If this value is then reset to be greater than zero then the table will be used to calculate the well’s tubing head pressure. Subsequently, the default is to use the previously declared table number.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5019,10 +5019,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P43">ALQ-WELL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table122.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P44">A real positive value that defines the artificial lift quantity to be used in conjunction with the VFPPROD assigned to the well via that keyword&apos;s VFPTAB variable. <text:s/></text:p>
+       <text:p text:style-name="P44">A real positive value that defines the artificial lift quantity to be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> assigned to the well via that keyword&apos;s VFPTAB variable. <text:s/></text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
        <text:p text:style-name="P44">VFPTAB vertical lift performance table and the artificial lift quantity ALQ-WELL are used with the well fluid rates to calculate the well’s tubing head pressures values from the bottom-hole pressure.</text:p>
-       <text:p text:style-name="P47">Note that the units for ALQ-WELL is dependent on the associated variable on the VFPPROD keyword.</text:p>
+       <text:p text:style-name="P47">Note that the units for ALQ-WELL is dependent on the associated variable on the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5137,7 +5137,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L2">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="_40_Table_20_Contents">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -5153,21 +5153,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P75">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.77</text:sequence>: WCONHIST Keyword Description</text:p>
     <text:p text:style-name="P76"/>
-    <text:p text:style-name="_40_TextBody">See also the WHISTCTL keyword that can be used to reset the TARGET phase, the GCONPROD and GCONINJE keywords to define a group’s production and injection targets and constraints, and the WCONPROD keyword to define a production well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc268465_1366622701">WHISTCTL</text:a> keyword that can be used to reset the TARGET phase, the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keywords to define a group’s production and injection targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword to define a production well’s targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <table:table table:name="Table123" table:style-name="Table123">
      <table:table-column table:style-name="Table123.A"/>
      <table:table-header-rows>
       <table:table-row>
        <table:table-cell table:style-name="Table123.A1" office:value-type="string">
         <text:p text:style-name="P25">Note</text:p>
-        <text:p text:style-name="P63">One can use TARGET set to RESV in the initial history matching runs to get a “reasonable” pressure match, this ensures that the total reservoir withdrawals are correct, although the individual phase withdrawals will not match. Once a reasonable pressure match is achieved for the reservoir then one can reset TARGET to the sales phase, OIL or GAS, and continue with the matching of all the phases.</text:p>
-        <text:p text:style-name="P63">In oil reservoirs some engineers prefer to use LIQ rather than OIL as the TARGET phase, although one should consider that as the water phase has no commercial value, the measurement accuracy is significantly less than the oil sales phase.</text:p>
+        <text:p text:style-name="P63">One can use TARGET set to RESV in the initial history matching runs to get a “reasonable” pressure match, this ensures that the total reservoir withdrawals are correct, although the individual phase withdrawals will not match. Once a reasonable pressure match is achieved for the reservoir then one can reset TARGET to the sales phase, <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> or <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, and continue with the matching of all the phases.</text:p>
+        <text:p text:style-name="P63">In oil reservoirs some engineers prefer to use LIQ rather than <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> as the TARGET phase, although one should consider that as the water phase has no commercial value, the measurement accuracy is significantly less than the oil sales phase.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="Text_20_body">History matching wells are converted to ordinary wells by restating a well’s control mode using either the <text:s/>WCONPROD or WELTARG keywords in the SCHEDULE section.</text:p>
+    <text:p text:style-name="Text_20_body">History matching wells are converted to ordinary wells by restating a well’s control mode using either the <text:s/><text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P78" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716705_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716705_3964674244"/></text:h>
     <text:p text:style-name="P65">The following example below shows the observed production rates for the OP01 oil producer for the first quarter of 2000.</text:p>
     <text:p text:style-name="P67">-- ------------------------------------------------------------------------------</text:p>
@@ -5198,8 +5198,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P70">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>TABLE <text:s/>ALFQ <text:s/>PRES <text:s/>PRES </text:p>
     <text:p text:style-name="P70">WCONHIST <text:s text:c="121"/>OP01 <text:s text:c="4"/>OPEN <text:s text:c="2"/>ORAT <text:s/>15.0E3 <text:s/>200.0 <text:s/>1500 <text:s text:c="2"/>1* <text:s text:c="5"/>1* <text:s text:c="2"/>850.0 1* <text:s text:c="4"/>/</text:p>
     <text:p text:style-name="P70">/ <text:s text:c="18"/></text:p>
-    <text:p text:style-name="_40_TextBody">From January 1, 2000 well OP01 is open and is on oil rate control, and produces 15,500 stb/d oil, with the observed rates of 100 stb/d of water and 15.5 MMscf/d of gas. The well uses VFPPROD vertical lift table number 10 so that OPM Flow can calculate the tubing head pressures based on the fluids produced and the calculated pressures in the simulator.</text:p>
-    <text:p text:style-name="_40_TextBody">The next example illustrates how to convert OP01 from a history match well to a normal production well at the start for the forecast run at August 1, 2017 using the WELTARG keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">From January 1, 2000 well OP01 is open and is on oil rate control, and produces 15,500 stb/d oil, with the observed rates of 100 stb/d of water and 15.5 MMscf/d of gas. The well uses <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> vertical lift table number 10 so that OPM Flow can calculate the tubing head pressures based on the fluids produced and the calculated pressures in the simulator.</text:p>
+    <text:p text:style-name="_40_TextBody">The next example illustrates how to convert OP01 from a history match well to a normal production well at the start for the forecast run at August 1, 2017 using the <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keyword.</text:p>
     <text:p text:style-name="P66">DATES <text:s text:c="127"/></text:p>
     <text:p text:style-name="P68">01 AUG 2017 / <text:s text:c="119"/></text:p>
     <text:p text:style-name="P72">/ </text:p>

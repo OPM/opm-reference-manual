@@ -4468,7 +4468,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P57" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716581_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716581_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GCONCAL keyword defines calorific production targets and constraints for groups, including the top most group in the group hierarchy known as the FIELD group. Wells are allocated to groups when the wells are specified by the WELSPECS keyword in the SCHEDULE section. <text:s/>Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc254086_1190369742">GCONCAL</text:a> keyword defines calorific production targets and constraints for groups, including the top most group in the group hierarchy known as the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group. Wells are allocated to groups when the wells are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:s/>Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1144" table:style-name="Table1144">
      <table:table-column table:style-name="Table1144.A"/>
@@ -4516,8 +4516,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P43">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1144.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P31">A character string of up to eight characters in length that defines the group name for which the group’s target calorific value is being defined. The group named FIELD is the top most group and should be used to set targets and constraints for the field.</text:p>
-       <text:p text:style-name="P42">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P31">A character string of up to eight characters in length that defines the group name for which the group’s target calorific value is being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should be used to set targets and constraints for the field.</text:p>
+       <text:p text:style-name="P42">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4562,10 +4562,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P46">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1144.C2" office:value-type="string">
-       <text:p text:style-name="P41">ACTION</text:p>
+       <text:p text:style-name="P41"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1144.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P32">A defined character string that defines the action to be taken if the CALVAL is violated. ACTION should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P32">A defined character string that defines the action to be taken if the CALVAL is violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P87">NONE: no action is taken and the group’s produced calorific value will therefore no longer meet CALVAL.</text:p>
@@ -4630,7 +4630,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P26">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.27</text:sequence>: GCONCAL Keyword Description</text:p>
     <text:p text:style-name="P27"/>
-    <text:p text:style-name="P55">See also the GRUPTREE keyword to define the hierarchy of the groups below the FIELD level, the <text:s/>GCONPROD and GCONINJE keywords to define a group’s production and injection rate targets and constraints, the WCONPROD keyword to define a production well’s targets and constraints, and the WCONINJE keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P55">See also the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword to define the hierarchy of the groups below the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> level, the <text:s/><text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keywords to define a group’s production and injection rate targets and constraints, the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword to define a production well’s targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection well’s targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P28" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716583_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716583_3964674244"/></text:h>
     <text:p text:style-name="P52">The following example defines the calorific production target for the field.</text:p>
     <text:p text:style-name="P54">--- </text:p>

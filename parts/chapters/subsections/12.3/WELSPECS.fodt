@@ -4968,8 +4968,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P98" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716753_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716753_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WELSPECS keyword defines the general well specification data for all well types, and must be used for all wells before any other well specification keywords are used in the input file. The keyword declares the well, the name of the well, the group the well initial belongs to, the wellhead location and other key parameters.</text:p>
-    <text:p text:style-name="_40_TextBody">OPM Flow also supports the use of the WELSPECS keyword to change the properties of one or more wells previously specified using the WELSPECS keyword. In particular, this supports changing the controlling group (GRPNAME) without affecting any other well properties such as the location of the well head (I, J) or the well reference depth (BHPREF), since defaulted properties are not changed in this case. However, the well reference depth can be re-defaulted by specifying a negative value for BHPREF. The wells to be changed can be specified using a well name, well name pattern or well list (WELNAME).</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword defines the general well specification data for all well types, and must be used for all wells before any other well specification keywords are used in the input file. The keyword declares the well, the name of the well, the group the well initial belongs to, the wellhead location and other key parameters.</text:p>
+    <text:p text:style-name="_40_TextBody">OPM Flow also supports the use of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to change the properties of one or more wells previously specified using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword. In particular, this supports changing the controlling group (GRPNAME) without affecting any other well properties such as the location of the well head (I, J) or the well reference depth (BHPREF), since defaulted properties are not changed in this case. However, the well reference depth can be re-defaulted by specifying a negative value for BHPREF. The wells to be changed can be specified using a well name, well name pattern or well list (WELNAME).</text:p>
     <table:table table:name="Table665" table:style-name="Table665">
      <table:table-column table:style-name="Table665.A"/>
      <table:table-column table:style-name="Table665.B"/>
@@ -5033,10 +5033,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P135">A character string of up to eight characters in length that defines the group name for which the well is assigned to. </text:p>
-       <text:p text:style-name="P135">The group named FIELD is the top most group. GRPNAME can be set to FIELD although this is discouraged and a warning message will be issued. This is allowed in the commercial compositional simulator but not the commercial black-oil simulator. The FIELD group cannot contain both groups and wells.</text:p>
-       <text:p text:style-name="P135">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
-       <text:p text:style-name="P135">Secondly, groups defined by the GRUPTREE keyword cannot contain other groups and wells; that is, groups must either contain other groups or wells but not both.</text:p>
-       <text:p text:style-name="P135">If necessary, wells can be re-allocated to a different group by re-entering a well&apos;s WELSPECS data together with a new value for GRPNAME. </text:p>
+       <text:p text:style-name="P135">The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group. GRPNAME can be set to <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> although this is discouraged and a warning message will be issued. This is allowed in the commercial compositional simulator but not the commercial black-oil simulator. The <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group cannot contain both groups and wells.</text:p>
+       <text:p text:style-name="P135">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P135">Secondly, groups defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword cannot contain other groups and wells; that is, groups must either contain other groups or wells but not both.</text:p>
+       <text:p text:style-name="P135">If necessary, wells can be re-allocated to a different group by re-entering a well&apos;s <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> data together with a new value for GRPNAME. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5053,8 +5053,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P135">A positive integer greater than or equal to zero and less than or equal to NX that defines the wellhead location for a vertical or deviated well, or the heel for a horizontal well in the I-direction.</text:p>
-       <text:p text:style-name="P135">For wells being specified with the COMPTRAJ and WELTRAJ keywords in SCHEDULE section, that allow for an alternative manner to define the well connections to the simulation grid blocks, this parameter should be defaulted with 1*. Since the simulator will calculate the wellhead location from the trajectory data on the WELTRAJ keyword. </text:p>
-       <text:p text:style-name="P135">Note that the COMPTRAJ and WELTRAJ keywords are OPM Flow specific keywords, and will cause an error in the commercial simulator.</text:p>
+       <text:p text:style-name="P135">For wells being specified with the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keywords in <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, that allow for an alternative manner to define the well connections to the simulation grid blocks, this parameter should be defaulted with 1*. Since the simulator will calculate the wellhead location from the trajectory data on the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword. </text:p>
+       <text:p text:style-name="P135">Note that the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keywords are OPM Flow specific keywords, and will cause an error in the commercial simulator.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5072,8 +5072,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P135">A positive integer greater than or equal to zero and less than or equal to NY that defines the wellhead location for a vertical or deviated well, or the heel for a horizontal well in the J-direction.</text:p>
-       <text:p text:style-name="P135">For wells being specified with the COMPTRAJ and WELTRAJ keywords in SCHEDULE section, that allows for an alternative manner to define the well connections to the simulation grid blocks, <text:s/>this parameter should be defaulted with 1*. Since the simulator will calculate the wellhead location from the trajectory data on the WELTRAJ keyword. </text:p>
-       <text:p text:style-name="P135">Note that the COMPTRAJ and WELTRAJ keywords are OPM Flow specific keywords, and will cause an error in the commercial simulator.</text:p>
+       <text:p text:style-name="P135">For wells being specified with the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keywords in <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, that allows for an alternative manner to define the well connections to the simulation grid blocks, <text:s/>this parameter should be defaulted with 1*. Since the simulator will calculate the wellhead location from the trajectory data on the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword. </text:p>
+       <text:p text:style-name="P135">Note that the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keywords are OPM Flow specific keywords, and will cause an error in the commercial simulator.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5089,13 +5089,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">BHPREF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P135">A real value that defines the reference depth for reporting the bottom-hole pressure for the well. Ideally this value should be set to the midpoint of the perforations as defined by the COMPDAT keyword in the SCHEDULE section.</text:p>
-       <text:p text:style-name="P135">If defaulted by 1* or set to a value less than or equal to zero, then the mid-point of shallowest connection defined by the COMPDAT keyword will be used.</text:p>
+       <text:p text:style-name="P135">A real value that defines the reference depth for reporting the bottom-hole pressure for the well. Ideally this value should be set to the midpoint of the perforations as defined by the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+       <text:p text:style-name="P135">If defaulted by 1* or set to a value less than or equal to zero, then the mid-point of shallowest connection defined by the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword will be used.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table665.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P135">Mid-point of shallowest connection defined by the COMPDAT keyword</text:p>
+       <text:p text:style-name="P135">Mid-point of shallowest connection defined by the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table665.1">
@@ -5124,10 +5124,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">A defined character string that defines the “main” phase for the well, and should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P137">GAS: for a gas well. </text:p>
+         <text:p text:style-name="P137"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: for a gas well. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P137">OIL: for an oil well. </text:p>
+         <text:p text:style-name="P137"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: for an oil well. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P137">WAT: for a water injection well. </text:p>
@@ -5136,8 +5136,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P137">LIQ: for an oil well when the liquid productivity index is required for the well.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P135">This parameter defines the phase used to calculate a well’s productivity or injectivity index and the type of well, or a well’s connection, to close when a group’s production constraints, as defined on the GCONPROD keyword in the SCHEDULE section, have been violated. For example, if the well is declared as an oil well, then excessive gas and water connections will be subject to closure.</text:p>
-       <text:p text:style-name="P135">Note OPM Flow only currently supports options one to three, that is option four (LIQ) is not supported. <text:s/>For producing wells this mostly matters if one plots the WPI summary vector (productivity index for well&apos;s preferred phase). In the current treatment WPI will not have contributions from the water phase if the declared preferred phase is LIQ. For injecting wells WELSPECS&apos;s preferred phase does not matter, <text:s/>since the preferred phase is (typically) reset to the injected phase via the WCONINJE and WCONINJH keywords.</text:p>
+       <text:p text:style-name="P135">This parameter defines the phase used to calculate a well’s productivity or injectivity index and the type of well, or a well’s connection, to close when a group’s production constraints, as defined on the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, have been violated. For example, if the well is declared as an oil well, then excessive gas and water connections will be subject to closure.</text:p>
+       <text:p text:style-name="P135">Note OPM Flow only currently supports options one to three, that is option four (LIQ) is not supported. <text:s/>For producing wells this mostly matters if one plots the WPI summary vector (productivity index for well&apos;s preferred phase). In the current treatment WPI will not have contributions from the water phase if the declared preferred phase is LIQ. For injecting wells WELSPECS&apos;s preferred phase does not matter, <text:s/>since the preferred phase is (typically) reset to the injected phase via the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5272,11 +5272,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P135">PVTNUM</text:p>
+       <text:p text:style-name="P135"><text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P135">A positive integer greater than or equal to zero that defines the PVT table used to calculate the wellbore fluid properties that define the relationship between reservoir and surface volume rates.</text:p>
-       <text:p text:style-name="P135">The default value of zero sets PVTNUM to be the PVT table of the deepest connection in the well. </text:p>
+       <text:p text:style-name="P135">The default value of zero sets <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> to be the PVT table of the deepest connection in the well. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5314,19 +5314,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">13</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" office:value-type="string">
-       <text:p text:style-name="P135">FIPNUM</text:p>
+       <text:p text:style-name="P135"><text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P135">An integer value defines the FIPNUM region used to determine the reservoir conditions in calculating the well’s reservoir volumes and is determined by:</text:p>
+       <text:p text:style-name="P135">An integer value defines the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> region used to determine the reservoir conditions in calculating the well’s reservoir volumes and is determined by:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P137">If set to a negative integer value then the FIPNUM region of the deepest connection in the well will be used.</text:p>
+         <text:p text:style-name="P137">If set to a negative integer value then the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> region of the deepest connection in the well will be used.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P137">If set to zero, the default value, then the average properties for the field will be used.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P137">If set to an integer value greater than zero, then the FIPNUM indicated by this value will be used. </text:p>
+         <text:p text:style-name="P137">If set to an integer value greater than zero, then the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> indicated by this value will be used. </text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5393,7 +5393,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">POLYTAB</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P135">A positive integer greater than or equal to zero that defines the polymer mixing table, as defined by the PLMIXPAR and PLYMAX keywords, to be used in calculating the well’s well bore properties. The default value of zero means the table allocated via the PLMIXNUM array for the deepest connection in the well bore is utilized.</text:p>
+       <text:p text:style-name="P135">A positive integer greater than or equal to zero that defines the polymer mixing table, as defined by the <text:a xlink:href="#__RefHeading___Toc93833_3812137098">PLMIXPAR</text:a> and <text:a xlink:href="#__RefHeading___Toc110214_2939291539">PLYMAX</text:a> keywords, to be used in calculating the well’s well bore properties. The default value of zero means the table allocated via the <text:a xlink:href="#__RefHeading___Toc107258_3812137098">PLMIXNUM</text:a> array for the deepest connection in the well bore is utilized.</text:p>
        <text:p text:style-name="P135">Only the default value of zero is supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5410,7 +5410,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P138">The keyword is followed by any number records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P138">Note that the total number of individual wells declared by the WELSPECS cannot exceed the valued entered via the MXWELS variable on the WELLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P138">Note that the total number of individual wells declared by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> cannot exceed the valued entered via the MXWELS variable on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5423,9 +5423,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P94">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.3.281.1</text:sequence>: WELSPECS Keyword Description</text:p>
     <text:p text:style-name="P134"/>
-    <text:p text:style-name="P134">See also the COMPDAT keyword to define a well’s connections, the WCONPROD and WCONINJE keywords to define a well’s production and injection targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P134">See also the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword to define a well’s connections, the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords to define a well’s production and injection targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P98" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716755_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716755_3964674244"/></text:h>
-    <text:p text:style-name="P129">The following example defines three wells using the WELSPECS keyword </text:p>
+    <text:p text:style-name="P129">The following example defines three wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword </text:p>
     <text:p text:style-name="P128">--</text:p>
     <text:p text:style-name="P128">-- <text:s text:c="6"/>WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P128">-- <text:s text:c="77"/></text:p>
@@ -5438,7 +5438,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P128">/ <text:s text:c="148"/></text:p>
     <text:p text:style-name="P134"/>
     <text:p text:style-name="_40_TextBody">Here, well GI01 is a dry gas injection well that uses the dry gas pseudo inflow equation, GP01 is a gas condensate well that uses the generalized gas pseudo pressure inflow equation, and finally, OP01 is an oil well that uses the standard inflow equation. All wells will be shut if they are required to cease production, all wells disallow cross flow, <text:s/>and the hydrostatic head calculation is defaulted to the segment option for all wells.</text:p>
-    <text:p text:style-name="_40_TextBody">If the same three wells are using the COMPTRAJ and WELTRAJ keywords to specify the connections to the simulation grid, then the WELSPECS keyword should be;</text:p>
+    <text:p text:style-name="_40_TextBody">If the same three wells are using the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keywords to specify the connections to the simulation grid, then the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword should be;</text:p>
     <text:p text:style-name="P128">--</text:p>
     <text:p text:style-name="P128">-- <text:s text:c="6"/>WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P128">-- <text:s text:c="77"/></text:p>
@@ -5450,16 +5450,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P128">OP01 <text:s text:c="4"/>PLATFORM <text:s text:c="2"/>1* <text:s text:c="2"/>1* <text:s text:c="2"/>1* <text:s text:c="4"/>OIL <text:s text:c="3"/>1* <text:s text:c="4"/>STD <text:s text:c="3"/>SHUT <text:s text:c="2"/>NO <text:s text:c="4"/>1* <text:s text:c="4"/>/</text:p>
     <text:p text:style-name="P128">/ <text:s text:c="148"/></text:p>
     <text:p text:style-name="_40_TextBody">Notice how the well location parameters have been defaulted with 1* in this case.</text:p>
-    <text:p text:style-name="_40_TextBody">The following example illustrates how the WELSPECS keyword can be used to change the controlling group for oil production wells previously specified by the WELSPECS keyword that have an oil production rate less than 100.</text:p>
+    <text:p text:style-name="_40_TextBody">The following example illustrates how the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword can be used to change the controlling group for oil production wells previously specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword that have an oil production rate less than 100.</text:p>
     <text:p text:style-name="P128">--</text:p>
     <text:p text:style-name="P128">-- <text:s text:c="6"/>ACTIONX BLOCK <text:s text:c="53"/></text:p>
     <text:p text:style-name="P128">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P128">ACTIONX</text:p>
     <text:p text:style-name="P128">  ACT01    1             /</text:p>
-    <text:p text:style-name="P128">  WOPR     'OP*' &lt; 100.0 /</text:p>
+    <text:p text:style-name="P128">  WOPR     &apos;OP*&apos; &lt; 100.0 /</text:p>
     <text:p text:style-name="P128">/</text:p>
     <text:p text:style-name="P128">WELSPECS</text:p>
-    <text:p text:style-name="P128">  '?'      'LOWPRESS'   /</text:p>
+    <text:p text:style-name="P128">  &apos;?&apos;      &apos;LOWPRESS&apos;   /</text:p>
     <text:p text:style-name="P128">/</text:p>
     <text:p text:style-name="P128">ENDACTIO</text:p>
    </text:section>

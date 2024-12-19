@@ -4491,7 +4491,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P53" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716735_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716735_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WELCNTL keyword modifies a well’s target control and value, both rates and pressures, for previously defined wells without having to define all the variables on the well control keywords: WCONPROD, WCONHIST, WCONINJE, or WCONINJH keywords. Variables not changed by the WELCNTL keyword remain the same as those previously entered via the well control keywords or previously entered WELCNTL keywords. Note that the well must still be initially be fully defined using the WCONPROD or WCONINJE keywords. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> keyword modifies a well’s target control and value, both rates and pressures, for previously defined wells without having to define all the variables on the well control keywords: <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a>, <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>, or <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords. Variables not changed by the <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> keyword remain the same as those previously entered via the well control keywords or previously entered <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> keywords. Note that the well must still be initially be fully defined using the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P44">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table127" table:style-name="Table127">
      <table:table-column table:style-name="Table127.A"/>
@@ -4540,7 +4540,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table127.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well production rates and pressures data are being redefined.</text:p>
-       <text:p text:style-name="P31">Note that the well name (WELNAME) must have been declared previously using the WELSPECS and WCONPROD (or WCONINJE) keywords in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P31">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> (or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>) keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4591,7 +4591,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:list text:style-name="L1">
         <text:list-header>
-         <text:p text:style-name="P85">Note TARGET redefines the target controlled for a well and the control value on item (4). For example, if a well is operating on ORAT control, as defined by the previously entered WCONPROD keyword, entering TARGET equal to LRAT with a value, sets the TARGET to liquid rate with the given value. That is the well will be targeting a liquid rate not the previously requested oil ratel. Use the WELTARG keyword in the SCHEDULE section to change the target and constraint values for a well. </text:p>
+         <text:p text:style-name="P85">Note TARGET redefines the target controlled for a well and the control value on item (4). For example, if a well is operating on ORAT control, as defined by the previously entered <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword, entering TARGET equal to LRAT with a value, sets the TARGET to liquid rate with the given value. That is the well will be targeting a liquid rate not the previously requested oil ratel. Use the <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to change the target and constraint values for a well. </text:p>
         </text:list-header>
        </text:list>
       </table:table-cell>
@@ -4634,7 +4634,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P41">psia</text:p>
        <text:p text:style-name="P36">dimensionless</text:p>
        <text:p text:style-name="P36">same as</text:p>
-       <text:p text:style-name="P36">VFPPROD or VFPINJ</text:p>
+       <text:p text:style-name="P36"><text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table127.C2" office:value-type="string">
        <text:p text:style-name="P29">sm<text:span text:style-name="T30">3</text:span>/day</text:p>
@@ -4643,7 +4643,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P28">barsa</text:p>
        <text:p text:style-name="P36">dimensionless</text:p>
        <text:p text:style-name="P36">same as</text:p>
-       <text:p text:style-name="P36"><text:s/>VFPPROD or VFPINJ</text:p>
+       <text:p text:style-name="P36"><text:s/><text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table127.C2" office:value-type="string">
        <text:p text:style-name="P29">scc/hour</text:p>
@@ -4652,7 +4652,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P28">atma</text:p>
        <text:p text:style-name="P36">dimensionless</text:p>
        <text:p text:style-name="P36">same as</text:p>
-       <text:p text:style-name="P36"><text:s/>VFPPROD or VFPINJ</text:p>
+       <text:p text:style-name="P36"><text:s/><text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table127.F5"/>
      </table:table-row>
@@ -4675,7 +4675,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P50">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.85</text:sequence>: WELCNTL Keyword Description</text:p>
     <text:p text:style-name="P51"/>
-    <text:p text:style-name="_40_TextBody">If a well is currently a history matching well, then WELCNTL can be used to change the well to a standard well. See also the WELTARG keyword, in the SCHEDULE section that can be used to reset a well’s target and constraints of both rates and pressures. </text:p>
+    <text:p text:style-name="_40_TextBody">If a well is currently a history matching well, then <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> can be used to change the well to a standard well. See also the <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keyword, in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that can be used to reset a well’s target and constraints of both rates and pressures. </text:p>
     <text:h text:style-name="P52" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716737_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716737_3964674244"/></text:h>
     <text:p text:style-name="P45">The following example below shows the oil rates for the OP01 oil producer at the start of the schedule section (January 1, 2000).</text:p>
     <text:p text:style-name="P46">-- ------------------------------------------------------------------------------</text:p>
@@ -4698,7 +4698,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P49">-- <text:s/>NAME CNTL <text:s text:c="2"/>VALUE <text:s text:c="55"/>WELCNTL <text:s text:c="44"/></text:p>
     <text:p text:style-name="P48">OP01 <text:s text:c="4"/>LRAT <text:s text:c="2"/>5000 <text:s text:c="39"/>/</text:p>
     <text:p text:style-name="P48">/ <text:s/></text:p>
-    <text:p text:style-name="P77">From January 1, 2000 to February 1, 2000 well OP01 is open and is on oil rate control and has a target oil rate of 3,000 stb/d and uses VFPPROD vertical lift table number 9 with a minimum tubing head pressure constraint of 500 psia. After February 1, 2000 the well is changed to liquid control with a target rate of 5,000 stb/d of liquid and all the other parameters remain unchanged.</text:p>
+    <text:p text:style-name="P77">From January 1, 2000 to February 1, 2000 well OP01 is open and is on oil rate control and has a target oil rate of 3,000 stb/d and uses <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> vertical lift table number 9 with a minimum tubing head pressure constraint of 500 psia. After February 1, 2000 the well is changed to liquid control with a target rate of 5,000 stb/d of liquid and all the other parameters remain unchanged.</text:p>
    </text:section>
   </office:text>
  </office:body>

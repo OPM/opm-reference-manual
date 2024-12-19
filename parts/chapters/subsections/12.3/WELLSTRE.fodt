@@ -4288,15 +4288,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18686" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838818 Copy 1 Copy 1 Copy 1 Copy 2"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838818 Copy 1 Copy 1 Copy 1 Copy 2"/></text:h>
-    <text:p text:style-name="P12724">The WELLSTRE keyword defines a well stream together with the compositional component mole factions, associated with the well stream, as such it should have the same number of entries as that declared via the COMPS keyword in the RUNSPEC section, and the NCOMPS keyword in the PROPS section. Once a gas well stream has been defined, it can be used with either the WINJGAS or GINJGAS keywords in the SCHEDULE section, to set the injected gas composition. Similarly, <text:s/>if an oil well stream has been defined by WELLSTRE, then the well stream can be used with the WINJOIL keyword in the SCHEDULE section, to specify the injected oil composition.</text:p>
-    <text:p text:style-name="P12724">The keyword should only be used if the CO2STORE and GASWAT keywords in the RUNSPEC section have also be activated for the gas-water two component model.</text:p>
+    <text:p text:style-name="P12724">The <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keyword defines a well stream together with the compositional component mole factions, associated with the well stream, as such it should have the same number of entries as that declared via the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1">NCOMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. Once a gas well stream has been defined, it can be used with either the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> or GINJGAS keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, to set the injected gas composition. Similarly, <text:s/>if an oil well stream has been defined by <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a>, then the well stream can be used with the WINJOIL keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, to specify the injected oil composition.</text:p>
+    <text:p text:style-name="P12724">The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section have also be activated for the gas-water two component model.</text:p>
     <table:table table:name="Table2308" table:style-name="Table2308">
      <table:table-column table:style-name="Table2308.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2308.1">
        <table:table-cell table:style-name="Table2308.A1" office:value-type="string">
         <text:p text:style-name="P10234">Note</text:p>
-        <text:p text:style-name="P10197">This is an OPM Flow keyword used with OPM Flow’s CO2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the WELLSTRE keyword used in the commercial compositional simulator.</text:p>
+        <text:p text:style-name="P10197">This is an OPM Flow keyword used with OPM Flow’s <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and should not be confused with the more general version of the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keyword used in the commercial compositional simulator.</text:p>
         <text:p text:style-name="P10210">Secondly, although OPM Flow parses the keyword, the simulator currently ignores the data for this keyword.</text:p>
        </table:table-cell>
       </table:table-row>
@@ -4349,7 +4349,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2309.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P1161">STREAM is a character string of up to eight characters in length, representing the well stream name.</text:p>
-       <text:p text:style-name="P1161">The WELLDIMS(MXSTRMS) parameter in the RUNSPEC section determines the maximum number of well streams allowed in the model.</text:p>
+       <text:p text:style-name="P1161">The <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a>(MXSTRMS) parameter in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section determines the maximum number of well streams allowed in the model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4367,7 +4367,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table2309.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P1158">A row vector, with each item representing a compositional component mole fraction for a given component. <text:s/></text:p>
        <text:p text:style-name="P1158">In addition, the sum of the compositional component mole fractions must sum to one, otherwise an error will occur. </text:p>
-       <text:p text:style-name="P1157">Note that the number ZCOMP values, should be the same as that entered via the NCOMPS keyword in the PROPS section, and the COMPS keyword in the RUNSPEC section. However, <text:s/>for a given ZCOMP component, the mole fraction may be defaulted with 1*, in which case the mole fraction is set to zero. Secondly, ZCOMP may be terminated early, in this case the undefined mole fractions will be set to zero.</text:p>
+       <text:p text:style-name="P1157">Note that the number ZCOMP values, should be the same as that entered via the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1">NCOMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, and the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. However, <text:s/>for a given ZCOMP component, the mole fraction may be defaulted with 1*, in which case the mole fraction is set to zero. Secondly, ZCOMP may be terminated early, in this case the undefined mole fractions will be set to zero.</text:p>
        <text:p text:style-name="P1156">Finally, only the default value of two components are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4395,7 +4395,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1839">Notes:</text:p>
        <text:list xml:id="list105921760568970" text:continue-list="list105917482960446" text:style-name="L26">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19189">The keyword is followed by up to MXSTRMS<text:span text:style-name="T1533"> records</text:span> as declared on the WELLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19189">The keyword is followed by up to MXSTRMS<text:span text:style-name="T1533"> records</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19189">Each record is terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4411,7 +4411,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14975">Table <text:sequence text:ref-name="refTable628" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.86</text:sequence>: WELLSTRE Keyword Description</text:p>
     <text:h text:style-name="P18686" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12720">The following example defines how to specify a two component formulation, together with defining the names of the composition components, to be used with the CO2STORE and GASWAT options.</text:p>
+    <text:p text:style-name="P12720">The following example defines how to specify a two component formulation, together with defining the names of the composition components, to be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> options.</text:p>
     <text:p text:style-name="P13439">-- ==============================================================================</text:p>
     <text:p text:style-name="P13439">-- </text:p>
     <text:p text:style-name="P13439">-- PROPS SECTION </text:p>

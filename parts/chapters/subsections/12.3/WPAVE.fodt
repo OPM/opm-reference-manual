@@ -4503,7 +4503,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P50" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716799_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716799_3964674244"/></text:h>
-    <text:p text:style-name="P74">The WPAVE keyword defines the method and parameters for calculating a well’s block average pressures for all wells in the model. The resulting average pressure can be written out to the SUMMARY and RSM files in order to compare with field observed data via the WBP, WBP4, WBP5 and WBP9 vectors in the SUMMARY section.</text:p>
+    <text:p text:style-name="P74">The <text:a xlink:href="#__RefHeading___Toc121923_2556401936">WPAVE</text:a> keyword defines the method and parameters for calculating a well’s block average pressures for all wells in the model. The resulting average pressure can be written out to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> and RSM files in order to compare with field observed data via the WBP, WBP4, WBP5 and WBP9 vectors in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section.</text:p>
     <table:table table:name="Table706" table:style-name="Table706">
      <table:table-column table:style-name="Table706.A"/>
      <table:table-column table:style-name="Table706.B"/>
@@ -4586,7 +4586,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P33">WPAVE3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table706.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P32">A defined character string that determines how the hydrostatic head calculation is performed in correcting the pressures to the BHP reference depth on the WELSPECS or WPAVEDEP keywords in the SCHEDULE section. WPAVE3 should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P32">A defined character string that determines how the hydrostatic head calculation is performed in correcting the pressures to the BHP reference depth on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> or <text:a xlink:href="#__RefHeading___Toc121639_2412586160">WPAVEDEP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. WPAVE3 should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P81">WELL: the hydrostatic head is calculated using the density of the fluid in the wellbore at the well connections.</text:p>
@@ -4619,7 +4619,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P81">OPEN: only open connections and associated grid blocks should be used in the calculations. This option may result in pressure discontinuities if connections are opened and closed during the run. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P82">ALL: all currently defined open and closed connections and associated grid blocks are used in the calculations. The pressure discontinuities issue mentioned above can be avoided with this option and defining all the well connections for a well at the beginning of the run. </text:p>
+         <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc4420_421927891">ALL</text:a>: all currently defined open and closed connections and associated grid blocks are used in the calculations. The pressure discontinuities issue mentioned above can be avoided with this option and defining all the well connections for a well at the beginning of the run. </text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P85">Only the OPEN option is currently supported by the simulator.</text:p>
@@ -4649,7 +4649,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P46">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.3.309.1</text:sequence>: WPAVE Keyword Description</text:p>
     <text:p text:style-name="P47"/>
     <text:p text:style-name="P41">The keyword is not applicable and should not be used with radial and spider grid geometries.</text:p>
-    <text:p text:style-name="P41"><text:soft-page-break/>See also the WELSPECS keyword that defines a well and a well’s bottom-hole pressure reference depth, the WPAVEDEP keyword that also defines a well’s bottom-hole pressure reference depth, and the COMPDAT keyword to define a well’s connections. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P41"><text:soft-page-break/>See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword that defines a well and a well’s bottom-hole pressure reference depth, the <text:a xlink:href="#__RefHeading___Toc121639_2412586160">WPAVEDEP</text:a> keyword that also defines a well’s bottom-hole pressure reference depth, and the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword to define a well’s connections. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P48" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716801_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716801_3964674244"/></text:h>
     <text:p text:style-name="P40">The following example defines the default well block average pressure calculation parameters</text:p>
     <text:p text:style-name="P43">--</text:p>

@@ -4339,7 +4339,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18592" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_370116838816121111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_370116838816121111"/></text:h>
-    <text:p text:style-name="P12304">The WELPI keyword is used to define a well’s productivity or injectivity index at the time the keyword is activated. Productivity and injectivity indices are a function of both bottom-hole pressure and mobility and thus will vary in time as the bottom-hole pressure and fluids produce by the well are changing. <text:s/>Thus, the values enter on this keyword for a given well will override any previously calculated values, or values previously entered, using this keyword. <text:s/>This keyword should only be invoked after a well’s connection factors have been declared via the COMPDAT keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P12304">The <text:a xlink:href="#__RefHeading___Toc121389_332691817">WELPI</text:a> keyword is used to define a well’s productivity or injectivity index at the time the keyword is activated. Productivity and injectivity indices are a function of both bottom-hole pressure and mobility and thus will vary in time as the bottom-hole pressure and fluids produce by the well are changing. <text:s/>Thus, the values enter on this keyword for a given well will override any previously calculated values, or values previously entered, using this keyword. <text:s/>This keyword should only be invoked after a well’s connection factors have been declared via the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <table:table table:name="Table1947" table:style-name="Table1947">
      <table:table-column table:style-name="Table1947.A"/>
      <table:table-column table:style-name="Table1947.B"/>
@@ -4388,7 +4388,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1947.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7330">A character string of up to eight characters in length that defines the well name for which the well productivity index is being defined.</text:p>
-       <text:p text:style-name="P7845">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7845">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4401,23 +4401,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8031">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1947.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8752">WELPI</text:p>
+       <text:p text:style-name="P8752"><text:a xlink:href="#__RefHeading___Toc121389_332691817">WELPI</text:a></text:p>
        <text:p text:style-name="P9558"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1947.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7726">A real positive value that defines the productivity or injectivity of a well at the time the keyword is activated in the input deck. <text:s/>Subsequent use of the keyword for a given well will override all previously entered data, including the original productivity index calculated from the well’s COMPDAT connection data. Note that:</text:p>
+       <text:p text:style-name="P7726">A real positive value that defines the productivity or injectivity of a well at the time the keyword is activated in the input deck. <text:s/>Subsequent use of the keyword for a given well will override all previously entered data, including the original productivity index calculated from the well’s <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> connection data. Note that:</text:p>
        <text:list xml:id="list105922750888381" text:continue-list="list105921948950935" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19670">Only the connections currently <text:span text:style-name="T2554">opened</text:span> will have their connection factors re-scaled to honor the productivity and injectivity index. Connections not opened will remain unchanged.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19670">Additional, previously defined connections added to the well at a later time, will not be influenced by a previous WELPI keyword. <text:s/>It may therefore be necessary to add another WELPI keyword at the time the new connections are opened, if desired.</text:p>
+         <text:p text:style-name="P19670">Additional, previously defined connections added to the well at a later time, will not be influenced by a previous <text:a xlink:href="#__RefHeading___Toc121389_332691817">WELPI</text:a> keyword. <text:s/>It may therefore be necessary to add another <text:a xlink:href="#__RefHeading___Toc121389_332691817">WELPI</text:a> keyword at the time the new connections are opened, if desired.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19670">However, re-defining connections via the COMPDAT keyword resets the calculated productivity and injectivity index for those re-defined connections in the well.</text:p>
+         <text:p text:style-name="P19670">However, re-defining connections via the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword resets the calculated productivity and injectivity index for those re-defined connections in the well.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P16790">Subsequent usage of the keyword for the same well may lead to unintended values; use the WPI series of variables in the SUMMARY section to output and <text:span text:style-name="T2110">verify that the values</text:span> are consistent with the desired results.</text:p>
+       <text:p text:style-name="P16790">Subsequent usage of the keyword for the same well may lead to unintended values; use the WPI series of variables in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section to output and <text:span text:style-name="T2110">verify that the values</text:span> are consistent with the desired results.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4460,7 +4460,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14677">Table <text:sequence text:ref-name="refTable631" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.89</text:sequence>: WELPI Keyword Description</text:p>
     <text:p text:style-name="P15757"/>
-    <text:p text:style-name="P15757">Note that only a well’s currently opened connection factors, as <text:span text:style-name="T2945">entered via the</text:span> COMPDAT keyword, are re<text:span text:style-name="T7146">-</text:span><text:span text:style-name="T7147">scaled to match the required productivity and injectivity index. </text:span>See section <text:a xlink:type="simple" xlink:href="#12.2.3.Well Productivity|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc423069_1189575515">Well Productivity</text:bookmark-ref></text:a><text:s/>on well productivity for further information on well productivity. <text:s/></text:p>
+    <text:p text:style-name="P15757">Note that only a well’s currently opened connection factors, as <text:span text:style-name="T2945">entered via the</text:span> <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword, are re<text:span text:style-name="T7146">-</text:span><text:span text:style-name="T7147">scaled to match the required productivity and injectivity index. </text:span>See section <text:a xlink:type="simple" xlink:href="#12.2.3.Well Productivity|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc423069_1189575515">Well Productivity</text:bookmark-ref></text:a><text:s/>on well productivity for further information on well productivity. <text:s/></text:p>
     <text:p text:style-name="P15370"/>
     <text:p text:style-name="P16044"/>
     <table:table table:name="Table1948" table:style-name="Table1948">
@@ -4473,16 +4473,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         <text:list xml:id="list105922986677058" text:continue-list="list105923008198936" text:style-name="_40_NumberList">
          <text:list-item text:start-value="1">
           <text:p text:style-name="P17485">Russell Goodrich<text:note text:id="ftn326" text:note-class="footnote"><text:note-citation>326</text:note-citation><text:note-body>
-              <text:p text:style-name="P16643">Russell, D.G., Goodrich, J.H., Perry, G.E and Bruskotter, J.F &quot;Methods of Predicting Gas Well Performance&quot;, Transactions of the ASME, Journal of Petroleum Technology (1966) 99-108.</text:p></text:note-body></text:note> pressure square inflow equation, as declared via 'R-G' or 'YES' for the INFLOW parameter on the WELSPECS keyword in the SCHEDULE section, or</text:p>
+              <text:p text:style-name="P16643">Russell, D.G., Goodrich, J.H., Perry, G.E and Bruskotter, J.F &quot;Methods of Predicting Gas Well Performance&quot;, Transactions of the ASME, Journal of Petroleum Technology (1966) 99-108.</text:p></text:note-body></text:note> pressure square inflow equation, as declared via &apos;R-G&apos; or &apos;YES&apos; for the INFLOW parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, or</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17485">the general dry gas pseudo pressure inflow equation, as declared via 'P-P' for the INFLOW parameter on the WELSPECS keyword in the SCHEDULE section, <text:s/>or</text:p>
+          <text:p text:style-name="P17485">the general dry gas pseudo pressure inflow equation, as declared via &apos;P-P&apos; for the INFLOW parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, <text:s/>or</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17485">the generalized gas pseudo pressure inflow equation, as declared via 'GPP' for the INFLOW parameter on the WELSPECS keyword in the SCHEDULE section, or</text:p>
+          <text:p text:style-name="P17485">the generalized gas pseudo pressure inflow equation, as declared via &apos;GPP&apos; for the INFLOW parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, or</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17486">those gas wells that use the non-Darcy D factor coefficient, as declared by the DFACT property on the COMPDAT and WDFAC keywords in the SCHEDULE section.</text:p>
+          <text:p text:style-name="P17486">those gas wells that use the non-Darcy D factor coefficient, as declared by the DFACT property on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> and <text:a xlink:href="#__RefHeading___Toc442057_2026549522">WDFAC</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
          </text:list-item>
         </text:list>
        </table:table-cell>
@@ -4490,7 +4490,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P11767"/>
-    <text:p text:style-name="P15370">See also the WPIMULT keyword in the SCHEDULE section to set the productivity and injectivity index for a well by scaling the current index by a scaling factor.</text:p>
+    <text:p text:style-name="P15370">See also the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to set the productivity and injectivity index for a well by scaling the current index by a scaling factor.</text:p>
     <text:h text:style-name="P18610" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716733_39646742441"/>Example<text:bookmark-end text:name="__RefHeading___Toc716733_39646742441"/></text:h>
     <text:p text:style-name="P14386">--</text:p>
     <text:p text:style-name="P14386">-- <text:s text:c="6"/>DEFINE WELL PRODUCTIVITY/INJECTIVITY INDEX <text:s text:c="43"/></text:p>

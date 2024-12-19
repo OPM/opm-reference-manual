@@ -4450,18 +4450,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18678" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716661_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716661_3964674244"/></text:h>
-    <text:p text:style-name="P12177">The PYACTION keyword is part of OPM Flow’s Python scripting facility that loads a standard Python script file that can be used to define a series of conditions and actions as the simulation proceeds through time. The “included” Python script file is executed by the standard Python interpreter. Thus, OPM Flow’s Python scripting facility offers greater flexibility compared to the commercial simulator’s ACTION series of keywords (ACTION, ACTIONG, ACTIONR, ACTIONS, ACTIONW and ACTIONX) that can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. Note that OPM Flow has also implemented the commercial simulator’s ACTIONX keyword, but not the ACTION, ACTIONG, ACTIONR, ACTIONS and ACTIONW keywords, as the ACTIONX keyword implements their functionality with greater flexibility. <text:s/></text:p>
-    <text:p text:style-name="P12176">This keyword starts the definition of a PYACTION section that specifies the name of the action and a string indicating the number of times the action should be run; this is then followed by the name of the file containing the Python script. Note that unlike an ACTIONX block that is terminated by the ENDACTIO keyword the PYACTION section has no terminating keyword.  <text:s/></text:p>
-    <text:p text:style-name="P12176">Although this keyword is read by OPM Flow and the script processing has been implemented, one should use caution when using this facility as it may result in OPM Flow aborting. This is because the PYACTION facility allows the user to implement complex functionality and the implementation was new for the 2020-04 release. Users should therefore use caution when using this facility. </text:p>
+    <text:p text:style-name="P12177">The <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword is part of OPM Flow’s Python scripting facility that loads a standard Python script file that can be used to define a series of conditions and actions as the simulation proceeds through time. The “included” Python script file is executed by the standard Python interpreter. Thus, OPM Flow’s Python scripting facility offers greater flexibility compared to the commercial simulator’s <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> series of keywords (<text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a>, <text:a xlink:href="#__RefHeading___Toc152219_2992482751">ACTIONG</text:a>, <text:a xlink:href="#__RefHeading___Toc152221_2992482751">ACTIONR</text:a>, <text:a xlink:href="#__RefHeading___Toc152223_2992482751">ACTIONS</text:a>, <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> and <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a>) that can apply Boolean conditional tests to variables at the field, group, region, well segment and well levels. Note that OPM Flow has also implemented the commercial simulator’s <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword, but not the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a>, <text:a xlink:href="#__RefHeading___Toc152219_2992482751">ACTIONG</text:a>, <text:a xlink:href="#__RefHeading___Toc152221_2992482751">ACTIONR</text:a>, <text:a xlink:href="#__RefHeading___Toc152223_2992482751">ACTIONS</text:a> and <text:a xlink:href="#__RefHeading___Toc152225_2992482751">ACTIONW</text:a> keywords, as the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword implements their functionality with greater flexibility. <text:s/></text:p>
+    <text:p text:style-name="P12176">This keyword starts the definition of a <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> section that specifies the name of the action and a string indicating the number of times the action should be run; this is then followed by the name of the file containing the Python script. Note that unlike an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block that is terminated by the <text:a xlink:href="#__RefHeading___Toc109407_332691817">ENDACTIO</text:a> keyword the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> section has no terminating keyword.  <text:s/></text:p>
+    <text:p text:style-name="P12176">Although this keyword is read by OPM Flow and the script processing has been implemented, one should use caution when using this facility as it may result in OPM Flow aborting. This is because the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> facility allows the user to implement complex functionality and the implementation was new for the 2020-04 release. Users should therefore use caution when using this facility. </text:p>
     <table:table table:name="Table1864" table:style-name="Table1864">
      <table:table-column table:style-name="Table1864.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table1864.1">
        <table:table-cell table:style-name="Table1864.A1" office:value-type="string">
         <text:p text:style-name="P10212">Note</text:p>
-        <text:p text:style-name="P10177">This is an OPM Flow specific keyword for the simulator’s scripting facility using the standard Python interpreter, as such it gives more flexibility than the commercial simulator’s ACTIONX keyword, although OPM Flow also supports this as well.</text:p>
+        <text:p text:style-name="P10177">This is an OPM Flow specific keyword for the simulator’s scripting facility using the standard Python interpreter, as such it gives more flexibility than the commercial simulator’s <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword, although OPM Flow also supports this as well.</text:p>
         <text:p text:style-name="P10374">The keyword should be considered experimental as details of the OPM Flow - Python interface might change for future releases. In particular, the current implementation is quite minimal; however, future releases are expected to add more entry points in the Schedule class which can be used to manipulate the reservoir model as the simulation progresses. <text:s/>Users are encouraged to make suggestions for new features in this regard. </text:p>
-        <text:p text:style-name="P10374">The <text:span text:style-name="Source_20_Text">PYACTION</text:span> keyword is a very powerful keyword and allows any piece of Python code to be included and run, including potentially malicious code. The important point is to scrutinize any <text:span text:style-name="Source_20_Text">PYACTION</text:span> keyword in a deck you receive from other parties. </text:p>
+        <text:p text:style-name="P10374">The <text:span text:style-name="Source_20_Text"><text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a></text:span> keyword is a very powerful keyword and allows any piece of Python code to be included and run, including potentially malicious code. The important point is to scrutinize any <text:span text:style-name="Source_20_Text"><text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a></text:span> keyword in a deck you receive from other parties. </text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4491,11 +4491,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
      <table:table-row table:style-name="Table1862.2">
       <table:table-cell table:style-name="Table1862.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4982">PYACTION</text:p>
+       <text:p text:style-name="P4982"><text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1862.C3" office:value-type="string">
-       <text:p text:style-name="P3337">PYACTION declares the start of a PYACTION Definition Section. <text:s/>This is then followed by one record that defines the name of the action and a string indicating the number of times the action should be run; this is then followed by a second record indicating the file containing the Python script. </text:p>
+       <text:p text:style-name="P3337"><text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> declares the start of a <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> Definition Section. <text:s/>This is then followed by one record that defines the name of the action and a string indicating the number of times the action should be run; this is then followed by a second record indicating the file containing the Python script. </text:p>
        <text:p text:style-name="P3337"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1862.D3" office:value-type="string">
@@ -4601,16 +4601,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14805">Table <text:sequence text:ref-name="refTable602" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.60</text:sequence>: PYACTION Keyword Description</text:p>
     <text:p text:style-name="P12176"/>
-    <text:p text:style-name="P12176">The PYACTION keyword is a result of combining two programming languages, the interactive Python interpreter and OPM Flow’s source code language C++. When combing two languages one extends and embeds one into the other. When extending Python with C++ the functionality implemented in C++ is made available to Python applications, when embedding Python in C++ one can call Python functions from within C++. The PYACTION keyword is based on embedding a Python interpreter in the C++ OPM Flow simulator, but the Python code actually run as part of the PYACTION keyword is based on wrapping C++ objects in Python, that is extending Python.</text:p>
-    <text:p text:style-name="P12176">Note that to use the PYACTION keyword OPM Flow must be built with embedded python enabled in opm-common/CMakeLists.txt. <text:s/></text:p>
-    <text:p text:style-name="P16914">option(OPM_ENABLE_EMBEDDED_PYTHON "Enable embedded python?" ON) </text:p>
+    <text:p text:style-name="P12176">The <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword is a result of combining two programming languages, the interactive Python interpreter and OPM Flow’s source code language C++. When combing two languages one extends and embeds one into the other. When extending Python with C++ the functionality implemented in C++ is made available to Python applications, when embedding Python in C++ one can call Python functions from within C++. The <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword is based on embedding a Python interpreter in the C++ OPM Flow simulator, but the Python code actually run as part of the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword is based on wrapping C++ objects in Python, that is extending Python.</text:p>
+    <text:p text:style-name="P12176">Note that to use the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword OPM Flow must be built with embedded python enabled in opm-common/CMakeLists.txt. <text:s/></text:p>
+    <text:p text:style-name="P16914">option(OPM_ENABLE_EMBEDDED_PYTHON &quot;Enable embedded python?&quot; ON) </text:p>
     <text:p text:style-name="P14405"/>
-    <text:p text:style-name="P12181">In order to fully benefit from the power of the PYACTION keyword one should familiarize oneself with the Python wrapper classes for the various OPM Flow C++ classes. These classes are essential to share the <text:s/>simulator state with the PYACTION script. <text:s/>That is, the function provides the interface between the two programming languages. </text:p>
+    <text:p text:style-name="P12181">In order to fully benefit from the power of the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword one should familiarize oneself with the Python wrapper classes for the various OPM Flow C++ classes. These classes are essential to share the <text:s/>simulator state with the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> script. <text:s/>That is, the function provides the interface between the two programming languages. </text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/><text:span text:style-name="T4328">To learn more about these classes you can use the pydoc utility, </text:span>for example,<text:span text:style-name="T4328"> to learn more about the SummaryState class, </text:span>in a Linux terminal one would<text:span text:style-name="T4328"> issue the </text:span>following bash <text:span text:style-name="T4328">command:</text:span></text:p>
     <text:p text:style-name="P16914">bash% pydoc opm.io.sim.SummaryState </text:p>
     <text:p text:style-name="P14405"/>
-    <text:p text:style-name="P12181">The Python script file (FILENAME in the PYACTION keyword) should be a standard Python module<text:note text:id="ftn312" text:note-class="footnote"><text:note-citation>312</text:note-citation><text:note-body>
-        <text:p text:style-name="Footnote">A Python module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable __name__.</text:p></text:note-body></text:note> that defines the PYACTION script and should consist of 100% pure Python. <text:s/>The PYACTION Python module (FILENAME) is imported during processing of the input deck and as such this implies:</text:p>
+    <text:p text:style-name="P12181">The Python script file (FILENAME in the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> keyword) should be a standard Python module<text:note text:id="ftn312" text:note-class="footnote"><text:note-citation>312</text:note-citation><text:note-body>
+        <text:p text:style-name="Footnote">A Python module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable __name__.</text:p></text:note-body></text:note> that defines the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> script and should consist of 100% pure Python. <text:s/>The <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> Python module (FILENAME) is imported during processing of the input deck and as such this implies:</text:p>
     <text:list xml:id="list105922455139376" text:continue-list="list105920502858213" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
@@ -4687,7 +4687,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5304">schedule</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C5" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">The schedule variable is an instance of the opm.io.sched.Schedule class which has all the SCHEDULE information internalized (Schedule object). Currently, there are only a few call points in opm.io.sched.Schedule which can be used to <text:span text:style-name="Emphasis"><text:span text:style-name="T1493">update</text:span></text:span> the state of the simulation, most notably:</text:p>
+       <text:p text:style-name="Table_20_Contents">The schedule variable is an instance of the opm.io.sched.Schedule class which has all the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> information internalized (Schedule object). Currently, there are only a few call points in opm.io.sched.Schedule which can be used to <text:span text:style-name="Emphasis"><text:span text:style-name="T1493">update</text:span></text:span> the state of the simulation, most notably:</text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.open_well(well_name, report_step)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.shut_well(well_name, report_step)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.stop_well(well_name, report_step)</text:span></text:p>
@@ -4696,8 +4696,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text"/></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.insert_keywords(kw)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text"/></text:p>
-       <text:p text:style-name="Table_20_Contents">Which can be used to insert various keywords where kw is a string defining the keyword and associated records. This has been tested with the GCONPROD, MULTX/Y/Z, NEXTSTEP, WCONPROD, WEFAC and WELOPEN keywords. </text:p>
-       <text:p text:style-name="Table_20_Contents">Adding additional call points to the opm.io.sched.Schedule instance in order to update the Schedule object in more ways is an obvious candidate for improving the PYACTION functionality.</text:p>
+       <text:p text:style-name="Table_20_Contents">Which can be used to insert various keywords where kw is a string defining the keyword and associated records. This has been tested with the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc99847_2023071304">MULTX</text:a>/Y/Z, <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a>, <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc48856_327352552">WEFAC</text:a> and <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keywords. </text:p>
+       <text:p text:style-name="Table_20_Contents">Adding additional call points to the opm.io.sched.Schedule instance in order to update the Schedule object in more ways is an obvious candidate for improving the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> functionality.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1863.2">
@@ -4720,22 +4720,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5305">summary_state</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C7" office:value-type="string">
-       <text:p text:style-name="P2533">The summary_state variable is an instance of the opm.io.sim.SummaryState class, the purpose of this class is to serve as a container for SUMMARY variables that contain the simulation results; for example, the Field Oil Rate (FOPR) or a Well’s Water CuT (WWCT).<text:s/>See the <text:a xlink:type="simple" xlink:href="#11.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc1622_3043861001">SUMMARY SECTION</text:bookmark-ref></text:a><text:s/>for a detailed description of the variables available.</text:p>
+       <text:p text:style-name="P2533">The summary_state variable is an instance of the opm.io.sim.SummaryState class, the purpose of this class is to serve as a container for <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables that contain the simulation results; for example, the Field Oil Rate (FOPR) or a Well’s Water CuT (WWCT).<text:s/>See the <text:a xlink:type="simple" xlink:href="#11.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc1622_3043861001">SUMMARY SECTION</text:bookmark-ref></text:a><text:s/>for a detailed description of the variables available.</text:p>
        <text:p text:style-name="P2533">The summary_state variable will typically be the variable one will use to access the state of the simulation. For example, to check if the water cut in well OP01 exceeds 0.5 one would use the following statement:</text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">if summary_state.well_var(&quot;OP01&quot;, &quot;WWCT&quot;) &gt; 0.50:</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text"><text:s text:c="4"/>...</text:span></text:p>
-       <text:p text:style-name="P2532">The summary_state variable can also be use to update variables including UDQ variables, i.e:</text:p>
+       <text:p text:style-name="P2532">The summary_state variable can also be use to update variables including <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables, i.e:</text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">summary_state.update_well_var(&quot;OP01&quot;, &quot;WUXX&quot;, 0.25)</text:span></text:p>
        <text:p text:style-name="P2377"/>
-       <text:p text:style-name="Table_20_Contents">The above assigns a value of 0.25 to the well UDQ variable WUXX for well OP01.</text:p>
+       <text:p text:style-name="Table_20_Contents">The above assigns a value of 0.25 to the well <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variable WUXX for well OP01.</text:p>
        <text:p text:style-name="P2377"/>
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14805">Table <text:sequence text:ref-name="refTable603" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.61</text:sequence>: PYACTION Module Script Definition</text:p>
+    <text:p text:style-name="P14805">Table <text:sequence text:ref-name="refTable603" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.61</text:sequence>: <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> Module Script Definition</text:p>
     <text:p text:style-name="P14805"/>
-    <text:p text:style-name="P12186">See also the PYINPUT and PYEND keywords in the GRID<text:note text:id="ftn313" text:note-class="footnote"><text:note-citation>313</text:note-citation><text:note-body>
-        <text:p text:style-name="P16670">Note PYINPUT and PYEND can be used in the GRID, EDIT, PROPS, SOLUTION, SUMMARY and SCHEDULE sections, but is described in the GRID section.</text:p></text:note-body></text:note> section which are also part of OPM Flow’s Python scripting facility, that process standard Python commands that can be used to manipulate and define the simulators input parameters during processing of the input deck. <text:s/>The main purpose of the facility is to script the construction of the various keywords. </text:p>
+    <text:p text:style-name="P12186">See also the <text:a xlink:href="#__RefHeading___Toc403208_1898124664">PYINPUT</text:a> and <text:a xlink:href="#__RefHeading___Toc403206_1898124664">PYEND</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a><text:note text:id="ftn313" text:note-class="footnote"><text:note-citation>313</text:note-citation><text:note-body>
+        <text:p text:style-name="P16670">Note <text:a xlink:href="#__RefHeading___Toc403208_1898124664">PYINPUT</text:a> and <text:a xlink:href="#__RefHeading___Toc403206_1898124664">PYEND</text:a> can be used in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a>, <text:a xlink:href="#__RefHeading___Toc40641_784232322">EDIT</text:a>, <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a>, <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a>, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> and <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> sections, but is described in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p></text:note-body></text:note> section which are also part of OPM Flow’s Python scripting facility, that process standard Python commands that can be used to manipulate and define the simulators input parameters during processing of the input deck. <text:s/>The main purpose of the facility is to script the construction of the various keywords. </text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716663_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716663_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The first example checks if well OP01 has a water cut greater than 0.8 and if so then the well is shut in. In the input deck we would have:</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
@@ -4756,18 +4756,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>schedule = opm_embedded.current_schedule</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>summary_state = opm_embedded.current_summary_state</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not 'setup_done' in locals()):</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not &apos;setup_done&apos; in locals()):</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = false</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>setup_done = True</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not executed and summmary_state.well_var("OP1", "WWCT") > 0.80):</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="4"/>message = "Well OP01 has been shut-in due to WWCT > 0.80\n"</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not executed and summmary_state.well_var(&quot;OP1&quot;, &quot;WWCT&quot;) &gt; 0.80):</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="4"/>message = &quot;Well OP01 has been shut-in due to WWCT &gt; 0.80\n&quot;</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>opm_embedded.OpmLog.info(message)</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="4"/>schedule.shut_well("OP1")</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="4"/>schedule.shut_well(&quot;OP1&quot;)</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = true</text:p>
-    <text:p text:style-name="_40_Code"></text:p>
+    <text:p text:style-name="_40_Code"/>
     <text:p text:style-name="_40_TextBody">Note how the &apos;executed&apos; variable is used to ensure that the action is only executed once the first time the water cut is greater than 0.8.</text:p>
-    <text:p text:style-name="_40_TextBody">The next example is based on the first example from the ACTIONX keyword (<text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a>). The Python script first checks if the field’s water production is greater than 30,000 stb/d, and if not returns control back to the simulator. If the field water production is greater than 30, 000 stb/d then the script uses a Python variable count to keep track of the number of times the script has been executed, and then sorts the wells from high water cut to low, via the wct_list variable, and then shuts in the worst offending well. If a well is shut-in the count variable is increased by one and control is passed back to the simulator. The script is executed as maximum of ten times.</text:p>
+    <text:p text:style-name="_40_TextBody">The next example is based on the first example from the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword (<text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a>). The Python script first checks if the field’s water production is greater than 30,000 stb/d, and if not returns control back to the simulator. If the field water production is greater than 30, 000 stb/d then the script uses a Python variable count to keep track of the number of times the script has been executed, and then sorts the wells from high water cut to low, via the wct_list variable, and then shuts in the worst offending well. If a well is shut-in the count variable is increased by one and control is passed back to the simulator. The script is executed as maximum of ten times.</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>START OF PYACTION SECTION</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
@@ -4787,15 +4787,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>schedule = opm_embedded.current_schedule</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>summary_state = opm_embedded.current_summary_state</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not 'setup_done' in locals()):</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not &apos;setup_done&apos; in locals()):</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>execution_counter = 0</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>setup_done = True</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (execution_counter &lt; 10 and summary_state["FWPR"] &gt;= 3000):</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (execution_counter &lt; 10 and summary_state[&quot;FWPR&quot;] &gt;= 3000):</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>#</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/># Get Sorted Well List</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>#</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="4"/>wct_list = sorted( [ (well, summary_state.well_var(well, "WWCT"))</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="4"/>wct_list = sorted( [ (well, summary_state.well_var(well, &quot;WWCT&quot;))</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="23"/>for well in summary_state.wells], reverse=True )</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>#</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/># Shut-in Well with Highest Water Cut</text:p>
@@ -4804,8 +4804,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>if wwct &gt; 0:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/>schedule.shut_well(well)</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/>execution_counter += 1</text:p>
-    <text:p text:style-name="_40_Code"></text:p>
-    <text:p text:style-name="_40_TextBody">Note that by using PYACTION it makes sense to combine the UDQ variable into the PYACTION statement, like shown in the example above, although this is not necessary, as one could in principle use a normal UDQ statement and then access the variables in the PYACTION script using the summary_state variable. <text:s text:c="8"/></text:p>
+    <text:p text:style-name="_40_Code"/>
+    <text:p text:style-name="_40_TextBody">Note that by using <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> it makes sense to combine the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variable into the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> statement, like shown in the example above, although this is not necessary, as one could in principle use a normal <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> statement and then access the variables in the <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> script using the summary_state variable. <text:s text:c="8"/></text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/>The final example checks to see if the field’s gas rate is below 600 MMscf/d and if the simulation time is greater that January 1, 2030. If it is, then compression is installed by re-setting all the gas producing well’s THP and BHP pressures to 450 psia and 300 psia respectively. In addition all gas wells currently shut-in are tested to see if they can be opened up under the new THP and BHP constraints.</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>START OF PYACTION SECTION</text:p>
@@ -4827,7 +4827,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>schedule = opm_embedded.current_schedule</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>summary_state = opm_embedded.current_summary_state</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not 'setup_done' in locals()):</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not &apos;setup_done&apos; in locals()):</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = False</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>setup_done = True</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
@@ -4835,7 +4835,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>sim_time = schedule.start + </text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="15"/>datetime.timedelta( seconds = summary_state.elapsed() )</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/></text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="4"/>if (summary_state["FGPR"] &lt; 600000 and </text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="4"/>if (summary_state[&quot;FGPR&quot;] &lt; 600000 and </text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/>sim_time &gt; datetime.datetime(2030, 1, 1)):</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/>#</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/># Do WELTARG and WTEST action</text:p>

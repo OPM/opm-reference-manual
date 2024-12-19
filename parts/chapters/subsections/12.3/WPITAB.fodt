@@ -4243,7 +4243,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716815_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716815_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WPITAB keyword assigns the well productivity index multiplier versus water cut tables, that are used to scaled a well’s connection factors based on the connection’s current producing water cut, to a well. The tables are defined via the PIMULTAB keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121649_2412586160">WPITAB</text:a> keyword assigns the well productivity index multiplier versus water cut tables, that are used to scaled a well’s connection factors based on the connection’s current producing water cut, to a well. The tables are defined via the <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P12033">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table687" table:style-name="Table687">
      <table:table-column table:style-name="Table687.A"/>
@@ -4291,8 +4291,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9598">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table687.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7311">A character string of up to eight characters in length that defines the well name for which the well productivity index multiplier versus water cut table, PIMULTAB, is being assigned.</text:p>
-       <text:p text:style-name="P7828">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7311">A character string of up to eight characters in length that defines the well name for which the well productivity index multiplier versus water cut table, <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a>, is being assigned.</text:p>
+       <text:p text:style-name="P7828">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4305,12 +4305,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7165">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table687.C2" office:value-type="string">
-       <text:p text:style-name="P8857">PIMULTAB</text:p>
+       <text:p text:style-name="P8857"><text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a></text:p>
        <text:p text:style-name="P9547"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table687.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7718">A positive integer value that defines the corresponding PIMULTAB table to be allocated to the well. </text:p>
-       <text:p text:style-name="P7481">A value less than or equal to zero means that no PIMULTAB table is allocated to the well</text:p>
+       <text:p text:style-name="P7718">A positive integer value that defines the corresponding <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> table to be allocated to the well. </text:p>
+       <text:p text:style-name="P7481">A value less than or equal to zero means that no <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> table is allocated to the well</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4336,9 +4336,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable654" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.112</text:sequence>: WPITAB Keyword Description</text:p>
     <text:p text:style-name="P15541"/>
-    <text:p text:style-name="_40_TextBody">See also the PIMULTAB keyword that defines productivity index multiplier versus water cut tables and also the WPIMULT keyword that scales a well’s productivity index by a constant value, both of which are in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> keyword that defines productivity index multiplier versus water cut tables and also the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword that scales a well’s productivity index by a constant value, both of which are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716817_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716817_3964674244"/></text:h>
-    <text:p text:style-name="P11345">Given NTPIMT equals two on the PIMTDIMS keyword in the RUNSPEC section, <text:s/>then:</text:p>
+    <text:p text:style-name="P11345">Given NTPIMT equals two on the <text:a xlink:href="#__RefHeading___Toc31215_1640804870">PIMTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>then:</text:p>
     <text:p text:style-name="P13345">--</text:p>
     <text:p text:style-name="P13345">-- <text:s text:c="6"/>ASSIGN WELL PRODUCTIVITY INDEX VS WATER CUT TABLE <text:s text:c="52"/></text:p>
     <text:p text:style-name="P13345">-- <text:s text:c="77"/></text:p>
@@ -4350,7 +4350,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13345">OP03 <text:s text:c="4"/>2 <text:s text:c="55"/>/</text:p>
     <text:p text:style-name="P13346">/ <text:s/></text:p>
     <text:p text:style-name="P13346"><text:s text:c="6"/></text:p>
-    <text:p text:style-name="P11233">Assigns PIMULTAB table one to wells OP01 and OP02 and table two to OP03.</text:p>
+    <text:p text:style-name="P11233">Assigns <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> table one to wells OP01 and OP02 and table two to OP03.</text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/></text:p>
     
    </text:section>

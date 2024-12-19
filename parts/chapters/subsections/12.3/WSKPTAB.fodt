@@ -4322,7 +4322,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18632" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716815_396467424411"/>Description<text:bookmark-end text:name="__RefHeading___Toc716815_396467424411"/></text:h>
-    <text:p text:style-name="P12616">The WSKPTAB keyword assigns the well polymer molecular water and polymer skin tables to water injection wells in OPM Flow&apos;s Polymer Molecular Weight Transport option, that uses the polymer molecular weight in calculating the polymer viscosity, as well as accounting for formation damage due to the water and polymer injection, by adjusting the wellbore skin pressure. This keyword should only be used if the POLYMER and POLYMW keywords in the RUNSPEC section are also activated. The keyword assigns the water SKPRWAT tables, that are defined via the SKPRWAT keyword in the PROPS section, that are used to calculable the wellbore skin pressure during water injection. As well as the polymer SKPRPOLY tables, that are defined via the SKPRPOLY keyword in the PROPS section, that are used to calculable the wellbore skin pressure during polymer injection.</text:p>
+    <text:p text:style-name="P12616">The <text:a xlink:href="#__RefHeading___Toc121649_241258616011">WSKPTAB</text:a> keyword assigns the well polymer molecular water and polymer skin tables to water injection wells in OPM Flow&apos;s Polymer Molecular Weight Transport option, that uses the polymer molecular weight in calculating the polymer viscosity, as well as accounting for formation damage due to the water and polymer injection, by adjusting the wellbore skin pressure. This keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> and <text:a xlink:href="#__RefHeading___Toc38609_22671168971">POLYMW</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section are also activated. The keyword assigns the water <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> tables, that are defined via the <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that are used to calculable the wellbore skin pressure during water injection. As well as the polymer <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a> tables, that are defined via the <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that are used to calculable the wellbore skin pressure during polymer injection.</text:p>
     <table:table table:name="Table2240" table:style-name="Table2240">
      <table:table-column table:style-name="Table2240.A"/>
      <table:table-header-rows>
@@ -4381,8 +4381,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9629">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2241.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7347">A character string of up to eight characters in length, that defines the water injection well name, for which the well water injection skin table, SKKPRWAT, and the polymer skin injection table, SKPRPOLY, are to be assigned.</text:p>
-       <text:p text:style-name="P7859">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7347">A character string of up to eight characters in length, that defines the water injection well name, for which the well water injection skin table, SKKPRWAT, and the polymer skin injection table, <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a>, are to be assigned.</text:p>
+       <text:p text:style-name="P7859">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4395,12 +4395,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8859">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2241.C2" office:value-type="string">
-       <text:p text:style-name="P8858">SKPRWAT </text:p>
+       <text:p text:style-name="P8858"><text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> </text:p>
        <text:p text:style-name="P9565"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2241.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7737">A positive integer value that defines the corresponding SKPRWAT table to be allocated to the water injection well. </text:p>
-       <text:p text:style-name="P7486">A value less than or equal to zero means that no SKPRWAT table is allocated to the well</text:p>
+       <text:p text:style-name="P7737">A positive integer value that defines the corresponding <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> table to be allocated to the water injection well. </text:p>
+       <text:p text:style-name="P7486">A value less than or equal to zero means that no <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> table is allocated to the well</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4413,11 +4413,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8859">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2241.C2" office:value-type="string">
-       <text:p text:style-name="P8861">SKPRPOLY</text:p>
+       <text:p text:style-name="P8861"><text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2241.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7738">A positive integer value that defines the corresponding SKPRPOLY table to be allocated to the water injection well. </text:p>
-       <text:p text:style-name="P7487">A value less than or equal to zero means that no SKPRPOLY table is allocated to the well</text:p>
+       <text:p text:style-name="P7738">A positive integer value that defines the corresponding <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a> table to be allocated to the water injection well. </text:p>
+       <text:p text:style-name="P7487">A value less than or equal to zero means that no <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a> table is allocated to the well</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4443,11 +4443,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14958">Table <text:sequence text:ref-name="refTable665" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.123</text:sequence>: WSKPTAB Keyword Description</text:p>
     <text:p text:style-name="P15768"/>
-    <text:p text:style-name="P12615">See also the SKPRWAT and SKPRPOLY keywords in the PROPS section, that describe the relationship of the wellbore skin pressure with respect to the injected water and <text:soft-page-break/>polymer throughput and fluid velocity, for the simulator&apos;s Polymer Molecular Weight Transport option. As well as the PLYMWINJ and PLYVMH keywords, also in the PROPS section, that are the additional keywords required for the Polymer Molecular Weight Transport option. </text:p>
-    <text:p text:style-name="P12611">The WPMITABJ keyword in the SCHEDULE section may be used to assign the PLYMWINJ<text:span text:style-name="T1"> keyword in the PROPS section</text:span>. Where PLYMWINJ,<text:span text:style-name="T1"> d</text:span>escribes the relationship of the injected polymer molecular weight as a function of polymer throughput and polymer velocity, for the simulator&apos;s Polymer Molecular Weight Transport option</text:p>
-    <text:p text:style-name="P11677">Note that the standard polymer property data keywords: PLYROCK, PLYADS, PLYMAX, etc., are still required to fully describe the polymer fluid. <text:s/></text:p>
+    <text:p text:style-name="P12615">See also the <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> and <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that describe the relationship of the wellbore skin pressure with respect to the injected water and <text:soft-page-break/>polymer throughput and fluid velocity, for the simulator&apos;s Polymer Molecular Weight Transport option. As well as the <text:a xlink:href="#__RefHeading___Toc473331_2124352571">PLYMWINJ</text:a> and <text:a xlink:href="#__RefHeading___Toc473331_21243525712">PLYVMH</text:a> keywords, also in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, that are the additional keywords required for the Polymer Molecular Weight Transport option. </text:p>
+    <text:p text:style-name="P12611">The WPMITABJ keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section may be used to assign the <text:a xlink:href="#__RefHeading___Toc473331_2124352571">PLYMWINJ</text:a><text:span text:style-name="T1"> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section</text:span>. Where <text:a xlink:href="#__RefHeading___Toc473331_2124352571">PLYMWINJ</text:a>,<text:span text:style-name="T1"> d</text:span>escribes the relationship of the injected polymer molecular weight as a function of polymer throughput and polymer velocity, for the simulator&apos;s Polymer Molecular Weight Transport option</text:p>
+    <text:p text:style-name="P11677">Note that the standard polymer property data keywords: <text:a xlink:href="#__RefHeading___Toc110216_2939291539">PLYROCK</text:a>, <text:a xlink:href="#__RefHeading___Toc121087_57619843">PLYADS</text:a>, <text:a xlink:href="#__RefHeading___Toc110214_2939291539">PLYMAX</text:a>, etc., are still required to fully describe the polymer fluid. <text:s/></text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716817_396467424411"/>Example<text:bookmark-end text:name="__RefHeading___Toc716817_396467424411"/></text:h>
-    <text:p text:style-name="P11347">Given NTSKWAT equals two and NTSKPOLY equals three on the PINTDIMS keyword in the RUNSPEC section, <text:s/>then:</text:p>
+    <text:p text:style-name="P11347">Given NTSKWAT equals two and NTSKPOLY equals three on the <text:a xlink:href="#__RefHeading___Toc637730_5168988431">PINTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>then:</text:p>
     <text:p text:style-name="P13349">--</text:p>
     <text:p text:style-name="P13349">-- <text:s text:c="6"/>ASSIGN WELL POLYMER MOLECULAR MODEL SKIN TABLES <text:s text:c="49"/></text:p>
     <text:p text:style-name="P13349">-- <text:s text:c="77"/></text:p>
@@ -4458,7 +4458,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13349">WI02 <text:s text:c="4"/>1 <text:s text:c="8"/>3 <text:s text:c="45"/>/</text:p>
     <text:p text:style-name="P13349">WI03 <text:s text:c="4"/>2 <text:s text:c="8"/>2 <text:s text:c="45"/>/</text:p>
     <text:p text:style-name="P13349">/ <text:s text:c="7"/></text:p>
-    <text:p text:style-name="P11235">Assigns SKPRWAT table one to wells WI01 and WI02 and table two to WI03, and SKPRPOLY tables one, two and three to wells WI01, WI03, and WI02, respectively.</text:p>
+    <text:p text:style-name="P11235">Assigns <text:a xlink:href="#__RefHeading___Toc473331_212435257111">SKPRWAT</text:a> table one to wells WI01 and WI02 and table two to WI03, and <text:a xlink:href="#__RefHeading___Toc473331_21243525711">SKPRPOLY</text:a> tables one, two and three to wells WI01, WI03, and WI02, respectively.</text:p>
     <text:p text:style-name="P11711"/>
     
    </text:section>

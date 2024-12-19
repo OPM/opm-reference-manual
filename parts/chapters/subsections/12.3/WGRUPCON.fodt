@@ -4517,8 +4517,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P63" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716765_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716765_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The WGRUPCON keyword defines a well’s production or injection guide rate for when a well is under group control. <text:s/>The guide rate is used to determine a well’s production target under group control in order to satisfy a group’s targets and constraints, including any higher level related groups as well as the FIELD group.</text:p>
-    <text:p text:style-name="_40_TextBody">Wells must have been previously defined and allocated to a group by the WELSPECS keyword in the SCHEDULE section. Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells via the WCONPROD and WCONINJE keywords in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121641_2412586160">WGRUPCON</text:a> keyword defines a well’s production or injection guide rate for when a well is under group control. <text:s/>The guide rate is used to determine a well’s production target under group control in order to satisfy a group’s targets and constraints, including any higher level related groups as well as the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group.</text:p>
+    <text:p text:style-name="_40_TextBody">Wells must have been previously defined and allocated to a group by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells via the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <table:table table:name="Table699" table:style-name="Table699">
      <table:table-column table:style-name="Table699.A"/>
      <table:table-column table:style-name="Table699.B"/>
@@ -4566,7 +4566,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table699.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P65">A character string of up to eight characters in length that defines the well name for which the well production targets and constraints data are being defined.</text:p>
-       <text:p text:style-name="P65">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P65">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4585,13 +4585,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P65">A defined character string that declares the status of the well to be under group control or not under group control. STATUS should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P88">YES: the well is under group control and its production behavior will be influenced by its assigned group, including connecting higher level groups as well as the FIELD group. </text:p>
+         <text:p text:style-name="P88">YES: the well is under group control and its production behavior will be influenced by its assigned group, including connecting higher level groups as well as the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P88">NO: the well is NOT under group control and its production behavior will only be influenced by its own targets and constraints.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P65">Note the default value of YES puts all wells under group control unless specified otherwise by the STATUS variable, or the TARGET variable on the WCONPROD and WCONINJE keywords in the SCHEDULE section.</text:p>
+       <text:p text:style-name="P65">Note the default value of YES puts all wells under group control unless specified otherwise by the STATUS variable, or the TARGET variable on the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4604,13 +4604,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P90">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table699.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P65">GUIDERAT</text:p>
+       <text:p text:style-name="P65"><text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a></text:p>
        <text:p text:style-name="P65"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table699.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P65">A dimensionless real number that determines the well’s share of its group production (or injection) target rate. </text:p>
-       <text:p text:style-name="P65">If GUIDERAT is a positive number then the guide rate for the well is fixed until modified by this keyword at a subsequent time. If TARGET variable on this keyword is not equal to the group’s controlling phase, then the GUIDERAT is converted into the groups’ controlling phase and is updated every time step.</text:p>
-       <text:p text:style-name="P65">If GUIDERAT is less than or equal to zero then the well’s guide rate is based on the well’s potential (unrestricted flow) and the potential is calculated every time step.</text:p>
+       <text:p text:style-name="P65">If <text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> is a positive number then the guide rate for the well is fixed until modified by this keyword at a subsequent time. If TARGET variable on this keyword is not equal to the group’s controlling phase, then the <text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> is converted into the groups’ controlling phase and is updated every time step.</text:p>
+       <text:p text:style-name="P65">If <text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> is less than or equal to zero then the well’s guide rate is based on the well’s potential (unrestricted flow) and the potential is calculated every time step.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4641,16 +4641,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P65">TARGET</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table699.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P65">A defined character string that sets the well’s guide rate phase that the <text:s/>GUIDERAT value should be applied to. TARGET should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P65">A defined character string that sets the well’s guide rate phase that the <text:s/><text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> value should be applied to. TARGET should be set to one of the following character strings:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P88">OIL: the well&apos;s guide rate applies to the surface oil production rate. </text:p>
+         <text:p text:style-name="P88"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: the well&apos;s guide rate applies to the surface oil production rate. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P88">WAT: the well&apos;s guide rate applies to the surface water production rate.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P88">GAS: the well&apos;s guide rate applies to the surface gas production rate.</text:p>
+         <text:p text:style-name="P88"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: the well&apos;s guide rate applies to the surface gas production rate.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P88">LIQ: the well&apos;s guide rate applies to the surface liquid (oil plus water) production rate.</text:p>
@@ -4659,13 +4659,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P88">RES: the well&apos;s guide rate applies to the in situ reservoir volume rate.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P88">RAT: the well’s guide rate applies to the <text:span text:style-name="T34">surface rate of the </text:span>injection phase. This should only be used if the well has been declared an injection well via the WCONINJE keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="P88">RAT: the well’s guide rate applies to the <text:span text:style-name="T34">surface rate of the </text:span>injection phase. This should only be used if the well has been declared an injection well via the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P88">COMB: the well’s guide rate applies to the linearly combined calculated rate. <text:s/>This option is not supported by OPM Flow.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="_40_Table_20_Contents">TARGET may be defaulted if <text:span text:style-name="T5">GUIDERAT has been defaulted, either by 1* or a value less than or equal to zero.</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents">TARGET may be defaulted if <text:span text:style-name="T5"><text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> has been defaulted, either by 1* or a value less than or equal to zero.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4681,7 +4681,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P65">SCALE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table699.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P65">A real value that is used to multiple the GUIDERAT or the calculated well potentials to determine the final GUIDERAT for the well.</text:p>
+       <text:p text:style-name="P65">A real value that is used to multiple the <text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> or the calculated well potentials to determine the final <text:a xlink:href="#__RefHeading___Toc193039_2026549522">GUIDERAT</text:a> for the well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4721,7 +4721,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P68">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.96</text:sequence>: WGRUPCON Keyword Description</text:p>
     <text:p text:style-name="P70"/>
-    <text:p text:style-name="P70">See also the GCONPROD the GCONINJ<text:span text:style-name="T34">E</text:span> keywords to define a group’s production and injection targets and constraints, and the WCONPROD and WCONINJE keyword to define a well’s production and injection characteristics. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P70">See also the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> the GCONINJ<text:span text:style-name="T34">E</text:span> keywords to define a group’s production and injection targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define a well’s production and injection characteristics. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P63" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716767_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716767_3964674244"/></text:h>
     <text:p text:style-name="P67">The following example defines the guides rates for all oil and gas producers and the gas injectors as follows:</text:p>
     <text:p text:style-name="P66">--</text:p>

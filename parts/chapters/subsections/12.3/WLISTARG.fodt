@@ -4436,7 +4436,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716791_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716791_3964674244"/></text:h>
-    <text:p text:style-name="P12028">The WLISTARG keyword modifies the target and constraint values of both rates and pressures for wells previously defined in a well list by the WLIST or WLISTNAM keywords. WLISTARG is similar to the WELTARG keyword in it that allows for modifying targets and constraints without having to define all the variables on the well control keywords: WCONPROD, WCONHIST, WCONINJE, or WCONINJH keywords. Variables not changed by the WLISTARG keyword remain the same as those previously entered via the well control keywords or previously entered WLISTARG keywords. Note that the well must still be initially be fully defined using the WCONPROD or WCONINJE keywords. <text:s/>All the aforementioned keywords are described in the SCHEDULE section. </text:p>
+    <text:p text:style-name="P12028">The <text:a xlink:href="#__RefHeading___Toc585895_4263943340">WLISTARG</text:a> keyword modifies the target and constraint values of both rates and pressures for wells previously defined in a well list by the <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a> or <text:a xlink:href="#__RefHeading___Toc592907_4263943340">WLISTNAM</text:a> keywords. <text:a xlink:href="#__RefHeading___Toc585895_4263943340">WLISTARG</text:a> is similar to the <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keyword in it that allows for modifying targets and constraints without having to define all the variables on the well control keywords: <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a>, <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>, or <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords. Variables not changed by the <text:a xlink:href="#__RefHeading___Toc585895_4263943340">WLISTARG</text:a> keyword remain the same as those previously entered via the well control keywords or previously entered <text:a xlink:href="#__RefHeading___Toc585895_4263943340">WLISTARG</text:a> keywords. Note that the well must still be initially be fully defined using the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:p text:style-name="P12036">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1725" table:style-name="Table1725">
      <table:table-column table:style-name="Table1725.A"/>
@@ -4482,10 +4482,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9416">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1725.C2" office:value-type="string">
-       <text:p text:style-name="P9594">WLIST</text:p>
+       <text:p text:style-name="P9594"><text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1725.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7306">A character string of up to eight characters in length, enclosed in quotes, that defines the well list name declared by the WLIST keyword.</text:p>
+       <text:p text:style-name="P7306">A character string of up to eight characters in length, enclosed in quotes, that defines the well list name declared by the <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a> keyword.</text:p>
        <text:p text:style-name="P7214">Note the first character must be asterisk (“*”) and the second character must be a letter, for example, *PROD.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4538,7 +4538,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:list xml:id="list105922794472517" text:continue-list="list105923218314696" text:style-name="L31">
         <text:list-header>
-         <text:p text:style-name="P19439">Note TARGET only defines the variable to be changed, it does not change how a well is controlled. For example, if a well is operating on ORAT control, as defined by the previously entered WCONPROD keyword, entering TARGET equal to LRAT with a value, changes the liquid constraint but the well still remains on ORAT control. Use the WELCNTL keyword in the SCHEDULE section to change the control mode of a well. </text:p>
+         <text:p text:style-name="P19439">Note TARGET only defines the variable to be changed, it does not change how a well is controlled. For example, if a well is operating on ORAT control, as defined by the previously entered <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword, entering TARGET equal to LRAT with a value, changes the liquid constraint but the well still remains on ORAT control. Use the <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to change the control mode of a well. </text:p>
         </text:list-header>
        </text:list>
       </table:table-cell>
@@ -4563,7 +4563,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9658">LIFT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1725.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7720">A real positive vector of values that defines the value of the variable declared by TARGET for all the wells contained in WLIST. For example if there are four wells in WLIST then there must four real numbers for VALUE. The vector should be terminated by a “/” as indicated in the notes below.</text:p>
+       <text:p text:style-name="P7720">A real positive vector of values that defines the value of the variable declared by TARGET for all the wells contained in <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a>. For example if there are four wells in <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a> then there must four real numbers for VALUE. The vector should be terminated by a “/” as indicated in the notes below.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4581,7 +4581,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8078">psia</text:p>
        <text:p text:style-name="P8065">dimensionless</text:p>
        <text:p text:style-name="P8065">same as</text:p>
-       <text:p text:style-name="P8065">VFPPROD or VFPINJ</text:p>
+       <text:p text:style-name="P8065"><text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1725.C2" office:value-type="string">
        <text:p text:style-name="P7662">sm<text:span text:style-name="T3853">3</text:span>/day</text:p>
@@ -4590,7 +4590,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7205">barsa</text:p>
        <text:p text:style-name="P8065">dimensionless</text:p>
        <text:p text:style-name="P8065">same as</text:p>
-       <text:p text:style-name="P8065"><text:s/>VFPPROD or VFPINJ</text:p>
+       <text:p text:style-name="P8065"><text:s/><text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1725.C2" office:value-type="string">
        <text:p text:style-name="P7662">scc/hour</text:p>
@@ -4599,7 +4599,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7205">atma</text:p>
        <text:p text:style-name="P8065">dimensionless</text:p>
        <text:p text:style-name="P8065">same as</text:p>
-       <text:p text:style-name="P8065"><text:s/>VFPPROD or VFPINJ</text:p>
+       <text:p text:style-name="P8065"><text:s/><text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4624,9 +4624,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15407"/>
     <text:p text:style-name="P16034">If a well is currently a history matching well, then WLISELTARG should only be used to change a wells bottom-hole pressure limit, vertical flow performance table number or the artificial lift quantity.</text:p>
     <text:p text:style-name="P15407"/>
-    <text:p text:style-name="P15407">See also the WELCNTL keyword, in the SCHEDULE section that can be used to reset the control mode, as well as a well’s target and constraints of both rates and pressures. </text:p>
+    <text:p text:style-name="P15407">See also the <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> keyword, in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that can be used to reset the control mode, as well as a well’s target and constraints of both rates and pressures. </text:p>
     <text:h text:style-name="P18624" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716793_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716793_3964674244"/></text:h>
-    <text:p text:style-name="P11101">The following example defines two named well lists using the WLIST keyword.</text:p>
+    <text:p text:style-name="P11101">The following example defines two named well lists using the <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a> keyword.</text:p>
     <text:p text:style-name="P14078">-- </text:p>
     <text:p text:style-name="P14078">-- <text:s text:c="6"/>WELL LIST SPECIFICATION <text:s text:c="53"/></text:p>
     <text:p text:style-name="P14078">-- <text:s text:c="77"/></text:p>
