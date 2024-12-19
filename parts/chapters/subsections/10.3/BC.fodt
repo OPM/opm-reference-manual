@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4571,7 +4572,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">A defined character string that defines the type of boundary condition to be applied, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105918777521634" text:continue-list="list105917364723722" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17087">DIRICHLET: for a user defined boundary conditions. In this case, items (1) through (7) must be set, together with PHASE for the fluid type, and PRESS and <text:span text:style-name="NOT_KEYWORD">TEMP</text:span> for the constant pressure and temperature boundary conditions.</text:p>
+         <text:p text:style-name="P17087">DIRICHLET: for a user defined boundary conditions. In this case, items (1) through (7) must be set, together with PHASE for the fluid type, and PRESS and <text:span text:style-name="NotKeyword">TEMP</text:span> for the constant pressure and temperature boundary conditions.</text:p>
          <text:p text:style-name="P17087">This option is currently not supported but will be available in the next release. <text:s/></text:p>
         </text:list-item>
         <text:list-item>
@@ -4688,10 +4689,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2312">12</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NOT_KEYWORD">TEMP</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">TEMP</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P535"><text:span text:style-name="NOT_KEYWORD">TEMP</text:span> is a real positive number that defines the constant temperature boundary condition. <text:span text:style-name="NOT_KEYWORD">TEMP</text:span> should only be entered if TYPE has been set to DIRICHLET.</text:p>
+       <text:p text:style-name="P535"><text:span text:style-name="NotKeyword">TEMP</text:span> is a real positive number that defines the constant temperature boundary condition. <text:span text:style-name="NotKeyword">TEMP</text:span> should only be entered if TYPE has been set to DIRICHLET.</text:p>
        <text:p text:style-name="P8856">The default value of 1* will use the simulator&apos;s calculated value based on data entered via one of the following reservoir temperature keywords: <text:a xlink:href="#__RefHeading___Toc146399_3544483072">RTEMP</text:a>, <text:a xlink:href="#__RefHeading___Toc111818_29392915391">RTEMPA</text:a>, <text:a xlink:href="#__RefHeading___Toc108628_2939291539">RTEMPVD</text:a>, <text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a>, or <text:a xlink:href="#__RefHeading___Toc108626_2939291539">TEMPVD</text:a>, in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. Note that all of the aforementioned reservoir temperature keywords, except for <text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a>, may also be used in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section as well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4750,7 +4751,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13788"><text:s text:c="9"/>1 <text:s text:c="2"/>1* <text:s text:c="2"/>1 <text:s text:c="2"/>1 <text:s text:c="3"/>1 <text:s text:c="2"/>1* <text:s text:c="2"/>Y <text:s text:c="4"/>FREE <text:s text:c="32"/>/ </text:p>
     <text:p text:style-name="P14398">/</text:p>
     <text:p text:style-name="P13168"><text:s text:c="75"/></text:p>
-    <text:p text:style-name="P12586">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and <text:span text:style-name="NOT_KEYWORD">TEMP</text:span>) can be defaulted, as they are ignored for when TYPE equals FREE.</text:p>
+    <text:p text:style-name="P12586">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and <text:span text:style-name="NotKeyword">TEMP</text:span>) can be defaulted, as they are ignored for when TYPE equals FREE.</text:p>
     <text:p text:style-name="P12587">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
     <text:p text:style-name="P13788">--</text:p>
     <text:p text:style-name="P13788">-- <text:s text:c="6"/>DEFINE MODEL BOUNDARY CONDITIONS (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
