@@ -29,6 +29,9 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
         self.in_math = False   # We should not insert links inside math tags
+        self.in_binary_data = False  # We should skip binary data
+        self.in_draw_frame = False  # We should not insert links in Figure captions
+        self.in_draw_recursion = 0  # We can have nested draw:frame tags
         self.content = io.StringIO()
         # Create a regex pattern with alternation on the keyword names
         self.regex = self.compile_regex()
@@ -101,6 +104,12 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.not_keyword = False  # This cannot be nested
             elif name == "math":
                 self.in_math = False
+            elif name == "office:binary-data":
+                self.in_binary_data = False
+            elif name == "draw:frame":
+                self.in_draw_recursion -= 1
+                if self.in_draw_recursion == 0:
+                    self.in_draw_frame = False
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -123,7 +132,13 @@ class FileHandler(xml.sax.handler.ContentHandler):
             #  because it may insert tags (<text:a ...>) that should not be escaped.
             characters = XMLHelper.escape(self.char_buf)
             if self.office_body_found:
-                if self.in_p and (not self.in_a) and (not self.not_keyword) and (not self.in_math):
+                if (self.in_p
+                    and (not self.in_a)
+                    and (not self.not_keyword)
+                    and (not self.in_math)
+                    and (not self.in_binary_data)
+                    and (not self.in_draw_frame)
+                ):
                     if not self.is_example_p[-1]:
                         if not self.is_table_caption(characters):
                             characters = self.regex.sub(self.replace_match_function, characters)
@@ -172,6 +187,14 @@ class FileHandler(xml.sax.handler.ContentHandler):
                         self.not_keyword = True
             elif name == "math":
                 self.in_math = True
+            elif name == "office:binary-data":
+                # We need to skip the binary data, otherwise the content will be corrupted
+                self.in_binary_data = True
+            elif name == "draw:frame":
+                # We do not want the script to insert links in a Figure caption. These captions
+                # are usually inside a draw:frame tag.
+                self.in_draw_frame = True
+                self.in_draw_recursion += 1
         self.start_tag_open = True
         self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
