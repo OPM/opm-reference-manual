@@ -33,8 +33,9 @@ class FileHandler(xml.sax.handler.ContentHandler):
             self.content.write(">")
             self.start_tag_open = False
         if self.in_kw_link:
-            # We are inside an errouneous link, and we should not insert anything here
-            return
+            # We are inside an errouneous link, and we should actually not skip this content
+            #  since it was part of the original binary data
+            pass
         self.content.write(XMLHelper.escape(content))
 
     def endDocument(self):
