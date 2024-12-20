@@ -1,3 +1,4 @@
+import enum
 import io
 import logging
 import re
@@ -15,10 +16,19 @@ from fodt.exceptions import HandlerDoneException, ParsingException
 from fodt import helpers, keyword_uri_map_generator
 from fodt.xml_helpers import XMLHelper
 
+class FileType(enum.Enum):
+    CHAPTER = 1
+    SUBSECTION = 2
 
 class FileHandler(xml.sax.handler.ContentHandler):
-    def __init__(self, keyword_name: str, kw_uri_map: dict[str, str]) -> None:
-        self.keyword_name = keyword_name
+    def __init__(
+        self,
+        file_info: str,
+        file_type: FileType,
+        kw_uri_map: dict[str, str]
+    ) -> None:
+        self.file_info = file_info   # Keyword name or chapter name
+        self.file_type = file_type
         self.kw_uri_map = kw_uri_map
         self.in_section = False
         # For empty tags, we use a special trick to rewrite them with a shortened
@@ -79,7 +89,6 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  content would be split between multiple characters() calls.
         # TODO: This does not handle cases with interleaved tags, for example <text:a>
         #  and <text:span> tags.
-
         self.char_buf += content
 
     def collect_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
@@ -125,7 +134,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
 
     def is_table_caption(self, content: str) -> bool:
         # Check if the content is a specific table caption, in that case we should not insert links
-        return re.search(rf'{re.escape(self.keyword_name)} Keyword Description', content)
+        keyword_name = self.file_info
+        return re.search(rf'{re.escape(keyword_name)} Keyword Description', content)
 
     def maybe_write_characters(self) -> None:
         if len(self.char_buf) > 0:
@@ -141,8 +151,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.in_draw_frame)
                 ):
                     if not self.is_example_p[-1]:
-                        if not self.is_table_caption(characters):
-                            characters = self.regex.sub(self.replace_match_function, characters)
+                        if (self.file_type == FileType.CHAPTER or
+                            (self.file_type == FileType.SUBSECTION and
+                              (not self.is_table_caption(characters)))):
+                                characters = self.regex.sub(self.replace_match_function, characters)
             self.content.write(characters)
             self.char_buf = ""
 
@@ -211,17 +223,31 @@ class InsertLinks():
         self,
         maindir: Path,
         subsection: str|None,
+        chapter: str|None,
         filename: str|None,
-        kw_dir: Path, kw_uri_map: dict[str, str]
+        start_dir: Path,
+        kw_uri_map: dict[str, str]
     ) -> None:
         self.maindir = maindir
-        self.kw_dir = kw_dir
+        self.start_dir = start_dir
         self.kw_uri_map = kw_uri_map
         self.subsection = subsection
+        self.chapter = chapter
         self.filename = filename
 
     def insert_links(self) -> None:
-        for item in self.kw_dir.iterdir():
+        if self.chapter:
+            self.insert_links_in_chapter()
+        else:
+            self.insert_links_in_subsections()
+
+    def insert_links_in_chapter(self) -> None:
+        filename = f"{self.chapter}.{FileExtensions.fodt}"
+        path = self.start_dir / filename
+        self.insert_links_in_file(path, filename, FileType.CHAPTER)
+
+    def insert_links_in_subsections(self) -> None:
+        for item in self.start_dir.iterdir():
             if not item.is_dir():
                 continue
             if self.subsection:
@@ -236,11 +262,11 @@ class InsertLinks():
                             logging.info(f"Skipping file: {item2.name}")
                             continue
                     keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
-                    self.insert_links_in_file(item2, keyword_name)
+                    self.insert_links_in_file(item2, keyword_name, FileType.SUBSECTION)
 
-    def insert_links_in_file(self, filename: Path, keyword_name: str) -> None:
+    def insert_links_in_file(self, filename: Path, file_info: str, file_type: FileType) -> None:
         parser = xml.sax.make_parser()
-        handler = FileHandler(keyword_name, self.kw_uri_map)
+        handler = FileHandler(file_info, file_type, self.kw_uri_map)
         parser.setContentHandler(handler)
         try:
             parser.parse(str(filename))
@@ -283,6 +309,7 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #    --maindir=<main_dir> \
 #    --keyword_dir=<keyword_dir> \
 #    --subsection=<subsection> \
+#    --chapter=<chapter> \
 #    --filename=<filename> \
 #    --use-map-file
 #
@@ -298,8 +325,10 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #   links.
 #
 #   If --subsection is not given, the script will process all subsections. If --subsection
-#   is given, the script will only process the specified subsection, or if --filename is
+#   is given, the script will only process the specified subsection, or if --chapter is
+#   given, the script will only process the specified chapter, or if --filename is
 #   given, the script will only process the specified file within the specified subsection.
+#   The options --chapter and --subsection are mutually exclusive.
 #
 # EXAMPLES:
 #
@@ -320,12 +349,14 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
 @click.option('--subsection', help='The subsection to process')
+@click.option('--chapter', help='The chapter to process')
 @click.option('--use-map-file', is_flag=True, help='Use the mapping file "meta/kw_uri_map.txt"')
 @click.option('--filename', help='The filename to process')
 def link_keywords(
     maindir: str|None,
     keyword_dir: str|None,
     subsection: str|None,
+    chapter: str|None,
     filename: str|None,
     use_map_file: bool
 ) -> None:
@@ -336,8 +367,13 @@ def link_keywords(
         kw_uri_map = load_kw_uri_map(maindir)
     else:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
-    kw_dir = maindir / Directories.chapters / Directories.subsections
-    InsertLinks(maindir, subsection, filename, kw_dir, kw_uri_map).insert_links()
+    if chapter and subsection:
+        raise ValueError("Options --chapter and --subsection are mutually exclusive.")
+    if chapter:
+        file_dir = maindir / Directories.chapters
+    else:
+        file_dir = maindir / Directories.chapters / Directories.subsections
+    InsertLinks(maindir, subsection, chapter, filename, file_dir, kw_uri_map).insert_links()
 
 if __name__ == "__main__":
     link_keywords()
