@@ -4298,7 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716831_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716831_3964674244"/></text:h>
-    <text:p text:style-name="P11581">The WSALT keyword defines a water injection well’s salt injection stream concentration that is to be used for when the salt option has been activated by the BRINE keywords in the RUNSPEC section. Note that if the Polymer option has also been activated by the POLYMER keyword in the RUNSPEC section, then the WPOLYMER keyword in the SCHEDULE section should be used to enter both the polymer and salt concentrations. </text:p>
+    <text:p text:style-name="P11581">The <text:a xlink:href="#__RefHeading___Toc950256_4263943340">WSALT</text:a> keyword defines a water injection well’s salt injection stream concentration that is to be used for when the salt option has been activated by the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note that if the Polymer option has also been activated by the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then the <text:a xlink:href="#__RefHeading___Toc121643_2412586160">WPOLYMER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section should be used to enter both the polymer and salt concentrations. </text:p>
     <table:table table:name="Table1738" table:style-name="Table1738">
      <table:table-column table:style-name="Table1738.A"/>
      <table:table-column table:style-name="Table1738.B"/>
@@ -4346,7 +4346,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1738.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7321">A character string of up to eight characters in length that defines the well name for which the injection salt concentrations are being defined.</text:p>
-       <text:p text:style-name="P7835">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7835">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4365,13 +4365,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4321">A real positive vector of values that defines the salt concentration of the well’s injection stream and consists of:</text:p>
        <text:list xml:id="list105923482399186" text:continue-list="list105923751762066" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17127">If the Standard Brine model has been invoked by the BRINE keyword, then SALTCON consist of one value representing the injection salt concentration; </text:p>
+         <text:p text:style-name="P17127">If the Standard Brine model has been invoked by the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword, then SALTCON consist of one value representing the injection salt concentration; </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17124">If OPM Flow’s Water Vaporization and Salt Precipitation models have been activated by the VAPWAT and PRECSALT keywords in the RUNSPEC section, then SALTCON consist of one value representing the injection salt concentration; or,</text:p>
+         <text:p text:style-name="P17124">If OPM Flow’s Water Vaporization and Salt Precipitation models have been activated by the <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> and <text:a xlink:href="#__RefHeading___Toc332782_3149455253">PRECSALT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then SALTCON consist of one value representing the injection salt concentration; or,</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17128">If the Multi-Component Brine option has been activated by the BRINE and ECLMC keywords in the RUNSPEC section, then SALTCON consists of a vector of values representing the salt concentration of each brine within the injected brine mixture.</text:p>
+         <text:p text:style-name="P17128">If the Multi-Component Brine option has been activated by the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> and <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then SALTCON consists of a vector of values representing the salt concentration of each brine within the injected brine mixture.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P16965">Only options (1) and (2) are currently supported.</text:p>
@@ -4403,7 +4403,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1724">Notes:</text:p>
        <text:list xml:id="list105923236068611" text:continue-list="list105922840747396" text:style-name="L178">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities ("UDQ") can be used as User Defined Arguments ("UDA") for various group, well, and connection keywords in the SCHEDULE section. User Defined Arguments are activated using the UDADIMS keyword in the RUNSPEC section, and defined by the UDQ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19208">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4421,10 +4421,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15549"/>
     <text:p text:style-name="P15737">Water injection wells that are not declared via this keyword have their concentrations defaulted to zero. <text:s/></text:p>
     <text:p text:style-name="P15362"/>
-    <text:p text:style-name="P15362">See also the GCONPROD and GCONINJE keywords to define a group’s production and injection targets and constraints, and the WCONINJE keyword to define an injection <text:soft-page-break/>well’s targets and constraints. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15362">See also the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keywords to define a group’s production and injection targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection <text:soft-page-break/>well’s targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P15362"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716833_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716833_3964674244"/></text:h>
-    <text:p text:style-name="P11104">The following example defines the salt injection stream concentration for three water injection wells for when the brine phase has been activated by the BRINE keyword in the RUNSPEC section. </text:p>
+    <text:p text:style-name="P11104">The following example defines the salt injection stream concentration for three water injection wells for when the brine phase has been activated by the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <text:p text:style-name="P14253">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14253">-- <text:s text:c="6"/>DEFINE WATER INJECTION WELL SALT CONCENTRATIONS (STANDARD) <text:s text:c="71"/></text:p>
     <text:p text:style-name="P14253">-- <text:s text:c="85"/></text:p>
@@ -4439,7 +4439,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15512"/>
     <text:p text:style-name="P15512">The salt concentration for both well WI01 and WI03 is set to 0.25, and for well WI02 the salt concentration will be taken from the well’s group salt concentration.</text:p>
     <text:p text:style-name="P15512"/>
-    <text:p text:style-name="P15739">The next example is based on using the Multi-Component Brine option, that is the BRINE and ECLMC keywords have been used in the RUNSPEC section, and assuming three salts.</text:p>
+    <text:p text:style-name="P15739">The next example is based on using the Multi-Component Brine option, that is the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> and <text:a xlink:href="#__RefHeading___Toc206960_803326780">ECLMC</text:a> keywords have been used in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and assuming three salts.</text:p>
     <text:p text:style-name="P15739"/>
     <text:p text:style-name="P14254">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P14254">-- <text:s text:c="6"/>DEFINE WATER INJECTION WELL SALT CONCENTRATIONS (MULTIPLE) <text:s text:c="71"/></text:p>

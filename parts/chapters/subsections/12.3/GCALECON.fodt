@@ -4359,9 +4359,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716577_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716577_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The GCALECON keyword defines economic criteria for production groups, including the field level group FIELD, that have previously been defined by the GCONPROD keyword in the SCHEDULE section and have had their rate targets and constraints set by calorific value via the GCONVAL keyword in the SCHEDULE section. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc254084_1190369742">GCALECON</text:a> keyword defines economic criteria for production groups, including the field level group <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a>, that have previously been defined by the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and have had their rate targets and constraints set by calorific value via the GCONVAL keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
-    <text:p text:style-name="_40_TextBody">Note that wells are allocated to a group when they are specified by the WELSPECS keyword and wells can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the GCONPROD and CECON keywords in the SCHEDULE section and the controls specified by the WECON keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that wells are allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and wells can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc27331_3671211675">CECON</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the controls specified by the <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword.</text:p>
     <table:table table:name="Table1142" table:style-name="Table1142">
      <table:table-column table:style-name="Table1142.A"/>
      <table:table-column table:style-name="Table1142.B"/>
@@ -4408,8 +4408,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9575">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1142.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7288">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named FIELD is the top most group and should be used to set targets and constraints for the field.</text:p>
-       <text:p text:style-name="P7811">Note that the group hierarchy should be defined by the GRUPTREE keyword when there is more than one level of groups, otherwise all the groups will sit directly under the FIELD group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P7288">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should be used to set targets and constraints for the field.</text:p>
+       <text:p text:style-name="P7811">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4426,7 +4426,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9530"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1142.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7675">A real positive value that defines the minimum economic surface energy production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by item (9) of the WELSPECS keyword.</text:p>
+       <text:p text:style-name="P7675">A real positive value that defines the minimum economic surface energy production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by item (9) of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
        <text:p text:style-name="P7474">A value less than or equal to zero switches of this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4457,7 +4457,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9637">CALVAL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1142.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7675">A real positive value that defines the minimum economic surface calorific value, below which an economic action of shutting in or stopping all the wells in the group, as requested by item (9) of the WELSPECS keyword.</text:p>
+       <text:p text:style-name="P7675">A real positive value that defines the minimum economic surface calorific value, below which an economic action of shutting in or stopping all the wells in the group, as requested by item (9) of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
        <text:p text:style-name="P7474">A value less than or equal to zero switches of this criteria,</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4486,10 +4486,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7947">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1142.C2" office:value-type="string">
-       <text:p text:style-name="P7951">END</text:p>
+       <text:p text:style-name="P7951"><text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1142.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9298">A defined character string that defines if the simulation should terminate if <text:s/>all the producing wells in the group, including the FIELD group, are shut or stopped. END should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9298">A defined character string that defines if the simulation should terminate if <text:s/>all the producing wells in the group, including the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group, are shut or stopped. <text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list1918811553" text:style-name="L125">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P20179">NO: no action is taken and the run continues. </text:p>
@@ -4524,7 +4524,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14763">Table <text:sequence text:ref-name="refTable568" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.26</text:sequence>: GCALECON Keyword Description</text:p>
     <text:p text:style-name="P15341"/>
-    <text:p text:style-name="P15341">See also the WELSPECS keyword to define a wells shut-in or stop options, GCONPROD, GCONCAL, GCONENG for group controls, and WECON for setting a well’s economic criteria. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15341">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a wells shut-in or stop options, <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc254086_1190369742">GCONCAL</text:a>, <text:a xlink:href="#__RefHeading___Toc493666_1414963541">GCONENG</text:a> for group controls, and <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> for setting a well’s economic criteria. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18569" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716579_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716579_3964674244"/></text:h>
     <text:p text:style-name="P11072">The following example defines the economic criteria for the field with a minimum economic surface energy production rate of 5 x 109 BTU/day and a minimum economic surface calorific value of900 Btu/Mscf</text:p>
     <text:p text:style-name="P13004">-- </text:p>

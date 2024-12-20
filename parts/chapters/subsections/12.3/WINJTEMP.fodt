@@ -4290,8 +4290,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716781_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716781_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">WINJTEMP defines the injection fluid thermal properties for when the thermal option has been activated by the THERMAL keyword in the RUNSPEC section. <text:s/>Only water and gas injection is supported.</text:p>
-    <text:p text:style-name="_40_TextBody">This keyword can only be used if OPM Flow’s thermal option has been activated by the THERMAL keyword in the RUNSPEC section. Note this is different to the commercial simulator that uses the TEMP keyword in the RUNSPEC section to activate the black-oil thermal model.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc152097_2509125675">WINJTEMP</text:a> defines the injection fluid thermal properties for when the thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. <text:s/>Only water and gas injection is supported.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword can only be used if OPM Flow’s thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note this is different to the commercial simulator that uses the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the black-oil thermal model.</text:p>
     <table:table table:name="Table858" table:style-name="Table858">
      <table:table-column table:style-name="Table858.A"/>
      <table:table-column table:style-name="Table858.B"/>
@@ -4338,7 +4338,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table858.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P9039">A character string of up to eight characters in length that defines the well name for which the well injection fluid thermal properties are being defined.</text:p>
-       <text:p text:style-name="P9074">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P9074">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4356,7 +4356,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table858.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P5602">STEAMQAL is a real positive value greater than or equal to zero and less than or equal to one that defines the steam quality of the injected fluid for the defined well.</text:p>
        <text:p text:style-name="P5504">This parameter should be defaulted using 1* as STEAMQAL is not used by OPM FLOW, as only water and gas injection is supported. </text:p>
-       <text:p text:style-name="P5602">This data is used by the commercial simulator’s THERMAL option and is not supported by OPM Flow’s THERMAL option. </text:p>
+       <text:p text:style-name="P5602">This data is used by the commercial simulator’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> option and is not supported by OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> option. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4383,10 +4383,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5601">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table858.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5606">TEMP</text:p>
+       <text:p text:style-name="P5606"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table858.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5570">TEMP is a real positive value that defines the temperature of the injected fluid for the defined well.</text:p>
+       <text:p text:style-name="P5570"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> is a real positive value that defines the temperature of the injected fluid for the defined well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4447,7 +4447,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table858.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P119">ENTHALPY is a real positive value that defines the specific enthalpy of the injected fluid for the defined well.</text:p>
-       <text:p text:style-name="P5603">This is data is used by the commercial simulator’s THERMAL option and is not supported by OPM Flow’s THERMAL option.</text:p>
+       <text:p text:style-name="P5603">This is data is used by the commercial simulator’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> option and is not supported by OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> option.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4488,7 +4488,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14933">Table <text:sequence text:ref-name="refTable644" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.102</text:sequence>: WINJTEMP Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18737" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716783_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716783_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following example shows the WINJTEMP keyword for when OPM Flow’s temperature option has been activated by the THERMAL keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="_40_TextBody">The following example shows the <text:a xlink:href="#__RefHeading___Toc152097_2509125675">WINJTEMP</text:a> keyword for when OPM Flow’s temperature option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P13317">--</text:p>
     <text:p text:style-name="P13317">-- <text:s text:c="6"/>INJECTION FLUID THERMAL PROPERTIES</text:p>
     <text:p text:style-name="P13317">--</text:p>
@@ -4499,7 +4499,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14182">WI02 <text:s text:c="4"/>1* <text:s text:c="4"/>70.0 <text:s text:c="2"/>230.0 <text:s text:c="3"/>1* <text:s text:c="24"/>/</text:p>
     <text:p text:style-name="P14182">/</text:p>
     <text:p text:style-name="P15459"/>
-    <text:p text:style-name="P15675">Here the water injection fluid’s temperature and pressure, in field units, for two water injections well are defined. Notice that both the steam quality and the specific enthalpy of the injected fluid for the defined wells are defaulted (or skipped), as OPM Flow’s THERMAL option does not support this data.</text:p>
+    <text:p text:style-name="P15675">Here the water injection fluid’s temperature and pressure, in field units, for two water injections well are defined. Notice that both the steam quality and the specific enthalpy of the injected fluid for the defined wells are defaulted (or skipped), as OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> option does not support this data.</text:p>
     
    </text:section>
   </office:text>

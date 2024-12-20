@@ -4408,8 +4408,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P52" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716725_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716725_3964674244"/></text:h>
-    <text:p text:style-name="P75">The WECONINJ keyword defines economic criteria for injection wells that have previously been defined by the WELSPECS and WCONINJE keywords in the SCHEDULE section. </text:p>
-    <text:p text:style-name="P75">Note that wells can be allocated to a group when they are specified by the WELSPECS keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the GCONINJE keyword in the SCHEDULE section and the controls specified by this keyword. </text:p>
+    <text:p text:style-name="P75">The <text:a xlink:href="#__RefHeading___Toc949620_487874538">WECONINJ</text:a> keyword defines economic criteria for injection wells that have previously been defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:p text:style-name="P75">Note that wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the controls specified by this keyword. </text:p>
     <text:p text:style-name="P46">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1699" table:style-name="Table1699">
      <table:table-column table:style-name="Table1699.A"/>
@@ -4458,7 +4458,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1699.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well economic injection criteria data is being defined.</text:p>
-       <text:p text:style-name="P32">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P32">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4471,11 +4471,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P27">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1699.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P35">MINVALUE</text:p>
+       <text:p text:style-name="P35"><text:a xlink:href="#__RefHeading___Toc99833_2023071304">MINVALUE</text:a></text:p>
        <text:p text:style-name="P40"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1699.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P31">A real positive value that defines the minimum economic injection value, below which an economic action will take place, as defined by the AUTO parameter on the WELSPECS keyword (SHUT or STOP). Note that TYPE determines if the minimum value is applied to the well’s actual injection rate or the well’s potential.</text:p>
+       <text:p text:style-name="P31">A real positive value that defines the minimum economic injection value, below which an economic action will take place, as defined by the AUTO parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword (SHUT or STOP). Note that TYPE determines if the minimum value is applied to the well’s actual injection rate or the well’s potential.</text:p>
        <text:p text:style-name="P29">A value less than or equal to zero switches off this criterion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4509,13 +4509,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P36">TYPE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1699.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P31">A defined character string that determines if MINVALUE is applied to a well’s actual rate or potential, and should be set to one of the following:</text:p>
+       <text:p text:style-name="P31">A defined character string that determines if <text:a xlink:href="#__RefHeading___Toc99833_2023071304">MINVALUE</text:a> is applied to a well’s actual rate or potential, and should be set to one of the following:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P81">RATE: In this case the MINVALUE is applied to a well’s actual rate.</text:p>
+         <text:p text:style-name="P81">RATE: In this case the <text:a xlink:href="#__RefHeading___Toc99833_2023071304">MINVALUE</text:a> is applied to a well’s actual rate.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P81">POTN: Here, MINVALUE is applied to the well’s potential with only the BHP and THP constraints applied.</text:p>
+         <text:p text:style-name="P81">POTN: Here, <text:a xlink:href="#__RefHeading___Toc99833_2023071304">MINVALUE</text:a> is applied to the well’s potential with only the BHP and THP constraints applied.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P35">The default value is RATE.</text:p>
@@ -4544,7 +4544,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P42">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.82</text:sequence>: WECONINJ Keyword Description</text:p>
     <text:p text:style-name="P43"/>
-    <text:p text:style-name="P51">See also the WELSPECS keyword to define a wells shut-in or stop options and GCONINJE for group controls in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P51">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a wells shut-in or stop options and <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> for group controls in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P51"/>
     <text:h text:style-name="P45" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716727_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716727_3964674244"/></text:h>
     <text:p text:style-name="P47">The following example defines the economic injection parameters for all gas and water injection wells. </text:p>
@@ -4558,7 +4558,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P49">WI* <text:s text:c="5"/>5.0E3 <text:s/>POTN <text:s text:c="58"/>/</text:p>
     <text:p text:style-name="P49">/ <text:s text:c="207"/></text:p>
     <text:p text:style-name="P48"><text:s text:c="78"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P50">Here all the gas injection wells have a minimum economic gas injection rate of 2 MMscf/d and the water injection wells have a minimum water potential rate of 5,000 stb/d. The AUTO parameter on the WELSPECS keyword will determine if the wells will be shut-in or stopped.</text:p>
+    <text:p text:style-name="P50">Here all the gas injection wells have a minimum economic gas injection rate of 2 MMscf/d and the water injection wells have a minimum water potential rate of 5,000 stb/d. The AUTO parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword will determine if the wells will be shut-in or stopped.</text:p>
     <text:p text:style-name="P75"/>
     <text:p text:style-name="P75"/>
    </text:section>

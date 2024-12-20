@@ -4450,8 +4450,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716729_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716729_3964674244"/></text:h>
-    <text:p text:style-name="P12007">The WECONT keyword defines the tracer economic criteria for production wells that have previously been defined by the WELSPECS and WCONPROD keywords in the SCHEDULE section, for tracers define by the TRACER keyword in the PROPS section. <text:s/></text:p>
-    <text:p text:style-name="P12007">Note that wells can be allocated to a group when they are specified by the WELSPECS keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the GECONT keyword in the SCHEDULE section and the controls specified by this keyword. Note that GECONT is not supported by OPM Flow in the current release</text:p>
+    <text:p text:style-name="P12007">The <text:a xlink:href="#__RefHeading___Toc956535_487874538">WECONT</text:a> keyword defines the tracer economic criteria for production wells that have previously been defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, for tracers define by the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. <text:s/></text:p>
+    <text:p text:style-name="P12007">Note that wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the <text:a xlink:href="#__RefHeading___Toc299954_156692946">GECONT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the controls specified by this keyword. Note that <text:a xlink:href="#__RefHeading___Toc299954_156692946">GECONT</text:a> is not supported by OPM Flow in the current release</text:p>
     <text:p text:style-name="P10968">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1701" table:style-name="Table1701">
      <table:table-column table:style-name="Table1701.A"/>
@@ -4512,10 +4512,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9251">1-2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1701.C2" office:value-type="string">
-       <text:p text:style-name="P9252">ACTION</text:p>
+       <text:p text:style-name="P9252"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1701.C4" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9301">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. ACTION should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9301">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105922886427864" text:continue-list="list105922707595273" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19718">NONE: no action is taken. </text:p>
@@ -4527,10 +4527,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19719">+CON: close the worst offending connection and all below it in the worst offending well. If connections have been welled as completions then the worst offending completion and all below it in the worst offending well will be closed. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19720">WELL: shut or stop the well as per the AUTO variable on the WELSPECS keyword.</text:p>
+         <text:p text:style-name="P19720">WELL: shut or stop the well as per the AUTO variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19721">PLUG: <text:s/>plug back the worst offending well based on the plug back length and options defined on the WPLUG keyword in the SCHEDULE.</text:p>
+         <text:p text:style-name="P19721">PLUG: <text:s/>plug back the worst offending well based on the plug back length and options defined on the <text:a xlink:href="#__RefHeading___Toc628135_4263943340">WPLUG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a>.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P9262">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
@@ -4546,10 +4546,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9251">1-3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1701.C2" office:value-type="string">
-       <text:p text:style-name="P9254">END</text:p>
+       <text:p text:style-name="P9254"><text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1701.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9301">A defined character string that defines if the simulation should terminate if the well is shut or stopped. END should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9301">A defined character string that defines if the simulation should terminate if the well is shut or stopped. <text:a xlink:href="#__RefHeading___Toc605468_3199477706">END</text:a> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105922647595146" text:continue-list="list105922886427864" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19718">NO: no action is taken and the run continues. </text:p>
@@ -4749,7 +4749,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2510">Notes:</text:p>
        <text:list xml:id="list115793635" text:style-name="L163">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19432">WECONT keyword consists of two records, with entries 1-1 to 1-5 representing record one items and 2-1 to 2-8 representing record number two items, <text:s/>in the “No.” column in this table. <text:s/>A maximum of three type two records can be entered following a type one record. </text:p>
+         <text:p text:style-name="P19432"><text:a xlink:href="#__RefHeading___Toc956535_487874538">WECONT</text:a> keyword consists of two records, with entries 1-1 to 1-5 representing record one items and 2-1 to 2-8 representing record number two items, <text:s/>in the “No.” column in this table. <text:s/>A maximum of three type two records can be entered following a type one record. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19433">Each type one and type two records are terminate by a “/” as indicated in the table, and a well data set is terminated by a further “/”, after which additional well data sets can be entered stating with a record of type one followed by type two.</text:p>
@@ -4768,7 +4768,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14941"><text:soft-page-break/>Table <text:sequence text:ref-name="refTable625" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.83</text:sequence>: WECONT Keyword Description</text:p>
     <text:p text:style-name="P15360"/>
-    <text:p text:style-name="P15360">See also the WELSPECS keyword to define a wells shut-in or stop options, <text:s/>and WECON for setting a well’s economic criteria. Both the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15360">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a wells shut-in or stop options, <text:s/>and <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> for setting a well’s economic criteria. Both the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P10968"/>
     <text:h text:style-name="P18734" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716731_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716731_3964674244"/></text:h>
     <text:p text:style-name="P11098">The following example defines the tracer economic criteria for the field and two wells, OP01 and OP02.</text:p>

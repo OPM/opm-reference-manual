@@ -4385,8 +4385,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18352" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683882211"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683882211"/></text:h>
-    <text:p text:style-name="_40_TextBody">BRANPROP defines network branch properties for the extended network option for when the Extended Network Model has been activated by the NETWORK keyword in the RUNSPEC section. There are two types of network facilities in the simulator, the Standard Network model, which is defined with the GRUPNET keyword in the SCHEDULE section and the Extended Network Model defined by the BRANPROP and NODEPROP keywords, again in the SCHEDULE section. </text:p>
-    <text:p text:style-name="_40_TextBody">For the Extended Network Model the group hierarchy can be different to that defined by the GRUPTREE keyword; however, the bottom most nodes in the network tree associated with wells, must be the same as that defined by the GRUPTREE keyword.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc162078_289573908">BRANPROP</text:a> defines network branch properties for the extended network option for when the Extended Network Model has been activated by the <text:a xlink:href="#__RefHeading___Toc311583_1841740821">NETWORK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. There are two types of network facilities in the simulator, the Standard Network model, which is defined with the <text:a xlink:href="#__RefHeading___Toc118319_1596574740">GRUPNET</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the Extended Network Model defined by the <text:a xlink:href="#__RefHeading___Toc162078_289573908">BRANPROP</text:a> and <text:a xlink:href="#__RefHeading___Toc212708_2026549522">NODEPROP</text:a> keywords, again in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:p text:style-name="_40_TextBody">For the Extended Network Model the group hierarchy can be different to that defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword; however, the bottom most nodes in the network tree associated with wells, must be the same as that defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword.</text:p>
     <table:table table:name="Table1903" table:style-name="Table1903">
      <table:table-column table:style-name="Table1903.A"/>
      <table:table-column table:style-name="Table1903.B"/>
@@ -4466,7 +4466,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8037">VFPTAB</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7695">A positive integer greater than or equal to zero that defines the vertical lift performance table to be used for calculating the pressure behavior <text:s/>between the inlet (for production) or outlet (for injection) node (DOWNNODE) and the outlet (for production) or inlet (for injection) node (UPNODE). For a production network this must reference a table associated with the VFPPROD keyword, and for an injection network a table declared via the VFPINJ keyword. Both keywords are in the SCHEDULE section.</text:p>
+       <text:p text:style-name="P7695">A positive integer greater than or equal to zero that defines the vertical lift performance table to be used for calculating the pressure behavior <text:s/>between the inlet (for production) or outlet (for injection) node (DOWNNODE) and the outlet (for production) or inlet (for injection) node (UPNODE). For a production network this must reference a table associated with the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword, and for an injection network a table declared via the <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> keyword. Both keywords are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
        <text:p text:style-name="P8739">If the pressure behavior between the two nodes is zero (no pressure loss in the network branch), then a value of 9999 should be entered for this variable.</text:p>
        <text:p text:style-name="P8740">A value of zero for VFPTAB removes the branch from the extended network and the resulting flows are ignored in the network flow stream.</text:p>
       </table:table-cell>
@@ -4485,9 +4485,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8037">ALQ-NODE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1903.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8990">A real positive value that defines the artificial lift quantity to be used in conjunction with the VFPPROD assigned to the branch via the VPFTAB variable. <text:s/></text:p>
+       <text:p text:style-name="P8990">A real positive value that defines the artificial lift quantity to be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> assigned to the branch via the VPFTAB variable. <text:s/></text:p>
        <text:p text:style-name="P8992">VFPTAB vertical lift performance table and the artificial lift quantity ALQ-NODE are used with the branch fluid rates to calculate the pressure <text:s/>behavior through the branch. For a network this can be considered to be either a pump to pump fluid through the network or a compressor to compress gas to a higher export pressure. Basically, ALQ-NODE is used to reduce the pressure loss through the branch.</text:p>
-       <text:p text:style-name="P8991">Note that the units for ALQ-NODE are dependent on the associated variable on the VFPPROD keyword.</text:p>
+       <text:p text:style-name="P8991">Note that the units for ALQ-NODE are dependent on the associated variable on the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword.</text:p>
        <text:p text:style-name="P9275">S<text:span text:style-name="T1">hould be set to zero </text:span>if ALQ-DEN is set to either DENO or DENG, or if the branch is associated with an automatic compressor.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4513,10 +4513,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19586">DENG: <text:s/>ALQ-NODE represents the average surface gas density flowing through the branch.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19586">NONE: ALQ-NODE is the artificial lift quantity as defined on the VFPPROD keyword to model a pump or a compressor.</text:p>
+         <text:p text:style-name="P19586">NONE: ALQ-NODE is the artificial lift quantity as defined on the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword to model a pump or a compressor.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P10445">The VFPPROD keyword should be consistent with this variable, that is, if ALQ-DEN is set to to DENO then the surface oil should be used as the ALQ variable on the VFPPROD keyword.</text:p>
+       <text:p text:style-name="P10445">The <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword should be consistent with this variable, that is, if ALQ-DEN is set to to DENO then the surface oil should be used as the ALQ variable on the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4542,7 +4542,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable551" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.9</text:sequence>: BRANPROP Keyword Description</text:p>
     <text:p text:style-name="P15881"/>
-    <text:p text:style-name="P15842">See also the NETWORK keyword in the RUNSPEC section and the NODEPROP keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15842">See also the <text:a xlink:href="#__RefHeading___Toc311583_1841740821">NETWORK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and the <text:a xlink:href="#__RefHeading___Toc212708_2026549522">NODEPROP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716523_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716523_3964674244"/></text:h>
     <text:p text:style-name="P12264">Given the following Extended Network model in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure88">Figure 12.3</text:sequence-ref>.</text:p>
     <text:p text:style-name="P12264"><draw:frame draw:style-name="fr10" draw:name="Frame66" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" svg:width="15.609cm" draw:z-index="244">
@@ -6010,7 +6010,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Figure">Figure <text:sequence text:ref-name="refFigure88" text:name="Figure" text:formula="ooow:Figure+1" style:num-format="1">12.3</text:sequence>: Extend Network Example</text:p>
       </draw:text-box>
      </draw:frame><text:soft-page-break/></text:p>
-    <text:p text:style-name="P12264">First the Extended Network model should be used invoked in the RUNSPEC section, and then the BRANPROP keyword should be used to define the branch network, and finally the NODEPROP keyword is used to describe the node properties.</text:p>
+    <text:p text:style-name="P12264">First the Extended Network model should be used invoked in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and then the <text:a xlink:href="#__RefHeading___Toc162078_289573908">BRANPROP</text:a> keyword should be used to define the branch network, and finally the <text:a xlink:href="#__RefHeading___Toc212708_2026549522">NODEPROP</text:a> keyword is used to describe the node properties.</text:p>
     <text:p text:style-name="P13405">-- ==============================================================================</text:p>
     <text:p text:style-name="P13405">-- </text:p>
     <text:p text:style-name="P13405">-- RUNSPEC SECTION </text:p>

@@ -4552,7 +4552,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716529_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716529_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMPDATL keyword defines how a well in a Local Grid Refinement (“LGR”) is connected to the reservoir by declaring the LGR and defining or modifying existing well connections. Ideally the connections should be declared in the correct sequence, starting with the connection nearest the well head and then working along the wellbore towards the bottom or toe of the well, however this may not be possible or convenient, for example when connections are added or removed from a well during the simulation (see the <text:s/>COMPORD keyword in the SCHEDULE section for options regarding connection ordering).</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword defines how a well in a Local Grid Refinement (“LGR”) is connected to the reservoir by declaring the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> and defining or modifying existing well connections. Ideally the connections should be declared in the correct sequence, starting with the connection nearest the well head and then working along the wellbore towards the bottom or toe of the well, however this may not be possible or convenient, for example when connections are added or removed from a well during the simulation (see the <text:s/><text:a xlink:href="#__RefHeading___Toc97657_3261743917">COMPORD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section for options regarding connection ordering).</text:p>
     <text:p text:style-name="P11019">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table995" table:style-name="Table995">
      <table:table-column table:style-name="Table995.A"/>
@@ -4601,7 +4601,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7281">A character string of up to eight characters in length that defines the well name for which the well connection data are being defined.</text:p>
-       <text:p text:style-name="P7805">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7805">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4617,9 +4617,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9634">LGRNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the LGR name for which the well LGR connection data are being defined.</text:p>
-       <text:p text:style-name="P7806">Note that the well name (LGRNAME) must have been declared previously using the WELSPECL keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
-       <text:p text:style-name="P7922">If defaulted with 1* the LGR on the WELSPECL keyword will be utilized.</text:p>
+       <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> name for which the well <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> connection data are being defined.</text:p>
+       <text:p text:style-name="P7806">Note that the well name (LGRNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7922">If defaulted with 1* the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> on the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword will be utilized.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4636,7 +4636,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7370">A positive integer greater than or equal to zero and less than or equal to NX that defines the connection location in the I-direction.</text:p>
-       <text:p text:style-name="P7237">If set <text:span text:style-name="T2709">to</text:span> zero or defaulted with 1* the location is taken from the wellhead location I-direction value on the WELSPECS keyword in the SCHEDULE section.</text:p>
+       <text:p text:style-name="P7237">If set <text:span text:style-name="T2709">to</text:span> zero or defaulted with 1* the location is taken from the wellhead location I-direction value on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4654,7 +4654,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7370">A positive integer greater than or equal to zero and less than or equal to NY that defines the connection location in the J-direction.</text:p>
-       <text:p text:style-name="P7370">If set to zero or defaulted with 1* the location is taken from the wellhead location J-direction value on the WELSPECS keyword in the SCHEDULE section.</text:p>
+       <text:p text:style-name="P7370">If set to zero or defaulted with 1* the location is taken from the wellhead location J-direction value on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4727,17 +4727,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9633">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" office:value-type="string">
-       <text:p text:style-name="P7900">SATNUM</text:p>
+       <text:p text:style-name="P7900"><text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7575">An integer greater than or equal to zero and less than NTSFUN as declared on the TABDIMS keyword in the RUNSPEC, that defines the saturation table number to be used for flow between the reservoir grid block and the well connections.</text:p>
-       <text:p text:style-name="P7575">If SATNUM is set to zero or defaulted with 1* then:</text:p>
+       <text:p text:style-name="P7575">An integer greater than or equal to zero and less than NTSFUN as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a>, that defines the saturation table number to be used for flow between the reservoir grid block and the well connections.</text:p>
+       <text:p text:style-name="P7575">If <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> is set to zero or defaulted with 1* then:</text:p>
        <text:list xml:id="list105920103524438" text:continue-list="list105920622158054" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19588">The saturation table allocated to the grid block that the connections are located within are used.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19588">If the hysteresis option has been activated via the HYSTER variable on the SATOPTS keyword in the RUNSPEC section, <text:s text:c="2"/>then both the imbibition and drainage saturation tables allocated to the grid block that the connections are located within are used. The imbibition table allocation can be changed by the COMPIMB keyword in the RUNSPEC section, provided it is entered after the COMPDAT keyword.</text:p>
+         <text:p text:style-name="P19588">If the hysteresis option has been activated via the HYSTER variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s text:c="2"/>then both the imbibition and drainage saturation tables allocated to the grid block that the connections are located within are used. The imbibition table allocation can be changed by the <text:a xlink:href="#__RefHeading___Toc97653_3261743917">COMPIMB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, provided it is entered after the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4884,7 +4884,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table995.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7603">A real value that defines the non-Darcy D factor coefficient for gas wells.</text:p>
-       <text:p text:style-name="P7603">This value should be defaulted with 1* and the non-Darcy D factor coefficient for gas wells defined via the WDFAC keyword in the SCHEDULE section. </text:p>
+       <text:p text:style-name="P7603">This value should be defaulted with 1* and the non-Darcy D factor coefficient for gas wells defined via the <text:a xlink:href="#__RefHeading___Toc442057_2026549522">WDFAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
        <text:p text:style-name="P7905">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4930,7 +4930,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1613">Notes:</text:p>
        <text:list xml:id="list4206771233" text:style-name="L116">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19145">The keyword is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the WELLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19145">The keyword is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19145">Each record is terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -4947,7 +4947,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14707">Table <text:sequence text:ref-name="refTable553" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.11</text:sequence>: COMPDATL Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P15410">Multiple grid block connections can be defined on one record for vertical wells by assigning different values to K1 and K2, for deviated and horizontal wells this may not be possible and therefore each grid block connection must be separately defined by using one record per connection, setting K1 equal to K2 in each record.</text:p>
-    <text:p text:style-name="P15345">See also the WELSPECS keyword to define wells, the COMPIMB to reset the imbibition relative permeability table allocation, and the COMPORD to re-order the completions along the well trajectory. In addition, the COMPLUMP keyword groups well connections together to form well completions for a well. All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15345">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define wells, the <text:a xlink:href="#__RefHeading___Toc97653_3261743917">COMPIMB</text:a> to reset the imbibition relative permeability table allocation, and the <text:a xlink:href="#__RefHeading___Toc97657_3261743917">COMPORD</text:a> to re-order the completions along the well trajectory. In addition, the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword groups well connections together to form well completions for a well. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P15345"/>
     <table:table table:name="Table996" table:style-name="Table996">
      <table:table-column table:style-name="Table996.A"/>
@@ -4963,7 +4963,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P11516"/>
     <text:h text:style-name="P18724" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716531_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716531_3964674244"/></text:h>
-    <text:p text:style-name="P11068">The following example defines two vertical oil wells using the WELSPECS keyword and their associated connection data. </text:p>
+    <text:p text:style-name="P11068">The following example defines two vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and their associated connection data. </text:p>
     <text:p text:style-name="P13374">--</text:p>
     <text:p text:style-name="P13374">-- <text:s text:c="6"/>WELL LGR SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P12979">--</text:p>

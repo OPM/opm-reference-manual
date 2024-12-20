@@ -4413,8 +4413,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881918"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881918"/></text:h>
-    <text:p text:style-name="P11868">This keyword defines the network node properties for the extended network option for when the Extended Network Model has been invoked by the NETWORK keyword in the RUNSPEC section. There are two types of network facilities in the simulator, the Standard Network model, which is defined with the GRUPNET keyword in the SCHEDULE section and the Extended Network Model defined by the BRANPROP and NODEPROP keywords, again in the SCHEDULE section. </text:p>
-    <text:p text:style-name="P11868">For the Extended Network Model the group hierarchy can be different to that defined by the GRUPTREE keyword; however, the bottom most nodes in the network tree associated with wells, must be the same as that defined by the GRUPTREE keyword.</text:p>
+    <text:p text:style-name="P11868">This keyword defines the network node properties for the extended network option for when the Extended Network Model has been invoked by the <text:a xlink:href="#__RefHeading___Toc311583_1841740821">NETWORK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. There are two types of network facilities in the simulator, the Standard Network model, which is defined with the <text:a xlink:href="#__RefHeading___Toc118319_1596574740">GRUPNET</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the Extended Network Model defined by the <text:a xlink:href="#__RefHeading___Toc162078_289573908">BRANPROP</text:a> and <text:a xlink:href="#__RefHeading___Toc212708_2026549522">NODEPROP</text:a> keywords, again in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:p text:style-name="P11868">For the Extended Network Model the group hierarchy can be different to that defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword; however, the bottom most nodes in the network tree associated with wells, must be the same as that defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword.</text:p>
     <table:table table:name="Table1904" table:style-name="Table1904">
      <table:table-column table:style-name="Table1904.A"/>
      <table:table-column table:style-name="Table1904.B"/>
@@ -4543,7 +4543,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P20163">YES: Include both gas lift gas and produced gas in the node&apos;s production. This means that all gas from the subordinate wells will be included in the node&apos;s production stream.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="Table_20_Contents">If NODE does not have any subordinate wells or satellite groups (see the <text:s/>GSATPROD keyword in the SCHEDULE section) directly attached to the node, then GASLIFT should be defaulted (1*) or set to NO. <text:s/>The option is only valid for producing networks</text:p>
+       <text:p text:style-name="Table_20_Contents">If NODE does not have any subordinate wells or satellite groups (see the <text:s/><text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section) directly attached to the node, then GASLIFT should be defaulted (1*) or set to NO. <text:s/>The option is only valid for producing networks</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4559,7 +4559,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9123">GROUP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1904.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9018">A character string of up to eight characters in length that defines the group for which the automatic choke will be applied in order to match the group’s target rate (the TARGET variable on the GCONPROD keyword in the SCHEDULE section). The target rate is matched by adjusting the pressure drops across the automatic choke.</text:p>
+       <text:p text:style-name="P9018">A character string of up to eight characters in length that defines the group for which the automatic choke will be applied in order to match the group’s target rate (the TARGET variable on the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section). The target rate is matched by adjusting the pressure drops across the automatic choke.</text:p>
        <text:p text:style-name="P9019">The default value of 1* uses NODE (item one) as the group if it exists in the run. In addition, if NODE is just connected to subordinate wells then GROUP should also be defaulted.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4618,7 +4618,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14994">Table <text:sequence text:ref-name="refTable599" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.57</text:sequence>: NODEPROP Keyword Description</text:p>
     <text:p text:style-name="P15820"/>
-    <text:p text:style-name="P15843">See also the NETWORK keyword in the RUNSPEC section and the BRANPROP in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15843">See also the <text:a xlink:href="#__RefHeading___Toc311583_1841740821">NETWORK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and the <text:a xlink:href="#__RefHeading___Toc162078_289573908">BRANPROP</text:a> in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18677" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716653_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716653_3964674244"/></text:h>
     <text:p text:style-name="P12265">Given the following Extended Network model in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refFigure90">Figure 12.5</text:sequence-ref>.</text:p>
     <text:p text:style-name="P12265"><draw:frame draw:style-name="fr10" draw:name="Frame67" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" svg:width="15.609cm" draw:z-index="246">
@@ -6086,7 +6086,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Figure">Figure <text:sequence text:ref-name="refFigure90" text:name="Figure" text:formula="ooow:Figure+1" style:num-format="1">12.5</text:sequence>: Extend Network Example</text:p>
       </draw:text-box>
      </draw:frame><text:soft-page-break/></text:p>
-    <text:p text:style-name="P12265">First the Extended Network model should be used invoked in the RUNSPEC section, and then the BRANPROP keyword should be used to define the branch network, and finally the NODEPROP keyword is used to describe the node properties with the network.</text:p>
+    <text:p text:style-name="P12265">First the Extended Network model should be used invoked in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and then the <text:a xlink:href="#__RefHeading___Toc162078_289573908">BRANPROP</text:a> keyword should be used to define the branch network, and finally the <text:a xlink:href="#__RefHeading___Toc212708_2026549522">NODEPROP</text:a> keyword is used to describe the node properties with the network.</text:p>
     <text:p text:style-name="P13427">-- ==============================================================================</text:p>
     <text:p text:style-name="P13427">-- </text:p>
     <text:p text:style-name="P13427">-- RUNSPEC SECTION </text:p>

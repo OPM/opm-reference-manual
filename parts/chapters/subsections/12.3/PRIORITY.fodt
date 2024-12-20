@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4291,7 +4292,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838811"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838811"/></text:h>
-    <text:p text:style-name="_40_TextBody">The PRIORITY keyword activates the Well Priority option and defines the coefficients in the well priority equation. Wells under group control are ranked based on their well potential in order to satisfy group controls. For example if a group’s oil target is exceeded, then the group may shut-in the lease productive oil wells based on their well potential. <text:s text:c="2"/>The Priority option is an alternative form of ranking the wells based on the following equation:</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc46726_327352552">PRIORITY</text:a> keyword activates the Well Priority option and defines the coefficients in the well priority equation. Wells under group control are ranked based on their well potential in order to satisfy group controls. For example if a group’s oil target is exceeded, then the group may shut-in the lease productive oil wells based on their well potential. <text:s text:c="2"/>The Priority option is an alternative form of ranking the wells based on the following equation:</text:p>
     <text:p text:style-name="Text_20_body"/>
     <table:table table:name="Table1476" table:style-name="Table1476">
      <table:table-column table:style-name="Table1476.A"/>
@@ -4582,10 +4583,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7117"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1866.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7120">TIME</text:p>
+       <text:p text:style-name="P7120"><text:span text:style-name="NotKeyword">TIME</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1866.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7122">A real positive integer that defines the minimum time interval between executing the well priority calculation. The calculation is performed at the beginning of the time step that exceeds the previous calculation (t0) by a minimum of TIME, that is for when tn ≥ <text:s/>( t0 + TIME).</text:p>
+       <text:p text:style-name="P7122">A real positive integer that defines the minimum time interval between executing the well priority calculation. The calculation is performed at the beginning of the time step that exceeds the previous calculation (t0) by a minimum of <text:span text:style-name="NotKeyword">TIME</text:span>, that is for when tn ≥ <text:s/>( t0 + <text:span text:style-name="NotKeyword">TIME</text:span>).</text:p>
        <text:p text:style-name="P7123">N<text:span text:style-name="T633">ote that the default value of zero means that the calculation is performed at each time step. As a consequence, this may result in some oscillation as well wells are switched on/off at subsequent time steps.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
