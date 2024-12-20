@@ -5792,7 +5792,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:p text:style-name="P177">End-point scaling and hysteresis. </text:p>
      </text:list-item>
      <text:list-item>
-      <text:p text:style-name="P177">Oil vaporization controls (VAPPARS). </text:p>
+      <text:p text:style-name="P177">Oil vaporization controls (<text:a xlink:href="#__RefHeading___Toc210172_2884651453">VAPPARS</text:a>). </text:p>
      </text:list-item>
      <text:list-item>
       <text:p text:style-name="P178">Rock compaction.</text:p>
@@ -6166,7 +6166,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:p text:style-name="P200">Well lists.</text:p>
      </text:list-item>
      <text:list-item>
-      <text:p text:style-name="P200">Action conditions and command processing via the ACTIONX and UDQ keywords employed in the commercial simulator.</text:p>
+      <text:p text:style-name="P200">Action conditions and command processing via the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keywords employed in the commercial simulator.</text:p>
      </text:list-item>
      <text:list-item>
       <text:p text:style-name="P195">Python interface to control and process simulator data.</text:p>
@@ -8992,8 +8992,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         anYAAAAAAAEAAQBqAIwAAQAAAAAAlQABAAQAAAAAAAAAlgABAAIAAAAJAIwAAQAAAAAA
        </office:binary-data>
       </draw:image>
-     </draw:frame>. Two cells share a connection if they are adjacent geometrically in the computational grid or share an explicit Non-Neighbor Connection (<text:span text:style-name="T103">“</text:span>NNC<text:span text:style-name="T103">”)</text:span><text:span text:style-name="T103"><text:note text:id="ftn11" text:note-class="footnote"><text:note-citation>11</text:note-citation><text:note-body>
-        <text:p text:style-name="P80">Connections between cells due to geometric adjacency are automatically calculated by the simulator, including across faults in the grid. In addition, the user can specify extra connections between arbitrary cells using the NNC keyword in the GRID section.</text:p></text:note-body></text:note></text:span>. For example<draw:frame draw:style-name="fr8" draw:name="Object367" text:anchor-type="as-char" svg:width="0.778cm" svg:height="0.305cm" draw:z-index="182"><draw:object>
+     </draw:frame>. Two cells share a connection if they are adjacent geometrically in the computational grid or share an explicit Non-Neighbor Connection (<text:span text:style-name="T103">“</text:span><text:a xlink:href="#__RefHeading___Toc63285_718313858">NNC</text:a><text:span text:style-name="T103">”)</text:span><text:span text:style-name="T103"><text:note text:id="ftn11" text:note-class="footnote"><text:note-citation>11</text:note-citation><text:note-body>
+        <text:p text:style-name="P80">Connections between cells due to geometric adjacency are automatically calculated by the simulator, including across faults in the grid. In addition, the user can specify extra connections between arbitrary cells using the <text:a xlink:href="#__RefHeading___Toc63285_718313858">NNC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p></text:note-body></text:note></text:span>. For example<draw:frame draw:style-name="fr8" draw:name="Object367" text:anchor-type="as-char" svg:width="0.778cm" svg:height="0.305cm" draw:z-index="182"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
          <msub>
@@ -37334,7 +37334,7 @@ sum from{j in C(w) } q_{%alpha,j}} ~+~ Q_{%alpha,n}~=~0</annotation>
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P92">By default, BiCG-stab is used. In addition, there are several options available for preconditioning the linear system. T<text:span text:style-name="T6">he default choice being the incomplete lower triangular-upper triangular factorization with level of </text:span>fill i<text:span text:style-name="T6">n 0 (ILU0). More sophisticated choices are based on an algebraic mult</text:span>i-<text:span text:style-name="T6">grid (AMG) method for preconditioning, such </text:span>the<text:span text:style-name="T6"> Constraint Pressure Residual (CPR) preconditioner (originally introduced </text:span>by Wallis<text:note text:id="ftn27" text:note-class="footnote"><text:note-citation>27</text:note-citation><text:note-body>
+    <text:p text:style-name="P92">By default, BiCG-stab is used. In addition, there are several options available for preconditioning the linear system. T<text:span text:style-name="T6">he default choice being the incomplete lower triangular-upper triangular factorization with level of </text:span>fill i<text:span text:style-name="T6">n 0 (ILU0). More sophisticated choices are based on an algebraic mult</text:span>i-<text:span text:style-name="T6">grid (AMG) method for preconditioning, such </text:span>the<text:span text:style-name="T6"> Constraint Pressure Residual (<text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a>) preconditioner (originally introduced </text:span>by Wallis<text:note text:id="ftn27" text:note-class="footnote"><text:note-citation>27</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">J. Wallis, Incomplete Gaussian Elimination as a Preconditioning for Generalized Conjugate Gradient Acceleration, in: 7th SPE Symposium on Reservoir Simulation, San Francisco, USA, Society of Petroleum Engineers, 1983. doi:10.2118/12265-MS.</text:p></text:note-body></text:note> <text:span text:style-name="T6">using the approach of </text:span>Scheichl et al.<text:note text:id="ftn28" text:note-class="footnote"><text:note-citation>28</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">R. Scheichl, M. Roland, J. Wendebourg, Decoupling and block preconditioning for sedimentary basin simulations, Computational Geosciences 7 (2003) 295{318.</text:p></text:note-body></text:note>).<text:span text:style-name="T6"> The solvers and preconditioners are implemented in the Dune module dune-istl and described </text:span>by Blatt et al.<text:note text:id="ftn29" text:note-class="footnote"><text:note-citation>29</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">M. Blatt, A parallel algebraic multigrid method for elliptic problems with highly discontinuous <text:span text:style-name="T169">coefficients</text:span>, Ph.D. thesis, Ruprech<text:span text:style-name="T222">t</text:span>-Karls-Universitat Heidelberg (2010<text:span text:style-name="T222">).</text:span></text:p></text:note-body></text:note>, <text:note text:id="ftn30" text:note-class="footnote"><text:note-citation>30</text:note-citation><text:note-body>
