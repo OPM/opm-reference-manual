@@ -4282,7 +4282,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716699_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716699_3964674244"/></text:h>
-    <text:p text:style-name="P12004">T<text:span text:style-name="T1">he VFPTABL keyword defines the interpolation method for production Vertical Flow Performance (“VFP”) tables for the Artificial Lift Quantity (“ALQ”). <text:s/></text:span>Production VFP data is entered via the VFPPROD keyword in the SCHEDULE section. By default t<text:span text:style-name="T1">he simulator interpolates all the variables in the VFP tables using linear interpolation, including the ALQ quantity. However, if the ALQ values represent gas lift, then linear interpolation may not be insufficient, as the gradient change between the tabulated ALQ values may result in sudden changes. This is particular</text:span>ly<text:span text:style-name="T1"> important in gas lift optimization studies where the available gas lift gas is being allocated to a group of well</text:span>s<text:span text:style-name="T1"> in order to maximize oil production rates. To overcome this issue the VFPTABL keyword allows the ALQ values to be interpolated using cubic spline interpolation, and results </text:span>in <text:span text:style-name="T1">a smother transition between the </text:span>various ALQ entries.<text:span text:style-name="T1"> </text:span></text:p>
+    <text:p text:style-name="P12004">T<text:span text:style-name="T1">he <text:a xlink:href="#__RefHeading___Toc647382_487874538">VFPTABL</text:a> keyword defines the interpolation method for production Vertical Flow Performance (“VFP”) tables for the Artificial Lift Quantity (“ALQ”). <text:s/></text:span>Production VFP data is entered via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. By default t<text:span text:style-name="T1">he simulator interpolates all the variables in the VFP tables using linear interpolation, including the ALQ quantity. However, if the ALQ values represent gas lift, then linear interpolation may not be insufficient, as the gradient change between the tabulated ALQ values may result in sudden changes. This is particular</text:span>ly<text:span text:style-name="T1"> important in gas lift optimization studies where the available gas lift gas is being allocated to a group of well</text:span>s<text:span text:style-name="T1"> in order to maximize oil production rates. To overcome this issue the <text:a xlink:href="#__RefHeading___Toc647382_487874538">VFPTABL</text:a> keyword allows the ALQ values to be interpolated using cubic spline interpolation, and results </text:span>in <text:span text:style-name="T1">a smother transition between the </text:span>various ALQ entries.<text:span text:style-name="T1"> </text:span></text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1694" table:style-name="Table1694">
      <table:table-column table:style-name="Table1694.A"/>
@@ -4325,16 +4325,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3128">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1694.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5269">VFPTABL</text:p>
+       <text:p text:style-name="P5269"><text:a xlink:href="#__RefHeading___Toc647382_487874538">VFPTABL</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1694.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P2817">VFPTABL is a defined positive integer that specifies the interpolation method to be used with the ALQ quantity in the VFP production tables, and should be set to one of the following:</text:p>
+       <text:p text:style-name="P2817"><text:a xlink:href="#__RefHeading___Toc647382_487874538">VFPTABL</text:a> is a defined positive integer that specifies the interpolation method to be used with the ALQ quantity in the VFP production tables, and should be set to one of the following:</text:p>
        <text:list xml:id="list105922039938254" text:continue-list="list105921284824273" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17123">Apply linear interpolation to all VFPPROD variables.</text:p>
+         <text:p text:style-name="P17123">Apply linear interpolation to all <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> variables.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17123">Apply linear interpolation to all VFPPROD variables, except for the ALQ variable, for which cubic spline interpolation should be used.</text:p>
+         <text:p text:style-name="P17123">Apply linear interpolation to all <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> variables, except for the ALQ variable, for which cubic spline interpolation should be used.</text:p>
         </text:list-item>
        </text:list>
        <text:list xml:id="list1398786900" text:style-name="L156">
@@ -4381,7 +4381,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14992">Table <text:sequence text:ref-name="refTable618" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.76</text:sequence>: VFPTABL Keyword Description</text:p>
     <text:h text:style-name="P18685" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716701_3964674244"/>E<text:span text:style-name="T2709">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc716701_3964674244"/></text:h>
-    <text:p text:style-name="P12003">The example sets cubic spline interpolation for the ALQ quantity in the VFPPROD tables, with linear interpolation used for all the variables.</text:p>
+    <text:p text:style-name="P12003">The example sets cubic spline interpolation for the ALQ quantity in the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> tables, with linear interpolation used for all the variables.</text:p>
     <text:p text:style-name="P14441">--</text:p>
     <text:p text:style-name="P14441">-- <text:s text:c="6"/>ALQ INTERPOLATION OPTION</text:p>
     <text:p text:style-name="P14441">--</text:p>

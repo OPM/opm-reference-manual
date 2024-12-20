@@ -4311,8 +4311,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716777_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716777_3964674244"/></text:h>
-    <text:p text:style-name="P12023">This keyword, WHTEMP, <text:s/>sets the parameters for the Tubing Head Temperature calculation, which can either be a constant value, or from a table lookup using a VFPPROD table, via the VFPPROD keyword in the SCHEDULE section, containing tubing head temperature data. </text:p>
-    <text:p text:style-name="P12023">This keyword can only be used if the thermal option has been activated by the THERMAL keyword in the RUNSPEC section. Note this is different to the commercial simulator that uses the TEMP keyword in the RUNSPEC section to activate the black-oil thermal model.</text:p>
+    <text:p text:style-name="P12023">This keyword, <text:a xlink:href="#__RefHeading___Toc1074811_487874538">WHTEMP</text:a>, <text:s/>sets the parameters for the Tubing Head Temperature calculation, which can either be a constant value, or from a table lookup using a <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table, via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, containing tubing head temperature data. </text:p>
+    <text:p text:style-name="P12023">This keyword can only be used if the thermal option has been activated by the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note this is different to the commercial simulator that uses the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to activate the black-oil thermal model.</text:p>
     <text:p text:style-name="P12027">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1722" table:style-name="Table1722">
      <table:table-column table:style-name="Table1722.A"/>
@@ -4361,7 +4361,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1722.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7318">A character string of up to eight characters in length that defines the well name for which the well production targets and constraints data are being defined.</text:p>
-       <text:p text:style-name="P7318">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7318">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4377,9 +4377,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8845">VFPTAB</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1722.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7691">A positive integer greater than or equal to zero that references the production vertical lift performance table (VFPPROD), containing the tubing head temperature data for the well. </text:p>
-       <text:p text:style-name="P7561">Note, a well must have both a VFPPROD pressure and a VFPPROD temperature table, if the tubing head temperatures are to be calculated. </text:p>
-       <text:p text:style-name="P7561">Alternatively, if a constant tubing head temperature for a production well is to be defined via the TEMP parameter, then VFPTAB should be defaulted with 1* instead.</text:p>
+       <text:p text:style-name="P7691">A positive integer greater than or equal to zero that references the production vertical lift performance table (<text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a>), containing the tubing head temperature data for the well. </text:p>
+       <text:p text:style-name="P7561">Note, a well must have both a <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> pressure and a <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> temperature table, if the tubing head temperatures are to be calculated. </text:p>
+       <text:p text:style-name="P7561">Alternatively, if a constant tubing head temperature for a production well is to be defined via the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> parameter, then VFPTAB should be defaulted with 1* instead.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4406,7 +4406,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7560">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1722.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9899">TEMP</text:p>
+       <text:p text:style-name="P9899"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1722.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P8259">A real positive value greater than zero that defines a constant tubing head temperature for a production well.</text:p>
@@ -4437,7 +4437,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1720">Notes:</text:p>
        <text:list xml:id="list105923281189115" text:continue-list="list2225491387" text:style-name="L173">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19378">Note either VFPTAB or TEMP must be supplies, that is one can specify both.</text:p>
+         <text:p text:style-name="P19378">Note either VFPTAB or <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> must be supplies, that is one can specify both.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19200">The keyword is followed by any number<text:span text:style-name="T1533"> records</text:span> with e<text:span text:style-name="T1533">ach record terminated by a “/” and the </text:span>keyword should be terminated by a <text:span text:style-name="T1533">“/”.</text:span></text:p>
@@ -4453,10 +4453,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P16208">Table <text:sequence text:ref-name="refTable641" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.99</text:sequence>: WHTEMP Keyword Description</text:p>
     <text:p text:style-name="P15361"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P15361">See also the VFPPROD keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15361">See also the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P15361"/>
     <text:h text:style-name="P18736" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716779_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716779_3964674244"/></text:h>
-    <text:p text:style-name="P11100">The following example defines three wells tubing head temperature parameters using the WHTEMP keyword </text:p>
+    <text:p text:style-name="P11100">The following example defines three wells tubing head temperature parameters using the <text:a xlink:href="#__RefHeading___Toc1074811_487874538">WHTEMP</text:a> keyword </text:p>
     <text:p text:style-name="P14237">--</text:p>
     <text:p text:style-name="P14237">-- <text:s text:c="6"/>DEFINE WELL TUBING HEAD TEMPERATURE PARAMETERS <text:s text:c="52"/></text:p>
     <text:p text:style-name="P14237">-- <text:s text:c="77"/></text:p>
@@ -4468,7 +4468,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14237">OP03 <text:s text:c="4"/>5 <text:s text:c="68"/>/</text:p>
     <text:p text:style-name="P13143">/ <text:s text:c="71"/><text:s text:c="77"/></text:p>
     <text:p text:style-name="P15588"/>
-    <text:p text:style-name="P15509">Here, well OP01 and OP03 used VFPPROD table number five to calculate the tubing head temperature, <text:s/>and well OP02’s uses a constant 150o tubing head temperature.</text:p>
+    <text:p text:style-name="P15509">Here, well OP01 and OP03 used <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table number five to calculate the tubing head temperature, <text:s/>and well OP02’s uses a constant 150o tubing head temperature.</text:p>
     <text:p text:style-name="P11353"/>
     <text:p text:style-name="P11353"/>
     

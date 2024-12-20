@@ -4894,8 +4894,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716695_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716695_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The VFPPROD keyword defines production Vertical Flow Performance (“VFP”) tables that are used to determine the outflow or downstream pressure based on the inlet or upstream pressure and the phases flowing through the system. <text:s/>For a well this means the table relates the flowing bottom-hole pressure (“BHP”) to the well’s tubing head pressure (“THP”) based on the oil, gas and water rates (and any artificial lift quantities like gas lift gas), or phases ratios, flowing up the wellbore. <text:s/>The table is also used to describe the pressure relationship when the network option is being used. <text:s/>In this case the table describes the pipeline pressure behavior from the LOWER group (inlet node) to the HIGHER group (outlet node) given the current flowing conditions (the group relationship is defined by the GRUPTREE keyword in SCHEDULE section).</text:p>
-    <text:p text:style-name="_40_TextBody">Each VFPPROD table must be entered with a separate VFPPROD keyword that consists of seven records, with 1-1, 1-2 representing record one items (1) and (2) and 2-1, 2-2 representing record number two items (1) and (2) in the “No.” column in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref>. Each record is terminated by a “/”. The seventh record must be repeated to give BHP data as a function of FLO for all THP values.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword defines production Vertical Flow Performance (“VFP”) tables that are used to determine the outflow or downstream pressure based on the inlet or upstream pressure and the phases flowing through the system. <text:s/>For a well this means the table relates the flowing bottom-hole pressure (“BHP”) to the well’s tubing head pressure (“THP”) based on the oil, gas and water rates (and any artificial lift quantities like gas lift gas), or phases ratios, flowing up the wellbore. <text:s/>The table is also used to describe the pressure relationship when the network option is being used. <text:s/>In this case the table describes the pipeline pressure behavior from the LOWER group (inlet node) to the HIGHER group (outlet node) given the current flowing conditions (the group relationship is defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword in <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section).</text:p>
+    <text:p text:style-name="_40_TextBody">Each <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table must be entered with a separate <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword that consists of seven records, with 1-1, 1-2 representing record one items (1) and (2) and 2-1, 2-2 representing record number two items (1) and (2) in the “No.” column in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref>. Each record is terminated by a “/”. The seventh record must be repeated to give BHP data as a function of FLO for all THP values.</text:p>
     <table:table table:name="Table701" table:style-name="Table701">
      <table:table-column table:style-name="Table701.A"/>
      <table:table-column table:style-name="Table701.B"/>
@@ -4942,7 +4942,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9660">VFPTAB</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7685">A positive integer greater than zero and less than or equal to the MXVFPTAB variable as defined on the VFPPDIMS keyword in the RUNSPEC section, <text:s/>that defines the vertical lift performance table number. </text:p>
+       <text:p text:style-name="P7685">A positive integer greater than zero and less than or equal to the MXVFPTAB variable as defined on the <text:a xlink:href="#__RefHeading___Toc95111_327352552">VFPPDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>that defines the vertical lift performance table number. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4958,8 +4958,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8089">VFPREF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7387">A real positive value that defines the reference depth used to generate <text:s/>this VFPPROD table data set.</text:p>
-       <text:p text:style-name="P8158">OPM Flow automatically corrects any difference between VFPREF and the BHPREF on the WELSPECS and WPAVEDEP keywords in the SCHEDULE section, using the current hydrostatic head.</text:p>
+       <text:p text:style-name="P7387">A real positive value that defines the reference depth used to generate <text:s/>this <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table data set.</text:p>
+       <text:p text:style-name="P8158">OPM Flow automatically corrects any difference between VFPREF and the BHPREF on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc121639_2412586160">WPAVEDEP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, using the current hydrostatic head.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4979,10 +4979,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7388">A defined character string that defines the flowing phases, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105922621787679" text:continue-list="list105921034894489" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19519">GAS: for flowing phase being the gas rate. </text:p>
+         <text:p text:style-name="P19519"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: for flowing phase being the gas rate. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19550">OIL: for flowing phase being the oil rate. </text:p>
+         <text:p text:style-name="P19550"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: for flowing phase being the oil rate. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19550">LIQ: for flowing phase being the liquid (oil plus water) rate. </text:p>
@@ -5370,17 +5370,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19710">“ ”: for undefined, that is for no ALQ data.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P9245">The ALQ parameter is just another variable used to interpolate the outflow pressure based on the inlet pressure, together with the phases flowing through the system. <text:s/>As such, <text:s/>ALQ can represent any parameter; however, the units should be consistent with that used to set the value. For example, <text:s/>if pump speed (Hz) is used to set a well<text:span text:style-name="T2110">’s artificial lift quantity via the WCONPROD(ALQ-WELL) parameter </text:span>in the SCHEDULE section<text:span text:style-name="T2110">, then the ALQ-</text:span>DATA <text:span text:style-name="T2110">should represent pump speed in Hz.</text:span></text:p>
+       <text:p text:style-name="P9245">The ALQ parameter is just another variable used to interpolate the outflow pressure based on the inlet pressure, together with the phases flowing through the system. <text:s/>As such, <text:s/>ALQ can represent any parameter; however, the units should be consistent with that used to set the value. For example, <text:s/>if pump speed (Hz) is used to set a well<text:span text:style-name="T2110">’s artificial lift quantity via the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>(ALQ-WELL) parameter </text:span>in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section<text:span text:style-name="T2110">, then the ALQ-</text:span>DATA <text:span text:style-name="T2110">should represent pump speed in Hz.</text:span></text:p>
        <text:p text:style-name="P9244">The default value of 1* is <text:s/>“ <text:span text:style-name="T2110">” </text:span>or undefined, that covers the case when the ALQ variable is not entered, except for when gas lift is employed in the model. <text:s/>When gas lift is active then the default value for ALQ is set to GRAT provided:</text:p>
        <text:list xml:id="list105921284824273" text:continue-list="list105922387804494" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19709">Gas lift optimization is active via the LIFTOPT keyword, or </text:p>
+         <text:p text:style-name="P19709">Gas lift optimization is active via the <text:a xlink:href="#__RefHeading___Toc118992_332691817">LIFTOPT</text:a> keyword, or </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19709">The GLIFTLIM keyword in the SCHEDULE section is used to constrain the total amount of gas lift used within a group, <text:s/>or</text:p>
+         <text:p text:style-name="P19709">The <text:a xlink:href="#__RefHeading___Toc399999_1414963541">GLIFTLIM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section is used to constrain the total amount of gas lift used within a group, <text:s/>or</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19709">Gas lift flows are included in the network pressure loss calculations as determined by the GRUPNET(OPTION2), or the NODEPROP(GASLIFT) parameters in the SCHEDULE section.</text:p>
+         <text:p text:style-name="P19709">Gas lift flows are included in the network pressure loss calculations as determined by the <text:a xlink:href="#__RefHeading___Toc118319_1596574740">GRUPNET</text:a>(OPTION2), or the <text:a xlink:href="#__RefHeading___Toc212708_2026549522">NODEPROP</text:a>(GASLIFT) parameters in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P16799">In addition, if any of the above is true than ALQ must be set to GRAT.</text:p>
@@ -5409,7 +5409,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <dc:creator>Atgeirr Rasmussen</dc:creator>
          <dc:date>2017-09-21T13:38:25</dc:date>
          <meta:creator-initials>AFR</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">Meaningless default, see VFPINJ</text:span></text:p>
+         <text:p text:style-name="P20244"><text:span text:style-name="T8540">Meaningless default, see <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:span></text:p>
         </office:annotation>1*<office:annotation-end office:name="__Annotation__160575_1126630271"/><office:annotation>
          <dc:creator>David Baxendale</dc:creator>
          <dc:date>2017-10-03T10:17:56.850000000</dc:date>
@@ -5423,13 +5423,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P8110">FIELD</text:p>
+       <text:p text:style-name="P8110"><text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P8110">METRIC</text:p>
+       <text:p text:style-name="P8110"><text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P8110">LAB</text:p>
+       <text:p text:style-name="P8110"><text:a xlink:href="#__RefHeading___Toc72458_2267116897">LAB</text:a></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -5442,7 +5442,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8115">VFPVALUE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7355">A defined character string that defines the type of data in the VFP-DATA vector. This should be set equal to BHP. if the data contains the bottom-hole pressure data, or TEMP if the data is the Tubing Head Temperature (THT) data.</text:p>
+       <text:p text:style-name="P7355">A defined character string that defines the type of data in the VFP-DATA vector. This should be set equal to BHP. if the data contains the bottom-hole pressure data, or <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> if the data is the Tubing Head Temperature (THT) data.</text:p>
        <text:p text:style-name="P8116">This variable is ignored by OPM Flow and should be defaulted with 1*.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5476,7 +5476,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7438">A real positive monotonically increasing vector that defines the numerical values of the flowing phase declared by the FLO variable.</text:p>
-       <text:p text:style-name="P7791">The number of entries must greater than two and less than or equal to MXMFLO as defined on the VFPPDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P7791">The number of entries must greater than two and less than or equal to MXMFLO as defined on the <text:a xlink:href="#__RefHeading___Toc95111_327352552">VFPPDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5526,7 +5526,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7438">A real positive monotonically increasing vector that defines the numerical values of the tubing head pressure values.</text:p>
-       <text:p text:style-name="P7791">The number of entries must greater than two and less than or equal to MXMTHP as defined on the VFPPDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P7791">The number of entries must greater than two and less than or equal to MXMTHP as defined on the <text:a xlink:href="#__RefHeading___Toc95111_327352552">VFPPDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5578,7 +5578,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7439">A real positive monotonically increasing vector that defines the numerical values of the flowing water fraction declared by the WFR variable.</text:p>
-       <text:p text:style-name="P7792">The number of entries must greater than two and less than or equal to MXMWFR as defined on the VFPPDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P7792">The number of entries must greater than two and less than or equal to MXMWFR as defined on the <text:a xlink:href="#__RefHeading___Toc95111_327352552">VFPPDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5638,7 +5638,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7439">A real positive monotonically increasing vector that defines the numerical values of the flowing gas fraction declared by the GFR variable.</text:p>
-       <text:p text:style-name="P7792">The number of entries must greater than two and less than or equal to MXMGFR as defined on the VFPPDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P7792">The number of entries must greater than two and less than or equal to MXMGFR as defined on the <text:a xlink:href="#__RefHeading___Toc95111_327352552">VFPPDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5691,7 +5691,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C26" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7439">A real positive monotonically increasing vector that defines the numerical values of the artificial lift quantity declared by the ALQ variable.</text:p>
-       <text:p text:style-name="P7792">The number of entries must greater than two and less than or equal to MXMALQ as defined on the VFPPDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P7792">The number of entries must greater than two and less than or equal to MXMALQ as defined on the <text:a xlink:href="#__RefHeading___Toc95111_327352552">VFPPDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5852,7 +5852,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1612">Notes:</text:p>
        <text:list xml:id="list1476790467" text:style-name="L155">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19372">Each VFPPROD table must be entered with a separate VFPPROD keyword that consists of seven records, with entries 1-1 to 1-10 representing record one items and 2-1 to 2-2 representing record number two items, etc., in the “No.” column in this table. </text:p>
+         <text:p text:style-name="P19372">Each <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table must be entered with a separate <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> keyword that consists of seven records, with entries 1-1 to 1-10 representing record one items and 2-1 to 2-2 representing record number two items, etc., in the “No.” column in this table. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19372">Each of the records are terminated by a “/” and is explicitly shown in the above rows.</text:p>
@@ -5871,7 +5871,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable617" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.75</text:sequence>: VFPPROD Keyword Description</text:p>
     <text:p text:style-name="P15674"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">The data for this keyword is generated by an external program and is normally included into the input deck using the INCLUDE keyword </text:span>as described <text:span text:style-name="T1">in </text:span>section <text:a xlink:type="simple" xlink:href="#4.GLOBAL SECTION KEYWORDS|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc55745_2479612490">CHAPTER 4:</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#4.GLOBAL SECTION KEYWORDS|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#4.GLOBAL SECTION KEYWORDS|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc55745_2479612490">GLOBAL SECTION KEYWORDS</text:bookmark-ref></text:a><text:span text:style-name="T1">, as the data can be quite voluminous. <text:s text:c="2"/></text:span></text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">The data for this keyword is generated by an external program and is normally included into the input deck using the <text:a xlink:href="#__RefHeading___Toc605478_3199477706">INCLUDE</text:a> keyword </text:span>as described <text:span text:style-name="T1">in </text:span>section <text:a xlink:type="simple" xlink:href="#4.GLOBAL SECTION KEYWORDS|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc55745_2479612490">CHAPTER 4:</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#4.GLOBAL SECTION KEYWORDS|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#4.GLOBAL SECTION KEYWORDS|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc55745_2479612490">GLOBAL SECTION KEYWORDS</text:bookmark-ref></text:a><text:span text:style-name="T1">, as the data can be quite voluminous. <text:s text:c="2"/></text:span></text:p>
     <text:p text:style-name="P12455">Note that for equivalent two phase runs:</text:p>
     <text:list xml:id="list105923008198936" text:continue-list="list105921836577888" text:style-name="_40_NumberList">
      <text:list-item>
@@ -5879,12 +5879,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P17175">For example oil-water runs with only the OIL and WATER keywords in the RUNSPEC section, or runs that model dead oil<text:note text:id="ftn316" text:note-class="footnote"><text:note-citation>316</text:note-citation><text:note-body>
-              <text:p text:style-name="P16650">“Dead” oil is oil that it contains no dissolved gas or a relatively thick oil or residue that has lost its volatile components. </text:p></text:note-body></text:note> with a constant solution gas-oil ratio value defined by the RSCONST keyword in the PROPS section, then the FLO <text:soft-page-break/>parameter in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref><text:s/>must be set to either OIL or LIQ, WFR to either WCT or WOR, and GFR to GOR. </text:p>
+          <text:p text:style-name="P17175">For example oil-water runs with only the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> and <text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, or runs that model dead oil<text:note text:id="ftn316" text:note-class="footnote"><text:note-citation>316</text:note-citation><text:note-body>
+              <text:p text:style-name="P16650">“Dead” oil is oil that it contains no dissolved gas or a relatively thick oil or residue that has lost its volatile components. </text:p></text:note-body></text:note> with a constant solution gas-oil ratio value defined by the <text:a xlink:href="#__RefHeading___Toc138398_332691817">RSCONST</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, then the FLO <text:soft-page-break/>parameter in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref><text:s/>must be set to either <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> or LIQ, WFR to either WCT or WOR, and GFR to GOR. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17175">Gas-water models with only the GAS and WATER keywords in the RUNSPEC section, or models that only have dry gas<text:note text:id="ftn317" text:note-class="footnote"><text:note-citation>317</text:note-citation><text:note-body>
-              <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note> with a constant condensate-gas ratio defined by the RVCONST keyword in the PROPS section, then the FLO parameter in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref><text:s/>must be set to GAS, WFR to WGR, and GFR to OGR.</text:p>
+          <text:p text:style-name="P17175">Gas-water models with only the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> and <text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, or models that only have dry gas<text:note text:id="ftn317" text:note-class="footnote"><text:note-citation>317</text:note-citation><text:note-body>
+              <text:p text:style-name="P16655">Natural gas that occurs in the absence of condensate or liquid hydrocarbons, or gas that had condensable hydrocarbons removed, is called dry gas. It is primarily methane with some intermediates. The hydrocarbon mixture is solely gas in the reservoir and there is no liquid (condensate surface liquid) formed either in the reservoir or at surface. <text:span text:style-name="T4395">The term dry indicates that the gas does not contain heavier hydrocarbons to form liquids at the surface conditions. Dry gas typically has GOR&apos;s greater than 100,000 scf/stb or 18,000 Sm3/m3. </text:span></text:p></text:note-body></text:note> with a constant condensate-gas ratio defined by the <text:a xlink:href="#__RefHeading___Toc329587_516898843">RVCONST</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, then the FLO parameter in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref><text:s/>must be set to <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, WFR to WGR, and GFR to OGR.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
@@ -5898,18 +5898,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708753070416">
        <table:table-cell table:style-name="Table1815.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10339">It is possible to have only the OIL and WATER keywords in the RUNSPEC section and to use gas lift for the wells, without declaring the GAS phase in the RUNSPEC section.</text:p>
-        <text:p text:style-name="P10387">In this case, <text:s/>the FLO parameter in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref><text:s/>must be set to either OIL or LIQ, WFR to either WCT or WOR, and GFR to GOR. <text:s/>In this case the ALQ parameter is optional, but if present must set to GRAT. <text:s/>If the ALQ and ALQ-DATA parameters are absent then the GFR-DATA will be used based on the flowing GOR plus the stipulated gas lift gas.</text:p>
+        <text:p text:style-name="P10339">It is possible to have only the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> and <text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section and to use gas lift for the wells, without declaring the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> phase in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+        <text:p text:style-name="P10387">In this case, <text:s/>the FLO parameter in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable617">Table 12.75</text:sequence-ref><text:s/>must be set to either <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a> or LIQ, WFR to either WCT or WOR, and GFR to GOR. <text:s/>In this case the ALQ parameter is optional, but if present must set to GRAT. <text:s/>If the ALQ and ALQ-DATA parameters are absent then the GFR-DATA will be used based on the flowing GOR plus the stipulated gas lift gas.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P10921"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">See also the WELSPECS keyword to define wells </text:span>and the WCONPROD keyword that is used to allocate the VFPPROD tables to specific wells. <text:s/>Note that one VFPPROD table can be allocated to one or more wells, provided the wells in question have a similar trajectory and similar flow characteristics<text:span text:style-name="T1">, </text:span>for example vertical oil wells producing from the same reservoir, or different reservoirs with similar PVT properties.</text:p>
-    <text:p text:style-name="P10921">The VFPINJ keyword is used to enter VFP tables for injection wells or to describe the pressure relationship when the network option is being used. <text:s/>In this case the table describes the pipeline pressure behavior from the HIGHER group (inlet node) to the LOWER group (outlet node) given the current injection conditions.</text:p>
-    <text:p text:style-name="P10921">All the aforementioned keywords are described in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T1">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define wells </text:span>and the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword that is used to allocate the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> tables to specific wells. <text:s/>Note that one <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table can be allocated to one or more wells, provided the wells in question have a similar trajectory and similar flow characteristics<text:span text:style-name="T1">, </text:span>for example vertical oil wells producing from the same reservoir, or different reservoirs with similar PVT properties.</text:p>
+    <text:p text:style-name="P10921">The <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> keyword is used to enter VFP tables for injection wells or to describe the pressure relationship when the network option is being used. <text:s/>In this case the table describes the pipeline pressure behavior from the HIGHER group (inlet node) to the LOWER group (outlet node) given the current injection conditions.</text:p>
+    <text:p text:style-name="P10921">All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716697_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716697_3964674244"/></text:h>
-    <text:p text:style-name="P11067">The following example shows the VFPPROD table for a production gas well and is taken from the Norne OPM Flow model. Here WFR has been set to water-gas ratio and GFR has been set to the oil-gas ratio, and the ALQ value is defaulted.</text:p>
+    <text:p text:style-name="P11067">The following example shows the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> table for a production gas well and is taken from the Norne OPM Flow model. Here WFR has been set to water-gas ratio and GFR has been set to the oil-gas ratio, and the ALQ value is defaulted.</text:p>
     <text:p text:style-name="P14209">VFPPROD</text:p>
     <text:p text:style-name="P13113"/>
     <text:p text:style-name="P14209">-- Table <text:s text:c="2"/>Datum Depth <text:s text:c="2"/>Rate Type <text:s text:c="2"/>WFR Type <text:s text:c="2"/>GFR Type</text:p>
@@ -5959,7 +5959,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14419">/ <text:s text:c="56"/><text:s text:c="77"/></text:p>
     <text:p text:style-name="P15505">The example shows the first two and the last two records of type seven, as the data is too voluminous to be included.</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P16048">The next example below shows an example oil producing well VFPPROD, again taken from Norne OPM Flow model. Here WFR has been set to water cut and GFR has been set to the gas-oil ratio, and the ALQ value is defaulted.</text:p>
+    <text:p text:style-name="P16048">The next example below shows an example oil producing well <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a>, again taken from Norne OPM Flow model. Here WFR has been set to water cut and GFR has been set to the gas-oil ratio, and the ALQ value is defaulted.</text:p>
     <text:p text:style-name="P12904">VFPPROD</text:p>
     <text:p text:style-name="P12904"/>
     <text:p text:style-name="P12904">-- Table <text:s text:c="2"/>Datum Depth <text:s text:c="2"/>Rate Type <text:s text:c="2"/>WFR Type <text:s text:c="2"/>GFR Type <text:s text:c="2"/>TAB Type</text:p>

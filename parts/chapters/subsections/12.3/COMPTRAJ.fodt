@@ -4913,7 +4913,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P96" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716525_39646742441"/>Description<text:bookmark-end text:name="__RefHeading___Toc716525_39646742441"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMPTRAJ keyword defines how a well that has been declared as a trajectory well, using the WELTRAJ keyword in the SCHEDULE section, is connected to the reservoir model by defining or modifying existing well perforation depths. The keyword can only be used for wells defined by the WELTRAJ keyword, and WELTRAJ defined wells must use the COMPTRAJ keyword to define the connections to the grid, that is one cannot use COMPDAT for these type of wells.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> keyword defines how a well that has been declared as a trajectory well, using the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, is connected to the reservoir model by defining or modifying existing well perforation depths. The keyword can only be used for wells defined by the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword, and <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> defined wells must use the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> keyword to define the connections to the grid, that is one cannot use <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> for these type of wells.</text:p>
     <table:table table:name="Table2268" table:style-name="Table2268">
      <table:table-column table:style-name="Table2268.A"/>
      <table:table-header-rows>
@@ -4973,7 +4973,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2266.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P107">A character string of up to eight characters in length that defines the well name for which the well connection data are being defined.</text:p>
-       <text:p text:style-name="P107">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P107">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4990,8 +4990,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P107"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table2266.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P107">A positive integer greater than or equal to one and less than or equal to MXBRAN on WSEGDIMS keyword in the RUNSPEC section that defines the branch number of a segment.</text:p>
-       <text:p text:style-name="P107">All segments on the main stem must have IBRANCH set to one and lateral branches should have values between two and MXSEGS on the <text:s/>WSEGDIMS keyword in the RUNSPEC section.</text:p>
+       <text:p text:style-name="P107">A positive integer greater than or equal to one and less than or equal to MXBRAN on <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the branch number of a segment.</text:p>
+       <text:p text:style-name="P107">All segments on the main stem must have IBRANCH set to one and lateral branches should have values between two and MXSEGS on the <text:s/><text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
        <text:p text:style-name="P107">Only the default value of one is currently supported, that is only the main branch of a multi-segment well is supported, <text:s/>or a single trajectory for a conventional well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5095,7 +5095,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P107">ICOMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2266.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P107">An integer greater than or equal to one and less than or equal to MXCONS as defined on the WELLDIMS keyword in the RUNSPEC section, that defines the completion number of the currently defined perforation interval (connection interval).</text:p>
+       <text:p text:style-name="P107">An integer greater than or equal to one and less than or equal to MXCONS as defined on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the completion number of the currently defined perforation interval (connection interval).</text:p>
        <text:p text:style-name="P107">If defaulted with 1*, then ICOMP is set equal to one.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5136,17 +5136,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P136">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2266.C2" office:value-type="string">
-       <text:p text:style-name="P107">SATNUM</text:p>
+       <text:p text:style-name="P107"><text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2266.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P107">An integer greater than or equal to zero and less than NTSFUN as declared on the TABDIMS keyword in the RUNSPEC, that defines the saturation table number to be used for flow between the reservoir grid block and the well connections.</text:p>
-       <text:p text:style-name="P107">If SATNUM is set to zero or defaulted with 1* then:</text:p>
+       <text:p text:style-name="P107">An integer greater than or equal to zero and less than NTSFUN as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a>, that defines the saturation table number to be used for flow between the reservoir grid block and the well connections.</text:p>
+       <text:p text:style-name="P107">If <text:a xlink:href="#__RefHeading___Toc71136_2752266063">SATNUM</text:a> is set to zero or defaulted with 1* then:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P134">The saturation table allocated to the grid block that the connections are located within are used.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P134">If the hysteresis option has been activated via the HYSTER variable on the SATOPTS keyword in the RUNSPEC section, <text:s text:c="2"/>then both the imbibition and drainage saturation tables allocated to the grid block that the connections are located within are used. The imbibition table allocation can be changed by the COMPIMB keyword in the RUNSPEC section, provided it is entered after the COMPTRAJ keyword.</text:p>
+         <text:p text:style-name="P134">If the hysteresis option has been activated via the HYSTER variable on the <text:a xlink:href="#__RefHeading___Toc37029_327352552">SATOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s text:c="2"/>then both the imbibition and drainage saturation tables allocated to the grid block that the connections are located within are used. The imbibition table allocation can be changed by the <text:a xlink:href="#__RefHeading___Toc97653_3261743917">COMPIMB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, provided it is entered after the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5294,7 +5294,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2266.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P107">A real value that defines the non-Darcy D factor coefficient for gas wells.</text:p>
-       <text:p text:style-name="P107">This value should be defaulted with 1* and the non-Darcy D factor coefficient for gas wells defined via the WDFAC keyword in the SCHEDULE section. </text:p>
+       <text:p text:style-name="P107">This value should be defaulted with 1* and the non-Darcy D factor coefficient for gas wells defined via the <text:a xlink:href="#__RefHeading___Toc442057_2026549522">WDFAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
        <text:p text:style-name="P107">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5323,10 +5323,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P108">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P135">Note unlike the COMPDAT keyword, there is no direction parameter, COMPDAT(DIRECT), for COMPTRAJ, as the wellbore direction is implicit in the well trajectory defined by the WELTRAJ keyword in the SCHEDULE section.</text:p>
+         <text:p text:style-name="P135">Note unlike the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword, there is no direction parameter, <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a>(DIRECT), for <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a>, as the wellbore direction is implicit in the well trajectory defined by the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P135">The keyword is followed by up to MXCONS records as declared on the WELLDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P135">The keyword is followed by up to MXCONS records as declared on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P135">Each record is terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
@@ -5342,7 +5342,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P100">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.18</text:sequence>: COMPTRAJ Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="_40_TextBody">Using the WELTRAJ and COMPTRAJ keywords to define wells and how they are connected to grid, offers several advantages compared to the conventional approach based on the (I, J, K) co-ordinates of the grid. The approach allows for the wells to be independent of the grid, which is particularly useful when running ensemble cases, as the well connections are no longer required to be re-calculated for each ensemble case. In addition, quality control of the model is improved by using consistent perforation data in both the static and dynamic models.</text:p>
+    <text:p text:style-name="_40_TextBody">Using the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> keywords to define wells and how they are connected to grid, offers several advantages compared to the conventional approach based on the (I, J, K) co-ordinates of the grid. The approach allows for the wells to be independent of the grid, which is particularly useful when running ensemble cases, as the well connections are no longer required to be re-calculated for each ensemble case. In addition, quality control of the model is improved by using consistent perforation data in both the static and dynamic models.</text:p>
     <table:table table:name="Table2267" table:style-name="Table2267">
      <table:table-column table:style-name="Table2267.A"/>
      <table:table-header-rows>
@@ -5351,7 +5351,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table2267.A1" office:value-type="string">
         <text:p text:style-name="P128">Note</text:p>
         <text:p text:style-name="P101">The term well connection is used to describe individual connections from the wellbore to the reservoir grid, as opposed to well completions. A well completion is used to describe a set of connections, for example, a well may consist of several completions with each completion consisting of multiple connections. </text:p>
-        <text:p text:style-name="P101">For wells defined using the WELTRAJ and COMPTRAJ keywords, the WELTRAJ keyword defines the trajectory of the well within the model, and the COMPTRAJ defines the perforation intervals in the well. <text:s/>A perforation interval will automatically generate various well connections to the grid, and in addition multiple perforation intervals may be grouped into a completion.</text:p>
+        <text:p text:style-name="P101">For wells defined using the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> and <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> keywords, the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword defines the trajectory of the well within the model, and the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> defines the perforation intervals in the well. <text:s/>A perforation interval will automatically generate various well connections to the grid, and in addition multiple perforation intervals may be grouped into a completion.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -5359,7 +5359,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P105" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716527_39646742441"/>Example<text:bookmark-end text:name="__RefHeading___Toc716527_39646742441"/></text:h>
-    <text:p text:style-name="P102">The following example defines two trajectory wells oil wells, OP01 and OP02, using the WELTRAJ keyword, together with their perforations using the COMPTRAJ keyword.</text:p>
+    <text:p text:style-name="P102">The following example defines two trajectory wells oil wells, OP01 and OP02, using the <text:a xlink:href="#__RefHeading___Toc268463_13666227011">WELTRAJ</text:a> keyword, together with their perforations using the <text:a xlink:href="#__RefHeading___Toc97651_32617439171">COMPTRAJ</text:a> keyword.</text:p>
     <text:p text:style-name="P103">--</text:p>
     <text:p text:style-name="P103">-- <text:s text:c="6"/>WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P103">-- <text:s text:c="77"/></text:p>

@@ -4342,15 +4342,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18687" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838818 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838818 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1"/></text:h>
-    <text:p text:style-name="P12727">The WINJGAS keyword defines the properties of the injection gas stream, for a given well. Once a gas well stream has been defined via the WELLSTRE keyword in the RUNSPEC section, it can be used with either the WINJGAS or GINJGAS keywords, to set the injected gas composition. Similarly, <text:s/>if an oil well stream has been defined by WELLSTRE, then the well stream can be used with the WINJOIL keyword in the SCHEDULE section, to specify the injected oil composition. <text:s/>Note that, it is unnecessary to use WINJGAS for wells subordinate to a group having gas injection control, with the gas properties set by GINJGAS keyword in the RUNSPEC section. In this case the injection stream is defined by the GINJGAS keyword. However, if a gas injection well under group control users the WINJGAS keyword, then this fluid, and not the group&apos;s fluid will be injected instead, at a rate controlled by the group.</text:p>
-    <text:p text:style-name="P12727">The keyword should only be used if the CO2STORE and GASWAT keywords in the RUNSPEC section have also be activated for the gas-water two component model.</text:p>
+    <text:p text:style-name="P12727">The <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> keyword defines the properties of the injection gas stream, for a given well. Once a gas well stream has been defined via the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, it can be used with either the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> or GINJGAS keywords, to set the injected gas composition. Similarly, <text:s/>if an oil well stream has been defined by <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a>, then the well stream can be used with the WINJOIL keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, to specify the injected oil composition. <text:s/>Note that, it is unnecessary to use <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> for wells subordinate to a group having gas injection control, with the gas properties set by GINJGAS keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. In this case the injection stream is defined by the GINJGAS keyword. However, if a gas injection well under group control users the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> keyword, then this fluid, and not the group&apos;s fluid will be injected instead, at a rate controlled by the group.</text:p>
+    <text:p text:style-name="P12727">The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section have also be activated for the gas-water two component model.</text:p>
     <table:table table:name="Table2311" table:style-name="Table2311">
      <table:table-column table:style-name="Table2311.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table2311.1">
        <table:table-cell table:style-name="Table2311.A1" office:value-type="string">
         <text:p text:style-name="P10235">Note</text:p>
-        <text:p text:style-name="P10198">This is an OPM Flow keyword used with OPM Flow’s CO2STORE and GASWAT keywords in the RUNSPEC section, and should not be confused with the more general version of the WINJGAS keyword used in the commercial compositional simulator.</text:p>
+        <text:p text:style-name="P10198">This is an OPM Flow keyword used with OPM Flow’s <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and should not be confused with the more general version of the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> keyword used in the commercial compositional simulator.</text:p>
         <text:p text:style-name="P10210">Secondly, although OPM Flow parses the keyword, the simulator currently ignores the data for this keyword.</text:p>
        </table:table-cell>
       </table:table-row>
@@ -4387,7 +4387,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2312.C3" office:value-type="string">
        <text:p text:style-name="P7280">A character string of up to eight characters in length that defines the injection well name, for which the gas injection properties are being specified.</text:p>
-       <text:p text:style-name="P7804">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7804">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2312.D3" office:value-type="string">
        <text:p text:style-name="P5025">None</text:p>
@@ -4404,22 +4404,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1162">A defined character string that determines the properties of the injection gas, and as should be set to one of the following values:</text:p>
        <text:list xml:id="list105922672989562" text:continue-list="list105923156349525" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P17073">GAS: <text:s/>The field separator gas composition is used as the injected gas.</text:p>
+         <text:p text:style-name="P17073"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: <text:s/>The field separator gas composition is used as the injected gas.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17073">GRUP: The well&apos;s group or upstream group injection fluid is used as the injected gas.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17073">GV: This option enables the vapor production of a group, as declared via the SOURCE parameter on this record, to be used as the injected gas composition.</text:p>
+         <text:p text:style-name="P17073">GV: This option enables the vapor production of a group, as declared via the <text:a xlink:href="#REF_HEADING_KEYWORD_SOURCE_12_3">SOURCE</text:a> parameter on this record, to be used as the injected gas composition.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17073">MIX: In this case, the gas injection composition is taken from either the WINJMIX or WINJORD keywords in the SCHEDULE section, with the name of injected fluid given by the SOURCE parameter on this record.</text:p>
+         <text:p text:style-name="P17073">MIX: In this case, the gas injection composition is taken from either the WINJMIX or WINJORD keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, with the name of injected fluid given by the <text:a xlink:href="#REF_HEADING_KEYWORD_SOURCE_12_3">SOURCE</text:a> parameter on this record.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17073">STREAM: Here the gas injection composition is given by <text:soft-page-break/>the WELLSTRE keyword in the SCHEDULE section, with the name of injected fluid given by the SOURCE parameter on this record.</text:p>
+         <text:p text:style-name="P17073">STREAM: Here the gas injection composition is given by <text:soft-page-break/>the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, with the name of injected fluid given by the <text:a xlink:href="#REF_HEADING_KEYWORD_SOURCE_12_3">SOURCE</text:a> parameter on this record.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P17073">WV: This option enables the vapor production from a given well to be used as the injected gas, with the name of the well given by the SOURCE parameter on this record.</text:p>
+         <text:p text:style-name="P17073">WV: This option enables the vapor production from a given well to be used as the injected gas, with the name of the well given by the <text:a xlink:href="#REF_HEADING_KEYWORD_SOURCE_12_3">SOURCE</text:a> parameter on this record.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P1162"><text:span text:style-name="T2554">Only the STREAM option is supported by OPM Flow</text:span>.</text:p>
@@ -4433,10 +4433,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5451">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2312.B6" office:value-type="string">
-       <text:p text:style-name="P5452">SOURCE</text:p>
+       <text:p text:style-name="P5452"><text:a xlink:href="#REF_HEADING_KEYWORD_SOURCE_12_3">SOURCE</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2312.C6" office:value-type="string">
-       <text:p text:style-name="P1163">A character string of up to eight characters in length, that defines the source of the gas injection stream, based on the value of STREAM. If STREAM equals GV, then source should be set to a group name. For STREAM equal to MIX or STREAM, then SOURCE should be set to the name of the gas stream, as defined by the WINJMIX, WINJORD, or WELLSTRE keywords.</text:p>
+       <text:p text:style-name="P1163">A character string of up to eight characters in length, that defines the source of the gas injection stream, based on the value of STREAM. If STREAM equals GV, then source should be set to a group name. For STREAM equal to MIX or STREAM, then <text:a xlink:href="#REF_HEADING_KEYWORD_SOURCE_12_3">SOURCE</text:a> should be set to the name of the gas stream, as defined by the WINJMIX, WINJORD, or <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keywords.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2312.D4" office:value-type="string">
        <text:p text:style-name="P5444">None</text:p>
@@ -4488,7 +4488,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14976">Table <text:sequence text:ref-name="refTable642" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.100</text:sequence>: WINJGAS Keyword Description</text:p>
     <text:h text:style-name="P18687" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12721">The following example defines how to specify a two component formulation, together with defining the names of the composition components, to be used with the CO2STORE and GASWAT options.</text:p>
+    <text:p text:style-name="P12721">The following example defines how to specify a two component formulation, together with defining the names of the composition components, to be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> options.</text:p>
     <text:p text:style-name="P13440">-- ==============================================================================</text:p>
     <text:p text:style-name="P13440">-- </text:p>
     <text:p text:style-name="P13440">-- PROPS SECTION </text:p>
@@ -4531,8 +4531,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">GI01 <text:s text:c="4"/>STREAM <text:s text:c="2"/>C02STREAM <text:s text:c="2"/>1* <text:s text:c="6"/>1* /</text:p>
     <text:p text:style-name="_40_Example">/ <text:s text:c="23"/></text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P12726">Here the well stream consists of 100% CO2 and zero water, with well GI01 using the gas injection properties as defined by the WELLSTRE keyword and allocated via the WINJGAS keyword. </text:p>
-    <text:p text:style-name="P11814">Finally, the gas injection rate is set via the WCONINJE keyword as shown below.</text:p>
+    <text:p text:style-name="P12726">Here the well stream consists of 100% CO2 and zero water, with well GI01 using the gas injection properties as defined by the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keyword and allocated via the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2 Copy 1">WINJGAS</text:a> keyword. </text:p>
+    <text:p text:style-name="P11814">Finally, the gas injection rate is set via the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword as shown below.</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>WELL INJECTION CONTROLS <text:s text:c="53"/></text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>

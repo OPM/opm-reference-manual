@@ -4345,9 +4345,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716539_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716539_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The COMPLMPL keyword assigns well connections in a LGR, as defined by the COMPDATL keyword in the SCHEDULE section, to completion intervals. This “lumping” of the connections to various completion intervals allows automatic workovers and economic criteria to be applied to the completions (that is a set of connections) as opposed to the connections. <text:s/>This allows for a more realistic approach for workovers operations. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc282689_3519154785">COMPLMPL</text:a> keyword assigns well connections in a <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>, as defined by the <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, to completion intervals. This “lumping” of the connections to various completion intervals allows automatic workovers and economic criteria to be applied to the completions (that is a set of connections) as opposed to the connections. <text:s/>This allows for a more realistic approach for workovers operations. </text:p>
     <text:p text:style-name="_40_TextBody">For example, if the water cut criteria for working over a well was set to 95%, and the average grid block connection thickness was one meter, <text:s/>then once a well’s water cut reached 95% the worst offending one meter connection would be shut-in. If the well’s actual perforation interval was 10 meters and the 10 connections were lumped as one completion, then when the water cut limit of 95% is reach, the completion would be shut-in, that is all of the 10 connections within the completion would be shut-in.</text:p>
-    <text:p text:style-name="_40_TextBody">As the keyword is used to lump connections into a completions, the simulator adds together the contribution from all connections in the completion and uses the total values to test the economic limits. <text:s/>Note that a connection can only belong to one completion. <text:s/>In addition, completions can be used instead of connections in the WELOPEN and WPIMULT keywords if the completions have been defined by COMPLUMP for a well.</text:p>
+    <text:p text:style-name="_40_TextBody">As the keyword is used to lump connections into a completions, the simulator adds together the contribution from all connections in the completion and uses the total values to test the economic limits. <text:s/>Note that a connection can only belong to one completion. <text:s/>In addition, completions can be used instead of connections in the <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> and <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords if the completions have been defined by <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> for a well.</text:p>
     <text:p text:style-name="P12025">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table993" table:style-name="Table993">
      <table:table-column table:style-name="Table993.A"/>
@@ -4396,7 +4396,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table993.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the well name for which the well connection data are being defined.</text:p>
-       <text:p text:style-name="P7806">Note that the well name (WELNAME) must have been declared previously using the WELSPECS keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7806">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4412,9 +4412,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9634">LGRNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table993.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the LGR name for which the well LGR connection data are being defined.</text:p>
-       <text:p text:style-name="P7806">Note that the well name (LGRNAME) must have been declared previously using the WELSPECL keyword in the SCHEDULE section, otherwise an error may occur.</text:p>
-       <text:p text:style-name="P7922">If defaulted with 1* the LGR on the WELSPECL keyword will be utilized.</text:p>
+       <text:p text:style-name="P7282">A character string of up to eight characters in length that defines the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> name for which the well <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> connection data are being defined.</text:p>
+       <text:p text:style-name="P7806">Note that the well name (LGRNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
+       <text:p text:style-name="P7922">If defaulted with 1* the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> on the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> keyword will be utilized.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4500,7 +4500,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7901">ICOMP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table993.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7576">An integer greater than or equal to one and less than or equal to MXCONS as defined on the WELLDIMS keyword in the RUNSPEC section, that defines the completion number of the currently defined set of connections.</text:p>
+       <text:p text:style-name="P7576">An integer greater than or equal to one and less than or equal to MXCONS as defined on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the completion number of the currently defined set of connections.</text:p>
        <text:p text:style-name="P7927">If I, J, K1, K2 are all set to zero or defaulted to 1*, then all connections in the well have the same completion number of ICOMP.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4532,10 +4532,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P15536"/>
     <text:p text:style-name="P15411">Multiple grid block connections can be defined on one record for vertical wells by assigning different values to K1 and K2, for deviated and horizontal wells this may not be possible and therefore each grid block connection must be separately defined by setting K1 equal to K2. </text:p>
     <text:p text:style-name="P15411"/>
-    <text:p text:style-name="P15366">See also the COMPDATL keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15366">See also the <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P15411"/>
     <text:h text:style-name="P18725" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716541_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716541_3964674244"/></text:h>
-    <text:p text:style-name="P11069">The following example defines the connections for two vertical oil wells using the COMPDATL keyword and the re-allocation of the connections to completions intervals using the COMPLMPL keyword.</text:p>
+    <text:p text:style-name="P11069">The following example defines the connections for two vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keyword and the re-allocation of the connections to completions intervals using the <text:a xlink:href="#__RefHeading___Toc282689_3519154785">COMPLMPL</text:a> keyword.</text:p>
     <text:p text:style-name="P13376">--</text:p>
     <text:p text:style-name="P13376">-- <text:s text:c="6"/>WELL CONNECTION DATA FOR LGR WELLS <text:s text:c="25"/></text:p>
     <text:p text:style-name="P13376">-- <text:s text:c="77"/></text:p>

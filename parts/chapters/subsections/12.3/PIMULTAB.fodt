@@ -4291,7 +4291,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716655_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716655_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">PIMULTAB defines productivity index multiplier versus water cut tables that are used to scaled a well’s connection factors based on connection’s current producing water cut. The tables are used for modeling the productivity decline due to increasing water cut. <text:s/>Allocation of the tables to a well is via the WPITAB keyword in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> defines productivity index multiplier versus water cut tables that are used to scaled a well’s connection factors based on connection’s current producing water cut. The tables are used for modeling the productivity decline due to increasing water cut. <text:s/>Allocation of the tables to a well is via the <text:a xlink:href="#__RefHeading___Toc121649_2412586160">WPITAB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <table:table table:name="Table685" table:style-name="Table685">
      <table:table-column table:style-name="Table685.A"/>
      <table:table-column table:style-name="Table685.B"/>
@@ -4472,10 +4472,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1424">Notes:</text:p>
        <text:list xml:id="list105922259014773" text:continue-list="list3035017230" text:style-name="L89">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19908">The keyword is followed by NTPIMT tables as stated on the PIMTDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P19908">The keyword is followed by NTPIMT tables as stated on the <text:a xlink:href="#__RefHeading___Toc31215_1640804870">PIMTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20047">Each table must contain a minimum of two rows and a maximum of NRPIMT rows as declared on the PIMTDIMS keyword in the RUNSPEC section.</text:p>
+         <text:p text:style-name="P20047">Each table must contain a minimum of two rows and a maximum of NRPIMT rows as declared on the <text:a xlink:href="#__RefHeading___Toc31215_1640804870">PIMTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20047">Each table is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
@@ -4491,10 +4491,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14615">Table <text:sequence text:ref-name="refTable600" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.58</text:sequence>: PIMULTAB Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P15332">See also the WPITAB keyword that allocates the tables to the wells, and also the WPIMULT keyword that scales a well’s productivity index by a constant value, both of which are in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P15332">See also the <text:a xlink:href="#__RefHeading___Toc121649_2412586160">WPITAB</text:a> keyword that allocates the tables to the wells, and also the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword that scales a well’s productivity index by a constant value, both of which are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="Text_20_body">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716657_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716657_3964674244"/></text:h>
-    <text:p text:style-name="P11344">Given NTPIMT equals two and NRPIMT equals four on PIMTDIMS keyword in the RUNSPEC section, <text:s/>then:</text:p>
+    <text:p text:style-name="P11344">Given NTPIMT equals two and NRPIMT equals four on <text:a xlink:href="#__RefHeading___Toc31215_1640804870">PIMTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>then:</text:p>
     <text:p text:style-name="P14195">-- <text:s text:c="6"/>DEFINE WELL PRODUCTIVITY INDEX VERSUS WATER CUT TABLES</text:p>
     <text:p text:style-name="P14195">--</text:p>
     <text:p text:style-name="P14195">-- <text:s text:c="6"/>MAX <text:s text:c="5"/>PI</text:p>
@@ -4512,7 +4512,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14195"><text:s text:c="9"/>0.5000 <text:s text:c="2"/>0.8500 </text:p>
     <text:p text:style-name="P13111"><text:s text:c="9"/>0.7500 <text:s text:c="2"/>0.7500 <text:s text:c="34"/>/ <text:s text:c="144"/><text:s text:c="75"/></text:p>
     <text:p text:style-name="P15082"/>
-    <text:p text:style-name="P15082">The next example is summarized from the Norne model with NTPIMT equals one and NRPIMT equals to 51 on the PIMTDIMS keyword in the RUNSPEC section.</text:p>
+    <text:p text:style-name="P15082">The next example is summarized from the Norne model with NTPIMT equals one and NRPIMT equals to 51 on the <text:a xlink:href="#__RefHeading___Toc31215_1640804870">PIMTDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P15082"/>
     <text:p text:style-name="P14198">--</text:p>
     <text:p text:style-name="P14198">-- <text:s text:c="6"/>DEFINE WELL PRODUCTIVITY INDEX VERSUS WATER CUT TABLES</text:p>
