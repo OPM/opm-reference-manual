@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4309,13 +4310,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5406">CPROPTN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2130.C2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines how the <text:span text:style-name="NOT_KEYWORD">CPR</text:span> linear solver should be applied, and should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines how the <text:span text:style-name="NotKeyword">CPR</text:span> linear solver should be applied, and should be set to one of the following:</text:p>
        <text:list xml:id="list105908332116787" text:continue-list="list105909999375172" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P16992">ORIGINAL: Here the solver is applied for the whole of the simulation. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">ADAPTIVE: This option applies the more <text:span text:style-name="T2110">computational</text:span> demanding <text:span text:style-name="NOT_KEYWORD">CPR</text:span> linear solver, only in parts of the run that would benefit from its use, for example when linear convergence is challenging.</text:p>
+         <text:p text:style-name="P16992">ADAPTIVE: This option applies the more <text:span text:style-name="T2110">computational</text:span> demanding <text:span text:style-name="NotKeyword">CPR</text:span> linear solver, only in parts of the run that would benefit from its use, for example when linear convergence is challenging.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P1131">Note that OPM Flow only supports the ORIGINAL option, which is the default value in OPM Flow, whereas the default value in the commercial simulator is ADAPTIVE. .</text:p>
@@ -4349,7 +4350,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13535">/ <text:s/></text:p>
     <text:p text:style-name="P13535"><text:s text:c="60"/></text:p>
     <text:p text:style-name="P12517">The above example activates the Constrained Pressure Residual preconditioner linear solver using the default option, that is the ORIGINAL option for OPM Flow. </text:p>
-    <text:p text:style-name="P12517"><text:soft-page-break/>To enable the <text:span text:style-name="NOT_KEYWORD">CPR</text:span> preconditioner linear solver option using the command line parameter, use:</text:p>
+    <text:p text:style-name="P12517"><text:soft-page-break/>To enable the <text:span text:style-name="NotKeyword">CPR</text:span> preconditioner linear solver option using the command line parameter, use:</text:p>
     <text:p text:style-name="P12517"/>
     <text:p text:style-name="P16804">flow --linear-solver=&quot;cpr&quot; CASENAME.DATA </text:p>
     <text:p text:style-name="Text_20_body"/>

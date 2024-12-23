@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4764,10 +4765,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9369">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table495.B20" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9891"><text:span text:style-name="NOT_KEYWORD">DATUM</text:span></text:p>
+       <text:p text:style-name="P9891"><text:span text:style-name="NotKeyword">DATUM</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table495.C25" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7267"><text:span text:style-name="NOT_KEYWORD">DATUM</text:span> is a single positive value that defines the reference datum depth for PRESS.</text:p>
+       <text:p text:style-name="P7267"><text:span text:style-name="NotKeyword">DATUM</text:span> is a single positive value that defines the reference datum depth for PRESS.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4798,7 +4799,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table495.C25" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7235">PRESS is a single positive value that defines the pressure at <text:a xlink:href="#__RefHeading___Toc135613_1317547213">DATUM</text:a>. </text:p>
-       <text:p text:style-name="P7207">If the <text:span text:style-name="NOT_KEYWORD">DATUM</text:span> depth lies above the GOC then PRESS is the pressure with respect to the gas phase. If the <text:span text:style-name="NOT_KEYWORD">DATUM</text:span> depth is below OWC then PRESS refers to the water phase pressure. Otherwise, PRESS refers to the oil phase pressure. <text:s/><text:s/></text:p>
+       <text:p text:style-name="P7207">If the <text:span text:style-name="NotKeyword">DATUM</text:span> depth lies above the GOC then PRESS is the pressure with respect to the gas phase. If the <text:span text:style-name="NotKeyword">DATUM</text:span> depth is below OWC then PRESS refers to the water phase pressure. Otherwise, PRESS refers to the oil phase pressure. <text:s/><text:s/></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5001,7 +5002,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19568">Note that the allocation of multiple <text:a xlink:href="#__RefHeading___Toc135621_1317547213">PBVD</text:a> and <text:a xlink:href="#__RefHeading___Toc137363_1317547213">RSVD</text:a> tables to each grid cell is through the <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> keyword and not the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19569">A zero value of EQLOPT1 results in the gas-oil ratio being set to the saturated gas-oil ratio at the GOC. In this case <text:span text:style-name="NOT_KEYWORD">DATUM</text:span> must be equal GASCONT and the <text:a xlink:href="#__RefHeading___Toc135621_1317547213">PBVD</text:a> and <text:a xlink:href="#__RefHeading___Toc137363_1317547213">RSVD</text:a> keywords may be omitted.</text:p>
+         <text:p text:style-name="P19569">A zero value of EQLOPT1 results in the gas-oil ratio being set to the saturated gas-oil ratio at the GOC. In this case <text:span text:style-name="NotKeyword">DATUM</text:span> must be equal GASCONT and the <text:a xlink:href="#__RefHeading___Toc135621_1317547213">PBVD</text:a> and <text:a xlink:href="#__RefHeading___Toc137363_1317547213">RSVD</text:a> keywords may be omitted.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19568">A negative value of EQLOPT1 results in the same option for when EQLOPT1 is zero.</text:p>
@@ -5047,7 +5048,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19568">Note that the allocation of multiple <text:a xlink:href="#__RefHeading___Toc135625_1317547213">PDVD</text:a> and <text:a xlink:href="#__RefHeading___Toc137367_1317547213">RVVD</text:a> tables to each grid cell is through the <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> keyword and not the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19569">A zero value of EQLOPT2 results in the condensate-gas ratio being set to the saturated condensate-gas ratio at the GOC. In this case <text:span text:style-name="NOT_KEYWORD">DATUM</text:span> must be equal GASCONT and the <text:a xlink:href="#__RefHeading___Toc135625_1317547213">PDVD</text:a> and <text:a xlink:href="#__RefHeading___Toc137367_1317547213">RVVD</text:a> keywords may be omitted.</text:p>
+         <text:p text:style-name="P19569">A zero value of EQLOPT2 results in the condensate-gas ratio being set to the saturated condensate-gas ratio at the GOC. In this case <text:span text:style-name="NotKeyword">DATUM</text:span> must be equal GASCONT and the <text:a xlink:href="#__RefHeading___Toc135625_1317547213">PDVD</text:a> and <text:a xlink:href="#__RefHeading___Toc137367_1317547213">RVVD</text:a> keywords may be omitted.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19571">A negative value of EQLOPT2 results in the same option for when EQLOPT2 is zero.</text:p>
@@ -5250,7 +5251,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P16022">Note that the allocation of multiple <text:a xlink:href="#__RefHeading___Toc137367_13175472131">RVWVD</text:a> tables to each grid cell is through the <text:a xlink:href="#__RefHeading___Toc73734_2752266063">EQLNUM</text:a> keyword and not the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword. </text:p>
        <text:list xml:id="list105917525948841" text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item>
-         <text:p text:style-name="P19570">A zero value of EQLOPT2 results in the vaporized water-gas ratio being set to the saturated vaporized water-gas ratio at the GOC. In this case <text:span text:style-name="NOT_KEYWORD">DATUM</text:span> must be equal GASCONT and the <text:a xlink:href="#__RefHeading___Toc137367_13175472131">RVWVD</text:a> keyword may be omitted.</text:p>
+         <text:p text:style-name="P19570">A zero value of EQLOPT2 results in the vaporized water-gas ratio being set to the saturated vaporized water-gas ratio at the GOC. In this case <text:span text:style-name="NotKeyword">DATUM</text:span> must be equal GASCONT and the <text:a xlink:href="#__RefHeading___Toc137367_13175472131">RVWVD</text:a> keyword may be omitted.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19571">A negative value of EQLOPT6 results in the same option for when EQLOPT6 is zero.</text:p>
