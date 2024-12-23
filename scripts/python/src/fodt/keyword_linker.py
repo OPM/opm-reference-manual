@@ -30,6 +30,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.in_a = False
         self.in_math = False   # We should not insert links inside math tags
         self.in_binary_data = False  # We should skip binary data
+        self.in_draw_frame = False  # We should not insert links in Figure captions
+        self.in_draw_recursion = 0  # We can have nested draw:frame tags
         self.content = io.StringIO()
         # Create a regex pattern with alternation on the keyword names
         self.regex = self.compile_regex()
@@ -105,6 +107,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.in_math = False
             elif name == "office:binary-data":
                 self.in_binary_data = False
+            elif name == "draw:frame":
+                self.in_draw_recursion -= 1
+                if self.in_draw_recursion == 0:
+                    self.in_draw_frame = False
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -132,6 +138,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.not_keyword)
                     and (not self.in_math)
                     and (not self.in_binary_data)
+                    and (not self.in_draw_frame)
                 ):
                     if not self.is_example_p[-1]:
                         if not self.is_table_caption(characters):
@@ -184,6 +191,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
             elif name == "office:binary-data":
                 # We need to skip the binary data, otherwise the content will be corrupted
                 self.in_binary_data = True
+            elif name == "draw:frame":
+                # We do not want the script to insert links in a Figure caption. These captions
+                # are usually inside a draw:frame tag.
+                self.in_draw_frame = True
+                self.in_draw_recursion += 1
         self.start_tag_open = True
         self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
 
