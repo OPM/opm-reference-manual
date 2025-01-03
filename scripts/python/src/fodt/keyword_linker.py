@@ -7,6 +7,7 @@ import xml.sax.handler
 import xml.sax.xmlreader
 import xml.sax.saxutils
 
+from dataclasses import dataclass
 from pathlib import Path
 
 import click
@@ -19,6 +20,26 @@ from fodt.xml_helpers import XMLHelper
 class FileType(enum.Enum):
     CHAPTER = 1
     SUBSECTION = 2
+
+@dataclass
+class MonoParagraphStyle:
+    style_name: str = ""
+    loext_graphic_properties: bool = False
+    style_paragraph_properties: bool = False
+    style_text_properties: bool = False
+    libre_mono_font: bool = False
+    libre_mono_font_size: bool = False
+
+    def in_style_style_element(self) -> bool:
+        return self.style_name != ""
+
+    def valid(self) -> bool:
+        return (self.loext_graphic_properties
+                and self.style_paragraph_properties
+                and self.style_text_properties
+                and self.libre_mono_font
+                and self.libre_mono_font_size)
+
 
 class FileHandler(xml.sax.handler.ContentHandler):
     def __init__(
@@ -35,8 +56,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  end /> tag instead of the full end tag </tag>
         self.start_tag_open = False
         self.in_p = False
-        # P603 paragraphs contain monospaced text, and should not be linked
-        self.in_p603_paragraph = False
+        # Paragraphs with a certain style with monospaced text, should not be linked
+        self.mono_paragraph_style = MonoParagraphStyle()
+        self.in_mono_paragraph = False  # Inside a paragraph with monospaced text
+        self.mono_paragraph_styles = set()  # Style names that use monospaced text
         self.is_example_p = []  # Stack of boolean values: If current p tag is an example
         self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
@@ -58,11 +81,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # A temporary character buffer to store content between start and end tags
         self.char_buf = ""
 
-    def check_p603_paragraph(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
+    def check_mono_paragraph(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         if "text:style-name" in attrs.getNames():
             style_name = attrs.getValue("text:style-name")
-            if style_name == "P603":
-                self.in_p603_paragraph = True
+            if style_name in self.mono_paragraph_styles:
+                self.in_mono_paragraph = True
 
     def compile_regex(self) -> re.Pattern:
         # Also include the keyword name itself in the regex pattern, see discussion
@@ -99,7 +122,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  and <text:span> tags.
         self.char_buf += content
 
-    def collect_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
+    def collect_example_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # Collect the paragraph styles that use fixed width fonts
         if "style:name" in attrs.getNames():
             style_name = attrs.getValue("style:name")
@@ -116,7 +139,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 if self.p_recursion == 0:
                     self.in_p = False
                 self.is_example_p.pop()
-                self.in_p603_paragraph = False   # Assume this is not recursive
+                self.in_mono_paragraph = False   # Assume this is not recursive
             elif name == "text:a":
                 self.in_a = False
             elif name == "text:span":
@@ -129,6 +152,9 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.in_draw_recursion -= 1
                 if self.in_draw_recursion == 0:
                     self.in_draw_frame = False
+        else:  # office:body not found yet
+            if name == "style:style":
+                self.maybe_add_mono_paragraph_style()
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
@@ -146,6 +172,41 @@ class FileHandler(xml.sax.handler.ContentHandler):
         keyword_name = self.file_info
         return re.search(rf'{re.escape(keyword_name)} Keyword Description', content)
 
+    def maybe_add_mono_paragraph_style(self) -> None:
+        if self.mono_paragraph_style.valid():
+            self.mono_paragraph_styles.add(self.mono_paragraph_style.style_name)
+        self.mono_paragraph_style = MonoParagraphStyle()  # Reset the style
+
+    def maybe_collect_mono_paragraph_style(
+        self, name: str, attrs: xml.sax.xmlreader.AttributesImpl
+    ) -> None:
+        if name == "style:style":
+            attr = "style:parent-style-name"
+            if attr in attrs.getNames():
+                if attrs.getValue(attr) == "Text_20_body":
+                    attr2 = "style:family"
+                    if attr2 in attrs.getNames():
+                        if attrs.getValue(attr2) == "paragraph":
+                            attr3 = "style:name"
+                            if attr3 in attrs.getNames():
+                                style_name = attrs.getValue(attr3)
+                                self.mono_paragraph_style.style_name = style_name
+        elif self.mono_paragraph_style.in_style_style_element():
+            if name == "loext:graphic-properties":
+                self.mono_paragraph_style.loext_graphic_properties = True
+            elif name == "style:paragraph-properties":
+                self.mono_paragraph_style.style_paragraph_properties = True
+            elif name == "style:text-properties":
+                self.mono_paragraph_style.style_text_properties = True
+                attr = "style:font-name"
+                if attr in attrs.getNames():
+                    if attrs.getValue(attr) == "Liberation Mono":
+                        self.mono_paragraph_style.libre_mono_font = True
+                attr2 = "fo:font-size"
+                if attr2 in attrs.getNames():
+                    if attrs.getValue(attr2) == "8pt":
+                        self.mono_paragraph_style.libre_mono_font_size = True
+
     def maybe_write_characters(self) -> None:
         if len(self.char_buf) > 0:
             # NOTE: We need to escape the content before we apply the regex pattern
@@ -158,7 +219,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.in_math)
                     and (not self.in_binary_data)
                     and (not self.in_draw_frame)
-                    and (not self.in_p603_paragraph)
+                    and (not self.in_mono_paragraph)
                 ):
                     if not self.is_example_p[-1]:
                         if (self.file_type == FileType.CHAPTER or
@@ -193,14 +254,15 @@ class FileHandler(xml.sax.handler.ContentHandler):
             else:
                 if name == "style:style":
                     if "style:parent-style-name" in attrs.getNames():
-                         if attrs.getValue("style:parent-style-name") == "_40_Example":
-                            self.collect_style(attrs)
+                        if attrs.getValue("style:parent-style-name") == "_40_Example":
+                            self.collect_example_style(attrs)
+                self.maybe_collect_mono_paragraph_style(name, attrs)
         else:
             if name == "text:p":
                 self.in_p = True
                 self.p_recursion += 1
                 self.update_example_stack(attrs)
-                self.check_p603_paragraph(attrs)
+                self.check_mono_paragraph(attrs)
             elif name == "text:a":
                 # We are inside an anchor, and we should not insert another text:a tag here
                 self.in_a = True
