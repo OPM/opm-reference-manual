@@ -4417,7 +4417,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table436.C10" office:value-type="string">
-       <text:p text:style-name="P4513">HYSMOD</text:p>
+       <text:p text:style-name="P4513">HYSTMOD</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.D15" office:value-type="string">
        <text:p text:style-name="P4519">Non-Wetting Phases</text:p>
@@ -4499,7 +4499,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-row table:style-name="Table436.11">
       <table:covered-table-cell/>
       <table:covered-table-cell/>
-      <table:table-cell table:style-name="Table436.A2" office:value-type="string">
+      <table:table-cell table:style-name="Table436.C10" office:value-type="string">
        <text:p text:style-name="P4517">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.D15" office:value-type="string">
@@ -4566,7 +4566,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table436.C16" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Only the HYSMOD options not colored orange are currently support by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Only the HYSTMOD options not colored orange are currently support by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4668,7 +4668,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P16992">NEW: Secondary drainage curves follows a new scanning curve and further reversals also generate a new scanning curve.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="_40_Table_20_Contents">This option is ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Only the RETR option is supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4710,22 +4710,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4525">HYSTWET</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string that sets the wetting phase in three phase systems to either oil or gas and should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string that sets the wetting phase between oil and gas in three phase systems and should be set to one of the following:</text:p>
        <text:list xml:id="list105914499005805" text:continue-list="list105914059584018" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P16992"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: Oil is set as the <text:span text:style-name="T2554">wetting phase</text:span> and the oil-gas relative permeability curves are determined by HYSTMOD for the wetting phase.</text:p>
+         <text:p text:style-name="P16992"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: Oil is set as the <text:span text:style-name="T2554">wetting phase</text:span> between oil and gas, and the oil relative permeability with respect to gas is determined by HYSTMOD for the wetting phase.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: Oil is set as the non-<text:span text:style-name="T2554">wetting phase</text:span> and the oil-gas relative permeability curves are determined by HYSTMOD for the non-wetting phase.</text:p>
+         <text:p text:style-name="P16992"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: Oil is set as the <text:span text:style-name="T2554">non-wetting phase</text:span> between oil and gas, and the oil relative permeability with respect to gas is determined by HYSTMOD for the non-wetting phase.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="_40_Table_20_Contents">Note for all the above cases the gas relative permeability curves are always treated as as a non-wetting phase.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note for all the above cases the gas relative permeability is always modelled as a non-wetting phase.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note oil is always the wetting phase to gas in two phase systems.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This option is ignored by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table436.F27" office:value-type="string">
-       <text:p text:style-name="P4526">None</text:p>
+       <text:p text:style-name="P4526">OIL</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table436.1">
