@@ -11,7 +11,7 @@ from pathlib import Path
 import click
 
 from fodt.constants import ClickOptions
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     # Find the master-styles section and remove all bookmark refs from it.
@@ -30,7 +30,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if self.in_master_styles:
@@ -43,13 +43,13 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         # logging.info(f"startElement: {name}")
@@ -61,7 +61,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         if self.start_tag_open:
             self.content.write(">")
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 class RemoveBookmarksFromMasterStyles():
     def __init__(self, maindir: str, filename: str|None, directory: str|None) -> None:

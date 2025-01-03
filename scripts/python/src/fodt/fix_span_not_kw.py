@@ -11,7 +11,7 @@ import click
 from fodt.constants import ClickOptions, FileExtensions, Directories
 from fodt.exceptions import HandlerDoneException
 from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 
 class FileHandler(xml.sax.handler.ContentHandler):
@@ -36,7 +36,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if name == "office:styles":
@@ -46,7 +46,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     """ <style:style style:name="NotKeyword" style:family="text"/>\n """
                 )
             self.in_office_styles = False
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
             return
         elif name == "office:body":
             self.in_body = False
@@ -54,7 +54,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def file_changed(self) -> bool:
         return self._file_changed
@@ -74,7 +74,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.locator = locator
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
@@ -99,7 +99,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             if attrs.get("style:name") == "NotKeyword":
                 self.found_not_kw_style = True
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class FixSpanNotKw:

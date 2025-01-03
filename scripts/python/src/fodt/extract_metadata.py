@@ -10,7 +10,7 @@ from pathlib import Path
 
 from fodt.constants import Directories, MetaSections, TagEvent
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class SectionHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputdir: str) -> None:
@@ -51,7 +51,7 @@ class SectionHandler(xml.sax.handler.ContentHandler):
     ) -> None:
         self.add_previous_content(prev_content)
         self.section.write(f"{self.add_indent(new_file)}")
-        self.section.write(XMLHelper.starttag(name, attrs))
+        self.section.write(xml_helpers.starttag(name, attrs))
         self.indent += 1
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
@@ -81,7 +81,7 @@ class SectionHandler(xml.sax.handler.ContentHandler):
             if last_event == TagEvent.END:
                 if self.enable_indent:
                     self.section.write("\n" + (" " * self.indent))
-            self.section.write(XMLHelper.endtag(name))
+            self.section.write(xml_helpers.endtag(name))
         if name == self.current_section:
             self.in_section = False
             self.write_section_to_file()
@@ -91,7 +91,7 @@ class SectionHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_section:
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
     def write_section_to_file(self):
         filename = self.current_section.removeprefix("office:") + ".xml"

@@ -16,7 +16,7 @@ from fodt.constants import (
 )
 from fodt.automatic_styles_filter import AutomaticStylesFilter4
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class CreateAppendixFile():
     def __init__(self, maindir: str, appendix: str, appendix_txt: str, styles: set[str]) -> None:
@@ -66,7 +66,7 @@ class CreateAppendixFile():
 
     def write_office_document_start_tag(self) -> None:
         self.metadir = self.maindir / Directories.meta
-        tag = XMLHelper.get_office_document_start_tag(self.metadir)
+        tag = xml_helpers.get_office_document_start_tag(self.metadir)
         self.outputfile.write(tag)
 
     def write_meta(self) -> None:
@@ -85,7 +85,7 @@ class CreateAppendixFile():
         self.outputfile.write(content)
 
     def write_xml_header(self) -> None:
-        self.outputfile.write(XMLHelper.header)
+        self.outputfile.write(xml_helpers.HEADER)
 
     def write_xml_footer(self) -> None:
         self.outputfile.write("""
@@ -127,9 +127,9 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_appendix:
-            self.appendix.write(XMLHelper.escape(content))
+            self.appendix.write(xml_helpers.escape(content))
         else:
-            self.doc.write(XMLHelper.escape(content))
+            self.doc.write(xml_helpers.escape(content))
 
     def collect_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         for (key, value) in attrs.items():
@@ -138,9 +138,9 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
 
     def endElement(self, name: str):
         if self.in_appendix:
-            self.appendix.write(XMLHelper.endtag(name))
+            self.appendix.write(xml_helpers.endtag(name))
         else:
-            self.doc.write(XMLHelper.endtag(name))
+            self.doc.write(xml_helpers.endtag(name))
 
     def get_appendix(self) -> str:
         return self.appendix.getvalue()
@@ -163,7 +163,7 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
         )
 
     def startDocument(self):
-        self.doc.write(XMLHelper.header)
+        self.doc.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if (not self.in_appendix) and (name == "text:list"):
@@ -179,24 +179,24 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
                     xml_id = attrs.getValue("xml:id")
                     if xml_id == self.end_id:
                         self.in_appendix = False
-                        self.doc.write(XMLHelper.starttag(name, attrs))
+                        self.doc.write(xml_helpers.starttag(name, attrs))
                         return
             elif (self.end_type == "section") and (name == "text:section"):
                 self.in_appendix = False
-                self.doc.write(XMLHelper.starttag(name, attrs))
+                self.doc.write(xml_helpers.starttag(name, attrs))
                 return
             elif (self.end_type == "end") and (name == "text:p"):
                 if "text:style-name" in attrs.getNames():
                     style_name = attrs.getValue("text:style-name")
                     if style_name == "ENDENDEND":
                         self.in_appendix = False
-                        self.doc.write(XMLHelper.starttag(name, attrs))
+                        self.doc.write(xml_helpers.starttag(name, attrs))
                         return
         if self.in_appendix:
-            self.appendix.write(XMLHelper.starttag(name, attrs))
+            self.appendix.write(xml_helpers.starttag(name, attrs))
             self.collect_styles(attrs)
         else:
-            self.doc.write(XMLHelper.starttag(name, attrs))
+            self.doc.write(xml_helpers.starttag(name, attrs))
 
 class ExtractAndRemoveAppendixFromMain:
     def __init__(self, main_file: Path, appendix_number: str) -> None:

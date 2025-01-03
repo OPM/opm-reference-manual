@@ -4,7 +4,7 @@ import shutil
 from pathlib import Path
 from fodt.constants import Directories, FileExtensions, FileNames
 from fodt.exceptions import InputException
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 def chapter_fodt_file_path(
     outputdir: str,
@@ -217,7 +217,7 @@ def read_keyword_template() -> str:
 def replace_section_callback(part: str, keyword: str) -> str:
     section = ".".join(part.split(".")[:2])
     href = f"{Directories.subsections}/{section}/{keyword}.fodt"
-    href = XMLHelper.escape(href)
+    href = xml_helpers.escape(href)
     return (f"""<text:section text:style-name="Sect1" text:name="Section{section}:{keyword}" """
                f"""text:protected="true">\n"""
             f"""     <text:section-source xlink:href="{href}" """

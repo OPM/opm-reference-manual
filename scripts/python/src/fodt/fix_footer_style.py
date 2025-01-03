@@ -8,7 +8,7 @@ import xml.sax.saxutils
 from pathlib import Path
 
 from fodt.constants import ClickOptions
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class ContentHandler(xml.sax.handler.ContentHandler):
     def __init__(self) -> None:
@@ -37,7 +37,7 @@ class ContentHandler(xml.sax.handler.ContentHandler):
                     )
                     self.fixed_style = True
                     return
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if self.in_p_tag and name == "text:p":
@@ -53,7 +53,7 @@ class ContentHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def fixed_footer_style(self) -> bool:
         return self.fixed_style
@@ -62,7 +62,7 @@ class ContentHandler(xml.sax.handler.ContentHandler):
         return self.content.getvalue()
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
@@ -81,7 +81,7 @@ class ContentHandler(xml.sax.handler.ContentHandler):
             if attrs.getValue("style:name") == "_40_DocumentKeywordPageStyle":
                 self.in_master_page = True
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class FixFooterStyle:

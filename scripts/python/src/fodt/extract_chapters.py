@@ -10,7 +10,7 @@ from pathlib import Path
 
 from fodt.constants import AutomaticStyles, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, InputException
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class ChapterHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputdir: str, chapters: list[int]) -> None:
@@ -29,7 +29,7 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
         name:str,
         attrs: xml.sax.xmlreader.AttributesImpl,
     ) -> None:
-        self.section.write(XMLHelper.starttag(name, attrs))
+        self.section.write(xml_helpers.starttag(name, attrs))
 
     def collect_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         for (key, value) in attrs.items():
@@ -66,11 +66,11 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
 
     def endElement(self, name: str):
         if self.in_section:
-            self.section.write(XMLHelper.endtag(name))
+            self.section.write(xml_helpers.endtag(name))
 
     def characters(self, content: str):
         if self.in_section:
-            self.section.write(XMLHelper.escape(content))
+            self.section.write(xml_helpers.escape(content))
 
     def patch_chapter_12(self, path: Path) -> None:
         with open(path, "r", encoding='utf8') as f:

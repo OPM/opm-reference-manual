@@ -15,7 +15,7 @@ from fodt.automatic_styles_filter import AutomaticStylesFilter4
 from fodt.exceptions import ParsingException
 from fodt import helpers
 from fodt.styles_filter import StylesFilter
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class CreateSectionFile():
     def __init__(
@@ -75,7 +75,7 @@ class CreateSectionFile():
 
     def write_office_document_start_tag(self) -> None:
         self.metadir = self.maindir / Directories.meta
-        tag = XMLHelper.get_office_document_start_tag(self.metadir)
+        tag = xml_helpers.get_office_document_start_tag(self.metadir)
         self.outputfile.write(tag)
 
     def write_meta(self) -> None:
@@ -97,7 +97,7 @@ class CreateSectionFile():
         self.outputfile.write(content)
 
     def write_xml_header(self) -> None:
-        self.outputfile.write(XMLHelper.header)
+        self.outputfile.write(xml_helpers.HEADER)
 
     def write_xml_footer(self) -> None:
         self.outputfile.write("""
@@ -121,9 +121,9 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_section:
-            self.section.write(XMLHelper.escape(content))
+            self.section.write(xml_helpers.escape(content))
         else:
-            self.doc.write(XMLHelper.escape(content))
+            self.doc.write(xml_helpers.escape(content))
 
     def collect_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         for (key, value) in attrs.items():
@@ -137,9 +137,9 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
 
     def endElement(self, name: str):
         if self.in_section:
-            self.section.write(XMLHelper.endtag(name))
+            self.section.write(xml_helpers.endtag(name))
         else:
-            self.doc.write(XMLHelper.endtag(name))
+            self.doc.write(xml_helpers.endtag(name))
 
     def get_section(self) -> str:
         return self.section.getvalue()
@@ -163,7 +163,7 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
         )
 
     def startDocument(self):
-        self.doc.write(XMLHelper.header)
+        self.doc.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         # TODO: Looking for <text:h text:outline-level="2"> does not work for the last
@@ -176,17 +176,17 @@ class ExtractAndRemoveHandler(xml.sax.handler.ContentHandler):
                     if self.in_section:
                         self.in_section = False
                         self.done_extracting = True
-                        self.doc.write(XMLHelper.starttag(name, attrs))
+                        self.doc.write(xml_helpers.starttag(name, attrs))
                         return
                     elif self.current_section_number == self.section_number:
                         self.in_section = True
                         self.section = io.StringIO()
                         self.insert_section_link_into_doc()
         if self.in_section:
-            self.section.write(XMLHelper.starttag(name, attrs))
+            self.section.write(xml_helpers.starttag(name, attrs))
             self.collect_styles(attrs)
         else:
-            self.doc.write(XMLHelper.starttag(name, attrs))
+            self.doc.write(xml_helpers.starttag(name, attrs))
 
 
 

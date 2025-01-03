@@ -8,7 +8,7 @@ from pathlib import Path
 
 from fodt.constants import Directories, FileNames
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class TagHandler(xml.sax.handler.ContentHandler):
     def __init__(self, tag_name: str) -> None:
@@ -54,6 +54,6 @@ class ExtractDocAttrs():
                 f"will overwrite...")
         with open(filename, "w", encoding='utf-8') as f:
             for (key, value) in attrs.items():
-                evalue = XMLHelper.escape(value)
+                evalue = xml_helpers.escape(value)
                 f.write(f'{key}="{evalue}"\n')
         logging.info(f"Wrote document attributes to {filename}.")

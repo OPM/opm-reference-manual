@@ -9,7 +9,7 @@ import xml.sax.saxutils
 from pathlib import Path
 from typing import Callable
 
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 from fodt.exceptions import HandlerDoneException, InputException, ParsingException
 from fodt import helpers
 
@@ -46,7 +46,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
             self.start_tag_open = False
         # if (not self.in_subsection) and (not self.remove_section):
         if not self.in_main_section:
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
     def check_included_section(self, name: str, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
         if "text:name" in attrs.getNames():
@@ -70,7 +70,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
                 self.content.write("/>")
                 self.start_tag_open = False
             else:
-                self.content.write(XMLHelper.endtag(name))
+                self.content.write(xml_helpers.endtag(name))
         if name == "text:section":
             if self.remove_section:
                 self.remove_section = False
@@ -125,7 +125,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
             self.content.write(callback(part, keyword))
         if (not self.in_subsection) and (not self.remove_section):
             self.start_tag_open = True
-            self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+            self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
     def write_file(self):
         filename = Path(self.outputfn)
@@ -135,7 +135,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
         logging.info(f"Wrote modified file to file {filename}.")
 
     def write_xml_header(self) -> None:
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
 
 class RemoveSubSections():

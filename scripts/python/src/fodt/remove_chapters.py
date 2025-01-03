@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Callable
 
 from fodt.exceptions import HandlerDoneException, InputException
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class ChapterHandler(xml.sax.handler.ContentHandler):
     def __init__(
@@ -35,14 +35,14 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if not self.in_section:
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
     def default_replace_callback(self, section: int) -> str:
         return f"<text:section>Section{section}</text:section>\n"
 
     def endElement(self, name: str):
         if not self.in_section:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def endDocument(self) -> None:
         self.write_file()
@@ -71,7 +71,7 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
                         else:
                             self.in_section = False
         if not self.in_section:
-            self.content.write(XMLHelper.starttag(name, attrs))
+            self.content.write(xml_helpers.starttag(name, attrs))
 
     def start_of_appendix(self, name: str, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
         if name == "text:list":
@@ -92,7 +92,7 @@ class ChapterHandler(xml.sax.handler.ContentHandler):
         logging.info(f"Wrote modified file to file {filename}.")
 
     def write_xml_header(self) -> None:
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
 class RemoveChapters():
     def __init__(

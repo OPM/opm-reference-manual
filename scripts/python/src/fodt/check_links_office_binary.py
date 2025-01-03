@@ -12,7 +12,7 @@ import click
 from fodt.constants import ClickOptions, Directories, FileExtensions
 from fodt.exceptions import HandlerDoneException
 from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class FileHandler(xml.sax.handler.ContentHandler):
     def __init__(self, keyword_name: str) -> None:
@@ -36,7 +36,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             # We are inside an errouneous link, and we should actually not skip this content
             #  since it was part of the original binary data
             pass
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endDocument(self):
         pass
@@ -54,7 +54,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -68,7 +68,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.locator = locator
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
@@ -83,7 +83,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 # Do not write the start tag
                 return
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class CheckLinks:

@@ -11,7 +11,7 @@ from pathlib import Path
 from fodt.constants import AutomaticStyles, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, InputException, ParsingException
 from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class PartsHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputdir: Path, chapter: int, section: int,
@@ -37,7 +37,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
         name:str,
         attrs: xml.sax.xmlreader.AttributesImpl,
     ) -> None:
-        self.subsection.write(XMLHelper.starttag(name, attrs))
+        self.subsection.write(xml_helpers.starttag(name, attrs))
 
     def characters(self, content: str):
         if self.save_keyword_name:
@@ -62,7 +62,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
                 self.keyword_name = self.predefined_keywords[self.current_subsection - 1]
             self.save_keyword_name = False
         if self.in_subsection:
-            self.subsection.write(XMLHelper.escape(content))
+            self.subsection.write(xml_helpers.escape(content))
 
     def collect_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         for (key, value) in attrs.items():
@@ -78,7 +78,7 @@ class PartsHandler(xml.sax.handler.ContentHandler):
             self.in_bookmark = False
             self.save_keyword_name = True
         if self.in_subsection:
-            self.subsection.write(XMLHelper.endtag(name))
+            self.subsection.write(xml_helpers.endtag(name))
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         done = False

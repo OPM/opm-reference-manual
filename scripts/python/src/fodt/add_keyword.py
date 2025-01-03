@@ -16,7 +16,7 @@ from fodt.create_subdocument import CreateSubDocument3
 from fodt import helpers
 from fodt.remove_subsections import RemoveSubSections
 from fodt.templates import Templates
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class AppendixHandler(xml.sax.handler.ContentHandler):
     def __init__(
@@ -57,11 +57,11 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
     def characters(self, content: str):
         if self.in_styles:
             self.maybe_close_start_tag(self.content)
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
         elif self.in_appendix_table:
             if self.in_table_row:
                 self.maybe_close_start_tag(self.current_row)
-                self.current_row.write(XMLHelper.escape(content))
+                self.current_row.write(xml_helpers.escape(content))
             else:
                 if self.start_tag_open:
                     self.between_rows += ">"
@@ -80,7 +80,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                     if self.current_table_number == self.keyword_table_number:
                         self.found_appendix_table = True
             self.maybe_close_start_tag(self.content)
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if name == "table:table-cell":
@@ -106,7 +106,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                     self.between_rows += "/>"
                     self.start_tag_open = False
                 else:
-                    self.between_rows += XMLHelper.endtag(name)
+                    self.between_rows += xml_helpers.endtag(name)
         else:
             if self.in_styles:
                 if name == "office:automatic-styles":
@@ -157,7 +157,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
 
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.in_styles:
@@ -192,7 +192,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
                     self.write_start_tag(self.current_row, name, attrs)
                 else:
                     self.start_tag_open = True
-                    self.between_rows += XMLHelper.starttag(name, attrs, close_tag=False)
+                    self.between_rows += xml_helpers.starttag(name, attrs, close_tag=False)
             else:
                 self.write_start_tag(self.content, name, attrs)
 
@@ -213,7 +213,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
             buffer.write("/>")
             self.start_tag_open = False
         else:
-            buffer.write(XMLHelper.endtag(name))
+            buffer.write(xml_helpers.endtag(name))
 
     def write_missing_styles(self):
         for style_name in self.style_names:
@@ -226,7 +226,7 @@ class AppendixHandler(xml.sax.handler.ContentHandler):
         if self.start_tag_open:
             buffer.write(">")  # Close the start tag
         self.start_tag_open = True
-        buffer.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        buffer.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class AddKeyword():

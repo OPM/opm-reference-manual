@@ -7,7 +7,7 @@ from fodt.automatic_styles_filter import AutomaticStylesFilter2, AutomaticStyles
 from fodt.constants import Directories, FileExtensions, FileNames, MetaSections
 from fodt.exceptions import InputException
 from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 from fodt.styles_filter import StylesFilter
 
 class CreateSubDocument():
@@ -73,7 +73,7 @@ class CreateSubDocument():
 """)
 
     def write_office_document_start_tag(self) -> None:
-        tag = XMLHelper.get_office_document_start_tag(self.metadir)
+        tag = xml_helpers.get_office_document_start_tag(self.metadir)
         self.outputfile.write(tag)
 
     def write_meta(self, part: str) -> None:
@@ -134,7 +134,7 @@ class CreateSubDocument():
 """)
 
     def write_xml_header(self) -> None:
-        self.outputfile.write(XMLHelper.header)
+        self.outputfile.write(xml_helpers.HEADER)
 
 class CreateSubDocument1(CreateSubDocument):
     def __init__(

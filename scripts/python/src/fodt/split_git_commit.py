@@ -15,7 +15,7 @@ import click
 from git import Repo
 
 from fodt.extract_xml_tag import ExtractXmlTag
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class ContentHandler(xml.sax.handler.ContentHandler):
     def __init__(self, old_body: str) -> None:
@@ -31,14 +31,14 @@ class ContentHandler(xml.sax.handler.ContentHandler):
             self.in_body = False
         else:
             if not self.in_body:
-                self.content.write(XMLHelper.endtag(name))
+                self.content.write(xml_helpers.endtag(name))
 
     def characters(self, content: str):
         if not self.in_body:
             self.content.write(xml.sax.saxutils.escape(content))
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name: str, attrs: xml.sax.xmlreader.AttributesImpl):
         if name == 'office:body':
@@ -47,7 +47,7 @@ class ContentHandler(xml.sax.handler.ContentHandler):
             self.content.write(self.body)
         else:
             if not self.in_body:
-                self.content.write(XMLHelper.starttag(name, attrs))
+                self.content.write(xml_helpers.starttag(name, attrs))
 
 
 class Splitter:

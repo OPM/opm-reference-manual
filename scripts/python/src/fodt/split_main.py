@@ -13,7 +13,7 @@ from pathlib import Path
 import fodt.string_functions
 from fodt.constants import ClickOptions, Directories, FileNames
 from fodt.remove_chapters import RemoveChapters
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     def __init__(self) -> None:
@@ -23,7 +23,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         self.nesting = 0
 
     def characters(self, content: str):
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def check_correct_table(self, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
         keys = attrs.keys()
@@ -40,7 +40,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             elif name == "text:bookmark-ref":
                 # remove this tag
                 return
-        self.content.write(XMLHelper.endtag(name))
+        self.content.write(xml_helpers.endtag(name))
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         # logging.info(f"startElement: {name}")
@@ -50,7 +50,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         if self.in_table and name == "text:bookmark-ref":
             # remove this tag
             return
-        self.content.write(XMLHelper.starttag(name, attrs))
+        self.content.write(xml_helpers.starttag(name, attrs))
 
 
 class FixupMasterStyles():

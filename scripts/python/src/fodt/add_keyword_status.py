@@ -18,7 +18,7 @@ from pathlib import Path
 import click
 
 from fodt.constants import ClickOptions, Directories, FileExtensions, KeywordStatus, Regex
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
     def __init__(self, keyword: str, status: KeywordStatus, opm_flow: bool) -> None:
@@ -55,7 +55,7 @@ class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
             self.current_keyword = None
             self.in_table_cell_p = False
             self.found_table_cell = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def collect_table_cell_styles(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # collect the style names for orange and green colors
@@ -92,12 +92,12 @@ class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
             self.found_table_cell = False
             if self.opm_flow:
                 content = "OPM Flow"
-                self.content.write(XMLHelper.escape(content))
+                self.content.write(xml_helpers.escape(content))
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -159,7 +159,7 @@ class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
 
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
@@ -181,7 +181,7 @@ class AppendixKeywordHandler(xml.sax.handler.ContentHandler):
             else:
                 attrs = self.handle_table_row(name, attrs)
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class UpdateKeywordStatus:
