@@ -35,6 +35,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  end /> tag instead of the full end tag </tag>
         self.start_tag_open = False
         self.in_p = False
+        # P603 paragraphs contain monospaced text, and should not be linked
+        self.in_p603_paragraph = False
         self.is_example_p = []  # Stack of boolean values: If current p tag is an example
         self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
@@ -55,6 +57,12 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.not_keyword = False
         # A temporary character buffer to store content between start and end tags
         self.char_buf = ""
+
+    def check_p603_paragraph(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
+        if "text:style-name" in attrs.getNames():
+            style_name = attrs.getValue("text:style-name")
+            if style_name == "P603":
+                self.in_p603_paragraph = True
 
     def compile_regex(self) -> re.Pattern:
         # Also include the keyword name itself in the regex pattern, see discussion
@@ -108,6 +116,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 if self.p_recursion == 0:
                     self.in_p = False
                 self.is_example_p.pop()
+                self.in_p603_paragraph = False   # Assume this is not recursive
             elif name == "text:a":
                 self.in_a = False
             elif name == "text:span":
@@ -149,6 +158,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.in_math)
                     and (not self.in_binary_data)
                     and (not self.in_draw_frame)
+                    and (not self.in_p603_paragraph)
                 ):
                     if not self.is_example_p[-1]:
                         if (self.file_type == FileType.CHAPTER or
@@ -190,6 +200,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.in_p = True
                 self.p_recursion += 1
                 self.update_example_stack(attrs)
+                self.check_p603_paragraph(attrs)
             elif name == "text:a":
                 # We are inside an anchor, and we should not insert another text:a tag here
                 self.in_a = True
