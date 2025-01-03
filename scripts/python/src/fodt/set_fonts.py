@@ -4,8 +4,7 @@ import click
 
 from pathlib import Path
 from fodt.constants import ClickOptions, Directories, TagEvent
-from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt import helpers, xml_helpers
 import xml.sax
 import xml.sax.handler
 import xml.sax.xmlreader
@@ -35,24 +34,24 @@ class ItemHandler(xml.sax.handler.ContentHandler):
             self.in_section = True
             self.insert_font_decls()
         if not self.in_section:
-            self.content.write(XMLHelper.starttag(name, attrs))
+            self.content.write(xml_helpers.starttag(name, attrs))
 
     def endElement(self, name: str):
         if not self.in_section:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
         if name == self.font_tag_name:
             self.in_section = False
 
     def characters(self, content: str):
         if not self.in_section:
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
     def write_file(self):
         with open(self.savename, "w", encoding='utf-8') as f:
             f.write(self.content.getvalue())
 
     def write_xml_header(self) -> None:
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
 class ReplaceFontDecls():
     def __init__(self, filename: str, savename: str, font_decl_file: str) -> None:

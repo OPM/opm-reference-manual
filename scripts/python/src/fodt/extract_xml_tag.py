@@ -7,7 +7,7 @@ import xml.sax.saxutils
 
 from fodt.constants import TagEvent
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 
 class SectionHandler(xml.sax.handler.ContentHandler):
@@ -30,7 +30,7 @@ class SectionHandler(xml.sax.handler.ContentHandler):
         if self.enable_indent:
             self.remove_trailing_spaces()
         self.section += f"{self.add_indent()}"
-        self.section += XMLHelper.starttag(name, attrs)
+        self.section += xml_helpers.starttag(name, attrs)
         self.indent += 1
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
@@ -53,14 +53,14 @@ class SectionHandler(xml.sax.handler.ContentHandler):
                 self.remove_trailing_spaces()
                 if last_event == TagEvent.END:
                     self.section += "\n" + (" " * self.indent)
-            self.section += XMLHelper.endtag(name)
+            self.section += xml_helpers.endtag(name)
         if name == self.section_name:
             self.in_section = False
             raise HandlerDoneException(f"Done extracting sections {self.section_name}.")
 
     def characters(self, content: str):
         if self.in_section:
-            self.section += XMLHelper.escape(content)
+            self.section += xml_helpers.escape(content)
 
     def remove_trailing_spaces(self):
         self.section = re.sub(r"\s+$", "", self.section)

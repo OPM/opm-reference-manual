@@ -12,7 +12,7 @@ import click
 from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, ParsingException
 from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class ExtractURI_Handler(xml.sax.handler.ContentHandler):
     def __init__(self, keyword_name: str) -> None:

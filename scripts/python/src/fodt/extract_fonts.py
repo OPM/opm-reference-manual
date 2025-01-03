@@ -12,7 +12,7 @@ from pathlib import Path
 import click
 
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class FontHandler(xml.sax.handler.ContentHandler):
     def __init__(self, save_dir: Path) -> None:
@@ -30,7 +30,7 @@ class FontHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if self.in_binary_data:
-            self.font_data.write(XMLHelper.escape(content))
+            self.font_data.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if self.in_binary_data and name == 'office:binary-data':

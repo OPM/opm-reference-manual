@@ -8,7 +8,7 @@ import xml.sax.saxutils
 
 from pathlib import Path
 from fodt.constants import AutomaticStyles, FileExtensions, FileNames
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     def __init__(self, styles: set[str]) -> None:
@@ -39,7 +39,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
                 # one of these attributes.
                 self.include = True
         if self.include:
-            self.content.write(XMLHelper.starttag(name, attrs))
+            self.content.write(xml_helpers.starttag(name, attrs))
 
     def endElement(self, name: str):
         if self.nesting == 0:
@@ -48,11 +48,11 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             if self.nesting >= 1:
                 self.nesting -= 1
         if self.include:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def characters(self, content: str):
         if self.include:
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
 
 class AutomaticStylesFilter:
