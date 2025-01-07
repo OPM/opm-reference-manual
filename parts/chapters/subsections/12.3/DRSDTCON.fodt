@@ -5239,8 +5239,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P78">The rate of dissolution during the Steady-State regime is defined by the parameter OMEGA.</text:p>
     <text:p text:style-name="P78">The final Decline phase occurs when the CO<text:span text:style-name="T30">2</text:span> has been completely dissolved in the brine at which point the rate of dissolution is zero.</text:p>
     <text:p text:style-name="_40_TextBody">The values of<text:span text:style-name="T27"> CHI, PSI and OMEGA</text:span><text:span text:style-name="T28"> </text:span><text:span text:style-name="T36">can either be estimated from fine-scale simulation, historical data, </text:span>or from laboratory tests<text:note text:id="ftn3" text:note-class="footnote"><text:note-citation>3</text:note-citation><text:note-body>
-       <text:p text:style-name="Footnote">Taheri, A., Torsæter, O., Lindeberg, E., Hadia, N. J., &amp; Wessel-Berg, D. (2018). Qualitative and quantitative experimental study of convective mixing process during storage of CO2 in heterogeneous saline aquifers. International Journal of Greenhouse Gas Control, 71, 212-226.</text:p></text:note-body></text:note><text:span text:style-name="T36">. CHI typically varies from 0.01 - <text:s/>0.1 depending on reservoir properties.</text:span> Elenius et al.<text:note text:id="ftn4" text:note-class="footnote"><text:note-citation>4</text:note-citation><text:note-body>
-       <text:p text:style-name="Footnote">Elenius, M. T., Nordbotten, J. M., &amp; Kalisch, H. (2014). Convective mixing influenced by the capillary transition zone. Computational Geosciences, 18(3-4), 417-431</text:p></text:note-body></text:note> states that 0.04 is a reasonable value for CHI for the Utsira formation.</text:p>
+       <text:p text:style-name="Footnote">Taheri, A., Torsæter, O., Lindeberg, E., Hadia, N. J., &amp; Wessel-Berg, D. (2018). Qualitative and quantitative experimental study of convective mixing process during storage of CO2 in heterogeneous saline aquifers. International Journal of Greenhouse Gas Control, 71, 212-226.</text:p></text:note-body></text:note><text:span text:style-name="T36">. Analysis of fine-scale simulation results by Mykkeltvedt <text:span text:style-name="T38">et al</text:span> indicates that 0.04 +/-0.01 is a reasonable value for CHI. CHI typically varies from 0.01 - <text:s/>0.1 depending on reservoir properties.</text:span> Elenius et al.<text:note text:id="ftn4" text:note-class="footnote"><text:note-citation>4</text:note-citation><text:note-body>
+       <text:p text:style-name="Footnote">Elenius, M. T., Nordbotten, J. M., &amp; Kalisch, H. (2014). Convective mixing influenced by the capillary transition zone. Computational Geosciences, 18(3-4), 417-431</text:p></text:note-body></text:note> also states that 0.04 is a reasonable value for CHI for the Utsira formation.</text:p>
     <table:table table:name="Table1973" table:style-name="Table1973">
      <table:table-column table:style-name="Table1973.A"/>
      <table:table-header-rows>
@@ -5283,7 +5283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">-- </text:p>
     <text:p text:style-name="_40_Example">VAPWAT</text:p>
     <text:p text:style-name="_40_Example"></text:p>
-    <text:p text:style-name="_40_TextBody">The second part of the example sets the maximum dissolution rate for convective CO<text:span text:style-name="T31">2</text:span> mixing via the <text:a xlink:href="#__RefHeading___Toc481925_1297399298">DRSDTCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody">The second part of the example sets the maximum dissolution rate for convective CO<text:span text:style-name="T31">2</text:span> mixing via the <text:a xlink:href="#__RefHeading___Toc481925_1297399298">DRSDTCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section based on the base case parameters calculated by Mykkeltvedt <text:span text:style-name="T38">et al</text:span> from fine-scale simulations.</text:p>
     <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
     <text:p text:style-name="_40_Example">-- SCHEDULE SECTION </text:p>
@@ -5295,7 +5295,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">DRSDTCON</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>CHI <text:s text:c="5"/>PSI <text:s text:c="5"/>OMEGA <text:s text:c="3"/>OPTION</text:p>
-    <text:p text:style-name="_40_Example"><text:s text:c="9"/>0.04 <text:s text:c="4"/>0.33 <text:s text:c="4"/>3.0E-09 <text:s/>ALL <text:s text:c="28"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>0.04 <text:s text:c="4"/>0.34 <text:s text:c="4"/>3.0E-09 <text:s/>ALL <text:s text:c="28"/>/</text:p>
     <text:p text:style-name="_40_Example"/>
     <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section for further information on OPM Flow’s CO<text:span text:style-name="T30">2</text:span> storage facility.</text:p>
    </text:section>
