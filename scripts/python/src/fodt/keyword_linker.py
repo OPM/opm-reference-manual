@@ -20,6 +20,7 @@ from fodt import xml_helpers
 class FileType(enum.Enum):
     CHAPTER = 1
     SUBSECTION = 2
+    APPENDIX = 3
 
 @dataclass
 class MonoParagraphStyle:
@@ -226,7 +227,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.in_mono_paragraph)
                 ):
                     if not self.is_example_p[-1]:
-                        if (self.file_type == FileType.CHAPTER or
+                        if ((    self.file_type == FileType.CHAPTER
+                              or self.file_type == FileType.APPENDIX) or
                             (self.file_type == FileType.SUBSECTION and
                               (not self.is_table_caption(characters)))):
                                 characters = self.regex.sub(self.replace_match_function, characters)
@@ -301,6 +303,7 @@ class InsertLinks():
         maindir: Path,
         subsection: str|None,
         chapter: str|None,
+        appendix: str|None,
         filename: str|None,
         start_dir: Path,
         kw_uri_map: dict[str, str]
@@ -311,17 +314,25 @@ class InsertLinks():
         self.subsection = subsection
         self.chapter = chapter
         self.filename = filename
+        self.appendix = appendix
 
     def insert_links(self) -> None:
         if self.chapter:
             self.insert_links_in_chapter()
-        else:
+        elif self.subsection:
             self.insert_links_in_subsections()
+        else:
+            self.insert_links_in_appendix()
 
     def insert_links_in_chapter(self) -> None:
         filename = f"{self.chapter}.{FileExtensions.fodt}"
         path = self.start_dir / filename
         self.insert_links_in_file(path, filename, FileType.CHAPTER)
+
+    def insert_links_in_appendix(self) -> None:
+        filename = f"{self.appendix}.{FileExtensions.fodt}"
+        path = self.start_dir / filename
+        self.insert_links_in_file(path, filename, FileType.APPENDIX)
 
     def insert_links_in_subsections(self) -> None:
         for item in self.start_dir.iterdir():
@@ -387,6 +398,7 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #    --keyword_dir=<keyword_dir> \
 #    --subsection=<subsection> \
 #    --chapter=<chapter> \
+#    --appendix=<appendix> \
 #    --filename=<filename> \
 #    --use-map-file
 #
@@ -403,9 +415,10 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #
 #   If --subsection is not given, the script will process all subsections. If --subsection
 #   is given, the script will only process the specified subsection, or if --chapter is
-#   given, the script will only process the specified chapter, or if --filename is
-#   given, the script will only process the specified file within the specified subsection.
-#   The options --chapter and --subsection are mutually exclusive.
+#   given, the script will only process the specified chapter, or if --appendix is given,
+#   the script will only process the specified appendix. If --filename is given, the script
+#   will only process the specified file within the specified subsection.
+#   The options --appendix, --chapter and --subsection are mutually exclusive.
 #
 # EXAMPLES:
 #
@@ -427,6 +440,7 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 @ClickOptions.keyword_dir
 @click.option('--subsection', help='The subsection to process')
 @click.option('--chapter', help='The chapter to process')
+@click.option('--appendix', help='The appendix to process')
 @click.option('--use-map-file', is_flag=True, help='Use the mapping file "meta/kw_uri_map.txt"')
 @click.option('--filename', help='The filename to process')
 def link_keywords(
@@ -434,6 +448,7 @@ def link_keywords(
     keyword_dir: str|None,
     subsection: str|None,
     chapter: str|None,
+    appendix: str|None,
     filename: str|None,
     use_map_file: bool
 ) -> None:
@@ -444,13 +459,15 @@ def link_keywords(
         kw_uri_map = load_kw_uri_map(maindir)
     else:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
-    if chapter and subsection:
-        raise ValueError("Options --chapter and --subsection are mutually exclusive.")
+    if sum(x is not None for x in [chapter, appendix, filename]) != 1:
+        raise ValueError("Options --appendix, --chapter and --subsection are mutually exclusive.")
     if chapter:
         file_dir = maindir / Directories.chapters
+    elif appendix:
+        file_dir = maindir / Directories.appendices
     else:
         file_dir = maindir / Directories.chapters / Directories.subsections
-    InsertLinks(maindir, subsection, chapter, filename, file_dir, kw_uri_map).insert_links()
+    InsertLinks(maindir, subsection, chapter, appendix, filename, file_dir, kw_uri_map).insert_links()
 
 if __name__ == "__main__":
     link_keywords()
