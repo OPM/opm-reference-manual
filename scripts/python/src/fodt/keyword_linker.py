@@ -204,7 +204,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
                         self.mono_paragraph_style.libre_mono_font = True
                 attr2 = "fo:font-size"
                 if attr2 in attrs.getNames():
-                    if attrs.getValue(attr2) == "8pt":
+                    fontsize = attrs.getValue(attr2)
+                    # NOTE: Originally we wanted to check for a specific font size equal to 8pt,
+                    #    but it might be changed in the future. Therefore we only check if the
+                    #    font size is set.
+                    if len(fontsize) > 0:  # Check if the font size is set
                         self.mono_paragraph_style.libre_mono_font_size = True
 
     def maybe_write_characters(self) -> None:
