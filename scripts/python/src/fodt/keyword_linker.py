@@ -28,7 +28,7 @@ class MonoParagraphStyle:
     style_paragraph_properties: bool = False
     style_text_properties: bool = False
     libre_mono_font: bool = False
-    libre_mono_font_size: bool = False
+    #libre_mono_font_size: bool = False
 
     def in_style_style_element(self) -> bool:
         return self.style_name != ""
@@ -37,8 +37,8 @@ class MonoParagraphStyle:
         return (self.loext_graphic_properties
                 and self.style_paragraph_properties
                 and self.style_text_properties
-                and self.libre_mono_font
-                and self.libre_mono_font_size)
+                and self.libre_mono_font)
+                #and self.libre_mono_font_size)
 
 
 class FileHandler(xml.sax.handler.ContentHandler):
@@ -202,14 +202,14 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 if attr in attrs.getNames():
                     if attrs.getValue(attr) == "Liberation Mono":
                         self.mono_paragraph_style.libre_mono_font = True
-                attr2 = "fo:font-size"
-                if attr2 in attrs.getNames():
-                    fontsize = attrs.getValue(attr2)
-                    # NOTE: Originally we wanted to check for a specific font size equal to 8pt,
-                    #    but it might be changed in the future. Therefore we only check if the
-                    #    font size is set.
-                    if len(fontsize) > 0:  # Check if the font size is set
-                        self.mono_paragraph_style.libre_mono_font_size = True
+                # NOTE: Originally we wanted to check for a specific font size equal to 8pt,
+                #    but it might be changed in the future. Therefore we skip the check for
+                #    the font size for now
+                #attr2 = "fo:font-size"
+                #if attr2 in attrs.getNames():
+                    #fontsize = attrs.getValue(attr2)
+                    #if len(fontsize) > 0:  # Check if the font size is set
+                    #    self.mono_paragraph_style.libre_mono_font_size = True
 
     def maybe_write_characters(self) -> None:
         if len(self.char_buf) > 0:
