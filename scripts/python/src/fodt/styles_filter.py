@@ -8,7 +8,7 @@ import xml.sax.saxutils
 
 from pathlib import Path
 from fodt.constants import AutomaticStyles, FileNames, FileExtensions
-from fodt.xml_helpers import XMLHelper
+from fodt.xml_helpers import xml_helper
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     def __init__(self, part: str) -> None:
@@ -19,7 +19,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         self.content.write(f"<{name}")
         for (key, value) in attrs.items():
-            evalue = XMLHelper.escape(value)
+            evalue = xml_helpers.escape(value)
             self.content.write(f" {key}=\"{evalue}\"")
         if name == "text:outline-level-style":
             level = int(attrs.getValue("text:level"))
@@ -31,10 +31,10 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         self.content.write(">")
 
     def endElement(self, name: str):
-        self.content.write(XMLHelper.endtag(name))
+        self.content.write(xml_helpers.endtag(name))
 
     def characters(self, content: str):
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
 class StylesFilter:
     def __init__(self, content: str, part: str) -> None:

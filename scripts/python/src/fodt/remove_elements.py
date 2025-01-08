@@ -10,7 +10,7 @@ from pathlib import Path
 
 from fodt.constants import TagEvent
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputfn: str, count: int, name: str) -> None:
@@ -43,11 +43,11 @@ class ElementHandler(xml.sax.handler.ContentHandler):
             else:
                 self.nesting += 1
         if self.done_removing or (not self.in_element):
-            self.content.write(XMLHelper.starttag(name, attrs))
+            self.content.write(xml_helpers.starttag(name, attrs))
 
     def endElement(self, name: str):
         if not self.in_element:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
         else:
             if name == self.tag_name:
                 self.nesting -= 1
@@ -63,7 +63,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
 
     def characters(self, content: str):
         if not self.in_element:
-            self.content.write(XMLHelper.escape(content))
+            self.content.write(xml_helpers.escape(content))
 
     def write_file(self):
         filename = Path(self.outputfn)
@@ -75,7 +75,7 @@ class ElementHandler(xml.sax.handler.ContentHandler):
         logging.info(f"Wrote modified file to file {filename}.")
 
     def write_xml_header(self) -> None:
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
 class RemoveElements():
     def __init__(self, name: str, outputfn: str, filename: str, count: int) -> None:

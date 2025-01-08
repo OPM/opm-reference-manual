@@ -5,7 +5,7 @@ import xml.sax.handler
 import xml.sax.xmlreader
 import xml.sax.saxutils
 
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class PassThroughFilterHandler(xml.sax.handler.ContentHandler):
     def __init__(self, add_header=True) -> None:
@@ -19,27 +19,27 @@ class PassThroughFilterHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if self.start_tag_open:
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
 
     def startDocument(self):
         if self.add_header:
-            self.content.write(XMLHelper.header)
+            self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
             self.content.write(">")
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class GetUsedStylesHandler(xml.sax.handler.ContentHandler):

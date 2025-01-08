@@ -13,7 +13,7 @@ import click
 
 from fodt.constants import ClickOptions
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class FontHandler(xml.sax.handler.ContentHandler):
     def __init__(self) -> None:
@@ -24,7 +24,7 @@ class FontHandler(xml.sax.handler.ContentHandler):
     def characters(self, content: str):
         if self.in_font_face:
             return  # we remove the interior of a font-face tag
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if name == 'office:font-face-decls':
@@ -34,10 +34,10 @@ class FontHandler(xml.sax.handler.ContentHandler):
         else:
             if self.in_font_face:
                 return  # we remove the interior of a font-face tag
-        self.content.write(XMLHelper.endtag(name))
+        self.content.write(xml_helpers.endtag(name))
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if name == 'office:font-face-decls':
@@ -47,7 +47,7 @@ class FontHandler(xml.sax.handler.ContentHandler):
                 self.in_font_face = True
             elif self.in_font_face:
                 return  # we remove the interior of a font-face tag
-        self.content.write(XMLHelper.starttag(name, attrs))
+        self.content.write(xml_helpers.starttag(name, attrs))
 
 
 class RemoveFontData:
