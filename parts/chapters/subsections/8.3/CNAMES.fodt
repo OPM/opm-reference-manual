@@ -2814,6 +2814,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
   </style:style>
+  <style:style style:name="T999" style:family="text">
+   <style:text-properties style:text-position="sub 58%"/>
+  </style:style>
   <style:style style:name="Sect1" style:family="section">
    <style:section-properties style:editable="false">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4264,8 +4267,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table2083.1">
        <table:table-cell table:style-name="Table2083.A1" office:value-type="string">
         <text:p text:style-name="P10232">Note</text:p>
-        <text:p text:style-name="P10195">This keyword is only supported by OPM Flow when the two component gas-water CO2 storage model has been activated using the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> keyword and either the <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> or the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> and <text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
-        <text:p text:style-name="P10209">Secondly, although OPM Flow parses the keyword, the simulator currently ignores the data for this keyword.</text:p>
+        <text:p text:style-name="P10195">This keyword is only supported by OPM Flow when the two phase gas-water CO<text:span text:style-name="T999">2</text:span> storage model has been activated using the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> keyword and either the <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> or the <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a> and <text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Only the component names "H2O", "CO2" and "NACL" (water, CO<text:span text:style-name="T999">2</text:span> and salt respectively) are recognized when the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1">CNAMES</text:a> keyword is used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> keyword; any other component names are ignored.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4323,20 +4325,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14973">Table <text:sequence text:ref-name="refTable241" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.25</text:sequence>: CNAMES Keyword Description</text:p>
     <text:h text:style-name="P18658" text:outline-level="4">Example</text:h>
-    <text:p text:style-name="P12718">The following example defines how to confirm a two component formulation, together with defining the names of the composition components, to be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> options.</text:p>
+    <text:p text:style-name="P12718">The following example defines how to confirm a three component formulation, together with defining the names of the compositional components, to be used with the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> and <text:a xlink:href="#__RefHeading___Toc38607_2267116897 Copy 1">GASWAT</text:a> options.</text:p>
     <text:p text:style-name="P14539">--</text:p>
     <text:p text:style-name="P14539">-- <text:s text:c="6"/>CONFIRM NUMBER OF COMPOSITIONAL COMPONENTS (OPM FLOW KEYWORD)</text:p>
     <text:p text:style-name="P14539">--</text:p>
     <text:p text:style-name="P14539">NCOMPS <text:s text:c="73"/></text:p>
-    <text:p text:style-name="P83"><text:s text:c="9"/><text:s text:c="7"/>2 <text:s text:c="69"/>/</text:p>
+    <text:p text:style-name="P83"><text:s text:c="9"/><text:s text:c="7"/>3 <text:s text:c="69"/>/</text:p>
     <text:p text:style-name="P14540">--</text:p>
     <text:p text:style-name="P14540">-- <text:s text:c="6"/>DEFINE COMPOSITIONAL COMPONENTS NAMES (OPM FLOW KEYWORD)</text:p>
     <text:p text:style-name="P14540">--</text:p>
     <text:p text:style-name="P14540">CNAMES <text:s text:c="72"/></text:p>
+    <text:p text:style-name="P14540"><text:s text:c="9"/>&apos;H2O&apos;</text:p>
     <text:p text:style-name="P14540"><text:s text:c="9"/>&apos;CO2&apos;</text:p>
-    <text:p text:style-name="P14540"><text:s text:c="9"/>&apos;H2O&apos; <text:s text:c="65"/>/ <text:s text:c="6"/></text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    
+    <text:p text:style-name="P14540"><text:s text:c="9"/>&apos;NACL&apos; <text:s text:c="64"/>/</text:p>
    </text:section>
   </office:text>
  </office:body>
