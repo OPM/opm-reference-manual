@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4225,7 +4226,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </text:list-item>
     </text:list>
     <text:p text:style-name="_40_TextBody">Some of the C++ code in OPM Flow has been “wrapped” in Python which means that one can invoke the <text:s/>simulator’s C++ code from one’s own Python programs. At the moment the wrappers for the input layer and the code for working with the result files is quite complete and usable. Work is also underway to be able to run the simulator and to interact with running simulations from within Python.</text:p>
-    <text:p text:style-name="_40_TextBody">The goal is for the Python code to be structured like a native Python <text:a xlink:href="#__RefHeading___Toc4422_421927891">API</text:a>, but some design decisions are certainly influenced by the underlying C++ implementation, and to get a deeper understanding of what is possible and how to achieve specialized tasks one might need to consult the simulator’s C++ code.</text:p>
+    <text:p text:style-name="_40_TextBody">The goal is for the Python code to be structured like a native Python <text:span text:style-name="NotKeyword">API</text:span>, but some design decisions are certainly influenced by the underlying C++ implementation, and to get a deeper understanding of what is possible and how to achieve specialized tasks one might need to consult the simulator’s C++ code.</text:p>
     <text:p text:style-name="P15809"/>
     <table:table table:name="Table747" table:style-name="Table747">
      <table:table-column table:style-name="Table747.A"/>
@@ -4233,7 +4234,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708777945472">
        <table:table-cell table:style-name="Table747.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10338">Observe that the Python bindings described here are not very mature. The <text:a xlink:href="#__RefHeading___Toc4422_421927891">API</text:a> might change in future releases. It is in general quite simple to expose new functionality to Python.</text:p>
+        <text:p text:style-name="P10338">Observe that the Python bindings described here are not very mature. The <text:span text:style-name="NotKeyword">API</text:span> might change in future releases. It is in general quite simple to expose new functionality to Python.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
