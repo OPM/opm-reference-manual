@@ -15,7 +15,7 @@ import click
 from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, ParsingException
 from fodt import helpers, keyword_uri_map_generator
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class FileType(enum.Enum):
     CHAPTER = 1
@@ -159,7 +159,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -215,7 +215,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         if len(self.char_buf) > 0:
             # NOTE: We need to escape the content before we apply the regex pattern
             #  because it may insert tags (<text:a ...>) that should not be escaped.
-            characters = XMLHelper.escape(self.char_buf)
+            characters = xml_helpers.escape(self.char_buf)
             if self.office_body_found:
                 if (self.in_p
                     and (not self.in_a)
@@ -245,7 +245,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.locator = locator
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         self.maybe_write_characters()
@@ -286,7 +286,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.in_draw_frame = True
                 self.in_draw_recursion += 1
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
     def update_example_stack(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         if "text:style-name" in attrs.getNames():

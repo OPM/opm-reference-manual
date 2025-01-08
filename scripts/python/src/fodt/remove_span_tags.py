@@ -10,7 +10,7 @@ import click
 
 from fodt.constants import ClickOptions
 from fodt import helpers
-from fodt.xml_helpers import XMLHelper
+from fodt import xml_helpers
 
 class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
     # Within the office:automatic-styles section, remove empty lines left behind
@@ -42,7 +42,7 @@ class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if self.in_auto_styles:
@@ -57,7 +57,7 @@ class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -68,7 +68,7 @@ class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
         self.locator = locator
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
@@ -89,7 +89,7 @@ class RemoveEmptyLinesHandler(xml.sax.handler.ContentHandler):
             self.in_tag = True
             self.tag_recursion += 1
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class RemoveStylesHandler(xml.sax.handler.ContentHandler):
@@ -113,7 +113,7 @@ class RemoveStylesHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if self.in_style:
@@ -126,13 +126,13 @@ class RemoveStylesHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.in_style:
@@ -149,7 +149,7 @@ class RemoveStylesHandler(xml.sax.handler.ContentHandler):
                     self.in_style = True
                     return # remove this tag
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class RemoveSpanHandler(xml.sax.handler.ContentHandler):
@@ -179,7 +179,7 @@ class RemoveSpanHandler(xml.sax.handler.ContentHandler):
             # tag and the end tag. If there is no content, characters() is not called.
             self.content.write(">")
             self.start_tag_open = False
-        self.content.write(XMLHelper.escape(content))
+        self.content.write(xml_helpers.escape(content))
 
     def endElement(self, name: str):
         if name == "office:automatic-styles":
@@ -198,7 +198,7 @@ class RemoveSpanHandler(xml.sax.handler.ContentHandler):
             self.content.write("/>")
             self.start_tag_open = False
         else:
-            self.content.write(XMLHelper.endtag(name))
+            self.content.write(xml_helpers.endtag(name))
 
     def get_content(self) -> str:
         return self.content.getvalue()
@@ -218,7 +218,7 @@ class RemoveSpanHandler(xml.sax.handler.ContentHandler):
         self.locator = locator
 
     def startDocument(self):
-        self.content.write(XMLHelper.header)
+        self.content.write(xml_helpers.HEADER)
 
     def startElement(self, name:str, attrs: xml.sax.xmlreader.AttributesImpl):
         if self.start_tag_open:
@@ -249,7 +249,7 @@ class RemoveSpanHandler(xml.sax.handler.ContentHandler):
                     #logging.info(f"removing span: {span_style_name}")
                     return  # remove this tag
         self.start_tag_open = True
-        self.content.write(XMLHelper.starttag(name, attrs, close_tag=False))
+        self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
 
 class RemoveSpanTags:
