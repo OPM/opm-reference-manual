@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4225,7 +4226,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </text:list-item>
     </text:list>
     <text:p text:style-name="_40_TextBody">Some of the C++ code in OPM Flow has been “wrapped” in Python which means that one can invoke the <text:s/>simulator’s C++ code from one’s own Python programs. At the moment the wrappers for the input layer and the code for working with the result files is quite complete and usable. Work is also underway to be able to run the simulator and to interact with running simulations from within Python.</text:p>
-    <text:p text:style-name="_40_TextBody">The goal is for the Python code to be structured like a native Python API, but some design decisions are certainly influenced by the underlying C++ implementation, and to get a deeper understanding of what is possible and how to achieve specialized tasks one might need to consult the simulator’s C++ code.</text:p>
+    <text:p text:style-name="_40_TextBody">The goal is for the Python code to be structured like a native Python <text:span text:style-name="NotKeyword">API</text:span>, but some design decisions are certainly influenced by the underlying C++ implementation, and to get a deeper understanding of what is possible and how to achieve specialized tasks one might need to consult the simulator’s C++ code.</text:p>
     <text:p text:style-name="P15809"/>
     <table:table table:name="Table747" table:style-name="Table747">
      <table:table-column table:style-name="Table747.A"/>
@@ -4233,7 +4234,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708777945472">
        <table:table-cell table:style-name="Table747.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10338">Observe that the Python bindings described here are not very mature. The API might change in future releases. It is in general quite simple to expose new functionality to Python.</text:p>
+        <text:p text:style-name="P10338">Observe that the Python bindings described here are not very mature. The <text:span text:style-name="NotKeyword">API</text:span> might change in future releases. It is in general quite simple to expose new functionality to Python.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4282,7 +4283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P12442">The <text:span text:style-name="T4001">“Deck” </text:span>data structure is essentially a list of keywords which have been loaded as <text:span text:style-name="T4001">“DeckKeyword”</text:span> instances. The Deck can either be loaded from an input data file or from a string. The following example shows how to load two SCHEDULE section keywords, WELSPECS and COMPDATA:</text:p>
+    <text:p text:style-name="P12442">The <text:span text:style-name="T4001">“Deck” </text:span>data structure is essentially a list of keywords which have been loaded as <text:span text:style-name="T4001">“DeckKeyword”</text:span> instances. The Deck can either be loaded from an input data file or from a string. The following example shows how to load two <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keywords, <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and COMPDATA:</text:p>
     <text:p text:style-name="P12442"/>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>#!/usr/bin/env python3</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>from opm.io.parser import Parser</text:p>
@@ -4297,7 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>parser = Parser()</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>deck = parser.parseString( deck_string )</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">After running this small script the deck variable will contain the two keywords WELSPECS and COMPDAT. For these keywords the &apos;*&apos; have been replaced with the correct default value and the items have been converted to the correct type. In addition, all numerical values have been converted to SI units, more about units can be found in section<text:span text:style-name="T7407"> </text:span><text:a xlink:type="simple" xlink:href="#4.2.3.Units|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Internet_20_link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc394266_3990567108">Units</text:bookmark-ref></text:span></text:a>. Alternatively you can use the Parser.parseFile() method to parse an entire input file. In this case INCLUDE and IMPORT keywords will be resolved and everything will be coalesced into one large <text:span text:style-name="T4001">“Deck</text:span>Keyword” data structure:</text:p>
+    <text:p text:style-name="_40_TextBody">After running this small script the deck variable will contain the two keywords <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a>. For these keywords the &apos;*&apos; have been replaced with the correct default value and the items have been converted to the correct type. In addition, all numerical values have been converted to SI units, more about units can be found in section<text:span text:style-name="T7407"> </text:span><text:a xlink:type="simple" xlink:href="#4.2.3.Units|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Internet_20_link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc394266_3990567108">Units</text:bookmark-ref></text:span></text:a>. Alternatively you can use the Parser.parseFile() method to parse an entire input file. In this case <text:a xlink:href="#__RefHeading___Toc605478_3199477706">INCLUDE</text:a> and <text:a xlink:href="#__RefHeading___Toc561662_2135714711">IMPORT</text:a> keywords will be resolved and everything will be coalesced into one large <text:span text:style-name="T4001">“Deck</text:span>Keyword” data structure:</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_Code"><text:s text:c="2"/>#!/usr/bin/env python3</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>import os.path</text:p>
@@ -4327,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">Internally in OPM Flow all quantities are managed as SI units, whereas input decks use the unit systems METRIC, <text:s/>FIELD, or LAB (laboratory). The METRIC unit system is comparable to SI units, the most notable difference is that time is expressed in days instead of seconds, the FIELD unit system is based on historical units like barrels of oil (stb) and feet for length.</text:p>
+    <text:p text:style-name="_40_TextBody">Internally in OPM Flow all quantities are managed as SI units, whereas input decks use the unit systems <text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a>, <text:s/><text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a>, or <text:a xlink:href="#__RefHeading___Toc72458_2267116897">LAB</text:a> (laboratory). The <text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a> unit system is comparable to SI units, the most notable difference is that time is expressed in days instead of seconds, the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> unit system is based on historical units like barrels of oil (stb) and feet for length.</text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/>The important point is that when you access the elements in the Deck the values you will get are in SI units, whereas the input you provided has been in one of other set of units. Consider the example:</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>#!/usr/bin/env python3</text:p>
@@ -4349,14 +4350,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14405"><text:s text:c="3"/>==&gt; The Oil rate in well:W1 is 1.0 m3/s</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">because the input value of 86,400 m3/day is internally converted to 1.0 m3/second.</text:p>
-    <text:p text:style-name="_40_TextBody">The default input unit system is METRIC, that means that if the input is to be interpreted in either FIELD or LAB units, then one needs to add a keyword to declare the units before the entering the data. Thus, to interpret the WCONPROD keyword’s oil rate as stb/d in the previous example, the FIELD keyword needs to be added to the example, that is:</text:p>
+    <text:p text:style-name="_40_TextBody">The default input unit system is <text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a>, that means that if the input is to be interpreted in either <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> or <text:a xlink:href="#__RefHeading___Toc72458_2267116897">LAB</text:a> units, then one needs to add a keyword to declare the units before the entering the data. Thus, to interpret the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword’s oil rate as stb/d in the previous example, the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> keyword needs to be added to the example, that is:</text:p>
     <text:p text:style-name="_40_Code">#!/usr/bin/env python3</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>from opm.io.parser import Parser</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>deck_string = &quot;&quot;&quot;</text:p>
     <text:p text:style-name="P16917"/>
-    <text:p text:style-name="P16917"><text:s text:c="3"/>FIELD</text:p>
+    <text:p text:style-name="P16917"><text:s text:c="3"/><text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a></text:p>
     <text:p text:style-name="P16917"/>
-    <text:p text:style-name="P16917"><text:s text:c="3"/>WCONPROD</text:p>
+    <text:p text:style-name="P16917"><text:s text:c="3"/><text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a></text:p>
     <text:p text:style-name="P16917"><text:s text:c="4"/>&apos;W1&apos; <text:s/>&apos;OPEN&apos; <text:s text:c="2"/>&apos;ORAT&apos; <text:s/>86400 /</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>/</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>&quot;&quot;&quot;</text:p>
@@ -4394,7 +4395,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="3"/># Get the third WELSPECS keyword</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>welspecs3 = deck[(&quot;WELSPECS&quot;, 3)]</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">A deck keyword is composed of <text:span text:style-name="T4001">“records”</text:span>, which are again composed of <text:span text:style-name="T4001">“items”</text:span>. The example below shows how one can iterate through the wells in a WELSPECS keyword:</text:p>
+    <text:p text:style-name="_40_TextBody">A deck keyword is composed of <text:span text:style-name="T4001">“records”</text:span>, which are again composed of <text:span text:style-name="T4001">“items”</text:span>. The example below shows how one can iterate through the wells in a <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>kw = deck[&quot;WELSPECS&quot;] </text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>print(f&quot;Keyword has {len(kw)} records&quot;)</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>for record in kw:</text:p>
@@ -4440,7 +4441,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="4"/># Add the keyword description via a JSON string</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>parser.add_keyword(json.dumps(GCLOSE))</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">By default the parser used in OPM Flow is quite strict - a tad stricter than the one used by the commercial simulator. However you one configure how the parser should react to certain error conditions. By default the parser will fail with an exception if an INCLUDE file is not found, but one can for instance change this behavior to ignore that error condition, for example:</text:p>
+    <text:p text:style-name="_40_TextBody">By default the parser used in OPM Flow is quite strict - a tad stricter than the one used by the commercial simulator. However you one configure how the parser should react to certain error conditions. By default the parser will fail with an exception if an <text:a xlink:href="#__RefHeading___Toc605478_3199477706">INCLUDE</text:a> file is not found, but one can for instance change this behavior to ignore that error condition, for example:</text:p>
     <text:p text:style-name="P16916"><text:soft-page-break/><text:s text:c="4"/>parse_context = ParseContext([(&apos;PARSE_MISSING_INCLUDE&apos;,</text:p>
     <text:p text:style-name="P16916"><text:s text:c="7"/><text:s text:c="25"/><text:s text:c="4"/>opm.io.action.ignore)])</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>parser = Parser()</text:p>
@@ -4459,7 +4460,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T4001">“Deck”</text:span> is a quite raw structure and not very user friendly. Before actually used in the simulator the properties from the <text:span text:style-name="T4001">“Deck”</text:span> are coalesced to a form more easily usable format. Consider, for example the PORO array configured below where the configuration is given in three steps:</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="T4001">“Deck”</text:span> is a quite raw structure and not very user friendly. Before actually used in the simulator the properties from the <text:span text:style-name="T4001">“Deck”</text:span> are coalesced to a form more easily usable format. Consider, for example the <text:a xlink:href="#__RefHeading___Toc45797_719036256">PORO</text:a> array configured below where the configuration is given in three steps:</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="2"/>-- GRID Dimensions 10 x 10 x 3</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="2"/>DIMENS</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="4"/>10 10 3 /</text:p>
@@ -4536,7 +4537,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>for well in schedule.well_names():</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="7"/>print(well)</text:p>
     <text:p text:style-name="P12445"/>
-    <text:p text:style-name="P12445">The example above prints the number of report time steps and all the well names in the SCHEDULE section.</text:p>
+    <text:p text:style-name="P12445">The example above prints the number of report time steps and all the well names in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:list xml:id="list105926338686766" text:continue-numbering="true" text:style-name="_40_Appendix_20_Heading_20_Numbering">
      <text:list-item>
       <text:list>
@@ -4546,7 +4547,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">In addition to the functionality to load and inspect the input deck, OPM Flow also has a Python interface to load and inspect the various result files, SUMMARY and RESTART files. There is also some functionality to create files with the correct formatting.</text:p>
+    <text:p text:style-name="_40_TextBody">In addition to the functionality to load and inspect the input deck, OPM Flow also has a Python interface to load and inspect the various result files, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> and <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> files. There is also some functionality to create files with the correct formatting.</text:p>
     <text:list xml:id="list105925597489998" text:continue-numbering="true" text:style-name="_40_Appendix_20_Heading_20_Numbering">
      <text:list-item>
       <text:list>
@@ -4581,7 +4582,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P12446">Using the class <text:span text:style-name="T4001">“ESMry”</text:span> one can load the Extended SUMMARY file for a simulations that contains all the SUMMARY vectors.</text:p>
+    <text:p text:style-name="P12446">Using the class <text:span text:style-name="T4001">“ESMry”</text:span> one can load the Extended <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file for a simulations that contains all the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vectors.</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>#!/usr/bin/env python3</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>import sys</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>from opm.io.ecl import ESMry</text:p>
