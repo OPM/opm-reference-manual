@@ -335,6 +335,7 @@ class InsertLinks():
         self.insert_links_in_file(path, filename, FileType.APPENDIX)
 
     def insert_links_in_subsections(self) -> None:
+        files_processed = 0
         for item in self.start_dir.iterdir():
             if not item.is_dir():
                 continue
@@ -350,7 +351,12 @@ class InsertLinks():
                             logging.info(f"Skipping file: {item2.name}")
                             continue
                     keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
+                    files_processed += 1
                     self.insert_links_in_file(item2, keyword_name, FileType.SUBSECTION)
+        if files_processed == 0:
+            logging.info("No files processed.")
+        else:
+            logging.info(f"Processed {files_processed} files.")
 
     def insert_links_in_file(self, filename: Path, file_info: str, file_type: FileType) -> None:
         parser = xml.sax.make_parser()
@@ -441,7 +447,7 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 @click.option('--subsection', help='The subsection to process')
 @click.option('--chapter', help='The chapter to process')
 @click.option('--appendix', help='The appendix to process')
-@click.option('--use-map-file', is_flag=True, help='Use the mapping file "meta/kw_uri_map.txt"')
+@click.option('--use-map-file', is_flag=True, default=True, help='Use the mapping file "meta/kw_uri_map.txt". This is generally recommended to speed up the processing. Only if we suspect that libreoffice might have changed the references to the keywords, we should generate the map on the fly. In this case, the map file should also be regenerated and committed to the repository.')
 @click.option('--filename', help='The filename to process')
 def link_keywords(
     maindir: str|None,
@@ -459,7 +465,7 @@ def link_keywords(
         kw_uri_map = load_kw_uri_map(maindir)
     else:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
-    if sum(x is not None for x in [chapter, appendix, filename]) != 1:
+    if sum(x is not None for x in [chapter, appendix, subsection]) != 1:
         raise ValueError("Options --appendix, --chapter and --subsection are mutually exclusive.")
     if chapter:
         file_dir = maindir / Directories.chapters
