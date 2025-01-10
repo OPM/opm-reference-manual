@@ -8,7 +8,7 @@ import xml.sax.saxutils
 
 from pathlib import Path
 from fodt.constants import AutomaticStyles, FileExtensions, FileNames
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     def __init__(self, styles: set[str]) -> None:

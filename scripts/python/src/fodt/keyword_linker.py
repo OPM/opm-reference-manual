@@ -14,12 +14,12 @@ import click
 
 from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, ParsingException
-from fodt import helpers, keyword_uri_map_generator
-from fodt import xml_helpers
+from fodt import helpers, keyword_uri_map_generator, xml_helpers
 
 class FileType(enum.Enum):
     CHAPTER = 1
     SUBSECTION = 2
+    APPENDIX = 3
 
 @dataclass
 class MonoParagraphStyle:
@@ -41,6 +41,29 @@ class MonoParagraphStyle:
                 #and self.libre_mono_font_size)
 
 
+# This style is used to determine if we are inside a Table caption, for example in the following XML:
+#  (Here backslash \ is used to indicate a line continuation here in the example, in the real XML
+#   there would be no newline character or backslash.)
+#
+#   <text:p text:style-name="P14560">Table \
+#     <text:sequence text:ref-name="refTable701" text:name="Table" \
+#      text:formula="ooow:Table+1" style:num-format="1">F.2\
+#     </text:sequence>: RUNSPEC Input and Output File Format Keywords\
+#   </text:p>
+#
+# We would like to avoid linking the RUNSPEC keyword in this case. The TableCaptionInfo class
+# below is used to help determine if we are inside such a Table caption.
+#
+@dataclass
+class TableCaptionInfo:
+    seen_table_txt: bool = False
+    in_sequence: bool = False
+    end_sequence_seen: bool = False
+
+    def valid(self) -> bool:
+        return (self.seen_table_txt and self.end_sequence_seen)
+
+
 class FileHandler(xml.sax.handler.ContentHandler):
     def __init__(
         self,
@@ -56,6 +79,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  end /> tag instead of the full end tag </tag>
         self.start_tag_open = False
         self.in_p = False
+        self.table_caption_info = TableCaptionInfo() # Information about the table caption
         # Paragraphs with a certain style with monospaced text, should not be linked
         self.mono_paragraph_style = MonoParagraphStyle()
         self.in_mono_paragraph = False  # Inside a paragraph with monospaced text
@@ -121,6 +145,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # TODO: This does not handle cases with interleaved tags, for example <text:a>
         #  and <text:span> tags.
         self.char_buf += content
+        if self.in_p and content.startswith("Table "):
+            self.table_caption_info.seen_table_txt = True
 
     def collect_example_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # Collect the paragraph styles that use fixed width fonts
@@ -134,7 +160,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
     def endElement(self, name: str):
         self.maybe_write_characters()
         if self.office_body_found:
-            if name == "text:p":
+            if name == "text:sequence":
+                if self.table_caption_info.in_sequence:
+                    self.table_caption_info.end_sequence_seen = True
+                    self.table_caption_info.in_sequence = False
+            elif name == "text:p":
                 self.p_recursion -= 1
                 if self.p_recursion == 0:
                     self.in_p = False
@@ -224,9 +254,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.in_binary_data)
                     and (not self.in_draw_frame)
                     and (not self.in_mono_paragraph)
+                    and (not self.table_caption_info.valid())
                 ):
                     if not self.is_example_p[-1]:
-                        if (self.file_type == FileType.CHAPTER or
+                        if ((    self.file_type == FileType.CHAPTER
+                              or self.file_type == FileType.APPENDIX) or
                             (self.file_type == FileType.SUBSECTION and
                               (not self.is_table_caption(characters)))):
                                 characters = self.regex.sub(self.replace_match_function, characters)
@@ -240,7 +272,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         return f'<text:a xlink:href="#{uri}">{keyword}</text:a>'
 
     # This callback is used for debugging, it can be used to print
-    #  line numbers in the XML file
+    #  line numbers in the XML file, for example:
+    #          print(f"Line: {self.locator.getLineNumber()}")
     def setDocumentLocator(self, locator):
         self.locator = locator
 
@@ -262,7 +295,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
                             self.collect_example_style(attrs)
                 self.maybe_collect_mono_paragraph_style(name, attrs)
         else:
-            if name == "text:p":
+            if name == "text:sequence":
+                if self.table_caption_info.seen_table_txt:
+                    self.table_caption_info.in_sequence = True
+            elif name == "text:p":
                 self.in_p = True
                 self.p_recursion += 1
                 self.update_example_stack(attrs)
@@ -285,6 +321,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 # are usually inside a draw:frame tag.
                 self.in_draw_frame = True
                 self.in_draw_recursion += 1
+            if not self.table_caption_info.in_sequence:
+                self.table_caption_info = TableCaptionInfo() # Reset the info
         self.start_tag_open = True
         self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
@@ -301,6 +339,7 @@ class InsertLinks():
         maindir: Path,
         subsection: str|None,
         chapter: str|None,
+        appendix: str|None,
         filename: str|None,
         start_dir: Path,
         kw_uri_map: dict[str, str]
@@ -311,19 +350,28 @@ class InsertLinks():
         self.subsection = subsection
         self.chapter = chapter
         self.filename = filename
+        self.appendix = appendix
 
     def insert_links(self) -> None:
         if self.chapter:
             self.insert_links_in_chapter()
-        else:
+        elif self.subsection:
             self.insert_links_in_subsections()
+        else:
+            self.insert_links_in_appendix()
 
     def insert_links_in_chapter(self) -> None:
         filename = f"{self.chapter}.{FileExtensions.fodt}"
         path = self.start_dir / filename
         self.insert_links_in_file(path, filename, FileType.CHAPTER)
 
+    def insert_links_in_appendix(self) -> None:
+        filename = f"{self.appendix}.{FileExtensions.fodt}"
+        path = self.start_dir / filename
+        self.insert_links_in_file(path, filename, FileType.APPENDIX)
+
     def insert_links_in_subsections(self) -> None:
+        files_processed = 0
         for item in self.start_dir.iterdir():
             if not item.is_dir():
                 continue
@@ -339,7 +387,12 @@ class InsertLinks():
                             logging.info(f"Skipping file: {item2.name}")
                             continue
                     keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
+                    files_processed += 1
                     self.insert_links_in_file(item2, keyword_name, FileType.SUBSECTION)
+        if files_processed == 0:
+            logging.info("No files processed.")
+        else:
+            logging.info(f"Processed {files_processed} files.")
 
     def insert_links_in_file(self, filename: Path, file_info: str, file_type: FileType) -> None:
         parser = xml.sax.make_parser()
@@ -382,11 +435,12 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #
 # SHELL USAGE:
 #
-# fodt-link-keyword \
+# fodt-link-keywords \
 #    --maindir=<main_dir> \
 #    --keyword_dir=<keyword_dir> \
 #    --subsection=<subsection> \
 #    --chapter=<chapter> \
+#    --appendix=<appendix> \
 #    --filename=<filename> \
 #    --use-map-file
 #
@@ -403,9 +457,10 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #
 #   If --subsection is not given, the script will process all subsections. If --subsection
 #   is given, the script will only process the specified subsection, or if --chapter is
-#   given, the script will only process the specified chapter, or if --filename is
-#   given, the script will only process the specified file within the specified subsection.
-#   The options --chapter and --subsection are mutually exclusive.
+#   given, the script will only process the specified chapter, or if --appendix is given,
+#   the script will only process the specified appendix. If --filename is given, the script
+#   will only process the specified file within the specified subsection.
+#   The options --appendix, --chapter and --subsection are mutually exclusive.
 #
 # EXAMPLES:
 #
@@ -427,13 +482,15 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 @ClickOptions.keyword_dir
 @click.option('--subsection', help='The subsection to process')
 @click.option('--chapter', help='The chapter to process')
-@click.option('--use-map-file', is_flag=True, help='Use the mapping file "meta/kw_uri_map.txt"')
+@click.option('--appendix', help='The appendix to process')
+@click.option('--use-map-file', is_flag=True, default=True, help='Use the mapping file "meta/kw_uri_map.txt". This is generally recommended to speed up the processing. Only if we suspect that libreoffice might have changed the references to the keywords, we should generate the map on the fly. In this case, the map file should also be regenerated and committed to the repository.')
 @click.option('--filename', help='The filename to process')
 def link_keywords(
     maindir: str|None,
     keyword_dir: str|None,
     subsection: str|None,
     chapter: str|None,
+    appendix: str|None,
     filename: str|None,
     use_map_file: bool
 ) -> None:
@@ -444,13 +501,15 @@ def link_keywords(
         kw_uri_map = load_kw_uri_map(maindir)
     else:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
-    if chapter and subsection:
-        raise ValueError("Options --chapter and --subsection are mutually exclusive.")
+    if sum(x is not None for x in [chapter, appendix, subsection]) != 1:
+        raise ValueError("Options --appendix, --chapter and --subsection are mutually exclusive.")
     if chapter:
         file_dir = maindir / Directories.chapters
+    elif appendix:
+        file_dir = maindir / Directories.appendices
     else:
         file_dir = maindir / Directories.chapters / Directories.subsections
-    InsertLinks(maindir, subsection, chapter, filename, file_dir, kw_uri_map).insert_links()
+    InsertLinks(maindir, subsection, chapter, appendix, filename, file_dir, kw_uri_map).insert_links()
 
 if __name__ == "__main__":
     link_keywords()
