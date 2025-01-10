@@ -8,7 +8,7 @@ from pathlib import Path
 
 from fodt.constants import Directories, FileNames
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class TagHandler(xml.sax.handler.ContentHandler):
     def __init__(self, tag_name: str) -> None:

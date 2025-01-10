@@ -10,7 +10,7 @@ from pathlib import Path
 
 from fodt.constants import AutomaticStyles, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, InputException
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class ChapterHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputdir: str, chapters: list[int]) -> None:
