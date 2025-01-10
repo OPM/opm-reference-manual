@@ -12,8 +12,8 @@ from pathlib import Path
 
 import click
 
-from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
-from fodt.exceptions import HandlerDoneException, ParsingException
+from fodt.constants import ClickOptions, Directories, FileExtensions
+from fodt.exceptions import HandlerDoneException
 from fodt import helpers, keyword_uri_map_generator, xml_helpers
 
 class FileType(enum.Enum):
@@ -411,24 +411,6 @@ class InsertLinks():
             logging.info(f"{filename.name}: No links inserted.")
 
 
-def load_kw_uri_map(maindir: Path) -> dict[str, str]:
-    kw_uri_map_path = maindir / Directories.meta / FileNames.kw_uri_map
-    if not kw_uri_map_path.exists():
-        raise FileNotFoundError(f"File not found: {kw_uri_map_path}")
-    kw_uri_map = {}
-    with open(kw_uri_map_path, "r", encoding='utf-8') as f:
-        for line in f:
-            # Each line is on the format "<kw> <uri>" where <kw> is the keyword name and
-            # does not contain any whitespace characters, and <uri> is the URI of the
-            # keyword subsection subdocument. The <uri> may contain whitespace characters.
-            # There is a single whitespace character between <kw> and <uri>.
-            match = re.match(r"(\S+)\s+(.+)", line)
-            if match:
-                parts = match.groups()
-                kw_uri_map[parts[0]] = parts[1]
-            else:
-                raise ParsingException(f"Could not parse line: {line}")
-    return kw_uri_map
 
 # fodt-link-keywords
 # ------------------
@@ -498,7 +480,7 @@ def link_keywords(
     maindir = helpers.get_maindir(maindir)
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
     if use_map_file:
-        kw_uri_map = load_kw_uri_map(maindir)
+        kw_uri_map = helpers.load_kw_uri_map(maindir)
     else:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
     if sum(x is not None for x in [chapter, appendix, subsection]) != 1:

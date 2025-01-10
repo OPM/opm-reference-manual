@@ -1,0 +1,43 @@
+name: Check for missing keyword linking
+
+# NOTE: Added "push" here such that PR authors can test the actions in their forked repository
+# before submitting a PR.
+# NOTE: It is not possible to avoid the duplication of the paths in the "push" and
+# "pull_request" sections. This is a known limitation of the GitHub Actions syntax.
+on:
+    push:
+      paths:
+        - 'parts/**/*.fodt'
+    pull_request:
+      paths:
+        - 'parts/**/*.fodt'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os: [ubuntu-latest]
+            python-version: ["3.12"]
+    steps:
+      - name: checkout source code
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Install dependencies
+        run: |
+          cd scripts/python
+          poetry install
+      - name: Run checks
+        run: |
+          cd scripts/python
+          # This will fail if there are any changes to the kw_uri_map.txt file
+          poetry run fodt-gen-kw-uri-map --check-changed
+          # TODO: Run the check for missing keyword linking here
