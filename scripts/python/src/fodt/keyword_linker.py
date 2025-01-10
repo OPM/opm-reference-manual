@@ -14,8 +14,7 @@ import click
 
 from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, ParsingException
-from fodt import helpers, keyword_uri_map_generator
-from fodt import xml_helpers
+from fodt import helpers, keyword_uri_map_generator, xml_helpers
 
 class FileType(enum.Enum):
     CHAPTER = 1
@@ -42,6 +41,29 @@ class MonoParagraphStyle:
                 #and self.libre_mono_font_size)
 
 
+# This style is used to determine if we are inside a Table caption, for example in the following XML:
+#  (Here backslash \ is used to indicate a line continuation here in the example, in the real XML
+#   there would be no newline character or backslash.)
+#
+#   <text:p text:style-name="P14560">Table \
+#     <text:sequence text:ref-name="refTable701" text:name="Table" \
+#      text:formula="ooow:Table+1" style:num-format="1">F.2\
+#     </text:sequence>: RUNSPEC Input and Output File Format Keywords\
+#   </text:p>
+#
+# We would like to avoid linking the RUNSPEC keyword in this case. The TableCaptionInfo class
+# below is used to help determine if we are inside such a Table caption.
+#
+@dataclass
+class TableCaptionInfo:
+    seen_table_txt: bool = False
+    in_sequence: bool = False
+    end_sequence_seen: bool = False
+
+    def valid(self) -> bool:
+        return (self.seen_table_txt and self.end_sequence_seen)
+
+
 class FileHandler(xml.sax.handler.ContentHandler):
     def __init__(
         self,
@@ -57,6 +79,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         #  end /> tag instead of the full end tag </tag>
         self.start_tag_open = False
         self.in_p = False
+        self.table_caption_info = TableCaptionInfo() # Information about the table caption
         # Paragraphs with a certain style with monospaced text, should not be linked
         self.mono_paragraph_style = MonoParagraphStyle()
         self.in_mono_paragraph = False  # Inside a paragraph with monospaced text
@@ -122,6 +145,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         # TODO: This does not handle cases with interleaved tags, for example <text:a>
         #  and <text:span> tags.
         self.char_buf += content
+        if self.in_p and content.startswith("Table "):
+            self.table_caption_info.seen_table_txt = True
 
     def collect_example_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # Collect the paragraph styles that use fixed width fonts
@@ -135,7 +160,11 @@ class FileHandler(xml.sax.handler.ContentHandler):
     def endElement(self, name: str):
         self.maybe_write_characters()
         if self.office_body_found:
-            if name == "text:p":
+            if name == "text:sequence":
+                if self.table_caption_info.in_sequence:
+                    self.table_caption_info.end_sequence_seen = True
+                    self.table_caption_info.in_sequence = False
+            elif name == "text:p":
                 self.p_recursion -= 1
                 if self.p_recursion == 0:
                     self.in_p = False
@@ -225,6 +254,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     and (not self.in_binary_data)
                     and (not self.in_draw_frame)
                     and (not self.in_mono_paragraph)
+                    and (not self.table_caption_info.valid())
                 ):
                     if not self.is_example_p[-1]:
                         if ((    self.file_type == FileType.CHAPTER
@@ -242,7 +272,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
         return f'<text:a xlink:href="#{uri}">{keyword}</text:a>'
 
     # This callback is used for debugging, it can be used to print
-    #  line numbers in the XML file
+    #  line numbers in the XML file, for example:
+    #          print(f"Line: {self.locator.getLineNumber()}")
     def setDocumentLocator(self, locator):
         self.locator = locator
 
@@ -264,7 +295,10 @@ class FileHandler(xml.sax.handler.ContentHandler):
                             self.collect_example_style(attrs)
                 self.maybe_collect_mono_paragraph_style(name, attrs)
         else:
-            if name == "text:p":
+            if name == "text:sequence":
+                if self.table_caption_info.seen_table_txt:
+                    self.table_caption_info.in_sequence = True
+            elif name == "text:p":
                 self.in_p = True
                 self.p_recursion += 1
                 self.update_example_stack(attrs)
@@ -287,6 +321,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 # are usually inside a draw:frame tag.
                 self.in_draw_frame = True
                 self.in_draw_recursion += 1
+            if not self.table_caption_info.in_sequence:
+                self.table_caption_info = TableCaptionInfo() # Reset the info
         self.start_tag_open = True
         self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
