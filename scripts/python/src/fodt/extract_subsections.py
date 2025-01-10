@@ -11,7 +11,7 @@ from pathlib import Path
 from fodt.constants import AutomaticStyles, Directories, FileNames, FileExtensions
 from fodt.exceptions import HandlerDoneException, InputException, ParsingException
 from fodt import helpers
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class PartsHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputdir: Path, chapter: int, section: int,

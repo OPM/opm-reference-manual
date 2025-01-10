@@ -13,7 +13,7 @@ from pathlib import Path
 import fodt.string_functions
 from fodt.constants import ClickOptions, Directories, FileNames
 from fodt.remove_chapters import RemoveChapters
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class ElementHandler(xml.sax.handler.ContentHandler):
     def __init__(self) -> None:

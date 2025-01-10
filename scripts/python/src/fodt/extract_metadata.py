@@ -10,7 +10,7 @@ from pathlib import Path
 
 from fodt.constants import Directories, MetaSections, TagEvent
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class SectionHandler(xml.sax.handler.ContentHandler):
     def __init__(self, outputdir: str) -> None:

@@ -12,7 +12,7 @@ from pathlib import Path
 import click
 
 from fodt.exceptions import HandlerDoneException
-from fodt.xml_helpers import xml_helper
+from fodt import xml_helpers
 
 class FontHandler(xml.sax.handler.ContentHandler):
     def __init__(self, save_dir: Path) -> None:
