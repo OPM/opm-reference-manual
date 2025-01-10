@@ -399,7 +399,7 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 #
 # SHELL USAGE:
 #
-# fodt-link-keyword \
+# fodt-link-keywords \
 #    --maindir=<main_dir> \
 #    --keyword_dir=<keyword_dir> \
 #    --subsection=<subsection> \
