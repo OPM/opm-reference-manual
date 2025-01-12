@@ -170,6 +170,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     self.in_p = False
                 self.is_example_p.pop()
                 self.in_mono_paragraph = False   # Assume this is not recursive
+                self.table_caption_info = TableCaptionInfo() # Reset the info
             elif name == "text:a":
                 self.in_a = False
             elif name == "text:span":
@@ -321,8 +322,6 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 # are usually inside a draw:frame tag.
                 self.in_draw_frame = True
                 self.in_draw_recursion += 1
-            if not self.table_caption_info.in_sequence:
-                self.table_caption_info = TableCaptionInfo() # Reset the info
         self.start_tag_open = True
         self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
