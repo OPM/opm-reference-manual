@@ -40,6 +40,15 @@ jobs:
       - name: Run checks
         run: |
           cd scripts/python
-          # This will fail if there are any changes to the kw_uri_map.txt file
+          # The following command will fail if there are any changes to the kw_uri_map.txt file
+          # If it fails, the whole workflow fails and the PR should not be merged. The user should
+          # then run 'poetry run fodt-gen-kw-uri-map' to update the kw_uri_map.txt file and commit
+          # the changes the current PR and push them to the remote repository the workflow should
+          # then pass on the next run.
           poetry run fodt-gen-kw-uri-map --check-changed
-          # TODO: Run the check for missing keyword linking here
+          # The following command will fail if there are any changes to the keyword linking in the
+          # .fodt files. If it fails, the whole workflow fails and the PR should not be merged. The
+          # user should then run fodt-link-keywords script to update the keyword linking in the files
+          # and commit the changes the current PR and push them to the remote repository the workflow
+          # should then pass on the next run.
+          poetry run fodt-link-keywords --all --check-changed
