@@ -310,7 +310,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             elif name == "text:span":
                 if "text:style-name" in attrs.getNames():
                     style_name = attrs.getValue("text:style-name")
-                    if style_name == "NOT_KEYWORD":
+                    if style_name == "NotKeyword":
                         self.not_keyword = True
             elif name == "math":
                 self.in_math = True
@@ -336,64 +336,76 @@ class InsertLinks():
     def __init__(
         self,
         maindir: Path,
-        subsection: str|None,
-        chapter: str|None,
-        appendix: str|None,
+        subsections: list[str],
+        chapters: list[str],
+        appendices: list[str],
         filename: str|None,
-        start_dir: Path,
         kw_uri_map: dict[str, str]
     ) -> None:
         self.maindir = maindir
-        self.start_dir = start_dir
-        self.kw_uri_map = kw_uri_map
-        self.subsection = subsection
-        self.chapter = chapter
+        self.subsections = subsections
+        self.chapters = chapters
+        self.appendices = appendices
         self.filename = filename
-        self.appendix = appendix
+        self.kw_uri_map = kw_uri_map
 
     def insert_links(self) -> None:
-        if self.chapter:
-            self.insert_links_in_chapter()
-        elif self.subsection:
+        if len(self.chapters) > 0:
+            self.insert_links_in_chapters()
+        if len(self.subsections) > 0:
             self.insert_links_in_subsections()
-        else:
-            self.insert_links_in_appendix()
+        if len(self.appendices) > 0:
+            self.insert_links_in_appendices()
 
-    def insert_links_in_chapter(self) -> None:
-        filename = f"{self.chapter}.{FileExtensions.fodt}"
-        path = self.start_dir / filename
-        self.insert_links_in_file(path, filename, FileType.CHAPTER)
+    def insert_links_in_chapters(self) -> None:
+        start_dir = self.maindir / Directories.chapters
+        for chapter in self.chapters:
+            filename = f"{chapter}.{FileExtensions.fodt}"
+            path = start_dir / filename
+            self.insert_links_in_file(path, filename, FileType.CHAPTER)
 
-    def insert_links_in_appendix(self) -> None:
-        filename = f"{self.appendix}.{FileExtensions.fodt}"
-        path = self.start_dir / filename
-        self.insert_links_in_file(path, filename, FileType.APPENDIX)
+    def insert_links_in_appendices(self) -> None:
+        start_dir = self.maindir / Directories.appendices
+        for appendix in self.appendices:
+            filename = f"{appendix}.{FileExtensions.fodt}"
+            path = start_dir / filename
+            self.insert_links_in_file(path, filename, FileType.APPENDIX)
 
     def insert_links_in_subsections(self) -> None:
-        files_processed = 0
-        for item in self.start_dir.iterdir():
-            if not item.is_dir():
-                continue
-            if self.subsection:
-                if item.name != self.subsection:
-                    logging.info(f"Skipping directory: {item}")
-                    continue
-            logging.info(f"Processing directory: {item}")
-            for item2 in item.iterdir():
-                if item2.suffix == f".{FileExtensions.fodt}":
-                    if self.filename:
-                        if item2.name != self.filename:
-                            logging.info(f"Skipping file: {item2.name}")
-                            continue
-                    keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
-                    files_processed += 1
-                    self.insert_links_in_file(item2, keyword_name, FileType.SUBSECTION)
-        if files_processed == 0:
-            logging.info("No files processed.")
+        start_dir = self.maindir / Directories.chapters / Directories.subsections
+        if self.filename:
+            assert len(self.subsections) == 1
+            path = start_dir / self.subsections[0] / self.filename
+            keyword_name = self.filename.removesuffix(f".{FileExtensions.fodt}")
+            self.insert_links_in_file(path, keyword_name, FileType.SUBSECTION)
         else:
-            logging.info(f"Processed {files_processed} files.")
+            for subsection in self.subsections:
+                self.insert_links_in_subsection(start_dir, subsection)
 
-    def insert_links_in_file(self, filename: Path, file_info: str, file_type: FileType) -> None:
+    def insert_links_in_subsection(self, start_dir: Path, subsection: str) -> None:
+        files_processed = 0
+        item = start_dir / subsection
+        logging.info(f"Processing subsection: {item.name}")
+        for item2 in item.iterdir():
+            if item2.suffix == f".{FileExtensions.fodt}":
+                keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
+                files_processed += 1
+                self.insert_links_in_file(
+                    item2, keyword_name, FileType.SUBSECTION, verbose=False, indent=True
+                )
+        if files_processed == 0:
+            logging.info("  No files processed.")
+        else:
+            logging.info(f"  Processed {files_processed} files.")
+
+    def insert_links_in_file(
+        self,
+        filename: Path,
+        file_info: str,
+        file_type: FileType,
+        verbose: bool = True,
+        indent: bool = False
+    ) -> None:
         parser = xml.sax.make_parser()
         handler = FileHandler(file_info, file_type, self.kw_uri_map)
         parser.setContentHandler(handler)
@@ -402,14 +414,51 @@ class InsertLinks():
         except HandlerDoneException as e:
             pass
         num_links_inserted = handler.get_num_links_inserted()
+        indent_str = "  " if indent else ""
         if num_links_inserted > 0:
             with open(filename, "w", encoding='utf8') as f:
                 f.write(handler.content.getvalue())
-            logging.info(f"{filename.name}: Inserted {num_links_inserted} links.")
+            logging.info(f"{indent_str}{filename.name}: Inserted {num_links_inserted} links.")
         else:
-            logging.info(f"{filename.name}: No links inserted.")
+            if verbose:
+                logging.info(f"{indent_str}{filename.name}: No links inserted.")
 
+VALID_SUBSECTIONS = "4.3,5.3,6.3,7.3,8.3,9.3,10.3,11.3,12.3"
+VALID_CHAPTERS = "1,2,3,4,5,6,7,8,9,10,11,12"
+VALID_APPENDICES = "B,C,D,E,F"
 
+def validate_subsections(subsections: str|None, filename: str|None) -> list[str]:
+    if subsections is None:
+        return []
+    subsections = subsections.split(",")
+    if filename is not None:
+        if len(subsections) != 1:
+            raise ValueError("If --filename is given, only one subsection can be specified.")
+    valid_subsections = VALID_SUBSECTIONS.split(",")
+    for subsection in subsections:
+        if subsection not in valid_subsections:
+            raise ValueError(f"Invalid subsection: {subsection}")
+    return subsections
+
+def validate_chapters(chapters: str|None) -> list[str]:
+    if chapters is None:
+        return []
+    chapters = chapters.split(",")
+    valid_chapters = VALID_CHAPTERS.split(",")
+    for chapter in chapters:
+        if chapter not in valid_chapters:
+            raise ValueError(f"Invalid chapter: {chapter}")
+    return chapters
+
+def validate_appendices(appendices: str|None) -> list[str]:
+    if appendices is None:
+        return []
+    appendices = appendices.split(",")
+    valid_appendices = VALID_APPENDICES.split(",")
+    for appendix in appendices:
+        if appendix not in valid_appendices:
+            raise ValueError(f"Invalid appendix: {appendix}")
+    return appendices
 
 # fodt-link-keywords
 # ------------------
@@ -419,10 +468,11 @@ class InsertLinks():
 # fodt-link-keywords \
 #    --maindir=<main_dir> \
 #    --keyword_dir=<keyword_dir> \
-#    --subsection=<subsection> \
-#    --chapter=<chapter> \
-#    --appendix=<appendix> \
+#    --subsections=<subsections> \
+#    --chapters=<chapters> \
+#    --appendices=<appendices> \
 #    --filename=<filename> \
+#    --all \
 #    --use-map-file
 #
 # DESCRIPTION:
@@ -436,61 +486,72 @@ class InsertLinks():
 #   the URI of the keyword subsection subdocument. This map is needed to generate the
 #   links.
 #
-#   If --subsection is not given, the script will process all subsections. If --subsection
-#   is given, the script will only process the specified subsection, or if --chapter is
-#   given, the script will only process the specified chapter, or if --appendix is given,
-#   the script will only process the specified appendix. If --filename is given, the script
-#   will only process the specified file within the specified subsection.
-#   The options --appendix, --chapter and --subsection are mutually exclusive.
+#   If --subsections is given, the script will only process the specified subsections, or
+#   if --chapters is given, the script will only process the specified chapters, or
+#   if --appendices is given, the script will only process the specified appendices. If --filename
+#   and --subsections is given, the script will only process the specified file within the
+#   specified subsection. If --all is given, the script will process all files. Option --all
+#   cannot be combined with --chapters, --appendices or --subsections.
 #
 # EXAMPLES:
 #
-#    fodt-link-keywords --subsection=5.3
+#    fodt-link-keywords --subsections=5.3
 #
 #  Will use the default values: --maindir=../../parts, --keyword_dir=../../keyword-names,
 #  and will process only the keywords in subsection 5.3, and will generate the mapping on the fly.
 #
-#    fodt-link-keywords
-#
-#  Same as above, but will process all subsections. And,
-#
-#    fodt-link-keywords --subsection=10.3 --filename=AQANCONL.fodt
+#    fodt-link-keywords --subsections=10.3 --filename=AQANCONL.fodt
 #
 #  Will process only the file "AQANCONL.fodt" in subsection 10.3.
+#
+#    fodt-link-keywords --chapters=4,5
+#
+#  Will process will process chapters 4 and 5.
+#
+#   fodt-link-keywords --all
+#
+#  Will process all keywords in subsections 4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, and 12.3.
+#  Then chapters 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, and finally appendices B, C, D, E, and F.
 #
 @click.command()
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
-@click.option('--subsection', help='The subsection to process')
-@click.option('--chapter', help='The chapter to process')
-@click.option('--appendix', help='The appendix to process')
-@click.option('--use-map-file', is_flag=True, default=True, help='Use the mapping file "meta/kw_uri_map.txt". This is generally recommended to speed up the processing. Only if we suspect that libreoffice might have changed the references to the keywords, we should generate the map on the fly. In this case, the map file should also be regenerated and committed to the repository.')
+@click.option('--subsections', help='The subsections to process')
+@click.option('--chapters', help='The chapters to process')
+@click.option('--appendices', help='The appendices to process')
+@click.option('--generate-map', is_flag=True, default=False, help='Do not use the mapping file "meta/kw_uri_map.txt". If you suspect that libreoffice might have changed the references to the keywords, you can use this option to bypass the kw_uri_map.txt file and generate the map on the fly. Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.')
 @click.option('--filename', help='The filename to process')
+@click.option('--all', is_flag=True, help='Process all files')
 def link_keywords(
     maindir: str|None,
     keyword_dir: str|None,
-    subsection: str|None,
-    chapter: str|None,
-    appendix: str|None,
+    subsections: str|None,
+    chapters: str|None,
+    appendices: str|None,
+    generate_map: bool,
     filename: str|None,
-    use_map_file: bool
+    all: bool,
 ) -> None:
     logging.basicConfig(level=logging.INFO)
     maindir = helpers.get_maindir(maindir)
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
-    if use_map_file:
-        kw_uri_map = helpers.load_kw_uri_map(maindir)
-    else:
+    if all:
+        if sum(x is not None for x in [subsections, chapters, appendices]) != 0:
+            raise ValueError(
+                "Option --all cannot be combined with any of --subsections, --chapters "
+                "and --appendices."
+            )
+        subsections = VALID_SUBSECTIONS
+        chapters = VALID_CHAPTERS
+        appendices = VALID_APPENDICES
+    subsections = validate_subsections(subsections, filename)
+    chapters = validate_chapters(chapters)
+    appendices = validate_appendices(appendices)
+    if generate_map:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
-    if sum(x is not None for x in [chapter, appendix, subsection]) != 1:
-        raise ValueError("Options --appendix, --chapter and --subsection are mutually exclusive.")
-    if chapter:
-        file_dir = maindir / Directories.chapters
-    elif appendix:
-        file_dir = maindir / Directories.appendices
     else:
-        file_dir = maindir / Directories.chapters / Directories.subsections
-    InsertLinks(maindir, subsection, chapter, appendix, filename, file_dir, kw_uri_map).insert_links()
+        kw_uri_map = helpers.load_kw_uri_map(maindir)
+    InsertLinks(maindir, subsections, chapters, appendices, filename, kw_uri_map).insert_links()
 
 if __name__ == "__main__":
     link_keywords()
