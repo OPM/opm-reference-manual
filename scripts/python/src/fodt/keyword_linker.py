@@ -340,7 +340,8 @@ class InsertLinks():
         chapters: list[str],
         appendices: list[str],
         filename: str|None,
-        kw_uri_map: dict[str, str]
+        kw_uri_map: dict[str, str],
+        check_changed: bool
     ) -> None:
         self.maindir = maindir
         self.subsections = subsections
@@ -348,55 +349,72 @@ class InsertLinks():
         self.appendices = appendices
         self.filename = filename
         self.kw_uri_map = kw_uri_map
+        self.check_changed = check_changed
 
-    def insert_links(self) -> None:
+    def insert_links(self) -> int:
+        num_links_inserted = 0
         if len(self.chapters) > 0:
-            self.insert_links_in_chapters()
+            num_links_inserted += self.insert_links_in_chapters()
         if len(self.subsections) > 0:
-            self.insert_links_in_subsections()
+            num_links_inserted += self.insert_links_in_subsections()
         if len(self.appendices) > 0:
-            self.insert_links_in_appendices()
+            num_links_inserted += self.insert_links_in_appendices()
+        return num_links_inserted
 
-    def insert_links_in_chapters(self) -> None:
+    def insert_links_in_chapters(self) -> int:
         start_dir = self.maindir / Directories.chapters
+        num_links_inserted = 0
         for chapter in self.chapters:
+            logging.info(f"Processing chapter: {chapter}")
             filename = f"{chapter}.{FileExtensions.fodt}"
             path = start_dir / filename
-            self.insert_links_in_file(path, filename, FileType.CHAPTER)
+            count = self.insert_links_in_file(path, filename, FileType.CHAPTER)
+            num_links_inserted += count
+        return num_links_inserted
 
-    def insert_links_in_appendices(self) -> None:
+    def insert_links_in_appendices(self) -> int:
         start_dir = self.maindir / Directories.appendices
+        num_links_inserted = 0
         for appendix in self.appendices:
+            logging.info(f"Processing appendix: {appendix}")
             filename = f"{appendix}.{FileExtensions.fodt}"
             path = start_dir / filename
-            self.insert_links_in_file(path, filename, FileType.APPENDIX)
+            count = self.insert_links_in_file(path, filename, FileType.APPENDIX)
+            num_links_inserted += count
+        return num_links_inserted
 
-    def insert_links_in_subsections(self) -> None:
+    def insert_links_in_subsections(self) -> int:
         start_dir = self.maindir / Directories.chapters / Directories.subsections
+        num_links_inserted = 0
         if self.filename:
             assert len(self.subsections) == 1
             path = start_dir / self.subsections[0] / self.filename
             keyword_name = self.filename.removesuffix(f".{FileExtensions.fodt}")
-            self.insert_links_in_file(path, keyword_name, FileType.SUBSECTION)
+            num_links_inserted = self.insert_links_in_file(path, keyword_name, FileType.SUBSECTION)
         else:
             for subsection in self.subsections:
-                self.insert_links_in_subsection(start_dir, subsection)
+               count =  self.insert_links_in_subsection(start_dir, subsection)
+               num_links_inserted += count
+        return num_links_inserted
 
-    def insert_links_in_subsection(self, start_dir: Path, subsection: str) -> None:
+    def insert_links_in_subsection(self, start_dir: Path, subsection: str) -> int:
         files_processed = 0
+        num_links_inserted = 0
         item = start_dir / subsection
         logging.info(f"Processing subsection: {item.name}")
         for item2 in item.iterdir():
             if item2.suffix == f".{FileExtensions.fodt}":
                 keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
                 files_processed += 1
-                self.insert_links_in_file(
+                count = self.insert_links_in_file(
                     item2, keyword_name, FileType.SUBSECTION, verbose=False, indent=True
                 )
+                num_links_inserted += count
         if files_processed == 0:
             logging.info("  No files processed.")
         else:
             logging.info(f"  Processed {files_processed} files.")
+        return num_links_inserted
 
     def insert_links_in_file(
         self,
@@ -405,7 +423,7 @@ class InsertLinks():
         file_type: FileType,
         verbose: bool = True,
         indent: bool = False
-    ) -> None:
+    ) -> int:
         parser = xml.sax.make_parser()
         handler = FileHandler(file_info, file_type, self.kw_uri_map)
         parser.setContentHandler(handler)
@@ -416,12 +434,16 @@ class InsertLinks():
         num_links_inserted = handler.get_num_links_inserted()
         indent_str = "  " if indent else ""
         if num_links_inserted > 0:
-            with open(filename, "w", encoding='utf8') as f:
-                f.write(handler.content.getvalue())
-            logging.info(f"{indent_str}{filename.name}: Inserted {num_links_inserted} links.")
+            if self.check_changed:
+                logging.info(f"{indent_str}{filename.name}: Links would be inserted.")
+            else:
+                with open(filename, "w", encoding='utf8') as f:
+                    f.write(handler.content.getvalue())
+                logging.info(f"{indent_str}{filename.name}: Inserted {num_links_inserted} links.")
         else:
-            if verbose:
+            if verbose and not self.check_changed:
                 logging.info(f"{indent_str}{filename.name}: No links inserted.")
+        return num_links_inserted
 
 VALID_SUBSECTIONS = "4.3,5.3,6.3,7.3,8.3,9.3,10.3,11.3,12.3"
 VALID_CHAPTERS = "1,2,3,4,5,6,7,8,9,10,11,12"
@@ -473,25 +495,27 @@ def validate_appendices(appendices: str|None) -> list[str]:
 #    --appendices=<appendices> \
 #    --filename=<filename> \
 #    --all \
-#    --use-map-file
+#    --generate-map \
+#    --check-changed \
 #
 # DESCRIPTION:
 #
 #   Links all keyword names found inside <p> tags in the subsection documents to the
 #   corresponding keyword subsection subdocument.
-# 
-#   If the option --use-map-file is given, the script will use the mapping file
-#   "meta/kw_uri_map.txt" (generated by running the script "fodt-gen-kw-uri-map"), else
-#   it will generate the mapping on the fly. The mapping is a map from keyword name to
-#   the URI of the keyword subsection subdocument. This map is needed to generate the
-#   links.
+#
+#   If the option --generate-map is given, the script will generate the keyword URI map on the fly.
+#   This is useful if you suspect that libreoffice might have changed the references to the keywords.
+#   Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.
 #
 #   If --subsections is given, the script will only process the specified subsections, or
 #   if --chapters is given, the script will only process the specified chapters, or
 #   if --appendices is given, the script will only process the specified appendices. If --filename
-#   and --subsections is given, the script will only process the specified file within the
+#   and --subsections are given, the script will only process the specified file within the
 #   specified subsection. If --all is given, the script will process all files. Option --all
 #   cannot be combined with --chapters, --appendices or --subsections.
+#
+#   If --check-changed is given, the script will only check if the files have changed and not write
+#   the files back to disk. It will return a non-zero exit code if any files have changed.
 #
 # EXAMPLES:
 #
@@ -522,6 +546,7 @@ def validate_appendices(appendices: str|None) -> list[str]:
 @click.option('--generate-map', is_flag=True, default=False, help='Do not use the mapping file "meta/kw_uri_map.txt". If you suspect that libreoffice might have changed the references to the keywords, you can use this option to bypass the kw_uri_map.txt file and generate the map on the fly. Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.')
 @click.option('--filename', help='The filename to process')
 @click.option('--all', is_flag=True, help='Process all files')
+@click.option('--check-changed', is_flag=True, help='Check if files have changed')
 def link_keywords(
     maindir: str|None,
     keyword_dir: str|None,
@@ -531,6 +556,7 @@ def link_keywords(
     generate_map: bool,
     filename: str|None,
     all: bool,
+    check_changed: bool
 ) -> None:
     logging.basicConfig(level=logging.INFO)
     maindir = helpers.get_maindir(maindir)
@@ -551,7 +577,22 @@ def link_keywords(
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
     else:
         kw_uri_map = helpers.load_kw_uri_map(maindir)
-    InsertLinks(maindir, subsections, chapters, appendices, filename, kw_uri_map).insert_links()
+    num_links_inserted = InsertLinks(
+        maindir,
+        subsections,
+        chapters,
+        appendices,
+        filename,
+        kw_uri_map,
+        check_changed
+    ).insert_links()
+    if check_changed:
+        if num_links_inserted > 0:
+            logging.error(f"Files have changed. {num_links_inserted} links would be inserted.")
+            exit(1)
+        else:
+            logging.info("Files have not changed.")
+            exit(0)
 
 if __name__ == "__main__":
     link_keywords()
