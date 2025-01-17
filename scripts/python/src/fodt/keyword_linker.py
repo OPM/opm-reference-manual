@@ -503,9 +503,10 @@ def validate_appendices(appendices: str|None) -> list[str]:
 #   Links all keyword names found inside <p> tags in the subsection documents to the
 #   corresponding keyword subsection subdocument.
 #
-#   If the option --generate-map is given, the script will generate the keyword URI map on the fly.
-#   This is useful if you suspect that libreoffice might have changed the references to the keywords.
-#   Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.
+#   If the option --generate-map is given, the script will generate the keyword URI map on the fly
+#   (but not save it to disk). This is useful if you suspect that libreoffice might have changed the
+#   references to the keywords. Another option is to run the script "fodt-gen-kw-uri-map" to generate
+#   a new map (this will save the map to disk).
 #
 #   If --subsections is given, the script will only process the specified subsections, or
 #   if --chapters is given, the script will only process the specified chapters, or
