@@ -12,8 +12,8 @@ from pathlib import Path
 
 import click
 
-from fodt.constants import ClickOptions, Directories, FileNames, FileExtensions
-from fodt.exceptions import HandlerDoneException, ParsingException
+from fodt.constants import ClickOptions, Directories, FileExtensions
+from fodt.exceptions import HandlerDoneException
 from fodt import helpers, keyword_uri_map_generator, xml_helpers
 
 class FileType(enum.Enum):
@@ -92,9 +92,13 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.in_draw_frame = False  # We should not insert links in Figure captions
         self.in_draw_recursion = 0  # We can have nested draw:frame tags
         self.content = io.StringIO()
-        # Create a regex pattern with alternation on the keyword names
+        # This pattern will be used as part of the regex pattern
+        self.keyword_pattern = self.compile_keyword_pattern()
+        # Regex pattern with alternation on the keyword names
         self.regex = self.compile_regex()
+        self.current_uri = None  # The URI for the current text:a tag
         self.num_links_inserted = 0
+        self.num_uris_updated = 0  # Number of URIs for existing links that have been updated
         self.office_body_found = False
         # Set of paragraph styles using fixed width fonts, intialized with the
         #  "_40_Example" style that is used indirectly by the other example styles
@@ -111,19 +115,22 @@ class FileHandler(xml.sax.handler.ContentHandler):
             if style_name in self.mono_paragraph_styles:
                 self.in_mono_paragraph = True
 
+    def compile_keyword_pattern(self) -> re.Pattern:
+        pattern = '|'.join(
+            # Need to sort the keys by length in descending order to avoid
+            #  matching a substring of a longer keyword. See
+            # https://github.com/OPM/opm-reference-manual/pull/411#discussion_r1835446631
+            sorted((re.escape(k) for k in self.kw_uri_map.keys()), key=len, reverse=True)
+        )
+        return re.compile(pattern)
+
     def compile_regex(self) -> re.Pattern:
         # Also include the keyword name itself in the regex pattern, see discussion
         # https://github.com/OPM/opm-reference-manual/pull/410
         pattern = re.compile(
             r'(?<![.‘"“])'  # Negative lookbehind for a dot or a single/double quote
             r'(?<!&quot;)'    # Negative lookbehind: no HTML double-quote entity before keyword
-            r'\b(' +
-            '|'.join(
-                # Need to sort the keys by length in descending order to avoid
-                #  matching a substring of a longer keyword. See
-                # https://github.com/OPM/opm-reference-manual/pull/411#discussion_r1835446631
-                sorted((re.escape(k) for k in self.kw_uri_map.keys()), key=len, reverse=True)
-                ) +
+            r'\b(' + self.keyword_pattern.pattern +
             # NOTE: We cannot use \b here because if the keyword ends with "-" the word boundary
             #  \b will not match between a space and a hyphen. Instead we use a negative lookahead
             # Negative lookaheads: no word char, "-" or &apos; after the keyword
@@ -132,6 +139,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         return pattern
 
     def characters(self, content: str):
+        self.check_keyword_link(content)
         # NOTE: characters() is only called if there is content between the start
         # tag and the end tag. If there is no content, characters() is not called.
         if self.start_tag_open:
@@ -147,6 +155,21 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.char_buf += content
         if self.in_p and content.startswith("Table "):
             self.table_caption_info.seen_table_txt = True
+
+    def check_keyword_link(self, content: str) -> None:
+        if self.current_uri is not None:
+            current_uri = self.current_uri
+            # Check if the content is a keyword, if so we should insert a link
+            if self.keyword_pattern.fullmatch(content):
+                keyword = content
+                updated_uri = self.kw_uri_map[keyword]
+                if current_uri != updated_uri:
+                    current_uri = updated_uri
+                    self.num_uris_updated += 1
+            # Write the start tag here delayed now as we have checked the content
+            self.content.write(f'<text:a xlink:href="#{current_uri}">')
+            self.start_tag_open = False
+            self.current_uri = None
 
     def collect_example_style(self, attrs: xml.sax.xmlreader.AttributesImpl) -> None:
         # Collect the paragraph styles that use fixed width fonts
@@ -170,6 +193,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     self.in_p = False
                 self.is_example_p.pop()
                 self.in_mono_paragraph = False   # Assume this is not recursive
+                self.table_caption_info = TableCaptionInfo() # Reset the info
             elif name == "text:a":
                 self.in_a = False
             elif name == "text:span":
@@ -196,6 +220,9 @@ class FileHandler(xml.sax.handler.ContentHandler):
 
     def get_num_links_inserted(self) -> int:
         return self.num_links_inserted
+
+    def get_num_uris_updated(self) -> int:
+        return self.num_uris_updated
 
     def is_table_caption(self, content: str) -> bool:
         # Check if the content is a specific table caption, in that case we should not insert links
@@ -240,6 +267,16 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     #fontsize = attrs.getValue(attr2)
                     #if len(fontsize) > 0:  # Check if the font size is set
                     #    self.mono_paragraph_style.libre_mono_font_size = True
+
+    def maybe_save_keyword_uri(self, attrs: xml.sax.xmlreader.AttributesImpl) -> bool:
+        if len(attrs.getNames()) == 1:  # Assume a single attribute "xlink:href"
+            attr = "xlink:href"
+            if attr in attrs.getNames():
+                href = attrs.getValue(attr)
+                if re.fullmatch(r'#[A-Za-z0-9_ ]+', href):
+                    self.current_uri = href[1:]
+                    return True
+        return False
 
     def maybe_write_characters(self) -> None:
         if len(self.char_buf) > 0:
@@ -306,10 +343,16 @@ class FileHandler(xml.sax.handler.ContentHandler):
             elif name == "text:a":
                 # We are inside an anchor, and we should not insert another text:a tag here
                 self.in_a = True
+                # This might be a link to an existing keyword. We might need to update its URI
+                if self.maybe_save_keyword_uri(attrs):
+                    # Delay writing the start tag until we have checked the content of the tag
+                    # in the characters() callback, since we might need to replace the URI attribute
+                    # with a new URI.
+                    return
             elif name == "text:span":
                 if "text:style-name" in attrs.getNames():
                     style_name = attrs.getValue("text:style-name")
-                    if style_name == "NOT_KEYWORD":
+                    if style_name == "NotKeyword":
                         self.not_keyword = True
             elif name == "math":
                 self.in_math = True
@@ -321,8 +364,6 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 # are usually inside a draw:frame tag.
                 self.in_draw_frame = True
                 self.in_draw_recursion += 1
-            if not self.table_caption_info.in_sequence:
-                self.table_caption_info = TableCaptionInfo() # Reset the info
         self.start_tag_open = True
         self.content.write(xml_helpers.starttag(name, attrs, close_tag=False))
 
@@ -337,64 +378,111 @@ class InsertLinks():
     def __init__(
         self,
         maindir: Path,
-        subsection: str|None,
-        chapter: str|None,
-        appendix: str|None,
+        subsections: list[str],
+        chapters: list[str],
+        appendices: list[str],
         filename: str|None,
-        start_dir: Path,
-        kw_uri_map: dict[str, str]
+        kw_uri_map: dict[str, str],
+        check_changed: bool
     ) -> None:
         self.maindir = maindir
-        self.start_dir = start_dir
-        self.kw_uri_map = kw_uri_map
-        self.subsection = subsection
-        self.chapter = chapter
+        self.subsections = subsections
+        self.chapters = chapters
+        self.appendices = appendices
         self.filename = filename
-        self.appendix = appendix
+        self.kw_uri_map = kw_uri_map
+        self.check_changed = check_changed
 
-    def insert_links(self) -> None:
-        if self.chapter:
-            self.insert_links_in_chapter()
-        elif self.subsection:
-            self.insert_links_in_subsections()
+    def insert_links(self) -> tuple[int, int]:
+        num_links_inserted = 0
+        num_uris_updated = 0
+        if len(self.chapters) > 0:
+            count1, count2 = self.insert_links_in_chapters()
+            num_links_inserted += count1
+            num_uris_updated += count2
+        if len(self.subsections) > 0:
+            count1, count2 = self.insert_links_in_subsections()
+            num_links_inserted += count1
+            num_uris_updated += count2
+        if len(self.appendices) > 0:
+            count1, count2 = self.insert_links_in_appendices()
+            num_links_inserted += count1
+            num_uris_updated += count2
+        return num_links_inserted, num_uris_updated
+
+    def insert_links_in_chapters(self) -> tuple[int, int]:
+        start_dir = self.maindir / Directories.chapters
+        num_links_inserted = 0
+        num_uris_updated = 0
+        for chapter in self.chapters:
+            logging.info(f"Processing chapter: {chapter}")
+            filename = f"{chapter}.{FileExtensions.fodt}"
+            path = start_dir / filename
+            count1, count2 = self.insert_links_in_file(path, filename, FileType.CHAPTER)
+            num_links_inserted += count1
+            num_uris_updated += count2
+        return num_links_inserted, num_uris_updated
+
+    def insert_links_in_appendices(self) -> tuple[int, int]:
+        start_dir = self.maindir / Directories.appendices
+        num_links_inserted = 0
+        num_uris_updated = 0
+        for appendix in self.appendices:
+            logging.info(f"Processing appendix: {appendix}")
+            filename = f"{appendix}.{FileExtensions.fodt}"
+            path = start_dir / filename
+            count1, count2 = self.insert_links_in_file(path, filename, FileType.APPENDIX)
+            num_links_inserted += count1
+            num_uris_updated += count2
+        return num_links_inserted, num_uris_updated
+
+    def insert_links_in_subsections(self) -> tuple[int, int]:
+        start_dir = self.maindir / Directories.chapters / Directories.subsections
+        num_links_inserted = 0
+        num_uris_updated = 0
+        if self.filename:
+            assert len(self.subsections) == 1
+            path = start_dir / self.subsections[0] / self.filename
+            keyword_name = self.filename.removesuffix(f".{FileExtensions.fodt}")
+            count1, count2 = self.insert_links_in_file(path, keyword_name, FileType.SUBSECTION)
+            num_links_inserted = count1
+            num_uris_updated = count2
         else:
-            self.insert_links_in_appendix()
+            for subsection in self.subsections:
+               count1, count2 =  self.insert_links_in_subsection(start_dir, subsection)
+               num_links_inserted += count1
+               num_uris_updated += count2
+        return num_links_inserted, num_uris_updated
 
-    def insert_links_in_chapter(self) -> None:
-        filename = f"{self.chapter}.{FileExtensions.fodt}"
-        path = self.start_dir / filename
-        self.insert_links_in_file(path, filename, FileType.CHAPTER)
-
-    def insert_links_in_appendix(self) -> None:
-        filename = f"{self.appendix}.{FileExtensions.fodt}"
-        path = self.start_dir / filename
-        self.insert_links_in_file(path, filename, FileType.APPENDIX)
-
-    def insert_links_in_subsections(self) -> None:
+    def insert_links_in_subsection(self, start_dir: Path, subsection: str) -> tuple[int, int]:
         files_processed = 0
-        for item in self.start_dir.iterdir():
-            if not item.is_dir():
-                continue
-            if self.subsection:
-                if item.name != self.subsection:
-                    logging.info(f"Skipping directory: {item}")
-                    continue
-            logging.info(f"Processing directory: {item}")
-            for item2 in item.iterdir():
-                if item2.suffix == f".{FileExtensions.fodt}":
-                    if self.filename:
-                        if item2.name != self.filename:
-                            logging.info(f"Skipping file: {item2.name}")
-                            continue
-                    keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
-                    files_processed += 1
-                    self.insert_links_in_file(item2, keyword_name, FileType.SUBSECTION)
+        num_links_inserted = 0
+        num_uris_updated = 0
+        item = start_dir / subsection
+        logging.info(f"Processing subsection: {item.name}")
+        for item2 in item.iterdir():
+            if item2.suffix == f".{FileExtensions.fodt}":
+                keyword_name = item2.name.removesuffix(f".{FileExtensions.fodt}")
+                files_processed += 1
+                count1, count2 = self.insert_links_in_file(
+                    item2, keyword_name, FileType.SUBSECTION, verbose=False, indent=True
+                )
+                num_links_inserted += count1
+                num_uris_updated += count2
         if files_processed == 0:
-            logging.info("No files processed.")
+            logging.info("  No files processed.")
         else:
-            logging.info(f"Processed {files_processed} files.")
+            logging.info(f"  Processed {files_processed} files.")
+        return num_links_inserted, num_uris_updated
 
-    def insert_links_in_file(self, filename: Path, file_info: str, file_type: FileType) -> None:
+    def insert_links_in_file(
+        self,
+        filename: Path,
+        file_info: str,
+        file_type: FileType,
+        verbose: bool = True,
+        indent: bool = False
+    ) -> tuple[int, int]:
         parser = xml.sax.make_parser()
         handler = FileHandler(file_info, file_type, self.kw_uri_map)
         parser.setContentHandler(handler)
@@ -403,32 +491,62 @@ class InsertLinks():
         except HandlerDoneException as e:
             pass
         num_links_inserted = handler.get_num_links_inserted()
-        if num_links_inserted > 0:
-            with open(filename, "w", encoding='utf8') as f:
-                f.write(handler.content.getvalue())
-            logging.info(f"{filename.name}: Inserted {num_links_inserted} links.")
-        else:
-            logging.info(f"{filename.name}: No links inserted.")
-
-
-def load_kw_uri_map(maindir: Path) -> dict[str, str]:
-    kw_uri_map_path = maindir / Directories.meta / FileNames.kw_uri_map
-    if not kw_uri_map_path.exists():
-        raise FileNotFoundError(f"File not found: {kw_uri_map_path}")
-    kw_uri_map = {}
-    with open(kw_uri_map_path, "r", encoding='utf-8') as f:
-        for line in f:
-            # Each line is on the format "<kw> <uri>" where <kw> is the keyword name and
-            # does not contain any whitespace characters, and <uri> is the URI of the
-            # keyword subsection subdocument. The <uri> may contain whitespace characters.
-            # There is a single whitespace character between <kw> and <uri>.
-            match = re.match(r"(\S+)\s+(.+)", line)
-            if match:
-                parts = match.groups()
-                kw_uri_map[parts[0]] = parts[1]
+        num_uris_updated = handler.get_num_uris_updated()
+        indent_str = "  " if indent else ""
+        if (num_links_inserted > 0) or (num_uris_updated > 0):
+            if self.check_changed:
+                if num_links_inserted > 0:
+                    logging.info(f"{indent_str}{filename.name}: Links would be inserted.")
+                if num_uris_updated > 0:
+                    logging.info(f"{indent_str}{filename.name}: URIs would be updated.")
             else:
-                raise ParsingException(f"Could not parse line: {line}")
-    return kw_uri_map
+                with open(filename, "w", encoding='utf8') as f:
+                    f.write(handler.content.getvalue())
+                if num_links_inserted > 0:
+                    logging.info(f"{indent_str}{filename.name}: Inserted {num_links_inserted} links.")
+                if num_uris_updated > 0:
+                    logging.info(f"{indent_str}{filename.name}: Updated {num_uris_updated} URIs.")
+        else:
+            if verbose and not self.check_changed:
+                logging.info(f"{indent_str}{filename.name}: No links inserted or URIs updated.")
+        return (num_links_inserted, num_uris_updated)
+
+VALID_SUBSECTIONS = "4.3,5.3,6.3,7.3,8.3,9.3,10.3,11.3,12.3"
+VALID_CHAPTERS = "1,2,3,4,5,6,7,8,9,10,11,12"
+VALID_APPENDICES = "B,C,D,E,F"
+
+def validate_subsections(subsections: str|None, filename: str|None) -> list[str]:
+    if subsections is None:
+        return []
+    subsections = subsections.split(",")
+    if filename is not None:
+        if len(subsections) != 1:
+            raise ValueError("If --filename is given, only one subsection can be specified.")
+    valid_subsections = VALID_SUBSECTIONS.split(",")
+    for subsection in subsections:
+        if subsection not in valid_subsections:
+            raise ValueError(f"Invalid subsection: {subsection}")
+    return subsections
+
+def validate_chapters(chapters: str|None) -> list[str]:
+    if chapters is None:
+        return []
+    chapters = chapters.split(",")
+    valid_chapters = VALID_CHAPTERS.split(",")
+    for chapter in chapters:
+        if chapter not in valid_chapters:
+            raise ValueError(f"Invalid chapter: {chapter}")
+    return chapters
+
+def validate_appendices(appendices: str|None) -> list[str]:
+    if appendices is None:
+        return []
+    appendices = appendices.split(",")
+    valid_appendices = VALID_APPENDICES.split(",")
+    for appendix in appendices:
+        if appendix not in valid_appendices:
+            raise ValueError(f"Invalid appendix: {appendix}")
+    return appendices
 
 # fodt-link-keywords
 # ------------------
@@ -438,78 +556,120 @@ def load_kw_uri_map(maindir: Path) -> dict[str, str]:
 # fodt-link-keywords \
 #    --maindir=<main_dir> \
 #    --keyword_dir=<keyword_dir> \
-#    --subsection=<subsection> \
-#    --chapter=<chapter> \
-#    --appendix=<appendix> \
+#    --subsections=<subsections> \
+#    --chapters=<chapters> \
+#    --appendices=<appendices> \
 #    --filename=<filename> \
-#    --use-map-file
+#    --all \
+#    --generate-map \
+#    --check-changed \
 #
 # DESCRIPTION:
 #
 #   Links all keyword names found inside <p> tags in the subsection documents to the
 #   corresponding keyword subsection subdocument.
-# 
-#   If the option --use-map-file is given, the script will use the mapping file
-#   "meta/kw_uri_map.txt" (generated by running the script "fodt-gen-kw-uri-map"), else
-#   it will generate the mapping on the fly. The mapping is a map from keyword name to
-#   the URI of the keyword subsection subdocument. This map is needed to generate the
-#   links.
 #
-#   If --subsection is not given, the script will process all subsections. If --subsection
-#   is given, the script will only process the specified subsection, or if --chapter is
-#   given, the script will only process the specified chapter, or if --appendix is given,
-#   the script will only process the specified appendix. If --filename is given, the script
-#   will only process the specified file within the specified subsection.
-#   The options --appendix, --chapter and --subsection are mutually exclusive.
+#   If the option --generate-map is given, the script will generate the keyword URI map on the fly.
+#   This is useful if you suspect that libreoffice might have changed the references to the keywords.
+#   Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.
+#
+#   If --subsections is given, the script will only process the specified subsections, or
+#   if --chapters is given, the script will only process the specified chapters, or
+#   if --appendices is given, the script will only process the specified appendices. If --filename
+#   and --subsections are given, the script will only process the specified file within the
+#   specified subsection. If --all is given, the script will process all files. Option --all
+#   cannot be combined with --chapters, --appendices or --subsections.
+#
+#   If --check-changed is given, the script will only check if the files have changed and not write
+#   the files back to disk. It will return a non-zero exit code if any files have changed.
 #
 # EXAMPLES:
 #
-#    fodt-link-keywords --subsection=5.3
+#    fodt-link-keywords --subsections=5.3
 #
 #  Will use the default values: --maindir=../../parts, --keyword_dir=../../keyword-names,
 #  and will process only the keywords in subsection 5.3, and will generate the mapping on the fly.
 #
-#    fodt-link-keywords
-#
-#  Same as above, but will process all subsections. And,
-#
-#    fodt-link-keywords --subsection=10.3 --filename=AQANCONL.fodt
+#    fodt-link-keywords --subsections=10.3 --filename=AQANCONL.fodt
 #
 #  Will process only the file "AQANCONL.fodt" in subsection 10.3.
+#
+#    fodt-link-keywords --chapters=4,5
+#
+#  Will process will process chapters 4 and 5.
+#
+#   fodt-link-keywords --all
+#
+#  Will process all keywords in subsections 4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, and 12.3.
+#  Then chapters 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, and finally appendices B, C, D, E, and F.
 #
 @click.command()
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
-@click.option('--subsection', help='The subsection to process')
-@click.option('--chapter', help='The chapter to process')
-@click.option('--appendix', help='The appendix to process')
-@click.option('--use-map-file', is_flag=True, default=True, help='Use the mapping file "meta/kw_uri_map.txt". This is generally recommended to speed up the processing. Only if we suspect that libreoffice might have changed the references to the keywords, we should generate the map on the fly. In this case, the map file should also be regenerated and committed to the repository.')
+@click.option('--subsections', help='The subsections to process')
+@click.option('--chapters', help='The chapters to process')
+@click.option('--appendices', help='The appendices to process')
+@click.option('--generate-map', is_flag=True, default=False, help='Do not use the mapping file "meta/kw_uri_map.txt". If you suspect that libreoffice might have changed the references to the keywords, you can use this option to bypass the kw_uri_map.txt file and generate the map on the fly. Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.')
 @click.option('--filename', help='The filename to process')
+@click.option('--all', is_flag=True, help='Process all files')
+@click.option('--check-changed', is_flag=True, help='Check if files have changed')
 def link_keywords(
     maindir: str|None,
     keyword_dir: str|None,
-    subsection: str|None,
-    chapter: str|None,
-    appendix: str|None,
+    subsections: str|None,
+    chapters: str|None,
+    appendices: str|None,
+    generate_map: bool,
     filename: str|None,
-    use_map_file: bool
+    all: bool,
+    check_changed: bool
 ) -> None:
     logging.basicConfig(level=logging.INFO)
     maindir = helpers.get_maindir(maindir)
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
-    if use_map_file:
-        kw_uri_map = load_kw_uri_map(maindir)
-    else:
+    if all:
+        if sum(x is not None for x in [subsections, chapters, appendices]) != 0:
+            raise ValueError(
+                "Option --all cannot be combined with any of --subsections, --chapters "
+                "and --appendices."
+            )
+        subsections = VALID_SUBSECTIONS
+        chapters = VALID_CHAPTERS
+        appendices = VALID_APPENDICES
+    subsections = validate_subsections(subsections, filename)
+    chapters = validate_chapters(chapters)
+    appendices = validate_appendices(appendices)
+    if generate_map:
         kw_uri_map = keyword_uri_map_generator.get_kw_uri_map(maindir, keyword_dir)
-    if sum(x is not None for x in [chapter, appendix, subsection]) != 1:
-        raise ValueError("Options --appendix, --chapter and --subsection are mutually exclusive.")
-    if chapter:
-        file_dir = maindir / Directories.chapters
-    elif appendix:
-        file_dir = maindir / Directories.appendices
     else:
-        file_dir = maindir / Directories.chapters / Directories.subsections
-    InsertLinks(maindir, subsection, chapter, appendix, filename, file_dir, kw_uri_map).insert_links()
+        kw_uri_map = helpers.load_kw_uri_map(maindir)
+    num_links_inserted, num_uris_updated = InsertLinks(
+        maindir,
+        subsections,
+        chapters,
+        appendices,
+        filename,
+        kw_uri_map,
+        check_changed
+    ).insert_links()
+    if check_changed:
+        if (num_links_inserted > 0) or (num_uris_updated > 0):
+            extra1 = None
+            msg = "Files have changed. "
+            if num_links_inserted > 0:
+                extra1 = f"{num_links_inserted} links would be inserted"
+            if num_uris_updated > 0:
+                if extra1 is not None:
+                    msg += f"{extra1}, and "
+                msg += f"{num_uris_updated} URIs would be updated."
+            else:
+                if extra1 is not None:
+                    msg += f"{extra1}."
+            logging.error(msg)
+            exit(1)
+        else:
+            logging.info("Files have not changed.")
+            exit(0)
 
 if __name__ == "__main__":
     link_keywords()
