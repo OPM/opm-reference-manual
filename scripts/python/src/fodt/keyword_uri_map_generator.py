@@ -217,7 +217,7 @@ def gen_kw_uri_map_cli(maindir: str|None, keyword_dir: str|None, check_changed: 
     with open(maindir / Directories.meta / FileNames.kw_uri_map, "w", encoding='utf8') as f:
         for kw in sorted(kw_uri_map.keys()):
             f.write(f"{kw} {kw_uri_map[kw]}\n")
-    logging.info(f"Generated keyword URI map to {maindir / Directories.meta / FileNames.kw_uri_map}")
+    logging.info(f"Wrote keyword URI map to {maindir / Directories.meta / FileNames.kw_uri_map}")
 
 if __name__ == "__main__":
     gen_kw_uri_map_cli()
