@@ -1,9 +1,10 @@
 import importlib.resources  # access non-code resources
+import re
 import shutil
 
 from pathlib import Path
 from fodt.constants import Directories, FileExtensions, FileNames
-from fodt.exceptions import InputException
+from fodt.exceptions import InputException, ParsingException
 from fodt import xml_helpers
 
 def chapter_fodt_file_path(
@@ -190,6 +191,25 @@ def locate_maindir_from_current_dir() -> Path:
                 return dir_
         cwd = cwd.parent
     # This line should never be reached
+
+def load_kw_uri_map(maindir: Path) -> dict[str, str]:
+    kw_uri_map_path = maindir / Directories.meta / FileNames.kw_uri_map
+    if not kw_uri_map_path.exists():
+        raise FileNotFoundError(f"File not found: {kw_uri_map_path}")
+    kw_uri_map = {}
+    with open(kw_uri_map_path, "r", encoding='utf-8') as f:
+        for line in f:
+            # Each line is on the format "<kw> <uri>" where <kw> is the keyword name and
+            # does not contain any whitespace characters, and <uri> is the URI of the
+            # keyword subsection subdocument. The <uri> may contain whitespace characters.
+            # There is a single whitespace character between <kw> and <uri>.
+            match = re.match(r"(\S+)\s+(.+)", line)
+            if match:
+                parts = match.groups()
+                kw_uri_map[parts[0]] = parts[1]
+            else:
+                raise ParsingException(f"Could not parse line: {line}")
+    return kw_uri_map
 
 def read_keyword_order(outputdir: Path, chapter: int, section: int) -> list[str]:
     file = keyword_file(outputdir, chapter, section)

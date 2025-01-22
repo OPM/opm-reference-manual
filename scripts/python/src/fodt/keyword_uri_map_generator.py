@@ -108,7 +108,10 @@ class ProcessChapter:
             for line in f:
                 keyword = line.strip()
                 uri = self.keyword_uri(keyword)
-                self.kw_uri_map[keyword] = uri
+                # NOTE: The same keyword may appear in multiple chapters, e.g. "ADD". For now, we
+                #    will keep the first URI found for a keyword.
+                if keyword not in self.kw_uri_map:
+                    self.kw_uri_map[keyword] = uri
 
     def keyword_uri(self, keyword: str) -> str:
         kw_file = (self.maindir / Directories.chapters / Directories.subsections / 
@@ -120,7 +123,11 @@ def get_kw_uri_map(maindir: Path, keyword_dir: Path) -> dict[str, str]:
     kw_uri_map = {}
     # Assume all directories in keyword_dir are keyword directories on the form xx.yy
     # where xx is the chapter number and yy is the section number.
-    for item1 in keyword_dir.iterdir():
+    # Sort using a custom key that removes the dot and converts to an integer
+    # This ensures that the directories are sorted numerically, in the correct order:
+    # 4.3, 5.3, 6.3,...
+    sorted_dirs = sorted(keyword_dir.iterdir(), key=lambda d: int(d.name.replace('.', '')))
+    for item1 in sorted_dirs:
         if not item1.is_dir():
             continue
         chapter_str = item1.name
@@ -154,17 +161,34 @@ def add_alias(kw_uri_map: dict[str, str], keyword: str, alias: str) -> None:
     uri = kw_uri_map[keyword]
     kw_uri_map[alias] = uri
 
+def display_map_diff(orig_kw_uri_map: dict[str, str], kw_uri_map: dict[str, str]) -> None:
+    # First check keys
+    for kw in sorted(orig_kw_uri_map.keys()):
+        if kw not in kw_uri_map:
+            logging.error(f"Keyword {kw} not found in new map.")
+        else:
+            if orig_kw_uri_map[kw] != kw_uri_map[kw]:
+                logging.error(f"URI for keyword {kw} has changed. Old: {orig_kw_uri_map[kw]}, New: {kw_uri_map[kw]}")
+    for kw in sorted(kw_uri_map.keys()):
+        if kw not in orig_kw_uri_map:
+            logging.error(f"Keyword {kw} not found in old map.")
+    return
+
 # fodt-gen-kw-uri-map
 # -------------------
 #
 # SHELL USAGE:
 #
-# fodt-gen-kw-uri-map --maindir=<main_dir> --keyword_dir=<keyword_dir>
+#  fodt-gen-kw-uri-map --maindir=<main_dir> \
+#                      --keyword_dir=<keyword_dir> \
+#                      --check-changed
 #
 # DESCRIPTION:
 #
 #   Generates a map: KW_NAME -> URI for all keywords. The map is saved to the file
-#   "meta/kw_uri_map.txt" in the main directory.
+#   "meta/kw_uri_map.txt" in the main directory. If the --check-changed option is
+#   given, the script will only check if the files have changed and not write the
+#   output file. It will return a non-zero exit code if any files have changed.
 #
 # EXAMPLE:
 #
@@ -175,15 +199,25 @@ def add_alias(kw_uri_map: dict[str, str], keyword: str, alias: str) -> None:
 @click.command()
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
-def gen_kw_uri_map_cli(maindir: str|None, keyword_dir: str|None) -> None:
+@click.option('--check-changed', is_flag=True, help='Check if files have changed')
+def gen_kw_uri_map_cli(maindir: str|None, keyword_dir: str|None, check_changed: bool) -> None:
     logging.basicConfig(level=logging.INFO)
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
     maindir = helpers.get_maindir(maindir)
     kw_uri_map = get_kw_uri_map(maindir, keyword_dir)
+    if check_changed:
+        orig_kw_uri_map = helpers.load_kw_uri_map(maindir)
+        if orig_kw_uri_map != kw_uri_map:
+            logging.error("Files have changed.")
+            display_map_diff(orig_kw_uri_map, kw_uri_map)
+            exit(1)
+        else:
+            logging.info("Files have not changed.")
+            exit(0)
     with open(maindir / Directories.meta / FileNames.kw_uri_map, "w", encoding='utf8') as f:
         for kw in sorted(kw_uri_map.keys()):
             f.write(f"{kw} {kw_uri_map[kw]}\n")
-    logging.info(f"Generated keyword URI map to {maindir / Directories.meta / FileNames.kw_uri_map}")
+    logging.info(f"Wrote keyword URI map to {maindir / Directories.meta / FileNames.kw_uri_map}")
 
 if __name__ == "__main__":
     gen_kw_uri_map_cli()
