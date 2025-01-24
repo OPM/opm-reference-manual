@@ -4231,7 +4231,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18421" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715759_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc715759_3964674244"/></text:h>
-    <text:p text:style-name="P12645"><text:a xlink:href="#__RefHeading___Toc329392_1841740821">MULTR-</text:a> multiples the transmissibility between two cell faces in the -R direction for all the cells in the model via an array, that is the keyword sets the transmissibility multiplier of block (I, J, K) between the cells (I-1, J, K) and (I, J, K). <text:s/><text:s/>An alternative to defining the complete array is to use the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword to define an area of the grid and then use the <text:a xlink:href="#__RefHeading___Toc329392_1841740821">MULTR-</text:a> keyword to set the multipliers just for the area defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword (see the example).</text:p>
+    <text:p text:style-name="P12645"><text:a xlink:href="#__RefHeading___Toc80285_17781729792">MULTR-</text:a> multiples the transmissibility between two cell faces in the -R direction for all the cells in the model via an array, that is the keyword sets the transmissibility multiplier of block (I, J, K) between the cells (I-1, J, K) and (I, J, K). <text:s/><text:s/>An alternative to defining the complete array is to use the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword to define an area of the grid and then use the <text:a xlink:href="#__RefHeading___Toc80285_17781729792">MULTR-</text:a> keyword to set the multipliers just for the area defined by the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword (see the example).</text:p>
     <text:p text:style-name="P12302">The keyword should only be used with radial and spider grids, as declared by the <text:a xlink:href="#__RefHeading___Toc51752_2905512151">RADIAL</text:a> or <text:a xlink:href="#__RefHeading___Toc439805_750232207">SPIDER</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table1392" table:style-name="Table1392">
      <table:table-column table:style-name="Table1392.A"/>
@@ -4257,10 +4257,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2955">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1392.B2" office:value-type="string">
-       <text:p text:style-name="P4220"><text:a xlink:href="#__RefHeading___Toc329392_1841740821">MULTR-</text:a></text:p>
+       <text:p text:style-name="P4220"><text:a xlink:href="#__RefHeading___Toc80285_17781729792">MULTR-</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1392.C2" office:value-type="string">
-       <text:p text:style-name="P4220"><text:a xlink:href="#__RefHeading___Toc329392_1841740821">MULTR-</text:a> is an array of real positive numbers assigning the transmissibility multipliers in the -R direction to each cell face in the model. </text:p>
+       <text:p text:style-name="P4220"><text:a xlink:href="#__RefHeading___Toc80285_17781729792">MULTR-</text:a> is an array of real positive numbers assigning the transmissibility multipliers in the -R direction to each cell face in the model. </text:p>
        <text:p text:style-name="P4016">Repeat counts may be used, for example 20*100.0. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1392.D2" office:value-type="string">
@@ -4272,7 +4272,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1461">Notes:</text:p>
        <text:list xml:id="list105911768566147" text:continue-list="list105912269339942" text:style-name="L19">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19014">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
+         <text:p text:style-name="P19014">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18920">The keyword is terminated by a “/”.</text:p>
@@ -4287,7 +4287,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14625">Table <text:sequence text:ref-name="refTable149" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.75</text:sequence>: MULTR- Keyword Description</text:p>
     <text:p text:style-name="P15452"/>
     <text:p text:style-name="P12646">Note that OPM Flow does not require the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a>(TRANMULT) parameter in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to be set to YES, in order to use this and other negative directional dependent multiplier keywords in the input deck. Whereas, the commercial simulator will terminate with an error if the keyword is present, and the <text:a xlink:href="#__RefHeading___Toc45741_719036256">GRIDOPTS</text:a>(TRANMULT) parameter has not been set to YES.</text:p>
-    <text:p text:style-name="Text_20_body">See also the <text:a xlink:href="#__RefHeading___Toc329390_1841740821">MULTR</text:a>, <text:a xlink:href="#__RefHeading___Toc329398_1841740821">MULTTHT</text:a>, <text:a xlink:href="#__RefHeading___Toc329400_1841740821">MULTTHT-</text:a>, <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> and <text:a xlink:href="#__RefHeading___Toc80293_17781729791">MULTZ-</text:a> keywords for scaling transmissible between cells in the R direction.</text:p>
+    <text:p text:style-name="Text_20_body">See also the <text:a xlink:href="#__RefHeading___Toc228976_1841740821">MULTR</text:a>, <text:a xlink:href="#__RefHeading___Toc270099_1841740821">MULTTHT</text:a>, <text:a xlink:href="#__RefHeading___Toc80285_177817297921">MULTTHT-</text:a>, <text:a xlink:href="#__RefHeading___Toc80291_1778172979">MULTZ</text:a> and <text:a xlink:href="#__RefHeading___Toc80293_1778172979">MULTZ-</text:a> keywords for scaling transmissible between cells in the R direction.</text:p>
     <text:h text:style-name="P18421" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715761_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715761_3964674244"/></text:h>
     <text:p text:style-name="P13825">--</text:p>
     <text:p text:style-name="P13825">-- <text:s text:c="6"/>DEFINE INPUT BOX FOR EDITING INPUT ARRAYS</text:p>
@@ -4306,7 +4306,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13903">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P13903">ENDBOX <text:s text:c="8"/></text:p>
     <text:p text:style-name="P15132"><text:soft-page-break/></text:p>
-    <text:p text:style-name="P15132">The above example defines a 0.5 scaling multiplier for the six cells defined by the preceding <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement. The <text:a xlink:href="#__RefHeading___Toc99903_2023071304">ENDBOX</text:a> keyword resets the input box to the full grid.</text:p>
+    <text:p text:style-name="P15132">The above example defines a 0.5 scaling multiplier for the six cells defined by the preceding <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> statement. The <text:a xlink:href="#__RefHeading___Toc88719_1778172979">ENDBOX</text:a> keyword resets the input box to the full grid.</text:p>
     
    </text:section>
   </office:text>
