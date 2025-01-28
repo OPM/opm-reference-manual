@@ -1,0 +1,57 @@
+name: Check for missing keyword linking
+
+# NOTE: Added "push" here such that PR authors can test the actions in their forked repository
+# before submitting a PR.
+# NOTE: It is not possible to avoid the duplication of the paths in the "push" and
+# "pull_request" sections. This is a known limitation of the GitHub Actions syntax.
+on:
+    push:
+      paths:
+        - 'parts/**/*.fodt'
+    pull_request:
+      paths:
+        - 'parts/**/*.fodt'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os: [ubuntu-latest]
+            python-version: ["3.12"]
+    steps:
+      - name: checkout source code
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v3
+        with:
+          poetry-version: "1.8.4"  # The "latest" version is not working
+      - name: Install dependencies
+        run: |
+          cd scripts/python
+          poetry install
+      - name: Run checks
+        run: |
+          cd scripts/python
+          # The following command will fail if there are any changes to the kw_uri_map.txt file
+          # If it fails, the whole workflow fails and the PR should not be merged. The user should
+          # then run 'poetry run fodt-gen-kw-uri-map' to update the kw_uri_map.txt file and commit
+          # the changes the current PR and push them to the remote repository the workflow should
+          # then pass on the next run.
+          poetry run fodt-gen-kw-uri-map --check-changed
+
+          # The following command will fail if there are any changes to the keyword linking in the
+          # .fodt files. If it fails, the whole workflow fails and the PR should not be merged. The
+          # user should then run fodt-link-keywords script to update the keyword linking in the files
+          # and commit the changes the current PR and push them to the remote repository the workflow
+          # should then pass on the next run.
+          # TODO: We disable this check until links have been updated in the chapters, and the
+          #  we can expect the check to pass.
+          #poetry run fodt-link-keywords --all --check-changed
