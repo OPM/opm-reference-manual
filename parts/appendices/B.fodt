@@ -13077,10 +13077,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P1008">Support has been added for MPI communication being performed directly between GPUs instead of being sent via the CPU when using a multi-gpu linear solver. </text:p>
+          <text:p text:style-name="P1008">Linear solver default parameters have been updated to improve accuracy and performance including. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Add summary output vectors for stranded CO2 in the gas phase (GMST) and maximum potential residual trapping (GMTR). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added PSI and OMEGA parameters to DRSDTCON to control the regime and rate of convective mixing. Now supports GAS/WATER systems in addition to OIL/GAS systems.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Support has been added for MPI communication being performed directly between GPUs instead of being sent via the CPU when using a multi-gpu linear solver. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Added support for WTMULT to multiply a well target or constraint by a constant. </text:p>
@@ -13093,12 +13099,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Added support for automatic chokes (NODEPROP item 3 CHOKE) in extended network models. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">Added PSI and OMEGA parameters to DRSDTCON to control the regime and rate of convective mixing. Now supports GAS/WATER systems in addition to OIL/GAS systems.  </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">Linear solver default parameters have been updated to improve accuracy and performance including. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Added support for Killough's hysteresis model for both wetting and non-wetting phase hysteresis in a water wet system (EHYSTR item 2 HYSTMOD = 4). </text:p>
