@@ -4543,7 +4543,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P86"><text:s text:c="9"/>1000.0 <text:s text:c="2"/>0.000 <text:s text:c="4"/></text:p>
     <text:p text:style-name="P86"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>0.000 <text:s text:c="29"/>/ RVW VS DEPTH EQUIL REGN 01</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P90">For the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, the simulator supports, several summary vectors specific to CO<text:span text:style-name="T23">2</text:span> storage, as shown below. </text:p>
+    <text:p text:style-name="P90">In the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, the simulator supports summary vectors specific to CO<text:span text:style-name="T23">2</text:span> storage (see Section <text:a xlink:href="#__RefHeading___Toc614364_2141070512">11.1.12 Option Specific Variables - CO2STORE Model</text:a>) including those shown below. </text:p>
     <text:p text:style-name="P49">-- ==============================================================================</text:p>
     <text:p text:style-name="P49">-- </text:p>
     <text:p text:style-name="P49">-- SUMMARY SECTION </text:p>
@@ -4564,7 +4564,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P54">-- <text:s text:c="6"/>FIELD C02 MOBILE IN GAS PHASE</text:p>
     <text:p text:style-name="P54">FGCDM</text:p>
     <text:p text:style-name="P54"/>
-    <text:p text:style-name="P83">The final part of the example covers the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. The standard <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword is used to set the gas injection rate, in this case 100,000 sm3/day of CO<text:span text:style-name="T23">2</text:span>.</text:p>
+    <text:p text:style-name="P83">The final part of the example covers the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. The standard <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword is used to set the gas injection rate, in this case 100,000 sm<text:span text:style-name="T29">3</text:span>/day of CO<text:span text:style-name="T23">2</text:span>.</text:p>
     <text:p text:style-name="P40">-- ==============================================================================</text:p>
     <text:p text:style-name="P84">-- </text:p>
     <text:p text:style-name="P84">-- SCHEDULE SECTION </text:p>
@@ -4572,10 +4572,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P40">-- ==============================================================================</text:p>
     <text:p text:style-name="_40_Example">SCHEDULE </text:p>
     <text:p text:style-name="P86">--</text:p>
-    <text:p text:style-name="P86">-- <text:s text:c="6"/>RESTART CONTROL BASIC = 4 (ALL=2, YEARLY=4, MONTHLY=5, TSTEP=6)</text:p>
+    <text:p text:style-name="P86">-- <text:s text:c="6"/>RESTART CONTROL BASIC (LAST=1, ALL=2, YEARLY=4, MONTHLY=5, TSTEP=6)</text:p>
     <text:p text:style-name="P86">--</text:p>
     <text:p text:style-name="P86">RPTRST <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P86"><text:s text:c="8"/>&apos;BASIC=1&apos; &apos;ALLPROPS&apos; <text:s text:c="50"/>/</text:p>
+    <text:p text:style-name="P86"><text:s text:c="8"/>&apos;BASIC=2&apos; ALLPROPS TEMP RSWSAT RVWSAT <text:s text:c="50"/>/</text:p>
     <text:p text:style-name="P55">--</text:p>
     <text:p text:style-name="P55">-- <text:s text:c="6"/>WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P55"><text:soft-page-break/>-- <text:s text:c="77"/></text:p>
@@ -4604,7 +4604,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P86">-- <text:s text:c="6"/>ADVANCE SIMULATION BY REPORTING TIME</text:p>
     <text:p text:style-name="P86">--</text:p>
     <text:p text:style-name="P86">TSTEP <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P86"><text:s text:c="9"/>1 <text:s text:c="2"/>36*30</text:p>
+    <text:p text:style-name="P86"><text:s text:c="9"/>36*30.4375</text:p>
     <text:p text:style-name="P86">/ <text:s/></text:p>
     <text:p text:style-name="P86"><text:s text:c="25"/></text:p>
     <text:p text:style-name="P114">Note in order to get the liquid phase mole fractions of CO<text:span text:style-name="T23">2</text:span>, that is, the mole fractions of CO<text:span text:style-name="T23">2</text:span> in the water phase (XMFCO2), and the vapor phase mole fractions (YMFWAT) to the restart file, one must use the command line parameter enable-opm-rst-file set equal to true.</text:p>
@@ -4660,7 +4660,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P73">-- <text:s text:c="6"/>BARSA <text:s text:c="4"/>1/BARSA <text:s text:c="67"/></text:p>
     <text:p text:style-name="P71">-- <text:s text:c="6"/>-------- <text:s/>-------- <text:s text:c="66"/></text:p>
     <text:p text:style-name="P71">ROCK <text:s text:c="83"/></text:p>
-    <text:p text:style-name="P73"><text:s text:c="9"/>1.0000 <text:s text:c="3"/>1.0E-06 <text:s text:c="32"/>/ ROCK COMPRESSIBILITY</text:p>
+    <text:p text:style-name="P81"><text:s text:c="9"/>200.0 <text:s text:c="4"/>5.0E-05 <text:s text:c="32"/>/ ROCK COMPRESSIBILITY <text:s text:c="16"/></text:p>
     <text:p text:style-name="P73">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P73">-- <text:s text:c="6"/>GAS-OIL RELATIVE PERMEABILITY TABLES (SGOF) – CO2STORE PHASES <text:s text:c="64"/></text:p>
     <text:p text:style-name="P73">SGOF</text:p>
@@ -4705,23 +4705,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P88"><text:s text:c="9"/>1000.0 <text:s text:c="2"/>0.000 <text:s text:c="4"/></text:p>
     <text:p text:style-name="P88"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>0.000 <text:s text:c="37"/>/ </text:p>
     <text:p text:style-name="P88"/>
-    <text:p text:style-name="P78">T<text:span text:style-name="T21">he </text:span>forth<text:span text:style-name="T21"> and final part of the example sets the maximum dissolution rate for convective CO</text:span><text:span text:style-name="T24">2</text:span><text:span text:style-name="T21"> mixing via the <text:a xlink:href="#__RefHeading___Toc481925_1297399298">DRSDTCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:span></text:p>
-    <text:p text:style-name="P38">-- ==============================================================================</text:p>
-    <text:p text:style-name="P91">-- </text:p>
-    <text:p text:style-name="_40_Example"><text:soft-page-break/>-- SCHEDULE SECTION </text:p>
-    <text:p text:style-name="_40_Example">-- </text:p>
-    <text:p text:style-name="P38">-- ==============================================================================</text:p>
-    <text:p text:style-name="P91">SCHEDULE</text:p>
-    <text:p text:style-name="_40_Example">-- <text:s text:c="128"/></text:p>
-    <text:p text:style-name="P93">-- <text:s text:c="6"/>CO2 CONVECTIVE DISSOLUTION PARAMETER</text:p>
-    <text:p text:style-name="_40_Example">--</text:p>
-    <text:p text:style-name="_40_Example">DRSDTCON</text:p>
-    <text:p text:style-name="P94">-- <text:s text:c="6"/>CO2 CONV <text:s text:c="49"/></text:p>
-    <text:p text:style-name="P94">-- <text:s text:c="6"/>DISSOLN <text:s text:c="29"/></text:p>
-    <text:p text:style-name="P94">-- <text:s text:c="6"/>-------- <text:s text:c="44"/></text:p>
-    <text:p text:style-name="P94"><text:s text:c="9"/>0.04 <text:s text:c="42"/>/</text:p>
-    <text:p text:style-name="P94"/>
-    <text:p text:style-name="P89">See the <text:a xlink:href="#__RefHeading___Toc481925_1297399298">DRSDTCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section for further information on this keyword. </text:p>
+    <text:p text:style-name="P89">See also the <text:a xlink:href="#__RefHeading___Toc481925_1297399298">DRSDTCON</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section for details of how to control convective dissolution of carbon dioxide into the in-situ brine. </text:p>
    </text:section>
   </office:text>
  </office:body>
