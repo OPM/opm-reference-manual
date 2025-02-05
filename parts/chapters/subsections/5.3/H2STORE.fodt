@@ -4562,7 +4562,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P69"><text:s text:c="9"/>1000.0 <text:s text:c="2"/>0.000 <text:s text:c="4"/></text:p>
     <text:p text:style-name="P69"><text:s text:c="9"/>3000.0 <text:s text:c="2"/>0.000 <text:s text:c="29"/>/ RVW VS DEPTH EQUIL REGN 01</text:p>
     <text:p text:style-name="P78"/>
-    <text:p text:style-name="P89">For the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, the simulator supports, several summary vectors specific to H<text:span text:style-name="T21">2</text:span> storage, as shown below. </text:p>
+    <text:p text:style-name="P89">In the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, the simulator supports summary vectors specific to CO<text:span text:style-name="T21">2</text:span> storage (see Section <text:a xlink:href="#__RefHeading___Toc614364_2141070512">11.1.12 Option Specific Variables - CO2STORE Model</text:a>) many of these can also be used for H<text:span text:style-name="T21">2</text:span> storage including those shown below. </text:p>
     <text:p text:style-name="P48">-- ==============================================================================</text:p>
     <text:p text:style-name="P48">-- </text:p>
     <text:p text:style-name="P48">-- SUMMARY SECTION </text:p>
@@ -4591,10 +4591,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P36">-- ==============================================================================</text:p>
     <text:p text:style-name="P73">SCHEDULE </text:p>
     <text:p text:style-name="P69">--</text:p>
-    <text:p text:style-name="P69">-- <text:s text:c="6"/>RESTART CONTROL BASIC = 4 (ALL=2, YEARLY=4, MONTHLY=5, TSTEP=6)</text:p>
+    <text:p text:style-name="P69">-- <text:s text:c="6"/>RESTART CONTROL BASIC (LAST=1, ALL=2, YEARLY=4, MONTHLY=5, TSTEP=6)</text:p>
     <text:p text:style-name="P69">--</text:p>
     <text:p text:style-name="P69">RPTRST <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P69"><text:s text:c="8"/>&apos;BASIC=1&apos; &apos;ALLPROPS&apos; <text:s text:c="50"/>/</text:p>
+    <text:p text:style-name="P69"><text:s text:c="8"/>&apos;BASIC=1&apos; ALLPROPS TEMP RSWSAT RVWSAT <text:s text:c="34"/>/</text:p>
     <text:p text:style-name="P51">--</text:p>
     <text:p text:style-name="P51">-- <text:s text:c="6"/>WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P51">-- <text:s text:c="77"/></text:p>
@@ -4623,7 +4623,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P69">-- <text:s text:c="6"/>ADVANCE SIMULATION BY REPORTING TIME</text:p>
     <text:p text:style-name="P69">--</text:p>
     <text:p text:style-name="P69">TSTEP <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P69"><text:s text:c="9"/>1 <text:s text:c="2"/>36*30</text:p>
+    <text:p text:style-name="P69"><text:s text:c="9"/>36*30.4375</text:p>
     <text:p text:style-name="P69">/ <text:s text:c="26"/></text:p>
     <text:p text:style-name="P78"/>
     <text:p text:style-name="P70">Note in order to get the liquid phase mole fractions of H<text:span text:style-name="T21">2</text:span>, that is, the mole fractions of H<text:span text:style-name="T21">2</text:span> in the water phase (XMFH2), and the vapor phase mole fractions (YMFWAT) to the restart file, one must use the command line parameter enable-opm-rst-file set equal to true.</text:p>
@@ -4679,7 +4679,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P73">-- <text:s text:c="6"/>BARSA <text:s text:c="4"/>1/BARSA <text:s text:c="67"/></text:p>
     <text:p text:style-name="P73">-- <text:s text:c="6"/>-------- <text:s/>-------- <text:s text:c="66"/></text:p>
     <text:p text:style-name="P73">ROCK <text:s text:c="83"/></text:p>
-    <text:p text:style-name="P73"><text:s text:c="9"/>1.0000 <text:s text:c="3"/>1.0E-06 <text:s text:c="32"/>/ ROCK COMPRESSIBILITY</text:p>
+    <text:p text:style-name="P73"><text:s text:c="9"/>200.0 <text:s text:c="4"/>5.0E-05 <text:s text:c="32"/>/ ROCK COMPRESSIBILITY</text:p>
     <text:p text:style-name="P73">-- <text:s text:c="84"/></text:p>
     <text:p text:style-name="P73">-- <text:s text:c="6"/>GAS-OIL RELATIVE PERMEABILITY TABLES (SGOF) – H2STORE PHASES <text:s text:c="64"/></text:p>
     <text:p text:style-name="P73">SGOF</text:p>
