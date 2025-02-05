@@ -13070,20 +13070,105 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P965">The 2024-10 release consists of some new features and various improvements and bug fixes. The new features and improvements include the following highlights:</text:p>
+    <text:p text:style-name="P965">The 2024-10 release consists of some new features and various improvements and bug fixes. These include the following highlights:</text:p>
     <text:list xml:id="list4133251906" text:style-name="L1">
      <text:list-item>
       <text:list>
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P1008"/>
+          <text:p text:style-name="P1008">Linear solver default parameters have been updated to improve accuracy and performance including. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Add summary output vectors for stranded CO2 in the gas phase (GMST) and maximum potential residual trapping (GMTR). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added PSI and OMEGA parameters to DRSDTCON to control the regime and rate of convective mixing. Now supports GAS/WATER systems in addition to OIL/GAS systems.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Support has been added for MPI communication being performed directly between GPUs instead of being sent via the CPU when using a multi-gpu linear solver. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for WTMULT to multiply a well target or constraint by a constant. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Simulator is now able to make better usage of the Damaris middleware if enabled (https://project.inria.fr/damaris/). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Extended the tracer model to include partitioning of tracers into free and solution states whenever dissolved gas/vaporized oil exist. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for automatic chokes (NODEPROP item 3 CHOKE) in extended network models. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for Killough's hysteresis model for both wetting and non-wetting phase hysteresis in a water wet system (EHYSTR item 2 HYSTMOD = 4). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added the option to specify the linear solver for subdomains when using the NLDD nonlinear solver. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added foundations for future experiments using the four-byte float type instead of the eight-byte double type as the primary array element in order to save memory. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Support added for RFIP and SFIP mnemonics for the RPTRST keyword. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Support added for mnemonic WELLS=N for the RPTSCHED keyword. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Previously the THP was set to zero if a well was stopped or set to a zero rate (well or group). The THP will now be calculated provided a VFP table is active. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Corrected transmissibilities calculated for pinched out cells when using PINCH option 4 equals ALL. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Support added for the EQUALREG keyword. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for using METIS in addition to Zoltan to partition corner point grids. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Proper INIT file table output for the saturation functions in LET format. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Add support for outputting MULTPV to the Restart file. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Add support for additional keywords in PYACTION blocks. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for DENAQA and VISCAQA keywords when using CO2STORE. Also added support for SALTMF keyword. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Support has been expanded for saving/restoring scaling factors for segment level devices (SICDs, AICDs and Valves) to/from the Restart file.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for output of well level target or constraint summary vectors. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Added support for field, group and well gas mass injection rate and injection total summary vectors for use with CO2STORE. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Proper handling of the WHISTCTL in restarted simulations. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Expanded consistency checks for array operations such as ADD, COPY, and MULTIPLY, as well as the per-region counterparts. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Performance improvements in well name matching on platforms which support the Posix fnmatch() function. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Initial and experimental support for compositional simulations–currently supporting 2 to 7 components. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1008">Fixed two-phase gas/water and gas/oil model initialisation (equilibration). </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
      </text:list-item>
     </text:list>
+    <text:p text:style-name="_40_TextBody"/>
     <text:list xml:id="list115022561152553" text:continue-list="list115022523426382" text:style-name="_40_Appendix_20_Heading_20_Numbering">
      <text:list-item>
       <text:list>
