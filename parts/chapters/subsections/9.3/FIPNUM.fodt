@@ -4341,7 +4341,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1573">Notes:</text:p>
        <text:list xml:id="list105918431733585" text:continue-list="list105918168707541" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
+         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19945">I<text:span text:style-name="T1533">f </text:span>a<text:span text:style-name="T1533">cell is not assigned a </text:span><text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a><text:span text:style-name="T1533">NUM region then the default value will be used.</text:span></text:p>
@@ -4364,17 +4364,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708719797072">
        <table:table-cell table:style-name="Table1872.A1" office:value-type="string">
         <text:p text:style-name="P10276">Note</text:p>
-        <text:p text:style-name="P10289">In most simulation models the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array is used to define various regions in the model for fluid in-place reporting and to identify (or report) the flow between the different regions. When calibrating a model’s in-place volumes it would be useful to use the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array combined with the <text:a xlink:href="#__RefHeading___Toc99843_2023071304">MULTREGP</text:a> keyword to accomplish this. However, the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array cannot be used in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
+        <text:p text:style-name="P10289">In most simulation models the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array is used to define various regions in the model for fluid in-place reporting and to identify (or report) the flow between the different regions. When calibrating a model’s in-place volumes it would be useful to use the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array combined with the <text:a xlink:href="#__RefHeading___Toc296617_1576177388">MULTREGP</text:a> keyword to accomplish this. However, the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array cannot be used in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
         <text:p text:style-name="P10262">A work around is to:</text:p>
         <text:list xml:id="list2951601549" text:style-name="L102">
          <text:list-item>
-          <text:p text:style-name="P17487">Use the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array but change the keyword to <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> and incorporate this keyword or <text:a xlink:href="#__RefHeading___Toc605478_3199477706">INCLUDE</text:a> file in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
+          <text:p text:style-name="P17487">Use the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array but change the keyword to <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> and incorporate this keyword or <text:a xlink:href="#__RefHeading___Toc55749_2479612490">INCLUDE</text:a> file in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17487">Use the <text:a xlink:href="#__RefHeading___Toc99843_2023071304">MULTREGP</text:a> to calibrate the fluid in-place volumes for the various regions.</text:p>
+          <text:p text:style-name="P17487">Use the <text:a xlink:href="#__RefHeading___Toc296617_1576177388">MULTREGP</text:a> to calibrate the fluid in-place volumes for the various regions.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P17488">I<text:span text:style-name="T3628">n the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section, use the <text:a xlink:href="#__RefHeading___Toc99899_2023071304">COPY</text:a> keyword to copy the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array to the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array.</text:span></text:p>
+          <text:p text:style-name="P17488">I<text:span text:style-name="T3628">n the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section, use the <text:a xlink:href="#__RefHeading___Toc45761_719036256">COPY</text:a> keyword to copy the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> array to the <text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a> array.</text:span></text:p>
          </text:list-item>
         </text:list>
         <text:p text:style-name="P10266">The above work flow will ensure that both arrays and the reporting of fluid in-place regions are consistent.</text:p>
@@ -4393,7 +4393,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12944"><text:s text:c="9"/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P12944">/ <text:s text:c="7"/></text:p>
     <text:p text:style-name="P110"/>
-    <text:p text:style-name="_40_TextBody">Alternatively the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="_40_TextBody">Alternatively the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
     <text:p text:style-name="P14356">--</text:p>
     <text:p text:style-name="P14356">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14356">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>

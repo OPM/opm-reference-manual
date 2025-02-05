@@ -4342,7 +4342,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838834"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838834"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> keyword defines the parameters to restart the simulation from a previous run that has written a <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file out to disk. Only restarting from <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> files is permitted by OPM Flow; restarting from <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> files is not implemented.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> keyword defines the parameters to restart the simulation from a previous run that has written a <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file out to disk. Only restarting from <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> files is permitted by OPM Flow; restarting from <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a> files is not implemented.</text:p>
     <table:table table:name="Table618" table:style-name="Table618">
      <table:table-column table:style-name="Table618.A"/>
      <table:table-column table:style-name="Table618.B"/>
@@ -4399,8 +4399,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4932">RSTYPE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.A2" office:value-type="string">
-       <text:p text:style-name="P5362">A defined character sting set to <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> to read the restart data from the <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file, otherwise defaulted to 1* to read the data from the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file.</text:p>
-       <text:p text:style-name="P4933">The <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file option is not supported by OPM Flow and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P5362">A defined character sting set to <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a> to read the restart data from the <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a> file, otherwise defaulted to 1* to read the data from the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file.</text:p>
+       <text:p text:style-name="P4933">The <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a> file option is not supported by OPM Flow and should be defaulted with 1*.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.D2" office:value-type="string">
        <text:p text:style-name="P4931">1*</text:p>
@@ -4414,7 +4414,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4932">RSFORMAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table618.A2" office:value-type="string">
-       <text:p text:style-name="P4932">A defined character string that defines the format of the <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file to be read if RSTYPE has been set to <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a>, and should be set to one of the following:</text:p>
+       <text:p text:style-name="P4932">A defined character string that defines the format of the <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a> file to be read if RSTYPE has been set to <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a>, and should be set to one of the following:</text:p>
        <text:list xml:id="list105918417837053" text:continue-list="list105917525948841" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19291">FORMATTED: If the file is formatted as ASCII i.e. a text file, as oppose to a binary file. <text:s/>The option can be abbreviated to just the letter F. </text:p>
@@ -4435,7 +4435,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1383">Notes:</text:p>
        <text:list xml:id="list2151941570" text:style-name="L107">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19736">OPM Flow can only restart runs from a <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, the commercial simulator&apos;s <text:a xlink:href="#__RefHeading___Toc100040_3115110868">SAVE</text:a> file format is not supported.</text:p>
+         <text:p text:style-name="P19736">OPM Flow can only restart runs from a <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, the commercial simulator&apos;s <text:a xlink:href="#__RefHeading___Toc55597_1778172979">SAVE</text:a> file format is not supported.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P17089">Note that due to the complexities of the <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file, OPM Flow may not always be able to restart from the commercial simulators <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> file.</text:p>
