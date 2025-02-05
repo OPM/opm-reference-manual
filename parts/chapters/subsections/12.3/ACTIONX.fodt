@@ -5763,7 +5763,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P18802">If a standard well is fully declared in an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block which is then activated at a later date, and later the well is modified to be a multi-segment well using the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> and <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords, then this will cause the simulator to abort with an assert failure. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P18803">The <text:a xlink:href="#__RefHeading___Toc605478_3199477706">INCLUDE</text:a> keyword is permissible in an OPM Flow <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block, but this will cause an exception in the commercial simulator.</text:p>
+         <text:p text:style-name="P18803">The <text:a xlink:href="#__RefHeading___Toc605478_3199477706">INCLUDE</text:a> keyword is permissible in an OPM Flow <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block, but this will cause an exception in the commercial simulator. Users must be cautious about the contents of the included file, as conflicts with the base DATA file (e.g., time progression settings) or keywords unsupported by ACTIONX may cause issues. Future updates to the parser may also alter or remove this functionality, so it’s advisable not to rely on it for long-term compatibility.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
