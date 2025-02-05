@@ -4322,7 +4322,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1455">Notes:</text:p>
        <text:list xml:id="list105910518622619" text:continue-list="list105912108564610" text:style-name="L63">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19053">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
+         <text:p text:style-name="P19053">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P18969">The keyword is terminated by a “/”.</text:p>
@@ -4343,7 +4343,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12508">See also the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword for the treatment of inactive grid cells and pinch-outs.</text:p>
     <text:p text:style-name="P12508"/>
     <text:h text:style-name="P18693" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715747_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715747_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below shows how to define 500 rb (or m3) as the minimum pore volume for all cells in layer 19 to be active in the model, and 750 rb (or m3) as the minimum pore volume for all cells in layer 20, by using the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword to set the portion of the grid of interest.</text:p>
+    <text:p text:style-name="_40_TextBody">The example below shows how to define 500 rb (or m3) as the minimum pore volume for all cells in layer 19 to be active in the model, and 750 rb (or m3) as the minimum pore volume for all cells in layer 20, by using the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword to set the portion of the grid of interest.</text:p>
     <text:p text:style-name="P13559">-- <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13559">-- <text:s text:c="6"/>DEFINE A BOX GRID FOR THE BOTTOM TWO LAYERS OF A 100 X 100 X 20 MODEL <text:s text:c="27"/></text:p>
     <text:p text:style-name="P13559">-- </text:p>
@@ -4362,7 +4362,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13787">ENDBOX</text:p>
     <text:p text:style-name="P16778"/>
     <text:p text:style-name="P16778"/>
-    <text:p text:style-name="_40_TextBody">Although this will work in the commercial simulators, it does not currently work in OPM Flow, that is one cannot use the <text:a xlink:href="#__RefHeading___Toc132765_2319858807">MINPVV</text:a> keyword in conjunction with the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword, as shown in the aforementioned example.</text:p>
+    <text:p text:style-name="_40_TextBody">Although this will work in the commercial simulators, it does not currently work in OPM Flow, that is one cannot use the <text:a xlink:href="#__RefHeading___Toc132765_2319858807">MINPVV</text:a> keyword in conjunction with the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword, as shown in the aforementioned example.</text:p>
     <text:p text:style-name="P15764">Instead one can use:</text:p>
     <text:p text:style-name="P15720"/>
     <text:p text:style-name="_40_Example">--</text:p>
