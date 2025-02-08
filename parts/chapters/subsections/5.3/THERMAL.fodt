@@ -5450,7 +5450,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838831411"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838831411"/></text:h>
     <text:p text:style-name="_40_TextBody">This keyword activates the thermal modeling option. There is no data required for this keyword. The energy black-oil implementation in OPM Flow is a mixture of the commercial simulators black-oil and the commercial simulators “compositional thermal” keywords, as well as some OPM Flow specific keywords.</text:p>
-    <text:p text:style-name="_40_TextBody">The temperature option (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword) and the thermal option (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options, for example the <text:a xlink:href="#__RefHeading___Toc111816_2939291539">RTEMP</text:a> keyword. <text:s/>OPM Flow’s thermal implementation is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> or compositional <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> formulations.</text:p>
+    <text:p text:style-name="_40_TextBody">The temperature option (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword) and the thermal option (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options, for example the <text:a xlink:href="#__RefHeading___Toc111816_2939291539">RTEMP</text:a> keyword. <text:s/>OPM Flow’s thermal model is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> or compositional <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> formulations.</text:p>
     <text:p text:style-name="_40_TextBody">Keywords specifically associated with both OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> and the commercial simulators <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> and <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> options are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 5.46</text:sequence-ref><text:s/>for ease of reference.</text:p>
     <table:table table:name="Table813" table:style-name="Table813">
      <table:table-column table:style-name="Table813.A"/>
@@ -5524,8 +5524,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table813.C3" office:value-type="string">
        <text:p text:style-name="P32">Activate the Temperature Modeling Option</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table813.D4" office:value-type="string">
-       <text:p text:style-name="P88">Alias for <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a></text:p>
+      <table:table-cell table:style-name="Table813.D3" office:value-type="string">
+       <text:p text:style-name="P66"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table813.E4" office:value-type="string">
        <text:p text:style-name="P66"/>
@@ -6470,11 +6470,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
               </mrow>
               <mspace width="0.5em"/>
               <msub>
-               <mi>C</mi>
+               <mi>c</mi>
                <mi>p</mi>
               </msub>
              </mrow>
-             <annotation encoding="StarMath 5.0">W_i``=`` sum from{p} to{N} left( {%rho^r}_pi right)``left( {q^r}_pi right)`C_p</annotation>
+             <annotation encoding="StarMath 5.0">W_i``=`` sum from{p} to{N} left( {%rho^r}_pi right)``left( {q^r}_pi right)`c_p</annotation>
             </semantics>
            </math>
           </draw:object><draw:image>
@@ -6581,11 +6581,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           </mrow>
           <mspace width="0.5em"/>
           <msub>
-           <mi>C</mi>
+           <mi>c</mi>
            <mi>p</mi>
           </msub>
          </mrow>
-         <annotation encoding="StarMath 5.0">left( {%rho^r}_pi right)``left( {q^r}_pi right)`C_p</annotation>
+         <annotation encoding="StarMath 5.0">left( {%rho^r}_pi right)``left( {q^r}_pi right)`c_p</annotation>
         </semantics>
        </math>
       </draw:object><draw:image>
@@ -6772,8 +6772,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P74"><draw:frame draw:style-name="fr1" draw:name="Object784" text:anchor-type="as-char" svg:width="0.455cm" svg:height="0.39cm" draw:z-index="15"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
-         <mi>C</mi>
-         <annotation encoding="StarMath 5.0">C</annotation>
+         <mi>c</mi>
+         <annotation encoding="StarMath 5.0">c</annotation>
         </semantics>
        </math>
       </draw:object><draw:image>
@@ -6785,10 +6785,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         QxoBAAAAAAEAAQBDAIwAAQAAAAAAlQABAAQAAAAAAAAAlgABAAIAAAAJAIwAAQAAAAAA
        </office:binary-data>
       </draw:image>
-     </draw:frame><text:tab/>=<text:tab/>specific heat capacity ((J(K kg))</text:p>
+     </draw:frame><text:tab/>=<text:tab/>specific heat capacity (J/(K kg))</text:p>
     <text:p text:style-name="P74"><text:tab/><text:tab/>(see the <text:a xlink:href="#__RefHeading___Toc121479_83452205">SPECHEAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section).</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P73">The current implementation makes use of the internal energy:</text:p>
+    <text:p text:style-name="P73">The current implementation makes use of the specific internal energy:</text:p>
     <table:table table:name="Table1960" table:style-name="Table1960">
      <table:table-column table:style-name="Table1960.A"/>
      <table:table-column table:style-name="Table1960.B"/>
@@ -6800,7 +6800,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
             <semantics>
              <mrow>
               <msub>
-               <mi>E</mi>
+               <mi>e</mi>
                <mi mathvariant="italic">pi</mi>
               </msub>
               <mrow>
@@ -6809,7 +6809,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                <mspace width="0.5em"/>
               </mrow>
               <msub>
-               <mi>C</mi>
+               <mi>c</mi>
                <mi>p</mi>
               </msub>
               <mrow>
@@ -6822,7 +6822,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                <mi>i</mi>
               </msub>
              </mrow>
-             <annotation encoding="StarMath 5.0">E_pi`=`C_p ` cdot`T_i</annotation>
+             <annotation encoding="StarMath 5.0">e_pi`=`c_p ` cdot`T_i</annotation>
             </semantics>
            </math>
           </draw:object><draw:image>
@@ -6865,7 +6865,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P77">derived from the enthalpy, Hpi</text:p>
+    <text:p text:style-name="P77">derived from the specific enthalpy, h<text:span text:style-name="T32">pi</text:span></text:p>
     <table:table table:name="Table1961" table:style-name="Table1961">
      <table:table-column table:style-name="Table1961.A"/>
      <table:table-column table:style-name="Table1961.B"/>
@@ -6877,7 +6877,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
             <semantics>
              <mrow>
               <msub>
-               <mi>E</mi>
+               <mi>e</mi>
                <mi mathvariant="italic">pi</mi>
               </msub>
               <mrow>
@@ -6886,12 +6886,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                <mspace width="1em"/>
               </mrow>
               <msub>
-               <mi>H</mi>
+               <mi>h</mi>
                <mi mathvariant="italic">pi</mi>
               </msub>
               <mrow>
                <mspace width="1em"/>
-               <mo stretchy="false">+</mo>
+               <mo stretchy="false">-</mo>
                <mspace width="0.5em"/>
               </mrow>
               <mfrac>
@@ -6908,7 +6908,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                </msub>
               </mfrac>
              </mrow>
-             <annotation encoding="StarMath 5.0">E_pi``=``H_pi`` +` { P_pi }over {%rho^r }_pi</annotation>
+             <annotation encoding="StarMath 5.0">e_pi``=``h_pi`` -` { P_pi }over {%rho^r }_pi</annotation>
             </semantics>
            </math>
           </draw:object><draw:image>
@@ -7081,7 +7081,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          AA==
         </office:binary-data>
        </draw:image>
-      </draw:frame>using the phase formation volume factor, Bpi, via:</text:p>
+      </draw:frame>using the phase formation volume factor, B<text:span text:style-name="T32">pi</text:span>, via:</text:p>
     <table:table table:name="Table1962" table:style-name="Table1962">
      <table:table-column table:style-name="Table1962.A"/>
      <table:table-column table:style-name="Table1962.B"/>
@@ -7237,7 +7237,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                   </msub>
                   <mspace width="0.5em"/>
                   <msub>
-                   <mi>E</mi>
+                   <mi>e</mi>
                    <mi mathvariant="italic">pi</mi>
                   </msub>
                  </mrow>
@@ -7267,7 +7267,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
                <mo fence="true" form="postfix" stretchy="true">)</mo>
               </mrow>
              </mrow>
-             <annotation encoding="StarMath 5.0">W_i``=`` sum from{p} to{N} left( {%rho^r}_pi right)``left({{q^s}_pi `E_pi } over { {B^-1}_pi ``cdot `` T_i} right)</annotation>
+             <annotation encoding="StarMath 5.0">W_i``=`` sum from{p} to{N} left( {%rho^r}_pi right)``left({{q^s}_pi `e_pi } over { {B^-1}_pi ``cdot `` T_i} right)</annotation>
             </semantics>
            </math>
           </draw:object><draw:image>

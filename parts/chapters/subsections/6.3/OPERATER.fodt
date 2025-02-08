@@ -4652,7 +4652,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881951"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881951"/></text:h>
-    <text:p text:style-name="P11870">The <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keyword is similar to the <text:a xlink:href="#__RefHeading___Toc99940_2023071304">OPERATE</text:a> keyword, except it applies the mathematical operation on specific regions, whereas, <text:a xlink:href="#__RefHeading___Toc99940_2023071304">OPERATE</text:a> applies the operations on a cell by cell basis. Here the <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keyword performs a mathematical operation on a specified property array, optionally using another property array as input to the function. The keyword allows for various mathematical functions and their associated variables to be defined and applied to the specified region data. Input constants can be integer or real valued depending on the array type; however, the arrays that can be operated on are dependent on which section the <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keyword is being applied in. </text:p>
+    <text:p text:style-name="P11870">The <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword is similar to the <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a> keyword, except it applies the mathematical operation on specific regions, whereas, <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a> applies the operations on a cell by cell basis. Here the <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword performs a mathematical operation on a specified property array, optionally using another property array as input to the function. The keyword allows for various mathematical functions and their associated variables to be defined and applied to the specified region data. Input constants can be integer or real valued depending on the array type; however, the arrays that can be operated on are dependent on which section the <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword is being applied in. </text:p>
     <table:table table:name="Table1914" table:style-name="Table1914">
      <table:table-column table:style-name="Table1914.A"/>
      <table:table-column table:style-name="Table1914.B"/>
@@ -4700,7 +4700,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1914.C3" table:number-columns-spanned="2" office:value-type="string">
        <text:p text:style-name="P3655">REGION is a positive integer representing the region for which the EQUATION should be applied. The default is to use the region number from the <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> keyword; however this can be reset to another region array via the ARRAY item on this keyword, provided the array exists at the time the keyword is declared in the input deck.</text:p>
-       <text:p text:style-name="P3339">Note also the <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> keyword must precede the use of the <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keyword.</text:p>
+       <text:p text:style-name="P3339">Note also the <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> keyword must precede the use of the <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1914.E2" office:value-type="string">
@@ -5438,7 +5438,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2248">ARRAY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1914.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P1249">The name of the array for which the REGION variable references. This can be any standard region array as declared in the REGION section (<text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a>, etc.), provided the array exists at the time the <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> keyword is invoked. In addition, the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a> and <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> may be used.</text:p>
+       <text:p text:style-name="P1249">The name of the array for which the REGION variable references. This can be any standard region array as declared in the REGION section (<text:a xlink:href="#__RefHeading___Toc77229_2752266063">FIPNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a>, etc.), provided the array exists at the time the <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword is invoked. In addition, the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a>, <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a> and <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> may be used.</text:p>
        <text:p text:style-name="P1212">Only the default value of <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a> is supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5475,7 +5475,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table1915.1">
        <table:table-cell table:style-name="Table1915.A1" table:number-columns-spanned="7" office:value-type="string">
-        <text:p text:style-name="P10789"><text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> Keyword and Variable Options by Section</text:p>
+        <text:p text:style-name="P10789"><text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> Keyword and Variable Options by Section</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
        <table:covered-table-cell/>
@@ -5648,7 +5648,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1915.9">
       <table:table-cell table:style-name="Table1915.A9" office:value-type="string">
-       <text:p text:style-name="P3616"><text:a xlink:href="#__RefHeading___Toc99847_2023071304">MULTX</text:a></text:p>
+       <text:p text:style-name="P3616"><text:a xlink:href="#__RefHeading___Toc80283_1778172979">MULTX</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1915.E16" office:value-type="string">
        <text:p text:style-name="P3299"><text:a xlink:href="#__RefHeading___Toc355043_1539708736">DIFFY</text:a></text:p>
@@ -5671,7 +5671,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1915.10">
       <table:table-cell table:style-name="Table1915.A10" office:value-type="string">
-       <text:p text:style-name="P3616"><text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a></text:p>
+       <text:p text:style-name="P3616"><text:a xlink:href="#__RefHeading___Toc80287_1778172979">MULTY</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1915.E16" office:value-type="string">
        <text:p text:style-name="P3299"><text:a xlink:href="#__RefHeading___Toc355045_1539708736">DIFFZ</text:a></text:p>
@@ -5694,7 +5694,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1915.11">
       <table:table-cell table:style-name="Table1915.A11" office:value-type="string">
-       <text:p text:style-name="P3616"><text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a></text:p>
+       <text:p text:style-name="P3616"><text:a xlink:href="#__RefHeading___Toc80291_1778172979">MULTZ</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1915.B17" office:value-type="string">
        <text:p text:style-name="P3299"><text:a xlink:href="#__RefHeading___Toc1306688_4250154414">TRANR</text:a></text:p>
@@ -6062,7 +6062,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14817">Table <text:sequence text:ref-name="refTable171" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.97</text:sequence>: <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> Keyword Applicable Arrays by Section</text:p>
+    <text:p text:style-name="P14817">Table <text:sequence text:ref-name="refTable171" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.97</text:sequence>: <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> Keyword Applicable Arrays by Section</text:p>
     <text:p text:style-name="P11870"/>
     <text:p text:style-name="P11870">Note that care should be exercised when performing operations on integer array data as all transforms are performed using floating point arithmetic operations. In addition, operations on any of the transmissibility arrays (<text:a xlink:href="#__RefHeading___Toc93085_718313858">TRANX</text:a>, <text:a xlink:href="#__RefHeading___Toc93085_718313858">TRANX</text:a>-, <text:a xlink:href="#__RefHeading___Toc93087_718313858">TRANY</text:a>, <text:a xlink:href="#__RefHeading___Toc93087_718313858">TRANY</text:a>-, <text:a xlink:href="#__RefHeading___Toc93089_718313858">TRANZ</text:a>, and <text:a xlink:href="#__RefHeading___Toc93089_718313858">TRANZ</text:a>-) may result in unintended consequences as these arrays have zero values on the boundary of the grid. In this use OPM ResInsight to verify and visually inspect the results. </text:p>
     <table:table table:name="Table1916" table:style-name="Table1916">
@@ -6071,14 +6071,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708680973264">
        <table:table-cell table:style-name="Table1916.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10200">The <text:a xlink:href="#__RefHeading___Toc261237_650382403">OPERATER</text:a> and <text:a xlink:href="#__RefHeading___Toc99940_2023071304">OPERATE</text:a> keywords allow for great flexibility in generating or modifying the simulator’s input arrays. In addition, OPM Flow also has a Python facility to manipulate and calculate data that offers even greater flexibility, but note that this feature is not compatible with the commercial simulator. </text:p>
+        <text:p text:style-name="P10200">The <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> and <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a> keywords allow for great flexibility in generating or modifying the simulator’s input arrays. In addition, OPM Flow also has a Python facility to manipulate and calculate data that offers even greater flexibility, but note that this feature is not compatible with the commercial simulator. </text:p>
         <text:p text:style-name="P10200">Finally, OPM ResInsight, the post-processing plotting software, has both Octave and Python scripting facilities that enable both data generation and visual inspection of the results. The resulting calculated arrays can then be exported from OPM ResInsight and “included” <text:s/>back into OPM Flow, thus maintaining compatibility with the commercial simulator.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P18651" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5741_3701168388111"/>E<text:span text:style-name="T1">xample</text:span><text:bookmark-end text:name="__RefHeading___Toc5741_3701168388111"/></text:h>
-    <text:p text:style-name="P12087">The first example uses the MULTP function combined with the Net-to-Gross (<text:a xlink:href="#__RefHeading___Toc33334_784232322">NTG</text:a>) array to re-scale the <text:a xlink:href="#__RefHeading___Toc99847_2023071304">MULTX</text:a>, <text:a xlink:href="#__RefHeading___Toc80287_17781729791">MULTY</text:a> and <text:a xlink:href="#__RefHeading___Toc80291_17781729791">MULTZ</text:a> arrays to reduce the transmissibility in three separate reservoirs based on the reservoir quality (<text:a xlink:href="#__RefHeading___Toc33334_784232322">NTG</text:a>). This keyword sequence should be in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
+    <text:p text:style-name="P12087">The first example uses the MULTP function combined with the Net-to-Gross (<text:a xlink:href="#__RefHeading___Toc33334_784232322">NTG</text:a>) array to re-scale the <text:a xlink:href="#__RefHeading___Toc80283_1778172979">MULTX</text:a>, <text:a xlink:href="#__RefHeading___Toc80287_1778172979">MULTY</text:a> and <text:a xlink:href="#__RefHeading___Toc80291_1778172979">MULTZ</text:a> arrays to reduce the transmissibility in three separate reservoirs based on the reservoir quality (<text:a xlink:href="#__RefHeading___Toc33334_784232322">NTG</text:a>). This keyword sequence should be in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>MATHEMATICAL OPERATIONS ON ARRAYS BY REGION</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
