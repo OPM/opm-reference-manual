@@ -4299,7 +4299,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1571">Notes:</text:p>
        <text:list xml:id="list105918555473506" text:continue-list="list105918745265061" text:style-name="L50">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc99897_2023071304">BOX</text:a> statement.</text:p>
+         <text:p text:style-name="P19966">The number of entries should correspond to the NX x NY x NZ parameters on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, unless the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword defines a sub area of the grid, in which case the total number of entries should correspond to the number of cells defined by the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> statement.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20120">The EQULNUM and <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> arrays need to be consistent, that is the all cells with the same <text:span text:style-name="T1533">PVT</text:span>NUM can only belong to one <text:span text:style-name="T1533">EQL</text:span>NUM region.</text:p>
@@ -4326,7 +4326,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table315.A1" office:value-type="string">
         <text:p text:style-name="P10272">Note</text:p>
         <text:p text:style-name="P10163">Care should be taken that cells in different <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication, since the fluid properties are associated with a cell. If for example, a rbbl or a rm3 of oil flows from <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 1 to <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 2, <text:s/>then the oil properties of that oil will change from the PVT 1 data set to the PVT data set 2. <text:s/>This will result in material balance errors, that may or may not cause numerical issues.</text:p>
-        <text:p text:style-name="P10163">To avoid this one should use the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> (or <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a>, or <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a>) array with the <text:a xlink:href="#__RefHeading___Toc99845_2023071304">MULTREGT</text:a> array to ensure that the various <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication. </text:p>
+        <text:p text:style-name="P10163">To avoid this one should use the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> (or <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a>, or <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a>) array with the <text:a xlink:href="#__RefHeading___Toc296621_1576177388">MULTREGT</text:a> array to ensure that the various <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication. </text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4341,7 +4341,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13384"><text:s text:c="9"/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>3 <text:s/>3 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1 <text:s/>1</text:p>
     <text:p text:style-name="P13384">/ <text:s text:c="7"/></text:p>
     <text:p text:style-name="P15270"/>
-    <text:p text:style-name="P16048">Alternatively the <text:a xlink:href="#__RefHeading___Toc99907_2023071304">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="P16048">Alternatively the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
     <text:p text:style-name="P14357">--</text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="6"/>ARRAY <text:s text:c="6"/>CONSTANT <text:s text:c="4"/>---------- BOX --------- <text:s text:c="16"/></text:p>
     <text:p text:style-name="P14357">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
