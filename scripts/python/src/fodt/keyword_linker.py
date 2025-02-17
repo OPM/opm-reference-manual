@@ -87,6 +87,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
         self.is_example_p = []  # Stack of boolean values: If current p tag is an example
         self.p_recursion = 0   # We can have nested p tags
         self.in_a = False
+        self.in_bookmark = False  # We should not insert links inside a bookmark
         self.in_math = False   # We should not insert links inside math tags
         self.in_binary_data = False  # We should skip binary data
         self.in_draw_frame = False  # We should not insert links in Figure captions
@@ -196,6 +197,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 self.table_caption_info = TableCaptionInfo() # Reset the info
             elif name == "text:a":
                 self.in_a = False
+            elif name == "text:bookmark-ref":
+                self.in_bookmark = False
             elif name == "text:span":
                 self.not_keyword = False  # This cannot be nested
             elif name == "math":
@@ -286,6 +289,7 @@ class FileHandler(xml.sax.handler.ContentHandler):
             if self.office_body_found:
                 if (self.in_p
                     and (not self.in_a)
+                    and (not self.in_bookmark)
                     and (not self.not_keyword)
                     and (not self.in_math)
                     and (not self.in_binary_data)
@@ -349,6 +353,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                     # in the characters() callback, since we might need to replace the URI attribute
                     # with a new URI.
                     return
+            elif name == "text:bookmark-ref":
+                self.in_bookmark = True
             elif name == "text:span":
                 if "text:style-name" in attrs.getNames():
                     style_name = attrs.getValue("text:style-name")
