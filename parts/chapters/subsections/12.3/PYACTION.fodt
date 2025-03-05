@@ -4688,6 +4688,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1863.C5" office:value-type="string">
        <text:p text:style-name="Table_20_Contents">The schedule variable is an instance of the opm.io.sched.Schedule class which has all the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> information internalized (Schedule object). For a complete documentation of the available call points of opm.io.schedule.Schedule, we refer to <text:a xlink:href="https://opm.github.io/opm-python-documentation/master/common.html#opm.io.schedule.Schedule" xlink:type="simple">https://opm.github.io/opm-python-documentation/master/common.html#opm.io.schedule.Schedule</text:a>. The most notable ones are:</text:p>
+       <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text"/></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.open_well(well_name, report_step)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.shut_well(well_name, report_step)</text:span></text:p>
        <text:p text:style-name="_40_Code"><text:span text:style-name="Source_20_Text">schedule.stop_well(well_name, report_step)</text:span></text:p>
@@ -4768,14 +4769,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>summary_state = opm_embedded.current_summary_state</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not &apos;setup_done&apos; in locals()):</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = false</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = False</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>setup_done = True</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/>if (not executed and summmary_state.well_var(&quot;OP1&quot;, &quot;WWCT&quot;) &gt; 0.80):</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>message = &quot;Well OP01 has been shut-in due to WWCT &gt; 0.80\n&quot;</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>opm_embedded.OpmLog.info(message)</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>schedule.shut_well(&quot;OP1&quot;)</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = true</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="4"/>executed = True</text:p>
     <text:p text:style-name="_40_Code"/>
     <text:p text:style-name="_40_TextBody">Note how the &apos;executed&apos; variable is used to ensure that the action is only executed once the first time the water cut is greater than 0.8.</text:p>
     <text:p text:style-name="_40_TextBody">The next example is based on the first example from the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword (<text:a xlink:type="simple" xlink:href="#12.3.6.ACTIONX – Define ACTION Conditions and Command Processing|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc152227_2992482751">ACTIONX – Define Action Conditions and Command Processing</text:bookmark-ref></text:a>). The Python script first checks if the field’s water production is greater than 30,000 stb/d, and if not returns control back to the simulator. If the field water production is greater than 30,000 stb/d then the script uses a Python variable count to keep track of the number of times the script has been executed, and then sorts the wells from high water cut to low, via the wct_list variable, and then shuts in the worst offending well. If a well is shut-in the count variable is increased by one and control is passed back to the simulator. The script is executed as maximum of ten times.</text:p>
@@ -4852,7 +4853,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="8"/># Do WELTARG and WTEST action</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/>#</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="8"/>...</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="8"/>executed = true</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="8"/>executed = True</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="0"/></text:p>
     <text:p text:style-name="_40_TextBody">Note how the current simulation time (sim_time) is evaluated from the simulation start time (schedule.start) and elapsed time (summary_state.elapsed); and how it is compared with 00:00 on 1 January 2030 using the Python datetime module.</text:p>
    </text:section>
