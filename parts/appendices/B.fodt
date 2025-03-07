@@ -14302,6 +14302,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:list-item>
           <text:p text:style-name="P1339"><text:span text:style-name="T6">Dispersion in the gas phase leads to convergence issues for the 11th SPE CSP (</text:span><text:a xlink:type="simple" xlink:href="https://spe.org/csp" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T6">https://spe.org/csp</text:span></text:a><text:span text:style-name="T6">) models Version 11B and Version 11C (and is not fully tested). Therefore dispersion in the gas phase has been temporarily removed and a warning added (</text:span><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5101" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T6">#5101</text:span></text:a><text:span text:style-name="T6">, </text:span><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-models/pull/859" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T38">#859</text:span></text:a><text:span text:style-name="T6">).</text:span></text:p>
          </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1339">The carbon dioxide storage model (<text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a>) does not currently support temperatures higher than 304 K. If the temperature is too high no warning message will be reported and an unhandled floating point exception may occur (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/4512" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4512</text:a>).</text:p>
+         </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
