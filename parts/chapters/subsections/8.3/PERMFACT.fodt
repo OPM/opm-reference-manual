@@ -4464,7 +4464,48 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            </office:binary-data>
           </draw:image>
          </draw:frame>) factor for the corresponding PERMFAC vector.</text:p>
-       <text:p text:style-name="P8968">In the simulator’s Salt Precipitation model, the maximum value of Φ is Φ0, implying a maximum value of one for POROFAC.</text:p>
+       <text:p text:style-name="P8968">In the simulator’s Salt Precipitation model, the maximum value of <draw:frame draw:style-name="fr2" draw:name="Object1" text:anchor-type="as-char" svg:width="0.279cm" svg:height="0.406cm" draw:z-index="4"><draw:object>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+           <semantics>
+            <mi>ϕ</mi>
+            <annotation encoding="StarMath 5.0">%phi</annotation>
+           </semantics>
+          </math>
+         </draw:object><draw:image>
+          <office:binary-data>VkNMTVRGAQAxAAAAAAAAAAEAGwAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAARYBAACV
+           AQAADwAAAJYAAQACAAAACQCLAAEAAgAAAP//gQABABAAAAAAAAAAAAAAABUBAACUAQAAlQAB
+           AAQAAAAAAAAAlgABAAIAAAAJAIsAAQACAAAAHwCKAAEAQgAAAAUAPAAAAAoAT3BlblN5bWJv
+           bAAAAAAAAKcBAAD//wAAAAAFAAAAAAACAP8DAAAAAAAAAAEA/wMAAAAAAAAAAAAAAIgAAQAC
+           AAAAAQCHAAEABQAAAP////8AhgABAAQAAAAAAAAAcgACABoAAAAAAAAAKAEAAAEAAADVA9wA
+           AAAAAAEAAQDVA4wAAQAAAAAAlQABAAQAAAAAAAAAlgABAAIAAAAJAIwAAQAAAAAA
+          </office:binary-data>
+         </draw:image>
+         <svg:desc>formula</svg:desc>
+        </draw:frame><text:s/>is <draw:frame draw:style-name="fr2" draw:name="Object2" text:anchor-type="as-char" svg:width="0.409cm" svg:height="0.452cm" draw:z-index="5"><draw:object>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+           <semantics>
+            <msub>
+             <mi>ϕ</mi>
+             <mn>0</mn>
+            </msub>
+            <annotation encoding="StarMath 5.0">
+%phi sub 0</annotation>
+           </semantics>
+          </math>
+         </draw:object><draw:image>
+          <office:binary-data>VkNMTVRGAQAxAAAAAAAAAAEAGwAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAZoBAADE
+           AQAAFgAAAJYAAQACAAAACQCLAAEAAgAAAP//gQABABAAAAAAAAAAAAAAAJkBAADDAQAAlQAB
+           AAQAAAAAAAAAlgABAAIAAAAJAIsAAQACAAAAHwCKAAEAQgAAAAUAPAAAAAoAT3BlblN5bWJv
+           bAAAAAAAAKcBAAD//wAAAAAFAAAAAAACAP8DAAAAAAAAAAEA/wMAAAAAAAAAAAAAAIgAAQAC
+           AAAAAQCHAAEABQAAAP////8AhgABAAQAAAAAAAAAcgACABoAAAAAAAAAKAEAAAEAAADVA9wA
+           AAAAAAEAAQDVA4wAAQAAAAAAiwABAAIAAAAfAIoAAQBIAAAABQBCAAAAEABMaWJlcmF0aW9u
+           IFNlcmlmAAAAAAAA/QAAAAAAAAAAAAUAAAAAAAAA/wMAAAAAAAAAAQD/AwAAAAAAAAAAAAAA
+           iAABAAIAAAABAIcAAQAFAAAA/////wCGAAEABAAAAAAAAAByAAIAFwAAABMBAACSAQAAAQAw
+           fwAAAAAAAQABADAAjAABAAAAAACVAAEABAAAAAAAAACWAAEAAgAAAAkAjAABAAAAAAA=
+          </office:binary-data>
+         </draw:image>
+         <svg:desc>formula</svg:desc>
+        </draw:frame>, implying a maximum value of one for POROFAC.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4628,16 +4669,16 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
        <text:p text:style-name="P1737">Notes:</text:p>
        <text:list xml:id="list3035017230" text:style-name="L89">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19907">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="P19907">The keyword is followed by NTSFUN tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20046">Each table must contain a minimum of two rows and a maximum of NPPVT rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+         <text:p text:style-name="P20046">Each table must contain a minimum of two rows and a maximum of NSSFUN rows as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20140">There must be same number of entries for each column. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20113">Each table is terminated by a single “/” <text:s/>and the keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="P20113">Each table is terminated by a single “/” <text:s/>and there is no “/” terminator for the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4650,7 +4691,30 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
     </table:table>
     <text:p text:style-name="P14802">Table <text:sequence text:ref-name="refTable313" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.97</text:sequence>: PERMFACT Keyword Description</text:p>
     <text:p text:style-name="P15592"/>
-    <text:p text:style-name="P15746">The porosity reduction is a function of the volume fraction of salt (ss) precipitated out of the vaporized water phase, that is:</text:p>
+    <text:p text:style-name="P15746">The porosity reduction is a function of the volume fraction of salt (<draw:frame draw:style-name="fr1" draw:name="Object4" text:anchor-type="as-char" svg:width="0.303cm" svg:height="0.533cm" draw:z-index="7"><draw:object>
+       <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <semantics>
+         <msub>
+          <mi>s</mi>
+          <mi>s</mi>
+         </msub>
+         <annotation encoding="StarMath 5.0">s sub s
+</annotation>
+        </semantics>
+       </math>
+      </draw:object><draw:image>
+       <office:binary-data>VkNMTVRGAQAxAAAAAAAAAAEAGwAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAS8BAAAU
+        AgAAFgAAAJYAAQACAAAACQCLAAEAAgAAAP//gQABABAAAAAAAAAAAAAAAC4BAAATAgAAlQAB
+        AAQAAAAAAAAAlgABAAIAAAAJAIsAAQACAAAAHwCKAAEASAAAAAUAQgAAABAATGliZXJhdGlv
+        biBTZXJpZgAAAAAAAKcBAAAAAAAAAAAFAAAAAAACAP8DAAAAAAAAAAEA/wMAAAAAAAAAAAAA
+        AIgAAQACAAAAAQCHAAEABQAAAP////8AhgABAAQAAAAAAAAAcgACABcAAAAVAAAAfQEAAAEA
+        c6UAAAAAAAEAAQBzAIwAAQAAAAAAiwABAAIAAAAfAIoAAQBIAAAABQBCAAAAEABMaWJlcmF0
+        aW9uIFNlcmlmAAAAAAAA/QAAAAAAAAAAAAUAAAAAAAIA/wMAAAAAAAAAAQD/AwAAAAAAAAAA
+        AAAAiAABAAIAAAABAIcAAQAFAAAA/////wCGAAEABAAAAAAAAAByAAIAFwAAAL8AAADnAQAA
+        AQBzYgAAAAAAAQABAHMAjAABAAAAAACVAAEABAAAAAAAAACWAAEAAgAAAAkAjAABAAAAAAA=
+       </office:binary-data>
+      </draw:image>
+     </draw:frame>) precipitated out of the vaporized water phase, that is:</text:p>
     <text:p text:style-name="Standard"><text:soft-page-break/></text:p>
     <table:table table:name="Table1847" table:style-name="Table1847">
      <table:table-column table:style-name="Table1847.A"/>
@@ -4956,7 +5020,7 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
         <text:p text:style-name="Footnote">P.C. Carman, &quot;Flow of gases through porous media.&quot; Butterworths, London, 1956.</text:p></text:note-body></text:note><text:s/>and Verma-Pruess<text:note text:id="ftn209" text:note-class="footnote"><text:note-citation>209</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Verma, A., &amp; Pruess, K. (1988). Thermohydrological conditions and silica redistribution near high-level nuclear wastes emplaced in satu<text:span text:style-name="T6557">r</text:span>ated geological formations. Journal of Geophysical Research,93, 1159–1173.</text:p></text:note-body></text:note> for additional functional forms that can be used to derive the tabulated data that can be entered via the <text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> keyword.</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716099_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716099_3964674244"/></text:h>
-    <text:p text:style-name="P11793">The example below defines two <text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> tables assuming NTPVT equals two and NPPVT is greater than or equal to five on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="P11793">The example below defines two <text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> tables assuming NTSFUN equals two and NSSFUN is greater than or equal to five on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P12909">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P12910">-- <text:s text:c="6"/>PERMEABILITY FACTOR REDUCTION DUE TO SALT PRECIPITATION </text:p>
     <text:p text:style-name="P12910">-- <text:s text:c="6"/>(OPM FLOW KEYWORD) <text:s text:c="69"/></text:p>
@@ -4976,10 +5040,8 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
     <text:p text:style-name="P12909"><text:s text:c="9"/>0.50 <text:s text:c="7"/>0.2500</text:p>
     <text:p text:style-name="P12909"><text:s text:c="9"/>0.75 <text:s text:c="7"/>0.5625</text:p>
     <text:p text:style-name="P12911"><text:s text:c="9"/>1.00 <text:s text:c="7"/>1.0000 <text:s text:c="18"/><text:s/>/ TABLE NO. 02</text:p>
-    <text:p text:style-name="P12911">/</text:p>
     <text:p text:style-name="P12182"/>
     <text:p text:style-name="P12182"><text:soft-page-break/>Both tables use equation <text:sequence-ref text:reference-format="text" text:ref-name="refText141">(8.72)</text:sequence-ref><text:s/>with Φc equal to zero and ɣ equal to 2.0. Note that <text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> changes the permeability in all three dimensions, that is the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a>, <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> and <text:a xlink:href="#__RefHeading___Toc45795_719036256">PERMZ</text:a> arrays are all modified.</text:p>
-    <text:p text:style-name="P11793">Finally, notice that the terminating “/” for this keyword.</text:p>
     
    </text:section>
   </office:text>
