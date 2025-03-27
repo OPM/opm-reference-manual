@@ -4464,7 +4464,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P62" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716739_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716739_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword defines the status of wells and well connections, and is used to open and shut previously defined well and well connections without having to re-specify all the data on the well control keywords: <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a>, <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>, or <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords. <text:s/>Note that the well must still be initially be fully defined using the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword defines the status of wells and well connections, and is used to open and shut previously defined wells and well connections without having to re-specify all the data on the well control keywords: <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a>, <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>, or <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords. <text:s/>Note that the well must still be initially be fully defined using the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section</text:p>
     <table:table table:name="Table668" table:style-name="Table668">
      <table:table-column table:style-name="Table668.A"/>
      <table:table-column table:style-name="Table668.B"/>
@@ -4511,7 +4511,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P33">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well and well connection status data are being defined.</text:p>
+       <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well or well connection status data are being defined.</text:p>
        <text:p text:style-name="P32">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4531,13 +4531,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P27">A character string of length four that defines the well and a well’s connections’ operational status, STATUS should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P95">OPEN: the connections are open to flow.</text:p>
+         <text:p text:style-name="P95">OPEN: the well or connections are open to flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P95">SHUT: the connections are closed to flow (shut-in).</text:p>
+         <text:p text:style-name="P95">SHUT: the well or connections are closed to flow (shut-in).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P95">AUTO: the connection are initially closed, but may be opened automatically if an economic limit is violated. <text:s/></text:p>
+         <text:p text:style-name="P95">AUTO: the well or connections are initially closed, but may be opened automatically if an economic limit is violated. <text:s/></text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4601,11 +4601,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P38">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" office:value-type="string">
-       <text:p text:style-name="P29">K1</text:p>
+       <text:p text:style-name="P29">C1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P89">An integer less than or equal to NZ that defines the UPPER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P41">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K1 refers to the first completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K1 completion.</text:p>
+       <text:p text:style-name="P89">An integer less than or equal to the total number of completions that defines the first completion in the range.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4618,11 +4617,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P38">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" office:value-type="string">
-       <text:p text:style-name="P29">K2</text:p>
+       <text:p text:style-name="P29">C2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P31">An integer less than or equal to NZ that defines the LOWER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P41">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K2 refers to the last completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K2 completion.</text:p>
+       <text:p text:style-name="P31">An integer less than or equal to the total number of completions that defines the last completion in the range.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4635,6 +4633,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="P96">When connections are defined using the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword they are assigned individual completion numbers in the order they are defined. The connections may then be lumped into completions using the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword. The range specified by C1 and C2 refers to all the completions in this range and all the connections contained within these completions.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P96">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
