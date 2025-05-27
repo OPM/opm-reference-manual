@@ -4635,7 +4635,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716747_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716747_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword defines a well to be a multi-segment well and defines the well’s segment structure. Note that the well must have been previously define by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and that the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword defines a well to be a multi-segment well and defines the well’s segment structure. Note that the well must have been previously defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and that the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
     <table:table table:name="Table749" table:style-name="Table749">
      <table:table-column table:style-name="Table749.A"/>
      <table:table-column table:style-name="Table749.B"/>
@@ -4696,10 +4696,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9474">1-2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9475">BHPREF</text:p>
+       <text:p text:style-name="P9475">TOPDEP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7394">A real value that must be entered that defines the reference depth for reporting the bottom-hole pressure for the multi-segment well. Ideally this value should be set to the nodal point of the top segment.</text:p>
+       <text:p text:style-name="P7394">A real value that defines the depth of the nodal point of the top segment. This is used as the reference depth for reporting the bottom-hole pressure for the multi-segment well.</text:p>
        <text:p text:style-name="P7516">If the keyword is entered multiple times for the same well, due to for example the well configuration changing through time, then it is only necessary to enter this data the first time the keyword is used for a well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4727,12 +4727,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9474">1-3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9475">TUBDZ</text:p>
+       <text:p text:style-name="P9475">TOPLEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3924">TUBDZ is a real positive value that defines the length of the tubing from the tubing head or wellhead at the surface to the nodal point of the top segment (BHPREF).</text:p>
-       <text:p text:style-name="P5112">Tubing pressures from BHREF up to the tubing length of TUBDZ to the surface are not calculated by the multi-segment well option as these are taken into account by the VFP tables allocated to well and entered via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
-       <text:p text:style-name="P5112">If TUBDZ is set to zero or defaulted then the tubing length is measured from the nodal point of the top segment, that is BHPREF.</text:p>
+       <text:p text:style-name="P3924">A real positive value that defines the length of the tubing from the tubing reference point (for example Measured Depth Relative to Kelly Bushing, MDRKB) to the nodal point of the top segment.</text:p>
+       <text:p text:style-name="P5112">Tubing pressures between the nodal point of the top segment and the well head are not calculated by the multi-segment well option as these are taken into account by the VFP tables allocated to the well and entered via the <text:a xlink:href="#__RefHeading___Toc121919_2556401936">VFPPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+       <text:p text:style-name="P5112">If TOPLEN is set to zero or defaulted then the tubing length is measured from the nodal point of the top segment.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4762,7 +4762,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9476">WBORVOL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3925">WBORVOL is a real positive value that defines the effective wellbore volume for the top segment, that is from the tubing head or wellhead at the surface to the nodal point of the top segment (BHPREF).</text:p>
+       <text:p text:style-name="P3925">A real positive value that defines the effective wellbore volume for the top segment, that is from the tubing head or wellhead at the surface to the nodal point of the top segment.</text:p>
        <text:p text:style-name="P5146">The default value of 1.0 x 10<text:span text:style-name="T3853">-5 </text:span><text:span text:style-name="T1533">results in minimal wellbore storage.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4775,13 +4775,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table749.C2" office:value-type="string">
-       <text:p text:style-name="P2063">ft3</text:p>
+       <text:p text:style-name="P2063">ft<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" office:value-type="string">
-       <text:p text:style-name="P2063">m3</text:p>
+       <text:p text:style-name="P2063">m<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" office:value-type="string">
-       <text:p text:style-name="P2063">cm3</text:p>
+       <text:p text:style-name="P2063">cm<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -4794,13 +4794,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9476">TUBOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3314">TUBOPT is a character string that defines the type of length and depth data entered for DEPTH1 and DEPTH2 on the second record and should be set to one of the following:</text:p>
+       <text:p text:style-name="P3314">A defined character string that specifies the type of length and depth data entered for LENGTH and DEPTH on the second record and should be set to one of the following:</text:p>
        <text:list xml:id="list105923196050065" text:continue-list="list105922750888381" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19124">INC: Incremental values, that is the length of each segment.</text:p>
+         <text:p text:style-name="P19124">INC: Incremental changes in values of length and depth for each segment.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19126">ABS: Absolute values, that is the depth of each segment.</text:p>
+         <text:p text:style-name="P19126">ABS: Absolute values of length and depth for each segment.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P5148">As there is no default value for TUBOPT one of the above options must be explicitly defined. </text:p>
@@ -4819,7 +4819,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9476">PRESOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3315">PRESOPT is a character string that defines the pressure drop calculation used for each well segment and should be set to one of the following:</text:p>
+       <text:p text:style-name="P3315">A defined character string that specifies the pressure drop calculation used for each well segment and should be set to one of the following:</text:p>
        <text:list xml:id="list105922239112857" text:continue-list="list105923196050065" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19126">HFA: Sets the pressure calculation to include the hydrostatic, friction and acceleration terms.</text:p>
@@ -4847,7 +4847,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9478">FLOWOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3316">FLOWOPT is a character string that defines the type of multi-phase calculation used for each well segment and should be set to one of the following:</text:p>
+       <text:p text:style-name="P3316">A defined character string that specifies the type of multi-phase calculation used for each well segment and should be set to one of the following:</text:p>
        <text:list xml:id="list105922762426962" text:continue-list="list105922239112857" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19127">HO: Sets the multi-phase calculation to the homogeneous model, that is all phases flow at the same velocity.</text:p>
@@ -4869,10 +4869,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9469">1-8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9468">XCORD</text:p>
+       <text:p text:style-name="P9468">TOPX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5112">A real positive values equal to or greater than zero that defines the coordinate in the x-direction of the nodal point of the top segment that is used for display purposes only.</text:p>
+       <text:p text:style-name="P5112">A real positive value equal to or greater than zero that defines the coordinate in the x-direction of the nodal point of the top segment that is used for display purposes only.</text:p>
        <text:p text:style-name="P7913">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4901,7 +4901,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9469">1-9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9468">YCORD</text:p>
+       <text:p text:style-name="P9468">TOPY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P5112">A real positive value equal to or greater than zero that defines the coordinate in the y-direction of the nodal point of the top segment that is used for display purposes only.</text:p>
@@ -4936,7 +4936,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9468">XAREATH</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7460">XAREATH is real positive value equal to or greater than zero that defines the cross sectional area of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+       <text:p text:style-name="P7460">A real positive value equal to or greater than zero that defines the cross sectional area of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
        <text:p text:style-name="P7913">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4967,7 +4967,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9476">VHEATCAP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7460">VHEATCAP is real positive value equal to or greater than zero that defines the volumetric heat capacity of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+       <text:p text:style-name="P7460">A real positive value equal to or greater than zero that defines the volumetric heat capacity of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
        <text:p text:style-name="P7914">Currently this option is not supported by OPM Flow.</text:p>
        <text:p text:style-name="P7914"/>
       </table:table-cell>
@@ -4999,7 +4999,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9476">THCON</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7517">THCON is real positive value equal to or greater than zero that defines the thermal conductivity of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+       <text:p text:style-name="P7517">A real positive value equal to or greater than zero that defines the thermal conductivity of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
        <text:p text:style-name="P7517">Currently this option is not supported by OPM Flow.</text:p>
        <text:p text:style-name="P7517"/>
       </table:table-cell>
