@@ -4969,7 +4969,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7460">A real positive value equal to or greater than zero that defines the volumetric heat capacity of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
        <text:p text:style-name="P7914">Currently this option is not supported by OPM Flow.</text:p>
-       <text:p text:style-name="P7914"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5001,7 +5000,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7517">A real positive value equal to or greater than zero that defines the thermal conductivity of the pipe wall used in thermal conductivity calculations for when the temperature calculation is activated by the <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
        <text:p text:style-name="P7517">Currently this option is not supported by OPM Flow.</text:p>
-       <text:p text:style-name="P7517"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5047,7 +5045,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7525">ISEG1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7395">A positive integer greater than or equal to two and less than or equal to MXSEGS on <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the start of a segment</text:p>
+       <text:p text:style-name="P7395">A positive integer greater than or equal to two and less than or equal to MXSEGS on <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the start of the segment range.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5063,7 +5061,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7394">ISEG2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7396">A positive integer greater than or equal to two and less than or equal to ISEG1 on this record and MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the end of a segment.</text:p>
+       <text:p text:style-name="P7396">A positive integer greater than or equal to two and less than or equal to ISEG1 on this record and MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the end of the segment range.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5097,7 +5095,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7394">ISEG3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7396">A positive integer greater than or equal to two and less than or equal to <text:s/>MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the outlet segment.</text:p>
+       <text:p text:style-name="P7396">A positive integer greater than or equal to two and less than or equal to <text:s/>MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the outlet segment for the segment at the start of the segment range (ISEG1).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5111,16 +5109,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7597">2-5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9674">DEPTH1</text:p>
+       <text:p text:style-name="P9674">LENGTH</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8212">DEPTH1 is a real positive value that:</text:p>
+       <text:p text:style-name="P8212">A real positive value that:</text:p>
        <text:list xml:id="list105922689061223" text:continue-list="list105922762426962" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19671">If TUBOPT is set to INC then DEPTH1 is the total length of the tubing for this segment.</text:p>
+         <text:p text:style-name="P19671">If TUBOPT is set to INC then LENGTH is the incremental length of the tubing for each segment in the segment range.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">If TUBOPT is set to ABS then <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> is the length of the tubing from the tubing head or wellhead at the surface to the last segment in the range.</text:p>
+         <text:p text:style-name="P16992">If TUBOPT is set to ABS then LENGTH is the length of the tubing from the tubing reference point to the last segment in the range. The length is divided equally between each segment in the segment range.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5149,16 +5147,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7938">2-6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.F1" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9674">DEPTH2</text:p>
+       <text:p text:style-name="P9674">DEPTH</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8212">DEPTH2 is a real positive value that:</text:p>
+       <text:p text:style-name="P8212">A real positive value that:</text:p>
        <text:list xml:id="list105921654038116" text:continue-list="list105922689061223" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19671">If TUBOPT is set to INC then DEPTH2 is the total incremental depth change of the tubing for this segment.</text:p>
+         <text:p text:style-name="P19671">If TUBOPT is set to INC then DEPTH is the incremental depth change of the tubing for each segment in the segment range.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">If TUBOPT is set to ABS then <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> defines the depth of the tubing at the last nodal point of this segment, in this range.</text:p>
+         <text:p text:style-name="P16992">If TUBOPT is set to ABS then <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> defines the depth of the tubing at the nodal point of the last segment in the segment range. The depths for other segments in the range are obtain by linear interpolation.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5296,13 +5294,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table749.C2" office:value-type="string">
-       <text:p text:style-name="P2063">ft3</text:p>
+       <text:p text:style-name="P2063">ft<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" office:value-type="string">
-       <text:p text:style-name="P2063">m3</text:p>
+       <text:p text:style-name="P2063">m<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" office:value-type="string">
-       <text:p text:style-name="P2063">cm3</text:p>
+       <text:p text:style-name="P2063">cm<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -5340,7 +5338,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table749.1">
       <table:table-cell table:style-name="Table749.A43" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7758">12-2</text:p>
+       <text:p text:style-name="P7758">2-12</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P9468">YCORDS</text:p>
