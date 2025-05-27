@@ -5118,7 +5118,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19671">If TUBOPT is set to INC then LENGTH is the incremental length of the tubing for each segment in the segment range.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">If TUBOPT is set to ABS then LENGTH is the length of the tubing from the tubing reference point to the last segment in the range. The length is divided equally between each segment in the segment range.</text:p>
+         <text:p text:style-name="P16992">If TUBOPT is set to ABS then LENGTH is the length of the tubing from the tubing reference point to the last segment in the range. The length between the nodal point of the last segment and the outlet segment is divided equally between each of the segments in the segment range.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5156,7 +5156,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19671">If TUBOPT is set to INC then DEPTH is the incremental depth change of the tubing for each segment in the segment range.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">If TUBOPT is set to ABS then <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> defines the depth of the tubing at the nodal point of the last segment in the segment range. The depths for other segments in the range are obtain by linear interpolation.</text:p>
+         <text:p text:style-name="P16992">If TUBOPT is set to ABS then <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a> defines the depth of the tubing at the nodal point of the last segment in the segment range. The depths for other segments in the segment range are obtained by linear interpolation.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5312,7 +5312,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9468">XCORDS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5112">A real positive values equal to or greater than zero that defines the coordinate in the x-direction of the nodal point of this segment that is used for display purposes only.</text:p>
+       <text:p text:style-name="P8212">A real positive value that:</text:p>
+       <text:list xml:id="list105921654038116" text:continue-list="list105922689061223" text:style-name="_40_NumberedListTable">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P19671">If TUBOPT is set to INC then XCORDS is the incremental change in the x-coordinate of the tubing for each segment in the segment range.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P16992">If TUBOPT is set to ABS then XCORDS defines the x-coordinate of the tubing at the nodal point of the last segment in the segment range. The x-coordinates for other segments in the segment range are obtained by linear interpolation.</text:p>
+        </text:list-item>
+       </text:list>
        <text:p text:style-name="P7913">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5344,7 +5352,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9468">YCORDS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5112">A real positive value equal to or greater than zero that defines the coordinate in the y-direction of the nodal point of this top segment that is used for display purposes only.</text:p>
+       <text:p text:style-name="P8212">A real positive value that:</text:p>
+       <text:list xml:id="list105921654038116" text:continue-list="list105922689061223" text:style-name="_40_NumberedListTable">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P19671">If TUBOPT is set to INC then YCORDS is the incremental change in the y-coordinate of the tubing for each segment in the segment range.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P16992">If TUBOPT is set to ABS then YCORDS defines the y-coordinate of the tubing at the nodal point of the last segment in the segment range. The y-coordinates for other segments in the segment range are obtained by linear interpolation.</text:p>
+        </text:list-item>
+       </text:list>
        <text:p text:style-name="P7913">Currently this option is not supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
