@@ -13065,6 +13065,706 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <text:list-item>
       <text:list>
        <text:list-item>
+        <text:h text:style-name="P1248" text:outline-level="2">Release 2025-04</text:h>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P965">The 2025-04 release consists of some new features and various improvements and bug fixes. These include the following highlights:</text:p>
+    <text:list xml:id="list4133251906" text:style-name="L1">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P1008">Highlight... </text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:list xml:id="list115022561152553" text:continue-list="list115022523426382" text:style-name="_40_Appendix_20_Heading_20_Numbering">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:h text:style-name="P1259" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc458295_1795274871 Copy 1 Copy 1 Copy 1"/>New and Deprecated Command Line Options<text:bookmark-end text:name="__RefHeading___Toc458295_1795274871 Copy 1 Copy 1 Copy 1"/></text:h>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P49">The major command line changes made for this release are summarized in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable21">Table A.1</text:sequence-ref></text:p>
+    <table:table table:name="Table14" table:style-name="Table14">
+     <table:table-column table:style-name="Table14.A"/>
+     <table:table-column table:style-name="Table14.B"/>
+     <table:table-column table:style-name="Table14.C"/>
+     <table:table-column table:style-name="Table14.D"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table14.1">
+       <table:table-cell table:style-name="Table14.A1" table:number-columns-spanned="4" office:value-type="string">
+        <text:p text:style-name="P215">OPM Flow 2025-04 New and Deprecated Command Line Options </text:p>
+       </table:table-cell>
+       <table:covered-table-cell/>
+       <table:covered-table-cell/>
+       <table:covered-table-cell/>
+      </table:table-row>
+      <table:table-row table:style-name="Table14.1">
+       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+        <text:p text:style-name="P213">No.</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+        <text:p text:style-name="P213">Variable Name</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+        <text:p text:style-name="P213">Description</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+        <text:p text:style-name="P213">Default</text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3">
+       <text:p text:style-name="P203">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--action-parsing-strictness</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added a new command line parameter that specifies the parsing strictness for <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> and <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5547" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5547</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4167" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4167</text:a>).</text:p>
+       <text:p text:style-name="P952">A defined character string. Set strictness of parsing process for ActionX and PyAction. Available options are normal (do not apply keywords that have not been tested for ActionX or PyAction) and low (try to apply all keywords, beware: the simulation outcome might be incorrect).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">&quot;normal&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A3&gt;+1" office:value-type="float" office:value="2">
+       <text:p text:style-name="P212">2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--check-group-constraints-inner-well-iterations</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A boolean value. Allow checking of group constraints during inner well iterations.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">true</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A4&gt;+1" office:value-type="float" office:value="3">
+       <text:p text:style-name="P212">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--convergence-monitoring</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A new convergence monitoring feature (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5590" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5590</text:a>) has been introduced to improve the robustness and efficiency of the simulator based on Moyner et al., 2024 (https://doi.org/10.3997/2214-4609.202437057).</text:p>
+       <text:p text:style-name="P952">A boolean value. Enable convergence monitoring.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">false</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A5&gt;+1" office:value-type="float" office:value="4">
+       <text:p text:style-name="P207">4</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--convergence-monitoring-cut-off</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">An integer value. Cut off limit for convergence monitoring.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">6</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A6&gt;+1" office:value-type="float" office:value="5">
+       <text:p text:style-name="P203">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--convergence-monitoring-decay-factor</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Decay factor for convergence monitoring.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">0.75</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A7&gt;+1" office:value-type="float" office:value="6">
+       <text:p text:style-name="P203">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--enable-drift-compensation</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Linear solver default parameters have been updated to improve accuracy and performance including: material balance tolerance reduced to 1.0e-7, local well solve control switching is turned on, use implicit IPR is turned on, and enable drift compensation is turned off (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5157" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5157</text:a>).</text:p>
+       <text:p text:style-name="P952">A boolean value. Enable partial compensation of systematic mass losses via the source term of the next time step.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="P950">false</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A8&gt;+1" office:value-type="float" office:value="7">
+       <text:p text:style-name="P209">7</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--imbalance-tol</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Tolerable imbalance of the load balancing.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">1.1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A9&gt;+1" office:value-type="float" office:value="8">
+       <text:p text:style-name="P209">8</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--inj-mult-damp-mult</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added damping to the injectivity multipliers defined by the <text:a xlink:href="#__RefHeading___Toc121402_332691817">WINJMULT</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5631" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5631</text:a>).</text:p>
+       <text:p text:style-name="P952">A real value. Injection multiplier dampening factor (dampening multiplied by this each time oscillation is detected).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">0.9</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A10&gt;+1" office:value-type="float" office:value="9">
+       <text:p text:style-name="P209">9</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--inj-mult-min-damp-factor</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Minimum injection multiplier dampening factor (maximum dampening level).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">0.05</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A11&gt;+1" office:value-type="float" office:value="10">
+       <text:p text:style-name="P209">10</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--inj-mult-osc-threshold</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Injection multiplier oscillation threshold (used for multiplier dampening).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">0.1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A12&gt;+1" office:value-type="float" office:value="11">
+       <text:p text:style-name="P209">11</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--input-skip-mode</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added a command line argument to control the way OPM Flow treats <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a> and <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a> keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5329</text:a>). By default OPM Flow behaves like the commercial black-oil simulator.</text:p>
+       <text:p text:style-name="P952">A defined character string. Set compatibility mode for the <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>/<text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a> keywords. Options are: 100 (skip <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>..ENDSKIP, keep <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a>..ENDSKIP), 300 (skip <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a>..ENDSKIP, keep <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>..ENDSKIP) or all (skip both <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>..ENDSKIP and <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a>..ENDSKIP).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">&quot;100&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A13&gt;+1" office:value-type="float" office:value="12">
+       <text:p text:style-name="P212">12</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--linear-solver</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A defined character string. Configuration of solver. Valid options are: cprw (default), ilu0, dilu, cpr (an alias for cprw), cpr_quasiimpes, cpr_trueimpes, cpr_trueimpesanalytic, amg or hybrid (experimental). Alternatively, you can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos;.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="P950">&quot;cprw&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A14&gt;+1" office:value-type="float" office:value="13">
+       <text:p text:style-name="P209">13</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--local-well-solve-control-switching</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A boolean value. Allow control switching during local well solutions.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="P950">true</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A15&gt;+1" office:value-type="float" office:value="14">
+       <text:p text:style-name="P209">14</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--metis-params</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A character string. Configuration of Metis partitioner. You can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos; See http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdffor available METIS options.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">&quot;default&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A16&gt;+1" office:value-type="float" office:value="15">
+       <text:p text:style-name="P209">15</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--min-strict-cnv-iter</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">An integer value. Minimum number of Newton iterations before relaxed tolerances can be used for the CNV convergence criterion.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="P950">-1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A17&gt;+1" office:value-type="float" office:value="16">
+       <text:p text:style-name="P951">16</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--nldd-local-linear-solver</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added the option to specify the linear solver for subdomains when using the NLDD nonlinear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5553" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5553</text:a>). Previously, the simulator was hardcoded to use the ILU0 solver with the default maximum number of iterations and default reduction tolerance. </text:p>
+       <text:p text:style-name="P952">A defined character string. Configuration of NLDD local linear solver. Valid options are: ilu0 (default), dilu, cpr_quasiimpes and amg. Alternatively, you can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos;.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">&quot;ilu0&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A18&gt;+1" office:value-type="float" office:value="17">
+       <text:p text:style-name="P951">17</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--nldd-local-linear-solver-max-iter</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">An integer value. The maximum number of iterations of the NLDD local linear solver.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">200</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A19&gt;+1" office:value-type="float" office:value="18">
+       <text:p text:style-name="P212">18</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--nldd-local-linear-solver-reduction</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. The minimum reduction of the residual which the NLDD local linear solver must achieve.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">0.01</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A20&gt;+1" office:value-type="float" office:value="19">
+       <text:p text:style-name="P212">19</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--partition-method</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added support for using METIS in addition to Zoltan to partition corner point grids (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#725</text:a>). </text:p>
+       <text:p text:style-name="P952">An integer value. Choose partitioning strategy: 0=simple, 1=Zoltan, 2=METIS.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A21&gt;+1" office:value-type="float" office:value="20">
+       <text:p text:style-name="P212">20</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--tolerance-cnv-energy</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Added separate energy convergence tolerance and energy balance tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5321" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5321</text:a>). Previously the tolerances for mass were used. </text:p>
+       <text:p text:style-name="P952">A real value. Local energy convergence tolerance (Maximum of local energy errors).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">0.01</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A22&gt;+1" office:value-type="float" office:value="21">
+       <text:p text:style-name="P212">21</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--tolerance-cnv-energy-relaxed</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Relaxed local energy convergence tolerance that applies for iterations after the iterations with the strict tolerance.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">1.0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A23&gt;+1" office:value-type="float" office:value="22">
+       <text:p text:style-name="P212">22</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--tolerance-energy-balance</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Tolerated energy balance error relative to (scaled) total energy present.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">1e-07</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A24&gt;+1" office:value-type="float" office:value="23">
+       <text:p text:style-name="P212">23</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--tolerance-energy-balance-relaxed</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value. Relaxed tolerated energy balance error that applies for iterations after the iterations with the strict tolerance.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="P950">1e-06</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A25&gt;+1" office:value-type="float" office:value="24">
+       <text:p text:style-name="P212">24</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--tolerance-mb</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A real value.  Tolerated mass balance error relative to total mass present.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="P950">1e-07</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A26&gt;+1" office:value-type="float" office:value="25">
+       <text:p text:style-name="P212">25</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--use-implicit-ipr</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">A boolean value. Compute implict IPR for stability checks and stable solution search.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="P950">true</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A27&gt;+1" office:value-type="float" office:value="26">
+       <text:p text:style-name="P212">26</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P901">--print-properties</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P952">Support for this command line option has been removed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5514" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5514</text:a>). </text:p>
+       <text:p text:style-name="P952">An integer value. Print the values of the compile time properties at the start of the simulation.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D22" office:value-type="string">
+       <text:p text:style-name="P950">2</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A28&gt;+1" office:value-type="float" office:value="27">
+       <text:p text:style-name="P212">27</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="P313">--zoltan-imbalance-tol</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="P953">A real value. Tolerable imbalance of the loadbalancing provided by Zoltan. This command line option has been deprecated; --imbalance-tol should be used instead.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D22" office:value-type="string">
+       <text:p text:style-name="P899">1.1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.3">
+      <table:table-cell table:style-name="Table14.A28" table:number-columns-spanned="4" office:value-type="string">
+       <text:p text:style-name="P681">Notes:</text:p>
+       <text:list xml:id="list1222433614" text:style-name="_40_NumberList">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P982">Cells colored in green in the “No.” column indicate a new command line option or a change to an existing option for this release. Cells colored green in the &quot;Default&quot; column indicate that the default value for an existing option has been changed.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P982">Cells colored in orange in the “No.” column indicate the command line option is available but is now &quot;hidden&quot; from the main help listing, --help. These options can be listed using the --help-all command line option, that lists all the command line options included in the release, including experimental, obsolete, hidden and deprecated options. </text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P982">Cells colored in red in the “No.” column indicate a deprecated command line option for this release.</text:p>
+        </text:list-item>
+       </text:list>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+    </table:table>
+    <text:p text:style-name="P967">Table <text:sequence text:ref-name="refTable21" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">A.1</text:sequence>: OPM Flow 2025-04 New and Deprecated Command Line Options </text:p>
+    <text:p text:style-name="P965"/>
+    <text:list xml:id="list115021507253529" text:continue-list="list115022561152553" text:style-name="_40_Appendix_20_Heading_20_Numbering">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:h text:style-name="P1259" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc438876_2254090870 Copy 1 Copy 1 Copy 1"/>New Features<text:bookmark-end text:name="__RefHeading___Toc438876_2254090870 Copy 1 Copy 1 Copy 1"/></text:h>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P965">In addition to the changes to the command line options the following new features have been added to the simulator:</text:p>
+    <text:list xml:id="list115021101243246" text:continue-list="list1222433614" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="P1298">New features... </text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:list xml:id="list115021331258648" text:continue-list="list115021507253529" text:style-name="_40_Appendix_20_Heading_20_Numbering">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:h text:style-name="P1264" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc438876_2254090870 Copy 1 Copy 2 Copy 1"/>Improvements<text:bookmark-end text:name="__RefHeading___Toc438876_2254090870 Copy 1 Copy 2 Copy 1"/></text:h>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P752">Improvements to simulator in this release include the folllowing:</text:p>
+    <text:list xml:id="list115021364859964" text:continue-list="list115021101243246" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="P1298">Improvements... </text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:list xml:id="list115022636915306" text:continue-list="list115021331258648" text:style-name="_40_Appendix_20_Heading_20_Numbering">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:h text:style-name="P1264" text:outline-level="3">Bug Fixes</text:h>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P170">The following bug fixes and improvements have been incorporated into this release:</text:p>
+    <text:list xml:id="list115021793372860" text:continue-list="list115021364859964" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="P1298">Bug fixes... </text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:list xml:id="list115022446928540" text:continue-list="list115022636915306" text:style-name="_40_Appendix_20_Heading_20_Numbering">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:h text:style-name="P1265" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc438876_2254090870 Copy 1 Copy 3 Copy 1"/>Known Issues<text:bookmark-end text:name="__RefHeading___Toc438876_2254090870 Copy 1 Copy 3 Copy 1"/></text:h>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P965">Known issues in this release of the simulator include:</text:p>
+    <text:list text:continue-list="list115021793372860" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="P1010">There is an error with the RSM header for summary vectors whose NUMS entry in the SMSPEC file is derived from more than a single number source (e.g., single region or segment ID). This applies to all block vectors (BGPV, BOPV, BWPV, etc.), connection level quantities (COPT, etc.), and inter-region flows such as ROFT etc (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/3078" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3078</text:a>). The work around is to plot the data in OPM ResInsight and right-click on the plot to view and copy the data. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1010">As per previous releases of the radial model, the <text:a xlink:href="#__RefHeading___Toc45759_719036256">COORDSYS</text:a> keyword item three must be set to COMP to complete the circle, this has not been implemented in this release. Also there appears to be a bug for full radial models when a well goes on BHP control that causes the well not to respect <text:soft-page-break/>the BHP constraint, this eventually causes the well to die prematurely. See <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/2640" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2640</text:a> for a discussion on the topic. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1010"><text:span text:style-name="Source_20_Text">As in previous releases there are some issues with the <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a> and <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keywords associated with the input parsing; for various reasons a few of the fields require special case treatment in the grid processing, including (at least) <text:a xlink:href="#__RefHeading___Toc80291_1778172979">MULTZ</text:a>, <text:a xlink:href="#__RefHeading___Toc96547_718313858">PORV</text:a> and <text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a>, and for those </text:span><text:span text:style-name="Source_20_Text">keywords the <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a>/<text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword doe not work. The work around is to use the <text:a xlink:href="#__RefHeading___Toc296609_1576177388">MULTIPLY</text:a> keyword instead.</text:span></text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1010"><text:span text:style-name="Source_20_Text">For the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> ASSIGN operator after the terminating “/” normally any comments can be entered; however, if there is “/” within the comment field, as per:</text:span></text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P240"><text:span text:style-name="Source_20_Text"><text:span text:style-name="T62">ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ <text:s text:c="3"/>Condensate Yield (63.5/56.7)/(1.0 – 0.065</text:span></text:span><text:span text:style-name="Source_20_Text">)</text:span></text:p>
+    <text:p text:style-name="P968"><text:span text:style-name="Source_20_Text"/></text:p>
+    <text:p text:style-name="P525"><text:span text:style-name="Source_20_Text">then the simulator will abort. The work around is to manually place the comment characters “--” after the ASSIGN terminating “/”, like so:</text:span></text:p>
+    <text:p text:style-name="P240"><text:span text:style-name="Source_20_Text"><text:span text:style-name="T62">ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ -- Condensate Yield (63.5/56.7)/(1.0 – 0.06)</text:span></text:span></text:p>
+    <text:p text:style-name="P968"><text:span text:style-name="Source_20_Text"/></text:p>
+    <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P1010"><text:span text:style-name="Source_20_Text">At the moment, one cannot initialize tracers using the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword. Instead use the array format, that is the keyword followed by the required number of values, or the <text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section to set the initial tracer concentrations as a function of depth.</text:span></text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1010"><text:span text:style-name="Source_20_Text">Currently, gas tracers cannot be used if the dissolved gas phase, as per the <text:a xlink:href="#__RefHeading___Toc39767_2267116897">DISGAS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, is active in the model. </text:span></text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1010">The summary vector RTIPTHEA, that defines the energy in-place between the initial and the current time for regions, is not supported unlike the FTIPTHEA and BTIPTHEA vectors. Secondly, the error message:</text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <table:table table:name="Table15" table:style-name="Table15">
+     <table:table-column table:style-name="Table15.A"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table15.1">
+       <table:table-cell table:style-name="Table15.A1" office:value-type="string">
+        <text:p text:style-name="P781">Warning: Problem with summary keyword RTIPTHEA</text:p>
+        <text:p text:style-name="P781">In RSM-THERMAL.data line 492</text:p>
+        <text:p text:style-name="P781">FIP region FIPHEA not defined in REGIONS section - RTIPTHEA ignored </text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+    </table:table>
+    <text:p text:style-name="P762">is incorrect, as the message indicates that it is being treated like a named region, as per the <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> <text:s/>keyword, when it is actually a <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vector (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/3870" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3870</text:a>). </text:p>
+    <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P1070">If there are cells that are very distorted, which can occur near fault planes, then the simulator may abort because it cannot calculate the pore volume of such cells. The work around is to re-generate the grid in the static model, taking care that the cells around the fault planes are more or less orthogonal (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2992" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2992</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/3770" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3770</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1070">Currently the <text:a xlink:href="#__RefHeading___Toc155507_332691817">OPERATER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40641_784232322">EDIT</text:a> section does not work with the <text:a xlink:href="#__RefHeading___Toc58139_3701168388">DEPTH</text:a>, <text:a xlink:href="#__RefHeading___Toc93085_718313858">TRANX</text:a>, <text:a xlink:href="#__RefHeading___Toc93087_718313858">TRANY</text:a> and <text:a xlink:href="#__RefHeading___Toc93089_718313858">TRANZ</text:a> property arrays (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2994" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2994</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-tests/pull/748" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#748</text:a>).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1070">If a standard well is fully declared in an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block which is then activated at a later date, and later the well is modified to be a multi-segment well using the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> and <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords, then this will cause the simulator to abort with an assert failure. The solution to this issue is to not use this type of work flow in declaring wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2891" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2891</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/2895" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2895</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1070">Although the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> <text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a> command works as expected, it does not write out the requested RSM file at the end of the run. However, the other <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> and <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> files are written out (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2877" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2877</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1070">Although the <text:a xlink:href="#__RefHeading___Toc188037_2026549522">GCONSUMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section is fully implemented as documented, it is not possible to verify the output as the associated <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vectors are not written out, that is the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> sales gas vectors FGSR, FGST, GGSR and GGST, and fuel vectors FGCR, FGCT, GGCR, and GGCT have not been implemented (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2679" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2679</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1070">There are small differences in the behavior of the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section between OPM Flow and the commercial simulator that remain unresolved (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/3745" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3745</text:a>).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1302"><text:soft-page-break/><text:span text:style-name="T56">There is a unit handling issue associated with <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a> keyword. If the <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a>(X) parameter has units, as for example <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a>, then the conversion is always done in SI units, despite the input deck declaring the deck to be fields units, as per <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note that OPM Flow performs all of its calculations internally in SI and performs unit handling only when inputting the *.DATA file and when outputting result files. Thanks to </text:span><text:a xlink:type="simple" xlink:href="https://github.com/lrijkels" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">lrijkels</text:a><text:span text:style-name="T56"> for reporting the issue. See </text:span><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/4597" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4597</text:a><text:span text:style-name="T56"> for details. </text:span></text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1302">There is an issue associated with restarting from a restart file with the solution gas (Rs) maximum rate of increase, as defined by the <text:a xlink:href="#__RefHeading___Toc117623_2179381650">DRSDT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a>, that has been set to zero. This is because, the simulator does not save/restore this setting in simulator&apos;s restart files, which means that simulator misses the essential value zero upon restarting the case. As a work-around one can use the option <text:span text:style-name="Source_20_Text"><text:span text:style-name="T50">--sched-restart=true</text:span></text:span><text:span text:style-name="Source_20_Text">,</text:span> when running the restart case. This will initialize the restarted simulation based on information from the complete <text:span text:style-name="Source_20_Text"><text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a></text:span> section, instead of just the parts that we&apos;re going to simulate and the rest from the restart file. Thanks to <text:a xlink:type="simple" xlink:href="https://github.com/goncalvesmachadoc" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">goncalvesmachadoc</text:a> for reporting the issue. See <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/4272" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4272</text:a> for details.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1333">O<text:span text:style-name="T6">PM cannot be built with dune-fem version 2.9 or later </text:span><text:span text:style-name="T37">(</text:span><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/4934" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T37">#4934</text:span></text:a><text:span text:style-name="T37">)</text:span><text:span text:style-name="T6">. Please use a previous version.</text:span></text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1335">The simulator<text:span text:style-name="T6"> uses a</text:span>n irregular<text:span text:style-name="T6"> corner-point grid</text:span> geometry with adjusted pore volumes<text:span text:style-name="T6"> to represent radial </text:span>grids<text:span text:style-name="T6"> so it </text:span>i<text:span text:style-name="T6">s not possible to create a full ring (360 degree disk) with only one cell </text:span>in the theta direction (NY=1)<text:span text:style-name="T6">. The work around is to model a slice (say </text:span><text:a xlink:href="#__RefHeading___Toc120096_2066951158">DTHETA</text:a>=<text:span text:style-name="T6">60 degrees). </text:span>Note that as the angle increases larger pore volume adjustments are required (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/4755" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4755</text:a>).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1337"><text:span text:style-name="T6">In some cases with the network option the simulator can </text:span>wrongly <text:span text:style-name="T6">report that a well has no THP constraints, </text:span>for example</text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <table:table table:name="Table21" table:style-name="Table21">
+     <table:table-column table:style-name="Table21.A"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table21.1">
+       <table:table-cell table:style-name="Table21.A1" office:value-type="string">
+        <text:p text:style-name="P781">GLIFT WTEST: Well S-3H does not have THP constraints </text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+    </table:table>
+    <text:p text:style-name="P762">when THP constraints have been defined (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/4887" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4887</text:a>).</text:p>
+    <text:list xml:id="list115022134904392" text:continue-numbering="true" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P1339"><text:span text:style-name="T6">Dispersion in the gas phase leads to convergence issues for the 11th SPE CSP (</text:span><text:a xlink:type="simple" xlink:href="https://spe.org/csp" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T6">https://spe.org/csp</text:span></text:a><text:span text:style-name="T6">) models Version 11B and Version 11C (and is not fully tested). Therefore dispersion in the gas phase has been temporarily removed and a warning added (</text:span><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5101" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T6">#5101</text:span></text:a><text:span text:style-name="T6">, </text:span><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-models/pull/859" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T38">#859</text:span></text:a><text:span text:style-name="T6">).</text:span></text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <text:p text:style-name="P970"/>
+    <text:p text:style-name="P965"/>
+    <text:h text:style-name="P1249" text:outline-level="2"/>
+    <text:list xml:id="list115022523426382" text:continue-numbering="true" text:style-name="_40_Appendix_20_Heading_20_Numbering">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
         <text:h text:style-name="P1248" text:outline-level="2">Release 2024-10</text:h>
        </text:list-item>
       </text:list>
