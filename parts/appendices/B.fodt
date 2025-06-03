@@ -13133,14 +13133,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P203">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--action-parsing-strictness</text:p>
+       <text:p text:style-name="P901">--add-corners</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Added a new command line parameter that specifies the parsing strictness for <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> and <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5547" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5547</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4167" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4167</text:a>).</text:p>
-       <text:p text:style-name="P952">A defined character string. Set strictness of parsing process for ActionX and PyAction. Available options are normal (do not apply keywords that have not been tested for ActionX or PyAction) and low (try to apply all keywords, beware: the simulation outcome might be incorrect).</text:p>
+       <text:p text:style-name="P952">A boolean value. Add corners to partition.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">&quot;normal&quot;</text:p>
+       <text:p text:style-name="P950">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13148,10 +13147,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--check-group-constraints-inner-well-iterations</text:p>
+       <text:p text:style-name="P901">--allow-splitting-inactive-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Allow checking of group constraints during inner well iterations.</text:p>
+       <text:p text:style-name="P952">A boolean value. Allow inactive (never non-shut) wells to be split across multiple domains.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="P950">true</text:p>
@@ -13162,14 +13161,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--convergence-monitoring</text:p>
+       <text:p text:style-name="P901">--bda-device-id</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A new convergence monitoring feature (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5590" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5590</text:a>) has been introduced to improve the robustness and efficiency of the simulator based on Moyner et al., 2024 (https://doi.org/10.3997/2214-4609.202437057).</text:p>
-       <text:p text:style-name="P952">A boolean value. Enable convergence monitoring.</text:p>
+       <text:p text:style-name="P952">Renamed as --gpu-device-id.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">false</text:p>
+       <text:p text:style-name="P950">0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13177,13 +13175,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P207">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--convergence-monitoring-cut-off</text:p>
+       <text:p text:style-name="P901">--check-satfunc-consistency</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Cut off limit for convergence monitoring.</text:p>
+       <text:p text:style-name="P952">An boolean value. Whether or not to check saturation function consistency requirements.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">6</text:p>
+       <text:p text:style-name="P950">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13191,13 +13189,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P203">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--convergence-monitoring-decay-factor</text:p>
+       <text:p text:style-name="P901">---gpu-device-id</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Decay factor for convergence monitoring.</text:p>
+       <text:p text:style-name="P952">An integet value. Choose device ID for cusparseSolver or openclSolver, use 'nvidia-smi' or 'clinfo' to determine valid IDs.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.75</text:p>
+       <text:p text:style-name="P950">0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13205,14 +13203,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P203">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--enable-drift-compensation</text:p>
+       <text:p text:style-name="P901">--local-domains-partition-well-neighbor-levels</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Linear solver default parameters have been updated to improve accuracy and performance including: material balance tolerance reduced to 1.0e-7, local well solve control switching is turned on, use implicit IPR is turned on, and enable drift compensation is turned off (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5157" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5157</text:a>).</text:p>
-       <text:p text:style-name="P952">A boolean value. Enable partial compensation of systematic mass losses via the source term of the next time step.</text:p>
+       <text:p text:style-name="P952">An integer value. Number of neighbor levels around wells to include in the same domain during NLDD partitioning. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">false</text:p>
+       <text:p text:style-name="P950">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13220,13 +13217,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--imbalance-tol</text:p>
+       <text:p text:style-name="P901">--maximum-number-of-group-switches</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Tolerable imbalance of the load balancing.</text:p>
+       <text:p text:style-name="P952">An integer value. Maximum number of times a group can switch to the same control.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1.1</text:p>
+       <text:p text:style-name="P950">3</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13234,14 +13231,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--inj-mult-damp-mult</text:p>
+       <text:p text:style-name="P901">--network-max-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Added damping to the injectivity multipliers defined by the <text:a xlink:href="#__RefHeading___Toc121402_332691817">WINJMULT</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5631" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5631</text:a>).</text:p>
-       <text:p text:style-name="P952">A real value. Injection multiplier dampening factor (dampening multiplied by this each time oscillation is detected).</text:p>
+       <text:p text:style-name="P952">Replaced by --network-max-outer-iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.9</text:p>
+       <text:p text:style-name="P950">10</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13249,13 +13245,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--inj-mult-min-damp-factor</text:p>
+       <text:p text:style-name="P901">--network-max-outer-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Minimum injection multiplier dampening factor (maximum dampening level).</text:p>
+       <text:p text:style-name="P952">An integer value. Maximum outer number of iterations in the network solver before giving up.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.05</text:p>
+       <text:p text:style-name="P950">10</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13263,13 +13259,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">10</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--inj-mult-osc-threshold</text:p>
+       <text:p text:style-name="P901">--network-max-pressure-update-in-bars</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Injection multiplier oscillation threshold (used for multiplier dampening).</text:p>
+       <text:p text:style-name="P952">A real value. Maximum pressure update in the inner network pressure update iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.1</text:p>
+       <text:p text:style-name="P950">5</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13277,14 +13273,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--input-skip-mode</text:p>
+       <text:p text:style-name="P901">--network-max-strict-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Added a command line argument to control the way OPM Flow treats <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a> and <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a> keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5329</text:a>). By default OPM Flow behaves like the commercial black-oil simulator.</text:p>
-       <text:p text:style-name="P952">A defined character string. Set compatibility mode for the <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>/<text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a> keywords. Options are: 100 (skip <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>..ENDSKIP, keep <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a>..ENDSKIP), 300 (skip <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a>..ENDSKIP, keep <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>..ENDSKIP) or all (skip both <text:a xlink:href="#__RefHeading___Toc65046_1640804870">SKIP100</text:a>..ENDSKIP and <text:a xlink:href="#__RefHeading___Toc980121_1781444514">SKIP300</text:a>..ENDSKIP).</text:p>
+       <text:p text:style-name="P952">Replaced by --network-max-strict-outer-iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">&quot;100&quot;</text:p>
+       <text:p text:style-name="P950">100</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13292,13 +13287,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">12</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--linear-solver</text:p>
+       <text:p text:style-name="P901">--network-max-strict-outer-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A defined character string. Configuration of solver. Valid options are: cprw (default), ilu0, dilu, cpr (an alias for cprw), cpr_quasiimpes, cpr_trueimpes, cpr_trueimpesanalytic, amg or hybrid (experimental). Alternatively, you can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos;.</text:p>
+       <text:p text:style-name="P952">An integer value. Maximum outer iterations in network solver before relaxing tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">&quot;cprw&quot;</text:p>
+       <text:p text:style-name="P950">10</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13306,13 +13301,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">13</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--local-well-solve-control-switching</text:p>
+       <text:p text:style-name="P901">--network-max-sub-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Allow control switching during local well solutions.</text:p>
+       <text:p text:style-name="P952">An integer value. Maximum number of sub-iterations to update network pressures (within a single well/group control update).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">true</text:p>
+       <text:p text:style-name="P950">20</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13320,13 +13315,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--metis-params</text:p>
+       <text:p text:style-name="P901">--network-pressure-update-damping-factor</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A character string. Configuration of Metis partitioner. You can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos; See http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdffor available METIS options.</text:p>
+       <text:p text:style-name="P952">A real value. Damping factor in the inner network pressure update iterations.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">&quot;default&quot;</text:p>
+       <text:p text:style-name="P950">0.1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13334,13 +13329,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P209">15</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--min-strict-cnv-iter</text:p>
+       <text:p text:style-name="P901">--num-overlap</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Minimum number of Newton iterations before relaxed tolerances can be used for the CNV convergence criterion.</text:p>
+       <text:p text:style-name="P952">An integer value. Numbers of layers overlap in parallel partition.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">-1</text:p>
+       <text:p text:style-name="P950">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13348,14 +13343,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P951">16</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--nldd-local-linear-solver</text:p>
+       <text:p text:style-name="P901">--num-satfunc-consistency-sample-points</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Added the option to specify the linear solver for subdomains when using the NLDD nonlinear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5553" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5553</text:a>). Previously, the simulator was hardcoded to use the ILU0 solver with the default maximum number of iterations and default reduction tolerance. </text:p>
-       <text:p text:style-name="P952">A defined character string. Configuration of NLDD local linear solver. Valid options are: ilu0 (default), dilu, cpr_quasiimpes and amg. Alternatively, you can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos;.</text:p>
+       <text:p text:style-name="P952">Maximum number of reported failures for each individual saturation function consistency check.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">&quot;ilu0&quot;</text:p>
+       <text:p text:style-name="P950">5</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13363,13 +13357,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P951">17</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--nldd-local-linear-solver-max-iter</text:p>
+       <text:p text:style-name="P901">--nupcol-group-rate-tolerance</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. The maximum number of iterations of the NLDD local linear solver.</text:p>
+       <text:p text:style-name="P952">A real value. Tolerance for acceptable changes in VREP/RAIN group rates.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">200</text:p>
+       <text:p text:style-name="P950">0.001</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13377,13 +13371,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">18</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--nldd-local-linear-solver-reduction</text:p>
+       <text:p text:style-name="P901">--partition-method</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. The minimum reduction of the residual which the NLDD local linear solver must achieve.</text:p>
+       <text:p text:style-name="P952">An integer value. Choose partitioning strategy: 0=simple, 1=Zoltan, 2=METIS, 3=Zoltan with all cells of well represented by one vertex.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.01</text:p>
+       <text:p text:style-name="P950">3</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13391,14 +13385,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">19</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--partition-method</text:p>
+       <text:p text:style-name="P901">--pre-solve-network</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Added support for using METIS in addition to Zoltan to partition corner point grids (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#725</text:a>). </text:p>
-       <text:p text:style-name="P952">An integer value. Choose partitioning strategy: 0=simple, 1=Zoltan, 2=METIS.</text:p>
+       <text:p text:style-name="P952">A boolean value. Pre solve and iterate the network model at start-up.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1</text:p>
+       <text:p text:style-name="P950">true</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13406,14 +13399,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">20</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--tolerance-cnv-energy</text:p>
+       <text:p text:style-name="P901">--slave</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Added separate energy convergence tolerance and energy balance tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5321" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5321</text:a>). Previously the tolerances for mass were used. </text:p>
-       <text:p text:style-name="P952">A real value. Local energy convergence tolerance (Maximum of local energy errors).</text:p>
+       <text:p text:style-name="P952">A boolean value. Specify if the simulation is a slave simulation in a master-slave simulation.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.01</text:p>
+       <text:p text:style-name="P950">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13421,13 +13413,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">21</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--tolerance-cnv-energy-relaxed</text:p>
+       <text:p text:style-name="P901">--threads-per-process</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Relaxed local energy convergence tolerance that applies for iterations after the iterations with the strict tolerance.</text:p>
+       <text:p text:style-name="P952">An integer value. The maximum number of threads to be instantiated per process ('-1' means 'automatic').</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1.0</text:p>
+       <text:p text:style-name="P950">2</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13435,13 +13427,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">22</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--tolerance-energy-balance</text:p>
+       <text:p text:style-name="P901">--time-step-control-safety-factor</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Tolerated energy balance error relative to (scaled) total energy present.</text:p>
+       <text:p text:style-name="P952">A real value. Value to be multiplied with the time step control tolerance to ensure that the target relative change is lower than the tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1e-07</text:p>
+       <text:p text:style-name="P950">0.8</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13449,70 +13441,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P212">23</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--tolerance-energy-balance-relaxed</text:p>
+       <text:p text:style-name="P901">--zoltan-phg-edge-size-threshold</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Relaxed tolerated energy balance error that applies for iterations after the iterations with the strict tolerance.</text:p>
+       <text:p text:style-name="P952">A real value. Low-level threshold fraction in the range [0,1] controlling which hypergraph edge to omit. Used if --zoltan-params="graph" or if --zoltan-params="hypergraph".</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1e-06</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A25&gt;+1" office:value-type="float" office:value="24">
-       <text:p text:style-name="P212">24</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--tolerance-mb</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value.  Tolerated mass balance error relative to total mass present.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">1e-07</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A26&gt;+1" office:value-type="float" office:value="25">
-       <text:p text:style-name="P212">25</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--use-implicit-ipr</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Compute implict IPR for stability checks and stable solution search.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">true</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A27&gt;+1" office:value-type="float" office:value="26">
-       <text:p text:style-name="P212">26</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--print-properties</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Support for this command line option has been removed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5514" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5514</text:a>). </text:p>
-       <text:p text:style-name="P952">An integer value. Print the values of the compile time properties at the start of the simulation.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D22" office:value-type="string">
-       <text:p text:style-name="P950">2</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A28&gt;+1" office:value-type="float" office:value="27">
-       <text:p text:style-name="P212">27</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P313">--zoltan-imbalance-tol</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P953">A real value. Tolerable imbalance of the loadbalancing provided by Zoltan. This command line option has been deprecated; --imbalance-tol should be used instead.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D22" office:value-type="string">
-       <text:p text:style-name="P899">1.1</text:p>
+       <text:p text:style-name="P950">0.35</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
