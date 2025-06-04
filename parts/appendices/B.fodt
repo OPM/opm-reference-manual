@@ -13077,10 +13077,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P1008">A command line option --check-satfnc-consistency has been added that enables improved saturation function consistency checking. In addition, the new command line option --num-satfnc-consistency-sample-points allows the user to select the maximum number of reported failures for each individual consistency check. By default the simulator will report at most five failures for each check. If end-point scaling has been activated then the scaled curves are checked otherwise the unscaled curves are checked. </text:p>
+          <text:p text:style-name="P1008">A command line option --check-satfnc-consistency has been added that enables improved saturation function consistency checking. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">A new hybrid linear-radial filter cake modelling option LINRAD has been added to the WINJDAM keyword in the SCHEDULE section. The cake thickness is computed assuming linear geometry. This thickness is then used to compute a damage skin in radial geometry.  </text:p>
+          <text:p text:style-name="P1008">A new hybrid linear-radial filter cake modelling option LINRAD has been added to the WINJDAM keyword.  </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">The simulator now prints a message to the log files and standard output for all errors that occur while parsing  the input deck, previously no message was reported for some errors before aborting. </text:p>
@@ -13089,7 +13089,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1008">Gas consumption (GCONSUMP keyword) is now supported at multiple levels in the group hierarchy. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">The linear setup time has been reduced when using two-stage (CPR-like) preconditioners. Previously, the second stage ILU0 preconditioner was unnecessarily recreated every Newton iteration. The simulator now only updates the preconditioner. This will be especially important when using GPU preconditioners with CPR, as these GPU preconditioners typically involve expensive GPU allocations, matrix analysis and autotuning.  </text:p>
+          <text:p text:style-name="P1008">The linear setup time has been reduced when using two-stage (CPR-like) preconditioners. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Network solver sub-iterations have been added to avoid updating the gas lift, group controls and so on at every network update. This gives a significant speed up in cases including gas lift and network. </text:p>
@@ -13098,20 +13098,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="P1008">The ability to pass standard command line parameters to the simulator from Python has been added. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">The handling of the NUPCOL keyword has been updated. Wells are no longer allowed to change to group control when the number of iterations is greater than NUPCOL. Voidage replacement and reinjection target rates are updated even if the number of iterations is greater than NUPCOL provided the change is greater than a specified relative tolerance (see --nupcol-group-rate-tolerance). </text:p>
+          <text:p text:style-name="P1008">The handling of the NUPCOL keyword has been updated.  </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">Running flow with the parameter --partition-method=3 will use Zoltan partitioner with the grid represented by a graph. All cells potentially perforated by a well are represented by a single vertex, therefore the partitioning is unable to split a well into several processes.
-This should lead to better partitioning results on problems with a complex well structure, where other partitioners might split wells over several processes after which some well cells would have to be remapped (when distributed wells are not allowed). </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">An experimental feature has been added that enables multi-segment wells to be distributed across several processes when using the command line argument --allow-distributed-wells=true. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">To avoid group control oscillations the code now limits the maximum number of times a group can switch to the same control. The number of switches is only checked when the number of iterations is greater than NUPCOL (that is multiple switches are allowed whilst the network is iterating). See the command line argument --maximum-number-of-group-switches. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">The 16 day restriction on timesteps in prediction mode with THP constraints has been removed from the adaptive time stepping algorithm. The time-stepping, convergence and well models have all improved since this hard-coded limit was originally put in place. </text:p>
+          <text:p text:style-name="P1008">To avoid group control oscillations the code now limits the maximum number of times a group can switch to the same control.  </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Support has been added for using the Hypre library's BoomerAMG solver, providing a high-performance algebraic multigrid solver option particularly beneficial for large-scale simulations and the possibility to run the algebraic multigrid (AMG) solver on the GPU. </text:p>
@@ -13129,7 +13119,7 @@ This should lead to better partitioning results on problems with a complex well 
           <text:p text:style-name="P1008">The simulator now uses the TPFA linearizer for Black Oil Thermal runs. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">The default load balancer has been changed to Zoltan with the grid represented by a graph. All cells potentially perforated by a well are represented by a single vertex, therefore the partitioning is unable to split a well across more than one process. Also the weights of the faces will be added up due to the merging of cells. A cell that is not perforated by any well is still represented by one vertex with weight one. This has resulted in a general improvement and has resolved convergence issues in some hard cases. </text:p>
+          <text:p text:style-name="P1008">The default load balancer has been changed to Zoltan with the grid represented by a graph. All cells potentially perforated by a well are represented by a single vertex, therefore the partitioning is unable to split a well across more than one process. This has resulted in a general improvement and has resolved convergence issues in some hard cases. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">The WELPI and WPIMULT keywords can now be used with the "insert keywords" function in PYACTION blocks. </text:p>
@@ -13138,16 +13128,13 @@ This should lead to better partitioning results on problems with a complex well 
           <text:p text:style-name="P1008">Added partial support for the GSATPROD keyword in the SCHEDULE section to define group satellite production rates. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">Added command line parameters for network solver sub-iterations and pressure update damping. See the following command line arguments: maximum number of sub-iterations to update network pressures, within a single well/group control update (--network-max-sub-iterations), damping factor in the inner network pressure update iterations (--network-pressure-update-damping-factor), and maximum pressure update in the inner network pressure update iterations (--network-max-pressure-update-in-bars). </text:p>
+          <text:p text:style-name="P1008">Added command line parameters for network solver sub-iterations and pressure update damping. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Added the following command line arguments to specify load balancing parameters: add corners to partition (--add-corners=false), and numbers of layers overlap in parallel partition (--num-overlap=1). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Support has been added for instantaneous flow rates in extended network models (WEFAC and GEFAC item 3). The WEFAC and GEFAC keywords are now fully supported. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">A third-order time step controller has been added that can be used as an alternative to the PID controller. The new controller can be specified by using the --time-step-control="general3rdorder" command line argument. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">The permeability multiplication factor as a function of porosity change (PERMFACT keyword) can now be defined for each saturation table region. </text:p>
@@ -13159,13 +13146,7 @@ This should lead to better partitioning results on problems with a complex well 
           <text:p text:style-name="P1008">Added support for multi-segment well output to the PRT file for RPTSCHED mnemonic WELLS=x. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">Support has been added for the RSW keyword in the SOLUTION section to explicitly initialise the dissolved gas-water ratio in each cell when dissolved gas in the water phase has been activated by specifying the DISGASW keyword in the RUNSPEC section. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">Added support for block summary vectors related to mass and volume in-place for CO2STORE and H2STORE runs including: BGMIP, BGMGP, BGMDS, BGMST, BGMUS, BGMTR, BGMMO, BGKTR, BGKMO, BGCDI, BGCDM, BGKDI, BGKDM, BWCD, BWIPG, BWIPL. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">zoltanGoG has replaced zoltan as the default partitioner (if there are no wells zoltanGoG is equivalent to zoltan). </text:p>
+          <text:p text:style-name="P1008">Support has been added for the RSW keyword in the SOLUTION section to explicitly initialise the dissolved gas-water ratio in each cell when dissolved gas in the water phase has been activated. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Defaulted tables are now allowed in the SWOF, SGOF, SWFN, SGFN and SLGOF keywords provided the first table has been defined. A defaulted table is set equal to the previous table. </text:p>
@@ -13174,31 +13155,28 @@ This should lead to better partitioning results on problems with a complex well 
           <text:p text:style-name="P1008">Added support for outputting saturation function tables defined using the SLGOF keyword to the initial data (INIT) file. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">A few issues with the WELTRAJ and COMPTRAJ keywords have been fixed. Any MAPAXES specifications were not handled, and cases with the origin not at zero failed. To solve this, the well coordinates are now transformed when they are read. There was a bug in COMPTRAJ where defaulting the saturation table column was not handled, leading to a segmentation fault. The code for  converting the trajectory to cell indices only took the top and bottom coordinates into account, effectively assuming linear trajectories. Now intermediate points are added, allowing arbitrary trajectories. </text:p>
+          <text:p text:style-name="P1008">The WELTRAJ and COMPTRAJ keywords now handle any MAPAXES specifications. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Support has been added for using the special name selector '?' in well level UDQ assignments within an ACTIONX block. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">Support has been added for gas consumption and gas import summary vectors GGCR, GGIMR, GGCT, GGIMT, FGCR, FGIMR, FGCT and FGIMT and for the corresponding restart input/output. </text:p>
+          <text:p text:style-name="P1008">Support has been added for gas consumption and gas import summary vectors. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Threshold pressures (THPRES keyword) are now restored from the RESTART file. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">Added support for the WTMULT keyword in PYACTION blocks. </text:p>
-         </text:list-item>
-         <text:list-item>
-          <text:p text:style-name="P1008">Added support for the WLIST keyword in PYACTION blocks. </text:p>
+          <text:p text:style-name="P1008">Added support for the WTMULT and WLIST keywords in PYACTION blocks. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Support has been added for the GEFAC keyword in ACTIONX blocks and in PYACTION code.  </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">The use of named regions is now supported in ACTIONX conditions, for example 'RPR 1 RE3 &lt; 215 /'. </text:p>
+          <text:p text:style-name="P1008">The use of named regions is now supported in ACTIONX conditions. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1008">Support has been added for summary output of group (and field) production and injection targets. The following summary vectors are now supported: G[OWGLV]PRT, G[WGV]IRT, F[OWGLV]PRT, and F[WGV]IRT. </text:p>
+          <text:p text:style-name="P1008">Support has been added for summary output of group and field production and injection targets. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1008">Support has been added for the CO2STORE/H2STORE specific block level CO2/H2 mass, moles and volumes in place summary variables; mass production rate (GMPR) and mass production total (GMPT) variables; and mass injection/production variables at the connection and completion level (for example, CGMIR and CGMIRL). </text:p>
