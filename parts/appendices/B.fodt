@@ -13492,7 +13492,113 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="P1298">New features... </text:p>
+          <text:p text:style-name="P1298">A command line option --check-satfnc-consistency has been added that enables improved saturation function consistency checking. In addition, the new command line option --num-satfnc-consistency-sample-points allows the user to select the maximum number of reported failures for each individual consistency check. By default the simulator will report at most five failures for each check. If end-point scaling has been activated then the scaled curves are checked otherwise the unscaled curves are checked (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5596" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5596</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A new hybrid linear-radial filter cake modelling option LINRAD has been added to the WINJDAM keyword in the SCHEDULE section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5717" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5717</text:a>). The cake thickness is computed assuming linear geometry. This thickness is then used to compute a damage skin in radial geometry.  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Running flow with the parameter --partition-method=3 will use Zoltan partitioner with the grid represented by a graph (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5749" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5749</text:a>). All cells potentially perforated by a well are represented by a single vertex, therefore the partitioning is unable to split a well into several processes.
+This should lead to better partitioning results on problems with a complex well structure, where other partitioners might split wells over several processes after which some well cells would have to be remapped (when distributed wells are not allowed). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">An experimental feature has been added that enables multi-segment wells to be distributed across several processes when using the command line argument --allow-distributed-wells=true (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5746" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5746</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for using the Hypre library's BoomerAMG solver, providing a high-performance algebraic multigrid solver option particularly beneficial for large-scale simulations and the possibility to run the algebraic multigrid (AMG) solver on the GPU (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5762" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5762</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for the WCYCLE keyword in the SCHEDULE section that defines automatic well opening and closing cycle parameters (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5792" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5792</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for using the AmgX library in OPM (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5808" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5808</text:a>). AmgX is a high-performance algebraic multigrid solver for NVIDIA GPUs. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for ROCKOPTS keyword item 2 equal to STORE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5785" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5785</text:a>). If ROCKOPTS item 2 is equal to STORE, the initial pressure is used in ROCK and ROCKTAB keywords. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A mixed precision option has been added to GPU DILU similar to that for GPU ILU0 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5674" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5674</text:a>).  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A mixed precision option where off-diagonals are stored as float and diagonals are stored as double has been added to both GPU DILU and GPU ILU0 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5688" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5688</text:a>).  </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The WELPI and WPIMULT keywords can now be used with the "insert keywords" function in PYACTION blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5892" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5892</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The following cubic equations of state can now be selected using the EOS keyword: Peng-Robinson (PR), modified Peng-Robinson (PRCORR), Redlich-Kwong (RK) and Soave-Redlich-Kwong (SRK) when using the experimental compositional simulator (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5886" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5886</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added partial support for the GSATPROD keyword in the SCHEDULE section to define group satellite production rates (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5894" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5894</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added command line parameters for network solver sub-iterations and pressure update damping (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5918" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5918</text:a>). See the following command line arguments: maximum number of sub-iterations to update network pressures, within a single well/group control update (--network-max-sub-iterations), damping factor in the inner network pressure update iterations (--network-pressure-update-damping-factor), and maximum pressure update in the inner network pressure update iterations (--network-max-pressure-update-in-bars). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added the following command line arguments to specify load balancing parameters: add corners to partition (--add-corners=false), and numbers of layers overlap in parallel partition (--num-overlap=1) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5942" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5942</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The experimental compositional simulator has been expanded to three phases by the addition of a ("dummy") immiscible water phase (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5851" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5851</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for instantaneous flow rates in extended network models (WEFAC and GEFAC item 3). The WEFAC and GEFAC keywords are now fully supported (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5410" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5410</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">A third-order time step controller has been added that can be used as an alternative to the PID controller (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5974" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5974</text:a>). The new controller can be specified by using the --time-step-control="general3rdorder" command line argument. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added a command line parameter (--pre-solve-network=true) to make the pre-step network rebalance optional (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6048" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6048</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added command line parameter (--zoltan-phg-edge-size-threshold=0.35) that controls which hypergraph edges to omit/discard by the Zoltan partitioner (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6036" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6036</text:a>). This is to enable runtime experimentation with this aspect of the partitioning algorithm, the default value should not normally be altered. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The permeability multiplication factor as a function of porosity change (PERMFACT keyword) can now be defined for each saturation table region (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6074" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6074</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for RPTSCHED mnemonic WELLS=2. In particular, this appends connection level results to the injection/production output sent to the print (PRT) file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6099" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6099</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for the WCONHIST and WCONINJH keywords in ACTIONX blocks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6092" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6092</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for multi-segment well output to the PRT file for RPTSCHED mnemonic WELLS=x (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6110" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6110</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for the RSW keyword in the SOLUTION section to explicitly initialise the dissolved gas-water ratio in each cell when dissolved gas in the water phase has been activated by specifying the DISGASW keyword in the RUNSPEC section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6111" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6111</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for block summary vectors related to mass and volume in-place for CO2STORE and H2STORE runs including: BGMIP, BGMGP, BGMDS, BGMST, BGMUS, BGMTR, BGMMO, BGKTR, BGKMO, BGCDI, BGCDM, BGKDI, BGKDM, BWCD, BWIPG, BWIPL (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6127" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6127</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added the option to merge each well with a layer(s) of cells surrounding it, in order to keep the well further from the subdomain boundary, when partitioning the grid (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/811" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#811</text:a>). To use this option, flow must be called with parameter --zoltan-params=*.json taking a json file. The json file must contain the keyword EnvelopeWellLayers with the number of layers (default 0). The feature is supported only by the partitioner using the GraphOfGrid (--partition-method=3). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Add an option to do serial partitioning with Zoltan using the graph representation of grid (GraphOfGrid) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/821" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#821</text:a>). The parallel partitioning with GraphOfGrid is also available and is currently the default partitioner. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">zoltanGoG has replaced zoltan as the default partitioner (if there are no wells zoltanGoG is equivalent to zoltan) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/840" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#840</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Defaulted tables are now allowed in the SWOF, SGOF, SWFN, SGFN and SLGOF keywords provided the first table has been defined (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4308</text:a>). A defaulted table is set equal to the previous table. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Added support for 'LINRAD' as a valid option for item 2 (GEOMETRY) in keyword WINJDAM (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4320" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4320</text:a>). This option specifies a hybrid filter cake model where the cake thickness is computed assuming linear geometry (as with item 2 = LINEAR). This thickness is then used to compute a damage skin in radial geometry (as with item 2 = RADIAL). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for gas consumption and gas import summary vectors GGCR, GGIMR, GGCT, GGIMT, FGCR, FGIMR, FGCT and FGIMT and for the corresponding restart input/output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4342" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4342</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for group name pattern matching in UDQ assignments (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4433" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4433</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for summary output of group (and field) production and injection targets (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4500" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4500</text:a>). The following summary vectors are now supported: G[OWGLV]PRT, G[WGV]IRT, F[OWGLV]PRT, and F[WGV]IRT. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">Support has been added for the CO2STORE/H2STORE specific block level CO2/H2 mass, moles and volumes in place summary variables; mass production rate (GMPR) and mass production total (GMPT) variables; and mass injection/production variables at the connection and completion level (for example, CGMIR and CGMIRL) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4550" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4550</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="P1298">The microbially induced calcite precipitation model (see the MICP keyword) has been updated to use the new lineariser, support dispersion, diffusion, sources, boundary conditions, and new summary variables (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4538" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4538</text:a>). In addition, the new BIOFPARA keyword (which can be set per SATNUM region) is now used to set the parameters instead of the MICPPARA keyword. </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
