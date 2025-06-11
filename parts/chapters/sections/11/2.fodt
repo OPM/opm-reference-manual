@@ -25163,6 +25163,630 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:h text:style-name="P344" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311698_2754225602"/>Option Specific Variables – LGR and Coarsening<text:bookmark-end text:name="__RefHeading___Toc311698_2754225602"/></text:h>
     <text:p text:style-name="P343">Local Grid Refinement (“LGR”) and cell coarsening have not been implemented in OPM Flow.</text:p>
     <text:p text:style-name="Contents_20_Heading"/>
+    <text:p text:style-name="P348"/>
+    <text:h text:style-name="P350" text:outline-level="3"><text:bookmark-start text:name="__SUMMARY______VECTORS___MICP______"/>Option Specific Variables – MICP Model<text:bookmark-end text:name="__SUMMARY______VECTORS___MICP______"/></text:h>
+    <text:p text:style-name="P348">The <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section activates the Microbially Induced Calcite Precipitation (“MICP”) model for the run. The summary variables for this option are outlined in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTableMICP">Table 11.2.33</text:sequence-ref>.</text:p>
+    <table:table table:name="Table1812" table:style-name="Table1812">
+     <table:table-column table:style-name="Table1812.A"/>
+     <table:table-column table:style-name="Table1812.B"/>
+     <table:table-column table:style-name="Table1812.C"/>
+     <table:table-column table:style-name="Table1812.D"/>
+     <table:table-column table:style-name="Table1812.E"/>
+     <table:table-column table:style-name="Table1812.F"/>
+     <table:table-column table:style-name="Table1812.G"/>
+     <table:table-column table:style-name="Table1812.H"/>
+     <table:table-column table:style-name="Table1812.I"/>
+     <table:table-column table:style-name="Table1812.J"/>
+     <table:table-row table:style-name="Table1812.1">
+      <table:table-cell table:style-name="Table1810.A1" table:number-columns-spanned="10" office:value-type="string">
+       <text:p text:style-name="P115">MICP Model Summary Variables</text:p>
+       <text:p text:style-name="P115"/>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.2">
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P103">Type</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P201">Variable</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Root</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Field</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Group</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Well</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Well<text:line-break/>Connection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Well<text:line-break/>Completion</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P206">Region</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A2" office:value-type="string">
+       <text:p text:style-name="P107">Block</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Microbial Mass Injection Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMIR </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMIRL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Oxygen Mass Injection Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MOIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMOIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMOIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMOIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOIR </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOIRL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Urea Mass Injection Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MUIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMUIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMUIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMUIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUIR </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUIRL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Microbial Mass Injection Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMIT </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMITL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Oxygen Mass Injection Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MOIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMOIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMOIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMOIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOIT </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOITL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Urea Mass Injection Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MUIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMUIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMUIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMUIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUIT </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUITL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Microbial Mass Production Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MMPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMMPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMMPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMMPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMPR </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMPRL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Oxygen Mass Production Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MOPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMOPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMOPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMOPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOPR </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOPRL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Urea Mass Production Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MUPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMUPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMUPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMUPR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUPR </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUPRL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Microbial Mass Production Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MMPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMMPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMMPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMMPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMPT </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMMPTL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Oxygen Mass Production Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MOPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMOPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMOPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMOPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOPT </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMOPTL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Urea Mass Production Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MUPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMUPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">GMUPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">WMUPT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUPT </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">CMUPTL </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Microbes In-place</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MMIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMMIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">RMMIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">BMMIP</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Oxygen In-place</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MOIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMOIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">RMOIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">BMOIP</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Urea In-place</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MUIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMUIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">RMUIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">BMUIP</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Biofilm In-place</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MBIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMBIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">RMBIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">BMBIP</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Mass</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P82">Calcite In-place</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">MCIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">FMCIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.D3" office:value-type="string">
+       <text:p text:style-name="P81"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">RMCIP</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1810.A1" office:value-type="string">
+       <text:p text:style-name="P88">BMCIP</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1810.3">
+      <table:table-cell table:style-name="Table1810.A2" table:number-columns-spanned="10" office:value-type="string">
+       <text:p text:style-name="P168">Notes:</text:p>
+       <text:p text:style-name="P409">Cells colored in gray with no mnemonic indicate that the summary variable is not available for this combination.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+    </table:table>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTableMICP" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.21</text:sequence>: MICP Model Summary Variables</text:p>
+    <text:p text:style-name="P321"/>
+    <text:p text:style-name="P330"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311700_2754225602"/>Option Specific Variables – Multi-Segment Wells<text:bookmark-end text:name="__RefHeading___Toc311700_2754225602"/></text:h>
     <text:p text:style-name="_40_TextBody">The summary variables in this section are for use for when multi-segment wells are active in the model, and the variables only apply to the well segments requested for a multi-segment well, not to the well, well connection or well completion.</text:p>
     <text:p text:style-name="_40_TextBody">Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
