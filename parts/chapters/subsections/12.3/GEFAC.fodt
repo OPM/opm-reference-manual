@@ -4279,7 +4279,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388141"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388141"/></text:h>
-    <text:p text:style-name="_40_TextBody">Defines a group’s efficiency or up-time as opposed to setting the efficiency factors for individual wells.</text:p>
+    <text:p text:style-name="_40_TextBody">Defines a group’s efficiency or up-time factor as opposed to setting the efficiency factors for individual wells.</text:p>
     <text:p text:style-name="_40_TextBody">Note that wells are allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and wells can also have efficiency factors.</text:p>
     <table:table table:name="Table719" table:style-name="Table719">
      <table:table-column table:style-name="Table719.A"/>
@@ -4327,8 +4327,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9583">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table719.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7296">A character string of up to eight characters in length that defines the group name for which the group efficiency factor is being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and cannot have an efficiency factor set.</text:p>
-       <text:p text:style-name="P7504">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P7296">A character string of up to eight characters in length that defines the group name for which the group efficiency factor is being defined. The group named <text:span text:style-name="NotKeyword">FIELD</text:span> is the top most group and cannot have an efficiency factor set.</text:p>
+       <text:p text:style-name="P7504">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:span text:style-name="NotKeyword">FIELD</text:span> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4345,7 +4345,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9537"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table719.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7704">A real positive value that is less than or equal to one that defines the efficiency factor for the group. If a group’s down time is 5% then FACTOR should be set to 0.95 (1.0 – 0.05).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value less than or equal to one that defines the efficiency factor for the group.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">If a group’s down time is 5% then FACTOR should be set to 0.95 (1.0 – 0.05).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4368,7 +4369,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table719.1">
-      <table:table-cell table:style-name="Table719.A6" office:value-type="string">
+      <table:table-cell table:style-name="Table719.C2" office:value-type="string">
        <text:p text:style-name="P7505">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table719.C2" office:value-type="string">
@@ -4378,13 +4379,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8995">A defined character string that determines if the GRPNAME efficiency factor should be transferred to the equivalent Extended Network Model node, and should be set to either:</text:p>
        <text:list xml:id="list105920646257133" text:continue-list="list105921293955694" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20162"><text:span text:style-name="T1">NO: <text:s/></text:span>The group’s equivalent Extended Network Model node flow rates are not reduced by the efficiency factor FACTOR.</text:p>
+         <text:p text:style-name="P20162">NO:<text:s text:c="2"/>The group’s equivalent Extended Network Model node flow rates are not multiplied by the efficiency factor FACTOR.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20162">YES: <text:s text:c="2"/>The group’s equivalent Extended Network Model node flow rates are reduced by the efficiency factor FACTOR</text:p>
+         <text:p text:style-name="P20162">YES:<text:s text:c="2"/>The group’s equivalent Extended Network Model node flow rates are multiplied by the efficiency factor FACTOR</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P9079">This option is only applicable for the Extended Network Model, as in the Standard Network Model groups flow rates are always used in the calculation of pressure drops. </text:p>
+       <text:p text:style-name="P9079">This option is only applicable for the Extended Network Model. In the Standard Network Model groups' reported flow rates are always used in the calculation of pressure drops. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4410,7 +4411,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14926">Table <text:sequence text:ref-name="refTable580" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.38</text:sequence>: GEFAC Keyword Description</text:p>
     <text:p text:style-name="P15335"/>
-    <text:p text:style-name="P15372">See also the <text:a xlink:href="#__RefHeading___Toc48856_327352552">WEFAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to define a well’s’ efficiency factor.</text:p>
+    <text:p text:style-name="P15372">See also the <text:a xlink:href="#__RefHeading___Toc48856_327352552">WEFAC</text:a> and NEFAC keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to define the efficiency factor for a well or a node.</text:p>
     <text:h text:style-name="P18693" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716617_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716617_3964674244"/></text:h>
     <text:p text:style-name="P12904">-- </text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>GROUP EFFICIENCY FACTORS <text:s text:c="52"/></text:p>
@@ -4423,7 +4424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904">SUBSEA1 <text:s/>0.860 <text:s text:c="64"/>/</text:p>
     <text:p text:style-name="P12904">/ <text:s text:c="78"/></text:p>
     <text:p text:style-name="P150"><text:s text:c="10"/></text:p>
-    <text:p text:style-name="P10921">In the above example the group PLATFORM has it’s efficiency factor (up time) set to 0.95 and the subsea group SUBSEA1 has an up time of 0.860. <text:s/></text:p>
+    <text:p text:style-name="P10921">In the above example the group PLATFORM has its up-time factor set to 95% and the subsea group SUBSEA1 has an up-time factor of 86%. <text:s/></text:p>
     <text:p text:style-name="P10921"/>
     
    </text:section>
