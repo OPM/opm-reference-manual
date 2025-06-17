@@ -2500,7 +2500,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:table-cell-properties>
   </style:style>
   <style:style style:name="Table1186.H1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -2572,7 +2572,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:table-row-properties>
   </style:style>
   <style:style style:name="Table2004.A1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding="0.097cm" fo:border="0.05pt solid #000000">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding="0.097cm" fo:border="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -4383,9 +4383,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18582" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881612113"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881612113"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword defines a satellite group’s oil, gas and water production rates in the model. Satellite groups are not connected to the reservoir model and therefore have no wells or subordinate groups associated with them, they are nevertheless connected to other higher level groups and higher level groups <text:s/>within a network model (if activated). <text:s/>They thus provide a means to “add-in” outside injection and <text:s/>production to the model without modeling the “add-in” reservoir model. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody"><text:s/>The keyword is used to import additional fluids into the model from other sources (fields, reservoirs etc.) that are not defined in the current run. For example, if a several fields are supplying gas to a power plant (field A, B and C), but only one is being modeled in the current input deck (A), then production from the other two fields (B and C) can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from fields B and C are fixed, and therefore field A acts like a “swing” producer to match the gas demand target. </text:p>
-    <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword defines a satellite group’s oil, water and gas production rates in the model. Satellite groups are not connected to the reservoir model and therefore have no wells or subordinate groups associated with them, they are nevertheless connected to other higher level groups and higher level groups <text:s/>within a network model (if activated).<text:s/>They provide a means to “add-in” outside injection and production to the model without modeling the “add-in” reservoir model. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is used to import additional fluid streams into the model from other sources (fields, reservoirs, etc.) that are not defined in the current run. For example, if fields A, B and C are supplying gas to a power plant, but only field A is being modeled in the current input deck, then production from the other two fields (B and C) can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from fields B and C are fixed, and therefore field A acts like a “swing” producer to match the gas demand target. </text:p>
     <table:table table:name="Table2003" table:style-name="Table2003">
      <table:table-column table:style-name="Table2003.A"/>
      <table:table-column table:style-name="Table2003.B"/>
@@ -4425,7 +4424,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
      <table:table-row table:style-name="Table2003.3">
-      <table:table-cell table:style-name="Table2003.A3" office:value-type="string">
+      <table:table-cell table:style-name="Table2003.C2" office:value-type="string">
        <text:p text:style-name="P9882">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" office:value-type="string">
@@ -4443,7 +4442,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table2003.3">
-      <table:table-cell table:style-name="Table2003.A3" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P901">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
@@ -4474,7 +4473,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table2003.3">
-      <table:table-cell table:style-name="Table2003.A3" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P9882">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
@@ -4504,7 +4503,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table2003.3">
-      <table:table-cell table:style-name="Table2003.A3" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P9882">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
@@ -4588,7 +4587,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </text:list>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19701"><text:span text:style-name="T4532">The Gas Lift Optimization Model is active in the deck via the </text:span><text:a xlink:href="#__RefHeading___Toc118992_332691817">LIFTOPT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:span text:style-name="T4532">In this case <text:s/>GASLIFT is applied to GRUPNAME</text:span><text:span text:style-name="T2434">’s superordinate group’s gas supply constraints based on the <text:a xlink:href="#__RefHeading___Toc111805_332691817">GLIFTOPT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:s/>For clarity, <text:a xlink:href="#__RefHeading___Toc111805_332691817">GLIFTOPT</text:a> constraint violations result in the groups being modeled having their rates adjusted, satellite group rates are not effected.</text:span></text:p>
+         <text:p text:style-name="P19701"><text:span text:style-name="T4532">The Gas Lift Optimization Model is active in the deck via the </text:span><text:a xlink:href="#__RefHeading___Toc118992_332691817">LIFTOPT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:span text:style-name="T4532">In this case <text:s/>GASLIFT is applied to GRUPNAME</text:span><text:span text:style-name="T2434">’s superordinate group’s gas supply constraints based on the <text:a xlink:href="#__RefHeading___Toc111805_332691817">GLIFTOPT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:s/>For clarity, <text:a xlink:href="#__RefHeading___Toc111805_332691817">GLIFTOPT</text:a> constraint violations result in the groups being modeled having their rates adjusted, whereas satellite group rates are not affected.</text:span></text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4621,8 +4620,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8768">CALRATE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8768">Calorific production rate used in the commercial compositional simulator.</text:p>
-       <text:p text:style-name="P8000">Not used and should be defaulted with 1* or zero.</text:p>
+       <text:p text:style-name="P8768">A real value greater than or equal to zero that defines the satellite's calorific production rate.</text:p>
+       <text:p text:style-name="P8000">This is not supported by OPM Flow and should be defaulted with 1* or zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
