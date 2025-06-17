@@ -2764,6 +2764,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties officeooo:paragraph-rsid="0d5e3538"/>
   </style:style>
   <style:style style:name="P17602" style:family="paragraph" style:parent-style-name="Heading_20_3">
+   <style:paragraph-properties fo:break-before="page"/>
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="0d5e3538"/>
   </style:style>
   <style:style style:name="P18345" style:family="paragraph" style:parent-style-name="Heading_20_4">
@@ -4254,8 +4255,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838811011"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838811011"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines the maximum time step size the simulator should take for the next time step. This keyword can be used to reset the time step for when known large changes to the model are taking place that may result in time step chops. For example, if the reporting time size is using monthly reporting steps via the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then if for example, a group of wells start production at a given date, then the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword can be used to shorten the next step in order to avoid a time step chop.</text:p>
-    <text:p text:style-name="_40_TextBody">Time steps chops are computationally expensive as the simulator cannot solve the current time step at the given tolerance, and therefore has to reduce the time step size. For example, if the previous completed time step was at day 365 and the current time step ending at 396 days cannot be solved, then the simulator will reduce the current time step to perhaps end at day 370, if this still cannot solved then the time step will be chopped back again to perhaps to less then one day. Using the <text:a xlink:href="#__RefHeading___Toc117629_2179381650">NEXT</text:a> or <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword, the simulator is instructed to take a small time step in the anticipation that this will avoid time step chops and thus improve computational performance. <text:s text:c="2"/></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines the maximum time step size the simulator should take for the next time step. This keyword can be used to limit the time step size when known large changes to the model are taking place that may otherwise result in time step chops. For example, if the simulator is using monthly reporting steps defined by the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then if a group of wells start production at a given date, then the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword can be used to limit the next time step in order to avoid a time step chop.</text:p>
+    <text:p text:style-name="_40_TextBody">Time steps chops are computationally expensive as the simulator cannot solve the current time step at the given tolerance, and therefore has to reduce the time step size. For example, if the previous completed time step was at day 365 and the current time step ending at 396 days cannot be solved, then the simulator will reduce the current time step to perhaps end at day 370, if this still cannot solved then the time step will be chopped back again and so on, possibly reducing the time step to less then one day. Using the <text:a xlink:href="#__RefHeading___Toc117629_2179381650">NEXT</text:a> or <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword, the simulator is instructed to take a small time step in the anticipation that this will avoid time step chops and thus improve computational performance. <text:s text:c="2"/></text:p>
     <table:table table:name="Table1412" table:style-name="Table1412">
      <table:table-column table:style-name="Table1412.A"/>
      <table:table-column table:style-name="Table1412.B"/>
@@ -4300,7 +4301,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9308">NSTEP1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1412.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9308">NSTEP1 is a real positive value that defines the maximum length of the next time step. </text:p>
+       <text:p text:style-name="P9308">A real positive value that defines the maximum length of the next time step. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4330,7 +4331,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">NSTEP2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1412.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9312">NSTEP2 is a character string that should be set to either NO or YES to state if the NSTEP1 should be applied to future reporting time steps.</text:p>
+       <text:p text:style-name="P9312">A defined character string that should be set to either NO or YES to state if the NSTEP1 should be applied to future reporting time steps.</text:p>
        <text:list xml:id="list105922068518458" text:continue-list="list105920406906754" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P20147">NO: Means that NSTEP1 should not be applied to subsequent reporting time steps.</text:p>
@@ -4364,71 +4365,68 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14655">Table <text:sequence text:ref-name="refTable597" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.55</text:sequence>: NEXTSTEP Keyword Description</text:p>
-    <text:p text:style-name="P15504"/>
+    <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/>See also the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> and <text:a xlink:href="#__RefHeading___Toc118323_1596574740">TSTEP</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that are used to advance the simulation through time.</text:p>
     <text:p text:style-name="_40_TextBody">See section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>on how to control time stepping for OPM Flow that allows for greater flexibility.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P18693" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716649_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716649_3964674244"/></text:h>
-    <text:p text:style-name="P11695">The first example shows the direct use of the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword:, Here the next step size is set to one day and should only be used once.</text:p>
-    <text:p text:style-name="P14191">-- <text:s text:c="6"/>NEXT <text:s text:c="2"/>ALL</text:p>
-    <text:p text:style-name="P14191">-- <text:s text:c="6"/>STEP <text:s text:c="2"/>TIME</text:p>
-    <text:p text:style-name="P14191">-- <text:s text:c="6"/>---- <text:s text:c="2"/>----</text:p>
-    <text:p text:style-name="P14191">NEXTSTEP</text:p>
+    <text:p text:style-name="P11695">The first example shows the direct use of the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword. Here the next time step size is limited to one day for the first time step following the next report time only.</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>NEXT <text:s text:c="2"/>ALL</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>STEP <text:s text:c="2"/>TIME</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>---- <text:s text:c="2"/>----</text:p>
+    <text:p text:style-name="_40_Example">NEXTSTEP</text:p>
     <text:p text:style-name="P13110"><text:s text:c="9"/>1 <text:s text:c="4"/>&apos;NO&apos; <text:s text:c="39"/>/ <text:s text:c="76"/></text:p>
     <text:p text:style-name="P15929"/>
-    <text:p text:style-name="P15502">The next example shows a more complete use of the keyword for when the field oil production has increased dramatically from 10,000 stb/d to 50,000 stb/d as indicated by the two <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keywords. </text:p>
-    <text:p text:style-name="P14194">-- ------------------------------------------------------------------------------ </text:p>
-    <text:p text:style-name="P14194">-- SCHEDULE SECTION - 2021-01-01 <text:s text:c="34"/></text:p>
-    <text:p text:style-name="P14194">-- ------------------------------------------------------------------------------ </text:p>
-    <text:p text:style-name="P14194">--</text:p>
-    <text:p text:style-name="P14193">-- GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
-    <text:p text:style-name="P14193">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14193">-- GRUP <text:s text:c="3"/>CNTL <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>LIQ <text:s text:c="3"/>CNTL <text:s/>GRUP <text:s/>GUIDE <text:s/>GUIDE <text:s/>CNTL <text:s text:c="21"/></text:p>
-    <text:p text:style-name="P14193">-- NAME <text:s text:c="3"/>MODE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>OPT <text:s text:c="2"/>CNTL <text:s/>RATE <text:s text:c="2"/>DEF <text:s text:c="3"/>WAT <text:s text:c="22"/></text:p>
-    <text:p text:style-name="P14193">GCONPROD <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P14193">&apos;FIELD&apos; <text:s text:c="2"/>&apos;ORAT&apos; 10E3 <text:s text:c="2"/>60E3 <text:s text:c="2"/>300E3 <text:s/>60E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>/</text:p>
-    <text:p text:style-name="P14193">/ <text:s text:c="78"/></text:p>
-    <text:p text:style-name="P14194">RPTSCHED <text:s text:c="124"/></text:p>
-    <text:p text:style-name="P14194">&apos;WELLS=2&apos; <text:s text:c="3"/>&apos;WELSPECS&apos; <text:s text:c="3"/>&apos;CPU=2&apos; <text:s text:c="4"/>&apos;FIP=2&apos; <text:s text:c="32"/>/</text:p>
-    <text:p text:style-name="P14194"/>
-    <text:p text:style-name="P14194">DATES <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>2 <text:s/>JAN <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="63"/></text:p>
-    <text:p text:style-name="P14194">/ <text:s text:c="155"/></text:p>
-    <text:p text:style-name="P14194">RPTSCHED <text:s text:c="124"/></text:p>
-    <text:p text:style-name="P14194">&apos;NOTHING&apos; <text:s text:c="69"/>/ <text:s text:c="51"/></text:p>
-    <text:p text:style-name="P14194"><text:s text:c="43"/></text:p>
-    <text:p text:style-name="P14194">DATES <text:s text:c="217"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>FEB <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>MAR <text:s text:c="2"/>2021 <text:s/>/ <text:s/></text:p>
-    <text:p text:style-name="P14194">/</text:p>
-    <text:p text:style-name="P14193">-- GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
-    <text:p text:style-name="P14193">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14193">-- GRUP <text:s text:c="3"/>CNTL <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>LIQ <text:s text:c="3"/>CNTL <text:s/>GRUP <text:s/>GUIDE <text:s/>GUIDE <text:s/>CNTL <text:s text:c="21"/></text:p>
-    <text:p text:style-name="P14193">-- NAME <text:s text:c="3"/>MODE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>OPT <text:s text:c="2"/>CNTL <text:s/>RATE <text:s text:c="2"/>DEF <text:s text:c="3"/>WAT <text:s text:c="22"/></text:p>
-    <text:p text:style-name="P14193">GCONPROD <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P14193">&apos;FIELD&apos; <text:s text:c="2"/>&apos;ORAT&apos; 50E3 <text:s text:c="2"/>90E3 <text:s text:c="2"/>300E3 <text:s/>90E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>/</text:p>
-    <text:p text:style-name="P14193">/ <text:s text:c="78"/></text:p>
-    <text:p text:style-name="P14194">--</text:p>
-    <text:p text:style-name="P14191">-- <text:s text:c="6"/>NEXT <text:s text:c="2"/>ALL</text:p>
-    <text:p text:style-name="P14191">-- <text:s text:c="6"/>STEP <text:s text:c="2"/>TIME</text:p>
-    <text:p text:style-name="P14191">-- <text:s text:c="6"/>---- <text:s text:c="2"/>----</text:p>
-    <text:p text:style-name="P14191">NEXTSTEP</text:p>
-    <text:p text:style-name="P13110"><text:s text:c="9"/>1 <text:s text:c="4"/>&apos;NO&apos; <text:s text:c="2"/>/ <text:s text:c="76"/></text:p>
-    <text:p text:style-name="P14194">DATES <text:s text:c="15"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>APR <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="13"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>MAY <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>JUN <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>JLY <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>AUG <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>SEP <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>OCT <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>NOV <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194"><text:s/>1 <text:s/>DEC <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P14194">/</text:p>
-    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>Given a start date of January 1, 2020 set via the <text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, the above example shows the initial oil production of 10,000 stb/d starting in January 1, 2020, and continuing up to March 1, 2021. At the March 1, 2021 time step the field oil production rate is increased to 50,000 stb/d and the maximum next time step is set to one day. After the one day time step is completed (March 2, 2012), the simulator will progressively in increase the time step size until a maximum of 31 days is reached. The 31 day maximum is a result of requesting monthly time steps via the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword. <text:s/>The intent of using the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword in this case is to prevent time step chops occurring due to the “shock” to the system caused by the large increase in oil production.</text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody"/>
-    
+    <text:p text:style-name="_40_TextBody">The next example shows a more complete use of the keyword for when the field oil production has increased dramatically from 10,000 stb/d to 50,000 stb/d as indicated by the two <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keywords. </text:p>
+    <text:p text:style-name="_40_Example">-- ------------------------------------------------------------------------------ </text:p>
+    <text:p text:style-name="_40_Example">-- SCHEDULE SECTION - 2021-01-01 <text:s text:c="34"/></text:p>
+    <text:p text:style-name="_40_Example">-- ------------------------------------------------------------------------------ </text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- GRUP <text:s text:c="3"/>CNTL <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>LIQ <text:s text:c="3"/>CNTL <text:s/>GRUP <text:s/>GUIDE <text:s/>GUIDE <text:s/>CNTL <text:s text:c="21"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s text:c="3"/>MODE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>OPT <text:s text:c="2"/>CNTL <text:s/>RATE <text:s text:c="2"/>DEF <text:s text:c="3"/>WAT <text:s text:c="22"/></text:p>
+    <text:p text:style-name="_40_Example">GCONPROD <text:s text:c="71"/></text:p>
+    <text:p text:style-name="_40_Example">&apos;FIELD&apos; <text:s text:c="2"/>&apos;ORAT&apos; 10E3 <text:s text:c="2"/>60E3 <text:s text:c="2"/>300E3 <text:s/>60E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="78"/></text:p>
+    <text:p text:style-name="_40_Example">RPTSCHED <text:s text:c="124"/></text:p>
+    <text:p text:style-name="_40_Example">&apos;WELLS=2&apos; <text:s text:c="3"/>&apos;WELSPECS&apos; <text:s text:c="3"/>&apos;CPU=2&apos; <text:s text:c="4"/>&apos;FIP=2&apos; <text:s text:c="32"/>/</text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_Example">DATES <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>2 <text:s/>JAN <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="63"/></text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="155"/></text:p>
+    <text:p text:style-name="_40_Example">RPTSCHED <text:s text:c="124"/></text:p>
+    <text:p text:style-name="_40_Example">&apos;NOTHING&apos; <text:s text:c="69"/>/ <text:s text:c="51"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="43"/></text:p>
+    <text:p text:style-name="_40_Example">DATES <text:s text:c="217"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>FEB <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>MAR <text:s text:c="2"/>2021 <text:s/>/ <text:s/></text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">-- GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- GRUP <text:s text:c="3"/>CNTL <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>LIQ <text:s text:c="3"/>CNTL <text:s/>GRUP <text:s/>GUIDE <text:s/>GUIDE <text:s/>CNTL <text:s text:c="21"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s text:c="3"/>MODE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>OPT <text:s text:c="2"/>CNTL <text:s/>RATE <text:s text:c="2"/>DEF <text:s text:c="3"/>WAT <text:s text:c="22"/></text:p>
+    <text:p text:style-name="_40_Example">GCONPROD <text:s text:c="71"/></text:p>
+    <text:p text:style-name="_40_Example">&apos;FIELD&apos; <text:s text:c="2"/>&apos;ORAT&apos; 50E3 <text:s text:c="2"/>90E3 <text:s text:c="2"/>300E3 <text:s/>90E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>/</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="78"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>NEXT <text:s text:c="2"/>ALL</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>STEP <text:s text:c="2"/>TIME</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>---- <text:s text:c="2"/>----</text:p>
+    <text:p text:style-name="_40_Example">NEXTSTEP</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>1 <text:s text:c="4"/>&apos;NO&apos; <text:s text:c="2"/>/ <text:s text:c="76"/></text:p>
+    <text:p text:style-name="_40_Example">DATES <text:s text:c="15"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>APR <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="13"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>MAY <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>JUN <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>JLY <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>AUG <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>SEP <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>OCT <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>NOV <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s/>1 <text:s/>DEC <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_TextBody"><text:soft-page-break/>Given a start date of January 1, 2020 set via the <text:a xlink:href="#__RefHeading___Toc39156_327352552">START</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, the above example shows the initial oil production of 10,000 stb/d starting in January 1, 2020, and continuing up to March 1, 2021. At the March 1, 2021 report time the field oil production rate is increased to 50,000 stb/d and the maximum next time step is set to one day. After the one day time step is completed (March 2, 2012), the simulator will progressively in increase the time step size until a maximum of 31 days is reached. The 31 day maximum is a result of requesting monthly time steps via the <text:a xlink:href="#__RefHeading___Toc117621_2179381650">DATES</text:a> keyword. <text:s/>The intent of using the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword in this case is to prevent time step chops occurring due to the “shock” to the system caused by the large increase in oil production.</text:p>
    </text:section>
   </office:text>
  </office:body>
