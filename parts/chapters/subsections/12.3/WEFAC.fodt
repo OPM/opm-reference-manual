@@ -4343,7 +4343,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838814"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838814"/></text:h>
-    <text:p text:style-name="_40_TextBody">Defines a well’s efficiency or up-time as opposed to setting the efficiency at the group level. Note that wells are allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and groups can also have efficiency factors.</text:p>
+    <text:p text:style-name="_40_TextBody">Defines a well’s efficiency or up-time as opposed to setting the efficiency at the group level.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that wells are allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and groups can also have efficiency factors.</text:p>
     <table:table table:name="Table812" table:style-name="Table812">
      <table:table-column table:style-name="Table812.A"/>
      <table:table-column table:style-name="Table812.B"/>
@@ -4391,7 +4392,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9614">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table812.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7328">A character string of up to eight characters in length that defines the well name for which the well efficient factor is being defined.</text:p>
+       <text:p text:style-name="P7328">A character string of up to eight characters in length that defines the well name for which the well efficiency factor is being defined.</text:p>
        <text:p text:style-name="P7840">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4410,9 +4411,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table812.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7732">A real positive value greater than zero and less than or equal to one that defines the efficiency factor for the well. If a well’s down time is 5% then FACTOR should be set to 0.95 (1.0 – 0.05).</text:p>
-       <text:p text:style-name="P8804">Noted that well pressures and rates are calculated at their full flowing conditions but subject to any operating constraints, that is <text:span text:style-name="T2554">without</text:span> the well efficiency being applied (FACTOR), in order to represent the actual flowing conditions in the field. </text:p>
-       <text:p text:style-name="P8805">The effective rates and volumes are calculated by applying FACTOR when summing individual well rates to their group level and up, including summing to the top most group <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a>. In terms of a well’s cumulative production, FACTOR is applied to the well rate times the time interval for the time step. This ensures that correct effective volume is withdrawn (or injected) from (or to) the reservoir. <text:s text:c="3"/></text:p>
-       <text:p text:style-name="P8805">This approach means that wells are effectively arbitrarily offline for a small period during a time step, as oppose to all wells going offline concurrently. And thus the group and field rates and volumes are the effective rates and volumes for the field.</text:p>
+       <text:p text:style-name="P8804">Note that well pressures and rates are calculated at their full flowing conditions but subject to any operating constraints, that is <text:span text:style-name="T2554">without</text:span> the well efficiency being applied (FACTOR), in order to represent the actual flowing conditions in the field. </text:p>
+       <text:p text:style-name="P8805">The effective rates and volumes are calculated by applying FACTOR when summing individual well rates to their group level and higher, including summing to the top most group <text:span text:style-name="NotKeyword">FIELD</text:span>. In terms of a well’s cumulative production, FACTOR is applied to the well rate times the time interval for the time step. This ensures that correct effective volume is withdrawn from (or injected to) the reservoir. <text:s text:c="3"/></text:p>
+       <text:p text:style-name="P8805">This approach means that wells are effectively arbitrarily offline for a period during a time step, as opposed to all wells going offline concurrently. And thus the group and field rates and volumes are the effective rates and volumes for the field.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4442,17 +4443,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8775">WELNETWK</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table812.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8996">A defined character string that determines if the WELNAME efficiency factor should be transferred to the equivalent Extended Network Model node, and should be set to either:</text:p>
+       <text:p text:style-name="P8996">A defined character string that determines if the WELNAME efficiency factor should be applied when calculating the flows and pressure losses in the Extended Network Model, and should be set to either:</text:p>
        <text:list xml:id="list105921862717747" text:continue-list="list105922647595146" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20164"><text:span text:style-name="T1">NO: <text:s/></text:span>The well’s equivalent Extended Network Model node flow rates are not reduced by the efficiency factor FACTOR.</text:p>
+         <text:p text:style-name="P20164"><text:span text:style-name="T1">NO: <text:s/></text:span>The well’s equivalent Extended Network Model node flow rates are not multiplied by the efficiency factor FACTOR.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P20164">YES: <text:s text:c="2"/>The well’s equivalent Extended Network Model node flow rates are reduced by the efficiency factor FACTOR</text:p>
+         <text:p text:style-name="P20164">YES: <text:s text:c="2"/>The well’s equivalent Extended Network Model node flow rates are multiplied by the efficiency factor FACTOR</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P9080">This option is only applicable for the Extended Network Model, as in the Standard Network Model groups flow rates are always used in the calculation of pressure drops. </text:p>
-       <text:p text:style-name="P9081">Only the default value of YES is supported by OPM Flow.</text:p>
+       <text:p text:style-name="P9080">This option is only applicable for the Extended Network Model, as in the Standard Network Model groups flow rates are always used in the calculation of pressure drops (this is equivalent to the default option, YES). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4477,8 +4477,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14806">Table <text:sequence text:ref-name="refTable626" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.84</text:sequence>: WEFAC Keyword Description</text:p>
-    <text:p text:style-name="P15374">See also the <text:a xlink:href="#__RefHeading___Toc268455_1366622701">GEFAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to set the efficiency at the group level, as opposed to applying the efficiency to individual wells. </text:p>
-    <text:p text:style-name="P15374"/>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc268455_1366622701">GEFAC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section to set the efficiency at the group level, as opposed to applying the efficiency to individual wells. </text:p>
+    <text:p text:style-name="_40_TextBody"/>
     <table:table table:name="Table1995" table:style-name="Table1995">
      <table:table-column table:style-name="Table1995.A"/>
      <table:table-header-rows>
@@ -4492,16 +4493,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:h text:style-name="P18604" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716733_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716733_3964674244"/></text:h>
-    <text:p text:style-name="P14348">-- </text:p>
-    <text:p text:style-name="P14348">-- <text:s text:c="6"/>WELL EFFICIENCY FACTORS <text:s text:c="53"/></text:p>
-    <text:p text:style-name="P14348">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14348">-- WELL <text:s/>EFF <text:s text:c="3"/>NETWK <text:s text:c="58"/></text:p>
-    <text:p text:style-name="P14348">-- NAME <text:s/>FACT <text:s text:c="2"/>OPTN <text:s text:c="59"/></text:p>
-    <text:p text:style-name="P14348">WEFAC <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P14348">&apos;GP* <text:s/>&apos; <text:s/>0.950 <text:s text:c="64"/>/</text:p>
-    <text:p text:style-name="P14348">&apos;OP* <text:s/>&apos; <text:s/>0.862 <text:s text:c="64"/>/</text:p>
-    <text:p text:style-name="P14392">/</text:p>
-    <text:p text:style-name="P14392"><text:s text:c="144"/></text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>WELL EFFICIENCY FACTORS <text:s text:c="53"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- WELL <text:s/>EFF <text:s text:c="3"/>NETWK <text:s text:c="58"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>FACT <text:s text:c="2"/>OPTN <text:s text:c="59"/></text:p>
+    <text:p text:style-name="_40_Example">WEFAC <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example">&apos;GP* <text:s/>&apos; <text:s/>0.950 <text:s text:c="64"/>/</text:p>
+    <text:p text:style-name="_40_Example">&apos;OP* <text:s/>&apos; <text:s/>0.862 <text:s text:c="64"/>/</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="144"/></text:p>
     <text:p text:style-name="_40_TextBody">In the above example the all the gas wells are are defined as having a well efficiency factor (up time) of 0.950 and all the oil wells have a lower efficiency factor of 0.862.</text:p>
     
    </text:section>
