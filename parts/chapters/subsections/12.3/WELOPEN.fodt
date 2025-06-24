@@ -4430,7 +4430,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P94"/>
    <text:section text:style-name="Sect1" text:name="WELOPEN">
-    <text:h text:style-name="P61" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc268461_1366622701"/>WELOPEN – Define Well and Well Connections Flowing Status<text:bookmark-end text:name="__RefHeading___Toc268461_1366622701"/></text:h>
+    <text:h text:style-name="P61" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc268461_1366622701"/>WELOPEN – Define Well and Well Connection Flowing Status<text:bookmark-end text:name="__RefHeading___Toc268461_1366622701"/></text:h>
     <table:table table:name="Table667" table:style-name="Table667">
      <table:table-column table:style-name="Table667.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table667.E"/>
@@ -4464,7 +4464,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P62" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716739_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716739_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword defines the status of wells and well connections, and is used to open and shut previously defined well and well connections without having to re-specify all the data on the well control keywords: <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a>, <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>, or <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords. <text:s/>Note that the well must still be initially be fully defined using the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword defines the status of wells and well connections, and is used to open and shut previously defined wells and well connections without having to re-specify all the data on the well control keywords: <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>, <text:a xlink:href="#__RefHeading___Toc134880_2055188184">WCONHIST</text:a>, <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a>, or <text:a xlink:href="#__RefHeading___Toc146752_4203985108">WCONINJH</text:a> keywords. <text:s/>Note that the well must still be initially fully defined using the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> or <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords. <text:s/>All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <table:table table:name="Table668" table:style-name="Table668">
      <table:table-column table:style-name="Table668.A"/>
      <table:table-column table:style-name="Table668.B"/>
@@ -4511,7 +4511,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P33">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well and well connection status data are being defined.</text:p>
+       <text:p text:style-name="P26">A character string of up to eight characters in length that defines the well name for which the well or well connection status data are being defined.</text:p>
        <text:p text:style-name="P32">Note that the well name (WELNAME) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4528,16 +4528,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P34">STATUS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P27">A character string of length four that defines the well and a well’s connections’ operational status, STATUS should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P27">A defined character string of length four that defines the well or well connection operational status, STATUS should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P95">OPEN: the connections are open to flow.</text:p>
+         <text:p text:style-name="P95">OPEN: the well or connections are open to flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P95">SHUT: the connections are closed to flow (shut-in).</text:p>
+         <text:p text:style-name="P95">SHUT: the well or connections are closed to flow (shut-in).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P95">AUTO: the connection are initially closed, but may be opened automatically if an economic limit is violated. <text:s/></text:p>
+         <text:p text:style-name="P95">AUTO: the well or connections are initially closed, but may be opened automatically if an economic limit is violated. <text:s/></text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4560,7 +4560,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table668.F3" office:value-type="string">
-       <text:p text:style-name="P36">1*</text:p>
+       <text:p text:style-name="P36">Negative</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table668.1">
@@ -4577,7 +4577,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table668.F3" office:value-type="string">
-       <text:p text:style-name="P36">1*</text:p>
+       <text:p text:style-name="P36">Negative</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table668.1">
@@ -4593,7 +4593,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table668.F3" office:value-type="string">
-       <text:p text:style-name="P37">1*</text:p>
+       <text:p text:style-name="P37">Negative</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table668.1">
@@ -4601,16 +4601,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P38">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" office:value-type="string">
-       <text:p text:style-name="P29">K1</text:p>
+       <text:p text:style-name="P29">C1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P89">An integer less than or equal to NZ that defines the UPPER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P41">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K1 refers to the first completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K1 completion.</text:p>
+       <text:p text:style-name="P89">An integer less than or equal to the total number of completions that defines the first completion in the range.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table668.F3" office:value-type="string">
-       <text:p text:style-name="P37">1*</text:p>
+       <text:p text:style-name="P37">Negative</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table668.1">
@@ -4618,16 +4617,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P38">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" office:value-type="string">
-       <text:p text:style-name="P29">K2</text:p>
+       <text:p text:style-name="P29">C2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table668.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P31">An integer less than or equal to NZ that defines the LOWER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P41">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K2 refers to the last completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K2 completion.</text:p>
+       <text:p text:style-name="P31">An integer less than or equal to the total number of completions that defines the last completion in the range.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table668.F3" office:value-type="string">
-       <text:p text:style-name="P37">1*</text:p>
+       <text:p text:style-name="P37">Negative</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table668.1">
@@ -4635,6 +4633,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P24">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
+         <text:p text:style-name="P96">When connections are defined using the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword they are assigned individual completion numbers in the order they are defined. The connections may then be lumped into completions using the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword. The range specified by C1 and C2 refers to all the completions in this range and all the connections contained within these completions.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="P96">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
@@ -4647,8 +4648,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P60">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.87</text:sequence>: WELOPEN Keyword Description</text:p>
-    <text:p text:style-name="P49">If variables I, J K, K1 and K2 are all set to a negative number o<text:span text:style-name="T30">r defaulted</text:span> with 1* then STATUS is applied to the well and the well connections remain unchanged. <text:s/></text:p>
-    <text:p text:style-name="P90">I<text:span text:style-name="T6">f </text:span>variables I, J K, K1 and K2 are all<text:span text:style-name="T6"> set to </text:span><text:span text:style-name="T13">zero or a positive</text:span><text:span text:style-name="T6"> value then STATUS is applied to </text:span>the defined<text:span text:style-name="T6"> connections and the well status remains unchanged. </text:span>The defined connections are those values with the I, J, K <text:s/>specified locations and connections within the completion number range specified by K1 and K2.</text:p>
+    <text:p text:style-name="P49"></text:p>
+    <text:p text:style-name="P49">If variables I, J, K, C1 and C2 are all set to a negative number or defaulted with 1* then STATUS is applied to the well and the well connections remain unchanged.</text:p>
+    <text:p text:style-name="P90">If any of the variables I, J, K, C1 and C2 are set to zero or a positive value then STATUS is applied to the defined well connections and the well status remains unchanged. The defined well connections are those with the specified I, J, K locations and that are in the completion number range specified by C1 and C2. If a zero or negative value is specified for I, J or K then this matches any value for that index. If a zero or negative value is specified for C1 or C2 respectively then no lower or upper bound is applied to the completion range.</text:p>
     <text:p text:style-name="P48">See also the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword to define a well’s connections, the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword to group well connections into well completions, the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keywords to define a well’s <text:soft-page-break/>production and injections targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P62" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716741_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716741_3964674244"/></text:h>
     <text:p text:style-name="P45">The following example defines two vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and their associated connection data. </text:p>
@@ -4692,7 +4694,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P57">OP02 <text:s text:c="4"/>OPEN <text:s text:c="45"/>/</text:p>
     <text:p text:style-name="P54">OP02 <text:s text:c="4"/>OPEN <text:s text:c="4"/>0 <text:s text:c="2"/>0 <text:s text:c="3"/>0 <text:s text:c="30"/>/</text:p>
     <text:p text:style-name="P52">/ <text:s text:c="138"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="_40_TextBody">In this example the first record of each well <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword changes the well status from shut (as per the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword) to open. Then for well OP01 well connections one to four are opened for flow and all the connections for well OP02 are opened, that is connections one to ten. </text:p>
+    <text:p text:style-name="_40_TextBody"></text:p>
+    <text:p text:style-name="_40_TextBody">In this example the first record for each well in the <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword changes the well status from shut (as per the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword) to open. Then for well OP01 well connections in layers one to four are opened for flow and all the connections for well OP02 are opened, that is the connections in layers one to ten. </text:p>
     <text:p text:style-name="_40_TextBody">The next example shows the use of the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword to group the well connections into well completions for wells OP01, OP02 and OP03, and then use the <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> keyword to open the well and the well completions.</text:p>
     <text:p text:style-name="P50">--</text:p>
     <text:p text:style-name="P50">-- <text:s text:c="6"/>ASSIGN WELL CONNECTIONS TO COMPLETIONS</text:p>
@@ -4737,7 +4740,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P56">OP02 <text:s text:c="4"/>OPEN <text:s text:c="4"/>0 <text:s text:c="2"/>0 <text:s text:c="3"/>0 <text:s text:c="4"/>2 <text:s text:c="4"/>2 <text:s text:c="18"/>/</text:p>
     <text:p text:style-name="P56">/ <text:s text:c="11"/></text:p>
     <text:p text:style-name="Standard"><text:soft-page-break/></text:p>
-    <text:p text:style-name="Standard">In this case well OP01, OP02 and OP03 are opened via completion number three – which we do not want. Hence, all the connection for OP02 are shut, and then connections associated with completion two are opened instead for this well.</text:p>
+    <text:p text:style-name="Standard">In this case wells OP01, OP02 and OP03 are opened via completion number three. All the connections for OP02 are then shut, and the connections associated with completion two are opened instead for this well.</text:p>
     <text:p text:style-name="_40_TextBody"/>
    </text:section>
   </office:text>

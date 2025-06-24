@@ -4374,14 +4374,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716097_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716097_3964674244"/></text:h>
-    <text:p text:style-name="P11775"><text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> defines the permeability multiplication factor due to a change in porosity. Currently the keyword is used in conjunction with OPM Flow’s Salt Precipitation model, in which the pore space is reduced due to salt precipitating in the pore space, causing a reduction in porosity and an associated reduction in permeability. </text:p>
+    <text:p text:style-name="P11775"><text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> defines the permeability multiplication factor due to a change in porosity. The keyword is used in conjunction with OPM Flow’s Salt Precipitation model, in which the pore space is reduced due to salt precipitating in the pore space, causing a reduction in porosity and an associated reduction in permeability. This keyword is also used for the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model, where the pore space is reduced due to biofilm formation and calcite precipitation. </text:p>
     <table:table table:name="Table1837" table:style-name="Table1837">
      <table:table-column table:style-name="Table1837.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="Table1837.1">
        <table:table-cell table:style-name="Table1837.A1" office:value-type="string">
         <text:p text:style-name="P10216">Note</text:p>
-        <text:p text:style-name="P10255">This is an OPM Flow specific keyword for the simulator’s Salt Precipitation model that is activated by the <text:a xlink:href="#__RefHeading___Toc162083_289573908">BRINE</text:a> and <text:a xlink:href="#__RefHeading___Toc332782_3149455253">PRECSALT</text:a> keywords and declaring that vaporized water is present in the run via the <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keyword. All three keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+        <text:p text:style-name="P10255">This is an OPM Flow specific keyword. </text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4691,7 +4691,7 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
     </table:table>
     <text:p text:style-name="P14802">Table <text:sequence text:ref-name="refTable313" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.97</text:sequence>: PERMFACT Keyword Description</text:p>
     <text:p text:style-name="P15592"/>
-    <text:p text:style-name="P15746">The porosity reduction is a function of the volume fraction of salt (<draw:frame draw:style-name="fr1" draw:name="Object4" text:anchor-type="as-char" svg:width="0.303cm" svg:height="0.533cm" draw:z-index="7"><draw:object>
+    <text:p text:style-name="P15746">The porosity reduction can be written as a function proportional to the initial porosity, e.g., considering the volume fraction of salt (<draw:frame draw:style-name="fr1" draw:name="Object4" text:anchor-type="as-char" svg:width="0.303cm" svg:height="0.533cm" draw:z-index="7"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
          <msub>
@@ -4971,8 +4971,7 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
          AAABAAEA1QOMAAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
         </office:binary-data>
        </draw:image>
-      </draw:frame></text:span><text:span text:style-name="T1533"> </text:span><text:tab/><text:span text:style-name="T1533">=<text:tab/>the actual permeability and porosity that changes due to precipitation or</text:span></text:p>
-    <text:p text:style-name="P16550"><text:tab/><text:tab/>dissolution of the salt,</text:p>
+      </draw:frame></text:span><text:span text:style-name="T1533"> </text:span><text:tab/><text:span text:style-name="T1533">=<text:tab/>the actual permeability and porosity that changes due to the model dynamics (e.g., precipitation or dissolution of  salt, biofilm formation, calcite precipitation),</text:span></text:p>
     <text:p text:style-name="P16561"><draw:frame draw:style-name="fr66" draw:name="Object586" text:anchor-type="as-char" svg:width="0.536cm" svg:height="0.374cm" draw:z-index="1087"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
@@ -5022,7 +5021,7 @@ with `` k~=~ m left (%phi right) k sub 0</annotation>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716099_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716099_3964674244"/></text:h>
     <text:p text:style-name="P11793">The example below defines two <text:a xlink:href="#__RefHeading___Toc712146_1466963378">PERMFACT</text:a> tables assuming NTSFUN equals two and NSSFUN is greater than or equal to five on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P12909">-- <text:s text:c="85"/></text:p>
-    <text:p text:style-name="P12910">-- <text:s text:c="6"/>PERMEABILITY FACTOR REDUCTION DUE TO SALT PRECIPITATION </text:p>
+    <text:p text:style-name="P12910">-- <text:s text:c="6"/>PERMEABILITY FACTOR AS A FUNCTION OF POROSITY REDUCTION </text:p>
     <text:p text:style-name="P12910">-- <text:s text:c="6"/>(OPM FLOW KEYWORD) <text:s text:c="69"/></text:p>
     <text:p text:style-name="P12909">-- <text:s text:c="85"/></text:p>
     <text:p text:style-name="P12909">PERMFACT</text:p>
