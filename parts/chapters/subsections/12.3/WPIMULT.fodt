@@ -4346,7 +4346,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716807_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716807_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword defines a well connection multiplier factor that scales the existing well connection values. The resulting effect is to scale the well’s productivity at the reporting time step the keyword is entered. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword defines a well connection factor multiplier that scales the existing well connection factor values. The resulting effect is to scale the well’s productivity at the reporting time step the keyword is entered. <text:s/></text:p>
     <table:table table:name="Table689" table:style-name="Table689">
      <table:table-column table:style-name="Table689.A"/>
      <table:table-column table:style-name="Table689.B"/>
@@ -4410,7 +4410,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P10078">PIMULT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table689.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7706">A real positive value that will be used to scale the well connection factors defined by I, J, K, K1 and K2 below.</text:p>
+       <text:p text:style-name="P7706">A real positive value that will be used to scale the well connection factors defined by I, J, K, C1 and C2 below.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4472,22 +4472,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8206">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table689.C2" office:value-type="string">
-       <text:p text:style-name="P9464"><office:annotation office:name="__Annotation__131456_843454886" loext:resolved="false">
-         <dc:creator>Atgeirr Rasmussen</dc:creator>
-         <dc:date>2017-09-22T14:29:04.284406000</dc:date>
-         <meta:creator-initials>AFR</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">Are these layer or completion numbers?</text:span></text:p>
-        </office:annotation>K1<office:annotation-end office:name="__Annotation__131456_843454886"/><office:annotation>
-         <dc:creator>David Baxendale</dc:creator>
-         <dc:date>2017-10-03T12:34:29.541000000</dc:date>
-         <meta:creator-initials>DBx</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8541">Reply to Atgeirr Rasmussen (09/22/2017, 14:29): &quot;...&quot;</text:span></text:p>
-         <text:p><text:span text:style-name="T8542">Only <text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a> and <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> use completions, so added additional text to both and the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keywords for clarification</text:span></text:p>
-        </office:annotation></text:p>
+       <text:p text:style-name="P9464">C1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table689.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8211">An integer less than or equal to NZ that defines the UPPER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P8211">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K1 refers to the first completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K1 completion.</text:p>
+       <text:p text:style-name="P8211">An integer value that defines the first completion number in the range.</text:p>
+       <text:p text:style-name="P8211">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and C1 refers to the first completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the C1 completion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4500,11 +4489,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8206">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table689.C2" office:value-type="string">
-       <text:p text:style-name="P9464">K2</text:p>
+       <text:p text:style-name="P9464">C2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table689.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7418">An integer less than or equal to NZ that defines the LOWER completion location in the K-direction.</text:p>
-       <text:p text:style-name="P7418">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and K2 refers to the last completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the K2 <text:s text:c="14"/>completion.</text:p>
+       <text:p text:style-name="P7418">An integer that defines the last completion in the range.</text:p>
+       <text:p text:style-name="P7418">Connections are lumped into completions via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and C2 refers to the last completion number, as defined by the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword, and all the connections contained within the C2 <text:s text:c="14"/>completion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4529,61 +4518,61 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14715">Table <text:sequence text:ref-name="refTable652" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.110</text:sequence>: WPIMULT Keyword Description</text:p>
-    <text:p text:style-name="P15541"/>
-    <text:p text:style-name="P11540"/>
-    <text:p text:style-name="P16064">If variables I, J, K, K1 and K2 are all a negative value or defaulted with 1*, <text:s/>then PIMULT is applied to all the well connections in the well. If variables I, J, K, K1 and K2 are set to zero (meaning any or all values), or a positive value then PIMULT is applied to the defined connections. The defined connections are those with the I, J, K variables in the specified location and a completion number in the range specified by K1 and K2. Note, that PIMULT is applied at the time the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword is entered and is cumulative if applied to the same well connections, provided there are intervening report time steps between consecutive <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords. Consequently, if there are no intervening report time steps between consecutive <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords utilizing the same well connections, then only the last set is applied.</text:p>
-    <text:p text:style-name="P12681">See also the <text:a xlink:href="#__RefHeading___Toc121389_332691817">WELPI</text:a> keyword to set a well’s productivity or injectivity index at the time the keyword is activated, and also the <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> keyword that defines productivity index multiplier versus water cut tables that are used to scaled a well’s connection factors based on a wells connection current producing water cut. Both keywords are documented in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">If variables I, J, K, C1 and C2 are all negative values or defaulted with 1*,<text:s/>then PIMULT is applied to all the well connections in the well. </text:p>
+    <text:p text:style-name="_40_TextBody">If any of the variables I, J, K, C1 and C2 are set to zero (meaning any or all values), or a positive value then PIMULT is applied to the defined connections. The defined connections are those with the I, J, K variables in the specified location and a completion number in the range specified by C1 and C2.</text:p>
+    <text:p text:style-name="_40_TextBody">Note, that PIMULT is applied at the time the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keyword is entered and is cumulative if applied to the same well connections, provided there are intervening report time steps between consecutive <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords. Consequently, if there are no intervening report time steps between consecutive <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> keywords utilizing the same well connections, then only the last set is applied.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc121389_332691817">WELPI</text:a> keyword to set a well’s productivity or injectivity index at the time the keyword is activated, and also the <text:a xlink:href="#__RefHeading___Toc121637_2412586160">PIMULTAB</text:a> keyword that defines productivity index multiplier versus water cut tables that are used to scaled a well’s connection factors based on a wells connection current producing water cut. Both keywords are documented in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P18627" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716809_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716809_3964674244"/></text:h>
-    <text:p text:style-name="Text_20_body">The following example defines three vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and their associated connection data. </text:p>
-    <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P13734">--</text:p>
-    <text:p text:style-name="P13734">-- WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
-    <text:p text:style-name="P13734">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13734">-- WELL <text:s text:c="4"/>GROUP <text:s text:c="5"/>LOCATION <text:s/>BHP <text:s text:c="3"/>PHASE <text:s/>DRAIN <text:s/>INFLOW <text:s/>SHUT <text:s/>CROSS <text:s/>PRESS <text:s text:c="6"/></text:p>
-    <text:p text:style-name="P13120">-- NAME <text:s text:c="4"/>NAME <text:s text:c="7"/>I <text:s text:c="3"/>J <text:s text:c="2"/>DEPTH <text:s/>FLUID <text:s/>AREA <text:s text:c="2"/>EQUA. <text:s text:c="2"/>IN <text:s text:c="3"/>FLOW <text:s text:c="2"/>TABLE <text:s text:c="6"/></text:p>
-    <text:p text:style-name="P12985">WELSPECS <text:s text:c="154"/></text:p>
-    <text:p text:style-name="P12985">OP01 <text:s text:c="5"/>PLATFORM <text:s text:c="4"/>14 <text:s text:c="2"/>13 <text:s text:c="2"/>1* <text:s text:c="5"/>OIL <text:s text:c="2"/>1* <text:s text:c="4"/>STD <text:s text:c="4"/>OPEN <text:s text:c="2"/>NO <text:s text:c="3"/>1* <text:s/>/</text:p>
-    <text:p text:style-name="P12985">OP02 <text:s text:c="5"/>PLATFORM <text:s text:c="4"/>28 <text:s text:c="2"/>96 <text:s text:c="2"/>1* <text:s text:c="5"/>OIL <text:s text:c="2"/>1* <text:s text:c="4"/>STD <text:s text:c="4"/>OPEN <text:s text:c="2"/>NO <text:s text:c="3"/>1* <text:s/>/</text:p>
-    <text:p text:style-name="P12985">OP03 <text:s text:c="5"/>PLATFORM <text:s text:c="3"/>128 <text:s text:c="2"/>56 <text:s text:c="2"/>1* <text:s text:c="5"/>OIL <text:s text:c="2"/>1* <text:s text:c="4"/>STD <text:s text:c="4"/>OPEN <text:s text:c="2"/>NO <text:s text:c="3"/>1* <text:s/>/</text:p>
-    <text:p text:style-name="P12985">/ </text:p>
-    <text:p text:style-name="P14076">--</text:p>
-    <text:p text:style-name="P14076">-- <text:s text:c="6"/>WELL PRODUCTION WELL CONTROLS <text:s text:c="52"/></text:p>
-    <text:p text:style-name="P14076">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14076">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="2"/>LIQ <text:s text:c="3"/>RES <text:s text:c="3"/>BHP <text:s text:c="3"/>THP <text:s text:c="2"/>VFP <text:s text:c="3"/>VFP <text:s/></text:p>
-    <text:p text:style-name="P14076">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>PRES <text:s text:c="2"/>PRES <text:s/>TABLE <text:s/>ALFQ </text:p>
-    <text:p text:style-name="P14076">WCONPROD <text:s text:c="68"/></text:p>
-    <text:p text:style-name="P14076">‘*’ <text:s text:c="5"/>SHUT <text:s text:c="2"/>GRUP <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>200.0 <text:s text:c="17"/>/</text:p>
-    <text:p text:style-name="P14076">/ <text:s text:c="78"/></text:p>
-    <text:p text:style-name="P14076">--</text:p>
-    <text:p text:style-name="P14076">-- <text:s text:c="6"/>WELL CONNECTION DATA <text:s text:c="26"/></text:p>
-    <text:p text:style-name="P14076">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14076">-- WELL <text:s/>--- LOCATION --- <text:s/>OPEN <text:s text:c="2"/>SAT <text:s text:c="2"/>CONN <text:s text:c="2"/>WELL <text:s text:c="2"/>KH <text:s text:c="3"/>SKIN <text:s text:c="2"/>D <text:s text:c="4"/>DIR <text:s text:c="2"/></text:p>
-    <text:p text:style-name="P14076">-- NAME <text:s text:c="2"/>II <text:s/>JJ <text:s/>K1 <text:s/>K2 <text:s text:c="2"/>SHUT <text:s text:c="2"/>TAB <text:s text:c="2"/>FACT <text:s text:c="2"/>DIA <text:s text:c="3"/>FACT <text:s/>FACT <text:s text:c="2"/>FACT <text:s/>PEN <text:s text:c="2"/></text:p>
-    <text:p text:style-name="P14076">COMPDAT <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P14076">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s text:c="2"/>1 <text:s/>10 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P14076">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>15 <text:s/>30 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P14076">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>35 <text:s/>90 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P14076">OP02 <text:s text:c="5"/>1* <text:s/>1* <text:s text:c="2"/>1 <text:s/>10 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P14076">OP03 <text:s text:c="5"/>1* <text:s/>1* <text:s/>35 <text:s/>90 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
-    <text:p text:style-name="P14076">/</text:p>
-    <text:p text:style-name="P14131">-- <text:s text:c="6"/>ASSIGN WELL CONNECTIONS TO COMPLETIONS</text:p>
-    <text:p text:style-name="P14131">-- <text:s text:c="166"/></text:p>
-    <text:p text:style-name="P14131">-- WELL <text:s/>--- LOCATION --- <text:s/>COMPL <text:s text:c="162"/></text:p>
-    <text:p text:style-name="P13369">-- NAME <text:s text:c="2"/>II <text:s/>JJ <text:s/>K1 <text:s/>K2 <text:s text:c="2"/>NO. <text:s text:c="269"/>COMPLUMP <text:s text:c="198"/>OP03 <text:s text:c="5"/>1* <text:s/>1* <text:s/>35 <text:s/>45 <text:s text:c="3"/>1 <text:s text:c="29"/>/ COMPLETION NO. 01</text:p>
-    <text:p text:style-name="P13369">OP03 <text:s text:c="5"/>1* <text:s/>1* <text:s/>50 <text:s/>90 <text:s/><text:s text:c="2"/>2 <text:s text:c="29"/>/ COMPLETION NO. 02</text:p>
-    <text:p text:style-name="P13372">/</text:p>
-    <text:p text:style-name="P16119">--</text:p>
-    <text:p text:style-name="P14250">-- <text:s text:c="6"/>DEFINE WELL CONNECTION MULTIPLIERS <text:s text:c="49"/></text:p>
-    <text:p text:style-name="P14250">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14250">-- WELL <text:s/>PI <text:s text:c="4"/>--LOCATION-- <text:s/>COMPLETION <text:s text:c="36"/></text:p>
-    <text:p text:style-name="P14250">-- NAME <text:s/>MULT <text:s text:c="4"/>I <text:s text:c="2"/>J <text:s text:c="3"/>K <text:s/>FIRST LAST <text:s text:c="36"/></text:p>
-    <text:p text:style-name="P14250">WPIMULT <text:s text:c="72"/></text:p>
-    <text:p text:style-name="P14250">OP01 <text:s text:c="4"/>1.250 <text:s text:c="3"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="17"/>/</text:p>
-    <text:p text:style-name="P14250">OP02 <text:s text:c="4"/>0.750 <text:s text:c="3"/>1* <text:s/>1* <text:s text:c="2"/>10 <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="17"/>/</text:p>
-    <text:p text:style-name="P14250">OP03 <text:s text:c="4"/>1.100 <text:s text:c="3"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s text:c="2"/>1 <text:s text:c="4"/>2 <text:s text:c="18"/>/</text:p>
-    <text:p text:style-name="P14251">/ <text:s/></text:p>
-    <text:p text:style-name="P14424"><text:s text:c="138"/><text:span text:style-name="T1"><text:s text:c="77"/></text:span></text:p>
-    <text:p text:style-name="P15477">In this example the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> scales the well productivity of well OP01 by 1.25, and scales all the well connection factors in layer 10 only by 0.75 for well OP02. For well OP03, <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> scales all the connections in completions one and two by 1.100. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The following example defines three vertical oil wells using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and their associated connection data. </text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- WELL <text:s text:c="4"/>GROUP <text:s text:c="5"/>LOCATION <text:s/>BHP <text:s text:c="3"/>PHASE <text:s/>DRAIN <text:s/>INFLOW <text:s/>SHUT <text:s/>CROSS <text:s/>PRESS <text:s text:c="6"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s text:c="4"/>NAME <text:s text:c="7"/>I <text:s text:c="3"/>J <text:s text:c="2"/>DEPTH <text:s/>FLUID <text:s/>AREA <text:s text:c="2"/>EQUA. <text:s text:c="2"/>IN <text:s text:c="3"/>FLOW <text:s text:c="2"/>TABLE <text:s text:c="6"/></text:p>
+    <text:p text:style-name="_40_Example">WELSPECS <text:s text:c="154"/></text:p>
+    <text:p text:style-name="_40_Example">OP01 <text:s text:c="5"/>PLATFORM <text:s text:c="4"/>14 <text:s text:c="2"/>13 <text:s text:c="2"/>1* <text:s text:c="5"/>OIL <text:s text:c="2"/>1* <text:s text:c="4"/>STD <text:s text:c="4"/>OPEN <text:s text:c="2"/>NO <text:s text:c="3"/>1* <text:s/>/</text:p>
+    <text:p text:style-name="_40_Example">OP02 <text:s text:c="5"/>PLATFORM <text:s text:c="4"/>28 <text:s text:c="2"/>96 <text:s text:c="2"/>1* <text:s text:c="5"/>OIL <text:s text:c="2"/>1* <text:s text:c="4"/>STD <text:s text:c="4"/>OPEN <text:s text:c="2"/>NO <text:s text:c="3"/>1* <text:s/>/</text:p>
+    <text:p text:style-name="_40_Example">OP03 <text:s text:c="5"/>PLATFORM <text:s text:c="3"/>128 <text:s text:c="2"/>56 <text:s text:c="2"/>1* <text:s text:c="5"/>OIL <text:s text:c="2"/>1* <text:s text:c="4"/>STD <text:s text:c="4"/>OPEN <text:s text:c="2"/>NO <text:s text:c="3"/>1* <text:s/>/</text:p>
+    <text:p text:style-name="_40_Example">/ </text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>WELL PRODUCTION WELL CONTROLS <text:s text:c="52"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- WELL <text:s/>OPEN/ <text:s/>CNTL <text:s text:c="2"/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="2"/>LIQ <text:s text:c="3"/>RES <text:s text:c="3"/>BHP <text:s text:c="3"/>THP <text:s text:c="2"/>VFP <text:s text:c="3"/>VFP <text:s/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>SHUT <text:s text:c="2"/>MODE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>PRES <text:s text:c="2"/>PRES <text:s/>TABLE <text:s/>ALFQ </text:p>
+    <text:p text:style-name="_40_Example">WCONPROD <text:s text:c="68"/></text:p>
+    <text:p text:style-name="_40_Example">‘*’ <text:s text:c="5"/>SHUT <text:s text:c="2"/>GRUP <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>200.0 <text:s text:c="17"/>/</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="78"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>WELL CONNECTION DATA <text:s text:c="26"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- WELL <text:s/>--- LOCATION --- <text:s/>OPEN <text:s text:c="2"/>SAT <text:s text:c="2"/>CONN <text:s text:c="2"/>WELL <text:s text:c="2"/>KH <text:s text:c="3"/>SKIN <text:s text:c="2"/>D <text:s text:c="4"/>DIR <text:s text:c="2"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s text:c="2"/>II <text:s/>JJ <text:s/>K1 <text:s/>K2 <text:s text:c="2"/>SHUT <text:s text:c="2"/>TAB <text:s text:c="2"/>FACT <text:s text:c="2"/>DIA <text:s text:c="3"/>FACT <text:s/>FACT <text:s text:c="2"/>FACT <text:s/>PEN <text:s text:c="2"/></text:p>
+    <text:p text:style-name="_40_Example">COMPDAT <text:s text:c="71"/></text:p>
+    <text:p text:style-name="_40_Example">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s text:c="2"/>1 <text:s/>10 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="_40_Example">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>15 <text:s/>30 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="_40_Example">OP01 <text:s text:c="5"/>1* <text:s/>1* <text:s/>35 <text:s/>90 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="_40_Example">OP02 <text:s text:c="5"/>1* <text:s/>1* <text:s text:c="2"/>1 <text:s/>10 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="_40_Example">OP03 <text:s text:c="5"/>1* <text:s/>1* <text:s/>35 <text:s/>90 <text:s text:c="2"/>OPEN <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="3"/>0.708 <text:s text:c="2"/>1* <text:s text:c="3"/>0.0 <text:s text:c="3"/>1* <text:s text:c="3"/>&apos;Z&apos; /</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ASSIGN WELL CONNECTIONS TO COMPLETIONS</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="166"/></text:p>
+    <text:p text:style-name="_40_Example">-- WELL <text:s/>--- LOCATION --- <text:s/>COMPL <text:s text:c="162"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s text:c="2"/>II <text:s/>JJ <text:s/>K1 <text:s/>K2 <text:s text:c="2"/>NO. <text:s text:c="269"/>COMPLUMP <text:s text:c="198"/>OP03 <text:s text:c="5"/>1* <text:s/>1* <text:s/>35 <text:s/>45 <text:s text:c="3"/>1 <text:s text:c="29"/>/ COMPLETION NO. 01</text:p>
+    <text:p text:style-name="_40_Example">OP03 <text:s text:c="5"/>1* <text:s/>1* <text:s/>50 <text:s/>90 <text:s/><text:s text:c="2"/>2 <text:s text:c="29"/>/ COMPLETION NO. 02</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE WELL CONNECTION MULTIPLIERS <text:s text:c="49"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- WELL <text:s/>PI <text:s text:c="4"/>--LOCATION-- <text:s/>COMPLETION <text:s text:c="36"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>MULT <text:s text:c="4"/>I <text:s text:c="2"/>J <text:s text:c="3"/>K <text:s/>FIRST LAST <text:s text:c="36"/></text:p>
+    <text:p text:style-name="_40_Example">WPIMULT <text:s text:c="72"/></text:p>
+    <text:p text:style-name="_40_Example">OP01 <text:s text:c="4"/>1.250 <text:s text:c="3"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="17"/>/</text:p>
+    <text:p text:style-name="_40_Example">OP02 <text:s text:c="4"/>0.750 <text:s text:c="3"/>1* <text:s/>1* <text:s text:c="2"/>10 <text:s text:c="2"/>1* <text:s text:c="3"/>1* <text:s text:c="17"/>/</text:p>
+    <text:p text:style-name="_40_Example">OP03 <text:s text:c="4"/>1.100 <text:s text:c="3"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s text:c="2"/>1 <text:s text:c="4"/>2 <text:s text:c="18"/>/</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s/></text:p>
+    <text:p text:style-name="_40_Example"></text:p>
+    <text:p text:style-name="_40_TextBody">In this example the <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> scales the well productivity of well OP01 by 1.25, and scales all the well connection factors in layer 10 only by 0.75 for well OP02. For well OP03, <text:a xlink:href="#__RefHeading___Toc121645_2412586160">WPIMULT</text:a> scales all the connections in completions one and two by 1.1. <text:s/></text:p>
     
    </text:section>
   </office:text>
