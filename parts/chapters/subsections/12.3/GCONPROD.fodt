@@ -5098,7 +5098,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P112" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716597_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716597_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword defines production targets and constraints for groups, including the top most group in the group hierarchy known as the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group. Wells are allocated to groups when the wells are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:s/>Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword defines production targets and constraints for groups, including the top most group in the group hierarchy known as the <text:span text:style-name="NotKeyword">FIELD</text:span> group. Wells are allocated to groups when the wells are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. <text:s/>Wells defined to be under group control will have their production rates controlled by the group to which they belong, in addition to any well constraints defined for the wells.</text:p>
     <table:table table:name="Table113" table:style-name="Table113">
      <table:table-column table:style-name="Table113.A"/>
      <table:table-column table:style-name="Table113.B"/>
@@ -5145,8 +5145,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table113.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P128">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should be used to set targets and constraints for the field.</text:p>
-       <text:p text:style-name="P128">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P128">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named <text:span text:style-name="NotKeyword">FIELD</text:span> is the top most group and should be used to set targets and constraints for the field.</text:p>
+       <text:p text:style-name="P128">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, when there is more than one level of groups, otherwise all the groups will sit directly under the <text:span text:style-name="NotKeyword">FIELD</text:span> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5162,13 +5162,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">TARGET</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table113.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P128">A defined character string that sets the target production phase for the group, all the other phases will therefore act as constraints. The simulator will attempt to meet the TARGET based on the phase rate stated in items (3) to (6) on this keyword. TARGET should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P128">A defined character string that specifies the production rate control mode for the group. The simulator will attempt to meet the TARGET rate as defined by remaining items on this keyword. TARGET should be set to one of the following character strings:</text:p>
        <text:list xml:id="list2097286444" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P151">NONE: the group has no target phase, but if entered, constraints are still defined and active.</text:p>
+         <text:p text:style-name="P151">NONE: the group has no target rate, but if entered, constraints are still defined and active.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P151">FLD: this group is controlled from a higher level group, including the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group.</text:p>
+         <text:p text:style-name="P151">FLD: this group is controlled by a higher level group (including the <text:span text:style-name="NotKeyword">FIELD</text:span> group) subject to its guide rate as defined by items (9) and (10).</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P151">ORAT: the target is set to the surface oil production rate as defined by item (3). </text:p>
@@ -5183,10 +5183,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P151">LRAT: the target is set to the surface liquid (oil plus water) production rate as defined by item (6).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P152">RESV: the target is set to the in situ reservoir volume rate as defined by item (14). <text:s/></text:p>
+         <text:p text:style-name="P152">RESV: the target is set to the in situ reservoir volume rate as defined by item (14). </text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="Table_20_Contents">All other options are not supported by OPM Flow.</text:p>
+       <text:p text:style-name="Table_20_Contents">Note that the commercial simulator includes additional options (not listed above) that are not currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5325,10 +5325,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P47">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table113.C2" office:value-type="string">
-       <text:p text:style-name="P128"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
+       <text:p text:style-name="P128"><text:span text:style-name="NotKeyword">ACTION</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table113.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P128">A defined character string that defines the action to be taken if the constraints in (3) to (6) are violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P128">A defined character string that specifies the action to be taken if the constraints in (3) to (6) are violated. <text:span text:style-name="NotKeyword">ACTION</text:span> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list123808927072960" text:continue-list="list2097286444" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P157">NONE: no action is taken. </text:p>
@@ -5343,14 +5343,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">WELL: close the worst offending well.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P157">PLUG: plug back the worst offending well. This option is not implemented in OPM Flow.</text:p>
+         <text:p text:style-name="P157">PLUG: plug back the worst offending well.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P157">RATE: control the group production rate to equal the upper limit. This effectively changes the TARGET to be the violated phase constraint.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P128">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
-       <text:p text:style-name="P128">Note that only the NONE, WELL and RATE options are currently supported by the simulator.</text:p>
+       <text:p text:style-name="P128">Note that only the NONE, WELL and RATE options are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5375,7 +5375,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">NO: then this group is NOT subject to a higher level group’s control and the flow rates for this group will only be controlled by the parameters for this group.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P34">GRPCNTL will be ignored for the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group.</text:p>
+       <text:p text:style-name="P34">GRPCNTL will be ignored for the <text:span text:style-name="NotKeyword">FIELD</text:span> group.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5451,7 +5451,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">&apos; <text:s/>&apos; <text:s/>or 1* : the group is not under guide rate control, and therefore superordinate group production targets will be pro-rated directly down to its subordinate groups and wells.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P128">Note that only the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, LIQ and default options are currently supported by the simulator.</text:p>
+       <text:p text:style-name="P128">Note that only the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, LIQ and default options are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5489,8 +5489,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">RATE: control the group production rate to equal the upper limit. This effectively changes the TARGET to be the violated phase constraint.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P128">If defaulted then procedure defined by <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a>, item (7), is applied. <text:s/>The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
-       <text:p text:style-name="P128">Note that only the NONE and RATE options are currently supported by the simulator.</text:p>
+       <text:p text:style-name="P128">If defaulted then procedure defined by <text:span text:style-name="NotKeyword">ACTION</text:span>, item (7), is applied. <text:s/>The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
+       <text:p text:style-name="P128">Note that only the NONE and RATE options are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5521,14 +5521,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">WELL: close the worst offending well.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P157">PLUG: plug back the worst offending well. This option is not implemented in OPM Flow.</text:p>
+         <text:p text:style-name="P157">PLUG: plug back the worst offending well.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P157">RATE: control the group production rate to equal the upper limit. This effectively changes the TARGET to be the violated phase constraint.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P128">If defaulted then procedure defined by <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a>, item (7), is applied. <text:s/>The corrective action takes places at the end of the time step in which the constraint is violated</text:p>
-       <text:p text:style-name="P128">Note that only the NONE and RATE options are currently supported by the simulator.</text:p>
+       <text:p text:style-name="P128">If defaulted then procedure defined by <text:span text:style-name="NotKeyword">ACTION</text:span>, item (7), is applied. <text:s/>The corrective action takes places at the end of the time step in which the constraint is violated</text:p>
+       <text:p text:style-name="P128">Note that only the NONE and RATE options are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5566,8 +5566,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">RATE: control the group production rate to equal the upper limit. This effectively changes the TARGET to be the violated phase constraint.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P128">If defaulted then procedure defined by <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a>, item (7), is applied. <text:s/>The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
-       <text:p text:style-name="P128">Note that only the NONE and RATE options are currently supported by the simulator.</text:p>
+       <text:p text:style-name="P128">If defaulted then procedure defined by <text:span text:style-name="NotKeyword">ACTION</text:span>, item (7), is applied. <text:s/>The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
+       <text:p text:style-name="P128">Note that only the NONE and RATE options are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5745,7 +5745,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P107">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.3.89.1</text:sequence>: GCONPROD Keyword Description</text:p>
     <text:p text:style-name="P127"/>
-    <text:p text:style-name="P127">See also the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword to define the hierarchy of the groups below the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> level, the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword to define a group’s injection targets and constraints, the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword to define a production well’s targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection well’s <text:soft-page-break/>targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+    <text:p text:style-name="P127">See also the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword to define the hierarchy of the groups below the <text:span text:style-name="NotKeyword">FIELD</text:span> level, the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword to define a group’s injection targets and constraints, the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword to define a production well’s targets and constraints, and the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> keyword to define an injection well’s <text:soft-page-break/>targets and constraints. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P127"/>
     <text:h text:style-name="P130" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716599_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716599_3964674244"/></text:h>
     <text:p text:style-name="P126">The following example defines the production targets and constraints for the field and two groups that are one level below the field group, since the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword has not been entered to define the group <text:s/>hierarchy.</text:p>
@@ -5760,7 +5760,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P125">GRP02 <text:s text:c="3"/>FLD <text:s text:c="2"/>25E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="5"/>/</text:p>
     <text:p text:style-name="P125">/ <text:s text:c="233"/></text:p>
     <text:p text:style-name="P127"/>
-    <text:p text:style-name="P127">All groups are controlled by oil rate targets or constraints, but only the field level has water, gas and liquid constraints to reflect the actual production facility constraints. The wells under group control will be produced based on oil potential of each of the wells under group control, such that the field oil production target of 40,000 stb/d is honored and subject to the other phase fluid constraints. <text:s/>In addition, GRP01 and GRP02 oil rate values of 25,000 stb/d are constraints as these two groups are subject to the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> level targets and constraints.</text:p>
+    <text:p text:style-name="P127">All groups are controlled by oil rate targets or constraints, but only the field level has water, gas and liquid constraints to reflect the actual production facility constraints. The wells under group control will be produced based on oil potential of each of the wells under group control, such that the field oil production target of 40,000 stb/d is honored and subject to the other phase fluid constraints. <text:s/>In addition, GRP01 and GRP02 oil rate values of 25,000 stb/d are constraints as these two groups are subject to the <text:span text:style-name="NotKeyword">FIELD</text:span> level targets and constraints.</text:p>
     <text:p text:style-name="P127"/>
    </text:section>
   </office:text>
