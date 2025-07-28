@@ -4841,7 +4841,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_3701168388161"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_3701168388161"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> defines the parameters used for controlling the commercial simulator’s numerical convergence parameters for the global grid. The keyword is similar to the <text:a xlink:href="#__RefHeading___Toc50286_327352552">TUNINGDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that is optimized for high throughput runs. The keyword is mostly ignored by OPM Flow; however, the simulator can be instructed to read the first record of the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword if the appropriate command line parameter has been activated (see section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a>).</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword defines the parameters used to control the commercial simulator’s time stepping and numerical convergence for the global grid. The keyword is similar to the <text:a xlink:href="#__RefHeading___Toc50286_327352552">TUNINGDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section that is optimized for high throughput runs. The keyword is mostly ignored by OPM Flow; however, the simulator can be instructed to read some parameters from the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword if the appropriate command line parameter has been activated (see section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a>).</text:p>
     <table:table table:name="Table839" table:style-name="Table839">
      <table:table-column table:style-name="Table839.A"/>
      <table:table-column table:style-name="Table839.B"/>
@@ -4919,7 +4919,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7513">TSMAXZ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7510">TSMAXZ is a real positive value that defines the maximum length of the next time step following TSINIT.</text:p>
+       <text:p text:style-name="P7510">TSMAXZ is a real positive value that defines the maximum length of time steps following the next time step (TSINIT).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4979,7 +4979,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7513">TSMCHP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7510">TSMCHP is a real positive values that sets the minimum length of all chopped time steps.</text:p>
+       <text:p text:style-name="P7510">TSMCHP is a real positive value that sets the minimum time step length that can be chopped.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5074,7 +5074,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TSFCNV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8105">TSFCNV real positive value that specifies the decay rate a time step can be decreased by after the number of target iterations has been exceeded.</text:p>
+       <text:p text:style-name="P8105">TSFCNV real positive value that specifies the decay rate a time step can be decreased by after a convergence failure.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5104,7 +5104,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8113">TFDIFF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5594">TFDIFFA is a real positive value that sets the time step growth factor of the time step after a convergence failure. <text:s/></text:p>
+       <text:p text:style-name="P5594">TFDIFF is a real positive value that sets the time step growth factor of the time step after a convergence failure. <text:s/></text:p>
        <text:p text:style-name="P5597">For example, if the chopped current convergent time step is 10 days and TFDIFF is set to the default value, then the time step will be increased to 1.25 x 10 days, that is the minimum of 12.5 days and TSMAXZ.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5165,7 +5165,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8113">TMAXWC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8114">TMAXWC is a real double precision value that defines maximum allowed time step after a well event; for example, when a well is opened or closed, etc. </text:p>
+       <text:p text:style-name="P8114">TMAXWC is a real positive value that defines maximum allowed time step after a well event; for example, when a well is opened or closed, etc. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5211,7 +5211,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRGTTE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">TRGTTE is a real positive value that sets the time truncation error target.</text:p>
+       <text:p text:style-name="P7788">TRGTTE is a real positive value that sets the target time truncation error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5241,7 +5241,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRGCNV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">TRGCNV a real positive value that defines the non-linear convergence error.</text:p>
+       <text:p text:style-name="P7788">TRGCNV a real positive value that defines the target non-linear convergence error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5385,7 +5385,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
-      <table:table-cell table:style-name="Table839.A37" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7796">2-7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
