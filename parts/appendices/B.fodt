@@ -13283,7 +13283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--check-satfunc-consistency</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An boolean value. Whether or not to check saturation function consistency requirements.</text:p>
+       <text:p text:style-name="P952">A boolean value. Whether or not to check saturation function consistency requirements.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="P950">false</text:p>
@@ -13535,7 +13535,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">--time-step-control-safety-factor</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Value to be multiplied with the time step control tolerance to ensure that the target relative change is lower than the tolerance.</text:p>
+       <text:p text:style-name="P952">A real value to be multiplied with the time step control tolerance to ensure that the target relative change is lower than the tolerance.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="P950">0.8</text:p>
@@ -13826,7 +13826,7 @@ This should lead to better partitioning results on problems with a complex well 
           <text:p text:style-name="P1298">Information about wells being stopped or revived before the timestep has converged will now only be sent to the debug (DBG) file. However, changes to the well status when the timestep has converged will still be output to the terminal and the print (PRT) file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6012" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6012</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="P1298">The stagnation and oscillation code for multi-segment wells has been modified. If the well stagnates five times with full damping then the well is marked as unconverged and the simulator tries again at next newton iteration (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6020" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6020</text:a>). </text:p>
+          <text:p text:style-name="P1298">The stagnation and oscillation code for multi-segment wells has been modified. If the well stagnates five times with full damping then the well is marked as unconverged and the simulator tries again at next Newton iteration (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6020" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6020</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="P1298">The output of some NaN&apos;s has been prevented for ratios of rates, for example produced gas-oil ratio (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6077" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6077</text:a>). If the numerator is zero then zero is now output instead of dividing it by the denominator that might also be zero. </text:p>
@@ -14617,7 +14617,7 @@ This should lead to better partitioning results on problems with a complex well 
        <text:p text:style-name="P901">--metis-params</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A character string. Configuration of Metis partitioner. You can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos; See http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdffor available METIS options.</text:p>
+       <text:p text:style-name="P952">A character string. Configuration of Metis partitioner. You can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json.&apos; See http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/manual.pdf for available METIS options.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="P950">&quot;default&quot;</text:p>
@@ -14704,7 +14704,7 @@ This should lead to better partitioning results on problems with a complex well 
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="P952">Added separate energy convergence tolerance and energy balance tolerance (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5321" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5321</text:a>). Previously the tolerances for mass were used. </text:p>
-       <text:p text:style-name="P952">A real value. Local energy convergence tolerance (Maximum of local energy errors).</text:p>
+       <text:p text:style-name="P952">A real value. Local energy convergence tolerance (maximum of local energy errors).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="P950">0.01</text:p>
@@ -18890,7 +18890,7 @@ This should lead to better partitioning results on problems with a complex well 
       </table:table-cell>
       <table:table-cell table:style-name="Table2145.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A real positive double precision value that sets the minimum reduction of the residual for the linear solver. The linear solver convergences when the residual is reduced sufficiently. </text:p>
-       <text:p text:style-name="P578">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 100, unless specified by the command line option by the user <text:s/>(<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4338" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4338</text:a>).</text:p>
+       <text:p text:style-name="P578">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 200, unless specified by the command line option by the user <text:s/>(<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4338" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4338</text:a>).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2145.D5" office:value-type="string">
        <text:p text:style-name="P250">0.01</text:p>
@@ -18968,7 +18968,7 @@ This should lead to better partitioning results on problems with a complex well 
        <text:p text:style-name="P297">--opencl-ilu-parallel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2145.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A Boolean value set to true or false that if set to true then parallelize the ILU decomposition and application on GPU, or not (false).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value that if set to true then parallelize the ILU decomposition and application on GPU, or not (false).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2145.D5" office:value-type="string">
        <text:p text:style-name="P255">WAHR</text:p>
@@ -19094,7 +19094,7 @@ This should lead to better partitioning results on problems with a complex well 
        <text:p text:style-name="P297"><text:s/>--ecl-strict-parsing</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2145.A2" office:value-type="string">
-       <text:p text:style-name="P663">A Boolean value set to true or false that switches on (true) or off (false) strict parsing mode for parsing - all errors are collected before the application exists.</text:p>
+       <text:p text:style-name="P663">A boolean value that switches on (true) or off (false) strict parsing mode for parsing - all errors are collected before the application exists.</text:p>
        <text:p text:style-name="P663">Useful for debugging initial runs.</text:p>
        <text:p text:style-name="P669">Depreciated (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4607" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4607</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4604" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4604</text:a>).</text:p>
       </table:table-cell>
@@ -20410,7 +20410,7 @@ This should lead to better partitioning results on problems with a complex well 
             <text:p text:style-name="P1315">Made the default AMG parameter setup for the <text:span text:style-name="T50">cpr</text:span> (including <text:span text:style-name="T50">cpr_trueimpes</text:span> and <text:span text:style-name="T50">cpr_quasiimpes</text:span>) option of the command line parameter --linear-solver, match the setup for <text:span text:style-name="T50">cprw</text:span>. In particular, beta = 0.0 (not 1e-4) and prolongationdamping = 1.0 (not 1.6).</text:p>
            </text:list-item>
            <text:list-item>
-            <text:p text:style-name="P1316">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 100, unless specified by the command line option by the user. </text:p>
+            <text:p text:style-name="P1316">The simulator now overrides the default reduction to be 0.005 instead of 0.01, if the linear solver has been set to one of the cpr options, in a similar manner as how the default maximum number of linear iterations for the cpr and cprw options are changed to 20 instead of 200, unless specified by the command line option by the user. </text:p>
            </text:list-item>
            <text:list-item>
             <text:p text:style-name="P1317">Changed the default value for --c<text:span text:style-name="T50">pr</text:span>-r<text:span text:style-name="T50">euse</text:span>-s<text:span text:style-name="T50">etup </text:span>to 4 (was 3). The old default never recreates the preconditioner from scratch, i.e. the hierarchy that is built for AMG is kept unchanged (the numbers in the matrices and therefore also smoothers etc. are updated every solve). The new default will recreate it every --c<text:span text:style-name="T50">pr</text:span>-r<text:span text:style-name="T50">euse</text:span>-i<text:span text:style-name="T50">nterval</text:span> solves instead. The default for --c<text:span text:style-name="T50">pr</text:span>-r<text:span text:style-name="T50">euse</text:span>-i<text:span text:style-name="T50">nterval</text:span> has been increased from 10 to 30 (but recall the interval was essentially infinite when --c<text:span text:style-name="T50">pr</text:span>-r<text:span text:style-name="T50">euse</text:span>-s<text:span text:style-name="T50">etup</text:span> was 3).</text:p>
@@ -21608,7 +21608,7 @@ This should lead to better partitioning results on problems with a complex well 
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P392">Note, the commercial simulator requires that the well must be declared as an injector using the WECONINJE keyword before entering the fluid&apos;s injection temperature with the <text:a xlink:href="#__RefHeading___Toc192631_213178337">WTEMP</text:a> keyword. OPM Flow&apos;s behavior is more robust, due to storing the temperature unconditionally for all wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/3218" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3218</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4265" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4265</text:a>). Thus, making the order of the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc192631_213178337">WTEMP</text:a> keywords in the input deck irrelevant. Both keywords are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.. </text:p>
+    <text:p text:style-name="P392">Note, the commercial simulator requires that the well must be declared as an injector using the WECONINJE keyword before entering the fluid&apos;s injection temperature with the <text:a xlink:href="#__RefHeading___Toc192631_213178337">WTEMP</text:a> keyword. OPM Flow&apos;s behavior is more robust, due to storing the temperature unconditionally for all wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/3218" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3218</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4265" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4265</text:a>). Thus, making the order of the <text:a xlink:href="#__RefHeading___Toc146750_4203985108">WCONINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc192631_213178337">WTEMP</text:a> keywords in the input deck irrelevant. Both keywords are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="P393">Thanks to Edmund Stephens for discovering the issue and providing an example model for analyzing the underlying issue.</text:p>
     <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
      <text:list-item>
