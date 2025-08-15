@@ -4585,7 +4585,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table1975.A1" office:value-type="string">
         <text:p text:style-name="P10243">Note</text:p>
         <text:p text:style-name="P10248">If the <text:a xlink:href="#__RefHeading___Toc177536_3429068809">AQUANCON</text:a> keyword has been utilized in the run deck then OPM Flow will write the <text:s/>AQUIFERA array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
-        <text:p text:style-name="P10248">This is accomplished by setting the AQUIFERA value to 2(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple analytical aquifers then AQUIFERA is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
+        <text:p text:style-name="P10248">This is accomplished by setting the AQUIFERA value to 2^(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple analytical aquifers then AQUIFERA is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
