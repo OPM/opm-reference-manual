@@ -5077,7 +5077,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P78">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P58">PRESS is a real positive value that defines the constant pressure boundary condition. PRESS should only be entered if TYPE has been set to DIRICHLET. If the pressure at the boundary is less than PRESS, then the fluid type declared via PHASE will flow across the boundary.</text:p>
+       <text:p text:style-name="P58">PRESS is a real positive value that defines the constant pressure boundary condition. PRESS should only be entered if TYPE has been set to DIRICHLET. If the pressure at the boundary is less than PRESS, then the fluid type declared via COMPONENT will flow across the boundary.</text:p>
        <text:p text:style-name="P53">The default value of 1* will use the simulator&apos;s calculated value based on data entered via the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5503,13 +5503,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P38">-- <text:s text:c="6"/>DEFINE BOUNDARY CONDITIONS PROPERTIES (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P38">--INDEX <text:s/>BC <text:s text:c="8"/>BC <text:s text:c="4"/>BC <text:s text:c="3"/>BC <text:s text:c="4"/>BC </text:p>
-    <text:p text:style-name="P38">-- <text:s text:c="6"/>TYPE <text:s text:c="6"/>PHASE <text:s/>RATE <text:s/>PRESS <text:s/>TEMP</text:p>
+    <text:p text:style-name="P38">-- <text:s text:c="6"/>TYPE <text:s text:c="6"/>COMPT <text:s/>RATE <text:s/>PRESS <text:s/>TEMP</text:p>
     <text:p text:style-name="P38">BCPROP <text:s text:c="57"/></text:p>
     <text:p text:style-name="P38">1 <text:s text:c="7"/>FREE <text:s text:c="6"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>/ </text:p>
     <text:p text:style-name="P38">2 <text:s text:c="7"/>FREE <text:s text:c="32"/>/ </text:p>
     <text:p text:style-name="P39">/</text:p>
     <text:p text:style-name="P39"/>
-    <text:p text:style-name="P79">With this option it is only necessary to define the boundary cells and all the other parameters (PHASE, RATE, PRESS, and <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a>) can be defaulted, as they are ignored when TYPE equals FREE.</text:p>
+    <text:p text:style-name="P79">With this option it is only necessary to define the boundary cells and all the other parameters (COMPONENT, RATE, PRESS, and <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a>) can be defaulted, as they are ignored when TYPE equals FREE.</text:p>
     <text:p text:style-name="P84">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
     <text:p text:style-name="P38">--</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/>DEFINE BOUNDARY CONDITIONS CONNECTION (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
@@ -5525,9 +5525,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P38">-- <text:s text:c="6"/>DEFINE BOUNDARY CONDITIONS PROPERTIES (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P38">--INDEX <text:s/>BC <text:s text:c="8"/>BC <text:s text:c="4"/>BC <text:s text:c="3"/>BC <text:s text:c="4"/>BC </text:p>
-    <text:p text:style-name="P38">-- <text:s text:c="6"/>TYPE <text:s text:c="6"/>PHASE <text:s/>RATE <text:s/>PRESS <text:s/>TEMP</text:p>
+    <text:p text:style-name="P38">-- <text:s text:c="6"/>TYPE <text:s text:c="6"/>COMPT <text:s/>RATE <text:s/>PRESS <text:s/>TEMP</text:p>
     <text:p text:style-name="P38">BCPROP <text:s text:c="57"/></text:p>
-    <text:p text:style-name="P38">1 <text:s text:c="7"/>RATE <text:s text:c="6"/>GAS <text:s text:c="3"/>1* <text:s text:c="3"/>256.0 <text:s/>100.0 / </text:p>
+    <text:p text:style-name="P38">1 <text:s text:c="7"/>DIRICHLET <text:s/>GAS <text:s text:c="3"/>1* <text:s text:c="3"/>256.0 <text:s/>100.0 / </text:p>
     <text:p text:style-name="P38">2 <text:s text:c="7"/>FREE <text:s text:c="6"/>4* <text:s text:c="23"/>/ </text:p>
     <text:p text:style-name="P39">/</text:p>
     <text:p text:style-name="P39"/>
@@ -5546,7 +5546,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P38">-- <text:s text:c="6"/>DEFINE BOUNDARY CONDITIONS PROPERTIES (OPM FLOW SOLUTION GRID KEYWORD)</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/></text:p>
     <text:p text:style-name="P38">--INDEX <text:s/>BC <text:s text:c="8"/>BC <text:s text:c="4"/>BC <text:s text:c="3"/>BC <text:s text:c="4"/>BC </text:p>
-    <text:p text:style-name="P38">-- <text:s text:c="6"/>TYPE <text:s text:c="6"/>PHASE <text:s/>RATE <text:s/>PRESS <text:s/>TEMP</text:p>
+    <text:p text:style-name="P38">-- <text:s text:c="6"/>TYPE <text:s text:c="6"/>COMPT <text:s/>RATE <text:s/>PRESS <text:s/>TEMP</text:p>
     <text:p text:style-name="P38">BCPROP <text:s text:c="57"/></text:p>
     <text:p text:style-name="P38">1 <text:s text:c="7"/>DIRICHLET <text:s/>WAT <text:s text:c="3"/>1* <text:s text:c="3"/>256.0 <text:s/>100.0 / </text:p>
     <text:p text:style-name="P38">2 <text:s text:c="7"/>DIRICHLET <text:s/>WAT <text:s text:c="3"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>100.0 / </text:p>
