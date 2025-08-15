@@ -4684,7 +4684,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:table-cell table:style-name="Table1938.A1" office:value-type="string">
         <text:p text:style-name="P10242">Note</text:p>
         <text:p text:style-name="P10247">If the <text:a xlink:href="#__RefHeading___Toc115431_846947960">AQUCON</text:a> keyword has been utilized in the run deck then OPM Flow will write the AQUIFERN array to the *.INIT file in order to visualize the aquifer connections in OPM ResInsight. <text:s/></text:p>
-        <text:p text:style-name="P10247">This is accomplished by setting the AQUIFERN value to 2(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple numerical aquifers then AQUIFERN is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
+        <text:p text:style-name="P10247">This is accomplished by setting the AQUIFERN value to 2^(AQUID-1) for cells connected to aquifer AQUID. If a cell is connected to multiple numerical aquifers then AQUIFERN is summed for all aquifers connected to a cell. Note that connecting cells to multiple aquifers is best avoided.</text:p>
         <text:p text:style-name="P10245">Finally, for cells representing the numerical aquifers themselves, <text:s/>AQUIFERN is set to minus AQUID.</text:p>
        </table:table-cell>
       </table:table-row>
