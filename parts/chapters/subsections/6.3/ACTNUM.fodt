@@ -4192,8 +4192,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18372" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5743_3701168388"/>Description<text:bookmark-end text:name="__RefHeading___Toc5743_3701168388"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a> specifies which grid blocks are active or inactive. A value of 1 indicates the block is active and a value of 0 indicates the block is inactive. <text:s/>A grid block is inactive if its pore volume is less than the value entered using keyword <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a>. This keyword can be used to make blocks with a pore volume greater than <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> inactive. Note that a value must be entered for each grid block in the model. Grid blocks are ordered with the I index cycling fastest, followed by the J and K indices. As for all array data repeat counts may be used, for example 100*1; however the full array must be specified.</text:p>
-    <text:p text:style-name="_40_TextBody">Note that a cells activity can also be set using the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword by selection of only those cells that are required to be made inactive.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a> keyword specifies which grid blocks are either active or inactive. A grid block is automatically set to inactive if its pore volume is less than the value entered using the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword. The <text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a> keyword can be used to also make blocks with pore volumes greater than <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> inactive. </text:p>
     <table:table table:name="Table16" table:style-name="Table16">
      <table:table-column table:style-name="Table16.A"/>
      <table:table-column table:style-name="Table16.B"/>
@@ -4221,10 +4220,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1941"><text:a xlink:href="#__RefHeading___Toc4410_421927891">ACTNUM</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table16.A2" office:value-type="string">
-       <text:p text:style-name="P1943">An array of integers that define the activity of a cell by setting it to 1 for being active or 0 for inactive, for each grid block in the model.</text:p>
+       <text:p text:style-name="P1943">An array of integers equal to either 0 or 1 that define the activity of each cell in the model. A value of 0 indicates the cell is inactive.</text:p>
+       <text:p text:style-name="P1943">Grid blocks are ordered with the I index cycling fastest, followed by the J and K indices.</text:p>
+       <text:p text:style-name="P1943">Repeat counts may be used, for example 20*1.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table16.D2" office:value-type="string">
-       <text:p text:style-name="P1942">1*</text:p>
+       <text:p text:style-name="P1942">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="TableLine94708668210784">
@@ -4247,31 +4248,29 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable76" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.2</text:sequence>: ACTNUM Keyword Description</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc5745_3701168388"/>Examples<text:bookmark-end text:name="__RefHeading___Toc5745_3701168388"/></text:h>
     <text:p text:style-name="_40_TextBody">The example below sets several cells to be inactive for a 4 x 5 x 2 model. </text:p>
-    <text:p text:style-name="P12904">ACTNUM</text:p>
-    <text:p text:style-name="P12904"/>
-    <text:p text:style-name="P12904">0 0 1 1 # layer 1</text:p>
-    <text:p text:style-name="P12904">0 0 1 1</text:p>
-    <text:p text:style-name="P12904">1 1 1 1</text:p>
-    <text:p text:style-name="P12904">1 1 1 1</text:p>
-    <text:p text:style-name="P12904">1 1 1 1</text:p>
-    <text:p text:style-name="P12904"/>
-    <text:p text:style-name="P12904">1 1 1 1 # layer 2</text:p>
-    <text:p text:style-name="P12904">1 1 1 1</text:p>
-    <text:p text:style-name="P12904">1 1 1 1</text:p>
-    <text:p text:style-name="P12904">1 1 1 1</text:p>
-    <text:p text:style-name="P12904">0 0 0 0 </text:p>
-    <text:p text:style-name="P12904">/</text:p>
-    <text:p text:style-name="P15269">Alternatively the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
-    <text:p text:style-name="P15269"/>
-    <text:p text:style-name="P12904">-- <text:s text:c="6"/>-- ARRAY <text:s text:c="3"/>CONSTANT -- <text:s/>---------- BOX --------- <text:s text:c="16"/></text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
-    <text:p text:style-name="P12904">EQUALS <text:s text:c="61"/></text:p>
-    <text:p text:style-name="P13746"><text:s text:c="9"/>&apos;ACTNUM’ <text:s text:c="3"/>1.0000 <text:s text:c="6"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / SET ACTIVE CELLS</text:p>
-    <text:p text:style-name="P13746"><text:s text:c="9"/>&apos;ACTNUM’ <text:s text:c="3"/>0.0000 <text:s text:c="6"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>1 <text:s/>/ SET INACTIVE CELLS</text:p>
-    <text:p text:style-name="P13746"><text:s text:c="9"/>&apos;ACTNUM’ <text:s text:c="3"/>0.0000 <text:s text:c="6"/>1 <text:s text:c="2"/>4 <text:s text:c="3"/>4 <text:s text:c="2"/>4 <text:s text:c="3"/>2 <text:s text:c="2"/>2 <text:s/>/ SET INACTIVE CELLS</text:p>
-    <text:p text:style-name="P14324">/ <text:s text:c="50"/></text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    
+    <text:p text:style-name="_40_Example">ACTNUM</text:p>
+    <text:p text:style-name="_40_Example">-- Layer 1</text:p>
+    <text:p text:style-name="_40_Example">0 0 1 1</text:p>
+    <text:p text:style-name="_40_Example">0 0 1 1</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">-- Layer 2</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">1 1 1 1</text:p>
+    <text:p text:style-name="_40_Example">0 0 0 0 </text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">Alternatively the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword could be employed to accomplish the same task, that is:</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>-- ARRAY <text:s text:c="3"/>CONSTANT -- <text:s/>---------- BOX --------- <text:s text:c="16"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="31"/>I1 <text:s/>I2 <text:s text:c="2"/>J1 <text:s/>J2 <text:s text:c="2"/>K1 <text:s/>K2 <text:s text:c="15"/></text:p>
+    <text:p text:style-name="_40_Example">EQUALS <text:s text:c="61"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;ACTNUM’ <text:s text:c="3"/>1.0000 <text:s text:c="6"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* <text:s text:c="2"/>1* <text:s/>1* / SET ACTIVE CELLS</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;ACTNUM’ <text:s text:c="3"/>0.0000 <text:s text:c="6"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>2 <text:s text:c="3"/>1 <text:s text:c="2"/>1 <text:s/>/ SET INACTIVE CELLS</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;ACTNUM’ <text:s text:c="3"/>0.0000 <text:s text:c="6"/>1 <text:s text:c="2"/>4 <text:s text:c="3"/>5 <text:s text:c="2"/>5 <text:s text:c="3"/>2 <text:s text:c="2"/>2 <text:s/>/ SET INACTIVE CELLS</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="50"/></text:p>
    </text:section>
   </office:text>
  </office:body>
