@@ -2856,15 +2856,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P12391" style:family="paragraph" style:parent-style-name="_40_TextBody">
    <style:text-properties officeooo:paragraph-rsid="160d0dba"/>
   </style:style>
-  <style:style style:name="P13208" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="008c6b57" officeooo:paragraph-rsid="1605db9b"/>
-  </style:style>
-  <style:style style:name="P13433" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="018adce5" officeooo:paragraph-rsid="1605db9b"/>
-  </style:style>
-  <style:style style:name="P14492" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties officeooo:paragraph-rsid="1605db9b"/>
-  </style:style>
   <style:style style:name="P15889" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:paragraph-rsid="16016ddf"/>
   </style:style>
@@ -4383,8 +4374,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18582" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881612113"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881612113"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword defines a satellite group’s oil, water and gas production rates in the model. Satellite groups are not connected to the reservoir model and therefore have no wells or subordinate groups associated with them, they are nevertheless connected to other higher level groups and higher level groups <text:s/>within a network model (if activated).<text:s/>They provide a means to “add-in” outside injection and production to the model without modeling the “add-in” reservoir model. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody">This keyword is used to import additional fluid streams into the model from other sources (fields, reservoirs, etc.) that are not defined in the current run. For example, if fields A, B and C are supplying gas to a power plant, but only field A is being modeled in the current input deck, then production from the other two fields (B and C) can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from fields B and C are fixed, and therefore field A acts like a “swing” producer to match the gas demand target. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword defines a satellite group’s oil, water and gas production rates in the model. Satellite groups are not connected to the reservoir model and therefore have no wells or subordinate groups associated with them, they are nevertheless connected to other higher level groups and higher level groups <text:s/>within a network model (if activated).<text:s/>They provide a means to “add-in” outside injection and production to the model without modeling the “add-in” reservoirs. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is used to import additional fluid streams into the model from other sources (fields, reservoirs, etc.) that are not defined in the current run. For example, if Fields A, B and C are supplying gas to a power plant, but only Field A is being modeled in the current input deck, then production from Fields B and C can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from Fields B and C are fixed, and therefore Field A acts like a “swing” producer to match the gas demand target. </text:p>
     <table:table table:name="Table2003" table:style-name="Table2003">
      <table:table-column table:style-name="Table2003.A"/>
      <table:table-column table:style-name="Table2003.B"/>
@@ -4428,11 +4419,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9882">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" office:value-type="string">
-       <text:p text:style-name="P9622">GRPNAME</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7335">A character string of up to eight characters in length that defines the satellite group name for which the group production import rates are being defined. The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group and should not be used with this keyword.</text:p>
-       <text:p text:style-name="P7850">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string of up to eight characters in length that defines the satellite group name for which the group production import rates are being defined. The group named <text:span text:style-name="NotKeyword">FIELD</text:span> is the top most group and should not be used with this keyword.</text:p>
+       <text:p text:style-name="P7850">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section when there is more than one level of groups, otherwise all the groups will sit directly under the <text:span text:style-name="NotKeyword">FIELD</text:span> group in the group tree hierarchy.</text:p>
        <text:p text:style-name="P7182">Note that a satellite group cannot have subordinate groups or wells.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4446,11 +4437,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P901">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7733">ORAT</text:p>
-       <text:p text:style-name="P9560"/>
+       <text:p text:style-name="_40_Table_20_Contents">ORAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7733">A real positive value, greater than or equal to zero, that defines the satellite’s surface oil production rate to be imported into the model.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value, greater than or equal to zero, that defines the satellite’s surface oil production rate to be imported into the model.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4478,10 +4468,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9882">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9513">WRAT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">WRAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7733">A real positive value, greater than or equal to zero, that defines the satellite’s surface water production rate to be imported into the model.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value, greater than or equal to zero, that defines the satellite’s surface water production rate to be imported into the model.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4509,10 +4499,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9882">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9513">GRAT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">GRAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7733">A real positive value, greater than or equal to zero, that defines the satellite’s surface gas production rate to be imported into the model.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value, greater than or equal to zero, that defines the satellite’s surface gas production rate to be imported into the model.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4541,10 +4531,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9882">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8016">RESV</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">RESV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7696">A real positive value, greater than or equal to zero, that defines the <text:s/>satellite’s reservoir volume production rate to be imported into the model.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value, greater than or equal to zero, that defines the <text:s/>satellite’s reservoir volume production rate to be imported into the model.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*) or set to zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4557,7 +4547,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2003.C2" office:value-type="string">
-       <text:p text:style-name="P7672">rtb/d</text:p>
+       <text:p text:style-name="P7672">rb/d</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" office:value-type="string">
        <text:p text:style-name="P7672">rm<text:span text:style-name="T3853">3</text:span>/day</text:p>
@@ -4572,12 +4562,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9882">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7148">GASLIFT</text:p>
-       <text:p text:style-name="P9556"/>
+       <text:p text:style-name="_40_Table_20_Contents">GASLIFT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9026">A real value, greater than or equal to zero, that defines the satellite’s gas lift gas to be imported for this group. </text:p>
-       <text:p text:style-name="P9276">A <text:span text:style-name="T4532">value for GASLIFT is only required if externally supplied gas lift is being imported into the model, and:</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value, greater than or equal to zero, that defines the satellite’s gas lift gas to be imported for this group. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A <text:span text:style-name="T4532">value for GASLIFT is only required if externally supplied gas lift is being imported into the model, and:</text:span></text:p>
        <text:list xml:id="list105920947488591" text:continue-list="list105920128106937" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19700">T<text:span text:style-name="T4532">he Network Model is active in the input deck via the <text:a xlink:href="#__RefHeading___Toc311583_1841740821">NETWORK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:span>Here, GASLIFT is applied to the production network in order to calculate the pressure drop through the network, for branches that have:</text:p>
@@ -4622,10 +4611,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8812">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" office:value-type="string">
-       <text:p text:style-name="P8768">CALRATE</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">CALRATE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2003.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8768">A real value greater than or equal to zero that defines the satellite's calorific production rate.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value greater than or equal to zero that defines the satellite's calorific production rate.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*) or set to zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4651,8 +4640,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable588" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.46</text:sequence>: GSATPROD Keyword Description</text:p>
-    <text:p text:style-name="P15889"/>
-    <text:p text:style-name="P12391">See also the <text:a xlink:href="#__RefHeading___Toc116596_332691817">GSATINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keywords to define satellite injection rates and the group hierarchy, respectively. For non-satellite groups see the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keywords. All the aforementioned keywords are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc116596_332691817">GSATINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keywords to define satellite injection rates and the group hierarchy, respectively. For non-satellite groups see the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> and <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keywords. All the aforementioned keywords are in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="Text_20_body"/>
     <table:table table:name="Table2004" table:style-name="Table2004">
      <table:table-column table:style-name="Table2004.A"/>
@@ -4666,63 +4655,65 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P11767"/>
     <text:h text:style-name="P18692" text:outline-level="4">Example</text:h>
     <text:p text:style-name="_40_TextBody">The example below is based on a dry gas field, with the main field FLD-A being modeled in the input deck with two groups (FLD-A1 and FLD-A2), <text:s/>combined with two satellite gas fields, FLD-B and FLD-C.</text:p>
-    <text:p text:style-name="P13433">-- ==============================================================================</text:p>
-    <text:p text:style-name="P13433">-- </text:p>
-    <text:p text:style-name="P13433">-- SCHEDULE SECTION </text:p>
-    <text:p text:style-name="P13433">-- </text:p>
-    <text:p text:style-name="P13433">-- ==============================================================================</text:p>
-    <text:p text:style-name="P13208">SCHEDULE <text:s text:c="78"/></text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>DEFINE GROUP TREE HIERARCHY</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>LOWER <text:s text:c="4"/>HIGHER</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>GROUP <text:s text:c="4"/>GROUP </text:p>
-    <text:p text:style-name="P14492">GRUPTREE</text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- SCHEDULE SECTION </text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">SCHEDULE <text:s text:c="78"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE GROUP TREE HIERARCHY</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>LOWER <text:s text:c="4"/>HIGHER</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>GROUP <text:s text:c="4"/>GROUP </text:p>
+    <text:p text:style-name="_40_Example">GRUPTREE</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FLD-A <text:s text:c="4"/>FIELD <text:s text:c="54"/>/</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FLD-A1 <text:s text:c="3"/>FLD-A <text:s text:c="54"/>/</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FLD-A2 <text:s text:c="3"/>FLD-A <text:s text:c="54"/>/</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FLD-B <text:s text:c="4"/>FIELD <text:s text:c="54"/>/</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FLD-C <text:s text:c="4"/>FIELD <text:s text:c="54"/>/</text:p>
     <text:p text:style-name="_40_Example">/</text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="77"/>-- GRUP <text:s/>CNTL <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>LIQ <text:s text:c="3"/>CNTL <text:s/>GRUP <text:s/>GUIDE <text:s/>GUIDE <text:s/>CNTL <text:s text:c="21"/></text:p>
-    <text:p text:style-name="P14492">-- NAME <text:s/>MODE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>OPT <text:s text:c="2"/>CNTL <text:s/>RATE <text:s text:c="2"/>DEF <text:s text:c="3"/>WAT <text:s text:c="22"/>GCONPROD <text:s text:c="71"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- GRUP <text:s/>CNTL <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>LIQ <text:s text:c="3"/>CNTL <text:s/>GRUP <text:s/>GUIDE <text:s/>GUIDE <text:s/>CNTL <text:s text:c="21"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>MODE <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>OPT <text:s text:c="2"/>CNTL <text:s/>RATE <text:s text:c="2"/>DEF <text:s text:c="3"/>WAT</text:p>
+    <text:p text:style-name="_40_Example">GCONPROD</text:p>
     <text:p text:style-name="_40_Example">FIELD <text:s text:c="3"/>GRAT <text:s/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>450E3 <text:s/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="27"/>/</text:p>
     <text:p text:style-name="_40_Example">FLD-A <text:s text:c="3"/>FLD <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>450E3 <text:s/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="27"/>/</text:p>
-    <text:p text:style-name="P14492">/ <text:s text:c="79"/>--</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>LOAD INCLUDE FILE - LOAD ALL WELLS AND VFP TABLES</text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">INCLUDE </text:p>
-    <text:p text:style-name="P14492"><text:s text:c="9"/>&apos;FLD-A-P50-WELLS.INC&apos; <text:s/>/</text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>SATELLITE GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14492">-- GRUP <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>RESV <text:s text:c="2"/>GAS <text:s text:c="2"/>CALORIFIC <text:s text:c="36"/></text:p>
-    <text:p text:style-name="P14492">-- NAME <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>LIFT <text:s/>RATE <text:s text:c="41"/></text:p>
-    <text:p text:style-name="P14492">GSATPROD <text:s text:c="52"/></text:p>
-    <text:p text:style-name="P14492">FLD-B <text:s text:c="3"/>10.0 <text:s text:c="2"/>0.00 <text:s text:c="2"/>30E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="19"/>/</text:p>
-    <text:p text:style-name="P14492">FLD-C <text:s text:c="3"/>20.0 <text:s text:c="2"/>5.50 <text:s text:c="2"/>20E3 <text:s text:c="2"/>0.0 <text:s text:c="3"/>1* <text:s text:c="19"/>/</text:p>
-    <text:p text:style-name="P14492">/ <text:s text:c="78"/></text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>ADVANCE SIMULATION BY REPORTING DATE</text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">DATES <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P14492"><text:s text:c="9"/>1 <text:s/>FEB <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="63"/></text:p>
-    <text:p text:style-name="P14492">/ <text:s text:c="2"/></text:p>
-    <text:p text:style-name="P14492">--</text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="6"/>SATELLITE GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
-    <text:p text:style-name="P14492">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P14492">-- GRUP <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>RESV <text:s text:c="2"/>GAS <text:s text:c="2"/>CALORIFIC <text:s text:c="36"/></text:p>
-    <text:p text:style-name="P14492">-- NAME <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>LIFT <text:s/>RATE <text:s text:c="41"/></text:p>
-    <text:p text:style-name="P14492">GSATPROD <text:s text:c="52"/></text:p>
-    <text:p text:style-name="P14492">FLD-B <text:s text:c="3"/>10.0 <text:s text:c="2"/>0.00 <text:s text:c="2"/>30E3 <text:s text:c="2"/>0.0 <text:s text:c="3"/>1* <text:s text:c="19"/>/</text:p>
-    <text:p text:style-name="P14492">FLD-C <text:s text:c="3"/>20.0 <text:s text:c="2"/>9.00 <text:s text:c="2"/>20E3 <text:s text:c="2"/>0.0 <text:s text:c="3"/>1* <text:s text:c="19"/>/</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>LOAD INCLUDE FILE - LOAD ALL WELLS AND VFP TABLES</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">INCLUDE </text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;FLD-A-P50-WELLS.INC&apos; <text:s/>/</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>SATELLITE GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- GRUP <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>RESV <text:s text:c="2"/>GAS <text:s text:c="2"/>CALORIFIC <text:s text:c="36"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>LIFT <text:s/>RATE <text:s text:c="41"/></text:p>
+    <text:p text:style-name="_40_Example">GSATPROD <text:s text:c="52"/></text:p>
+    <text:p text:style-name="_40_Example">FLD-B <text:s text:c="3"/>10.0 <text:s text:c="2"/>0.00 <text:s text:c="2"/>30E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="19"/>/</text:p>
+    <text:p text:style-name="_40_Example">FLD-C <text:s text:c="3"/>20.0 <text:s text:c="2"/>5.50 <text:s text:c="2"/>20E3 <text:s text:c="2"/>0.0 <text:s text:c="3"/>1* <text:s text:c="19"/>/</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="78"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ADVANCE SIMULATION BY REPORTING DATE</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">DATES <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>1 <text:s/>FEB <text:s text:c="2"/>2021 <text:s/>/ <text:s text:c="63"/></text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="2"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>SATELLITE GROUP PRODUCTION CONTROLS <text:s text:c="51"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- GRUP <text:s/>OIL <text:s text:c="3"/>WAT <text:s text:c="3"/>GAS <text:s text:c="3"/>RESV <text:s text:c="2"/>GAS <text:s text:c="2"/>CALORIFIC <text:s text:c="36"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>RATE <text:s text:c="2"/>LIFT <text:s/>RATE <text:s text:c="41"/></text:p>
+    <text:p text:style-name="_40_Example">GSATPROD <text:s text:c="52"/></text:p>
+    <text:p text:style-name="_40_Example">FLD-B <text:s text:c="3"/>10.0 <text:s text:c="2"/>0.00 <text:s text:c="2"/>30E3 <text:s text:c="2"/>0.0 <text:s text:c="3"/>1* <text:s text:c="19"/>/</text:p>
+    <text:p text:style-name="_40_Example">FLD-C <text:s text:c="3"/>20.0 <text:s text:c="2"/>9.00 <text:s text:c="2"/>20E3 <text:s text:c="2"/>0.0 <text:s text:c="3"/>1* <text:s text:c="19"/>/</text:p>
     <text:p text:style-name="_40_Example">/ <text:s text:c="3"/></text:p>
-    <text:p text:style-name="P12390"><text:soft-page-break/>Since the field gas rate is set to 450 MMscf/d and the satellite production is 50 MMscf/d, then FLD-A will produce only 400 MMscf/d and not the stipulated 450 MMscf/d on the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword. <text:s/><text:s text:c="150"/></text:p>
-    
+    <text:p text:style-name="_40_Example"></text:p>
+    <text:p text:style-name="_40_TextBody">Since the field gas rate is set to 450 MMscf/d and the satellite production is 50 MMscf/d, then FLD-A will produce only 400 MMscf/d and not the stipulated 450 MMscf/d on the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword.</text:p>
    </text:section>
   </office:text>
  </office:body>
