@@ -894,6 +894,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
   </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
    <style:text-properties fo:color="#004586" loext:opacity="100%"/>
@@ -13115,324 +13119,282 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3">
-       <text:p text:style-name="P203">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">TODO</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--check-satfunc-consistency</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">TODO</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Saturation function consistency checking is now activated by default. A boolean value. Whether or not to check saturation function consistency requirements. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">TODO</text:p>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">true</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A3&gt;+1" office:value-type="float" office:value="2">
-       <text:p text:style-name="P212">2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--allow-splitting-inactive-wells</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--cpr-weights-thread-parallel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Allow inactive (never non-shut) wells to be split across multiple domains.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable OpenMP thread parallelization of CPR weight calculation. This can improve performance for large models but is disabled by default.Usage: --cpr-weights-thread-parallel=[true|false]. . </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">true</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A4&gt;+1" office:value-type="float" office:value="3">
-       <text:p text:style-name="P212">3</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A4&gt;+1" office:value-type="float" office:value="3">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--bda-device-id</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--debug-verbosity-level</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Renamed as --gpu-device-id.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Set debug verbosity level globally. Default is 1, increasing values give additional output and 0 disables most messages to the .DBG file. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A5&gt;+1" office:value-type="float" office:value="4">
-       <text:p text:style-name="P207">4</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--check-satfunc-consistency</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--edge-conformal</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Whether or not to check saturation function consistency requirements.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Edge conformal cornerpoint processing. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">false</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A6&gt;+1" office:value-type="float" office:value="5">
-       <text:p text:style-name="P203">5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--gpu-device-id</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--edge-weights-method</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integet value. Choose device ID for cusparseSolver or openclSolver, use &apos;nvidia-smi&apos; or &apos;clinfo&apos; to determine valid IDs.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The edge-weighting method is now chosen by specifying a string rather than an integer. A character string. Choose edge-weighing strategy: 'uniform', 'transmissibility', or 'logtrans' (logarithm of transmissibility). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"transmissibility"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A7&gt;+1" office:value-type="float" office:value="6">
-       <text:p text:style-name="P203">6</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--local-domains-partition-well-neighbor-levels</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--gpu-aware-mpi</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Number of neighbor levels around wells to include in the same domain during NLDD partitioning. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. MPI communication use GPU aware MPI in the sense that it will use GPU direct communication. Setting this to true will require that the MPI implementation supports GPU direct communication. If you are unsure, set this to false. Usage: --gpu-aware-mpi=[true|false]. . </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A8&gt;+1" office:value-type="float" office:value="7">
-       <text:p text:style-name="P209">7</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--maximum-number-of-group-switches</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--hy-ne-config-file</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Maximum number of times a group can switch to the same control.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. Use config files for Hybrid Newton. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"hybridNewtonConfig.json"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A9&gt;+1" office:value-type="float" office:value="8">
-       <text:p text:style-name="P209">8</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A9&gt;+1" office:value-type="float" office:value="8">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-max-iterations</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--linear-solver-accelerator</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Replaced by --network-max-outer-iterations.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. Choose the backend for the linear solver, usage: '--linear-solver-accelerator=[cpu|gpu]'. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">200</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"cpu"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A10&gt;+1" office:value-type="float" office:value="9">
-       <text:p text:style-name="P209">9</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-max-outer-iterations</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--max-well-status-switch-for-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Maximum outer number of iterations in the network solver before giving up.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of status switching (stop&lt;-&gt;open) for a well during a time-step. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">10</text:p>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">99</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A11&gt;+1" office:value-type="float" office:value="10">
-       <text:p text:style-name="P209">10</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">10</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-max-pressure-update-in-bars</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--max-well-status-switch-in-inner-iter-wells</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Maximum pressure update in the inner network pressure update iterations.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of status switching (stop&lt;-&gt;open) for a well during inner iterations. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">99</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A27" table:formula="ooow:&lt;A12&gt;+1" office:value-type="float" office:value="11">
-       <text:p text:style-name="P209">11</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A12&gt;+1" office:value-type="float" office:value="11">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-max-strict-iterations</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--milu-variant</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Replaced by --network-max-strict-outer-iterations.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The names of the possible variants have been converted to lower case. A character string. Specify which variant of the modified-ILU preconditioner ought to be used. Possible variants are: ilu (default, plain ILU), milu_1 (lump diagonal with dropped row entries), milu_2 (lump diagonal with the sum of the absolute values of the dropped row entries), milu_3 (if diagonal is positive add sum of dropped row entries, otherwise subtract them), milu_4 (if diagonal is positive add sum of dropped row entries, otherwise do nothing). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">100</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"ilu"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A13&gt;+1" office:value-type="float" office:value="12">
-       <text:p text:style-name="P212">12</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">12</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-max-strict-outer-iterations</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--nldd-relative-mobility-change-tol</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Maximum outer iterations in network solver before relaxing tolerance.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Threshold for single cell relative mobility change in the NLDD solver. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">10</text:p>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A14&gt;+1" office:value-type="float" office:value="13">
-       <text:p text:style-name="P209">13</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">13</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-max-sub-iterations</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--partition-method</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Maximum number of sub-iterations to update network pressures (within a single well/group control update).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The names of the partitioning methods have been converted to lower case. A character string. Choose partitioning method: 'simple', 'zoltan', 'metis', or 'zoltanwell' (Zoltan with all cells perforated by a well represented by a single vertex). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">20</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"zoltanwell"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A15&gt;+1" office:value-type="float" office:value="14">
-       <text:p text:style-name="P209">14</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--network-pressure-update-damping-factor</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-max-reduction-time-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Damping factor in the inner network pressure update iterations.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. (Only applicable for the general 3rd order controller, using 'control-error-filtering' as time-step-control-tolerance-test-version) If the (proposed) relative change in time step size is larger than this parameter, the time step will be rejected. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A16&gt;+1" office:value-type="float" office:value="15">
-       <text:p text:style-name="P209">15</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">15</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--num-overlap</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-parameters</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Numbers of layers overlap in parallel partition.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. (Only applicable for the general 3rd order controller.) Parameters for the general 3rd order controller. Should be given as 'beta_1;beta_2;beta_3;alpha_2;alpha_3'. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"0.125;0.25;0.125;0.75;0.25"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A17&gt;+1" office:value-type="float" office:value="16">
-       <text:p text:style-name="P951">16</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">16</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--num-satfunc-consistency-sample-points</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-reject-completed-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">Maximum number of reported failures for each individual saturation function consistency check.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. (Only applicable for the general 3rd order controller.) Include rejection of completed time steps if the relative change is larger than the time step control tolerance. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A18&gt;+1" office:value-type="float" office:value="17">
-       <text:p text:style-name="P951">17</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">17</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--nupcol-group-rate-tolerance</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-tolerance-test-version</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Tolerance for acceptable changes in VREP/RAIN group rates.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. (Only applicable for the general 3rd order controller.) Ways to decide if the time step should be rejected. Options: 'standard' and 'control-error-filtering'. The standard version compares relative change to tolerance directly to decide if the time step should be rejected, while the control-error-filtering version compares the relative change in time step size to the max-reduction-time-step parameter. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.001</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">"standard"</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A19&gt;+1" office:value-type="float" office:value="18">
-       <text:p text:style-name="P212">18</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">18</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--partition-method</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--use-hy-ne</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. Choose partitioning strategy: 0=simple, 1=Zoltan, 2=METIS, 3=Zoltan with all cells of well represented by one vertex.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Wheter or not to use Hybrid Newton. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">3</text:p>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A20&gt;+1" office:value-type="float" office:value="19">
-       <text:p text:style-name="P212">19</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">19</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--pre-solve-network</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--verify-gpu-aware-mpi</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Pre solve and iterate the network model at start-up.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Verify that the MPI implementation supports GPU aware MPI. If this is set to true *and* --gpu-aware-mpi=true, the simulation will fail if the MPI implementation does not support GPU aware MPI. Note that the verification is not exhaustive, and some configurations will not verify, but will work in practice. Usage: --verify-gpu-aware-mpi=[true|false]. . </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">true</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A21" table:formula="ooow:&lt;A21&gt;+1" office:value-type="float" office:value="20">
-       <text:p text:style-name="P212">20</text:p>
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A21&gt;+1" office:value-type="float" office:value="20">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">20</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--slave</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--well-group-constraints-max-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A boolean value. Specify if the simulation is a slave simulation in a master-slave simulation.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of iterations in the well/group switching algorithm. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">false</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A22&gt;+1" office:value-type="float" office:value="21">
-       <text:p text:style-name="P212">21</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--threads-per-process</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">An integer value. The maximum number of threads to be instantiated per process (&apos;-1&apos; means &apos;automatic&apos;).</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
-       <text:p text:style-name="P950">2</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A23&gt;+1" office:value-type="float" office:value="22">
-       <text:p text:style-name="P212">22</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--time-step-control-safety-factor</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value to be multiplied with the time step control tolerance to ensure that the target relative change is lower than the tolerance.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.8</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A21" table:formula="ooow:&lt;A24&gt;+1" office:value-type="float" office:value="23">
-       <text:p text:style-name="P212">23</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="P901">--zoltan-phg-edge-size-threshold</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="P952">A real value. Low-level threshold fraction in the range [0,1] controlling which hypergraph edge to omit. Used if --zoltan-params=&quot;graph&quot; or if --zoltan-params=&quot;hypergraph&quot;.</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="P950">0.35</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
