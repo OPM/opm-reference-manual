@@ -4348,9 +4348,9 @@ MICP update.</dc:description><meta:initial-creator>David Landa-Marbán</meta:ini
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_3701168388314311"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_3701168388314311"/></text:h>
-    <text:p text:style-name="P12434">The <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFPARA">BIOFPARA</text:a> keyword defines parameters for models including biofilms. For the parameters, biomass means both suspended microbes in the water phase (labeled as microbial) and biofilm. Currently the only available model with biofilm effects is the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model. See Landa-Marbán et al<text:note text:id="ftn198" text:note-class="footnote"><text:note-citation>198</text:note-citation><text:note-body>
+    <text:p text:style-name="P12434">The <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFPARA">BIOFPARA</text:a> keyword defines parameters for models including biofilms. For the parameters, biomass means both suspended microbes in the water phase (labeled as microbial) and biofilm. Currently the two available models with biofilm effects are the <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFILM">BIOFILM</text:a> and the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model. See Landa-Marbán et al<text:note text:id="ftn198" text:note-class="footnote"><text:note-citation>198</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Landa-Marb<text:span text:style-name="T7235">á</text:span>n, D., Tveit, S., Kumar, K., Gasda, S.E., 2021. Practical approaches to study microbially induced calcite precipitation at the field scale. Int. J. Greenh. Gas Control 106, 103256. https://doi.org/10.1016/j.ijggc.2021.103256.</text:p></text:note-body></text:note> and <text:note text:id="ftn199" text:note-class="footnote"><text:note-citation>199</text:note-citation><text:note-body>
-        <text:p text:style-name="P16680">Landa-Marb<text:span text:style-name="T7235">á</text:span>n, D., Kumar, K., Tveit, S., Gasda, S.E., 2021. Numerical studies of CO2 leakage remediation by micp-based plugging technology. In: R<text:span text:style-name="T7236">ø</text:span>kke, N.A. and Knuutila, H.K. (Eds) Short Papers from the 11th International Trondheim CCS conference, ISBN: 978-82-536-1714-5, 284-290.</text:p></text:note-body></text:note><text:s/>for further information on the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model parameters.</text:p>
+        <text:p text:style-name="P16680">Landa-Marb<text:span text:style-name="T7235">á</text:span>n, D., Kumar, K., Tveit, S., Gasda, S.E., 2021. Numerical studies of CO2 leakage remediation by micp-based plugging technology. In: R<text:span text:style-name="T7236">ø</text:span>kke, N.A. and Knuutila, H.K. (Eds) Short Papers from the 11th International Trondheim CCS conference, ISBN: 978-82-536-1714-5, 284-290.</text:p></text:note-body></text:note><text:s/>for further information on the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model parameters, which are also used in the <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFILM">BIOFILM</text:a> model.</text:p>
     <table:table table:name="Table2011" table:style-name="Table2011">
      <table:table-column table:style-name="Table2011.A"/>
      <table:table-column table:style-name="Table2011.B"/>
@@ -4637,7 +4637,7 @@ MICP update.</dc:description><meta:initial-creator>David Landa-Marbán</meta:ini
        <text:p text:style-name="_40_Table_20_Contents">DETAEXPO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2011.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the exponent in the norm for the water velocity in the detachment term.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the exponent in the norm for the water velocity in the detachment term (this value was set to 0.58 in the <text:a xlink:type="simple" xlink:href="https://www.sciencedirect.com/science/article/pii/S1750583621000086" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T6">MICP publication</text:span></text:a>).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4785,6 +4785,9 @@ MICP update.</dc:description><meta:initial-creator>David Landa-Marbán</meta:ini
        <text:list text:style-name="L17">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P73">The keyword is followed by NTSFUN vectors as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P74">Items 10 to 13 are only relevant for the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P74">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
