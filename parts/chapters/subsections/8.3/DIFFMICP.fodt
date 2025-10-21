@@ -2857,6 +2857,34 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P18462" style:family="paragraph" style:parent-style-name="Heading_20_4">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="00f8d285"/>
   </style:style>
+  <style:style style:name="Table1837" style:family="table">
+   <style:table-properties style:width="15.584cm" table:align="right" fo:background-color="transparent" style:shadow="#000000 0.178cm 0.178cm" style:may-break-between-rows="false">
+    <style:background-image/>
+   </style:table-properties>
+  </style:style>
+  <style:style style:name="Table1837.A" style:family="table-column">
+   <style:table-column-properties style:column-width="15.584cm"/>
+  </style:style>
+  <style:style style:name="Table1837.1" style:family="table-row">
+   <style:table-row-properties fo:background-color="transparent">
+    <style:background-image/>
+   </style:table-row-properties>
+  </style:style>
+  <style:style style:name="Table1837.A1" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding="0.097cm" fo:border="0.05pt solid #000000">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
+  <style:style style:name="P10216" style:family="paragraph" style:parent-style-name="_40_TextNote">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false" fo:background-color="transparent"/>
+   <style:text-properties fo:color="#ffffff" loext:opacity="100%" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" officeooo:paragraph-rsid="1031fbcc" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P10255" style:family="paragraph" style:parent-style-name="_40_TextNote">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:paragraph-properties fo:background-color="transparent"/>
+   <style:text-properties fo:color="#ffffff" loext:opacity="100%" officeooo:paragraph-rsid="1031fbcc"/>
+  </style:style>
   <style:style style:name="P18776" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="First_20_Page">
    <style:paragraph-properties style:page-number="auto"/>
   </style:style>
@@ -4350,7 +4378,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18462" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881954 Copy 1"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881954 Copy 1"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFMICP_8_3">DIFFMICP</text:a> keyword defines the diffusion coefficients assuming the mass concentration formulation for each <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> component dissolved in water and for each PVT region, for when the Molecular Diffusion option has been activated by the <text:a xlink:href="#__RefHeading___Toc349951_1539708736">DIFFUSE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model has been activated via the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#REF_HEADING_KEYWORD_DIFFMICP_8_3">DIFFMICP</text:a> keyword defines the diffusion coefficients assuming the mass concentration formulation for each component dissolved in water and for each PVT region, for when the molecular diffusion option has been activated by the <text:a xlink:href="#__RefHeading___Toc349951_1539708736">DIFFUSE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The keyword should only be used if either the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFILM">BIOFILM</text:a> model has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+    <table:table table:name="Table1837" table:style-name="Table1837">
+     <table:table-column table:style-name="Table1837.A"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table1837.1">
+       <table:table-cell table:style-name="Table1837.A1" office:value-type="string">
+        <text:p text:style-name="P10216">Note</text:p>
+        <text:p text:style-name="P10255">This is an OPM Flow specific keyword. </text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+    </table:table>
     <text:p text:style-name="P12898"/>
     <table:table table:name="Table2314" table:style-name="Table2314">
      <table:table-column table:style-name="Table2314.A"/>
@@ -4486,6 +4525,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list xml:id="list105915081732839" text:continue-list="list105915031982016" text:style-name="L17">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P20091">The keyword is followed by NTPVT tables as declared on the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P20067">Item 1 is only relevant for the <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFILM">BIOFILM</text:a> model.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20067">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>

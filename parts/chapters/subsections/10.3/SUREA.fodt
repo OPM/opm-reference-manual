@@ -2756,6 +2756,34 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T1" style:family="text">
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
+  <style:style style:name="Table1837" style:family="table">
+   <style:table-properties style:width="15.584cm" table:align="right" fo:background-color="transparent" style:shadow="#000000 0.178cm 0.178cm" style:may-break-between-rows="false">
+    <style:background-image/>
+   </style:table-properties>
+  </style:style>
+  <style:style style:name="Table1837.A" style:family="table-column">
+   <style:table-column-properties style:column-width="15.584cm"/>
+  </style:style>
+  <style:style style:name="Table1837.1" style:family="table-row">
+   <style:table-row-properties fo:background-color="transparent">
+    <style:background-image/>
+   </style:table-row-properties>
+  </style:style>
+  <style:style style:name="Table1837.A1" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding="0.097cm" fo:border="0.05pt solid #000000">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
+  <style:style style:name="P10216" style:family="paragraph" style:parent-style-name="_40_TextNote">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false" fo:background-color="transparent"/>
+   <style:text-properties fo:color="#ffffff" loext:opacity="100%" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" officeooo:paragraph-rsid="1031fbcc" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P10255" style:family="paragraph" style:parent-style-name="_40_TextNote">
+   <loext:graphic-properties draw:fill="none"/>
+   <style:paragraph-properties fo:background-color="transparent"/>
+   <style:text-properties fo:color="#ffffff" loext:opacity="100%" officeooo:paragraph-rsid="1031fbcc"/>
+  </style:style>
   <style:style style:name="T2" style:family="text">
    <style:text-properties fo:font-size="20pt" style:font-size-asian="20pt" style:font-size-complex="20pt"/>
   </style:style>
@@ -4225,7 +4253,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838831431111111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838831431111111"/></text:h>
-    <text:p text:style-name="P11885">The <text:a xlink:href="#__RefHeading___Toc450660_111689907">SUREA</text:a> keyword defines the initial equilibration urea concentration values for all grid cells in the model and should be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a>, <text:a xlink:href="#__RefHeading___Toc394934_111689907">SBIOF</text:a>, <text:a xlink:href="#__RefHeading___Toc406066_111689907">SCALC</text:a>, <text:a xlink:href="#__RefHeading___Toc428289_111689907">SMICR</text:a>, and <text:a xlink:href="#__RefHeading___Toc439460_111689907">SOXYG</text:a> keywords to fully describe the initial state of the model. The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model has been activated via the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="P11885">The <text:a xlink:href="#__RefHeading___Toc450660_111689907">SUREA</text:a> keyword defines the initial equilibration urea concentration values for all grid cells in the model. The keyword should only be used if the <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> model has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <table:table table:name="Table1837" table:style-name="Table1837">
+     <table:table-column table:style-name="Table1837.A"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table1837.1">
+       <table:table-cell table:style-name="Table1837.A1" office:value-type="string">
+        <text:p text:style-name="P10216">Note</text:p>
+        <text:p text:style-name="P10255">This is an OPM Flow specific keyword. </text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+    </table:table>
     <text:p text:style-name="P15825"/>
     <table:table table:name="Table2028" table:style-name="Table2028">
      <table:table-column table:style-name="Table2028.A"/>
@@ -4271,7 +4310,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4922"><text:a xlink:href="#__RefHeading___Toc450660_111689907">SUREA</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2028.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3708"><text:a xlink:href="#__RefHeading___Toc450660_111689907">SUREA</text:a> is an array of real positive numbers that are greater than or equal to zero assigning the initial equilibration urea concentration values to each cell in the model. </text:p>
+       <text:p text:style-name="P3708"><text:a xlink:href="#__RefHeading___Toc450660_111689907">SUREA</text:a> is an array of real numbers that are greater than or equal to zero assigning the initial equilibration urea concentration values to each cell in the model. </text:p>
        <text:p text:style-name="P4088">Repeat counts may be used, for example 20*30.0.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4315,7 +4354,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14829">Table <text:sequence text:ref-name="refTable500" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.54</text:sequence>: SUREA Keyword Description</text:p>
     <text:p text:style-name="P15602"/>
-    <text:p text:style-name="P11885">See also the <text:a xlink:href="#__RefHeading___Toc135627_1317547213">PRESSURE</text:a>, <text:a xlink:href="#__RefHeading___Toc394934_111689907">SBIOF</text:a>, <text:a xlink:href="#__RefHeading___Toc406066_111689907">SCALC</text:a>, <text:a xlink:href="#__RefHeading___Toc428289_111689907">SMICR</text:a>, and <text:a xlink:href="#__RefHeading___Toc439460_111689907">SOXYG</text:a> keywords to fully define the initial state of the model.</text:p>
+    <text:p text:style-name="P11885">See also the <text:a xlink:href="#__RefHeading___Toc394934_111689907">SBIOF</text:a>, <text:a xlink:href="#__RefHeading___Toc406066_111689907">SCALC</text:a>, <text:a xlink:href="#__RefHeading___Toc428289_111689907">SMICR</text:a>, and <text:a xlink:href="#__RefHeading___Toc439460_111689907">SOXYG</text:a> keywords to define the initial state of the model.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14501_370116838831421111211"/>Example<text:bookmark-end text:name="__RefHeading___Toc14501_370116838831421111211"/></text:h>
     <text:p text:style-name="P13021">--</text:p>
     <text:p text:style-name="P13021">-- <text:s text:c="6"/>DEFINE INITIAL EQUILIBRATION UREA CONCENTRATION FOR ALL CELLS</text:p>
