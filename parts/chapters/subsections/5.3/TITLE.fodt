@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4274,10 +4275,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2901">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table188.B2" office:value-type="string">
-       <text:p text:style-name="P3563"><text:a xlink:href="#__RefHeading___Toc37371_784232322">TITLE</text:a></text:p>
+       <text:p text:style-name="P3563"><text:span text:style-name="NotKeyword">TITLE</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table188.C2" office:value-type="string">
-       <text:p text:style-name="P3170">A character string that defines the <text:a xlink:href="#__RefHeading___Toc37371_784232322">TITLE</text:a> for the input deck</text:p>
+       <text:p text:style-name="P3170">A character string that defines the title for the input deck</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table188.D2" office:value-type="string">
        <text:p text:style-name="P3564">None￹</text:p>
@@ -4288,7 +4289,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1409">Notes:</text:p>
        <text:list xml:id="list105909851417897" text:continue-list="list105909809885563" text:style-name="L17">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P20174">All the characters on the line are processed as a string and therefore there is no need to enclose the <text:a xlink:href="#__RefHeading___Toc37371_784232322">TITLE</text:a> in quotes.</text:p>
+         <text:p text:style-name="P20174">All the characters on the line following the <text:a xlink:href="#__RefHeading___Toc37371_784232322">TITLE</text:a> keyword are processed as a string and therefore there is no need to enclose the title in quotes.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P20174">There is no terminator “/” for the keyword.</text:p>
@@ -4315,13 +4316,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P16020"/>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683884"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683884"/></text:h>
-    <text:p text:style-name="P12904">--</text:p>
-    <text:p text:style-name="P13716">-- <text:s text:c="6"/>DEFINE THE TITLE FOR THE RUN <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P13717">TITLE <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P13718">SPE01-THEM01-OPM1810-R01 - OPM THERMAL OPTION RUN</text:p>
-    <text:p text:style-name="P13717"><text:s text:c="81"/></text:p>
-    <text:p text:style-name="P11568">The above example defines the title for the run to be “SPE01-THEM01-OPM1810-R01 - OPM <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> OPTION RUN”.</text:p>
-    <text:p text:style-name="P11253"/>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE THE TITLE FOR THE RUN <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">TITLE <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example">SPE01-THEM01-OPM1810-R01 - OPM THERMAL OPTION RUN</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="81"/></text:p>
+    <text:p text:style-name="_40_TextBody">The above example defines the title for the run to be “SPE01-THEM01-OPM1810-R01 - OPM <text:span text:style-name="NotKeyword">THERMAL</text:span> OPTION RUN”.</text:p>
     
    </text:section>
   </office:text>
