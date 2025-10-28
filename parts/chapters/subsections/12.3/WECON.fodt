@@ -4640,7 +4640,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716721_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716721_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword defines the economic criteria for production wells that have previously been defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
-    <text:p text:style-name="_40_TextBody">Note that wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134876_2055188184">GECON</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the economic criteria specified by the <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword. Note that <text:a xlink:href="#__RefHeading___Toc134876_2055188184">GECON</text:a> is not supported by OPM Flow in the current release.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that wells can be allocated to a group when they are specified by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword and groups can also have economic controls. Wells under group control are therefore subject to the economic criteria set via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> and <text:a xlink:href="#__RefHeading___Toc134876_2055188184">GECON</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the economic criteria specified by the <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword.</text:p>
     <table:table table:name="Table130" table:style-name="Table130">
      <table:table-column table:style-name="Table130.A"/>
      <table:table-column table:style-name="Table130.B"/>
@@ -4715,9 +4715,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P8193">Only option (2) is supported by OPM Flow as STATUS equals AUTO on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword is currently not supported by the simulator. Hence, the well be either shut or stopped.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criterion.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P7479">A value less than or equal to zero switches off this criterion.</text:p>
-       <text:p text:style-name="P7479"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4745,7 +4744,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7466">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9511"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a></text:p>
+       <text:p text:style-name="P9511">GRAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7712">A real positive value that defines the minimum economic surface gas production rate, below which an economic action will take place, as outlined below:</text:p>
@@ -4758,8 +4757,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
        </text:list>
        <text:p text:style-name="P8193">Only option (2) is supported by OPM Flow as STATUS equals AUTO on the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword is currently not supported by the simulator. Hence, the well be either shut or stopped.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criterion.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P7479">A value less than or equal to zero switches off this criterion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4901,8 +4900,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7713">A real positive value that defines the maximum economic surface gas-oil ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criterion.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P7480">A value less than or equal to zero switches off this criterion.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4925,7 +4924,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table130.1">
-      <table:table-cell table:style-name="Table130.A13" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table130.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7917">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-rows-spanned="2" office:value-type="string">
@@ -4933,9 +4932,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7713">A real positive value that defines the maximum economic surface water-gas ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criterion.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P7480">A value less than or equal to zero switches off this criterion.</text:p>
-       <text:p text:style-name="P8194">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4963,10 +4961,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7917">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" office:value-type="string">
-       <text:p text:style-name="P7908"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
+       <text:p text:style-name="P7908"><text:span text:style-name="NotKeyword">ACTION</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9295">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9295">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. <text:span text:style-name="NotKeyword">ACTION</text:span> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105921650754945" text:continue-list="list105921582179200" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19449">NONE: no action is taken. </text:p>
@@ -4978,14 +4976,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19454">+CON: close the worst offending connection and all below it. If connections have been grouped as completions then the worst offending completion and all below it will be closed. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19460">WELL: shut or stop the well as per the AUTO variable on the </text:p>
-        </text:list-item>
-        <text:list-item>
-         <text:p text:style-name="P19464"><text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
+         <text:p text:style-name="P19460">WELL: shut or stop the well as per the AUTO variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
         </text:list-item>
        </text:list>
        <text:p text:style-name="P9046">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
-       <text:p text:style-name="P9065">Only <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> equal to CON and NONE are are currently supported by OPM Flow.</text:p>
+       <text:p text:style-name="P9065">The +CON option is not currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4998,10 +4993,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7950">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" office:value-type="string">
-       <text:p text:style-name="P7954"><text:a xlink:href="#__RefHeading___Toc46631_2479612490">END</text:a></text:p>
+       <text:p text:style-name="P7954"><text:span text:style-name="NotKeyword">END</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9292">A defined character string that defines if the simulation should terminate if the well is shut or stopped. <text:a xlink:href="#__RefHeading___Toc46631_2479612490">END</text:a> should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P9292">A defined character string that defines if the simulation should terminate if the well is shut or stopped. <text:span text:style-name="NotKeyword">END</text:span> should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105922052000589" text:continue-list="list105921650754945" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19450">NO: no action is taken and the run continues. </text:p>
@@ -5010,7 +5005,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19455">YES: terminate the run at the next report time step.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P9065">Only the default value of NO is supported in OPM Flow.</text:p>
+       <text:p text:style-name="P9065">The YES option is not currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5019,16 +5014,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table130.1">
-      <table:table-cell table:style-name="Table130.A16" office:value-type="string">
+      <table:table-cell table:style-name="Table130.C2" office:value-type="string">
        <text:p text:style-name="P7588">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" office:value-type="string">
-       <text:p text:style-name="P8785"><text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a></text:p>
+       <text:p text:style-name="P8785"><text:span text:style-name="NotKeyword">WELOPEN</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7333">A character string of up to eight characters in length that defines the well name for the well which will be opened when WELNAME has been automatically closed/shut by the simulator. Wells closed manually do not invoke this opton.</text:p>
-       <text:p text:style-name="P9075">The well name (<text:a xlink:href="#__RefHeading___Toc268461_1366622701">WELOPEN</text:a>) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
-       <text:p text:style-name="P9067">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
+       <text:p text:style-name="P7333">A character string of up to eight characters in length that defines the name of the well, which will be opened when the current well (WELNAME) has been automatically closed/shut by the simulator. Wells closed manually do not invoke this opton.</text:p>
+       <text:p text:style-name="P9075">The well name (<text:span text:style-name="NotKeyword">WELOPEN</text:span>) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5056,7 +5050,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:p text:style-name="P16028">Wells under group control via the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section will be subject to the ELT, except for when the group’s production target rate is set to zero. <text:s text:c="2"/></text:p>
        <text:p text:style-name="P16027">Wells under group control via the <text:a xlink:href="#__RefHeading___Toc659214_1190369742">GCONPRI</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section will be subject to the ELT, except for when the group has curtailed a well’s production.</text:p>
-       <text:p text:style-name="P9066">Both options are supported in OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5074,7 +5067,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7713">A real positive value that defines the secondary maximum economic surface water cut, above which an economic action will take place. </text:p>
        <text:p text:style-name="P7480">A value less than or equal to zero switches off this criterion.</text:p>
-       <text:p text:style-name="P8195">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
+       <text:p text:style-name="P8195">This item is not supported by OPM Flow and should be defaulted (1*) or set to zero.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5091,7 +5084,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P9300">A defined character string that defines the action to be taken if the secondary economic WCUT2 limits is violated. <text:s/></text:p>
-       <text:p text:style-name="P9067">Note that this feature is currently not supported in OPM Flow and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P9067">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5109,7 +5102,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table130.F1" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7728">A real positive value that defines the maximum economic surface gas-liquid ratio, above which an economic action will take place, as defined by item (7).</text:p>
        <text:p text:style-name="P9069">A value less than or equal to zero switches off this criterion.</text:p>
-       <text:p text:style-name="P9069">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
+       <text:p text:style-name="P9069">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5126,7 +5119,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P9068">A real positive value that defines the minimum liquid rate, below which the well (WELNAME) is shut-in.</text:p>
-       <text:p text:style-name="P9068">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
+       <text:p text:style-name="P9068">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5140,11 +5133,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7950">15</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" office:value-type="string">
-       <text:p text:style-name="P8788"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
+       <text:p text:style-name="P8788"><text:span text:style-name="NotKeyword">TEMP</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P9068">A real positive value that defines the maximum economic temperature in the commercial compositional Thermal/Temperature model for a well.</text:p>
-       <text:p text:style-name="P9068">Note that this feature is not supported in OPM Flow and should be defaulted.</text:p>
+       <text:p text:style-name="P9068">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5161,7 +5154,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table130.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P9068">A real positive value that defines the minimum reservoir volume rate, below which the well (WELNAME) is shut-in.</text:p>
-       <text:p text:style-name="P9068">Note that this feature is currently not supported in OPM Flow and should be defaulted.</text:p>
+       <text:p text:style-name="P9068">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5208,13 +5201,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14154">-- NAME <text:s/>ORAT <text:s text:c="2"/>GRAT <text:s text:c="2"/>WCUT <text:s text:c="2"/>GOR <text:s text:c="3"/>WGR <text:s text:c="3"/>MODE <text:s text:c="3"/>RUN <text:s text:c="26"/></text:p>
     <text:p text:style-name="P14154">WECON <text:s text:c="74"/></text:p>
     <text:p text:style-name="P14154">GP01 <text:s text:c="4"/>1* <text:s text:c="4"/>5.0E3 <text:s/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>&apos;WELL&apos; <text:s/>&apos;NO&apos; <text:s text:c="23"/>/</text:p>
-    <text:p text:style-name="P14154">OP01 <text:s text:c="4"/>500 <text:s text:c="3"/>1* <text:s text:c="4"/>0.95 <text:s text:c="2"/>15E3 <text:s text:c="2"/>1* <text:s text:c="3"/>&apos;WELL&apos; <text:s/>&apos;YES’ <text:s text:c="22"/>/ </text:p>
+    <text:p text:style-name="P14154">OP01 <text:s text:c="4"/>500 <text:s text:c="3"/>1* <text:s text:c="4"/>0.95 <text:s text:c="2"/>15 <text:s text:c="4"/>1* <text:s text:c="3"/>&apos;WELL&apos; <text:s/>&apos;YES&apos; <text:s text:c="22"/>/ </text:p>
     <text:p text:style-name="P14154">/ <text:s text:c="78"/></text:p>
     <text:p text:style-name="P13095"><text:s text:c="78"/><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P15024">Well GP01 has a minimum economic gas rate of 5 MMscf/d and will shut-in if the gas rate falls below this rate, but the simulation will continue even if this occurs. Well OP02 as a minimum economic oil rate of 500 stb/d, a maximum water cut limit of 95%, and a maximum GOR of 15 MMscf/d, if any any of these limits are violated the well will be shut-in and the run terminated at the next reporting time step.</text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody"/>
-    
+    <text:p text:style-name="_40_TextBody">Well GP01 has a minimum economic gas rate of 5 MMscf/d and will shut-in if the gas rate falls below this rate, but the simulation will continue even if this occurs. Well OP01 has a minimum economic oil rate of 500 stb/d, a maximum water cut limit of 95%, and a maximum GOR of 15 Mscf/stb, if any any of these limits are violated the well will be shut-in and the run should be terminated at the next reporting time step, however the option to end the run is not currently supported by OPM Flow.</text:p>
    </text:section>
   </office:text>
  </office:body>
