@@ -1917,6 +1917,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4265,9 +4266,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_3701168388311"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_3701168388311"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword, <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>, defines maximum dimensions and parameters for the Local Grid Refinement (“LGR”) option.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword defines the maximum dimensions and parameters for the Local Grid Refinement (“LGR”) option.</text:p>
     <text:p text:style-name="_40_TextBody">Currently, OPM Flow does not support the local grid refinement feature and therefore this keyword is ignored by the simulator, but is documented here for completeness.</text:p>
-    <text:p text:style-name="_40_TextBody"/>
     <table:table table:name="Table1314" table:style-name="Table1314">
      <table:table-column table:style-name="Table1314.A"/>
      <table:table-column table:style-name="Table1314.B"/>
@@ -4337,7 +4337,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3395">MAMALG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1314.C9" office:value-type="string">
-       <text:p text:style-name="P1900">A positive integer value that defines the maximum number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> amalgamations in the model.</text:p>
+       <text:p text:style-name="P1900">A positive integer value that defines the maximum number of <text:span text:style-name="NotKeyword">LGR</text:span> amalgamations in the model.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1314.D9" office:value-type="string">
        <text:p text:style-name="P3460">0</text:p>
@@ -4365,7 +4365,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3461">LSTACK</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1314.C9" office:value-type="string">
-       <text:p text:style-name="P1900">A positive integer that defines the maximum number of previous search directions stored by the linear solver for the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>. See the <text:a xlink:href="#__RefHeading___Toc34963_1640804870">NSTACK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section for a full description.</text:p>
+       <text:p text:style-name="P1900">A positive integer that defines the maximum number of previous search directions stored by the linear solver for the <text:span text:style-name="NotKeyword">LGR</text:span>. See the <text:a xlink:href="#__RefHeading___Toc34963_1640804870">NSTACK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section for a full description.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1314.D9" office:value-type="string">
        <text:p text:style-name="P3460">10</text:p>
@@ -4380,7 +4380,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1314.C9" office:value-type="string">
        <text:p text:style-name="P3462">A character string set to either INTERP to activate the Quandalle<text:note text:id="ftn87" text:note-class="footnote"><text:note-citation>87</text:note-citation><text:note-body>
-           <text:p text:style-name="P16636">Quandalle, Philippe &amp; Besset, P. (1985). Reduction of Grid Effects Due to Local Sub-Gridding in Simulations Using a Composite Grid. 10.2118/13527-MS. </text:p></text:note-body></text:note> pressure correction, <text:s/>or NOINTERP to deactivate this option. The option applies bi-linear interpolation to the global cells surrounding an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> in order to improve the accuracy of the flow calculations between the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> and the host cells.</text:p>
+           <text:p text:style-name="P16636">Quandalle, Philippe &amp; Besset, P. (1985). Reduction of Grid Effects Due to Local Sub-Gridding in Simulations Using a Composite Grid. 10.2118/13527-MS. </text:p></text:note-body></text:note> pressure correction, <text:s/>or NOINTERP to deactivate this option. The option applies bi-linear interpolation to the global cells surrounding an <text:span text:style-name="NotKeyword">LGR</text:span> in order to improve the accuracy of the flow calculations between the <text:span text:style-name="NotKeyword">LGR</text:span> and the host cells.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1314.D9" office:value-type="string">
        <text:p text:style-name="P3460">NOINTERP</text:p>
@@ -4427,10 +4427,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13465">LGR <text:s text:c="67"/></text:p>
     <text:p text:style-name="P13465"><text:s text:c="9"/>10 <text:s text:c="5"/>1000 <text:s text:c="3"/>1* <text:s text:c="5"/>1* <text:s text:c="5"/>1* <text:s text:c="5"/>1* <text:s text:c="4"/>INTERP <text:s/>1* <text:s text:c="12"/>/</text:p>
     <text:p text:style-name="P11192"/>
-    <text:p text:style-name="P11192">The above example sets the maximum number of LGRs to 10 and the maximum number of grid blocks a <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> may contain to 1,000, and that Quandalle pressure correction should be used to improve the flow calculation.</text:p>
-    <text:p text:style-name="P15278"/>
-    <text:p text:style-name="_40_TextBody"/>
-    
+    <text:p text:style-name="P11192">The above example sets the maximum number of LGRs to 10 and the maximum number of grid blocks a <text:span text:style-name="NotKeyword">LGR</text:span> may contain to 1,000, and that the Quandalle pressure correction should be used to improve the flow calculation.</text:p>
    </text:section>
   </office:text>
  </office:body>
