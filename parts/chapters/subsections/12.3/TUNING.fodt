@@ -3314,12 +3314,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P12746" style:family="paragraph" style:parent-style-name="_40_TextBody">
    <style:text-properties officeooo:paragraph-rsid="014d6936"/>
   </style:style>
-  <style:style style:name="P13022" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="041c3f5b" officeooo:paragraph-rsid="014d6936"/>
-  </style:style>
-  <style:style style:name="P14558" style:family="paragraph" style:parent-style-name="_40_Example">
-   <style:text-properties officeooo:paragraph-rsid="014d6936"/>
-  </style:style>
   <style:style style:name="P14560" style:family="paragraph" style:parent-style-name="Table">
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
@@ -3336,9 +3330,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="P18345" style:family="paragraph" style:parent-style-name="Heading_20_4">
    <style:text-properties fo:language="en" fo:country="US"/>
-  </style:style>
-  <style:style style:name="P18602" style:family="paragraph" style:parent-style-name="Heading_20_4">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="014d6936"/>
   </style:style>
   <style:style style:name="P18776" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="First_20_Page">
    <style:paragraph-properties style:page-number="auto"/>
@@ -4888,7 +4879,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9471">TSINIT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7510">TSINT is a real positive value that defines the maximum length of the next time step.</text:p>
+       <text:p text:style-name="P7510">TSINIT is a positive real value that defines the maximum length of the next time step.</text:p>
        <text:p text:style-name="P8079">Note that whenever the keyword is used TSINIT is always set back to the default value of one, unless explicitly over written.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4919,7 +4910,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7513">TSMAXZ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7510">TSMAXZ is a real positive value that defines the maximum length of time steps following the next time step (TSINIT).</text:p>
+       <text:p text:style-name="P7510">TSMAXZ is a positive real value that defines the maximum length of time steps following the next time step (TSINIT).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4949,7 +4940,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7513">TSMINZ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7510">TSMINZ is a real positive value that defines the minimum length of all time steps.</text:p>
+       <text:p text:style-name="P7510">TSMINZ is a positive real value that defines the minimum length of all time steps.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4979,7 +4970,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7513">TSMCHP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7510">TSMCHP is a real positive value that sets the minimum time step length that can be chopped.</text:p>
+       <text:p text:style-name="P7510">TSMCHP is a positive real value that sets the minimum time step length that can be chopped.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5009,7 +5000,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8098">TSFMAX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8099">TSFMAX is a real positive value that specifies the maximum <text:span text:style-name="T4435">growth rate</text:span> a time step can be increased by, subject to the maximum allowable time step size set by <text:span text:style-name="T4435">TSMAXZ.</text:span></text:p>
+       <text:p text:style-name="P8099">TSFMAX is a positive real value that specifies the maximum <text:span text:style-name="T4435">growth rate</text:span> a time step can be increased by, subject to the maximum allowable time step size set by <text:span text:style-name="T4435">TSMAXZ.</text:span></text:p>
        <text:p text:style-name="P8100"><text:span text:style-name="T4435">For example, i</text:span>f the current time step has converged at 10 days and <text:span text:style-name="T4531">TSFMAX </text:span>is set to the default value, then the next time step will be 3.0 x 10 days, that is 30 days provided it is less than TSMAXZ.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5041,9 +5032,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8098">TSFMIN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8099">TSFMIN is a real positive value that specifies the m<text:span text:style-name="T4435">inimum</text:span> <text:span text:style-name="T4435">decay rate</text:span> a time step can be <text:span text:style-name="T4435">de</text:span>creased by, subject to the m<text:span text:style-name="T4435">inimum</text:span> allowable time step size set by <text:span text:style-name="T4435">TSMINZ.</text:span></text:p>
+       <text:p text:style-name="P8099">TSFMIN is a positive real value that specifies the m<text:span text:style-name="T4435">inimum</text:span> <text:span text:style-name="T4435">decay rate</text:span> a time step can be <text:span text:style-name="T4435">de</text:span>creased by, subject to the m<text:span text:style-name="T4435">inimum</text:span> allowable time step size set by <text:span text:style-name="T4435">TSMINZ.</text:span></text:p>
        <text:p text:style-name="P8100"><text:span text:style-name="T4435">For example, i</text:span>f the current time step has <text:span text:style-name="T4435">not </text:span>converged at 10 days and <text:span text:style-name="T4531">TSFMIN </text:span>is set to the default value, then the next time step will be <text:span text:style-name="T4435">0.3</text:span> x 10 days, that is the maximum of <text:span text:style-name="T4435">3</text:span> days and TSMINZ.</text:p>
-       <text:p text:style-name="P8100"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5074,7 +5064,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TSFCNV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8105">TSFCNV real positive value that specifies the decay rate a time step can be decreased by after a convergence failure.</text:p>
+       <text:p text:style-name="P8105">TSFCNV is a positive real value that specifies the decay rate a time step can be decreased by after a convergence failure.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5104,7 +5094,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8113">TFDIFF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P5594">TFDIFF is a real positive value that sets the time step growth factor of the time step after a convergence failure. <text:s/></text:p>
+       <text:p text:style-name="P5594">TFDIFF is a positive real value that sets the time step growth factor of the time step after a convergence failure. <text:s/></text:p>
        <text:p text:style-name="P5597">For example, if the chopped current convergent time step is 10 days and TFDIFF is set to the default value, then the time step will be increased to 1.25 x 10 days, that is the minimum of 12.5 days and TSMAXZ.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5132,10 +5122,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8108">1-9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8098">THRURPT</text:p>
+       <text:p text:style-name="P8098">THRUPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9036">THRURPT is a real positive value that specifies the maximum throughput ratio over a time step.</text:p>
+       <text:p text:style-name="P9036">THRURT is a positive real value that specifies the maximum throughput ratio over a time step.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5165,7 +5155,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8113">TMAXWC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8114">TMAXWC is a real positive value that defines maximum allowed time step after a well event; for example, when a well is opened or closed, etc. </text:p>
+       <text:p text:style-name="P8114">TMAXWC is a positive real value that defines maximum allowed time step after a well event; for example, when a well is opened or closed, etc. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5211,7 +5201,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRGTTE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">TRGTTE is a real positive value that sets the target time truncation error.</text:p>
+       <text:p text:style-name="P7788">TRGTTE is a positive real value that sets the target time truncation error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5234,14 +5224,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
-      <table:table-cell table:style-name="Table839.A27" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7796">2-2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7787">TRGCNV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">TRGCNV a real positive value that defines the target non-linear convergence error.</text:p>
+       <text:p text:style-name="P7788">TRGCNV is a positive real value that defines the target non-linear convergence error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5264,14 +5254,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
-      <table:table-cell table:style-name="Table839.A29" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7796">2-3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7787">TRGMBE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7801">TRGMBE is a real positive value that specifies the target material balance error.</text:p>
+       <text:p text:style-name="P7801">TRGMBE is a positive real value that specifies the target material balance error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5302,12 +5292,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRGLCV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7801">TRGLCV is a real positive value that specifies the linear convergence error target.</text:p>
+       <text:p text:style-name="P7801">TRGLCV is a positive real value that specifies the target linear convergence error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table839.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8130">0.00001</text:p>
+       <text:p text:style-name="P8130">0.0001</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
@@ -5332,7 +5322,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">XXXTTE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7801">XXXTTE is a real positive value that sets the maximum time truncation error.</text:p>
+       <text:p text:style-name="P7801">XXXTTE is a positive real value that sets the maximum time truncation error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5355,14 +5345,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
-      <table:table-cell table:style-name="Table839.A35" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7796">2-6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7787">XXXCNV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">XXXCNV is a real positive value that defines the maximum non-linear convergence error. </text:p>
+       <text:p text:style-name="P7788">XXXCNV is a positive real value that defines the maximum non-linear convergence error. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5392,7 +5382,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">XXXMBE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">XXXMBE is a real positive value that specifies the maximum mass balance error, that is the tolerated mass balance error relative to total mass present.</text:p>
+       <text:p text:style-name="P7788">XXXMBE is a positive real value that specifies the maximum mass balance error, that is the tolerated mass balance error relative to total mass present.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5422,7 +5412,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">XXXLCV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">XXXLCV is a real positive values that sets the maximum linear convergence error.</text:p>
+       <text:p text:style-name="P7788">XXXLCV is a positive real values that sets the maximum linear convergence error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5452,7 +5442,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">XXXWFL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7789">XXXWFL is a real positive values that fixes the maximum well flow convergence error.</text:p>
+       <text:p text:style-name="P7789">XXXWFL is a positive real values that fixes the maximum well flow convergence error.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5482,7 +5472,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRGFIP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">TRGFIP is a real positive value that stipulates the target fluid in-place error in Local Grid Refinements. </text:p>
+       <text:p text:style-name="P7788">TRGFIP is a positive real value that stipulates the target fluid in-place error in Local Grid Refinements. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5512,7 +5502,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRGSFT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7788">TRGSFT is a real positive values that defines the target surfactant change when the Surfactant Model is active in the run.</text:p>
+       <text:p text:style-name="P7788">TRGSFT is a positive real values that defines the target surfactant change when the Surfactant Model is active in the run.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5572,9 +5562,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7787">TRWGHT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7789">TRWGHT is a positive integer that stipulates the implicitness for active tracer updates within the Newton iterations, and should be set to:</text:p>
+       <text:p text:style-name="P7789">TRWGHT is an integer that stipulates the implicitness for active tracer updates within the Newton iterations, and should be set to:</text:p>
        <text:list xml:id="list105922130286582" text:continue-list="list105910421823337" text:style-name="_40_NumberOptions_3a_Table">
-        <text:list-item text:start-value="1">
+        <text:list-item text:start-value="0">
          <text:p text:style-name="P18782"><text:s/>The calculation is explicit, that is fully decoupled.</text:p>
         </text:list-item>
         <text:list-item>
@@ -5620,7 +5610,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
-      <table:table-cell table:style-name="Table839.A52" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P8119">3-1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.B52" table:number-rows-spanned="2" office:value-type="string">
@@ -5651,7 +5641,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
-      <table:table-cell table:style-name="Table839.A54" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table839.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P8119">3-2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.B54" table:number-rows-spanned="2" office:value-type="string">
@@ -5808,12 +5798,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">DDPLIM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C63" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9055">DDPLIM a real positive value that stipulates the maximum pressure change at the last Newton iteration.</text:p>
+       <text:p text:style-name="P9055">DDPLIM is a positive real value that stipulates the maximum pressure change at the last Newton iteration.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table839.F51" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9157">1.0 x 10<text:span text:style-name="T3853">-6</text:span></text:p>
+       <text:p text:style-name="P9157">1.0 x 10<text:span text:style-name="T3853">6</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
@@ -5838,12 +5828,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P121">DDSLIM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C65" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9035">DDSLIM a real positive value that sets the maximum saturation change at the last Newton iteration.</text:p>
+       <text:p text:style-name="P9035">DDSLIM is a positive real value that sets the maximum saturation change at the last Newton iteration.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table839.F51" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9058">1.0 x 10<text:span text:style-name="T3853">-6</text:span></text:p>
+       <text:p text:style-name="P9058">1.0 x 10<text:span text:style-name="T3853">6</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
@@ -5868,12 +5858,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8151">TRGDPR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C67" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9190">TRGDP is a real positive value that defines the target pressure change within a time step.</text:p>
+       <text:p text:style-name="P9190">TRGDPR is a positive real value that defines the target maximum pressure change within a time step.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table839.F51" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9157">1.0 x 10<text:span text:style-name="T3853">-6</text:span></text:p>
+       <text:p text:style-name="P9157">1.0 x 10<text:span text:style-name="T3853">6</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
@@ -5898,12 +5888,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P88">XXXDPR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table839.C69" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8151">XXXDPR is a real positive value that stipulates the maximum tolerable pressure change within a time step.</text:p>
+       <text:p text:style-name="P8151">XXXDPR is a positive real value that stipulates the maximum tolerable pressure change within a time step.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table839.F51" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9059">1.0 x 10<text:span text:style-name="T3853">-6</text:span></text:p>
+       <text:p text:style-name="P9059">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table839.1">
@@ -5986,30 +5976,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable608" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.66</text:sequence>: TUNING Keyword Description</text:p>
-    <text:p text:style-name="P15164"/>
-    <text:p text:style-name="P11052"/>
-    <text:p text:style-name="P16047">Note that for record number two (items 2-1 to 2-13) <text:span text:style-name="T1">the </text:span>m<text:span text:style-name="T1">aximum values should always be greater than the associated </text:span>t<text:span text:style-name="T1">arget value; </text:span>for example, XXXCNV should be greater than TRGCNV. <text:s/>Also note that the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword is stored on the restart files (see <text:a xlink:type="simple" xlink:href="#9.2.11.RPTRST – Define Data to be Written to the RESTART File|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc210154_2884651453">RPTRST – Define Data to be Written to the RESTART File</text:bookmark-ref></text:a>) enabling the parameters to be utilized in a restart run without re-specifying the keyword. </text:p>
-    <text:p text:style-name="P15164"/>
-    <text:h text:style-name="P18602" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716675_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716675_3964674244"/></text:h>
-    <text:p text:style-name="P14558">--</text:p>
-    <text:p text:style-name="P14558">-- <text:s text:c="6"/>DEFAULT TUNING PARAMETERS</text:p>
-    <text:p text:style-name="P14558">--</text:p>
-    <text:p text:style-name="P14558">TUNING</text:p>
-    <text:p text:style-name="P14558"><text:s text:c="9"/>1.0 <text:s text:c="3"/>365.0 <text:s text:c="4"/>0.1 <text:s text:c="4"/>0.15 <text:s text:c="4"/>3 <text:s text:c="4"/>0.3 <text:s text:c="4"/>0.1 <text:s text:c="2"/>1.25 <text:s/>1E20 <text:s/>1* <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P14558"><text:s text:c="80"/>/</text:p>
-    <text:p text:style-name="P14558"><text:tab/> <text:s text:c="81"/><text:tab/>/</text:p>
-    <text:p text:style-name="P11125"/>
-    <text:p text:style-name="P12746">The above example explicitly sets the default parameters for OPM Flow for when the appropriate command line parameter has been activated (see section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a>) to instruct the simulator to read the first record of the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword.<text:span text:style-name="T1"> <text:s text:c="2"/></text:span>Alternatively one could just use:</text:p>
-    <text:p text:style-name="P11248"/>
-    <text:p text:style-name="P13022">TUNING</text:p>
-    <text:p text:style-name="P13022">/</text:p>
-    <text:p text:style-name="P13022">/</text:p>
-    <text:p text:style-name="P13022">/</text:p>
-    <text:p text:style-name="P12746"/>
-    <text:p text:style-name="P11053">To <text:span text:style-name="T2945">accomplish</text:span> the same thing.</text:p>
-    <text:p text:style-name="P11052"/>
-    <text:p text:style-name="P11052"/>
-    
+    <text:p text:style-name="_40_TextBody"></text:p>
+    <text:p text:style-name="_40_TextBody">Note that for record number two (items 2-1 to 2-13) the maximum values should always be greater than the associated target value; for example, XXXCNV should be greater than TRGCNV. <text:s/>Also note that the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword is stored on the restart files (see <text:a xlink:type="simple" xlink:href="#9.2.11.RPTRST – Define Data to be Written to the RESTART File|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc210154_2884651453">RPTRST – Define Data to be Written to the RESTART File</text:bookmark-ref></text:a>) enabling the parameters to be utilized in a restart run without re-specifying the keyword. </text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716675_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716675_3964674244"/></text:h>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFAULT TUNING PARAMETERS</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">TUNING</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>1.0 <text:s text:c="3"/>365.0 <text:s text:c="4"/>0.1 <text:s text:c="4"/>0.15 <text:s text:c="4"/>3 <text:s text:c="4"/>0.3 <text:s text:c="4"/>0.1 <text:s text:c="2"/>1.25 <text:s/>1E20 <text:s/>1* <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="80"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="80"/>/</text:p>
+    <text:p text:style-name="_40_Example"></text:p>
+    <text:p text:style-name="_40_TextBody">The above example explicitly sets the default parameters for OPM Flow for when the appropriate command line parameter has been activated (see section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a>) to instruct the simulator to read the first record of the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword.<text:s text:c="2"/>Alternatively one could just use the following to accomplish the same thing.</text:p>
+    <text:p text:style-name="_40_Example">TUNING</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
    </text:section>
   </office:text>
  </office:body>
