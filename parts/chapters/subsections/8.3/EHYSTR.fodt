@@ -4380,7 +4380,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">HYSTRCP is a positive real value that defines the Killough curvature parameter for capillary pressure hysteresis model.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">The value should range from 0.05 to 0.10.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">This option is ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4582,7 +4582,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">HYSTREL is a positive real number that defines the Killough’s wetting phase relative permeability curvature parameter. This parameter is only applicable if HYSMOD is set to either 4 or 7.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">This option is ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4599,7 +4599,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">HYSTSGR is a positive real number that sets a scaling parameter for the trapped non-wetting phase saturation in the Killough model.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">This option is ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4612,39 +4612,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4512">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.B27" office:value-type="string">
-       <text:p text:style-name="P4521"><office:annotation office:name="__Annotation__708978_2436420761" loext:resolved="false">
-         <dc:creator>David Baxendale</dc:creator>
-         <dc:date>2017-08-10T17:54:46</dc:date>
-         <meta:creator-initials>DBx</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8543">Only default. </text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8543">But OPM supports using NOHYKR and NOHYPC </text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8543"/></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8543">TSA</text:span></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8543"/></text:p>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8543">Sorry I don’t understand. Do you mean that you have additional options for this variable?</text:span></text:p>
-        </office:annotation>HYSTOPT<office:annotation-end office:name="__Annotation__708978_2436420761"/><office:annotation>
-         <dc:creator>Tor Harald Sandve</dc:creator>
-         <dc:date>2017-08-31T12:27:34</dc:date>
-         <meta:creator-initials>TSA</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8541">Reply to David Baxendale (08/10/2017, 17:54): &quot;...&quot;</text:span></text:p>
-         <text:p><text:span text:style-name="T8542">The keywords NOHYKR and NOHYPC is an alternative to HYSTOPT. <text:s/>The Ecl manual however strongly recommend not using them and instead using HYSTOPT. I don’t think you have added NOHYKR and NOHYPC to this manual. <text:s/></text:span></text:p>
-        </office:annotation></text:p>
+       <text:p text:style-name="_40_Table_20_Contents">HYSTOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string that determines if the hysteresis model should be activated for relative permeability, capillary pressure curves, or both, and should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines if the hysteresis model should be activated for relative permeability, capillary pressure, or both, and should be set to one of the following:</text:p>
        <text:list xml:id="list105914163010948" text:continue-list="list105912106053101" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P16992">BOTH: apply hysteresis modeling to both relative permeability, and capillary pressure curves.</text:p>
+         <text:p text:style-name="P16992">BOTH:<text:s/>apply hysteresis modeling to both relative permeability, and capillary pressure curves.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">PC: <text:s/>apply hysteresis modeling to capillary pressure curves only.</text:p>
+         <text:p text:style-name="P16992">PC:<text:s/>apply hysteresis modeling to capillary pressure curves only.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">KR: apply hysteresis modeling to relative permeability curves only.</text:p>
+         <text:p text:style-name="P16992">KR:<text:s/>apply hysteresis modeling to relative permeability curves only.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="_40_Table_20_Contents">For all cases HYSTMOD defines the model to be used for relative permeability hysteresis modeling (if applicable). Capillary pressure hysteresis always uses the Killough capillary pressure model.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">All three options are supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4660,7 +4642,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3326">HYSTSCAN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string that determines the shape of Killough capillary pressure scanning curves when secondary reversal curves, that is for a drainage, imbibition, drainage cycle.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines the shape of Killough capillary pressure scanning curves when secondary reversal occurs, that is for a drainage, imbibition, drainage cycle.</text:p>
        <text:list xml:id="list105915344758375" text:continue-list="list105914163010948" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P16992">RETR: Secondary drainage curves re-traverses the same scanning curve.</text:p>
@@ -4686,16 +4668,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3326">HYSTMOB</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string that determines how to apply the mobility control correction invoked by the MOBILE variable on the <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. HYSTMOB should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that determines how to apply the mobility control correction invoked by the MOBILE variable on the <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. HYSTMOB should be set to one of the following:</text:p>
        <text:list xml:id="list105914059584018" text:continue-list="list105915344758375" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P16992">DRAIN: Only the drainage curve end-points are modified.</text:p>
+         <text:p text:style-name="P16992">DRAIN:<text:s/>Only the drainage curve end-points are modified.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P16992">BOTH: Both the drainage and imbibition curve end-points are modified.</text:p>
+         <text:p text:style-name="P16992">BOTH:<text:s/>Both the drainage and imbibition curve end-points are modified.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="_40_Table_20_Contents">The Mobility Control option is not supported in OPM Flow so this parameter has no effect.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The Mobility Control option is not supported in OPM Flow so this parameter has no effect and will be ignored. This item should be defaulted.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4711,7 +4693,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4525">HYSTWET</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string that sets the wetting phase between oil and gas in three phase systems and should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that sets the wetting phase between oil and gas in three phase systems and should be set to one of the following:</text:p>
        <text:list xml:id="list105914499005805" text:continue-list="list105914059584018" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P16992"><text:span text:style-name="NotKeyword">OIL</text:span>: Oil is set as the <text:span text:style-name="T2554">wetting phase</text:span> between oil and gas, and the oil relative permeability with respect to gas is determined by HYSTMOD for the wetting phase.</text:p>
@@ -4722,7 +4704,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:p text:style-name="_40_Table_20_Contents">Note for all the above cases the gas relative permeability is always modelled as a non-wetting phase.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">Note oil is always the wetting phase to gas in two phase systems.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">This option is ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4739,7 +4721,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">Baker model one or model two relative permeability oil phase hysteresis option used in the commercial compositional simulator.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Not used and should be defaulted with 1*. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4756,7 +4738,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">Baker model one or model two relative permeability gas phase hysteresis option used in the commercial compositional simulator.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Not used and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4773,7 +4755,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">Baker model one or model two relative permeability water phase hysteresis option used in the commercial compositional simulator.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Not used and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4790,7 +4772,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">Killough’s hysteresis threshold saturation value used in the commercial compositional simulator.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Not used and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4806,8 +4788,34 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5352">HYSWETRP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="T2110">Killough’s hysteresis wetting phase modification</text:span> used in the commercial black-oil simulator.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">Not used and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Killough’s hysteresis wetting phase modification used in the commercial black-oil simulator.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table436.F27" office:value-type="string">
+       <text:p text:style-name="P5349">0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table436.1">
+      <table:table-cell table:style-name="Table436.A2" office:value-type="string">
+       <text:p text:style-name="P4512">14</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table436.B27" office:value-type="string">
+       <text:p text:style-name="P5352">HYSPCSCL</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value that determines if capillary pressure scaling should be enabled to correct the construction of the scanning capillary pressure curve. </text:p>
+       <text:list xml:id="list105914499005805" text:continue-list="list105914059584018" text:style-name="_40_NumberedListTable">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P16992"><text:span text:style-name="NotKeyword">0</text:span>: Capillary pressure scaling is disabled.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P16992"><text:span text:style-name="NotKeyword">1</text:span>: Capillary pressure scaling is enabled.</text:p>
+        </text:list-item>
+       </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">This option is currently disabled by default but this is likely to change as the correction is believed to be a bug fix. For more information see <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/6383#issuecomment-3329954105" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6383</text:a>.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This is an OPM Flow specific item that is not supported by the commercial simulator.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
