@@ -5033,8 +5033,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P135">A character string of up to eight characters in length that defines the group name for which the well is assigned to. </text:p>
-       <text:p text:style-name="P135">The group named <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> is the top most group. GRPNAME can be set to <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> although this is discouraged and a warning message will be issued. This is allowed in the commercial compositional simulator but not the commercial black-oil simulator. The <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group cannot contain both groups and wells.</text:p>
-       <text:p text:style-name="P135">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="P135">The group named <text:span text:style-name="NotKeyword">FIELD</text:span> is the top most group. GRPNAME can be set to <text:span text:style-name="NotKeyword">FIELD</text:span> although this is discouraged and a warning message will be issued. This is allowed in the commercial compositional simulator but not the commercial black-oil simulator. The <text:span text:style-name="NotKeyword">FIELD</text:span> group cannot contain both groups and wells.</text:p>
+       <text:p text:style-name="P135">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:span text:style-name="NotKeyword">FIELD</text:span> group in the group tree hierarchy.</text:p>
        <text:p text:style-name="P135">Secondly, groups defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword cannot contain other groups and wells; that is, groups must either contain other groups or wells but not both.</text:p>
        <text:p text:style-name="P135">If necessary, wells can be re-allocated to a different group by re-entering a well&apos;s <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> data together with a new value for GRPNAME. </text:p>
       </table:table-cell>
@@ -5124,10 +5124,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">A defined character string that defines the “main” phase for the well, and should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P137"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: for a gas well. </text:p>
+         <text:p text:style-name="P137"><text:span text:style-name="NotKeyword">GAS</text:span>: for a gas well. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P137"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: for an oil well. </text:p>
+         <text:p text:style-name="P137"><text:span text:style-name="NotKeyword">OIL</text:span>: for an oil well. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P137">WAT: for a water injection well. </text:p>
@@ -5225,7 +5225,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">AUTO</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P133">A defined character string that defines the automatic action to be taken if the economic WCUT, GOR, or WGR limits are violated and the well is to cease production. AUTO should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="P133">A defined character string that specifies the action to be taken if the well is automatically closed/shut by the simulator, and should be set to one of the following:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P137">STOP: the well is “stopped” at the surface and will not produce any fluids to surface; however, if there any open connections then flow may occur within the wellbore and between the open connections depending on a connection’s potential with respect to all the other connections. <text:s/>Inter-connection flow (cross flow) can be prevented by setting the XFLOW variable to NO. In this case the well’s behavior will be similar to the SHUT option described below. </text:p>
