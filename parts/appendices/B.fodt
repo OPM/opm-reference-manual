@@ -13439,7 +13439,101 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="P1298">TODO</text:p>
+          <text:p text:style-name="_40_TextBody">Added support for the biofilm model in two-phase gas-water systems, which can be activated using the BIOFILM keyword in the RUNSPEC section in CO2STORE or H2STORE runs (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6462" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6462</text:a>). The model includes biofilm as a solid phase and as microbes suspended in the water. This can be used in applications such as underground storage where dissolved hydrogen consumed by microbes leads to injectivity and hydrogen loss. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added an optimized version of the preconditioner update calls, at the cost of apply times, to tailor the implementation more towards CPR-type preconditioners with smaller apply/update ratios (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6310" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6310</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for edge conformal grid processing, activated using the --edge-conformal command line option (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5806" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5806</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/814" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#814</text:a>). Edge conformal grids are very useful in the context of geo-mechanical fracturing processes. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The new saturation function consistency checks have been enabled by default (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6252" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6252</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow single phase (water) simulations from Python code using the Python bindings (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6482" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6482</text:a>). This has many potential applications including coupling to external geochemistry and geomechanics solvers. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added additional restart file items to maintain compatibility with user defined arguments (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4439" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4439</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for specifying the maximum and minimum number of Newton iterations for a time step (NEWTMX and NEWTMN) on the TUNING keyword in the SCHEDULE section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6378" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6378</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added parser support for the GSATINJE keyword to specify satellite injection at the group level (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4700" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4700</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A check has been added to ensure that all wells and/or groups needed in a UDQ DEFINE statement are present at the point of definition (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4619" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4619</text:a>). An error message will be generated for any missing well objects, for example: </text:p>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+      </text:list>
+     </text:list-item>
+    </text:list>
+    <table:table table:name="Table15" table:style-name="Table15">
+     <table:table-column table:style-name="Table15.A"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table15.1">
+       <table:table-cell table:style-name="Table15.A1" office:value-type="string">
+        <text:p text:style-name="P781">Error: Unrecoverable errors while loading input:</text:p>
+        <text:p text:style-name="P781"></text:p>
+        <text:p text:style-name="P781">Problem with UDQ</text:p>
+        <text:p text:style-name="P781">In CASE.DATA line 251</text:p>
+        <text:p text:style-name="P781">DEFINE cannot be evaluated:</text:p>
+        <text:p text:style-name="P781">  Missing object in defining expression for FUBHPGI</text:p>
+        <text:p text:style-name="P781">    -&gt; No existing well matches the name XD-1H </text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+    </table:table>
+    <text:p text:style-name="_40_TextBody"></text:p>
+    <text:list xml:id="list115021101243247" text:continue-list="list115021101243246" text:style-name="_40_NumberList">
+     <text:list-item>
+      <text:list>
+       <text:list-item>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Restart file support has been added for the number of Newton iterations required by each cell to satisfy the solution change convergence criteria at the last time step (CONV_NEW) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6374" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6374</text:a>). This output can be requested by including the CONV mnemonic on the RPTRST keyword. Note that simulations using NLDD are not currently supported. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for WSEGAICD keyword item 22, the density function exponent (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6473" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6473</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4736" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4736</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Experimental support has been added for the WELSPECL and COMPDATL keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6297" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6297</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added a command line option (--linear-solver-accelerator=cpu or gpu) to optionally carry out the linear solver operations on the  GPU (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6270" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6270</text:a>). By default the all operations are carried out on the CPU. When using the gpu option, the linear solvers can be specified with the normal --linear-solver argument, which can point to a JSON file which can have the same format as the one for the CPU. Note that some options and preconditioners are currently limited to the CPU. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Full support has been added for running the Constrained Pressure Residual with Algebraic Multigrid (CPR-AMG) preconditioner entirely on the GPU, using the GpuIstl framework (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a>, <text:a xlink:type="simple" xlink:href="https://doi.org/10.21105/joss.07740" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Lye et al. (2025)</text:a>). It supports both AMGX and Hypre BoomerAMG solvers, allows consistent configuration across CPU and GPU, and introduces fast GPU-native implementations for CPR operations and quasiimpes weights. The setup minimizes memory usage and transfer overhead by sharing a single GPU matrix across solver components. Initial benchmarks show comparable or improved convergence versus CPU runs. </text:p>
+          <text:p text:style-name="_40_TextBody">It is now possible to run the identical CPR-AMG preconditioner setup on both CPU and GPU (with different hardware specific AMG solvers) by using the command line option linear-solver-accelerator=cpu and gpu respectively.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">An experimental Hybrid Newton method has been added that enhances nonlinear preconditioning using machine learning. Machine learning-based corrections have been integrated into the standard Newton solver of the black-oil simulator (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6424" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6424</text:a>, <text:a xlink:type="simple" xlink:href="https://doi.org/10.2118/223843-MS" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Lechevallier, et al. (2025)</text:a>). One or more trained Hybrid Newton models can now be used to adjust the initial guess of the nonlinear solver at specific timesteps. Two new command line options have been added: setting --use-hy-ne=true activates the Hybrid Newton method, and --hy-ne-config-file=&lt;path&gt; specifies the path of the JSON configuration file that allows OPM Flow to correctly interpret how to precondition Newton's method. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The NLDD (Nonlinear Domain Decomposition) solver has reduced the time spent on local solves by skipping subdomains that haven't changed significantly between iterations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6346" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6346</text:a>). Mobility changes indicate significant alterations in fluid flow characteristics, making it an effective indicator for determining when subdomain re-solving is necessary. The threshold for relative mobility change detection (default: 0.1) is specified using the --nldd-relative-mobility-change-tol command line option. By setting this parameter to 0, the mobility thresholding will be disabled. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Partitioner zoltanwell (default) no longer ignores the command line argument --allow-distributed-wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/874" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#874</text:a>). This makes its behaviour more like that of the other partitioners. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added option to limit the relative change in the solution variables (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6009" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6009</text:a>). If the relative change in the solution variables from one time step to the next becomes too large, it might be best to discard the computations even though the time step completed without numerical errors. The time step size would then be adjusted down before retrying the same time step. This option is only available when using the general3rdorder option for time-step-control. (See the new --time-step-control-reject-completed-step command line argument). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added the option to use control error filtering as the tolerance test, instead of comparing relative change directly, to the general third order time step controller (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6280" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6280</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for water mass in place summary vectors at the field, region and block level [FRB]AMIP, and water mass injection/production rates/totals at the field, group, well, connection and completion levels [FGWC]AM[IP][RT](L?) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6181" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6181</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4569" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4569</text:a>). Note that AM has been used to indicate water (aqueous) mass since WM, for example GWMIR, is already used to indicate water molar mass. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Satellite injection rates have been added to group level summary vectors (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4728" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4728</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A new application networkgraph has been created (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4535" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4535</text:a>). This can be used to visualize a production network (extended network model) including wells. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added the option to perform additional iterations in the well/group switching algorithm (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5933" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5933</text:a>). See the command line argument --well-group-constraints-max-iterations, which has a default value of 1. </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
