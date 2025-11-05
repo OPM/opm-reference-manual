@@ -13459,7 +13459,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P752">Improvements to simulator in this release include the folllowing:</text:p>
+    <text:p text:style-name="P752">Improvements to simulator in this release include the following:</text:p>
     <text:list xml:id="list115021364859964" text:continue-list="list115021101243246" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
@@ -13486,14 +13486,107 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P170">The following bug fixes and improvements have been incorporated into this release:</text:p>
+    <text:p text:style-name="P170">The following bug fixes have been incorporated into this release:</text:p>
     <text:list xml:id="list115021793372860" text:continue-list="list115021364859964" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="P1298">TODO</text:p>
+          <text:p text:style-name="_40_TextBody">Corrected the application of region to region transmissibility multipliers (MULTREGT keyword) to NNCs created by pinched-out cells (PINCH keyword) in some specific cases (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6498" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6498</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed a small bug for grid topology that did not affect OPM Flow, but did affect the geomechanics codes (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/913" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#913</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added a OPM Flow specific option to the Killough hysteresis model (EHYSTR keyword item 14) to correct the construction of the capillary pressure scanning curve (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4676" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4676</text:a>). This option is currently inactive by default but this is likely to change in the future as the correction is believed to be a bug fix. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The old style PYACTION scripts are now assumed to have run successfully if they do not return a value (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4725</text:a>). This fixes backwards compatibility. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The TUNING keyword now correctly sets the minimum length of all time steps Item 1-3 TSMINZ instead of Item 1-6 TSFMIN (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6332" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6332</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A bug has been fixed in the unit handling of the OPERATE keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4765" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4765</text:a>). This resolves an reported issue with the units when performing operations on permeability arrays (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4597" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4597</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Allow the WELTARG keyword to accept an empty well list (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4654" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4654</text:a>). In this case no well targets will be changed and a warning message will be output. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">An bug has been fixed where previously DRSDT was activated in restart runs even if the original simulation did not contain the DRSDT keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4655" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4655</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the handling of the group production control (GCONPROD) keyword item 2 equals FLD (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4635" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4635</text:a>). This is now correctly interpreted as inheriting the control from the group's parent(s). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">If WLIST keyword add (ADD) or move (MOV) operations are performed on a non-existent well list then a new list will now be created (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4768" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4768</text:a>). Also, if an attempt is made to delete (DEL) a non-existent well list then an error message is output. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">OPM Flow now respects GCONPROD keyword items 11 to 13 properly (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6331" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6331</text:a>). These are the actions to be taken if water, gas and liquid rate constraints are violated. Previously the action would default to that specified by item 7 whichever of the constraints was violated. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The code now protects against possible division by zero when applying the UDQ comparison operators, which have a relative tolerance defined by the UDQPARAMS keyword item 4 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4758" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4758</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">UDQ values are now only updated once at the end of the next time step if the UDQ keyword UPDATE flag is set to NEXT (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4767" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4767</text:a>). Previously, the UDQ values were also updated at the beginning of the next report step. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A error is now reported if the specified initial gas-oil contact is deeper than the initial oil-water contact specified on the EQUIL keyword in the SOLUTION section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4771" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4771</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the summary (RSM) file generation failure in cases with formatted output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4653" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4653</text:a>). Also, corrected the generation of the SMSPEC file name used as the source when creating RSM file output in certain special cases that were previously not handled. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the time step counter in cases where the SUMTHIN or RPTONLY keywords are used (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4644" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4644</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Invalid region index pairs specified when requesting inter-region flow summary vectors (RxFT) are now ignored and a warning message is output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4704" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4704</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Since the TIME vector in the summary file is stored as a single precision floating-point number, small time steps can give TIME values that are not strictly increasing especially at long elapsed times (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4647" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4647</text:a>). This is known to cause problems for some post-processing tools. Summary output is now filtered to prevent this occurring. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The summary vector calculation of group and field level cumulative production volumes ([FG]xPT) have been amended to incorporate group level efficiency factors (GEFAC) for satellite production (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4683" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4683</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">An incorrect reference solTracerRate has been fixed in TracerModel (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6207" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6207</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A well's preferred phase is now correctly restored following a restart (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4740" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4740</text:a>). Previously, all producing wells would be restarted as oil producers, the common case, but this would be wrong for gas producers. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The last valid network pressure is now stored and used for initialization if the current iteration fails (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6200" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6200</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The new operability check introduced for wells under THP control has now also been introduced for wells not under THP control (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6317" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6317</text:a>). This fixes convergence issues seen in a couple of test cases. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Well group targets are now stored: to make group targets consistent for local switching during well solves, to avoid using global vectors with name mapping from Wellstate, to only use singleWellState in the well switching algorithm, and to avoid recomputing well group targets (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6311" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6311</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Well status checks based on the well objects in the schedule have been replaced with the ones based on the well state (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6051" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6051</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A bug has been fixed in the LeftExtreme interpolation of 2D tables (where the y sample values are entered in ascending order) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4668" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4668</text:a>). Only small effects have been observed but could be significant in corner cases. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Allow restart runs for cases with binary (IMPORT'ed) input files (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4708" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4708</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Avoid very small denominator values when the product Rs.Rv or Rsw.Rvw is too large (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6227" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6227</text:a>). This fixes the spikes seen in the gas injection potentials in a few regression tests. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Compilation issues have been resolved on architectures where long double maps to __float128 with QuadMath (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4756" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4756</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6497" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6497</text:a>). This resolves issue <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4702" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4702</text:a>. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Diagnostic messages for DELAYED_EXIT1 will now be printed at the end of the parsing process (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4613" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4613</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Several bugs have been fixed including a memory leakage that caused a segmentation fault for a big model, and the rocsparse based CPR implementation has been updated to be inline with the OPM default CPR implementation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6339" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6339</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The baseName has been separated from the file removal regular expression since it's a user-controlled string that might contain regular expression metacharacters like '+' or '-' (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6293" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6293</text:a>). In rare corner cases, those characters might lead to matching too many or not enough files. The simulator now uses regular string matching for the baseName. Symbolic links and directories are omitted from consideration. Grid files are also omitted from file removal since it's possible for CASE.DATA to use CASE.EGRID as an input file (see the GDFILE keyword). </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
@@ -14284,7 +14377,7 @@ This should lead to better partitioning results on problems with a complex well 
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P752">Improvements to simulator in this release include the folllowing:</text:p>
+    <text:p text:style-name="P752">Improvements to simulator in this release include the following:</text:p>
     <text:list xml:id="list115021364859964" text:continue-list="list115021101243246" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
@@ -15514,7 +15607,7 @@ This should lead to better partitioning results on problems with a complex well 
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P752">Improvements to simulator in this release include the folllowing:</text:p>
+    <text:p text:style-name="P752">Improvements to simulator in this release include the following:</text:p>
     <text:list xml:id="list115021364859964" text:continue-list="list115021101243246" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
