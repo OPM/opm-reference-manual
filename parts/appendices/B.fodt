@@ -13090,7 +13090,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">The intensive quantities cache now stores values for the current time step only and not the previous time step. This reduces the peak memory usage of the entire simulator by 10 %, without any performance degradation.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added a OPM Flow specific option to the Killough hysteresis model (EHYSTR keyword item 14) to correct the construction of the capillary pressure scanning curve.</text:p>
+          <text:p text:style-name="_40_TextBody">Added a OPM Flow specific option to the Killough hysteresis model (<text:a xlink:href="#__RefHeading___Toc67396_621662414">EHYSTR</text:a> keyword item 14) to correct the construction of the capillary pressure scanning curve.</text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The new saturation function consistency checks have been enabled by default.</text:p>
@@ -13099,16 +13099,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Added support for running OPM Flow single phase (water) simulations from Python code using the Python bindings.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow gas-water simulations, for example H2STORE or CO2STORE cases, from Python code using the Python bindings.</text:p>
+          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow gas-water simulations, for example <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> or <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> cases, from Python code using the Python bindings.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for additional TUNING keyword items: NEWTMX, NEWTMN, TRGMBE, TRGCNV, and XXXCNV. </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for additional <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword items: NEWTMX, NEWTMN, TRGMBE, TRGCNV, and XXXCNV. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Improved support for satellite injection and production groups. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A user defined argument can now be used for group reservoir volume production rate (RESV) controls when using the GCONPROD keyword.</text:p>
+          <text:p text:style-name="_40_TextBody">A user defined argument can now be used for group reservoir volume production rate (RESV) controls when using the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword.</text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Restart file support has been added for the number of Newton iterations required by each cell to satisfy the solution change convergence criteria at the last time step (CONV_NEW).</text:p>
@@ -13117,16 +13117,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Support has been added for running simulations beyond 31-Dec-9999 (up to 292 million years).</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for WECON keyword item 9, the name of the follow-on well to be open if the current well is shut.</text:p>
+          <text:p text:style-name="_40_TextBody">Added support for <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword item 9, the name of the follow-on well to be open if the current well is shut.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for WSEGAICD keyword item 22, the density function exponent.</text:p>
+          <text:p text:style-name="_40_TextBody">Added support for <text:a xlink:href="#__RefHeading___Toc971419_4263943340">WSEGAICD</text:a> keyword item 22, the density function exponent.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added UDA support for items 3 and 4 of the WTRACER keyword.</text:p>
+          <text:p text:style-name="_40_TextBody">Added UDA support for items 3 and 4 of the <text:a xlink:href="#__RefHeading___Toc97665_3261743917">WTRACER</text:a> keyword.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Support has been added for the use of UDAs for ORAT, WRAT, and GRAT in the GSATPROD keyword.</text:p>
+          <text:p text:style-name="_40_TextBody">Support has been added for the use of UDAs for ORAT, WRAT, and GRAT in the <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword.</text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Full support has been added for running the Constrained Pressure Residual with Algebraic Multigrid (CPR-AMG) preconditioner entirely on the GPU, using the GpuIstl framework.</text:p>
@@ -13141,7 +13141,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">An experimental Hybrid Newton method has been added that enhances nonlinear preconditioning using machine learning.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The NLDD (Nonlinear Domain Decomposition) solver has reduced the time spent on local solves by skipping subdomains that haven't changed significantly between iterations.</text:p>
+          <text:p text:style-name="_40_TextBody">The NLDD (Nonlinear Domain Decomposition) solver has reduced the time spent on local solves by skipping subdomains that haven&apos;t changed significantly between iterations.</text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Partitioner zoltanwell (default) no longer ignores the command line argument --allow-distributed-wells. This makes its behaviour more like that of the other partitioners.</text:p>
@@ -13153,7 +13153,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Added support for gas sales summary vectors .</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The well's preferred phase is now used to calculate the well productivity index .</text:p>
+          <text:p text:style-name="_40_TextBody">The well&apos;s preferred phase is now used to calculate the well productivity index .</text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Improved robustness of well solves and well group behaviour. </text:p>
@@ -13229,7 +13229,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--cpr-weights-thread-parallel</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable OpenMP thread parallelization of CPR weight calculation. This can improve performance for large models but is disabled by default.Usage: --cpr-weights-thread-parallel=[true|false]. . </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable OpenMP thread parallelization of <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> weight calculation. This can improve performance for large models but is disabled by default.Usage: --cpr-weights-thread-parallel=[true|false]. . </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
@@ -13271,10 +13271,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--edge-weights-method</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">The edge-weighting method is now chosen by specifying a string rather than an integer. A character string. Choose edge-weighing strategy: 'uniform', 'transmissibility', or 'logtrans' (logarithm of transmissibility). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The edge-weighting method is now chosen by specifying a string rather than an integer. A character string. Choose edge-weighing strategy: &apos;uniform&apos;, &apos;transmissibility&apos;, or &apos;logtrans&apos; (logarithm of transmissibility). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"transmissibility"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;transmissibility&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13302,7 +13302,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">A character string. Use config files for Hybrid Newton. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"hybridNewtonConfig.json"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;hybridNewtonConfig.json&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13313,10 +13313,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--linear-solver-accelerator</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string. Choose the backend for the linear solver, usage: '--linear-solver-accelerator=[cpu|gpu]'. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. Choose the backend for the linear solver, usage: &apos;--linear-solver-accelerator=[cpu|gpu]&apos;. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"cpu"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;cpu&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13358,7 +13358,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">The names of the possible variants have been converted to lower case. A character string. Specify which variant of the modified-ILU preconditioner ought to be used. Possible variants are: ilu (default, plain ILU), milu_1 (lump diagonal with dropped row entries), milu_2 (lump diagonal with the sum of the absolute values of the dropped row entries), milu_3 (if diagonal is positive add sum of dropped row entries, otherwise subtract them), milu_4 (if diagonal is positive add sum of dropped row entries, otherwise do nothing). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"ilu"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;ilu&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13383,10 +13383,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--partition-method</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">The names of the partitioning methods have been converted to lower case. A character string. Choose partitioning method: 'simple', 'zoltan', 'metis', or 'zoltanwell' (Zoltan with all cells perforated by a well represented by a single vertex). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The names of the partitioning methods have been converted to lower case. A character string. Choose partitioning method: &apos;simple&apos;, &apos;zoltan&apos;, &apos;metis&apos;, or &apos;zoltanwell&apos; (Zoltan with all cells perforated by a well represented by a single vertex). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"zoltanwell"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;zoltanwell&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13397,7 +13397,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--time-step-control-max-reduction-time-step</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A positive real value. (Only applicable for the general 3rd order controller, using 'control-error-filtering' as time-step-control-tolerance-test-version) If the (proposed) relative change in time step size is larger than this parameter, the time step will be rejected. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real value. (Only applicable for the general 3rd order controller, using &apos;control-error-filtering&apos; as time-step-control-tolerance-test-version) If the (proposed) relative change in time step size is larger than this parameter, the time step will be rejected. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">0.1</text:p>
@@ -13411,10 +13411,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--time-step-control-parameters</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string. (Only applicable for the general 3rd order controller.) Parameters for the general 3rd order controller. Should be given as 'beta_1;beta_2;beta_3;alpha_2;alpha_3'. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. (Only applicable for the general 3rd order controller.) Parameters for the general 3rd order controller. Should be given as &apos;beta_1;beta_2;beta_3;alpha_2;alpha_3&apos;. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"0.125;0.25;0.125;0.75;0.25"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;0.125;0.25;0.125;0.75;0.25&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13439,10 +13439,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">--time-step-control-tolerance-test-version</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string. (Only applicable for the general 3rd order controller.) Ways to decide if the time step should be rejected. Options: 'standard' and 'control-error-filtering'. The standard version compares relative change to tolerance directly to decide if the time step should be rejected, while the control-error-filtering version compares the relative change in time step size to the max-reduction-time-step parameter. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string. (Only applicable for the general 3rd order controller.) Ways to decide if the time step should be rejected. Options: &apos;standard&apos; and &apos;control-error-filtering&apos;. The standard version compares relative change to tolerance directly to decide if the time step should be rejected, while the control-error-filtering version compares the relative change in time step size to the max-reduction-time-step parameter. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">"standard"</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;standard&quot;</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13529,7 +13529,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="_40_TextBody">Added support for the biofilm model in two-phase gas-water systems, which can be activated using the BIOFILM keyword in the RUNSPEC section in CO2STORE or H2STORE runs (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6462" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6462</text:a>). The model includes biofilm as a solid phase and as microbes suspended in the water. This can be used in applications such as underground storage where dissolved hydrogen consumed by microbes leads to injectivity and hydrogen loss. </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for the biofilm model in two-phase gas-water systems, which can be activated using the BIOFILM keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section in <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> or <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> runs (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6462" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6462</text:a>). The model includes biofilm as a solid phase and as microbes suspended in the water. This can be used in applications such as underground storage where dissolved hydrogen consumed by microbes leads to injectivity and hydrogen loss. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Added an optimized version of the preconditioner update calls, at the cost of apply times, to tailor the implementation more towards CPR-type preconditioners with smaller apply/update ratios (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6310" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6310</text:a>). </text:p>
@@ -13547,13 +13547,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Added additional restart file items to maintain compatibility with user defined arguments (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4439" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4439</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for specifying the maximum and minimum number of Newton iterations for a time step (NEWTMX and NEWTMN) on the TUNING keyword in the SCHEDULE section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6378" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6378</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for specifying the maximum and minimum number of Newton iterations for a time step (NEWTMX and NEWTMN) on the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6378" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6378</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added parser support for the GSATINJE keyword to specify satellite injection at the group level (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4700" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4700</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added parser support for the <text:a xlink:href="#__RefHeading___Toc116596_332691817">GSATINJE</text:a> keyword to specify satellite injection at the group level (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4700" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4700</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A check has been added to ensure that all wells and/or groups needed in a UDQ DEFINE statement are present at the point of definition (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4619" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4619</text:a>). An error message will be generated for any missing well objects, for example: </text:p>
+          <text:p text:style-name="_40_TextBody">A check has been added to ensure that all wells and/or groups needed in a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> DEFINE statement are present at the point of definition (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4619" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4619</text:a>). An error message will be generated for any missing well objects, for example: </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
@@ -13566,7 +13566,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table15.1">
        <table:table-cell table:style-name="Table15.A1" office:value-type="string">
         <text:p text:style-name="P781">Error: Unrecoverable errors while loading input:</text:p>
-        <text:p text:style-name="P781"></text:p>
+        <text:p text:style-name="P781"/>
         <text:p text:style-name="P781">Problem with UDQ</text:p>
         <text:p text:style-name="P781">In CASE.DATA line 251</text:p>
         <text:p text:style-name="P781">DEFINE cannot be evaluated:</text:p>
@@ -13576,33 +13576,33 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="_40_TextBody"></text:p>
+    <text:p text:style-name="_40_TextBody"/>
     <text:list xml:id="list115021101243247" text:continue-list="list115021101243246" text:style-name="_40_NumberList">
      <text:list-item>
       <text:list>
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Restart file support has been added for the number of Newton iterations required by each cell to satisfy the solution change convergence criteria at the last time step (CONV_NEW) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6374" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6374</text:a>). This output can be requested by including the CONV mnemonic on the RPTRST keyword. Note that simulations using NLDD are not currently supported. </text:p>
+          <text:p text:style-name="_40_TextBody">Restart file support has been added for the number of Newton iterations required by each cell to satisfy the solution change convergence criteria at the last time step (CONV_NEW) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6374" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6374</text:a>). This output can be requested by including the CONV mnemonic on the <text:a xlink:href="#__RefHeading___Toc210154_2884651453">RPTRST</text:a> keyword. Note that simulations using NLDD are not currently supported. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for WSEGAICD keyword item 22, the density function exponent (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6473" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6473</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4736" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4736</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for <text:a xlink:href="#__RefHeading___Toc971419_4263943340">WSEGAICD</text:a> keyword item 22, the density function exponent (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6473" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6473</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4736" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4736</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Experimental support has been added for the WELSPECL and COMPDATL keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6297" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6297</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Experimental support has been added for the <text:a xlink:href="#__RefHeading___Toc147691_6053652">WELSPECL</text:a> and <text:a xlink:href="#__RefHeading___Toc153110_63720426">COMPDATL</text:a> keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6297" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6297</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Added a command line option (--linear-solver-accelerator=cpu or gpu) to optionally carry out the linear solver operations on the  GPU (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6270" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6270</text:a>). By default the all operations are carried out on the CPU. When using the gpu option, the linear solvers can be specified with the normal --linear-solver argument, which can point to a JSON file which can have the same format as the one for the CPU. Note that some options and preconditioners are currently limited to the CPU. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Full support has been added for running the Constrained Pressure Residual with Algebraic Multigrid (CPR-AMG) preconditioner entirely on the GPU, using the GpuIstl framework (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a>, <text:a xlink:type="simple" xlink:href="https://doi.org/10.21105/joss.07740" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Lye et al. (2025)</text:a>). It supports both AMGX and Hypre BoomerAMG solvers, allows consistent configuration across CPU and GPU, and introduces fast GPU-native implementations for CPR operations and quasiimpes weights. The setup minimizes memory usage and transfer overhead by sharing a single GPU matrix across solver components. Initial benchmarks show comparable or improved convergence versus CPU runs. </text:p>
+          <text:p text:style-name="_40_TextBody">Full support has been added for running the Constrained Pressure Residual with Algebraic Multigrid (CPR-AMG) preconditioner entirely on the GPU, using the GpuIstl framework (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a>, <text:a xlink:type="simple" xlink:href="https://doi.org/10.21105/joss.07740" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Lye et al. (2025)</text:a>). It supports both AMGX and Hypre BoomerAMG solvers, allows consistent configuration across CPU and GPU, and introduces fast GPU-native implementations for <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> operations and quasiimpes weights. The setup minimizes memory usage and transfer overhead by sharing a single GPU matrix across solver components. Initial benchmarks show comparable or improved convergence versus CPU runs. </text:p>
           <text:p text:style-name="_40_TextBody">It is now possible to run the identical CPR-AMG preconditioner setup on both CPU and GPU (with different hardware specific AMG solvers) by using the command line option linear-solver-accelerator=cpu and gpu respectively.</text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">An experimental Hybrid Newton method has been added that enhances nonlinear preconditioning using machine learning. Machine learning-based corrections have been integrated into the standard Newton solver of the black-oil simulator (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6424" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6424</text:a>, <text:a xlink:type="simple" xlink:href="https://doi.org/10.2118/223843-MS" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Lechevallier, et al. (2025)</text:a>). One or more trained Hybrid Newton models can now be used to adjust the initial guess of the nonlinear solver at specific timesteps. Two new command line options have been added: setting --use-hy-ne=true activates the Hybrid Newton method, and --hy-ne-config-file=&lt;path&gt; specifies the path of the JSON configuration file that allows OPM Flow to correctly interpret how to precondition Newton's method. </text:p>
+          <text:p text:style-name="_40_TextBody">An experimental Hybrid Newton method has been added that enhances nonlinear preconditioning using machine learning. Machine learning-based corrections have been integrated into the standard Newton solver of the black-oil simulator (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6424" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6424</text:a>, <text:a xlink:type="simple" xlink:href="https://doi.org/10.2118/223843-MS" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Lechevallier, et al. (2025)</text:a>). One or more trained Hybrid Newton models can now be used to adjust the initial guess of the nonlinear solver at specific timesteps. Two new command line options have been added: setting --use-hy-ne=true activates the Hybrid Newton method, and --hy-ne-config-file=&lt;path&gt; specifies the path of the JSON configuration file that allows OPM Flow to correctly interpret how to precondition Newton&apos;s method. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The NLDD (Nonlinear Domain Decomposition) solver has reduced the time spent on local solves by skipping subdomains that haven't changed significantly between iterations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6346" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6346</text:a>). Mobility changes indicate significant alterations in fluid flow characteristics, making it an effective indicator for determining when subdomain re-solving is necessary. The threshold for relative mobility change detection (default: 0.1) is specified using the --nldd-relative-mobility-change-tol command line option. By setting this parameter to 0, the mobility thresholding will be disabled. </text:p>
+          <text:p text:style-name="_40_TextBody">The NLDD (Nonlinear Domain Decomposition) solver has reduced the time spent on local solves by skipping subdomains that haven&apos;t changed significantly between iterations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6346" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6346</text:a>). Mobility changes indicate significant alterations in fluid flow characteristics, making it an effective indicator for determining when subdomain re-solving is necessary. The threshold for relative mobility change detection (default: 0.1) is specified using the --nldd-relative-mobility-change-tol command line option. By setting this parameter to 0, the mobility thresholding will be disabled. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Partitioner zoltanwell (default) no longer ignores the command line argument --allow-distributed-wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/874" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#874</text:a>). This makes its behaviour more like that of the other partitioners. </text:p>
@@ -13670,7 +13670,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody"> Reduced peak memory consumption when the command line option --cpr-reuse-setup is set to recreate the linear solver (which it does by default), see that option and --cpr-reuse-interval for details (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6345" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6345</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Improved GPU support for blackoil fluid systems (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6365" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6365</text:a>). The BlackoilIntensiveQuantities::update() function can now be called without an ElementContext. The motivation is to make it a better fit for the GPU code, but it should also allow some more optimizations on the CPU, such as static dispatch for the "multiplexed" (runtime switched) functions of the fluid and material subsystems. </text:p>
+          <text:p text:style-name="_40_TextBody">Improved GPU support for blackoil fluid systems (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6365" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6365</text:a>). The BlackoilIntensiveQuantities::update() function can now be called without an ElementContext. The motivation is to make it a better fit for the GPU code, but it should also allow some more optimizations on the CPU, such as static dispatch for the &quot;multiplexed&quot; (runtime switched) functions of the fluid and material subsystems. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Memory consumption has been reduced when the hysteresis model is not being used (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6510" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6510</text:a>). A new variant of the simulator (flow_blackoil_nohyst) has been added. This variant is automatically chosen whenever there is no hysteresis in the case and the black-oil variant (flow_blackoil) would otherwise be chosen. </text:p>
@@ -13685,13 +13685,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Detailed instrumentation using Tracy has been enabled for individual subsystems of the simulator (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4751" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4751</text:a>). This is used by developers to profile the application and improve performance, and not an end user feature. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Improved the efficiency of the formation volume factor and viscosity evaluation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4674" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4674</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6386" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6386</text:a>).  The "Props/update time" for Norne was reduced from 3.03s to 2.16s (subject to some variation). </text:p>
+          <text:p text:style-name="_40_TextBody">Improved the efficiency of the formation volume factor and viscosity evaluation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4674" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4674</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6386" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6386</text:a>).  The &quot;Props/update time&quot; for Norne was reduced from 3.03s to 2.16s (subject to some variation). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Memory usage is now reduced when energy, diffusion, or dispersion storage is not used (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6351" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6351</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The efficiency of the CPR weight calculation has been improved (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6457" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6457</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">The efficiency of the <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> weight calculation has been improved (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6457" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6457</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The intensive quantities cache now stores values for the current time step only and not the previous time step (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6357" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6357</text:a>). This reduces the peak memory usage of the entire simulator by 10 %, without any performance degradation. </text:p>
@@ -13700,19 +13700,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">The memory consumption during simulation has been reduced by 96 MB per million cells by removing unused capillary pressure storage (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4650" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4650</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">There is a speed improvement in some cases where a single PYACTION block generates multiple keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4624" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4624</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">There is a speed improvement in some cases where a single <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> block generates multiple keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4624" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4624</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">GPU matrix updates have been optimized by using direct memory transfer and pinned memory for Gpu-ISTL, providing significant performance improvements for GPU linear solver operations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6406" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6406</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Improved error messages when invalid grid block ranges are defined using the BOX keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4600" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4600</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Improved error messages when invalid grid block ranges are defined using the <text:a xlink:href="#__RefHeading___Toc42110_3671211675">BOX</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4600" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4600</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Messages reporting that a well has converged in zero iterations (for example, 'Well P-1 converged in 0 inner iterations') will now only be output to the Debug (DBG) file if an elevated verbosity level has been specified by the user (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6350" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6350</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Messages reporting that a well has converged in zero iterations (for example, &apos;Well P-1 converged in 0 inner iterations&apos;) will now only be output to the Debug (DBG) file if an elevated verbosity level has been specified by the user (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6350" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6350</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow gas-water simulations, for example H2STORE or CO2STORE cases, from Python code using the Python bindings (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6075" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6075</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow gas-water simulations, for example <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> or <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> cases, from Python code using the Python bindings (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6075" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6075</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The Python documentation for OPM Flow has been updated (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4615" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4615</text:a>, <text:a xlink:type="simple" xlink:href="https://opm.github.io/opm-python-documentation/master/index.html" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">OPM Python Documentation</text:a>). </text:p>
@@ -13721,10 +13721,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Added effect of satellite surface injection rates, and updated satellite surface production rates (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6454" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6454</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for additional TUNING keyword items: target non-linear convergence error (TRGCNV), maximum non-linear convergence error (XXXCNV), and target material balance error (TRGMBE) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6413" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6413</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for additional <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword items: target non-linear convergence error (TRGCNV), maximum non-linear convergence error (XXXCNV), and target material balance error (TRGMBE) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6413" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6413</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A user defined argument can now be used for group reservoir volume production rate (RESV) controls when using the GCONPROD keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4503" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4503</text:a>). In addition, restart support has been added for this control. </text:p>
+          <text:p text:style-name="_40_TextBody">A user defined argument can now be used for group reservoir volume production rate (RESV) controls when using the <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4503" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4503</text:a>). In addition, restart support has been added for this control. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Support has been added for running simulations beyond 31-Dec-9999 (up to 292 million years) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6336" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6336</text:a>). </text:p>
@@ -13733,28 +13733,28 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Support has been added for underscore characters in user defined region set names (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4611" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4611</text:a>). These were previously rejected at the input level. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The implementation of the exponentiation operator "^" has been extended to support combinations of UDQ sets and UDQ scalars in the definition of UDQs (see the UDQ keyword) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4757" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4757</text:a>). Previously, this operator only supported UDQ sets of the same size. </text:p>
+          <text:p text:style-name="_40_TextBody">The implementation of the exponentiation operator &quot;^&quot; has been extended to support combinations of <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> sets and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> scalars in the definition of UDQs (see the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4757" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4757</text:a>). Previously, this operator only supported <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> sets of the same size. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for WECON keyword item 9, the name of the follow-on well to be open if the current well is shut (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6050" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6050</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4507" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4507</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> keyword item 9, the name of the follow-on well to be open if the current well is shut (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6050" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6050</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4507" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4507</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added UDA support for items 3 and 4 of the WTRACER keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6549" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6549</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4800" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4800</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Added UDA support for items 3 and 4 of the <text:a xlink:href="#__RefHeading___Toc97665_3261743917">WTRACER</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6549" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6549</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4800" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4800</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">If the GSATPROD keyword specifies a group that doesn't exist at this point in the schedule then it will be created (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4689" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4689</text:a>). Groups created in this way will be parented directly to the <text:span text:style-name="NotKeyword">FIELD</text:span> group. </text:p>
+          <text:p text:style-name="_40_TextBody">If the <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword specifies a group that doesn&apos;t exist at this point in the schedule then it will be created (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4689" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4689</text:a>). Groups created in this way will be parented directly to the <text:span text:style-name="NotKeyword">FIELD</text:span> group. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Support has been added for the use of UDAs for ORAT, WRAT, and GRAT in the GSATPROD keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6429" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6429</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4701" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4701</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Support has been added for the use of UDAs for ORAT, WRAT, and GRAT in the <text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6429" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6429</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4701" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4701</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added the option to output FIP and RESV data to a separate CSV file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6329</text:a>). This is requested by including the CSVFIP mnemonic in the RPTSOL keyword. </text:p>
+          <text:p text:style-name="_40_TextBody">Added the option to output <text:a xlink:href="#__RefHeading___Toc250560_252421755">FIP</text:a> and RESV data to a separate CSV file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6329" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6329</text:a>). This is requested by including the CSVFIP mnemonic in the <text:a xlink:href="#__RefHeading___Toc135631_1317547213">RPTSOL</text:a> keyword. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">A more user friendly message is now output if an attempt is made to restart a simulation from report step zero, which is not supported by OPM Flow (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4638" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4638</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added support for the parallel Hypre preconditioner for the solution of scalar systems (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6384" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6384</text:a>). This enables the use of Hypre for CPR, CPRW and possibly other systems written as scalar compressed row storage (CRS) matrices, for example, geomechanics or separate temperature equations. </text:p>
+          <text:p text:style-name="_40_TextBody">Added support for the parallel Hypre preconditioner for the solution of scalar systems (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6384" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6384</text:a>). This enables the use of Hypre for <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a>, CPRW and possibly other systems written as scalar compressed row storage (CRS) matrices, for example, geomechanics or separate temperature equations. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Support has been added for the Hypre preconditioner with GPU input types by adding a unified, backend-agnostic HypreInterface that enables seamless integration with both CPU and GPU data types (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6444" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6444</text:a>). Using the functionality from <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6384" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6384</text:a>, this also makes it possible to use Hypre MPI parallel on the GPU. This is an important functionality for the broader CPR-AMG on GPU implementation in <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a>. </text:p>
@@ -13763,10 +13763,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">A new AmgxInterface class has been added that provides a unified, backend-agnostic interface to the AMGX functionality, enabling seamless usage with both CPU and GPU data types (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6423" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6423</text:a>). This provides important functionality for the broader CPR-AMG on GPU implementation in <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a> that is essential for achieving good GPU performance, as it ensures minimal data transfers. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A new sparse matrix implementation has been added that uses cuSPARSE's modern Generic API instead of the legacy API (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6401" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6401</text:a>). This addition is essential for supporting block size 1 operations in the GPU CPR-AMG implementation in <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a>. </text:p>
+          <text:p text:style-name="_40_TextBody">A new sparse matrix implementation has been added that uses cuSPARSE&apos;s modern Generic <text:a xlink:href="#__RefHeading___Toc4422_421927891">API</text:a> instead of the legacy <text:a xlink:href="#__RefHeading___Toc4422_421927891">API</text:a> (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6401" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6401</text:a>). This addition is essential for supporting block size 1 operations in the GPU CPR-AMG implementation in <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6308" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6308</text:a>. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The CPR weight calculation has been parallelized using OpenMP threading to improve performance, particularly important for GPU configurations where the CPU is idle and the CPU-based weight calculation can become a significant proportion of linear solve time (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6419" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6419</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> weight calculation has been parallelized using OpenMP threading to improve performance, particularly important for GPU configurations where the CPU is idle and the CPU-based weight calculation can become a significant proportion of linear solve time (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6419" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6419</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The new GPU aware ISTL solver now has MPI support (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6379" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6379</text:a>). This setup only makes sense if you have multiple GPUs either on one node or spread across multiple nodes in a cluster. To use this simply run flow through MPI:</text:p>
@@ -13787,7 +13787,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Added support for gas sales summary vectors [FG]GS[RT] and [FG]SG[RT] (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4731" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4731</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The well's preferred phase is now used to calculate the well productivity index (WPI, WPI4, WPI5 and WPI9) summary vectors (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4770" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4770</text:a>). Previously, the oil phase was used. </text:p>
+          <text:p text:style-name="_40_TextBody">The well&apos;s preferred phase is now used to calculate the well productivity index (WPI, WPI4, WPI5 and WPI9) summary vectors (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4770" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4770</text:a>). Previously, the oil phase was used. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The performance of the TracerModel has been improved by adding OpenMP parallelization over grid elements (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6206" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6206</text:a>). </text:p>
@@ -13805,13 +13805,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Only surface rates are allowed to be assigned to satellite production or injection groups (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6480" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6480</text:a>). If higher level groups containing satellite groups have a reservoir volume rate (RESV) or voidage replacement (VREP) control, the treatment of the satellite rates is not well defined. A check has been added and an error message is now output if this is the case. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Previously well control changes weren't logged during local switching (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6145" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6145</text:a>). Well control changes are now logged when the NUPCOL iteration threshold is reached. </text:p>
+          <text:p text:style-name="_40_TextBody">Previously well control changes weren&apos;t logged during local switching (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6145" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6145</text:a>). Well control changes are now logged when the <text:a xlink:href="#__RefHeading___Toc86969_4106839650">NUPCOL</text:a> iteration threshold is reached. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The initialization procedure for production wells is now more robust, in particular it ensures that valid gas and water fractions are obtained for the VFP table lookup (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6114" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6114</text:a>). Also, the gas and water fractions of a well are stored across iterations to better deal with situations such as stopped wells, where it is not possible to reconstruct gas and water fractions from the rates. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">When detecting oscillations only the number of group switches after NUPCOL non-linear iterations are now considered (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6358" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6358</text:a>). This makes the behaviour of groups similar to that of wells. </text:p>
+          <text:p text:style-name="_40_TextBody">When detecting oscillations only the number of group switches after <text:a xlink:href="#__RefHeading___Toc86969_4106839650">NUPCOL</text:a> non-linear iterations are now considered (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6358" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6358</text:a>). This makes the behaviour of groups similar to that of wells. </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
@@ -13838,67 +13838,67 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item text:start-value="1">
-          <text:p text:style-name="_40_TextBody">Corrected the application of region to region transmissibility multipliers (MULTREGT keyword) to NNCs created by pinched-out cells (PINCH keyword) in some specific cases (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6498" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6498</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Corrected the application of region to region transmissibility multipliers (<text:a xlink:href="#__RefHeading___Toc296621_1576177388">MULTREGT</text:a> keyword) to NNCs created by pinched-out cells (<text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword) in some specific cases (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6498" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6498</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Fixed a small bug for grid topology that did not affect OPM Flow, but did affect the geomechanics codes (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-grid/pull/913" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#913</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Added a OPM Flow specific option to the Killough hysteresis model (EHYSTR keyword item 14) to correct the construction of the capillary pressure scanning curve (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4676" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4676</text:a>). This option is currently inactive by default but this is likely to change in the future as the correction is believed to be a bug fix. </text:p>
+          <text:p text:style-name="_40_TextBody">Added a OPM Flow specific option to the Killough hysteresis model (<text:a xlink:href="#__RefHeading___Toc67396_621662414">EHYSTR</text:a> keyword item 14) to correct the construction of the capillary pressure scanning curve (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4676" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4676</text:a>). This option is currently inactive by default but this is likely to change in the future as the correction is believed to be a bug fix. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The old style PYACTION scripts are now assumed to have run successfully if they do not return a value (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4725</text:a>). This fixes backwards compatibility. </text:p>
+          <text:p text:style-name="_40_TextBody">The old style <text:a xlink:href="#__RefHeading___Toc393199_4211536922">PYACTION</text:a> scripts are now assumed to have run successfully if they do not return a value (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4725</text:a>). This fixes backwards compatibility. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The TUNING keyword now correctly sets the minimum length of all time steps Item 1-3 TSMINZ instead of Item 1-6 TSFMIN (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6332" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6332</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword now correctly sets the minimum length of all time steps Item 1-3 TSMINZ instead of Item 1-6 TSFMIN (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6332" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6332</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A bug has been fixed in the unit handling of the OPERATE keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4765" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4765</text:a>). This resolves an reported issue with the units when performing operations on permeability arrays (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4597" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4597</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">A bug has been fixed in the unit handling of the <text:a xlink:href="#__RefHeading___Toc64455_718313858">OPERATE</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4765" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4765</text:a>). This resolves an reported issue with the units when performing operations on permeability arrays (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4597" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4597</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Allow the WELTARG keyword to accept an empty well list (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4654" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4654</text:a>). In this case no well targets will be changed and a warning message will be output. </text:p>
+          <text:p text:style-name="_40_TextBody">Allow the <text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a> keyword to accept an empty well list (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4654" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4654</text:a>). In this case no well targets will be changed and a warning message will be output. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">An bug has been fixed where previously DRSDT was activated in restart runs even if the original simulation did not contain the DRSDT keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4655" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4655</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">An bug has been fixed where previously <text:a xlink:href="#__RefHeading___Toc117623_2179381650">DRSDT</text:a> was activated in restart runs even if the original simulation did not contain the <text:a xlink:href="#__RefHeading___Toc117623_2179381650">DRSDT</text:a> keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4655" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4655</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Fixed the handling of the group production control (GCONPROD) keyword item 2 equals FLD (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4635" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4635</text:a>). This is now correctly interpreted as inheriting the control from the group's parent(s). </text:p>
+          <text:p text:style-name="_40_TextBody">Fixed the handling of the group production control (<text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a>) keyword item 2 equals FLD (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4635" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4635</text:a>). This is now correctly interpreted as inheriting the control from the group&apos;s parent(s). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">If WLIST keyword add (ADD) or move (MOV) operations are performed on a non-existent well list then a new list will now be created (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4768" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4768</text:a>). Also, if an attempt is made to delete (DEL) a non-existent well list then an error message is output. </text:p>
+          <text:p text:style-name="_40_TextBody">If <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a> keyword add (<text:a xlink:href="#__RefHeading___Toc4412_421927891">ADD</text:a>) or move (MOV) operations are performed on a non-existent well list then a new list will now be created (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4768" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4768</text:a>). Also, if an attempt is made to delete (DEL) a non-existent well list then an error message is output. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">OPM Flow now respects GCONPROD keyword items 11 to 13 properly (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6331" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6331</text:a>). These are the actions to be taken if water, gas and liquid rate constraints are violated. Previously the action would default to that specified by item 7 whichever of the constraints was violated. </text:p>
+          <text:p text:style-name="_40_TextBody">OPM Flow now respects <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> keyword items 11 to 13 properly (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6331" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6331</text:a>). These are the actions to be taken if water, gas and liquid rate constraints are violated. Previously the action would default to that specified by item 7 whichever of the constraints was violated. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The code now protects against possible division by zero when applying the UDQ comparison operators, which have a relative tolerance defined by the UDQPARAMS keyword item 4 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4758" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4758</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">The code now protects against possible division by zero when applying the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> comparison operators, which have a relative tolerance defined by the UDQPARAMS keyword item 4 (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4758" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4758</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">UDQ values are now only updated once at the end of the next time step if the UDQ keyword UPDATE flag is set to NEXT (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4767" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4767</text:a>). Previously, the UDQ values were also updated at the beginning of the next report step. </text:p>
+          <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> values are now only updated once at the end of the next time step if the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword UPDATE flag is set to <text:a xlink:href="#__RefHeading___Toc117629_2179381650">NEXT</text:a> (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4767" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4767</text:a>). Previously, the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> values were also updated at the beginning of the next report step. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A error is now reported if the specified initial gas-oil contact is deeper than the initial oil-water contact specified on the EQUIL keyword in the SOLUTION section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4771" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4771</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">A error is now reported if the specified initial gas-oil contact is deeper than the initial oil-water contact specified on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4771" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4771</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Fixed the summary (RSM) file generation failure in cases with formatted output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4653" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4653</text:a>). Also, corrected the generation of the SMSPEC file name used as the source when creating RSM file output in certain special cases that were previously not handled. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Fixed the time step counter in cases where the SUMTHIN or RPTONLY keywords are used (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4644" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4644</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Fixed the time step counter in cases where the <text:a xlink:href="#__RefHeading___Toc28401_3671211675">SUMTHIN</text:a> or <text:a xlink:href="#__RefHeading___Toc210150_2884651453">RPTONLY</text:a> keywords are used (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4644" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4644</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Invalid region index pairs specified when requesting inter-region flow summary vectors (RxFT) are now ignored and a warning message is output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4704" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4704</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Since the TIME vector in the summary file is stored as a single precision floating-point number, small time steps can give TIME values that are not strictly increasing especially at long elapsed times (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4647" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4647</text:a>). This is known to cause problems for some post-processing tools. Summary output is now filtered to prevent this occurring. </text:p>
+          <text:p text:style-name="_40_TextBody">Since the <text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a> vector in the summary file is stored as a single precision floating-point number, small time steps can give <text:a xlink:href="#__RefHeading___Toc1252966_4250154414">TIME</text:a> values that are not strictly increasing especially at long elapsed times (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4647" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4647</text:a>). This is known to cause problems for some post-processing tools. Summary output is now filtered to prevent this occurring. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The summary vector calculation of group and field level cumulative production volumes ([FG]xPT) have been amended to incorporate group level efficiency factors (GEFAC) for satellite production (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4683" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4683</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">The summary vector calculation of group and field level cumulative production volumes ([FG]xPT) have been amended to incorporate group level efficiency factors (<text:a xlink:href="#__RefHeading___Toc268455_1366622701">GEFAC</text:a>) for satellite production (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4683" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4683</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">An incorrect reference solTracerRate has been fixed in TracerModel (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6207" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6207</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">A well's preferred phase is now correctly restored following a restart (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4740" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4740</text:a>). Previously, all producing wells would be restarted as oil producers, the common case, but this would be wrong for gas producers. </text:p>
+          <text:p text:style-name="_40_TextBody">A well&apos;s preferred phase is now correctly restored following a restart (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4740" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4740</text:a>). Previously, all producing wells would be restarted as oil producers, the common case, but this would be wrong for gas producers. </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">The last valid network pressure is now stored and used for initialization if the current iteration fails (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6200" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6200</text:a>). </text:p>
@@ -13916,7 +13916,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">A bug has been fixed in the LeftExtreme interpolation of 2D tables (where the y sample values are entered in ascending order) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4668" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4668</text:a>). Only small effects have been observed but could be significant in corner cases. </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Allow restart runs for cases with binary (IMPORT'ed) input files (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4708" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4708</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Allow restart runs for cases with binary (IMPORT&apos;ed) input files (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4708" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4708</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Avoid very small denominator values when the product Rs.Rv or Rsw.Rvw is too large (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6227" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6227</text:a>). This fixes the spikes seen in the gas injection potentials in a few regression tests. </text:p>
@@ -13928,10 +13928,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">Diagnostic messages for DELAYED_EXIT1 will now be printed at the end of the parsing process (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4613" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4613</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Several bugs have been fixed including a memory leakage that caused a segmentation fault for a big model, and the rocsparse based CPR implementation has been updated to be inline with the OPM default CPR implementation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6339" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6339</text:a>). </text:p>
+          <text:p text:style-name="_40_TextBody">Several bugs have been fixed including a memory leakage that caused a segmentation fault for a big model, and the rocsparse based <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> implementation has been updated to be inline with the OPM default <text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> implementation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6339" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6339</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">The baseName has been separated from the file removal regular expression since it's a user-controlled string that might contain regular expression metacharacters like '+' or '-' (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6293" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6293</text:a>). In rare corner cases, those characters might lead to matching too many or not enough files. The simulator now uses regular string matching for the baseName. Symbolic links and directories are omitted from consideration. Grid files are also omitted from file removal since it's possible for CASE.DATA to use CASE.EGRID as an input file (see the GDFILE keyword). </text:p>
+          <text:p text:style-name="_40_TextBody">The baseName has been separated from the file removal regular expression since it&apos;s a user-controlled string that might contain regular expression metacharacters like &apos;+&apos; or &apos;-&apos; (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6293" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6293</text:a>). In rare corner cases, those characters might lead to matching too many or not enough files. The simulator now uses regular string matching for the baseName. Symbolic links and directories are omitted from consideration. Grid files are also omitted from file removal since it&apos;s possible for CASE.DATA to use CASE.EGRID as an input file (see the <text:a xlink:href="#__RefHeading___Toc139346_951517595">GDFILE</text:a> keyword). </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
@@ -13969,10 +13969,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:list-item>
           <text:p text:style-name="_40_TextBody">For the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> ASSIGN operator after the terminating “/” normally any comments can be entered; however, if there is “/” within the comment field, as per:</text:p>
           <text:p text:style-name="_40_Example"><text:s text:c="2"/>ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ <text:s text:c="3"/>Condensate Yield (63.5/56.7)/(1.0 – 0.065)</text:p>
-          <text:p text:style-name="_40_Example"></text:p>
+          <text:p text:style-name="_40_Example"/>
           <text:p text:style-name="_40_TextBody">then the simulator will abort. The work around is to manually place the comment characters “--” after the ASSIGN terminating “/”, like so:</text:p>
           <text:p text:style-name="_40_Example"><text:s text:c="2"/>ASSIGN FUNGLYLD 1.196 <text:s text:c="2"/>/ -- Condensate Yield (63.5/56.7)/(1.0 – 0.06)</text:p>
-          <text:p text:style-name="_40_Example"></text:p>
+          <text:p text:style-name="_40_Example"/>
          </text:list-item>
          <text:list-item>
           <text:p text:style-name="_40_TextBody">At the moment, one cannot initialize tracers using the <text:a xlink:href="#__RefHeading___Toc296597_1576177388">EQUALS</text:a> keyword. Instead use the array format, that is the keyword followed by the required number of values, or the <text:a xlink:href="#__RefHeading___Toc210170_2884651453">TVDP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section to set the initial tracer concentrations as a function of depth.</text:p>
@@ -17426,7 +17426,7 @@ This should lead to better partitioning results on problems with a complex well 
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody"></text:p>
+    <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">In addition, the following new <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> keywords are now recognized as described by the comments in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable1">Table A.3</text:sequence-ref>.</text:p>
     <table:table table:name="Table11" table:style-name="Table11">
      <table:table-column table:style-name="Table11.A"/>
