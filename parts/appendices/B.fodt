@@ -13066,7 +13066,97 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P1008">TODO</text:p>
+          <text:p text:style-name="_40_TextBody">Added support for the biofilm model in two-phase gas-water systems.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The peak memory allocation has been reduced when recreating the linear solver.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Improved GPU support for blackoil fluid systems.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Memory consumption has been reduced when the hysteresis model is not being used.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for link time optimization.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Optimized update calls for CPR-type preconditioners.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Memory usage is now reduced when energy, diffusion, or dispersion storage is not used.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The intensive quantities cache now stores values for the current time step only and not the previous time step. This reduces the peak memory usage of the entire simulator by 10 %, without any performance degradation.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added a OPM Flow specific option to the Killough hysteresis model (EHYSTR keyword item 14) to correct the construction of the capillary pressure scanning curve.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The new saturation function consistency checks have been enabled by default.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow single phase (water) simulations from Python code using the Python bindings.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for running OPM Flow gas-water simulations, for example H2STORE or CO2STORE cases, from Python code using the Python bindings.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for additional TUNING keyword items: NEWTMX, NEWTMN, TRGMBE, TRGCNV, and XXXCNV. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Improved support for satellite injection and production groups. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A user defined argument can now be used for group reservoir volume production rate (RESV) controls when using the GCONPROD keyword.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Restart file support has been added for the number of Newton iterations required by each cell to satisfy the solution change convergence criteria at the last time step (CONV_NEW).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for running simulations beyond 31-Dec-9999 (up to 292 million years).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for WECON keyword item 9, the name of the follow-on well to be open if the current well is shut.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for WSEGAICD keyword item 22, the density function exponent.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added UDA support for items 3 and 4 of the WTRACER keyword.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for the use of UDAs for ORAT, WRAT, and GRAT in the GSATPROD keyword.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Full support has been added for running the Constrained Pressure Residual with Algebraic Multigrid (CPR-AMG) preconditioner entirely on the GPU, using the GpuIstl framework.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for the Hypre preconditioner with GPU input types.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The new GPU aware ISTL solver now has MPI support.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">An experimental Hybrid Newton method has been added that enhances nonlinear preconditioning using machine learning.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The NLDD (Nonlinear Domain Decomposition) solver has reduced the time spent on local solves by skipping subdomains that haven't changed significantly between iterations.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Partitioner zoltanwell (default) no longer ignores the command line argument --allow-distributed-wells. This makes its behaviour more like that of the other partitioners.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for water mass in place and water mass injection/production rate/total summary vectors. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for gas sales summary vectors .</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The well's preferred phase is now used to calculate the well productivity index .</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Improved robustness of well solves and well group behaviour. </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
