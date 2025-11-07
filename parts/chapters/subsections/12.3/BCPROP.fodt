@@ -4969,7 +4969,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P78">A defined character string that defines the type of boundary condition to be applied, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list3603273313" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P90">DIRICHLET: for user defined boundary conditions. In this case, COMPONENT for the fluid type, and PRESS and <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> for the constant pressure and temperature boundary conditions must be specified.</text:p>
+         <text:p text:style-name="P90">DIRICHLET: for user defined boundary conditions. In this case, COMPONENT for the fluid type, and PRESS and <text:span text:style-name="NotKeyword">TEMP</text:span> for the constant pressure and temperature boundary conditions must be specified.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P90">FREE: for the initial state of the boundary to be kept throughout the simulation, that is a constant boundary condition. The remaining items should be defaulted.</text:p>
@@ -4978,7 +4978,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P90">RATE: <text:s/>for the boundary to have a constant influx or efflux rate. In this case, COMPONENT for the fluid type, and RATE to set the mass rate per unit area must be specified.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P96"><text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a>: Constant temperature boundary condition (no-flow of mass). </text:p>
+         <text:p text:style-name="P96"><text:span text:style-name="NotKeyword">THERMAL</text:span>: Constant temperature boundary condition (no-flow of mass). </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P96">NONE: No flow boundary condition.</text:p>
@@ -5105,10 +5105,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P54">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P78"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a></text:p>
+       <text:p text:style-name="P78"><text:span text:style-name="NotKeyword">TEMP</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2227.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P83"><text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> is a real positive number that defines the constant temperature boundary condition. <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> should only be entered if TYPE has been set to DIRICHLET or <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a>.</text:p>
+       <text:p text:style-name="P83"><text:span text:style-name="NotKeyword">TEMP</text:span> is a real positive number that defines the constant temperature boundary condition. <text:span text:style-name="NotKeyword">TEMP</text:span> should only be entered if TYPE has been set to DIRICHLET or <text:span text:style-name="NotKeyword">THERMAL</text:span>.</text:p>
        <text:p text:style-name="P53">The default value of 1* will use the simulator&apos;s calculated value based on data entered via one of the following reservoir temperature keywords: <text:a xlink:href="#__RefHeading___Toc111816_2939291539">RTEMP</text:a>, <text:a xlink:href="#__RefHeading___Toc111818_2939291539">RTEMPA</text:a>, <text:a xlink:href="#__RefHeading___Toc108628_29392915391">RTEMPVD</text:a>, <text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a>, or <text:a xlink:href="#__RefHeading___Toc108626_29392915392">TEMPVD</text:a>, in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section. Note that all of the aforementioned reservoir temperature keywords, except for <text:a xlink:href="#__RefHeading___Toc117385_650382403">TEMPI</text:a>, may also be used in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section as well.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -5509,7 +5509,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P38">2 <text:s text:c="7"/>FREE <text:s text:c="32"/>/ </text:p>
     <text:p text:style-name="P39">/</text:p>
     <text:p text:style-name="P39"/>
-    <text:p text:style-name="P79">With this option it is only necessary to define the boundary cells and all the other parameters (COMPONENT, RATE, PRESS, and <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a>) can be defaulted, as they are ignored when TYPE equals FREE.</text:p>
+    <text:p text:style-name="P79">With this option it is only necessary to define the boundary cells and all the other parameters (COMPONENT, RATE, PRESS, and <text:span text:style-name="NotKeyword">TEMP</text:span>) can be defaulted, as they are ignored when TYPE equals FREE.</text:p>
     <text:p text:style-name="P84">The next example is based on NX, NY and NZ equal to 20, 1, 10 respectively, on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, <text:s/>and shows how different boundary types can be assigned to different parts of the model.</text:p>
     <text:p text:style-name="P38">--</text:p>
     <text:p text:style-name="P38">-- <text:s text:c="6"/>DEFINE BOUNDARY CONDITIONS CONNECTION (OPM FLOW GRID KEYWORD)</text:p>
