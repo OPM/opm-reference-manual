@@ -4487,9 +4487,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables can be constants, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section keyword. <text:s/>A <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> definition section is terminated by a “/” on a single line. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody">User Defined Quantities can be output to the summmary file or used as User Defined Arguments (“UDA”) in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section with various group, well, and connection keywords. </text:p>
-    <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables can be constants, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables. Available operations include the ASSIGN, DEFINE, UNITS and UPDATE commands that are sub-keywords to the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">User Defined Quantities can be output to the summmary file and used as User Defined Arguments (“UDA”) in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section with various group, well, and connection keywords. </text:p>
+    <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> computational logic and calculations have been implemented, one should use caution when using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table833" table:style-name="Table833">
      <table:table-column table:style-name="Table833.A"/>
      <table:table-column table:style-name="Table833.B"/>
@@ -4513,7 +4513,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
      <table:table-row table:style-name="Table833.2">
       <table:table-cell table:style-name="Table833.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5143"><text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a></text:p>
+       <text:p text:style-name="P5143"><text:span text:style-name="NotKeyword">UDQ</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table833.C5" office:value-type="string">
@@ -4587,6 +4587,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19323">BU: For variables that are associated with blocks, for example <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable BPR (Block oil phase Pressure).</text:p>
         </text:list-item>
        </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">OPM Flow currently only supports field, group and well variables (FU*, GU* and WU*).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.D5" office:value-type="string">
        <text:p text:style-name="P3575"/>
@@ -4603,10 +4604,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5144">The data type for EXPRESSION is based on the OPERATOR option above, namely if OPERATOR is set to:</text:p>
        <text:list xml:id="list105922836601917" text:continue-list="list105922871205951" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19302">ASSIGN: EXPRESSION should be a numerical value.</text:p>
+         <text:p text:style-name="P19302">ASSIGN:<text:s/>EXPRESSION should be a numerical value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">DEFINE: EXPRESSION should be a mathematical expression. Allowable tokens for the expression are <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> or <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables, real numbers (can be integers or scientific notation), opening and closing brackets &apos;(&apos; and &apos;)&apos;, and basic mathematical operators plus &apos;+&apos;, minus &apos;-&apos;, multiply &apos;*&apos; and divide &apos;/&apos;.</text:p>
+         <text:p text:style-name="P19302">DEFINE: EXPRESSION should be a mathematical expression. Allowable tokens for the expression include <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> or <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables, real numbers (can be integers or scientific notation), opening and closing brackets &apos;(&apos; and &apos;)&apos;, and basic mathematical operators plus &apos;+&apos;, minus &apos;-&apos;, multiply &apos;*&apos;, divide &apos;/&apos; and exponent &apos;^&apos;.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19357">UNITS: EXPRESSION should be a character string (enclosed in quotes if it contains blanks) with a maximum length of eight characters, that declares the units that will used when reporting the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> defined by VARIABLE.</text:p>
