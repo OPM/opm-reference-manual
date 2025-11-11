@@ -907,7 +907,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="_40_Table_20_Contents" style:display-name="@Table Contents" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
-   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
@@ -2478,7 +2482,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:table-cell-properties>
   </style:style>
   <style:style style:name="Table132" style:family="table">
-   <style:table-properties style:width="15.556cm" fo:margin-left="1.468cm" table:align="left" fo:background-color="transparent" fo:keep-with-next="always">
+   <style:table-properties style:width="15.556cm" fo:margin-left="1.468cm" fo:break-before="auto" fo:break-after="auto" table:align="left" fo:background-color="transparent" fo:keep-with-next="always" style:may-break-between-rows="true" style:writing-mode="lr-tb">
     <style:background-image/>
    </style:table-properties>
   </style:style>
@@ -4682,99 +4686,98 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <table:covered-table-cell table:style-name="Table132.F1"/>
       </table:table-row>
      </table:table-header-rows>
-     <table:table-row table:style-name="Table132.3">
+     <table:table-row table:style-name="Table132.1">
       <table:table-cell table:style-name="Table132.A3" office:value-type="string">
-       <text:p text:style-name="P96">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">GRPNAME</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">GRPNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named <text:span text:style-name="NotKeyword">FIELD</text:span> is the top most group and should be used to set targets and constraints for the field.</text:p>
-       <text:p text:style-name="P96">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:span text:style-name="NotKeyword">FIELD</text:span> group in the group tree hierarchy.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string of up to eight characters in length that defines the group name for which the group target and constraints are being defined. The group named <text:span text:style-name="NotKeyword">FIELD</text:span> is the top most group and should be used to set targets and constraints for the field.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that the group hierarchy should be defined by the <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keyword when there is more than one level of groups, otherwise all the groups will sit directly under the <text:span text:style-name="NotKeyword">FIELD</text:span> group in the group tree hierarchy.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F3" office:value-type="string">
-       <text:p text:style-name="P97">None</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table132.3">
+     <table:table-row table:style-name="Table132.1">
       <table:table-cell table:style-name="Table132.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">ORAT</text:p>
-       <text:p text:style-name="P96"/>
+       <text:p text:style-name="_40_Table_20_Contents">ORAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A real positive value that defines the minimum economic surface oil production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by the AUTO variable item (9) of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the minimum economic surface oil production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by the AUTO variable item (9) of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">0.0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:covered-table-cell table:style-name="Table132.A3"/>
       <table:covered-table-cell table:style-name="Table132.C2"/>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">stb/d</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">stb/d</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">sm3/day</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">sm<text:span text:style-name="T23">3</text:span>/day</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">scc/hour</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">scc/hour</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table132.F4"/>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:table-cell table:style-name="Table132.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents">GRAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A real positive value that defines the minimum economic surface gas production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by the AUTO variable item (9) of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the minimum economic surface gas production rate, below which an economic action of shutting in or stopping all the wells in the group, as requested by the AUTO variable item (9) of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria,</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criteria,</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">0.0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:covered-table-cell table:style-name="Table132.A3"/>
       <table:covered-table-cell table:style-name="Table132.C2"/>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">Mscf/d</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">Mscf/d</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">sm3/day</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">sm<text:span text:style-name="T23">3</text:span>/day</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">scc/hour</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">scc/hour</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table132.F4"/>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:table-cell table:style-name="Table132.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">4</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">WCUT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">WCUT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A real positive value that defines the maximum economic surface water cut, above which an economic action will take place. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum economic surface water cut, above which an economic action will take place. </text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P96">Water cut is defined as:<draw:frame draw:style-name="fr1" draw:name="Object44" text:anchor-type="as-char" svg:width="2.263cm" svg:height="0.931cm" draw:z-index="0"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">Water cut is defined as:<draw:frame draw:style-name="fr1" draw:name="Object44" text:anchor-type="as-char" svg:width="2.263cm" svg:height="0.931cm" draw:z-index="0"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <mrow>
@@ -4854,180 +4857,180 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:image>
          <svg:desc>formula</svg:desc>
         </draw:frame>, and the various actions that are available if the water cut limit is exceeded are described in item (7).</text:p>
-       <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">0.0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:covered-table-cell table:style-name="Table132.A3"/>
       <table:covered-table-cell table:style-name="Table132.C2"/>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">dimensionless</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dimensionless</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">dimensionless</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dimensionless</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">dimensionless</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dimensionless</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table132.F4"/>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:table-cell table:style-name="Table132.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">GOR</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">GOR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A real positive value that defines the maximum economic surface gas-oil ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum economic surface gas-oil ratio, above which an economic action will take place, as defined by item (7).</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">0.0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.3">
       <table:covered-table-cell table:style-name="Table132.A3"/>
       <table:covered-table-cell table:style-name="Table132.C2"/>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">Mscf/stb</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">Mscf/stb</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">sm3/sm3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">sm<text:span text:style-name="T23">3</text:span>/sm<text:span text:style-name="T23">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">scc/scc</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">scc/scc</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table132.F4"/>
      </table:table-row>
+     <text:soft-page-break/>
      <table:table-row table:style-name="Table132.3">
       <table:table-cell table:style-name="Table132.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">6</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">WGR</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">WGR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A real positive value that defines the maximum economic surface water-gas ratio, above which an economic action will take place, as defined by item (7).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the maximum economic surface water-gas ratio, above which an economic action will take place, as defined by item (7).</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). </text:p>
-       <text:p text:style-name="P96">A value less than or equal to zero switches off this criteria.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A value less than or equal to zero switches off this criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P96">0.0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.13">
       <table:covered-table-cell table:style-name="Table132.A13"/>
       <table:covered-table-cell table:style-name="Table132.C2"/>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">stb/Mscf</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">stb/Mscf</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">sm3/sm3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">sm<text:span text:style-name="T23">3</text:span>/sm<text:span text:style-name="T23">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P97">scc/scc</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">scc/scc</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table132.F4"/>
      </table:table-row>
-     <text:soft-page-break/>
      <table:table-row table:style-name="Table132.1">
       <table:table-cell table:style-name="Table132.A13" office:value-type="string">
-       <text:p text:style-name="P96">7</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96"><text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">ACTION</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P94">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that defines the action to be taken if the economic WCUT, GOR, or WGR limits are violated. <text:span text:style-name="NotKeyword">ACTION</text:span> should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P98">NONE: no action is taken. </text:p>
+         <text:p text:style-name="_40_Table_20_Contents">NONE: no action is taken. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P98">CON: close the worst offending connection in the worst offending well. If connections have been grouped as completions then the worst offending completion will be closed.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">CON: close the worst offending connection in the worst offending well. If connections have been grouped as completions then the worst offending completion will be closed.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P98">+CON: close the worst offending connection and all below it in the worst offending well. If connections have been grouped as completions then the worst offending completion and all below it will be closed. </text:p>
+         <text:p text:style-name="_40_Table_20_Contents">+CON: close the worst offending connection and all below it in the worst offending well. If connections have been grouped as completions then the worst offending completion and all below it will be closed. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P98">WELL: shut or stop the worst offending well as per the AUTO variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">WELL: shut or stop the worst offending well as per the AUTO variable on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P98">PLUG: <text:s/>plug back the worst offending well based on the plug back length and options defined on the <text:a xlink:href="#__RefHeading___Toc628135_4263943340">WPLUG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a>.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">PLUG: <text:s/>plug back the worst offending well based on the plug back length and options defined on the <text:a xlink:href="#__RefHeading___Toc628135_4263943340">WPLUG</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a>.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P96">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
-       <text:p text:style-name="P96">Only the NONE option is currently supported by the simulator.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The corrective action takes places at the end of the time step in which the constraint is violated.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Only the NONE option is currently supported by the simulator.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F3" office:value-type="string">
-       <text:p text:style-name="P96">None</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.1">
       <table:table-cell table:style-name="Table132.A13" office:value-type="string">
-       <text:p text:style-name="P96">8</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96"><text:a xlink:href="#__RefHeading___Toc46631_2479612490">END</text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">END</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P94">A defined character string that defines if the simulation should terminate if <text:s/>all the producing wells in the group, including the <text:span text:style-name="NotKeyword">FIELD</text:span> group, are shut or stopped. <text:a xlink:href="#__RefHeading___Toc46631_2479612490">END</text:a> should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that defines if the simulation should terminate if <text:s/>all the producing wells in the group, including the <text:span text:style-name="NotKeyword">FIELD</text:span> group, are shut or stopped. <text:span text:style-name="NotKeyword">END</text:span> should be set to one of the following character strings:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P98">NO: no action is taken and the run continues. </text:p>
+         <text:p text:style-name="_40_Table_20_Contents">NO: no action is taken and the run continues. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P98">YES: terminate the run at the next report time step.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">YES: terminate the run at the next report time step.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P96">Only the NO option is currently supported by the simulator.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Only the NO option is currently supported by the simulator.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F15" office:value-type="string">
-       <text:p text:style-name="P96">NO</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NO</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.1">
       <table:table-cell table:style-name="Table132.A13" office:value-type="string">
-       <text:p text:style-name="P96">9</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" office:value-type="string">
-       <text:p text:style-name="P96">MXWELS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">MXWELS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table132.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P96">A positive integer defining the maximum number of producing and injecting wells for this this group and any subordinate groups.</text:p>
-       <text:p text:style-name="P96">The default value of zero implies that there is no limit to the number of wells.</text:p>
-       <text:p text:style-name="P96">This is not currently supported by the simulator and must be defaulted.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive integer defining the maximum number of producing and injecting wells for this this group and any subordinate groups.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value of zero implies that there is no limit to the number of wells.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This is not currently supported by the simulator and must be defaulted.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table132.F16" office:value-type="string">
-       <text:p text:style-name="P96">0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table132.1">
       <table:table-cell table:style-name="Table132.A17" table:number-columns-spanned="6" office:value-type="string">
-       <text:p text:style-name="P97">Notes:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
          <text:p text:style-name="_40_Table_20_Contents">User Defined Quantities (&quot;UDQ&quot;) can be used as User Defined Arguments (&quot;UDA&quot;) for various group, well, and connection keywords in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. User Defined Arguments are activated using the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P99">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5039,22 +5042,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="P53">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.3.98.1</text:sequence>: GECON Keyword Description</text:p>
-    <text:p text:style-name="P95"/>
-    <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P87">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a well’s shut-in or stop options, <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> for group controls, and <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> for setting a well’s economic criteria. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define a well’s shut-in or stop options, <text:a xlink:href="#__RefHeading___Toc146746_4203985108">GCONPROD</text:a> for group controls, and <text:a xlink:href="#__RefHeading___Toc134884_2055188184">WECON</text:a> for setting a well’s economic criteria. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P56" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716611_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716611_3964674244"/></text:h>
-    <text:p text:style-name="P89">The following example defines the economic criteria for the field with a minimum oil rate of 2,000 m3/day and a maximum water cut of 95%.</text:p>
-    <text:p text:style-name="P90">-- </text:p>
-    <text:p text:style-name="P90">-- <text:s text:c="6"/>GROUP ECONOMIC CRITERIA FOR PRODUCTION GROUPS <text:s text:c="53"/></text:p>
-    <text:p text:style-name="P90">-- <text:s text:c="77"/></text:p>
-    <text:p text:style-name="P90">-- GRUP <text:s/>OIL <text:s text:c="2"/>GAS <text:s text:c="3"/>WCT <text:s text:c="3"/>GOR <text:s text:c="3"/>WGR <text:s text:c="3"/>WORK <text:s text:c="2"/>END <text:s text:c="2"/>MAX <text:s text:c="19"/></text:p>
-    <text:p text:style-name="P90">-- NAME <text:s/>MIN <text:s text:c="2"/>MIN <text:s text:c="3"/>MAX <text:s text:c="3"/>MAX <text:s text:c="3"/>MAX <text:s text:c="3"/>OVER <text:s text:c="2"/>RUN <text:s text:c="2"/>WELLS <text:s text:c="17"/></text:p>
-    <text:p text:style-name="P90">GECON <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P90">FIELD <text:s text:c="3"/>2E3 <text:s text:c="2"/>1* <text:s text:c="4"/>0.95 <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>CON <text:s text:c="2"/>&apos;YES&apos; <text:s/>1* <text:s text:c="20"/>/</text:p>
-    <text:p text:style-name="P90">/ <text:s text:c="79"/></text:p>
-    <text:p text:style-name="P89"/>
-    <text:p text:style-name="P89">If the economic limits are violated then the run will stop at the next report time step.</text:p>
-    <text:p text:style-name="P89"/>
+    <text:p text:style-name="_40_TextBody">The following example defines the economic criteria for the field with a minimum oil rate of 2,000 m<text:span text:style-name="T23">3</text:span>/day and a maximum water cut of 95%.</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>GROUP ECONOMIC CRITERIA FOR PRODUCTION GROUPS <text:s text:c="53"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="77"/></text:p>
+    <text:p text:style-name="_40_Example">-- GRUP <text:s/>OIL <text:s text:c="2"/>GAS <text:s text:c="3"/>WCT <text:s text:c="3"/>GOR <text:s text:c="3"/>WGR <text:s text:c="3"/>WORK <text:s text:c="2"/>END <text:s text:c="2"/>MAX <text:s text:c="19"/></text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s/>MIN <text:s text:c="2"/>MIN <text:s text:c="3"/>MAX <text:s text:c="3"/>MAX <text:s text:c="3"/>MAX <text:s text:c="3"/>OVER <text:s text:c="2"/>RUN <text:s text:c="2"/>WELLS <text:s text:c="17"/></text:p>
+    <text:p text:style-name="_40_Example">GECON <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example">FIELD <text:s text:c="3"/>2E3 <text:s text:c="2"/>1* <text:s text:c="4"/>0.95 <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>CON <text:s text:c="2"/>&apos;YES&apos; <text:s/>1* <text:s text:c="20"/>/</text:p>
+    <text:p text:style-name="_40_Example">/ <text:s text:c="79"/></text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">If the economic limits are violated then the run will stop at the next report time step.</text:p>
    </text:section>
   </office:text>
  </office:body>
