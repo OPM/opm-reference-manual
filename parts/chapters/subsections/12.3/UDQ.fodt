@@ -894,6 +894,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
    <style:text-properties fo:color="#004586" loext:opacity="100%"/>
@@ -2568,6 +2572,38 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="Table833.A8" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table834" style:family="table">
+   <style:table-properties style:width="15.556cm" fo:margin-left="1.468cm" table:align="left" fo:background-color="transparent" fo:keep-with-next="auto">
+    <style:background-image/>
+   </style:table-properties>
+  </style:style>
+  <style:style style:name="Table834.A" style:family="table-column">
+   <style:table-column-properties style:column-width="1.8000cm"/>
+  </style:style>
+  <style:style style:name="Table834.B" style:family="table-column">
+   <style:table-column-properties style:column-width="1.400cm"/>
+  </style:style>
+  <style:style style:name="Table834.C" style:family="table-column">
+   <style:table-column-properties style:column-width="2.900cm"/>
+  </style:style>
+  <style:style style:name="Table834.D" style:family="table-column">
+   <style:table-column-properties style:column-width="9.456cm"/>
+  </style:style>
+  <style:style style:name="Table834.1" style:family="table-row">
+   <style:table-row-properties fo:keep-together="always"/>
+  </style:style>
+  <style:style style:name="Table834.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table834.B1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table834.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table834.D1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Table1203" style:family="table">
    <style:table-properties style:width="15.584cm" table:align="right" style:shadow="#000000 0.178cm 0.178cm" style:may-break-between-rows="false"/>
@@ -4487,9 +4523,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_37011683881611"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_37011683881611"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables can be constants, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables. Available operation commands include the ASSIGN, DEFINE, UNITS and UPDATE that are sub-keywords to the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section keyword. <text:s/>A <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> definition section is terminated by a “/” on a single line. <text:s/></text:p>
-    <text:p text:style-name="_40_TextBody">User Defined Quantities can be output to the summmary file or used as User Defined Arguments (“UDA”) in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section with various group, well, and connection keywords. </text:p>
-    <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> computational logic and calculations have been implemented, one should used caution using this facility as it may result in OPM Flow aborting.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword starts the definition of a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section that stipulates the variables and operations used to access the User Defined Quantities features in OPM Flow. <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables can be constants, <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables. Available operations include the ASSIGN, DEFINE, UNITS and UPDATE commands that are sub-keywords to the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> section keyword.</text:p>
+    <text:p text:style-name="_40_TextBody">User Defined Quantities can be output to the summmary file and used as User Defined Arguments (“UDA”) in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section with various group, well, and connection keywords. </text:p>
+    <text:p text:style-name="P12090">Although this keyword is read by OPM Flow and the <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> and <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> computational logic and calculations have been implemented, one should use caution when using this facility as it may result in OPM Flow aborting.</text:p>
     <table:table table:name="Table833" table:style-name="Table833">
      <table:table-column table:style-name="Table833.A"/>
      <table:table-column table:style-name="Table833.B"/>
@@ -4513,7 +4549,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
      <table:table-row table:style-name="Table833.2">
       <table:table-cell table:style-name="Table833.A2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P5143"><text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a></text:p>
+       <text:p text:style-name="P5143"><text:span text:style-name="NotKeyword">UDQ</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table833.C5" office:value-type="string">
@@ -4587,6 +4623,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19323">BU: For variables that are associated with blocks, for example <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variable BPR (Block oil phase Pressure).</text:p>
         </text:list-item>
        </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">OPM Flow currently only supports field, group, segment and well variables (FU*, GU*, SU* and WU*).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table833.D5" office:value-type="string">
        <text:p text:style-name="P3575"/>
@@ -4603,10 +4640,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5144">The data type for EXPRESSION is based on the OPERATOR option above, namely if OPERATOR is set to:</text:p>
        <text:list xml:id="list105922836601917" text:continue-list="list105922871205951" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19302">ASSIGN: EXPRESSION should be a numerical value.</text:p>
+         <text:p text:style-name="P19302">ASSIGN:<text:s/>EXPRESSION should be a numerical value.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19302">DEFINE: EXPRESSION should be a mathematical expression. Allowable tokens for the expression are <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> or <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables, real numbers (can be integers or scientific notation), opening and closing brackets &apos;(&apos; and &apos;)&apos;, and basic mathematical operators plus &apos;+&apos;, minus &apos;-&apos;, multiply &apos;*&apos; and divide &apos;/&apos;.</text:p>
+         <text:p text:style-name="P19302">DEFINE: EXPRESSION should be a mathematical expression. Allowable tokens for the expression include <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> or <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables, real numbers (can be integers or scientific notation), opening and closing brackets &apos;(&apos; and &apos;)&apos;, and basic mathematical operators plus &apos;+&apos;, minus &apos;-&apos;, multiply &apos;*&apos;, divide &apos;/&apos; and exponent &apos;^&apos;.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19357">UNITS: EXPRESSION should be a character string (enclosed in quotes if it contains blanks) with a maximum length of eight characters, that declares the units that will used when reporting the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> defined by VARIABLE.</text:p>
@@ -4664,30 +4701,703 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14929"><text:soft-page-break/>Table <text:sequence text:ref-name="refTable613" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.71</text:sequence>: UDQ Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">Currently, the simulator only supports field and well variable names (FU and WU) and simple mathematical formula consisting of opening and closing brackets (<draw:frame draw:style-name="fr66" draw:name="Object65" text:anchor-type="as-char" svg:width="0.52cm" svg:height="0.506cm" draw:z-index="1194"><draw:object>
-       <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-        <semantics>
-         <mrow>
-          <mo fence="true" stretchy="false">(</mo>
-          <mrow/>
-          <mo fence="true" stretchy="false">)</mo>
-         </mrow>
-         <annotation encoding="StarMath 5.0">( ) </annotation>
-        </semantics>
-       </math>
-      </draw:object><draw:image>
-       <office:binary-data>VkNMTVRGAQAxAAAAAAAAAAEAGwAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQgCAAD7
-        AQAAFgAAAJYAAQACAAAACQCLAAEAAgAAAP//gQABABAAAAAAAAAAAAAAAAcCAAD6AQAAlQAB
-        AAQAAAAAAAAAlgABAAIAAAAJAIsAAQACAAAAHwCKAAEAQAAAAAQAOgAAAAoAT3BlblN5bWJv
-        bAAAAAAAAKYBAAD//wAAAAAFAAAAAAAAAP8DAAAAAAAAAAEA/wMAAAAAAAAAAACIAAEAAgAA
-        AAEAhwABAAUAAAD/////AIYAAQAEAAAAAAAAAHIAAgAaAAAAXAAAAIkBAAABAAAAKACPAAAA
-        AAABAAEAKACMAAEAAAAAAIsAAQACAAAAHwCKAAEAQAAAAAQAOgAAAAoAT3BlblN5bWJvbAAA
-        AAAAAKYBAAD//wAAAAAFAAAAAAAAAP8DAAAAAAAAAAEA/wMAAAAAAAAAAACIAAEAAgAAAAEA
-        hwABAAUAAAD/////AIYAAQAEAAAAAAAAAHIAAgAaAAAAFQEAAIkBAAABAAAAKQCPAAAAAAAB
-        AAEAKQCMAAEAAAAAAJUAAQAEAAAAAAAAAJYAAQACAAAACQCMAAEAAAAAAA==
-       </office:binary-data>
-      </draw:image>
-     </draw:frame>), and the plus, minus, multiply and divide operators, as illustrated in the examples below.</text:p>
+    <text:p text:style-name="_40_TextBody">All the functions available for use in the DEFINE EXPRESSION in the commercial simulator are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable834">Table 12.71</text:sequence-ref> below.</text:p>
+    <table:table table:name="Table834" table:style-name="Table834">
+     <table:table-column table:style-name="Table834.A"/>
+     <table:table-column table:style-name="Table834.B"/>
+     <table:table-column table:style-name="Table834.C"/>
+     <table:table-column table:style-name="Table834.D"/>
+     <table:table-header-rows>
+      <table:table-row table:style-name="Table834.1">
+       <table:table-cell table:style-name="Table834.D1" table:number-columns-spanned="6" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading"><text:span text:style-name="NotKeyword">UDQ</text:span> - Description of Functions</text:p>
+        <text:p text:style-name="Table_20_Heading"></text:p>
+       </table:table-cell>
+       <table:covered-table-cell/>
+       <table:covered-table-cell/>
+       <table:covered-table-cell/>
+      </table:table-row>
+      <table:table-row table:style-name="Table834.1">
+       <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">Function</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">Prece-dence</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">Type</text:p>
+       </table:table-cell>
+       <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+        <text:p text:style-name="Table_20_Heading">Description</text:p>
+       </table:table-cell>
+      </table:table-row>
+     </table:table-header-rows>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">(</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Open bracket.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Close bracket.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">[</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Start of user defined table argument list.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">]</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">End of user defined table argument list.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">,</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Separator for multi-dimensional user defined table argument list.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">-</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Negation of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">ABS()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Absolute value of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">AVEA()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Arithmetic average of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">AVEG()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Geometric average of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">AVEH()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Harmonic average of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">DEF()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the element is defined, otherwise returns undefined.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">EXP()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Exponential of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">IDV()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the element is defined, otherwise returns 0.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">LN()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Natural logarithm of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">LOG()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Logarithm base 10 of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">MAX()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Maximum of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">MIN()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Minimum of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NORM1()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">1 norm of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NORM2()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">2 norm of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NORMI()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Infinity norm of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NINT()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Nearest integer to defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">PROD()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Product of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">RANDN()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Random sample from Normal distribution N(0,1), where the seed is specified by the <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keyword Item 1.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">RANDU()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Random sample from Uniform distribution U(-1,1), where the seed is specified by the <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keyword Item 1.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">RRNDN()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Random sample from Normal distribution N(0,1), where the seed is determined from the current time. By default restart simulations will use the seed from the base simulation (see <text:a xlink:href="#__RefHeading___Toc65916_1778172979">UDQDIMS</text:a> keyword Item 11).</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">RRNDU()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Random sample from Uniform distribution U(-1,1), where the seed is determined from the current time. By default restart simulations will use the seed from the base simulation (see <text:a xlink:href="#__RefHeading___Toc65916_1778172979">UDQDIMS</text:a> keyword Item 11).</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SORTA()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Position of the element in an ascending sort of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SORTD()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Position of the element in an descending sort of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SUM()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary scalar</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Sum of defined elements.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">UNDEF()</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if element is undefined, otherwise returns undefined.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">TU*[]</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">unary elemental</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Lookup value of the user defined table based on the arguments in the square brackets. All arguments must have the same type or be scalar. A scalar is returned if all the arguments are scalar, or the same type of <text:span text:style-name="NotKeyword">UDQ</text:span> set is returned as the <text:span text:style-name="NotKeyword">UDQ</text:span> set arguments.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&lt;=</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the LHS is less than or equal to the RHS, otherwise return 0. The tolerance for equality is specified by the <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keyword Item 4.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&gt;=</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the LHS is greater than or equal to the RHS, otherwise return 0. The tolerance for equality is specified by the <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keyword Item 4.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&lt;</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the LHS is less than the RHS, otherwise return 0.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&gt;</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the LHS is greater than the RHS, otherwise return 0.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">==</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the LHS is equal to the RHS. The tolerance for equality is specified by the <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keyword Item 4.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">!=</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns 1 if the LHS is not equal to the RHS. The tolerance for equality is specified by the <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keyword Item 4.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">^</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Exponentiation.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">*</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Multiplication.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">/</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Division.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">+</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Addition.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">-</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary intersection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Subtraction.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">UADD</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary union</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns sum of intersecting elements from the union of two <text:span text:style-name="NotKeyword">UDQ</text:span> sets.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">UMAX</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary union</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns maximum of intersecting elements from the union of two <text:span text:style-name="NotKeyword">UDQ</text:span> sets.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">UMIN</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary union</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns minimum of intersecting elements from the union of two <text:span text:style-name="NotKeyword">UDQ</text:span> sets.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.2">
+      <table:table-cell table:style-name="Table834.A1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">UMUL</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.B1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.C1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">binary union</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table834.D1" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Returns product of intersecting elements from the union of two <text:span text:style-name="NotKeyword">UDQ</text:span> sets.</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table834.1">
+      <table:table-cell table:style-name="Table834.D1" table:number-columns-spanned="4" office:value-type="string">
+       <text:p text:style-name="P1641">Notes:</text:p>
+       <text:list xml:id="list3953701883" text:style-name="L153">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P19824">Functions are evaluated in order of decreasing precedence. Binary functions of equal precedence are evaluated left to right. Unary functions of equal precedence are evaluated right to left.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19824">Binary functions operate on either the union or the intersection of two <text:span text:style-name="NotKeyword">UDQ</text:span> sets. For intersections the result is only defined if both corresponding elements are defined. For unions the result is defined if either of the corresponding elements are defined. Both arguments of a binary function either need to be of the same type or one needs to be scalar.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P19824">Unary functions operate on a single argument and are either elemental or return a scalar value.</text:p>
+        </text:list-item>
+       </text:list>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+    </table:table>
+    <text:p text:style-name="P14929"><text:soft-page-break/>Table <text:sequence text:ref-name="refTable834" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.71</text:sequence>: UDQ - Description of Functions</text:p>
+    <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc65914_1778172979">UDADIMS</text:a>, <text:a xlink:href="#__RefHeading___Toc65916_1778172979">UDQDIMS</text:a> and <text:a xlink:href="#__RefHeading___Toc161093_2932703077">UDQPARAM</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section to define the dimensions for the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword and associated variables.</text:p>
     <table:table table:name="Table1203" table:style-name="Table1203">
      <table:table-column table:style-name="Table1203.A"/>
@@ -4695,8 +5405,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708752238624">
        <table:table-cell table:style-name="Table1203.A1" office:value-type="string">
         <text:p text:style-name="P10348">Note</text:p>
-        <text:p text:style-name="P10378"><text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables utilizing group and well variables, must have their associated groups and wells previously fully defined in the commercial simulator, otherwise an error will occur. For example, if a well’s GOR is being used as part of a <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> definition, then the well must be fully characterized prior to declaring the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> definition.</text:p>
-        <text:p text:style-name="P10343">This restriction does not apply to OPM Flow; however, it should be considered if the same deck is to be run with both simulators.</text:p>
+        <text:p text:style-name="P10378">Wells and/or groups needed in a <text:span text:style-name="NotKeyword">UDQ</text:span> DEFINE statement must be present at the point of definition. In particular, wells must have been introduced using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword prior to the <text:span text:style-name="NotKeyword">UDQ</text:span> keyword if any specific well name is used in the defining expression. Similarly, well lists must have been introduced and populated through the <text:a xlink:href="#__RefHeading___Toc179534_3325167686">WLIST</text:a> keyword before using the well list name in the <text:span text:style-name="NotKeyword">UDQ</text:span> definition. Finally, groups must be introduced through the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> or <text:a xlink:href="#__RefHeading___Toc118321_1596574740">GRUPTREE</text:a> keywords before using any specific group names in the defining expression.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4707,7 +5416,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table2010.1">
        <table:table-cell table:style-name="Table2010.A1" table:number-columns-spanned="6" office:value-type="string">
-        <text:p text:style-name="P655"><text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> - User Defined Argument Supported Keywords</text:p>
+        <text:p text:style-name="P655"><text:span text:style-name="NotKeyword">UDQ</text:span> - User Defined Argument Supported Keywords</text:p>
         <text:p text:style-name="P655">Schedule Section Keywords Status</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
@@ -4840,7 +5549,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2550">6</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+      <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc134876_2055188184">GECON</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
@@ -4900,13 +5609,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2550">9</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc235059_870710203">GTADD</text:a></text:p>
+      <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
+       <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc202038_870710203">GSATPROD</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+      <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+      <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc1141674_4263943340">WTMULT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
@@ -4921,7 +5630,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2550">10</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
-       <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc235061_870710203">GTMULT</text:a></text:p>
+       <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc235059_870710203">GTADD</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc134888_2055188184">WELTARG</text:a></text:p>
@@ -4940,8 +5649,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table2010.A3" office:value-type="string">
        <text:p text:style-name="P2550">11</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"/>
+      <table:table-cell table:style-name="Table2010.C3" office:value-type="string">
+       <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc235061_870710203">GTMULT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2010.D4" office:value-type="string">
        <text:p text:style-name="P2451"><text:a xlink:href="#__RefHeading___Toc452036_2026549522">WFOAM</text:a></text:p>
@@ -5017,7 +5726,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14991"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>Table <text:sequence text:ref-name="refTable614" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.72</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>: <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> - User Defined Argument Supported Keywords</text:p>
+    <text:p text:style-name="P14991"><text:reference-mark-start text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>Table <text:sequence text:ref-name="refTable614" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.72</text:sequence><text:reference-mark-end text:name="REF_TABLE_ACTIONX_USER_DEF__KEYWORDS_12_3"/>: <text:span text:style-name="NotKeyword">UDQ</text:span> - User Defined Argument Supported Keywords</text:p>
     <text:p text:style-name="Text_20_body"/>
     <table:table table:name="Table2144" table:style-name="Table2144">
      <table:table-column table:style-name="Table2144.A"/>
