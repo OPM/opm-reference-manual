@@ -4441,7 +4441,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716555_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716555_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword defines how a multi-segment well is connected to the reservoir by defining or modifying existing well connections. Note that the well must have previously been defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the well connections must have previously been defined via the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword defines how a multi-segment well is connected to the reservoir by allocating each well connection to a well segement. Note that the well must have previously been defined as a multi-section well using the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and the well connections must have previously been defined via the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
     <table:table table:name="Table1002" table:style-name="Table1002">
      <table:table-column table:style-name="Table1002.A"/>
@@ -4791,7 +4791,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7626">/</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1002.C21" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7638">R<text:span text:style-name="T1533">ecord terminated by a “/”</text:span></text:p>
+       <text:p text:style-name="P7638">Record terminated by a “/”</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4807,7 +4807,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19148">Each multi-segment wells must be defined by a separate <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keyword that consists of two records, with entries 1-1 to 1-2 representing record one items and 2-1 to 2-12 representing record number two items in the “No.” column in this table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19148">Record number two of the keyword, items 2-1 to 2-12 is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="P19148">Record number two of the keyword, items 2-1 to 2-12 can be repeated up to a maximum of MXCONS<text:span text:style-name="T1533"> times</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19148">Each of the records are terminated by a “/” and is explicitly shown in the above rows and the keyword should be terminated by a “/”.</text:p>
@@ -4823,7 +4823,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14654">Table <text:sequence text:ref-name="refTable559" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.17</text:sequence>: COMPSEGS Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11522">The total number of wells and completions should be defined via the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword and the number of multi-segment wells and completions should be declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword, both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+    <text:p text:style-name="P11522">The maximum number of wells and completions should be defined via the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword and the maximum number of multi-segment wells, segments and branches should be declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword, both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
     <text:p text:style-name="P11336">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define wells, the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword to define the well connections for both standard wells and multi-segment wells, and the <text:a xlink:href="#__RefHeading___Toc97659_3261743917">COMPSEGL</text:a> keyword to define multi-segment <text:s/>connections in a <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:h text:style-name="P18558" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716557_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716557_3964674244"/></text:h>
     <text:p text:style-name="P11336">The following example defines the completions for two multi-segment oil production wells (OP01 and OP02) using the <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keyword. <text:s text:c="3"/></text:p>
