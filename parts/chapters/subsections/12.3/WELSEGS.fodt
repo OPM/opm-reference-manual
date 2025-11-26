@@ -4635,7 +4635,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716747_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716747_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword defines a well to be a multi-segment well and defines the well’s segment structure. Note that the well must have been previously defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and that the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword defines a well to be a multi-segment well and defines the well’s segment structure. Note that the well must have previously been defined by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section and that the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword should be repeated for each multi-segment well in the model. <text:s/></text:p>
     <table:table table:name="Table749" table:style-name="Table749">
      <table:table-column table:style-name="Table749.A"/>
      <table:table-column table:style-name="Table749.B"/>
@@ -5079,7 +5079,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P7395">A positive integer greater than or equal to one and less than or equal to MXBRAN on <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the branch number of a segment.</text:p>
-       <text:p text:style-name="P7526">All segments on the main stem must have IBRANCH set to one and lateral branches should have values between two and MXSEGS on the <text:s/><text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P7526">All segments on the main stem must have IBRANCH set to one, and those on lateral branches should have IBRANCH set to between two and MXBRAN.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5095,7 +5095,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7394">ISEG3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7396">A positive integer greater than or equal to two and less than or equal to <text:s/>MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the outlet segment for the segment at the start of the segment range (ISEG1).</text:p>
+       <text:p text:style-name="P7396">A positive integer greater than or equal to one and less than or equal to <text:s/>MXSEGS on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section that defines the outlet segment for the segment at the start of the segment range (ISEG1).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5190,7 +5190,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7535">ID</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7773">A real positive value that defines the tubing internal diameter of the segment for the well. </text:p>
+       <text:p text:style-name="P7773">A real positive value that defines the tubing internal diameter of each segment in the segment range. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5220,7 +5220,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P5152">EPSILON</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table749.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7446">A real positive value that defines the tubing absolute roughness of the segment for the well. </text:p>
+       <text:p text:style-name="P7446">A real positive value that defines the tubing absolute roughness of each segment in the segment range. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5501,7 +5501,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19193">Each multi-segment wells must be defined by a separate <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> keyword that consists of two records, with entries 1-1 to 1-12 representing record one items and 2-1 to 2-15 representing record number two items in the “No.” column in this table. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19193">Record number two of the keyword, items 2-1 to 2-15, is followed by up to MXCONS<text:span text:style-name="T1533"> records</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="P19193">Record number two of the keyword, items 2-1 to 2-15, can be repeated a total of up to MXSEGS-1<text:span text:style-name="T1533"> times</text:span> as declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19193">Each of the records are terminated by a “/” and is explicitly shown in the above rows and the keyword should be terminated by a “/”.</text:p>
@@ -5517,10 +5517,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14930">Table <text:sequence text:ref-name="refTable632" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.90</text:sequence>: WELSEGS Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P11523">The total number of wells should be defined via the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword and the number of multi-segment wells should be declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword, both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="P11523">The maximum number of wells should be defined via the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword and the maximum number of multi-segment wells should be declared on the <text:a xlink:href="#__RefHeading___Toc104259_3115110868">WSEGDIMS</text:a> keyword, both keywords are in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <text:p text:style-name="P11537">See also the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to define wells, the <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keyword to define the well completions for both ordinary wells and multi-segment wells, and the <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keyword to define multi-segment well <text:s/>segment completions. All the aforementioned keywords are described in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:h text:style-name="P18612" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc363737_1621328773"/><text:soft-page-break/>Example<text:bookmark-end text:name="__RefHeading___Toc363737_1621328773"/></text:h>
-    <text:p text:style-name="P11704">The following example defines one multi-segment oil production well (OP01) using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a>, <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> and <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords, and one standard water injection well (WI01) using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keywords.</text:p>
+    <text:p text:style-name="P11704">The following example defines one multi-segment oil production well (OP01) using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a>, <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a>, <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> and <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords, and one standard water injection well (WI01) using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a> keywords.</text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>WELL SPECIFICATION DATA <text:s text:c="53"/></text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="77"/></text:p>
