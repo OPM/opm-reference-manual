@@ -4367,7 +4367,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:section text:style-name="Sect1" text:name="Section2">
 
 <text:h text:style-name="P17506" text:outline-level="2"><text:bookmark-start text:name="__RefHeading___Toc119418_2179381650"/>D<text:span text:style-name="T1">ata Requirements</text:span><text:bookmark-end text:name="__RefHeading___Toc119418_2179381650"/></text:h>
-    <text:p text:style-name="P12682">OPM Flow, like most numerical modeling software, uses a default value of one for the various region arrays and thus if there is only one PVT data set for example, then there is no need to define the region array associated with allocating the PVT tables (via the PVTNUM keyword in the REGIONS section), as all cells will be allocated PVT table number one. However, if there are more than one PVT table entered in the PROPS section and PVTNUM is not defined in the model, then PVT tables greater than one will not be used and there will be no warning message indicating the fact. <text:s/></text:p>
+    <text:p text:style-name="P12682">OPM Flow, like most numerical modeling software, uses a default value of one for the various region arrays and thus if there is only one PVT data set for example, then there is no need to define the region array associated with allocating the PVT tables (via the <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc40648_784232322">REGIONS</text:a> section), as all cells will be allocated PVT table number one. However, if there are more than one PVT table entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section and <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> is not defined in the model, then PVT tables greater than one will not be used and there will be no warning message indicating the fact. <text:s/></text:p>
     <text:p text:style-name="P12682"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable418">Table 9.1</text:sequence-ref><text:s/>summarizes the various property region data and their associated keywords.</text:p>
     <table:table table:name="Table824" table:style-name="Table824">
      <table:table-column table:style-name="Table824.A"/>
@@ -4428,7 +4428,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P1335">PVTNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.A2" office:value-type="string">
-       <text:p text:style-name="P2255"><text:a xlink:type="simple" xlink:href="#7.2.15.PVTNUM – Defines the PVT Regions|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc68366_2752266063">PVTNUM – Define the PVT Regions</text:bookmark-ref></text:a>. PVT table allocation of the DENSITY, PVDG, PVDO, PVTG, PVTO, PVCO, PVTW and ROCK tables</text:p>
+       <text:p text:style-name="P2255"><text:a xlink:type="simple" xlink:href="#7.2.15.PVTNUM – Defines the PVT Regions|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc68366_2752266063">PVTNUM – Define the PVT Regions</text:bookmark-ref></text:a>. PVT table allocation of the DENSITY, PVDG, PVDO, PVTG, PVTO, PVCO, PVTW, and ROCK tables.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.D2" office:value-type="string">
        <text:p text:style-name="P2265">PROPS</text:p>
@@ -4494,7 +4494,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2263">FIPOWG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.A2" office:value-type="string">
-       <text:p text:style-name="P2259"><text:a xlink:type="simple" xlink:href="#8.2.4.FIPOWG – Activate Oil, Gas, and Water FIP Zone Reporting|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc93831_3812137098">FIPOWG – Activate Oil, Gas, and Water FIP Zone Reporting</text:bookmark-ref></text:a>. Fluid In-Place reporting for the total oil, gas and water in the model. There is no region property array for this keyword, as the simulator calculates the total phase volumes based on the contacts entered via the EQUIL keyword in the SOLUTION section.</text:p>
+       <text:p text:style-name="P2259"><text:a xlink:type="simple" xlink:href="#8.2.4.FIPOWG – Activate Oil, Gas, and Water FIP Zone Reporting|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc93831_3812137098">FIPOWG – Activate Oil, Gas, and Water FIP Zone Reporting</text:bookmark-ref></text:a>. Fluid In-Place reporting for the total oil, gas, and water in the model. There is no region property array for this keyword, as the simulator calculates the total phase volumes based on the contacts entered via the EQUIL keyword in the SOLUTION section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">REGION</text:p>
@@ -4537,7 +4537,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2128">IBMNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.A2" office:value-type="string">
-       <text:p text:style-name="P2259"><text:a xlink:type="simple" xlink:href="#8.2.5.IMBNUM – Define the Imbibition Saturation Table Region Numbers|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc129665_83452205">IMBNUM – Define the Imbibition Saturation Table Region Numbers</text:bookmark-ref></text:a>. Imbibition saturation table allocation of the SWFN, SOF2, SOF3 or SWOF imbibition tables.</text:p>
+       <text:p text:style-name="P2259"><text:a xlink:type="simple" xlink:href="#8.2.5.IMBNUM – Define the Imbibition Saturation Table Region Numbers|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc129665_83452205">IMBNUM – Define the Imbibition Saturation Table Region Numbers</text:bookmark-ref></text:a>. Imbibition saturation table allocation of the SWFN, SOF2, SOF3, or SWOF imbibition tables.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.D2" office:value-type="string">
        <text:p text:style-name="P2265">PROPS</text:p>
@@ -4565,7 +4565,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P846">KRNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.A2" office:value-type="string">
-       <text:p text:style-name="P2259"><text:a xlink:type="simple" xlink:href="#9.3.32.KRNUM – Define the Directional Saturation Table Region Numbers|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc273792_2369005893">KRNUM – Define the Directional Saturation Table Region Numbers</text:bookmark-ref></text:a>. Direction dependent saturation tables region numbers for when <text:s/>Directional Dependent Saturation Function option has been activated by the DIRECT parameter on the SATOPTS</text:p>
+       <text:p text:style-name="P2259"><text:a xlink:type="simple" xlink:href="#9.3.32.KRNUM – Define the Directional Saturation Table Region Numbers|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc273792_2369005893">KRNUM – Define the Directional Saturation Table Region Numbers</text:bookmark-ref></text:a>. Direction dependent saturation tables region numbers for when <text:s/>Directional Dependent Saturation Function option has been activated by the DIRECT parameter on the SATOPTS.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.D2" office:value-type="string">
        <text:p text:style-name="P2265">PROPS</text:p>
@@ -4664,7 +4664,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2261">OPERNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.A2" office:value-type="string">
-       <text:p text:style-name="P2262"><text:a xlink:type="simple" xlink:href="#5.3.60.OPERNUM – Define Regions for Mathematical Operations on Arrays|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc67857_718313858">OPERNUM – Define Regions for Mathematical Operations on Arrays</text:bookmark-ref></text:a>. OPERATER keyword region numbers that can also be used with the EQUALREG, ADDREG, COPYREG, MULTIREG, MULTREGP and MULTREGT keywords, as well as the OPERATER keyword in calculating various grid properties in the GRID and REGION section.</text:p>
+       <text:p text:style-name="P2262"><text:a xlink:type="simple" xlink:href="#5.3.60.OPERNUM – Define Regions for Mathematical Operations on Arrays|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc67857_718313858">OPERNUM – Define Regions for Mathematical Operations on Arrays</text:bookmark-ref></text:a>. OPERATER keyword region numbers that can also be used with the EQUALREG, ADDREG, COPYREG, MULTIREG, MULTREGP, and MULTREGT keywords, as well as the OPERATER keyword in calculating various grid properties in the GRID and REGION section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.D2" office:value-type="string">
        <text:p text:style-name="P2269">GRID</text:p>
@@ -4738,7 +4738,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P2128">SURFNUM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.A2" office:value-type="string">
-       <text:p text:style-name="P2262"><text:a xlink:type="simple" xlink:href="#9.3.47.SURFNUM – Define the Surfactant Miscible Saturation Table Region Numbers|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc896940_4250154414">SURFNUM – Define the Surfactant Miscible Saturation Table Region Numbers</text:bookmark-ref></text:a>. Surfactant saturation (relative permeability) tables allocation allocating the SWFN, SOF2, SOF3 or SWOF as miscible tables.</text:p>
+       <text:p text:style-name="P2262"><text:a xlink:type="simple" xlink:href="#9.3.47.SURFNUM – Define the Surfactant Miscible Saturation Table Region Numbers|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc896940_4250154414">SURFNUM – Define the Surfactant Miscible Saturation Table Region Numbers</text:bookmark-ref></text:a>. Surfactant saturation (relative permeability) tables allocation allocating the SWFN, SOF2, SOF3, or SWOF as miscible tables.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table824.D2" office:value-type="string">
        <text:p text:style-name="P2265">PROPS</text:p>
