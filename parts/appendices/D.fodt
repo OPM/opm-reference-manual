@@ -4283,7 +4283,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P12442">The <text:span text:style-name="T4001">“Deck” </text:span>data structure is essentially a list of keywords which have been loaded as <text:span text:style-name="T4001">“DeckKeyword”</text:span> instances. The Deck can either be loaded from an input data file or from a string. The following example shows how to load two <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keywords, <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and COMPDATA:</text:p>
+    <text:p text:style-name="P12442">The <text:span text:style-name="T4001">“Deck” </text:span>data structure is essentially a list of keywords which have been loaded as <text:span text:style-name="T4001">“DeckKeyword”</text:span> instances. The Deck can either be loaded from an input data file or from a string. The following example shows how to load two <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section keywords: <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> and <text:a xlink:href="#__RefHeading___Toc97651_3261743917">COMPDAT</text:a>:</text:p>
     <text:p text:style-name="P12442"/>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>#!/usr/bin/env python3</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>from opm.io.parser import Parser</text:p>
@@ -4350,7 +4350,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P14405"><text:s text:c="3"/>==&gt; The Oil rate in well:W1 is 1.0 m3/s</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">because the input value of 86,400 m3/day is internally converted to 1.0 m3/second.</text:p>
-    <text:p text:style-name="_40_TextBody">The default input unit system is <text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a>, that means that if the input is to be interpreted in either <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> or <text:a xlink:href="#__RefHeading___Toc72458_2267116897">LAB</text:a> units, then one needs to add a keyword to declare the units before the entering the data. Thus, to interpret the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword’s oil rate as stb/d in the previous example, the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> keyword needs to be added to the example, that is:</text:p>
+    <text:p text:style-name="_40_TextBody">The default input unit system is <text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a>, that means that if the input is to be interpreted in either <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> or <text:a xlink:href="#__RefHeading___Toc72458_2267116897">LAB</text:a> units, then one needs to add a keyword to declare the units before entering the data. Thus, to interpret the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword’s oil rate as stb/d in the previous example, the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> keyword needs to be added to the example, that is:</text:p>
     <text:p text:style-name="_40_Code">#!/usr/bin/env python3</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>from opm.io.parser import Parser</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>deck_string = &quot;&quot;&quot;</text:p>
@@ -4374,7 +4374,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">After you have loaded a Deck you can query it with normal the Python functions:</text:p>
+    <text:p text:style-name="_40_TextBody">After you have loaded a Deck you can query it with normal Python functions:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/># Check if deck has keyword:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>if &quot;GRID&quot; in deck:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="7"/>print(&quot;Deck contains &apos;GRID&apos; keyword&quot;)</text:p>
@@ -4385,7 +4385,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>for kw in deck:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="7"/>print(&quot;kw: {}&quot;.format(kw.name)</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">To get a keyword from the deck you can access it with index, name or a combination of name and occurrence index:</text:p>
+    <text:p text:style-name="_40_TextBody">To get a keyword from the deck you can access it with index, name, or a combination of name and occurrence index:</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/># Get keyword 10</text:p>
     <text:p text:style-name="_40_Code"><text:soft-page-break/><text:s text:c="3"/>kw10 = deck[10]</text:p>
     <text:p text:style-name="_40_Code"/>
@@ -4417,7 +4417,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="_40_TextBody">The keywords OPM Flow recognizes are configured via JSON files which are embedded in the source distribution. The JSON keywords for the simulator are in following the public GitHub repository:</text:p>
+    <text:p text:style-name="_40_TextBody">The keywords that OPM Flow recognizes are configured via JSON files which are embedded in the source distribution. The JSON keywords for the simulator are in the following public GitHub repository:</text:p>
     <text:p text:style-name="P11696"><text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/tree/master/opm/input/eclipse/share/keywords" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Internet_20_link">https://github.com/OPM/opm-common/tree/master/opm/input/eclipse/share/keywords</text:span></text:a></text:p>
     <text:p text:style-name="_40_TextBody">By default the Parser class will recognize all the keywords which are known to OPM Flow, but one can create your own custom parser with only a subset of keywords:</text:p>
     <text:p text:style-name="_40_TextBody"/>
@@ -4441,7 +4441,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="4"/># Add the keyword description via a JSON string</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>parser.add_keyword(json.dumps(GCLOSE))</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">By default the parser used in OPM Flow is quite strict - a tad stricter than the one used by the commercial simulator. However you one configure how the parser should react to certain error conditions. By default the parser will fail with an exception if an <text:a xlink:href="#__RefHeading___Toc55749_2479612490">INCLUDE</text:a> file is not found, but one can for instance change this behavior to ignore that error condition, for example:</text:p>
+    <text:p text:style-name="_40_TextBody">By default the parser used in OPM Flow is quite strict - a tad stricter than the one used by the commercial simulator. However, one can configure how the parser should react to certain error conditions. By default the parser will fail with an exception if an <text:a xlink:href="#__RefHeading___Toc55749_2479612490">INCLUDE</text:a> file is not found, but one can for instance change this behavior to ignore that error condition, for example:</text:p>
     <text:p text:style-name="P16916"><text:soft-page-break/><text:s text:c="4"/>parse_context = ParseContext([(&apos;PARSE_MISSING_INCLUDE&apos;,</text:p>
     <text:p text:style-name="P16916"><text:s text:c="7"/><text:s text:c="25"/><text:s text:c="4"/>opm.io.action.ignore)])</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="4"/>parser = Parser()</text:p>
@@ -4483,7 +4483,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="2"/>MULTIPLY</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="5"/>PORO 2 1 10 1 10 3 3 /</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="_40_TextBody">In the deck representation this will be a collection of five different keywords: {&quot;PORO&quot;, &quot;BOX&quot;, &quot;PORO&quot;, &quot;ENDBOX&quot;, &quot;MULTIPLY&quot;}, whereas in the <text:span text:style-name="T4001">“EclipseState”</text:span> this will be one property &quot;PORO&quot; where all the modifications have been completed. In addition to the grid properties like &quot;PERMX&quot; and &quot;PORO&quot; the <text:span text:style-name="T4001">“EclipseState”</text:span> object contains numerous other objects like the fault properties, PVT tables and more.</text:p>
+    <text:p text:style-name="_40_TextBody">In the deck representation this will be a collection of five different keywords: {&quot;PORO&quot;, &quot;BOX&quot;, &quot;PORO&quot;, &quot;ENDBOX&quot;, &quot;MULTIPLY&quot;}, whereas in the <text:span text:style-name="T4001">“EclipseState”</text:span> this will be one property &quot;PORO&quot; where all the modifications have been completed. In addition to the grid properties like &quot;PERMX&quot; and &quot;PORO&quot; the <text:span text:style-name="T4001">“EclipseState”</text:span> object contains numerous other objects like the fault properties, PVT tables, and more.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>#!/usr/bin/env python3</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>import syshe</text:p>
@@ -4497,7 +4497,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="3"/># Get the FieldPropsManager from the EclipseState. The FieldPropsManager</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/># is then used to query and look up grid properties like PERMX and PORO.</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/># Observe that the properties you get from the FieldPropsManager only have</text:p>
-    <text:p text:style-name="_40_Code"><text:s text:c="3"/># the active cels only.</text:p>
+    <text:p text:style-name="_40_Code"><text:s text:c="3"/># the active cells only.</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>#</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>fp = es.field_props()</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>poro = fp[&quot;PORO&quot;]</text:p>
@@ -4610,7 +4610,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>rst_file = sys.argv[1]</text:p>
     <text:p text:style-name="_40_Code"><text:s text:c="3"/>rst = Erst(rst_file)</text:p>
     <text:p text:style-name="_40_Code"/>
-    <text:p text:style-name="_40_TextBody">Note that restart file can be large, so care must be taken on how these type of files are loaded into Python.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that a restart file can be large, so care must be taken on how these type of files are loaded into Python.</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="P11768"><text:s/></text:p>
     
