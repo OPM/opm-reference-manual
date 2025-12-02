@@ -6327,8 +6327,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:section text:style-name="Sect1" text:name="Section2">
     <text:h text:style-name="P158" text:outline-level="2"><text:bookmark-start text:name="__RefHeading___Toc119422_2179381650"/>Data Requirements<text:bookmark-end text:name="__RefHeading___Toc119422_2179381650"/></text:h>
     <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc456373_3199477706"/>Equilibrium Initialization<text:bookmark-end text:name="__RefHeading___Toc456373_3199477706"/></text:h>
-    <text:p text:style-name="P144">For the standard Equilibrium Initialization the EQUIL keyword in the SOLUTION section is used to initialize the model. The keyword contains the datum depth and pressure, oil-water and gas-oil contacts, the capillary pressure values at the fluid contacts, as well as various equilibrium initialization options, <text:s/>including how the dissolve gas and vaporized oil should be calculated, and if a refined in-place volume calculation should be performed. <text:s text:c="2"/>There should be one record for each equilibration region with the number of regions defined by the NTEQUL parameter on the EQLDIMS keyword in the RUNSPEC section. </text:p>
-    <text:p text:style-name="P144">Note that if a fluid contact is not present in the reservoir, for example in two phase runs containing only gas and water, the water oil-water contact on the EQUIL keyword should be set to the gas-water contact. Also, in cases where there is no gas cap (or free gas) then gas-oil should be set to a value shallower than the top of the reservoir, and for three phases cases where there is initially no oil zone, as for a gas condensate field for example, the gas-oil contact should be set to the same depth as water-oil contact. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 10.1</text:sequence-ref><text:s/>outlines the minimum set of keywords required by OPM Flow in order for the simulator to initialize the model For the standard Equilibrium Initialization option.</text:p>
+    <text:p text:style-name="P144">For the standard Equilibrium Initialization the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section is used to initialize the model. The keyword contains the datum depth and pressure, oil-water and gas-oil contacts, the capillary pressure values at the fluid contacts, as well as various equilibrium initialization options, <text:s/>including how the dissolve gas and vaporized oil should be calculated, and if a refined in-place volume calculation should be performed. <text:s text:c="2"/>There should be one record for each equilibration region with the number of regions defined by the NTEQUL parameter on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. </text:p>
+    <text:p text:style-name="P144">Note that if a fluid contact is not present in the reservoir, for example in two phase runs containing only gas and water, the water oil-water contact on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword should be set to the gas-water contact. Also, in cases where there is no gas cap (or free gas) then gas-oil should be set to a value shallower than the top of the reservoir, and for three phases cases where there is initially no oil zone, as for a gas condensate field for example, the gas-oil contact should be set to the same depth as water-oil contact. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 10.1</text:sequence-ref><text:s/>outlines the minimum set of keywords required by OPM Flow in order for the simulator to initialize the model For the standard Equilibrium Initialization option.</text:p>
     <table:table table:name="Table1941" table:style-name="Table1941">
      <table:table-column table:style-name="Table1941.A"/>
      <table:table-column table:style-name="Table1941.B"/>
@@ -6360,7 +6360,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">EQUIL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1941.C2" office:value-type="string">
-       <text:p text:style-name="P77"><text:a xlink:type="simple" xlink:href="#9.2.4.EQUIL – Define the Equilibration Initialization Data|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc135617_1317547213">EQUIL – Define the Equilibration Initialization Data</text:bookmark-ref></text:a><text:s/>- this is main keyword for the Equilibration initialization that sets the datum depth, the pressure and fluid contacts for an equilibrium region.</text:p>
+       <text:p text:style-name="P77"><text:a xlink:type="simple" xlink:href="#9.2.4.EQUIL – Define the Equilibration Initialization Data|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc135617_1317547213">EQUIL – Define the Equilibration Initialization Data</text:bookmark-ref></text:a><text:s/>- this is the main keyword for the Equilibration initialization that sets the datum depth, the pressure and fluid contacts for an equilibrium region.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1941.D2" office:value-type="string">
        <text:p text:style-name="P59">Equilibration</text:p>
@@ -6517,7 +6517,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P175">Only the Equilibration and Restart initialization type of initialization are used in practice. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P180">F<text:span text:style-name="T21">or the Equilibration option the PBVD, PDVD, RSVD and RSVVD keywords may be optional if the datum depth </text:span>on he EQUIL keyword <text:span text:style-name="T21">is set equal to the gas-oil contact (“GOC”), otherwise one of these keywords must be used to set the initial RS (“GOR”) or RV (“GCR”) values for the equilibrium region being defined. </text:span></text:p>
+         <text:p text:style-name="P180">F<text:span text:style-name="T21">or the Equilibration option the PBVD, PDVD, RSVD, and RSVVD keywords may be optional if the datum depth </text:span>on he EQUIL keyword <text:span text:style-name="T21">is set equal to the gas-oil contact (“GOC”), otherwise one of these keywords must be used to set the initial RS (“GOR”) or RV (“GCR”) values for the equilibrium region being defined. </text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P180">For <text:span text:style-name="T21">Live Black</text:span>-<text:span text:style-name="T21">Oil equilibrium region</text:span>s i<text:span text:style-name="T21">f </text:span>the <text:span text:style-name="T21">datum depth is not equal to the GOC then one can either use the PBVD </text:span>keyword <text:span text:style-name="T21">to set the saturation pressure (bubble-point) versus depth, or </text:span>the <text:span text:style-name="T21">RSVD </text:span>keyword to set the GOR versus depth. Similarly for Wet Gas <text:span text:style-name="T21">equilibrium region</text:span>s, <text:span text:style-name="T21">one can either use the P</text:span>D<text:span text:style-name="T21">VD </text:span>keyword <text:span text:style-name="T21">to set the saturation pressure (</text:span>dew<text:span text:style-name="T21">-point) versus depth, or R</text:span>VV<text:span text:style-name="T21">D </text:span>keyword to set the CGR versus depth. </text:p>
@@ -6534,12 +6534,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.1</text:sequence>: Minimum Set of SOLUTION Equilibrium Keywords Required by OPM Flow</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P139">The minimum set of SOLUTION keywords is for general three phases runs, that is where the OIL, DISGAS, GAS, VAPOIL and/or WATER keywords in the RUNSPEC section have been invoked. <text:s/>If additional phases or options have been invoked in the RUNSPEC section, then additional SOLUTION keywords may be required in order to initialize the model. <text:s/>For example, if the BRINE keyword in the RUNSPEC section has been used to activate the BRINE model then the SALTVD keyword in the SOLUTION section may or may not be used to set the initial salt concentration versus depth relationship.</text:p>
+    <text:p text:style-name="P139">The minimum set of SOLUTION keywords is generally for three phases runs, that is where the OIL, DISGAS, GAS, VAPOIL, and/or WATER keywords in the RUNSPEC section have been invoked. <text:s/>If additional phases or options have been invoked in the RUNSPEC section, then additional SOLUTION keywords may be required in order to initialize the model. <text:s/>For example, if the BRINE keyword in the RUNSPEC section has been used to activate the BRINE model then the SALTVD keyword in the SOLUTION section may or may not be used to set the initial salt concentration versus depth relationship.</text:p>
     <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc456375_3199477706"/>Enumeration Initialization<text:bookmark-end text:name="__RefHeading___Toc456375_3199477706"/></text:h>
-    <text:p text:style-name="P144">Enumeration Initialization is based on user supplying all the required data for the simulator to determine the pressures, fluid saturations, and fluid properties for each cell in the model. This similar to entering the grid property array data in the GRID section, in that all the data is required for all the cells in the model. </text:p>
-    <text:p text:style-name="P146">To define the cell pressures for all the grid blocks the PRESSURE keyword in the SOLUTION section should be employed. There is also the PRVD keyword in the SOLUTION section that can be used to define a pressure versus depth relationship to enable the simulator to calculate the cell pressures instead of entering the data via the PRESSURE keyword; however, this keyword is not implemented in OPM Flow.</text:p>
-    <text:p text:style-name="P146">For the fluid saturations, it is only necessary to enter the saturations sufficient to define the system, so for a two phase system it is only necessary to define one phase, normally the water phase, as the other phase will be calculated by the simulator. Similarly, for three phases only two phases must be entered with the water phase always normally entered, and the other phase dependent on the type of reservoir. The data is entered using the SGAS, SOIL and SWAT keywords in the SOLUTION section.</text:p>
-    <text:p text:style-name="P145">Finally the initial fluid property data needs to be defined based on the fluid phases active in the model. For oil reservoirs either the RS keyword that defines a cell’s initial gas-oil ratio, or the PBUB keyword that defines the oil’s initial bubble point pressure for each cell are required. For gas reservoirs, either the RV keyword that defines vaporized oil-gas ratio (or condensate gas-oil ratio), or the PDEW keyword that defines the initial dew point pressure for each cell must be entered. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable1">Table 10.2</text:sequence-ref><text:s/>outlines the minimum set of keywords required by OPM Flow in order for the simulator to initialize the model For the Enumeration Initialization option - all the keywords are in the SOLUTION section.</text:p>
+    <text:p text:style-name="P144">Enumeration Initialization is based on user supplying all the required data for the simulator to determine the pressures, fluid saturations, and fluid properties for each cell in the model. This is similar to entering the grid property array data in the GRID section, in that all the data is required for all the cells in the model. </text:p>
+    <text:p text:style-name="P146">To define the cell pressures for all the grid blocks, the PRESSURE keyword in the SOLUTION section should be employed. There is also the PRVD keyword in the SOLUTION section that can be used to define a pressure versus depth relationship to enable the simulator to calculate the cell pressures instead of entering the data via the PRESSURE keyword; however, this keyword is not implemented in OPM Flow.</text:p>
+    <text:p text:style-name="P146">For the fluid saturations, it is only necessary to enter the saturations sufficient to define the system, so for a two phase system it is only necessary to define one phase, normally the water phase, as the other phase will be calculated by the simulator. Similarly, for three phases only two phases must be entered with the water phase always normally entered, and the other phase dependent on the type of reservoir. The data is entered using the SGAS, SOIL, and SWAT keywords in the SOLUTION section.</text:p>
+    <text:p text:style-name="P145">Finally the initial fluid property data needs to be defined based on the fluid phases active in the model. For oil reservoirs either the RS keyword that defines a cell’s initial gas-oil ratio, or the PBUB keyword that defines the oil’s initial bubble point pressure for each cell are required. For gas reservoirs, either the RV keyword that defines vaporized oil-gas ratio (or condensate gas-oil ratio), or the PDEW keyword that defines the initial dew point pressure for each cell must be entered. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable1">Table 10.2</text:sequence-ref><text:s/>outlines the minimum set of keywords required by OPM Flow in order for the simulator to initialize the model. For the Enumeration Initialization option - all the keywords are in the SOLUTION section.</text:p>
     <text:p text:style-name="P153"/>
     <table:table table:name="Table1977" table:style-name="Table1977">
      <table:table-column table:style-name="Table1977.A"/>
@@ -6842,7 +6842,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P108">SALTP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1977.C18" office:value-type="string">
-       <text:p text:style-name="P109"><text:a xlink:type="simple" xlink:href="#10.3.88.SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc486358_4287353749">SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P109"><text:a xlink:type="simple" xlink:href="#10.3.88.SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc486358_4287353749">SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1977.D18" office:value-type="string">
        <text:p text:style-name="P65">Enumeration</text:p>
@@ -6882,13 +6882,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1977.A23" table:number-columns-spanned="4" office:value-type="string">
        <text:list xml:id="list180824430710647" text:continue-list="list1944388950" text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P176">In an Enumeration type of initialization only sufficient data to define the pressures and fluid distributions are required, for example, in a two phase gas-water run it is only necessary to use the PRESSURE, RV and either SGAS or SWAT keywords to formulate the solution</text:p>
+         <text:p text:style-name="P176">In an Enumeration type of initialization only sufficient data to define the pressures and fluid distributions are required, for example, in a two phase gas-water run it is only necessary to use the PRESSURE, RV, and either SGAS or SWAT keywords to formulate the solution.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P180"><text:span text:style-name="T21">The THPRES keyword </text:span>is<text:span text:style-name="T21"> entirely optional </text:span>but is commonly used to isolate various <text:span text:style-name="T21">equilibrium region</text:span>s<text:span text:style-name="T21">.</text:span></text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P171"><text:span text:style-name="T21">Microbial Induced Calcite Precipitation (&quot;MICP&quot;) model is </text:span>O<text:span text:style-name="T21">PM Flow’s implementation of <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> used to investigate leakage remediation. </text:span><text:span text:style-name="T47">Note currently the model assumes 100% water saturation and therefore it is not necessary to use the SWAT keyword.</text:span><text:span text:style-name="T21"> </text:span></text:p>
+         <text:p text:style-name="P171"><text:span text:style-name="T21">The Microbial Induced Calcite Precipitation (&quot;MICP&quot;) model is </text:span>O<text:span text:style-name="T21">PM Flow’s implementation of <text:a xlink:href="#__RefHeading___Toc383375_111689907">MICP</text:a> used to investigate leakage remediation. </text:span><text:span text:style-name="T47">Note currently the model assumes 100% water saturation and therefore it is not necessary to use the SWAT keyword.</text:span><text:span text:style-name="T21"> </text:span></text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P180"><text:span text:style-name="T21">SBIOF and SMICR can be set in the <text:a xlink:href="#REF_HEADING_KEYWORD_BIOFILM">BIOFILM</text:a> model.</text:span></text:p>
@@ -6902,7 +6902,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable1" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.2</text:sequence>: Minimum Set of SOLUTION Enumeration Keywords Required by OPM Flow</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P140">Again, the minimum set of SOLUTION keywords is for general three phases runs, that is where the OIL, DISGAS, GAS, VAPOIL and/or WATER keywords in the RUNSPEC section have been invoked. <text:s/>If additional phases or options have been invoked, then additional SOLUTION keywords may be required in order to initialize the model. <text:s/></text:p>
+    <text:p text:style-name="P140">Again, the minimum set of SOLUTION keywords is for general three phases runs, that is where the OIL, DISGAS, GAS, VAPOIL, and/or WATER keywords in the RUNSPEC section have been invoked. <text:s/>If additional phases or options have been invoked, then additional SOLUTION keywords may be required in order to initialize the model. <text:s/></text:p>
     <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc456377_3199477706"/>Restart Initialization<text:bookmark-end text:name="__RefHeading___Toc456377_3199477706"/></text:h>
     <text:p text:style-name="_40_TextBody">Restart Initialization is performed by the simulator by loading a previously generated RESTART file and equilibrating the model accordingly. In nearly all cases the model will not satisfy the condition of gravity equilibrium; in other words the model is initialized at a point in time after the model has produced or injected fluids. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">To write a restart record to the RESTART file, either the RPTSOL or RPTRST keyword in the SOLUTION section can be used to write the initial restart record at time equal to zero. To write restart records at various time points as the simulation progresses through time, then either the RPTRST or RPTSCHED keywords may be used. <text:s/>Both the RPTSOL and RPTSCHED keywords enable just the basic restart record to be written to the RESTART file, which is generally sufficient in most cases. In comparison with the dedicated RPTRST keyword, RPTRST provides additional functionality on the data to be written to the RESTART file and is therefore the preferred keyword to use. For example to request the standard restart data be written out every month using the RPTRST keyword, one would use the following:</text:p>
@@ -7009,7 +7009,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P79">RESTART</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1978.A2" office:value-type="string">
-       <text:p text:style-name="P78"><text:a xlink:type="simple" xlink:href="#9.2.10.RESTART – Restart Run From an Existing Restart File|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc135629_1317547213">RESTART – Restart Run From an Existing Restart File</text:bookmark-ref></text:a><text:s/>- this keyword is used to initialization the model from a previously run OPM Flow run or from the commercial simulator. </text:p>
+       <text:p text:style-name="P78"><text:a xlink:type="simple" xlink:href="#9.2.10.RESTART – Restart Run From an Existing Restart File|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc135629_1317547213">RESTART – Restart Run From an Existing Restart File</text:bookmark-ref></text:a><text:s/>- this keyword is used to initialize the model from a previously run OPM Flow run or from the commercial simulator. </text:p>
        <text:p text:style-name="P80">Note that due to the complexities of the RESTART file, OPM Flow may not always be able to restart from the commercial simulators RESTART file.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1978.D7" office:value-type="string">
@@ -7021,7 +7021,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P32">Notes:</text:p>
        <text:list xml:id="list180824730483379" text:continue-list="list180824430710647" text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P177">OPM Flow can only restart runs from a RESTART file, the commercial simulator&apos;s SAVE file format is not supported.</text:p>
+         <text:p text:style-name="P177">OPM Flow can only restart runs from a RESTART file, and the commercial simulator&apos;s SAVE file format is not supported.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P181">T<text:span text:style-name="T21">he THPRES keyword </text:span>is not required as the data is included in the RESTART file.</text:p>
@@ -7032,7 +7032,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </text:list>
        <text:list text:style-name="_40_BulletList">
         <text:list-item>
-         <text:p text:style-name="P178">GLOBAL section keywords: <text:s/>COLUMNS, DEBUG, ECHO, EXTRAPMS, FORMFEED, INCLUDE, MESSAGES, NOECHO, NOWARN and the OPTIONS keyword.</text:p>
+         <text:p text:style-name="P178">GLOBAL section keywords: <text:s/>COLUMNS, DEBUG, ECHO, EXTRAPMS, FORMFEED, INCLUDE, MESSAGES, NOECHO, NOWARN, and the OPTIONS keyword.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P179">SCHEDULE section keywords: PIMULTAB, RPTSCHED, RPTRST, SCDPTAB, SCDATAB, TUNING, VFPPROD, and VFPINJ keywords.</text:p>
@@ -7046,7 +7046,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P152">Table <text:sequence text:ref-name="refTable2" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.3</text:sequence>: SOLUTION Restart Initialization Keywords Required by OPM Flow</text:p>
     <text:p text:style-name="P138"/>
-    <text:p text:style-name="P147">I<text:span text:style-name="T58">n the input deck that is being employed to restart the run, all the</text:span> equilibration keywords (EQUIL, RSVD, etc.) or the enumeration equilibration keywords (PRESSURE, SGAS, SOIL. SWAT, etc.) in the SOLUTION section used to initialize the model., <text:span text:style-name="T58">should be deleted. Secondly, it is good practice to </text:span>insert the SKIPREST keyword at the very beginning of the SCHEDULE section. The SKIPREST keyword causes the simulator to only read in data it requires for restarting the run up to the RESTART point. <text:span text:style-name="T58">This is because</text:span> certain keywords always need to be present in a restart run in the SCHEDULE section, <text:s/>as the data is not stored on the RESTART file, for example the VFP tables (VFPPROD and VFPINJ keywords <text:span text:style-name="T58">in the SCHEDULE section</text:span>). The SKIPREST keyword automatically processes the input deck and reads the required data.</text:p>
+    <text:p text:style-name="P147">I<text:span text:style-name="T58">n the input deck that is being employed to restart the run, all the</text:span> equilibration keywords (EQUIL, RSVD, etc.) or the enumeration equilibration keywords (PRESSURE, SGAS, SOIL, SWAT, etc.) in the SOLUTION section used to initialize the model <text:span text:style-name="T58">should be deleted. Secondly, it is good practice to </text:span>insert the SKIPREST keyword at the very beginning of the SCHEDULE section. The SKIPREST keyword causes the simulator to only read in data it requires for restarting the run up to the RESTART point. <text:span text:style-name="T58">This is because</text:span> certain keywords always need to be present in a restart run in the SCHEDULE section, <text:s/>as the data is not stored on the RESTART file, for example the VFP tables (VFPPROD and VFPINJ keywords <text:span text:style-name="T58">in the SCHEDULE section</text:span>). The SKIPREST keyword automatically processes the input deck and reads the required data.</text:p>
     <text:p text:style-name="P137"/>
     <text:h text:style-name="P159" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc456379_3199477706"/>Section Keywords<text:bookmark-end text:name="__RefHeading___Toc456379_3199477706"/></text:h>
     <text:p text:style-name="P141">A complete list of SOLUTION keywords in alphabetic order is shown in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 10.4</text:sequence-ref><text:s/>together with a generalized Topic column that classifies the functionality of the keyword. <text:s/>Note that not all keywords and features listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 10.4</text:sequence-ref><text:s/>are implemented in OPM Flow. <text:s/>Cells not colored in the No. column indicate the keyword is supported by OPM Flow, cells colored gray indicate that the keyword is not applicable, and finally, cells colored in orange indicate keywords that are not currently supported by OPM Flow.</text:p>
@@ -7262,7 +7262,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">AQUFET</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#10.3.10.AQUFET – Define Fetkovich Analytical Aquifer and Connections |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc197384_1310555686">AQUFET – Define Fetkovich Analytical Aquifer and Connections </text:bookmark-ref></text:a>.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#10.3.10.AQUFET – Define Fetkovich Analytical Aquifer and Connections |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc197384_1310555686">AQUFET – Define Fetkovich Analytical Aquifer and Connections</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -7277,7 +7277,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">AQUFETP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#1.7.1.AQUFETP – Fetkovich Aquifer Definition|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc4428_421927891">AQUFETP – Define Fetkovich Analytical Aquifers </text:bookmark-ref></text:a>.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#1.7.1.AQUFETP – Fetkovich Aquifer Definition|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc4428_421927891">AQUFETP – Define Fetkovich Analytical Aquifers</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -7307,7 +7307,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P125">BC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P122"><text:a xlink:type="simple" xlink:href="#10.3.16.BC – Define Boundary Conditions|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc42110_36712116751">BC – Define Boundary Conditions</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P122"><text:a xlink:type="simple" xlink:href="#10.3.16.BC – Define Boundary Conditions|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc42110_36712116751">BC – Define Boundary Conditions</text:bookmark-ref></text:a>.</text:p>
        <text:p text:style-name="P122">This is an OPM Flow specific keyword defines the boundary conditions for the model, and can be used to set boundary conditions for when external influx or efflux volumes are influencing the reservoir pressure and production history.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -7428,7 +7428,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">DATUMRX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#10.3.14.DATUMRX – Define Datum Depths for the FIP Allocated Regions |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc298753_1539708736">DATUMRX – Define Datum Depths for the FIP Allocated Regions </text:bookmark-ref></text:a>.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#10.3.14.DATUMRX – Define Datum Depths for the FIP Allocated Regions |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc298753_1539708736">DATUMRX – Define Datum Depths for the FIP Allocated Regions</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -7563,7 +7563,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P92">ENDSKIP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P95"><text:a xlink:type="simple" xlink:href="#3.1.5.ENDSKIP – Deactivates Skipping of Keywords and Input Data|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc52491_2479612490">ENDSKIP – DeActivate Skipping of Keywords and Input Data</text:bookmark-ref></text:a>.</text:p>
+       <text:p text:style-name="P95"><text:a xlink:type="simple" xlink:href="#3.1.5.ENDSKIP – Deactivates Skipping of Keywords and Input Data|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc52491_2479612490">ENDSKIP – Deactivate Skipping of Keywords and Input Data</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -8407,7 +8407,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P116">RVW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P117"><text:a xlink:type="simple" xlink:href="#10.3.87.RVW – Define the Initial Equilibration Vaporized Water in Gas Ratio for All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc537756_4287353749">RVW –  Define the Initial Equilibration Vaporized Water in Gas Ratio for All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P117"><text:a xlink:type="simple" xlink:href="#10.3.87.RVW – Define the Initial Equilibration Vaporized Water in Gas Ratio for All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc537756_4287353749">RVW –  Define the Initial Equilibration Vaporized Water in Gas Ratio for All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
        <text:p text:style-name="P118">This is an OPM Flow specific keyword for the simulator’s Water Vaporization Model that is activated by the VAPWAT in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -8455,7 +8455,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P110">SALTP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P112"><text:a xlink:type="simple" xlink:href="#10.3.88.SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc486358_4287353749">SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P112"><text:a xlink:type="simple" xlink:href="#10.3.88.SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc486358_4287353749">SALTP – Define the Initial Precipitated Salt Volume Fraction for All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
        <text:p text:style-name="P112">This is an OPM Flow specific keyword for the simulator’s Salt Precipitation Model that is activated by the PRECSALT keyword and declaring that vaporized water is present in the run via the VAPWAT in the RUNSPEC section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -8518,7 +8518,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P121">SBIOF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P100"><text:a xlink:type="simple" xlink:href="#10.3.91.SBIOF – Define Microbial Model Initial Biofilm Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc394934_111689907">SBIOF - Define The Initial Equilibration Biofilm Volume Fraction For All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P100"><text:a xlink:type="simple" xlink:href="#10.3.91.SBIOF – Define Microbial Model Initial Biofilm Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc394934_111689907">SBIOF - Define The Initial Equilibration Biofilm Volume Fraction For All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -8533,7 +8533,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P121">SCALC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P100"><text:a xlink:type="simple" xlink:href="#10.3.92.SCALC – Define Microbial Model Initial Calcite Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc406066_111689907">SCALC – Define The Initial Equilibration Calcite Volume Fraction For All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P100"><text:a xlink:type="simple" xlink:href="#10.3.92.SCALC – Define Microbial Model Initial Calcite Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc406066_111689907">SCALC – Define The Initial Equilibration Calcite Volume Fraction For All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -8639,7 +8639,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P110">SMICR</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P112"><text:a xlink:type="simple" xlink:href="#10.3.99.SMICR – Define Microbial Model Initial Microbe Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc428289_111689907">SMICR – Define The Initial Equilibration Microbial Concentration For All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P112"><text:a xlink:type="simple" xlink:href="#10.3.99.SMICR – Define Microbial Model Initial Microbe Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc428289_111689907">SMICR – Define The Initial Equilibration Microbial Concentration For All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -8714,7 +8714,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P121">SOXYG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P118"><text:a xlink:type="simple" xlink:href="#10.3.104.SOXYG - Define Microbial Model Initial Oxygen Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc439460_111689907">SOXYG - Define The Initial Equilibration Oxygen Concentration For All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P118"><text:a xlink:type="simple" xlink:href="#10.3.104.SOXYG - Define Microbial Model Initial Oxygen Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc439460_111689907">SOXYG - Define The Initial Equilibration Oxygen Concentration For All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -8744,7 +8744,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P125">SPOLYMW</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P122"><text:a xlink:type="simple" xlink:href="#10.3.104.SPOLYMW – Define The Initial Equilibration Polymer Molecular Weights For All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc428289_1116899071">SPOLYMW – Define The Initial Equilibration Polymer Molecular Weights For All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P122"><text:a xlink:type="simple" xlink:href="#10.3.104.SPOLYMW – Define The Initial Equilibration Polymer Molecular Weights For All Grid Blocks|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc428289_1116899071">SPOLYMW – Define The Initial Equilibration Polymer Molecular Weights For All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
        <text:p text:style-name="P122">This is an OPM Flow specific keyword for the simulator&apos;s Polymer Molecular Weight Transport option that uses the polymer molecular weight in calculating the polymer viscosity, as well as accounting for formation damage due to the water and polymer injection, by adjusting the wellbore skin pressure. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -8775,7 +8775,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P116">SUREA</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1942.C2" table:number-columns-spanned="2" office:value-type="string">
-       <text:p text:style-name="P117"><text:a xlink:type="simple" xlink:href="#10.3.107.SUREA - Define Microbial Model Initial Urea Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc450660_111689907">SUREA - Define The Initial Equilibration Urea Concentration For All Grid Blocks</text:bookmark-ref></text:a></text:p>
+       <text:p text:style-name="P117"><text:a xlink:type="simple" xlink:href="#10.3.107.SUREA - Define Microbial Model Initial Urea Saturation|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc450660_111689907">SUREA - Define The Initial Equilibration Urea Concentration For All Grid Blocks</text:bookmark-ref></text:a>.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1942.E2" office:value-type="string">
@@ -8975,7 +8975,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P183"><text:span text:style-name="T31">API:</text:span><text:span text:style-name="T21"> </text:span><text:span text:style-name="T47">API option equilibration keywords</text:span>.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P183"><text:span text:style-name="T31">Biofilm:</text:span><text:span text:style-name="T21"> </text:span><text:span text:style-name="T47">Biofilm option equilibration keywords</text:span>.</text:p>
+         <text:p text:style-name="P183"><text:span text:style-name="T31">Biofilm:</text:span><text:span text:style-name="T21"> </text:span><text:span text:style-name="T47">BIOFILM option equilibration keywords</text:span>.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P167"><text:span text:style-name="T31">Brine:</text:span><text:span text:style-name="T21"> BRINE option </text:span>e<text:span text:style-name="T21">quilibration keywords.</text:span></text:p>
