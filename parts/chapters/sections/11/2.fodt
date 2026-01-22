@@ -10161,10 +10161,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:section text:style-name="Sect1" text:name="Section2">
     <text:h text:style-name="P51" text:outline-level="2"><text:bookmark-start text:name="__RefHeading___Toc119426_2179381650"/>Data Requirements<text:bookmark-end text:name="__RefHeading___Toc119426_2179381650"/></text:h>
-    <text:p text:style-name="P326">To generate a summary vector, the appropriate keyword must be entered in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section of the input data file; only variables explicitly requested will be written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> files. Normally the data is written to the summary file at the end of each successful time step, but as mentioned previously, this can be changed by the <text:a xlink:href="#__RefHeading___Toc210150_2884651453">RPTONLY</text:a> keyword to write out the data only at report time steps, thus reducing the overall size of the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> files. </text:p>
+    <text:p text:style-name="P326">To generate a summary vector, the appropriate keyword must be entered in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section of the input data file; only variables explicitly requested will be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> files. Normally the data is written to the summary file at the end of each successful time step, but as mentioned previously, this can be changed by the <text:a xlink:href="#__RefHeading___Toc210150_2884651453">RPTONLY</text:a> keyword to write out the data only at report time steps, thus reducing the overall size of the <text:span text:style-name="NotKeyword">SUMMARY</text:span> files. </text:p>
     <text:p text:style-name="P358">The following sections describe the summary variable mnemonic syntax which defines the type of summary variable object (Aquifer, Field, Group, Well, etc.), the variable format for a given variable object, and the variable names for the various variable objects.</text:p>
     <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311668_2754225602"/>Summary Variable Mnemonic Syntax<text:bookmark-end text:name="__RefHeading___Toc311668_2754225602"/></text:h>
-    <text:p text:style-name="P311">As mentioned earlier, there are literally hundreds of variables that can be written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file, which can make the process of requesting the data rather complex. Fortunately in most cases, but not always, the variable names follow a four or five letter syntax that defines the variable mnemonic used to describe the data to be written out. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 11.2.1</text:sequence-ref><text:s/>outlines the general syntax employed in deriving the variable mnemonic for some of the more commonly used summary variables. </text:p>
+    <text:p text:style-name="P311">As mentioned earlier, there are literally hundreds of variables that can be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file, which can make the process of requesting the data rather complex. Fortunately in most cases, but not always, the variable names follow a four or five letter syntax that defines the variable mnemonic used to describe the data to be written out. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 11.2.1</text:sequence-ref><text:s/>outlines the general syntax employed in deriving the variable mnemonic for some of the more commonly used summary variables. </text:p>
     <text:p text:style-name="P311"/>
     <table:table table:name="Table1790" table:style-name="Table1790">
      <table:table-column table:style-name="Table1790.A"/>
@@ -10701,7 +10701,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P389">Table <text:sequence text:ref-name="refTable2" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.3</text:sequence>: Summary Variable Mnemonics Examples Not Following the General Syntax</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311670_2754225602"/>Summary Variable Format<text:bookmark-end text:name="__RefHeading___Toc311670_2754225602"/></text:h>
-    <text:p text:style-name="P269">In addition to the general mnemonic syntax, each object type (Field, Group, Region, Well, etc.) has additional syntax governing which specific object (group, well, etc.) should be written out to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file as explained in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 11.2.4</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P269">In addition to the general mnemonic syntax, each object type (Field, Group, Region, Well, etc.) has additional syntax governing which specific object (group, well, etc.) should be written out to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file as explained in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 11.2.4</text:sequence-ref>.</text:p>
     <text:p text:style-name="P373"/>
     <table:table table:name="Table1793" table:style-name="Table1793">
      <table:table-column table:style-name="Table1793.A"/>
@@ -10796,7 +10796,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P277">FOPR</text:p>
        <text:p text:style-name="P270">FOPT</text:p>
        <text:p text:style-name="P270">FPR</text:p>
-       <text:p text:style-name="P249">Would export the field oil production rate and total, <text:s/>plus the field average reservoir pressure to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:p>
+       <text:p text:style-name="P249">Would export the field oil production rate and total, <text:s/>plus the field average reservoir pressure to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1793.1">
@@ -10888,7 +10888,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P303">Well variables for well completion vectors<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
            <text:p text:style-name="Footnote">The term well connection is used to describe individual connections from the wellbore to the reservoir grid, as opposed to well completions. A well completion is used to describe a set of connections, for example, a well may consist of several completions with each completion consisting of multiple connections. </text:p></text:note-body></text:note> generally consist of the well summary mnemonic name suffixed with the letter &quot;L&quot;, for example WOPRL, for the completion oil production rate.</text:p>
        <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the completion number, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
-       <text:p text:style-name="P303">A blank list for the completions results in all completions for a well being written out, <text:s/>and a blank list for the well will result in all well completions being written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:p>
+       <text:p text:style-name="P303">A blank list for the completions results in all completions for a well being written out, <text:s/>and a blank list for the well will result in all well completions being written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
        <text:p text:style-name="P242">Care should be exercised when defaulting the list of wells and completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10913,7 +10913,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P289">Connection variables are followed by a list of well names in quotes and connection I, J, K indices, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
-       <text:p text:style-name="P303">A blank list for the connections results in all connections for a well being written out. <text:s/>And a blank list for the well will result in all well connections being written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:p>
+       <text:p text:style-name="P303">A blank list for the connections results in all connections for a well being written out. <text:s/>And a blank list for the well will result in all well connections being written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
        <text:p text:style-name="P242">Again, care should be exercised when defaulting the list of wells and connections as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10966,7 +10966,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P300">Well variables for multi-segment well segments can be followed by a list of well names enclosed in quotes and the segment number, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”.</text:p>
-       <text:p text:style-name="P236">A blank list for the segments results in all segments for a well being written out. <text:s/>And a blank list for the well will result in all well segments being written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:p>
+       <text:p text:style-name="P236">A blank list for the segments results in all segments for a well being written out. <text:s/>And a blank list for the well will result in all well segments being written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
        <text:p text:style-name="P239">Care should be exercised when defaulting the list of wells and segments as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -11220,7 +11220,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable4" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.5</text:sequence>: Aquifer Summary Variables</text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:h text:style-name="P397" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716495_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716495_3964674244"/></text:h>
-    <text:p text:style-name="P384">The following example requests the field and analytical aquifer pressure, rate and cumulative water influxes for all analytical aquifers to be written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:p>
+    <text:p text:style-name="P384">The following example requests the field and analytical aquifer pressure, rate and cumulative water influxes for all analytical aquifers to be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
     <text:p text:style-name="P384"/>
     <text:p text:style-name="P388">-- ==============================================================================</text:p>
     <text:p text:style-name="P388">-- </text:p>
@@ -16257,7 +16257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P375"/>
     <text:p text:style-name="P375"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc309859_611395817"/>Field, Group and Well Control Mode Variables<text:bookmark-end text:name="__RefHeading___Toc309859_611395817"/></text:h>
-    <text:p text:style-name="P385">In addition to the production, injection, pressure, and productivity summary variables, there are also summary variables that output the control mode at which the field, groups and wells are being controlled. <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable6">Table 11.2.7</text:sequence-ref><text:s/>summarizes the mnemonics for the field and groups together with a description and the values written out to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file.</text:p>
+    <text:p text:style-name="P385">In addition to the production, injection, pressure, and productivity summary variables, there are also summary variables that output the control mode at which the field, groups and wells are being controlled. <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable6">Table 11.2.7</text:sequence-ref><text:s/>summarizes the mnemonics for the field and groups together with a description and the values written out to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
     <text:p text:style-name="P375"/>
     <table:table table:name="Table1794" table:style-name="Table1794">
      <table:table-column table:style-name="Table1794.A"/>
@@ -16656,7 +16656,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P416">For both production and injection groups the mode of control set to negative if the rate was set by a higher group.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P439">Note that the output to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file is the numeric values, whereas for the RSM file it is the mnemonics, that is: <text:span text:style-name="T101">ORAT,</text:span> <text:span text:style-name="T101">WRAT</text:span>, <text:s/>etc.</text:p>
+         <text:p text:style-name="P439">Note that the output to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file is the numeric values, whereas for the RSM file it is the mnemonics, that is: <text:span text:style-name="T101">ORAT,</text:span> <text:span text:style-name="T101">WRAT</text:span>, <text:s/>etc.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P420">See <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable7">Table 11.2.8</text:sequence-ref><text:s/>for an explanation of the mnemonics used in <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable6">Table 11.2.7</text:sequence-ref>.</text:p>
@@ -17088,7 +17088,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P461">Cells colored orange show combinations that are not available in OPM Flow because the underlying feature is not available.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P440">Note that the output to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file is the numeric values, whereas for the RSM file it is the mnemonics, that is: PROD, INJ, <text:s/>etc.</text:p>
+         <text:p text:style-name="P440">Note that the output to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file is the numeric values, whereas for the RSM file it is the mnemonics, that is: PROD, INJ, <text:s/>etc.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -27691,7 +27691,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P367">Table <text:sequence text:ref-name="refTable16" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.18</text:sequence>: Network Model Summary Variables</text:p>
     <text:p text:style-name="P362">Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311704_2754225602"/>Option Specific Variables – OPM Flow Simulation Performance<text:bookmark-end text:name="__RefHeading___Toc311704_2754225602"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following table (<text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable17">Table 11.2.19</text:sequence-ref>) <text:s/>lists the OPM Flow simulation performance summary variables that can be written to the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> file. Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
+    <text:p text:style-name="_40_TextBody">The following table (<text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable17">Table 11.2.19</text:sequence-ref>) <text:s/>lists the OPM Flow simulation performance summary variables that can be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file. Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <table:table table:name="Table1868" table:style-name="Table1868">
      <table:table-column table:style-name="Table1868.A"/>
      <table:table-column table:style-name="Table1868.B"/>
