@@ -20,6 +20,7 @@ class FileType(enum.Enum):
     CHAPTER = 1
     SUBSECTION = 2
     APPENDIX = 3
+    SECTION = 4
 
 @dataclass
 class MonoParagraphStyle:
@@ -299,7 +300,8 @@ class FileHandler(xml.sax.handler.ContentHandler):
                 ):
                     if not self.is_example_p[-1]:
                         if ((    self.file_type == FileType.CHAPTER
-                              or self.file_type == FileType.APPENDIX) or
+                              or self.file_type == FileType.APPENDIX
+                              or self.file_type == FileType.SECTION) or
                             (self.file_type == FileType.SUBSECTION and
                               (not self.is_table_caption(characters)))):
                                 characters = self.regex.sub(self.replace_match_function, characters)
@@ -385,6 +387,7 @@ class InsertLinks():
         self,
         maindir: Path,
         subsections: list[str],
+        sections: list[str],
         chapters: list[str],
         appendices: list[str],
         filename: str|None,
@@ -393,6 +396,7 @@ class InsertLinks():
     ) -> None:
         self.maindir = maindir
         self.subsections = subsections
+        self.sections = sections
         self.chapters = chapters
         self.appendices = appendices
         self.filename = filename
@@ -404,6 +408,10 @@ class InsertLinks():
         num_uris_updated = 0
         if len(self.chapters) > 0:
             count1, count2 = self.insert_links_in_chapters()
+            num_links_inserted += count1
+            num_uris_updated += count2
+        if len(self.sections) > 0:
+            count1, count2 = self.insert_links_in_sections()
             num_links_inserted += count1
             num_uris_updated += count2
         if len(self.subsections) > 0:
@@ -425,6 +433,21 @@ class InsertLinks():
             filename = f"{chapter}.{FileExtensions.fodt}"
             path = start_dir / filename
             count1, count2 = self.insert_links_in_file(path, filename, FileType.CHAPTER)
+            num_links_inserted += count1
+            num_uris_updated += count2
+        return num_links_inserted, num_uris_updated
+
+    def insert_links_in_sections(self) -> tuple[int, int]:
+        start_dir = self.maindir / Directories.chapters / Directories.sections
+        num_links_inserted = 0
+        num_uris_updated = 0
+        for section in self.sections:
+            logging.info(f"Processing section: {section}")
+            # Parse "11.2" into chapter="11", section_num="2"
+            chapter, section_num = section.split(".")
+            filename = f"{section_num}.{FileExtensions.fodt}"
+            path = start_dir / chapter / filename
+            count1, count2 = self.insert_links_in_file(path, section, FileType.SECTION)
             num_links_inserted += count1
             num_uris_updated += count2
         return num_links_inserted, num_uris_updated
@@ -518,6 +541,7 @@ class InsertLinks():
         return (num_links_inserted, num_uris_updated)
 
 VALID_SUBSECTIONS = "4.3,5.3,6.3,7.3,8.3,9.3,10.3,11.3,12.3"
+VALID_SECTIONS = "4.2,5.2,6.2,7.2,8.2,9.2,10.2,11.2,12.2"
 VALID_CHAPTERS = "1,2,3,4,5,6,7,8,9,10,11,12"
 VALID_APPENDICES = "B,C,D,E,F"
 
@@ -533,6 +557,16 @@ def validate_subsections(subsections: str|None, filename: str|None) -> list[str]
         if subsection not in valid_subsections:
             raise ValueError(f"Invalid subsection: {subsection}")
     return subsections
+
+def validate_sections(sections: str|None) -> list[str]:
+    if sections is None:
+        return []
+    sections = sections.split(",")
+    valid_sections = VALID_SECTIONS.split(",")
+    for section in sections:
+        if section not in valid_sections:
+            raise ValueError(f"Invalid section: {section}")
+    return sections
 
 def validate_chapters(chapters: str|None) -> list[str]:
     if chapters is None:
@@ -563,6 +597,7 @@ def validate_appendices(appendices: str|None) -> list[str]:
 #    --maindir=<main_dir> \
 #    --keyword_dir=<keyword_dir> \
 #    --subsections=<subsections> \
+#    --sections=<sections> \
 #    --chapters=<chapters> \
 #    --appendices=<appendices> \
 #    --filename=<filename> \
@@ -581,11 +616,12 @@ def validate_appendices(appendices: str|None) -> list[str]:
 #   a new map (this will save the map to disk).
 #
 #   If --subsections is given, the script will only process the specified subsections, or
+#   if --sections is given, the script will only process the specified sections (e.g., 11.2), or
 #   if --chapters is given, the script will only process the specified chapters, or
 #   if --appendices is given, the script will only process the specified appendices. If --filename
 #   and --subsections are given, the script will only process the specified file within the
 #   specified subsection. If --all is given, the script will process all files. Option --all
-#   cannot be combined with --chapters, --appendices or --subsections.
+#   cannot be combined with --chapters, --appendices, --sections or --subsections.
 #
 #   If --check-changed is given, the script will only check if the files have changed and not write
 #   the files back to disk. It will return a non-zero exit code if any files have changed.
@@ -601,19 +637,25 @@ def validate_appendices(appendices: str|None) -> list[str]:
 #
 #  Will process only the file "AQANCONL.fodt" in subsection 10.3.
 #
+#    fodt-link-keywords --sections=11.2
+#
+#  Will process section 11.2 (the file parts/chapters/sections/11/2.fodt).
+#
 #    fodt-link-keywords --chapters=4,5
 #
 #  Will process will process chapters 4 and 5.
 #
 #   fodt-link-keywords --all
 #
-#  Will process all keywords in subsections 4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, and 12.3.
-#  Then chapters 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, and finally appendices B, C, D, E, and F.
+#  Will process all keywords in subsections 4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, and 12.3,
+#  sections 4.2, 5.2, 6.2, 7.2, 8.2, 9.2, 10.2, 11.2, and 12.2,
+#  chapters 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12, and finally appendices B, C, D, E, and F.
 #
 @click.command()
 @ClickOptions.maindir()
 @ClickOptions.keyword_dir
-@click.option('--subsections', help='The subsections to process')
+@click.option('--subsections', help='The subsections to process (e.g., "11.3" or "4.3,5.3,11.3")')
+@click.option('--sections', help='The sections to process (e.g., "11.2" or "4.2,5.2,11.2")')
 @click.option('--chapters', help='The chapters to process')
 @click.option('--appendices', help='The appendices to process')
 @click.option('--generate-map', is_flag=True, default=False, help='Do not use the mapping file "meta/kw_uri_map.txt". If you suspect that libreoffice might have changed the references to the keywords, you can use this option to bypass the kw_uri_map.txt file and generate the map on the fly. Another option is to run the script "fodt-gen-kw-uri-map" to generate a new map.')
@@ -624,6 +666,7 @@ def link_keywords(
     maindir: str|None,
     keyword_dir: str|None,
     subsections: str|None,
+    sections: str|None,
     chapters: str|None,
     appendices: str|None,
     generate_map: bool,
@@ -635,15 +678,17 @@ def link_keywords(
     maindir = helpers.get_maindir(maindir)
     keyword_dir = helpers.get_keyword_dir(keyword_dir)
     if all:
-        if sum(x is not None for x in [subsections, chapters, appendices]) != 0:
+        if sum(x is not None for x in [subsections, sections, chapters, appendices]) != 0:
             raise ValueError(
-                "Option --all cannot be combined with any of --subsections, --chapters "
-                "and --appendices."
+                "Option --all cannot be combined with any of --subsections, --sections, "
+                "--chapters and --appendices."
             )
         subsections = VALID_SUBSECTIONS
+        sections = VALID_SECTIONS
         chapters = VALID_CHAPTERS
         appendices = VALID_APPENDICES
     subsections = validate_subsections(subsections, filename)
+    sections = validate_sections(sections)
     chapters = validate_chapters(chapters)
     appendices = validate_appendices(appendices)
     if generate_map:
@@ -653,6 +698,7 @@ def link_keywords(
     num_links_inserted, num_uris_updated = InsertLinks(
         maindir,
         subsections,
+        sections,
         chapters,
         appendices,
         filename,
