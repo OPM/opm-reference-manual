@@ -2449,22 +2449,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:table-properties>
   </style:style>
   <style:style style:name="Table813.A" style:family="table-column">
-   <style:table-column-properties style:column-width="2.462cm"/>
+   <style:table-column-properties style:column-width="2.250cm"/>
   </style:style>
   <style:style style:name="Table813.B" style:family="table-column">
-   <style:table-column-properties style:column-width="2.233cm"/>
+   <style:table-column-properties style:column-width="2.250cm"/>
   </style:style>
   <style:style style:name="Table813.C" style:family="table-column">
-   <style:table-column-properties style:column-width="5.868cm"/>
+   <style:table-column-properties style:column-width="5.909cm"/>
   </style:style>
   <style:style style:name="Table813.D" style:family="table-column">
-   <style:table-column-properties style:column-width="1.905cm"/>
+   <style:table-column-properties style:column-width="1.750cm"/>
   </style:style>
   <style:style style:name="Table813.E" style:family="table-column">
-   <style:table-column-properties style:column-width="1.598cm"/>
+   <style:table-column-properties style:column-width="1.750cm"/>
   </style:style>
   <style:style style:name="Table813.F" style:family="table-column">
-   <style:table-column-properties style:column-width="1.593cm"/>
+   <style:table-column-properties style:column-width="1.750cm"/>
   </style:style>
   <style:style style:name="Table813.1" style:family="table-row">
    <style:table-row-properties fo:keep-together="auto"/>
@@ -5449,9 +5449,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838831411"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838831411"/></text:h>
-    <text:p text:style-name="_40_TextBody">This keyword activates the thermal modeling option. There is no data required for this keyword. The energy black-oil implementation in OPM Flow is a mixture of the commercial simulators black-oil and the commercial simulators “compositional thermal” keywords, as well as some OPM Flow specific keywords.</text:p>
-    <text:p text:style-name="_40_TextBody">The temperature option (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword) and the thermal option (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options, for example the <text:a xlink:href="#__RefHeading___Toc111816_2939291539">RTEMP</text:a> keyword. <text:s/>OPM Flow’s thermal model is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> or compositional <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> formulations.</text:p>
-    <text:p text:style-name="_40_TextBody">Keywords specifically associated with both OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> and the commercial simulators <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> and <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> options are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 5.46</text:sequence-ref><text:s/>for ease of reference.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword activates the thermal modeling option.</text:p>
+    <text:p text:style-name="_40_TextBody">In OPM Flow's thermal model (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword) enthalpy is conserved and the energy equations are solved fully implicitly with the black-oil equations. Whereas, in OPM Flow's temperature model (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword) internal energy is conserved (the work term is neglected and internal energy is equal to enthalpy) and the energy equations are solved sequentially after the black-oil equations. Note that the thermal model can be modified so that internal energy rather than enthalpy is conserved by setting the command line option --conserve-inner-energy-thermal=true (the default is false). If properties like density or viscosity "strongly" depend on temperature, the thermal model is recommended.</text:p>
+    <text:p text:style-name="_40_TextBody">There is no data required for this keyword and there is no terminating “/” for this keyword.</text:p>    
+    <text:p text:style-name="_40_TextBody">The temperature option (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword) and the thermal option (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options, for example the <text:a xlink:href="#__RefHeading___Toc111816_2939291539">RTEMP</text:a> keyword. <text:s/>OPM Flow’s thermal model is not directly equivalent to either the commercial simulator’s black-oil <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> or compositional <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> formulation.</text:p>
+    <text:p text:style-name="_40_TextBody">The energy black-oil implementation in OPM Flow uses a mixture of the commercial simulators black-oil and the commercial simulators “compositional thermal” keywords, as well as some OPM Flow specific keywords. Keywords specifically associated with both OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> and the commercial simulators <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> and <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> options are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 5.46</text:sequence-ref><text:s/>for ease of reference.</text:p>
     <table:table table:name="Table813" table:style-name="Table813">
      <table:table-column table:style-name="Table813.A"/>
      <table:table-column table:style-name="Table813.B"/>
@@ -5474,7 +5476,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         <text:p text:style-name="P38">OPM Flow</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table813.E1" table:number-columns-spanned="2" office:value-type="string">
-        <text:p text:style-name="P38">Commercial</text:p>
+        <text:p text:style-name="P38">Commercial Simulator</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
       </table:table-row>
@@ -5491,8 +5493,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         <text:p text:style-name="P25">MODEL</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table813.F2" office:value-type="string">
-        <text:p text:style-name="P27"><text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a></text:p>
-        <text:p text:style-name="P34">MODEL</text:p>
+        <text:p text:style-name="P24"><text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a></text:p>
+        <text:p text:style-name="P25">MODEL</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -5524,7 +5526,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table813.C3" office:value-type="string">
        <text:p text:style-name="P32">Activate the Temperature Modeling Option</text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table813.D3" office:value-type="string">
+      <table:table-cell table:style-name="Table813.D5" office:value-type="string">
        <text:p text:style-name="P66"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table813.E4" office:value-type="string">
@@ -5875,7 +5877,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table813.D18" office:value-type="string">
        <text:p text:style-name="P67"/>
       </table:table-cell>
-      <table:table-cell table:style-name="Table813.E18" office:value-type="string">
+      <table:table-cell table:style-name="Table813.E24" office:value-type="string">
        <text:p text:style-name="P67"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table813.F23" office:value-type="string">
@@ -6254,16 +6256,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P70">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P84">Cells colored green implies the keyword can be used with this model formulation.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">Cells colored green implies the keyword can be used with this model formulation.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P84">Cells colored orange means the keyword is recognized by OPM Flow’s parser but is ignored and not used by OPM Flow.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">Cells colored orange means the keyword is recognized by OPM Flow’s parser but is ignored and not used by OPM Flow.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P84">Cells colored red should not be used with this model formulation.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">Cells colored red should not be used with this model formulation.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P85"><text:soft-page-break/>The list is focused on the OPM Flow implementation of the energy and black-oil formulation and therefore does not necessary include all the commercial simulator’s compositional keywords.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">The list is focused on the OPM Flow implementation of the energy and black-oil formulation and therefore does not necessary include all the commercial simulator’s compositional keywords.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -6274,9 +6276,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P44">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.46</text:sequence>: OPM Flow’s <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> Option Associated Keywords</text:p>
+    <text:p text:style-name="Caption">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.46</text:sequence>: OPM Flow’s <text:span style-name="NotKeyword">THERMAL</text:span> Option Associated Keywords</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P76">In thermal runs a producing well’s bottom-hole temperature is calculated based on a weighted average of the temperature in the grid cell connections open to flow in the producing well, that is the reported bottom-hole temperature, TBHT, is calculated as:</text:p>
+    <text:p text:style-name="_40_TextBody">In thermal runs a producing well’s bottom-hole temperature is calculated based on a weighted average of the temperature in the grid cell connections open to flow in the producing well, that is the reported bottom-hole temperature, <text:span text:style-name="Emphasis">TBHT</text:span>, is calculated as:</text:p>
     <table:table table:name="Table1958" table:style-name="Table1958">
      <table:table-column table:style-name="Table1958.A"/>
      <table:table-column table:style-name="Table1958.B"/>
@@ -6414,7 +6416,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P73">with</text:p>
+    <text:p text:style-name="_40_TextBody">with</text:p>
     <table:table table:name="Table1959" table:style-name="Table1959">
      <table:table-column table:style-name="Table1959.A"/>
      <table:table-column table:style-name="Table1959.B"/>
@@ -6547,8 +6549,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P73"/>
-    <text:p text:style-name="P73">The term <draw:frame draw:style-name="fr1" draw:name="Object238" text:anchor-type="as-char" svg:width="2.32cm" svg:height="0.545cm" draw:z-index="4"><draw:object>
+    <text:p text:style-name="_40_TextBody">The term <draw:frame draw:style-name="fr1" draw:name="Object238" text:anchor-type="as-char" svg:width="2.32cm" svg:height="0.545cm" draw:z-index="4"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
         <semantics>
          <mrow>
@@ -6631,7 +6632,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         CQCMAAEAAAAAAA==
        </office:binary-data>
       </draw:image>
-     </draw:frame>is the energy rate density (J/(K s)) of phase p, </text:p>
+     </draw:frame>is the energy rate density (J/(K s)) of phase <text:span text:style-name="Emphasis">p</text:span>, </text:p>
     <text:p text:style-name="_40_EquationWhere_20_">where:</text:p>
     <text:p text:style-name="P74"><draw:frame draw:style-name="fr1" draw:name="Object776" text:anchor-type="as-char" svg:width="0.489cm" svg:height="0.39cm" draw:z-index="6"><draw:object>
        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -6865,7 +6866,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P77">derived from the specific enthalpy, h<text:span text:style-name="T32">pi</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">derived from the specific enthalpy, <text:span text:style-name="Emphasis">h<text:span text:style-name="T32">pi</text:span></text:span></text:p>
     <table:table table:name="Table1961" table:style-name="Table1961">
      <table:table-column table:style-name="Table1961.A"/>
      <table:table-column table:style-name="Table1961.B"/>
@@ -6963,7 +6964,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P78">where <text:span text:style-name="T32"><draw:frame draw:style-name="fr1" draw:name="Object785" text:anchor-type="as-char" svg:width="0.631cm" svg:height="0.441cm" draw:z-index="16"><draw:object>
+    <text:p text:style-name="_40_TextBody">where <text:span text:style-name="T32"><draw:frame draw:style-name="fr1" draw:name="Object785" text:anchor-type="as-char" svg:width="0.631cm" svg:height="0.441cm" draw:z-index="16"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <msub>
@@ -6986,8 +6987,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          AAA=
         </office:binary-data>
        </draw:image>
-      </draw:frame></text:span><text:s/>is connection grid block pressure of phase p.</text:p>
-    <text:p text:style-name="P79">The phase rates at surface conditions<draw:frame draw:style-name="fr1" draw:name="Object241" text:anchor-type="as-char" svg:width="0.982cm" svg:height="0.543cm" draw:z-index="17"><draw:object>
+      </draw:frame></text:span><text:s/>is connection grid block pressure of phase <text:span text:style-name="Emphasis">p</text:span>.</text:p>
+    <text:p text:style-name="_40_TextBody">The phase rates at surface conditions<draw:frame draw:style-name="fr1" draw:name="Object241" text:anchor-type="as-char" svg:width="0.982cm" svg:height="0.543cm" draw:z-index="17"><draw:object>
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
          <semantics>
           <mrow>
@@ -7000,13 +7001,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
              </msup>
              <mrow>
               <mi>p</mi>
-              <mn>1</mn>
+              <mn>i</mn>
              </mrow>
             </msub>
            </mrow>
            <mo fence="true" form="postfix" stretchy="true">)</mo>
           </mrow>
-          <annotation encoding="StarMath 5.0">left({q^s}_p1 right)</annotation>
+          <annotation encoding="StarMath 5.0">left({q^s}_pi right)</annotation>
          </semantics>
         </math>
        </draw:object><draw:image>
@@ -7047,13 +7048,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
              </msup>
              <mrow>
               <mi>p</mi>
-              <mn>1</mn>
+              <mn>i</mn>
              </mrow>
             </msub>
            </mrow>
            <mo fence="true" form="postfix" stretchy="true">)</mo>
           </mrow>
-          <annotation encoding="StarMath 5.0">left({q^r}_p1 right)</annotation>
+          <annotation encoding="StarMath 5.0">left({q^r}_pi right)</annotation>
          </semantics>
         </math>
        </draw:object><draw:image>
@@ -7081,7 +7082,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          AA==
         </office:binary-data>
        </draw:image>
-      </draw:frame>using the phase formation volume factor, B<text:span text:style-name="T32">pi</text:span>, via:</text:p>
+      </draw:frame>using the phase formation volume factor, <text:span text:style-name="Emphasis">B<text:span text:style-name="T32">pi</text:span></text:span>, via:</text:p>
     <table:table table:name="Table1962" table:style-name="Table1962">
      <table:table-column table:style-name="Table1962.A"/>
      <table:table-column table:style-name="Table1962.B"/>
@@ -7182,7 +7183,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P79">And thus equation <text:sequence-ref text:reference-format="text" text:ref-name="refText1">(5.2)</text:sequence-ref><text:s/>can be simplified to:</text:p>
+    <text:p text:style-name="_40_TextBody">And thus equation <text:sequence-ref text:reference-format="text" text:ref-name="refText1">(5.2)</text:sequence-ref><text:s/>can be simplified to:</text:p>
     <table:table table:name="Table1963" table:style-name="Table1963">
      <table:table-column table:style-name="Table1963.A"/>
      <table:table-column table:style-name="Table1963.B"/>
