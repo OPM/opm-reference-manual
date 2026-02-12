@@ -10161,10 +10161,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:section text:style-name="Sect1" text:name="Section2">
     <text:h text:style-name="P51" text:outline-level="2"><text:bookmark-start text:name="__RefHeading___Toc119426_2179381650"/>Data Requirements<text:bookmark-end text:name="__RefHeading___Toc119426_2179381650"/></text:h>
-    <text:p text:style-name="P326">To generate a summary vector, the appropriate keyword must be entered in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section of the input data file; only variables explicitly requested will be written to the SUMMARY files. Normally the data is written to the summary file at the end of each successful time step, but as mentioned previously, this can be changed by the <text:a xlink:href="#__RefHeading___Toc210150_2884651453">RPTONLY</text:a> keyword to write out the data only at report time steps, thus reducing the overall size of the SUMMARY files. </text:p>
+    <text:p text:style-name="P326">To generate a summary vector, the appropriate keyword must be entered in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section of the input data file; only variables explicitly requested will be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> files. Normally the data is written to the summary file at the end of each successful time step, but as mentioned previously, this can be changed by the <text:a xlink:href="#__RefHeading___Toc210150_2884651453">RPTONLY</text:a> keyword to write out the data only at report time steps, thus reducing the overall size of the <text:span text:style-name="NotKeyword">SUMMARY</text:span> files. </text:p>
     <text:p text:style-name="P358">The following sections describe the summary variable mnemonic syntax which defines the type of summary variable object (Aquifer, Field, Group, Well, etc.), the variable format for a given variable object, and the variable names for the various variable objects.</text:p>
     <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311668_2754225602"/>Summary Variable Mnemonic Syntax<text:bookmark-end text:name="__RefHeading___Toc311668_2754225602"/></text:h>
-    <text:p text:style-name="P311">As mentioned earlier, there are literally hundreds of variables that can be written to the SUMMARY file, which can make the process of requesting the data rather complex. Fortunately in most cases, but not always, the variable names follow a four or five letter syntax that defines the variable mnemonic used to describe the data to be written out. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 11.2.1</text:sequence-ref><text:s/>outlines the general syntax employed in deriving the variable mnemonic for some of the more commonly used summary variables. </text:p>
+    <text:p text:style-name="P311">As mentioned earlier, there are literally hundreds of variables that can be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file, which can make the process of requesting the data rather complex. Fortunately in most cases, but not always, the variable names follow a four or five letter syntax that defines the variable mnemonic used to describe the data to be written out. <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable0">Table 11.2.1</text:sequence-ref><text:s/>outlines the general syntax employed in deriving the variable mnemonic for some of the more commonly used summary variables. </text:p>
     <text:p text:style-name="P311"/>
     <table:table table:name="Table1790" table:style-name="Table1790">
      <table:table-column table:style-name="Table1790.A"/>
@@ -10630,7 +10630,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">BAPI</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1791.B2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">Block API</text:p>
+       <text:p text:style-name="Table_20_Contents">Block <text:span text:style-name="NotKeyword">API</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
@@ -10701,7 +10701,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P389">Table <text:sequence text:ref-name="refTable2" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.3</text:sequence>: Summary Variable Mnemonics Examples Not Following the General Syntax</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311670_2754225602"/>Summary Variable Format<text:bookmark-end text:name="__RefHeading___Toc311670_2754225602"/></text:h>
-    <text:p text:style-name="P269">In addition to the general mnemonic syntax, each object type (Field, Group, Region, Well, etc.) has additional syntax governing which specific object (group, well, etc.) should be written out to the SUMMARY file as explained in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 11.2.4</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P269">In addition to the general mnemonic syntax, each object type (Field, Group, Region, Well, etc.) has additional syntax governing which specific object (group, well, etc.) should be written out to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file as explained in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable3">Table 11.2.4</text:sequence-ref>.</text:p>
     <text:p text:style-name="P373"/>
     <table:table table:name="Table1793" table:style-name="Table1793">
      <table:table-column table:style-name="Table1793.A"/>
@@ -10753,7 +10753,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-row table:style-name="Table1793.4">
       <table:covered-table-cell table:style-name="Table1793.A2"/>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
-       <text:p text:style-name="P295">Analytical aquifer lists defined via the AQUALIST keyword in the SOLUTION section are identified by the first two characters AL in the variable mnemonic.</text:p>
+       <text:p text:style-name="P295">Analytical aquifer lists defined via the <text:a xlink:href="#__RefHeading___Toc412035_3174375363">AQUALIST</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section are identified by the first two characters AL in the variable mnemonic.</text:p>
        <text:p text:style-name="P295">Aquifer variables for aquifer lists can be followed by any number of aquifer list names and therefore a terminating <text:s/>“/” is required to end the list of aquifers. <text:s/>A blank list requests output for all the aquifers. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10786,7 +10786,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1793.1">
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">FIELD</text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="NotKeyword">FIELD</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="Table_20_Contents">Field variables take no additional parameters and therefore do not require a terminating “/”.</text:p>
@@ -10796,7 +10796,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P277">FOPR</text:p>
        <text:p text:style-name="P270">FOPT</text:p>
        <text:p text:style-name="P270">FPR</text:p>
-       <text:p text:style-name="P249">Would export the field oil production rate and total, <text:s/>plus the field average reservoir pressure to the SUMMARY file.</text:p>
+       <text:p text:style-name="P249">Would export the field oil production rate and total, <text:s/>plus the field average reservoir pressure to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1793.1">
@@ -10888,7 +10888,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P303">Well variables for well completion vectors<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
            <text:p text:style-name="Footnote">The term well connection is used to describe individual connections from the wellbore to the reservoir grid, as opposed to well completions. A well completion is used to describe a set of connections, for example, a well may consist of several completions with each completion consisting of multiple connections. </text:p></text:note-body></text:note> generally consist of the well summary mnemonic name suffixed with the letter &quot;L&quot;, for example WOPRL, for the completion oil production rate.</text:p>
        <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the completion number, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
-       <text:p text:style-name="P303">A blank list for the completions results in all completions for a well being written out, <text:s/>and a blank list for the well will result in all well completions being written to the SUMMARY file.</text:p>
+       <text:p text:style-name="P303">A blank list for the completions results in all completions for a well being written out, <text:s/>and a blank list for the well will result in all well completions being written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
        <text:p text:style-name="P242">Care should be exercised when defaulting the list of wells and completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10913,7 +10913,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P289">Connection variables are followed by a list of well names in quotes and connection I, J, K indices, each terminated by a “/”. In addition the list is terminated by a terminating <text:s/>“/”.</text:p>
-       <text:p text:style-name="P303">A blank list for the connections results in all connections for a well being written out. <text:s/>And a blank list for the well will result in all well connections being written to the SUMMARY file.</text:p>
+       <text:p text:style-name="P303">A blank list for the connections results in all connections for a well being written out. <text:s/>And a blank list for the well will result in all well connections being written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
        <text:p text:style-name="P242">Again, care should be exercised when defaulting the list of wells and connections as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10940,7 +10940,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P305">This type of data is the same as for the Well Completion data, except that the Well Connection series of mnemonics are used instead of the well mnemonics.</text:p>
        <text:p text:style-name="P305">Here the completion vectors consist of the connection mnemonic name suffixed with the letter &quot;L&quot;, for example COPRL, for the completion oil production rate. </text:p>
-       <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the connection I, J, K indices, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the COMPLUMP keyword in the SCHEDULE section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
+       <text:p text:style-name="P303">The completion mnemonic is then followed by a list of well names enclosed in quotes and the connection I, J, K indices, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”. <text:s/>If any connection has been defined as being within a completion via the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, <text:s/>then the completion data is written out instead of the connection data.</text:p>
        <text:p text:style-name="P307">A blank list for the completions results in all completions for a well being written out. <text:s/>However, the well name cannot be defaulted, unlike the other well and connection <text:s/>mnemonics.</text:p>
        <text:p text:style-name="P242">Care should be exercised when defaulting the list of completions as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
@@ -10966,7 +10966,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.A2" office:value-type="string">
        <text:p text:style-name="P300">Well variables for multi-segment well segments can be followed by a list of well names enclosed in quotes and the segment number, each terminated by a “/”. In addition, the list is terminated by a terminating <text:s/>“/”.</text:p>
-       <text:p text:style-name="P236">A blank list for the segments results in all segments for a well being written out. <text:s/>And a blank list for the well will result in all well segments being written to the SUMMARY file.</text:p>
+       <text:p text:style-name="P236">A blank list for the segments results in all segments for a well being written out. <text:s/>And a blank list for the well will result in all well segments being written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
        <text:p text:style-name="P239">Care should be exercised when defaulting the list of wells and segments as there is the potential to generate large volumes of data.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1793.C2" office:value-type="string">
@@ -10988,7 +10988,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P374"/>
     <text:p text:style-name="_40_TextBody"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311672_2754225602"/>Aquifer Variables<text:bookmark-end text:name="__RefHeading___Toc311672_2754225602"/></text:h>
-    <text:p text:style-name="P376"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable4">Table 11.2.5</text:sequence-ref><text:s/>outlines the aquifer summary variables based on the type of aquifer: analytical, analytical list and numerical. Note that the analytical list aquifer type is just an analytical aquifer “set” defined using the <text:a xlink:href="#__RefHeading___Toc412035_3174375363">AQUALIST</text:a> keyword in the SOLUTION section, that assigns an analytic aquifer list name to a set of aquifer numbers for greater readability in the output. <text:s/>This type of aquifer is not supported by OPM Flow and neither are numerical aquifers.</text:p>
+    <text:p text:style-name="P376"><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable4">Table 11.2.5</text:sequence-ref><text:s/>outlines the aquifer summary variables based on the type of aquifer: analytical, analytical list and numerical. Note that the analytical list aquifer type is just an analytical aquifer “set” defined using the <text:a xlink:href="#__RefHeading___Toc412035_3174375363">AQUALIST</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section, that assigns an analytic aquifer list name to a set of aquifer numbers for greater readability in the output. <text:s/>This type of aquifer is not supported by OPM Flow and neither are numerical aquifers.</text:p>
     <text:p text:style-name="P376"/>
     <table:table table:name="Table1796" table:style-name="Table1796">
      <table:table-column table:style-name="Table1796.A"/>
@@ -11220,7 +11220,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable4" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.5</text:sequence>: Aquifer Summary Variables</text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:h text:style-name="P397" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716495_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716495_3964674244"/></text:h>
-    <text:p text:style-name="P384">The following example requests the field and analytical aquifer pressure, rate and cumulative water influxes for all analytical aquifers to be written to the SUMMARY file.</text:p>
+    <text:p text:style-name="P384">The following example requests the field and analytical aquifer pressure, rate and cumulative water influxes for all analytical aquifers to be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
     <text:p text:style-name="P384"/>
     <text:p text:style-name="P388">-- ==============================================================================</text:p>
     <text:p text:style-name="P388">-- </text:p>
@@ -15521,7 +15521,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P151"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
-       <text:p text:style-name="P151">CPR</text:p>
+       <text:p text:style-name="P151"><text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1792.A3" office:value-type="string">
        <text:p text:style-name="P151">CPRL</text:p>
@@ -16257,7 +16257,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P375"/>
     <text:p text:style-name="P375"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc309859_611395817"/>Field, Group and Well Control Mode Variables<text:bookmark-end text:name="__RefHeading___Toc309859_611395817"/></text:h>
-    <text:p text:style-name="P385">In addition to the production, injection, pressure, and productivity summary variables, there are also summary variables that output the control mode at which the field, groups and wells are being controlled. <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable6">Table 11.2.7</text:sequence-ref><text:s/>summarizes the mnemonics for the field and groups together with a description and the values written out to the SUMMARY file.</text:p>
+    <text:p text:style-name="P385">In addition to the production, injection, pressure, and productivity summary variables, there are also summary variables that output the control mode at which the field, groups and wells are being controlled. <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable6">Table 11.2.7</text:sequence-ref><text:s/>summarizes the mnemonics for the field and groups together with a description and the values written out to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file.</text:p>
     <text:p text:style-name="P375"/>
     <table:table table:name="Table1794" table:style-name="Table1794">
      <table:table-column table:style-name="Table1794.A"/>
@@ -16656,7 +16656,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P416">For both production and injection groups the mode of control set to negative if the rate was set by a higher group.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P439">Note that the output to the SUMMARY file is the numeric values, whereas for the RSM file it is the mnemonics, that is: <text:span text:style-name="T101">ORAT,</text:span> <text:span text:style-name="T101">WRAT</text:span>, <text:s/>etc.</text:p>
+         <text:p text:style-name="P439">Note that the output to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file is the numeric values, whereas for the RSM file it is the mnemonics, that is: <text:span text:style-name="T101">ORAT,</text:span> <text:span text:style-name="T101">WRAT</text:span>, <text:s/>etc.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P420">See <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable7">Table 11.2.8</text:sequence-ref><text:s/>for an explanation of the mnemonics used in <text:s/><text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable6">Table 11.2.7</text:sequence-ref>.</text:p>
@@ -17088,7 +17088,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P461">Cells colored orange show combinations that are not available in OPM Flow because the underlying feature is not available.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P440">Note that the output to the SUMMARY file is the numeric values, whereas for the RSM file it is the mnemonics, that is: PROD, INJ, <text:s/>etc.</text:p>
+         <text:p text:style-name="P440">Note that the output to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file is the numeric values, whereas for the RSM file it is the mnemonics, that is: PROD, INJ, <text:s/>etc.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -17313,7 +17313,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Flow-Reg</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
-       <text:p text:style-name="P82">Gas Flow Total Inter-Region (+VE Liquid and Gas Phases)</text:p>
+       <text:p text:style-name="P82">Gas Flow Total Inter-Region (+<text:span text:style-name="NotKeyword">VE</text:span> Liquid and Gas Phases)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
        <text:p text:style-name="P82">GFT+</text:p>
@@ -17336,7 +17336,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Flow-Reg</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
-       <text:p text:style-name="P82">Gas Flow Total Inter-Region (-VE Liquid and Gas Phases)</text:p>
+       <text:p text:style-name="P82">Gas Flow Total Inter-Region (-<text:span text:style-name="NotKeyword">VE</text:span> Liquid and Gas Phases)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
        <text:p text:style-name="P82">GFT-</text:p>
@@ -17860,7 +17860,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Flow-Reg</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
-       <text:p text:style-name="P82">Oil Flow Total Inter-Region (+VE Liquid and Gas Phases)</text:p>
+       <text:p text:style-name="P82">Oil Flow Total Inter-Region (+<text:span text:style-name="NotKeyword">VE</text:span> Liquid and Gas Phases)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
        <text:p text:style-name="P82">OFT+</text:p>
@@ -17883,7 +17883,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Flow-Reg</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
-       <text:p text:style-name="P82">Oil Flow Total Inter-Region (-VE Liquid and Gas Phases)</text:p>
+       <text:p text:style-name="P82">Oil Flow Total Inter-Region (-<text:span text:style-name="NotKeyword">VE</text:span> Liquid and Gas Phases)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A2" office:value-type="string">
        <text:p text:style-name="P82">OFT-</text:p>
@@ -18741,7 +18741,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Bubble Point Pressure</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">PBUB</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc135619_1317547213">PBUB</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.D3" office:value-type="string">
        <text:p text:style-name="P81"/>
@@ -18810,7 +18810,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Dew Point</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">PDEW</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc135623_1317547213">PDEW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.D3" office:value-type="string">
        <text:p text:style-name="P81"/>
@@ -19431,7 +19431,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Relative Permeability (Gas)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">KRG</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc97393_621662414">KRG</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.D3" office:value-type="string">
        <text:p text:style-name="P81"/>
@@ -19754,7 +19754,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Relative Permeability (Oil)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">KRO</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc97395_621662414">KRO</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.D3" office:value-type="string">
        <text:p text:style-name="P81"/>
@@ -20007,7 +20007,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Relative Permeability (Water)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">KRW</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc97397_621662414">KRW</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.D3" office:value-type="string">
        <text:p text:style-name="P81"/>
@@ -20168,7 +20168,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Gas-Oil Ratio</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">RS</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
        <text:p text:style-name="P82">FRS</text:p>
@@ -20191,7 +20191,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Oil-Gas Ratio</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">RV</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
        <text:p text:style-name="P82">FRV</text:p>
@@ -20603,7 +20603,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Volumes</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
-       <text:p text:style-name="P82">Rock Compaction (Dual Porosity SIGMA Multiplier)</text:p>
+       <text:p text:style-name="P82">Rock Compaction (Dual Porosity <text:a xlink:href="#__RefHeading___Toc695245_516898843">SIGMA</text:a> Multiplier)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1797.A1" office:value-type="string">
        <text:p text:style-name="P82">SIGMMOD</text:p>
@@ -21753,7 +21753,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P351">This feature has not been implemented in OPM Flow.</text:p>
     <text:p text:style-name="P331"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311676_2754225602"/>Option Specific Variables – API and Tracer Tracking<text:bookmark-end text:name="__RefHeading___Toc311676_2754225602"/></text:h>
-    <text:p text:style-name="P378">The summary variables in this section are for use for when either the API tracking model has been activated by the API keyword in the RUNSPEC section so that the various “oil types” are tracked in the model, or for when the Tracer Model has been requested via the TRACERS keyword in the RUNSPEC section, that defines the number of tracers in the model and the various passive tracer tracking options. <text:s/>Currently, only the Tracer model is implemented in OPM Flow.</text:p>
+    <text:p text:style-name="P378">The summary variables in this section are for use for when either the <text:span text:style-name="NotKeyword">API</text:span> tracking model has been activated by the <text:a xlink:href="#__RefHeading___Toc4422_421927891">API</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section so that the various “oil types” are tracked in the model, or for when the Tracer Model has been requested via the <text:a xlink:href="#__RefHeading___Toc76509_327352552">TRACERS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, that defines the number of tracers in the model and the various passive tracer tracking options. <text:s/>Currently, only the Tracer model is implemented in OPM Flow.</text:p>
     <text:p text:style-name="P378"/>
     <table:table table:name="Table1805" table:style-name="Table1805">
      <table:table-column table:style-name="Table1805.A"/>
@@ -21768,7 +21768,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table1805.1">
        <table:table-cell table:style-name="Table1805.A1" table:number-columns-spanned="9" office:value-type="string">
-        <text:p text:style-name="P103">API and Tracer Tracking Summary Variables</text:p>
+        <text:p text:style-name="P103"><text:span text:style-name="NotKeyword">API</text:span> and Tracer Tracking Summary Variables</text:p>
         <text:p text:style-name="P103"/>
        </table:table-cell>
        <table:covered-table-cell/>
@@ -21815,10 +21815,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Flow</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1805.B3" office:value-type="string">
-       <text:p text:style-name="P82">Oil API</text:p>
+       <text:p text:style-name="P82">Oil <text:span text:style-name="NotKeyword">API</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1805.A3" office:value-type="string">
-       <text:p text:style-name="P82">API</text:p>
+       <text:p text:style-name="P82"><text:span text:style-name="NotKeyword">API</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1805.D3" office:value-type="string">
        <text:p text:style-name="P82">FAPI</text:p>
@@ -21827,7 +21827,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">GAPI</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1805.D3" office:value-type="string">
-       <text:p text:style-name="P82">WAPI</text:p>
+       <text:p text:style-name="P82"><text:a xlink:href="#__RefHeading___Toc412204_2026549522">WAPI</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1805.D3" office:value-type="string">
        <text:p text:style-name="P82">CAPI</text:p>
@@ -22681,7 +22681,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P336">Note that for the tracer summary variables the mnemonic should be concatenated with the tracer name as defined by the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This keyword defines a series of passive tracers that are associated with a phase (oil, water, or gas) in the model, see the example for reference. </text:p>
     <text:p text:style-name="Text_20_body"/>
     <text:h text:style-name="P397" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716497_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716497_3964674244"/></text:h>
-    <text:p text:style-name="P335">In the PROPS section the TRACER keyword defines four passive tracers one for a gas injection well, one for tracking the dissolved gas, and two to track the injected water from two water injection wells.</text:p>
+    <text:p text:style-name="P335">In the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section the <text:a xlink:href="#__RefHeading___Toc121485_83452205">TRACER</text:a> keyword defines four passive tracers one for a gas injection well, one for tracking the dissolved gas, and two to track the injected water from two water injection wells.</text:p>
     <text:p text:style-name="P39">-- ==============================================================================</text:p>
     <text:p text:style-name="P39">-- </text:p>
     <text:p text:style-name="P39">-- PROPS SECTION </text:p>
@@ -22701,7 +22701,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P34"><text:s text:c="8"/>&apos;Iw2&apos; <text:s text:c="4"/>&apos;WAT&apos; <text:s text:c="35"/>/ WAT INJECTOR 2</text:p>
     <text:p text:style-name="P42">/ <text:s text:c="80"/></text:p>
     <text:p text:style-name="P35"><text:s text:c="77"/></text:p>
-    <text:p text:style-name="P49">If we wish to report the field total amount of the tracers in-place we would use the following in the SUMMARY section:</text:p>
+    <text:p text:style-name="P49">If we wish to report the field total amount of the tracers in-place we would use the following in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section:</text:p>
     <text:p text:style-name="P48"/>
     <text:p text:style-name="P39">-- ==============================================================================</text:p>
     <text:p text:style-name="P39">-- </text:p>
@@ -23617,7 +23617,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table20.H"/>
      <table:table-row table:style-name="Table20.1">
       <table:table-cell table:style-name="Table20.A3" table:number-columns-spanned="8" office:value-type="string">
-       <text:p text:style-name="P106">CO2STORE/H2STORE Field, Group and Well Summary Variables</text:p>
+       <text:p text:style-name="P106"><text:span text:style-name="NotKeyword">CO2STORE</text:span>/<text:span text:style-name="NotKeyword">H2STORE</text:span> Field, Group and Well Summary Variables</text:p>
        <text:p text:style-name="P106"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -23795,7 +23795,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table21.F"/>
      <table:table-row table:style-name="Table21.1">
       <table:table-cell table:style-name="Table21.A3" table:number-columns-spanned="6" office:value-type="string">
-       <text:p text:style-name="P106">CO2STORE/H2STORE Field, Region, and Block Summary Variables</text:p>
+       <text:p text:style-name="P106"><text:span text:style-name="NotKeyword">CO2STORE</text:span>/<text:span text:style-name="NotKeyword">H2STORE</text:span> Field, Region, and Block Summary Variables</text:p>
        <text:p text:style-name="P106"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -23889,7 +23889,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Mass</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table21.A3" office:value-type="string">
-       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span>/H<text:span text:style-name="T106">2</text:span> Effectively Residual Trapped ('Stranded') in the gas phase</text:p>
+       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span>/H<text:span text:style-name="T106">2</text:span> Effectively Residual Trapped (&apos;Stranded&apos;) in the gas phase</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table21.A3" office:value-type="string">
        <text:p text:style-name="P82">GMST</text:p>
@@ -23909,7 +23909,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P82">Mass</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table21.A3" office:value-type="string">
-       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span>/H<text:span text:style-name="T106">2</text:span> Effectively Residual Untrapped ('Unstranded') in the gas phase</text:p>
+       <text:p text:style-name="P82">CO<text:span text:style-name="T106">2</text:span>/H<text:span text:style-name="T106">2</text:span> Effectively Residual Untrapped (&apos;Unstranded&apos;) in the gas phase</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table21.A3" office:value-type="string">
        <text:p text:style-name="P82">GMUS</text:p>
@@ -24526,7 +24526,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P421">Note that these are OPM Flow specific variables. </text:p>
     <text:p text:style-name="P421"/>
     <text:h text:style-name="P342" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311688_2754225602"/>Option Specific Variables – Foam Model Tracers<text:bookmark-end text:name="__RefHeading___Toc311688_2754225602"/></text:h>
-    <text:p text:style-name="P338">The Foam phase and model are activated via the <text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note in the commercial simulator the FOAM phase and model can be used in conjunction with the POLYMER and SURFACT phases; this is not the case for OPM Flow. <text:s/>OPM Flow’s FOAM phase and model is a standalone implementation and cannot be used in conjunction with the either the POLYMER or SURFACT phases.</text:p>
+    <text:p text:style-name="P338">The Foam phase and model are activated via the <text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. Note in the commercial simulator the <text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a> phase and model can be used in conjunction with the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> and <text:a xlink:href="#__RefHeading___Toc863854_4250154414">SURFACT</text:a> phases; this is not the case for OPM Flow. <text:s/>OPM Flow’s <text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a> phase and model is a standalone implementation and cannot be used in conjunction with the either the <text:a xlink:href="#__RefHeading___Toc38609_2267116897">POLYMER</text:a> or <text:a xlink:href="#__RefHeading___Toc863854_4250154414">SURFACT</text:a> phases.</text:p>
     <table:table table:name="Table1807" table:style-name="Table1807">
      <table:table-column table:style-name="Table1807.A"/>
      <table:table-column table:style-name="Table1807.B"/>
@@ -25002,7 +25002,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:h text:style-name="P345" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311690_2754225602"/>Option Specific Variables – Gas Field Operations Model<text:bookmark-end text:name="__RefHeading___Toc311690_2754225602"/></text:h>
     <text:p text:style-name="P343">The Gas Field Operations model has not been implemented in OPM Flow.</text:p>
     <text:h text:style-name="P345" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311692_2754225602"/>Option Specific Variables – Gas Lift Optimization Model<text:bookmark-end text:name="__RefHeading___Toc311692_2754225602"/></text:h>
-    <text:p text:style-name="P343">For the Gas Lift Optimization model only a few SUMMARY vectors are available, both in OPM Flow and the commercial simulator, as depicted in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable14">Table 11.2.16</text:sequence-ref>. Gas lift optimization is activated by the LIFTOPT keyword in the SCHEDULE section as gas lift activation can vary through time depending on the flow characteristics of the wells.</text:p>
+    <text:p text:style-name="P343">For the Gas Lift Optimization model only a few <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vectors are available, both in OPM Flow and the commercial simulator, as depicted in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable14">Table 11.2.16</text:sequence-ref>. Gas lift optimization is activated by the <text:a xlink:href="#__RefHeading___Toc118992_332691817">LIFTOPT</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section as gas lift activation can vary through time depending on the flow characteristics of the wells.</text:p>
     <table:table table:name="Table1910" table:style-name="Table1910">
      <table:table-column table:style-name="Table1910.A"/>
      <table:table-column table:style-name="Table1910.B"/>
@@ -25443,7 +25443,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P393"/>
-    <text:p text:style-name="P361">Note that if gas lift optimization has been activated in the model then the gas production SUMMARY variables (FGPR, GGPR, WGPR, FGPT, etc.) only contain the produced gas volumes, that is the reported values exclude the gas associated with gas lift gas. </text:p>
+    <text:p text:style-name="P361">Note that if gas lift optimization has been activated in the model then the gas production <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> variables (FGPR, GGPR, WGPR, FGPT, etc.) only contain the produced gas volumes, that is the reported values exclude the gas associated with gas lift gas. </text:p>
     <text:p text:style-name="P368">Secondly, the well gas lift rates are adjusted by the well efficiencies in the calculating the group and field gas lift rates. <text:s text:c="2"/></text:p>
     <text:h text:style-name="P345" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311694_2754225602"/>Option Specific Variables – Gas Calorific Value Reporting<text:bookmark-end text:name="__RefHeading___Toc311694_2754225602"/></text:h>
     <text:p text:style-name="P343">This feature has not been implemented in OPM Flow.</text:p>
@@ -25468,7 +25468,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table1812.J"/>
      <table:table-row table:style-name="Table1812.1">
       <table:table-cell table:style-name="Table1810.A1" table:number-columns-spanned="10" office:value-type="string">
-       <text:p text:style-name="P115">Biofilm and MICP Model Summary Variables</text:p>
+       <text:p text:style-name="P115">Biofilm and <text:span text:style-name="NotKeyword">MICP</text:span> Model Summary Variables</text:p>
        <text:p text:style-name="P115"/>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -26682,16 +26682,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P184">Property</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.B36" office:value-type="string">
-       <text:p text:style-name="P184">API</text:p>
+       <text:p text:style-name="P184"><text:span text:style-name="NotKeyword">API</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.C36" office:value-type="string">
-       <text:p text:style-name="P184">API </text:p>
+       <text:p text:style-name="P184"><text:span text:style-name="NotKeyword">API</text:span> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.D12" office:value-type="string">
        <text:p text:style-name="P184">SAPI </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1808.D12" office:value-type="string">
-       <text:p text:style-name="P185">API model.</text:p>
+       <text:p text:style-name="P185"><text:a xlink:href="#__RefHeading___Toc4422_421927891">API</text:a> model.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1808.1">
@@ -27171,7 +27171,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"/>
     <text:p text:style-name="_40_TextBody">Care should be exercised when defaulting the list of wells and segments as there is the potential to generate large volumes of data.</text:p>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311702_2754225602"/>Option Specific Variables – Network Model<text:bookmark-end text:name="__RefHeading___Toc311702_2754225602"/></text:h>
-    <text:p text:style-name="P366">For the Network models only a few SUMMARY vectors for groups and nodes are available, both in OPM Flow and the commercial simulator, as depicted in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable16">Table 11.2.18</text:sequence-ref>. <text:s/>There are two types of network option in the simulator: a Standard Network and an Extended Network option, the latter is activated by the NETWORK keyword in the RUNSPEC section. The summary vectors apply to both the Standard and Extended Network options.</text:p>
+    <text:p text:style-name="P366">For the Network models only a few <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> vectors for groups and nodes are available, both in OPM Flow and the commercial simulator, as depicted in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable16">Table 11.2.18</text:sequence-ref>. <text:s/>There are two types of network option in the simulator: a Standard Network and an Extended Network option, the latter is activated by the <text:a xlink:href="#__RefHeading___Toc311583_1841740821">NETWORK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The summary vectors apply to both the Standard and Extended Network options.</text:p>
     <table:table table:name="Table1918" table:style-name="Table1918">
      <table:table-column table:style-name="Table1918.A"/>
      <table:table-column table:style-name="Table1918.B"/>
@@ -27185,7 +27185,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table1918.1">
        <table:table-cell table:style-name="Table1918.A1" table:number-columns-spanned="9" office:value-type="string">
-        <text:p text:style-name="P60">Network Model Summary Variables</text:p>
+        <text:p text:style-name="Table_20_Heading">Network Model Summary Variables</text:p>
         <text:p text:style-name="P114"/>
        </table:table-cell>
        <table:covered-table-cell/>
@@ -27691,7 +27691,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P367">Table <text:sequence text:ref-name="refTable16" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.18</text:sequence>: Network Model Summary Variables</text:p>
     <text:p text:style-name="P362">Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311704_2754225602"/>Option Specific Variables – OPM Flow Simulation Performance<text:bookmark-end text:name="__RefHeading___Toc311704_2754225602"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following table (<text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable17">Table 11.2.19</text:sequence-ref>) <text:s/>lists the OPM Flow simulation performance summary variables that can be written to the SUMMARY file. Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
+    <text:p text:style-name="_40_TextBody">The following table (<text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable17">Table 11.2.19</text:sequence-ref>) <text:s/>lists the OPM Flow simulation performance summary variables that can be written to the <text:span text:style-name="NotKeyword">SUMMARY</text:span> file. Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <table:table table:name="Table1868" table:style-name="Table1868">
      <table:table-column table:style-name="Table1868.A"/>
      <table:table-column table:style-name="Table1868.B"/>
@@ -27733,7 +27733,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">DTMWAIT </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27759,7 +27759,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">HLINEARS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P128"></text:p>
+       <text:p text:style-name="P128"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27772,7 +27772,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">HSUMLINS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27811,7 +27811,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MAXDPR </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27824,7 +27824,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MAXDSG </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27837,7 +27837,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MAXDSO </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27850,7 +27850,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MAXDSW </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27876,12 +27876,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MEMORYTS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
       <table:table-cell table:style-name="Table1868.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P67">CPR Solver - Number of pressure iterations for each time step. </text:p>
+       <text:p text:style-name="P67"><text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> Solver - Number of pressure iterations for each time step. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -27889,7 +27889,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MLINEARP </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27915,7 +27915,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMBUG </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27928,7 +27928,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMCOMM </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27941,12 +27941,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMERR </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
       <table:table-cell table:style-name="Table1868.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P67">CPR Solver - Cumulative number of pressure iterations. </text:p>
+       <text:p text:style-name="P67"><text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> Solver - Cumulative number of pressure iterations. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -27954,7 +27954,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMLINP </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2O" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -27972,7 +27972,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
       <table:table-cell table:style-name="Table1868.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P67">Messages - Cumulative number of MESSAGES messages. </text:p>
+       <text:p text:style-name="P67">Messages - Cumulative number of <text:a xlink:href="#__RefHeading___Toc61634_2479612490">MESSAGES</text:a> messages. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -27980,7 +27980,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMMESS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -28006,7 +28006,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMPROB </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -28019,7 +28019,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">MSUMWARN </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -28045,13 +28045,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">NBYTOT </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
      <table:table-row table:style-name="Table1868.3">
       <table:table-cell table:style-name="Table1868.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P67">CPR Solver - Average number of pressure iterations per linear iteration for each time step. </text:p>
+       <text:p text:style-name="P67"><text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> Solver - Average number of pressure iterations per linear iteration for each time step. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -28059,7 +28059,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">NCPRLINS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -28082,7 +28082,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1868.D4" office:value-type="string">
-       <text:p text:style-name="P77">NEWTON </text:p>
+       <text:p text:style-name="P77"><text:span text:style-name="NotKeyword">NEWTON</text:span> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2" office:value-type="string">
        <text:p text:style-name="P70"/>
@@ -28090,7 +28090,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
       <table:table-cell table:style-name="Table1868.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P67">CPR Solver - Average number of pressure iterations per Newton iteration per time step. </text:p>
+       <text:p text:style-name="P67"><text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> Solver - Average number of pressure iterations per Newton iteration per time step. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -28098,7 +28098,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">NLINEARP </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2O" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -28111,7 +28111,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">NLINEARS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2" office:value-type="string">
-       <text:p text:style-name="P67">For runs with LGRs, LLINEARS will automatically be exported for each LGR.</text:p>
+       <text:p text:style-name="P67">For runs with LGRs, LLINEARS will automatically be exported for each <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>.</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.3">
@@ -28255,7 +28255,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2" table:number-rows-spanned="32" office:value-type="string">
        <text:p text:style-name="P259">No data written to file.</text:p>
-       <text:p text:style-name="P260">Note if the RUNSUM keyword has been activated in the SUMMARY section, then the mnemonics are written to the RSM file instead of integer values.</text:p>
+       <text:p text:style-name="P260">Note if the <text:a xlink:href="#__RefHeading___Toc210156_2884651453">RUNSUM</text:a> keyword has been activated in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, then the mnemonics are written to the RSM file instead of integer values.</text:p>
        <text:p text:style-name="P260"/>
        <text:p text:style-name="P257"/>
       </table:table-cell>
@@ -28278,7 +28278,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P261">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.A2" office:value-type="string">
-       <text:p text:style-name="P128">INIT </text:p>
+       <text:p text:style-name="P128"><text:a xlink:href="#__RefHeading___Toc45789_719036256">INIT</text:a> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.A2" office:value-type="string">
        <text:p text:style-name="P263">Initial time step.</text:p>
@@ -28411,7 +28411,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">PCHP </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.A2" office:value-type="string">
-       <text:p text:style-name="P263">Time step chopped due to maximum pressure change in IMPES formulation.</text:p>
+       <text:p text:style-name="P263">Time step chopped due to maximum pressure change in <text:a xlink:href="#__RefHeading___Toc53039_4106839650">IMPES</text:a> formulation.</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table1868.D4"/>
       <table:covered-table-cell table:style-name="Table1868.E2"/>
@@ -28437,7 +28437,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">LGRC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.A2" office:value-type="string">
-       <text:p text:style-name="P260">Determined by LGR fluid in-place error targets.</text:p>
+       <text:p text:style-name="P260">Determined by <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> fluid in-place error targets.</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table1868.D4"/>
       <table:covered-table-cell table:style-name="Table1868.E2"/>
@@ -28447,7 +28447,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P262">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.A2" office:value-type="string">
-       <text:p text:style-name="P128">SURF </text:p>
+       <text:p text:style-name="P128"><text:a xlink:href="#__RefHeading___Toc857268_4250154414">SURF</text:a> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.A2" office:value-type="string">
        <text:p text:style-name="P264">Set by maximum expected grid block surfactant concentration change.</text:p>
@@ -28700,7 +28700,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TCPUH </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28713,12 +28713,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TCPUHT </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
       <table:table-cell table:style-name="Table1868.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P67">CPU - Cumulative CPU time used in SCHEDULE section. </text:p>
+       <text:p text:style-name="P67">CPU - Cumulative CPU time used in <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -28726,7 +28726,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TCPUSCH </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28752,7 +28752,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TCPUTSH </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28765,7 +28765,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TCPUTSHT </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28830,7 +28830,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TELAPDAY </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28856,7 +28856,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">TELAPTS </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P67"></text:p>
+       <text:p text:style-name="P67"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28882,7 +28882,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">WNEWTON </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P69"></text:p>
+       <text:p text:style-name="P69"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28895,7 +28895,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">ZIPEFF </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P69"></text:p>
+       <text:p text:style-name="P69"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28908,7 +28908,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P77">ZIPEFFC </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1868.E2D" office:value-type="string">
-       <text:p text:style-name="P69"></text:p>
+       <text:p text:style-name="P69"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1868.75">
@@ -28934,7 +28934,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable17" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.19</text:sequence>: OPM Flow Simulator Performance Summary Variables</text:p>
     <text:p text:style-name="P319"/>
-    <text:p text:style-name="_40_TextBody">See also the PERFORMA and NMESSAGE keywords in section <text:a xlink:type="simple" xlink:href="#11.3.Keyword Definitions|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc37632_3701168388">Error: Reference source not found</text:bookmark-ref><text:s/><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc37632_3701168388">Error: Reference source not found</text:bookmark-ref></text:a><text:s/>that write out a selection of the variables in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable17">Table 11.2.19</text:sequence-ref>.</text:p>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc304796_3851943165">PERFORMA</text:a> and <text:a xlink:href="#__RefHeading___Toc350871_305403938">NMESSAGE</text:a> keywords in section <text:a xlink:type="simple" xlink:href="#11.3.Keyword Definitions|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc37632_3701168388">Error: Reference source not found</text:bookmark-ref><text:s/><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc37632_3701168388">Error: Reference source not found</text:bookmark-ref></text:a><text:s/>that write out a selection of the variables in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable17">Table 11.2.19</text:sequence-ref>.</text:p>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/></text:p>
     <text:p text:style-name="P363"/>
     <text:p text:style-name="P346"/>
@@ -29136,7 +29136,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P185">Polymer Production Rate </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1809.A2" office:value-type="string">
-       <text:p text:style-name="P185">CPR </text:p>
+       <text:p text:style-name="P185"><text:a xlink:href="#__RefHeading___Toc27871_3671211675">CPR</text:a> </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1809.D3" office:value-type="string">
        <text:p text:style-name="P185">FCPR </text:p>
@@ -29357,7 +29357,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P185">Property</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1809.B14" office:value-type="string">
-       <text:p text:style-name="P185">Polymer Adsorbed (PLYTRRFA)</text:p>
+       <text:p text:style-name="P185">Polymer Adsorbed (<text:a xlink:href="#__RefHeading___Toc258120_501926209">PLYTRRFA</text:a>)</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1809.C14" office:value-type="string">
        <text:p text:style-name="P185">CABnnn </text:p>
@@ -29605,7 +29605,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P185">BCDCR </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1809.J3" office:value-type="string">
-       <text:p text:style-name="P185"></text:p>
+       <text:p text:style-name="P185"/>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1809.22">
@@ -29734,7 +29734,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P185">BFLOW0I </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1809.J3" table:number-rows-spanned="16" office:value-type="string">
-       <text:p text:style-name="P185">Multiplied by the corresponding shear multiplier (PLYSHLOG and PLYSHEAR options only). </text:p>
+       <text:p text:style-name="P185">Multiplied by the corresponding shear multiplier (<text:a xlink:href="#__RefHeading___Toc110220_2939291539">PLYSHLOG</text:a> and <text:a xlink:href="#__RefHeading___Toc110218_2939291539">PLYSHEAR</text:a> options only). </text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1809.17">
@@ -30813,7 +30813,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P351"/>
     <text:p text:style-name="P329"/>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311716_2754225602"/>Option Specific Variables – Thermal Model<text:bookmark-end text:name="__RefHeading___Toc311716_2754225602"/></text:h>
-    <text:p text:style-name="P356">The temperature option (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section) and the thermal option (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options. <text:s/>OPM Flow’s thermal implementation is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil TEMP or compositional THERMAL formulations. The <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword is used to invoke OPM Flow’s thermal option. The summary variables for this option are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable20">Table 11.2.22</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P356">The temperature option (<text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section) and the thermal option (<text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section) are two separate modeling facilities in the commercial simulator, although some keywords can be used by both options. <text:s/>OPM Flow’s thermal implementation is based on solving the energy equation fully coupled with the black-oil equations so the results are not directly equivalent to the commercial simulator’s black-oil <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> or compositional <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> formulations. The <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword is used to invoke OPM Flow’s thermal option. The summary variables for this option are listed in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable20">Table 11.2.22</text:sequence-ref>.</text:p>
     <text:p text:style-name="P360">Note that not all these variables are available in OPM Flow; however, the simulator will issue warning messages if this is indeed the case. It is anticipated that the number of recognized summary variables will increase in future releases of OPM Flow.</text:p>
     <table:table table:name="Table1812" table:style-name="Table1812">
      <table:table-column table:style-name="Table1812.A"/>
@@ -31162,7 +31162,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="Text_20_body"/>
     <text:p text:style-name="P383">See the <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section for additional information on this feature.</text:p>
     <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311718_2754225602"/>Option Specific Variables – User Define Quantities<text:bookmark-end text:name="__RefHeading___Toc311718_2754225602"/></text:h>
-    <text:p text:style-name="P351">The <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section defines variables and operations used to access the User Defined Quantities features in OPM Flow. UDQ variables can be constants, summary variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and summary variables. <text:s/></text:p>
+    <text:p text:style-name="P351">The <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section defines variables and operations used to access the User Defined Quantities features in OPM Flow. <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> variables can be constants, summary variables, as defined in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section,<text:s/>or a formula using various mathematical functions together with constants and summary variables. <text:s/></text:p>
     <text:p text:style-name="P324">The variable names defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section consist of a character string of up to eight characters in length, which stipulates the name of the user defined variable based on the type of variable. The variable type is defined by the first two characters of the variable name and must be set to one of the following:</text:p>
     <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
      <text:list-item>
@@ -31198,7 +31198,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </text:list>
      </text:list-item>
     </text:list>
-    <text:p text:style-name="P383">The summary variable format for UDQ defined variables is presented in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable21">Table 11.2.23</text:sequence-ref>.</text:p>
+    <text:p text:style-name="P383">The summary variable format for <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> defined variables is presented in <text:sequence-ref text:reference-format="category-and-value" text:ref-name="refTable21">Table 11.2.23</text:sequence-ref>.</text:p>
     <text:p text:style-name="P352"/>
     <table:table table:name="Table1811" table:style-name="Table1811">
      <table:table-column table:style-name="Table1811.A"/>
@@ -31250,7 +31250,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table1811.3">
       <table:table-cell table:style-name="Table1811.A1" office:value-type="string">
-       <text:p text:style-name="P181">UDQ Variable</text:p>
+       <text:p text:style-name="P181"><text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> Variable</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1811.A1" office:value-type="string">
        <text:p text:style-name="P184">XXXXXX</text:p>
@@ -31279,7 +31279,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P210">Notes:</text:p>
        <text:list text:continue-numbering="true" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P401">Where FUXXXXXX, GUXXXXXX, and so forth are the variable names defined by the UDQ keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
+         <text:p text:style-name="P401">Where FUXXXXXX, GUXXXXXX, and so forth are the variable names defined by the <text:a xlink:href="#__RefHeading___Toc161095_2932703077">UDQ</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P402"><text:span text:style-name="T70">Output of aquifer (AU) and block (BU) summary variables is not supported.</text:span></text:p>
@@ -31300,7 +31300,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P382">The following example illustrates the use of this type of summary variable.</text:p>
     <text:p text:style-name="P382"/>
     <text:h text:style-name="P52" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716501_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716501_3964674244"/></text:h>
-    <text:p text:style-name="P355">The example shows how to define some constant field variables used for calculating facilities corrected condensate yields in a wet gas model in the SCHEDULE section. The corrected condensate rate is stored as variable named FU_FNGLR. </text:p>
+    <text:p text:style-name="P355">The example shows how to define some constant field variables used for calculating facilities corrected condensate yields in a wet gas model in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. The corrected condensate rate is stored as variable named FU_FNGLR. </text:p>
     <text:p text:style-name="P40">-- ==============================================================================</text:p>
     <text:p text:style-name="P40">-- </text:p>
     <text:p text:style-name="P40">-- SCHEDULE SECTION </text:p>
@@ -31324,7 +31324,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P43"/>
     <text:p text:style-name="P43">/ <text:s/>DEFINE END OF USER DEFINED QUANTITY SECTION</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P357">In order to report the field corrected condensate values, one would declare FU_FNGLR in the SUMMARY section, as shown below. </text:p>
+    <text:p text:style-name="P357">In order to report the field corrected condensate values, one would declare FU_FNGLR in the <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> section, as shown below. </text:p>
     <text:p text:style-name="P40">-- ==============================================================================</text:p>
     <text:p text:style-name="P40">-- </text:p>
     <text:p text:style-name="P40">-- SUMMARY SECTION </text:p>
@@ -31349,7 +31349,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P45">GPO2</text:p>
     <text:p text:style-name="P45">/</text:p>
     <text:p text:style-name="P37"/>
-    <text:p text:style-name="_40_TextBody">Assuming of course that WU_FNGLR was defined in the SCHEDULE section.</text:p>
+    <text:p text:style-name="_40_TextBody">Assuming of course that WU_FNGLR was defined in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section.</text:p>
     <text:h text:style-name="P354" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311720_2754225602"/>Option Specific Variables – Wellbore Friction model<text:bookmark-end text:name="__RefHeading___Toc311720_2754225602"/></text:h>
     <text:p text:style-name="P351">This feature has not been implemented in OPM Flow.</text:p>
     <text:p text:style-name="P331"/>
