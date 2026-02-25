@@ -974,6 +974,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="Citation" style:family="text">
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
@@ -2500,7 +2503,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:table-cell-properties>
   </style:style>
   <style:style style:name="Table211.H1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -4317,8 +4320,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838816"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838816"/></text:h>
-    <text:p text:style-name="_40_TextBody">Defines the parameters used for controlling the commercial simulator’s numerical convergence parameters. The keyword is similar to the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, but the defaults on this keyword are optimized for high throughput runs. See section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a><text:s/>on how to invoke various numerical schemes via the OPM Flow command line interface.</text:p>
-    <text:p text:style-name="P11987">This keyword is not supported by OPM Flow but has no effect on the results so it will be ignored.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc50286_327352552">TUNINGDP</text:a> keyword defines the parameters used for controlling the commercial simulator’s numerical convergence parameters. This keyword is similar to the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, but the defaults on this keyword are optimized for high throughput runs.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is generally ignored by OPM Flow; however, the simulator can be instructed to read some parameters from the <text:a xlink:href="#__RefHeading___Toc50286_327352552">TUNINGDP</text:a> keyword if the appropriate command line option has been activated (see section <text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="number-all-superior" text:ref-name="__RefHeading___Toc144424_3025544877">2.2</text:bookmark-ref></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:s/></text:a><text:a xlink:type="simple" xlink:href="#2.2.Running OPM Flow 2018-10 |outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:bookmark-ref text:reference-format="text" text:ref-name="__RefHeading___Toc144424_3025544877">Running OPM Flow 2023-04 From The Command Line</text:bookmark-ref></text:a>).</text:p>
     <table:table table:name="Table1655" table:style-name="Table1655">
      <table:table-column table:style-name="Table1655.A"/>
      <table:table-column table:style-name="Table1655.B"/>
@@ -4366,12 +4369,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7793">TRGLCV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1655.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">TRGLCV is <text:span text:style-name="T1">a real positive value that specifies the linear convergence error target. </text:span>The default value is ten times greater than the default value on the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword.</text:p>
+       <text:p text:style-name="Table_20_Contents">TRGLCV is <text:span text:style-name="T1">a positive real value that specifies the linear convergence error target. </text:span>The default value is ten times greater than the default value on the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1655.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8131">0.0001</text:p>
+       <text:p text:style-name="P8131">0.00001</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1655.1">
@@ -4396,12 +4399,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7793">XXXLCV</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1655.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">XXXLCV is a real positive values that sets the maximum linear <text:span text:style-name="T1">convergence</text:span> error. The default value is ten times greater than the default value on the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword.</text:p>
+       <text:p text:style-name="Table_20_Contents">XXXLCV is a positive real values that sets the maximum linear <text:span text:style-name="T1">convergence</text:span> error. The default value is ten times greater than the default value on the <text:a xlink:href="#__RefHeading___Toc146744_4203985108">TUNING</text:a> keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1655.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8131">0.001</text:p>
+       <text:p text:style-name="P8131">0.0001</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1655.1">
@@ -4419,14 +4422,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table1655.1">
-      <table:table-cell table:style-name="Table1655.A3" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table1655.A1" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P8120">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1655.B8" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P136">TRGDDP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1655.C7" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">TRGDDP a real positive value that stipulates the maximum pressure change during a <text:span text:style-name="T1">Newton</text:span> iteration that enables the solution to be accepted when the residual pressure is still outside its convergence criteria.</text:p>
+       <text:p text:style-name="Table_20_Contents">TRGDDP a positive real value that stipulates the maximum pressure change during a <text:span text:style-name="T1">Newton</text:span> iteration that enables the solution to be accepted when the residual pressure is still outside its convergence criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4449,19 +4452,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table1655.1">
-      <table:table-cell table:style-name="Table1655.A3" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table1655.A1" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P8572">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1655.B10" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P125">TRGDDS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1655.C9" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="Table_20_Contents">TRGDDS a real positive value that sets the maximum saturation change during a Newton iteration that enables the solution to be accepted when the residual saturation is still outside its convergence criteria.</text:p>
+       <text:p text:style-name="Table_20_Contents">TRGDDS a positive real value that sets the maximum saturation change during a Newton iteration that enables the solution to be accepted when the residual saturation is still outside its convergence criteria.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1655.F7" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P9076">0.001</text:p>
+       <text:p text:style-name="P9076">0.01</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1655.1">
@@ -4479,11 +4482,73 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table1655.1">
+      <table:table-cell table:style-name="Table1655.A1" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="P8572">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.B10" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="P125">TRGDDRS</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.C9" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents">TRGDDRS a positive real value that sets the maximum gas dissolution factor change during a Newton iteration that enables the solution to be accepted when the residual gas dissolution factor is still outside its convergence criteria.</text:p>
+       <text:p text:style-name="Table_20_Contents">This is an OPM Flow specific item that is not supported by the commercial simulator.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table1655.F7" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="P9076">0.0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1655.1">
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table1655.D10" office:value-type="string">
+       <text:p text:style-name="P4452">Mscf/stb</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.D10" office:value-type="string">
+       <text:p text:style-name="P4452">sm<text:span text:style-name="Super">3</text:span>/sm<text:span text:style-name="Super">3</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.E10" office:value-type="string">
+       <text:p text:style-name="P4452">scc/scc</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+     </table:table-row>
+     <table:table-row table:style-name="Table1655.1">
+      <table:table-cell table:style-name="Table1655.A1" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="P8572">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.B10" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="P125">TRGDDRV</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.C9" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents">TRGDDRV a positive real value that sets the maximum oil dissolution factor change during a Newton iteration that enables the solution to be accepted when the residual oil dissolution factor change is still outside its convergence criteria.</text:p>
+       <text:p text:style-name="Table_20_Contents">This is an OPM Flow specific item that is not supported by the commercial simulator.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table1655.F7" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="P9076">0.0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table1655.1">
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table1655.D10" office:value-type="string">
+       <text:p text:style-name="P4452">stb/Mscf</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.D10" office:value-type="string">
+       <text:p text:style-name="P4452">sm<text:span text:style-name="Super">3</text:span>/sm<text:span text:style-name="Super">3</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table1655.E10" office:value-type="string">
+       <text:p text:style-name="P4452">scc/scc</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+     </table:table-row>
+     <table:table-row table:style-name="Table1655.1">
       <table:table-cell table:style-name="Table1655.A11" table:number-columns-spanned="6" office:value-type="string">
        <text:p text:style-name="P1711">Notes:</text:p>
        <text:list xml:id="list3800275818" text:style-name="L150">
         <text:list-item>
-         <text:p text:style-name="P19233">There is no keyword terminating <text:s/>“/”.</text:p>
+         <text:p text:style-name="P19233">The keyword is terminated by a<text:s/>“/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
