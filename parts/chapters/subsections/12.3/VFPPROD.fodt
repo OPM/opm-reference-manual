@@ -4980,10 +4980,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7388">A defined character string that defines the flowing phases, and should be set to one of the following character strings:</text:p>
        <text:list xml:id="list105922621787679" text:continue-list="list105921034894489" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19519"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: for flowing phase being the gas rate. </text:p>
+         <text:p text:style-name="P19519"><text:span text:style-name="NotKeyword">GAS</text:span>: for flowing phase being the gas rate. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19550"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: for flowing phase being the oil rate. </text:p>
+         <text:p text:style-name="P19550"><text:span text:style-name="NotKeyword">OIL</text:span>: for flowing phase being the oil rate. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19550">LIQ: for flowing phase being the liquid (oil plus water) rate. </text:p>
@@ -5350,7 +5350,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19551">IGLR: for the artificial lift quantity being the gas lift gas, injection gas-liquid ratio. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19521">TGLR: for the artificial lift quantity being the gas lift gas, injection total gas-liquid ratio. </text:p>
+         <text:p text:style-name="P19521">TGLR: for the artificial lift quantity being the gas lift gas, total gas-liquid ratio. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19521">COMP: for the artificial lift quantity being the compressor power, for a compressor.</text:p>
@@ -5359,7 +5359,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19521">PUMP: <text:s/>for the artificial lift quantity being the pump rating for a pump.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19651">D<text:span text:style-name="T1533">ENO: for oil surface density.</text:span></text:p>
+         <text:p text:style-name="P19651">DENO: for oil surface density.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P19707">DENG: for gas surface density.</text:p>
@@ -5368,11 +5368,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P19708">BEAN: for multi-segment wells choke parameter.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19710">“ ”: for undefined, that is for no ALQ data.</text:p>
+         <text:p text:style-name="P19710">' ': for undefined, that is for no ALQ data.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P9245">The ALQ parameter is just another variable used to interpolate the outflow pressure based on the inlet pressure, together with the phases flowing through the system. <text:s/>As such, <text:s/>ALQ can represent any parameter; however, the units should be consistent with that used to set the value. For example, <text:s/>if pump speed (Hz) is used to set a well<text:span text:style-name="T2110">’s artificial lift quantity via the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>(ALQ-WELL) parameter </text:span>in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section<text:span text:style-name="T2110">, then the ALQ-</text:span>DATA <text:span text:style-name="T2110">should represent pump speed in Hz.</text:span></text:p>
-       <text:p text:style-name="P9244">The default value of 1* is <text:s/>“ <text:span text:style-name="T2110">” </text:span>or undefined, that covers the case when the ALQ variable is not entered, except for when gas lift is employed in the model. <text:s/>When gas lift is active then the default value for ALQ is set to GRAT provided:</text:p>
+       <text:p text:style-name="Table_20_Contents">The DENO and DENG options are not supported by OPM Flow.</text:p>
+       <text:p text:style-name="Table_20_Contents">The ALQ parameter is just another variable used to interpolate the outflow pressure based on the inlet pressure, together with the phases flowing through the system. <text:s/>As such, <text:s/>ALQ can represent any parameter; however, the units should be consistent with that used to set the value. For example, <text:s/>if pump speed (Hz) is used to set a well<text:span text:style-name="T2110">’s artificial lift quantity via the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a>(ALQ-WELL) parameter </text:span>in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section<text:span text:style-name="T2110">, then the ALQ-</text:span>DATA <text:span text:style-name="T2110">should represent pump speed in Hz.</text:span></text:p>
+       <text:p text:style-name="P9244">The default value is<text:s/>' ' or undefined, that covers the case when the ALQ variable is not entered, except for when gas lift is employed in the model.<text:s/>When gas lift is active then the default value for ALQ is set to GRAT provided:</text:p>
        <text:list xml:id="list105921284824273" text:continue-list="list105922387804494" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="P19709">Gas lift optimization is active via the <text:a xlink:href="#__RefHeading___Toc118992_332691817">LIFTOPT</text:a> keyword, or </text:p>
@@ -5389,35 +5390,25 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table701.F3" office:value-type="string">
-       <text:p text:style-name="P7798">1*</text:p>
+       <text:p text:style-name="P7798">' '</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table701.1">
-      <table:table-cell table:style-name="Table701.A11" table:number-rows-spanned="2" office:value-type="string">
+      <table:table-cell table:style-name="Table701.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P7798">1-8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P8115">VFPUNITS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P8116">Units used for the VFP-DATA on this keyword. </text:p>
-       <text:p text:style-name="P8116">This variable is ignored by OPM Flow and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P8116">A defined character string that specifies the units system for the VFP table.</text:p>
+       <text:p text:style-name="P8116">An error message is output if this is not the same as the model units.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table701.F10" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8109"><office:annotation office:name="__Annotation__160575_1126630271" loext:resolved="false">
-         <dc:creator>Atgeirr Rasmussen</dc:creator>
-         <dc:date>2017-09-21T13:38:25</dc:date>
-         <meta:creator-initials>AFR</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8540">Meaningless default, see <text:a xlink:href="#__RefHeading___Toc121917_2556401936">VFPINJ</text:a></text:span></text:p>
-        </office:annotation>1*<office:annotation-end office:name="__Annotation__160575_1126630271"/><office:annotation>
-         <dc:creator>David Baxendale</dc:creator>
-         <dc:date>2017-10-03T10:17:56.850000000</dc:date>
-         <meta:creator-initials>DBx</meta:creator-initials>
-         <text:p text:style-name="P20244"><text:span text:style-name="T8541">Reply to Atgeirr Rasmussen (09/21/2017, 13:38): &quot;...&quot;</text:span></text:p>
-         <text:p><text:span text:style-name="T8542">It has to be 1* so the value is skipped.</text:span></text:p>
-        </office:annotation></text:p>
+       <text:p text:style-name="P8109">Model</text:p>
+       <text:p text:style-name="P8109">units</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table701.1">
@@ -5443,8 +5434,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8115">VFPVALUE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7355">A defined character string that defines the type of data in the VFP-DATA vector. This should be set equal to BHP. if the data contains the bottom-hole pressure data, or <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> if the data is the Tubing Head Temperature (THT) data.</text:p>
-       <text:p text:style-name="P8116">This variable is ignored by OPM Flow and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P7355">A defined character string that defines the type of data in the VFP-DATA vector. This should be set equal to BHP if the vector contains bottom-hole pressure data, or <text:span text:style-name="NotKeyword">TEMP</text:span> if the vector contains Tubing Head Temperature (THT) data.</text:p>
+       <text:p text:style-name="P8116">OPM Flow only supports the (default) BHP option.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5592,19 +5583,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P8162">WOR: dimensionless</text:p>
-       <text:p text:style-name="P8162">WCT: dimensionless</text:p>
+       <text:p text:style-name="P8162">WOR: stb/stb</text:p>
+       <text:p text:style-name="P8162">WCT: stb/stb</text:p>
        <text:p text:style-name="P8163">WGR: <text:span text:style-name="T1533">stb/Mscf</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9194">dimensionless</text:p>
+       <text:p text:style-name="P9193">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P9193">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P9194">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P8162">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
+       <text:p text:style-name="P8162">scc/scc</text:p>
+       <text:p text:style-name="P9193">scc/scc</text:p>
+       <text:p text:style-name="P9193">scc/scc</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -5656,14 +5647,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P8162">OGR: stb/Mscf</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9194">dimensionless</text:p>
+       <text:p text:style-name="P9193">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P9193">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P9194">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.C2" office:value-type="string">
-       <text:p text:style-name="P8162">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
+       <text:p text:style-name="P8162">scc/scc</text:p>
+       <text:p text:style-name="P9193">scc/scc</text:p>
+       <text:p text:style-name="P9193">scc/scc</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
@@ -5706,23 +5697,26 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-cell table:style-name="Table701.D27" office:value-type="string">
        <text:p text:style-name="P8162">GRAT: Mscf/d</text:p>
        <text:p text:style-name="P8162">IGLR: Mscf/stb</text:p>
-       <text:p text:style-name="P8162">TGLR: Mscf/d</text:p>
-       <text:p text:style-name="P8125"><text:span text:style-name="T1533">DENO: lb/ft</text:span><text:span text:style-name="T3853">3</text:span></text:p>
-       <text:p text:style-name="P9195">DENG: <text:s/>lb/ft</text:p>
+       <text:p text:style-name="P8162">TGLR: Mscf/stb</text:p>
+       <text:p text:style-name="P8162">DENO: lb/ft<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P8162">DENG: lb/ft<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P8162">BEAN: 1/64 inch</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.D27" office:value-type="string">
        <text:p text:style-name="P9195">sm<text:span text:style-name="T3853">3</text:span>/day</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9194">dimensionless</text:p>
+       <text:p text:style-name="P9193">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P9194">sm<text:span text:style-name="T3853">3</text:span>/sm<text:span text:style-name="T3853">3</text:span></text:p>
        <text:p text:style-name="P9195">kg/m<text:span text:style-name="T3853">3</text:span></text:p>
        <text:p text:style-name="P9195">kg/m<text:span text:style-name="T3853">3</text:span></text:p>
+       <text:p text:style-name="P9195">mm</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table701.E27" office:value-type="string">
        <text:p text:style-name="P8125">scc/hour</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
-       <text:p text:style-name="P9193">dimensionless</text:p>
+       <text:p text:style-name="P9193">scc/scc</text:p>
+       <text:p text:style-name="P9193">scc/scc</text:p>
        <text:p text:style-name="P9195">gm/cc</text:p>
        <text:p text:style-name="P9195">gm/cc</text:p>
+       <text:p text:style-name="P9195">mm</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
