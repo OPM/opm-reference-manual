@@ -1849,6 +1849,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
  </office:styles>
  <office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
@@ -4540,7 +4543,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P57" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716175_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716175_3964674244"/></text:h>
     <text:p text:style-name="P86"><text:a xlink:href="#__RefHeading___Toc356776_4176551521">PVTGWO</text:a> defines the gas PVT properties for wet gas<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
-        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm3/m3, with the condensate having a gravity greater than 50 oAPI.</text:p></text:note-body></text:note> with vaporized water and oil. This keyword should be used when the <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> and <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keywords have been declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that vaporized oil and water are present in the wet gas phase. The keyword may be used for oil-water-gas input decks that contain the wet gas with vaporized oil and water phases. </text:p>
+        <text:p text:style-name="P16648">Natural gas that contains significant heavy hydrocarbons such as propane, butane and other liquid hydrocarbons is known as wet gas or rich gas. The general rule of thumb is if the gas contains less methane (typically less than 85% methane) and more ethane, and other more complex hydrocarbons, it is labeled as wet gas. Wet gas normally has GOR&apos;s less than 100,000 scf/stb or 18,000 Sm<text:span text:style-name="Super">3</text:span>/m<text:span text:style-name="Super">3</text:span>, with the condensate having a gravity greater than 50 °API.</text:p></text:note-body></text:note> with vaporized water and oil. This keyword should be used when the <text:a xlink:href="#__RefHeading___Toc56610_2267116897">VAPOIL</text:a> and <text:a xlink:href="#__RefHeading___Toc317543_3149455253">VAPWAT</text:a> keywords have been declared in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section indicating that vaporized oil and water are present in the wet gas phase. The keyword may be used for oil-water-gas input decks that contain the wet gas with vaporized oil and water phases. </text:p>
     <text:p text:style-name="P86">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1825" table:style-name="Table1825">
      <table:table-column table:style-name="Table1825.A"/>
@@ -4603,9 +4606,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table1826.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P84">A real monotonically increasing down the column vector that defines the gas phase pressure, associated with the saturated water-gas ratio (“WGR”) or Rw, <text:s/>the saturated condensate-gas ratio (“CGR”) or Rv, the gas formation volume factor, and the gas viscosity for the corresponding pressure for the stated saturated RWS.</text:p>
-       <text:p text:style-name="P4767">For a given PRESS the variability of the gas formation volume factor and the gas viscosity with respect to the under-saturated Rw and Rv is optionally included as a sub table under RWU, RVU, FVFU and VISU columns, that is it is not necessary to repeat PRESS for each sub table entry. However, each sub table must be terminated by a “/”.</text:p>
-       <text:p text:style-name="P4771">The under saturated Rw and Rv entries are optional, except for perhaps the last <text:s/>PRESS entry to define the PVT properties above the initial saturation pressure.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real monotonically increasing down the column vector that defines the gas phase pressure, associated with the saturated water-gas ratio (“WGR”) or Rw, <text:s/>the saturated condensate-gas ratio (“CGR”) or Rv, the gas formation volume factor, and the gas viscosity for the corresponding pressure for the stated saturated RWS.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">For a given PRESS the variability of the gas formation volume factor and the gas viscosity with respect to the under-saturated Rw and Rv is optionally included as a sub table under RWU, RVU, FVFU and VISU columns, that is it is not necessary to repeat PRESS for each sub table entry. However, each sub table must be terminated by a “/”.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The under saturated Rw and Rv entries are optional, except for perhaps the last <text:s/>PRESS entry to define the PVT properties above the initial saturation pressure.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4641,9 +4644,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P43"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1826.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P38">A columnar vector of real positive numbers for both the saturated (RWS) and under saturated (RWU) Rw sub table entries.</text:p>
-       <text:p text:style-name="P38">The RWS entry on the main table is the saturated WGR at the pressure indicated by PRESS and may be increasing or decreasing in value as PRESS varies.</text:p>
-       <text:p text:style-name="P38">Subsequent under-saturated Rw for a sub table at the given PRESS, as defined by RWU, are monotonically decreasing for entries in a given sub table. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real positive numbers for both the saturated (RWS) and under saturated (RWU) Rw sub table entries.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The RWS entry on the main table is the saturated WGR at the pressure indicated by PRESS and may be increasing or decreasing in value as PRESS varies.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Subsequent under-saturated Rw for a sub table at the given PRESS, as defined by RWU, are monotonically decreasing for entries in a given sub table. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4679,9 +4682,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P42"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1826.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P35">A columnar vector of real positive numbers for both the saturated (RVS) and under saturated (RVU) Rv sub table entries.</text:p>
-       <text:p text:style-name="P36">The RVS entry on the main table is the saturated CGR at the pressure indicated by PRESS and may be increasing or decreasing in value as PRESS varies.</text:p>
-       <text:p text:style-name="P37">Subsequent under-saturated Rv for a sub table at the given PRESS, as defined by RVU, are monotonically decreasing for entries in a given sub table. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real positive numbers for both the saturated (RVS) and under saturated (RVU) Rv sub table entries.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The RVS entry on the main table is the saturated CGR at the pressure indicated by PRESS and may be increasing or decreasing in value as PRESS varies.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Subsequent under-saturated Rv for a sub table at the given PRESS, as defined by RVU, are monotonically decreasing for entries in a given sub table. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4717,7 +4720,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P46">FVFU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1826.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4426">A columnar vector of real decreasing down the column values that defines the corresponding gas phase formation volume factor for a given pressure (PRESS) and for a given Rw (either RWS or RWU) and Rv (either RVS or RVU).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A columnar vector of real decreasing down the column values that defines the corresponding gas phase formation volume factor for a given pressure (PRESS) and for a given Rw (either RWS or RWU) and Rv (either RVS or RVU).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4751,8 +4754,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P45">VISU</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1826.D2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4426">VISS a columnar vector of real increasing down the column values that defines the corresponding gas phase viscosity for a given pressure (PRESS) and for a given RWS and RVS.</text:p>
-       <text:p text:style-name="P4796">VISU a columnar vector of real decreasing from VISS down the column values that defines the corresponding gas phase viscosity for a given pressure (PRESS) and for a given RWU and RVU.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">VISS a columnar vector of real increasing down the column values that defines the corresponding gas phase viscosity for a given pressure (PRESS) and for a given RWS and RVS.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">VISU a columnar vector of real decreasing from VISS down the column values that defines the corresponding gas phase viscosity for a given pressure (PRESS) and for a given RWU and RVU.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
