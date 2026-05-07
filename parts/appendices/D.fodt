@@ -1917,6 +1917,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
   <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
@@ -4349,7 +4352,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody">When this script is run it will print:</text:p>
     <text:p text:style-name="P14405"><text:s text:c="3"/>==&gt; The Oil rate in well:W1 is 1.0 m3/s</text:p>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">because the input value of 86,400 m3/day is internally converted to 1.0 m3/second.</text:p>
+    <text:p text:style-name="_40_TextBody">because the input value of 86,400 m<text:span text:style-name="Super">3</text:span>/day is internally converted to 1.0 m<text:span text:style-name="Super">3</text:span>/second.</text:p>
     <text:p text:style-name="_40_TextBody">The default input unit system is <text:a xlink:href="#__RefHeading___Toc70639_2267116897">METRIC</text:a>, that means that if the input is to be interpreted in either <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> or <text:a xlink:href="#__RefHeading___Toc72458_2267116897">LAB</text:a> units, then one needs to add a keyword to declare the units before entering the data. Thus, to interpret the <text:a xlink:href="#__RefHeading___Toc146754_4203985108">WCONPROD</text:a> keyword’s oil rate as stb/d in the previous example, the <text:a xlink:href="#__RefHeading___Toc71850_2267116897">FIELD</text:a> keyword needs to be added to the example, that is:</text:p>
     <text:p text:style-name="_40_Code">#!/usr/bin/env python3</text:p>
     <text:p text:style-name="P16917"><text:s text:c="3"/>from opm.io.parser import Parser</text:p>
