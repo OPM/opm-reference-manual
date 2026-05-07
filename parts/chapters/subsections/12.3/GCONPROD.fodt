@@ -5424,13 +5424,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">A defined character string that sets the guide phase to which the guide rate in item (9) applies. <text:s/>GUIPHASE should be set to one of the following character strings:</text:p>
        <text:list xml:id="list123809961233784" text:continue-list="list123810096487240" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P157"><text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>: the guide phase is set to oil.</text:p>
+         <text:p text:style-name="P157"><text:span text:style-name="NotKeyword">OIL</text:span>: the guide phase is set to oil.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P157">WAT: the guide phase is set to water.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P157"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: the guide phase is set to gas.</text:p>
+         <text:p text:style-name="P157"><text:span text:style-name="NotKeyword">GAS</text:span>: the guide phase is set to gas.</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P157">LIQ: the guide phase is set to liquid (oil plus water).</text:p>
@@ -5451,7 +5451,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P157">&apos; <text:s/>&apos; <text:s/>or 1* : the group is not under guide rate control, and therefore superordinate group production targets will be pro-rated directly down to its subordinate groups and wells.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P128">Note that only the <text:a xlink:href="#__RefHeading___Toc97439_1778172979">OIL</text:a>, WAT, <text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>, LIQ and default options are currently supported by OPM Flow.</text:p>
+       <text:p text:style-name="P128">Note that only the <text:span text:style-name="NotKeyword">OIL</text:span>, WAT, <text:span text:style-name="NotKeyword">GAS</text:span>, LIQ, POTN, and default options are currently supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5699,8 +5699,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">COMBRATE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table113.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P128">Linearly combined production rate used in the commercial compositional simulator.</text:p>
-       <text:p text:style-name="P128">Not used and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P128">Linearly combined production rate.</text:p>
+       <text:p text:style-name="P128">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5716,8 +5716,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P128">COMBPROC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table113.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P128">Linearly combined procure for when exceeding COMBRATE, used in the commercial black-oil simulator.</text:p>
-       <text:p text:style-name="P128">Not used and should be defaulted with 1*.</text:p>
+       <text:p text:style-name="P128">A defined character string that specifies the action to be taken if the linearly combined production rate (COMBRATE) constraint is violated.</text:p>
+       <text:p text:style-name="P128">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5761,7 +5761,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P125">GRP02 <text:s text:c="3"/>FLD <text:s text:c="2"/>25E3 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="3"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>1* <text:s text:c="5"/>/</text:p>
     <text:p text:style-name="P125">/ <text:s text:c="233"/></text:p>
     <text:p text:style-name="P127"/>
-    <text:p text:style-name="P127">All groups are controlled by oil rate targets or constraints, but only the field level has water, gas and liquid constraints to reflect the actual production facility constraints. The wells under group control will be produced based on oil potential of each of the wells under group control, such that the field oil production target of 40,000 stb/d is honored and subject to the other phase fluid constraints. <text:s/>In addition, GRP01 and GRP02 oil rate values of 25,000 stb/d are constraints as these two groups are subject to the <text:span text:style-name="NotKeyword">FIELD</text:span> level targets and constraints.</text:p>
+    <text:p text:style-name="P127">All groups are controlled by oil rate targets or constraints, but only the field level has water, gas and liquid constraints to reflect the actual production facility constraints. The wells under group control will produce based on the oil potential of each of the wells under group control, such that the field oil production target of 40,000 stb/d is honored and subject to the other constraints. <text:s/>In addition, GRP01 and GRP02 oil rate values of 25,000 stb/d are constraints as these two groups are subject to the <text:span text:style-name="NotKeyword">FIELD</text:span> level targets and constraints.</text:p>
     <text:p text:style-name="P127"/>
    </text:section>
   </office:text>
