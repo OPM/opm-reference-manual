@@ -1917,6 +1917,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4325,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="TableLine94708720775024">
        <table:table-cell table:style-name="Table315.A1" office:value-type="string">
         <text:p text:style-name="P10272">Note</text:p>
-        <text:p text:style-name="P10163">Care should be taken that cells in different <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication, since the fluid properties are associated with a cell. If for example, a rbbl or a rm3 of oil flows from <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 1 to <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 2, <text:s/>then the oil properties of that oil will change from the PVT 1 data set to the PVT data set 2. <text:s/>This will result in material balance errors, that may or may not cause numerical issues.</text:p>
+        <text:p text:style-name="P10163">Care should be taken that cells in different <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication, since the fluid properties are associated with a cell. If for example, a rbbl or a rm<text:span text:style-name="Super">3</text:span> of oil flows from <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 1 to <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> region 2, <text:s/>then the oil properties of that oil will change from the PVT 1 data set to the PVT data set 2. <text:s/>This will result in material balance errors, that may or may not cause numerical issues.</text:p>
         <text:p text:style-name="P10163">To avoid this one should use the <text:a xlink:href="#__RefHeading___Toc61329_2752266063">MULTNUM</text:a> (or <text:a xlink:href="#__RefHeading___Toc45781_719036256">FLUXNUM</text:a>, or <text:a xlink:href="#__RefHeading___Toc67857_718313858">OPERNUM</text:a>) array with the <text:a xlink:href="#__RefHeading___Toc296621_1576177388">MULTREGT</text:a> array to ensure that the various <text:a xlink:href="#__RefHeading___Toc68366_2752266063">PVTNUM</text:a> regions are not in communication. </text:p>
        </table:table-cell>
       </table:table-row>

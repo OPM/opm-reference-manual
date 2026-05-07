@@ -4702,7 +4702,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P16992"><text:span text:style-name="NotKeyword">GAS</text:span>: Oil is set as the <text:span text:style-name="T2554">non-wetting phase</text:span> between oil and gas, and the oil relative permeability with respect to gas is determined by HYSTMOD for the non-wetting phase.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="_40_Table_20_Contents">Note for all the above cases the gas relative permeability is always modelled as a non-wetting phase.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note for all the above cases the gas relative permeability is always modeled as a non-wetting phase.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">Note oil is always the wetting phase to gas in two phase systems.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
@@ -4781,15 +4781,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table436.1">
-      <table:table-cell table:style-name="Table436.A2" office:value-type="string">
+      <table:table-cell table:style-name="Table436.A1" office:value-type="string">
        <text:p text:style-name="P4512">13</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.B27" office:value-type="string">
        <text:p text:style-name="P5352">HYSWETRP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.C27" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Killough’s hysteresis wetting phase modification used in the commercial black-oil simulator.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value that determines if a modification to Killough’s wetting phase relative permeability hysteresis model is enabled to reduce the departure of the scanning curve from the region between the drainage and imbibition curves. </text:p>
+       <text:list xml:id="list105914499005805" text:continue-list="list105914059584018" text:style-name="_40_NumberedListTable">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P16992"><text:span text:style-name="NotKeyword">0</text:span>: Modification is disabled.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P16992"><text:span text:style-name="NotKeyword">1</text:span>: Modification is enabled.</text:p>
+        </text:list-item>
+       </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">Note this option is only used if HYSTMOD (Item 2) is set to 4 or 7.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4798,7 +4806,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table436.1">
-      <table:table-cell table:style-name="Table436.A2" office:value-type="string">
+      <table:table-cell table:style-name="Table436.A1" office:value-type="string">
        <text:p text:style-name="P4512">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table436.B27" office:value-type="string">
