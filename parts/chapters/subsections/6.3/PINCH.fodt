@@ -1882,6 +1882,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <loext:color loext:name="followed-hyperlink" loext:color="#551a8b"/>
    </loext:theme-colors>
   </loext:theme>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
  </office:styles>
  <office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
@@ -4574,7 +4577,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table294.C2"/>
       <table:covered-table-cell table:style-name="Table294.C2"/>
       <table:table-cell table:style-name="Table294.C2" office:value-type="string">
-       <text:p text:style-name="P56">ft.</text:p>
+       <text:p text:style-name="P56">ft</text:p>
        <text:p text:style-name="P50">1.0E20</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table294.C2" office:value-type="string">
@@ -4663,7 +4666,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P27">-- <text:s text:c="6"/>THICKNESS <text:s text:c="2"/>NO GAP <text:s text:c="2"/>GAP <text:s text:c="4"/>CALC <text:s text:c="4"/>CALC</text:p>
     <text:p text:style-name="P27"><text:s text:c="9"/>0.01 <text:s text:c="7"/>1* <text:s text:c="6"/>1* <text:s text:c="5"/>1* <text:s text:c="6"/>1* <text:s text:c="29"/>/ </text:p>
     <text:p text:style-name="P25"/>
-    <text:p text:style-name="P83">For the second example, the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword is used to set the minimum pore volume to 500 m3 <text:s/>(metric units) and then the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword is invoked with PINCHGAP set equal to GAP, as follows:</text:p>
+    <text:p text:style-name="P83">For the second example, the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword is used to set the minimum pore volume to 500 m<text:span text:style-name="Super">3</text:span> <text:s/>(metric units) and then the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword is invoked with PINCHGAP set equal to GAP, as follows:</text:p>
     <text:p text:style-name="P28">--</text:p>
     <text:p text:style-name="P28">-- <text:s text:c="6"/>MINIMUM PORE VOLUME FOR ACTIVE CELLS</text:p>
     <text:p text:style-name="P28">--</text:p>
@@ -4677,7 +4680,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P28">-- <text:s text:c="6"/>THICKNESS <text:s text:c="2"/>NO GAP <text:s text:c="2"/>GAP <text:s text:c="4"/>CALC <text:s text:c="4"/>CALC</text:p>
     <text:p text:style-name="P28"><text:s text:c="9"/>0.1 <text:s text:c="8"/>GAP <text:s text:c="6"/>1* <text:s text:c="4"/>1* <text:s text:c="6"/>1* <text:s text:c="29"/>/ </text:p>
     <text:p text:style-name="P85"><text:s/></text:p>
-    <text:p text:style-name="P84">In the above example the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword will deactivate all cells with pore volumes less than 500 m3. These deactivated cells are inactive in the model and therefore are not included in the flow calculations; however, by default they will result in no-flow barriers but may not be thin enough for <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> to create NNCs across them. <text:s/>By setting<text:span text:style-name="T19"> </text:span>PINCHGAP equal to GAP on the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword (the default setting), then OPM Flow generates NNCs across the cells that have been deactivated by the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword. However, in this case there may be grid blocks in the model with a pore volume greater than <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> but a thickness less than the pinch-out threshold. These cells will not be deactivated by the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword.</text:p>
+    <text:p text:style-name="P84">In the above example the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword will deactivate all cells with pore volumes less than 500 m<text:span text:style-name="Super">3</text:span>. These deactivated cells are inactive in the model and therefore are not included in the flow calculations; however, by default they will result in no-flow barriers but may not be thin enough for <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> to create NNCs across them. <text:s/>By setting<text:span text:style-name="T19"> </text:span>PINCHGAP equal to GAP on the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword (the default setting), then OPM Flow generates NNCs across the cells that have been deactivated by the <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> keyword. However, in this case there may be grid blocks in the model with a pore volume greater than <text:a xlink:href="#__RefHeading___Toc569208_3181922006">MINPV</text:a> but a thickness less than the pinch-out threshold. These cells will not be deactivated by the <text:a xlink:href="#__RefHeading___Toc74261_2479612490">PINCH</text:a> keyword.</text:p>
    </text:section>
   </office:text>
  </office:body>
