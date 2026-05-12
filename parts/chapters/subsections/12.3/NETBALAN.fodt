@@ -975,6 +975,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4668,13 +4671,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">A real positive value that stipulates the maximum target branch error in a network balance calculation, at the end of the time step. </text:p>
        <text:p text:style-name="_40_Table_20_Contents">NTRGERR is compared with the branch error (Error), where Error is the difference between the pressure drop along the branch from the previous network balance and the current calculation, again, at the end of the time step. <text:s/></text:p>
        <text:p text:style-name="_40_Table_20_Contents">S<text:span text:style-name="T4435">ubject to existing targets and </text:span><text:span text:style-name="T2295">constraints</text:span><text:span text:style-name="T4435">, the simulator will attempt to adjust the time step size in order </text:span>to <text:span text:style-name="T3585">roughly</text:span><text:span text:style-name="T4435"> match NTRGERR. <text:s/>Not</text:span>e<text:span text:style-name="T4435"> also that NTRGERR should be a value that is sufficient to allow convergence as defined by NC</text:span>N<text:span text:style-name="T4435">V and GRPNCN</text:span> parameters.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">T<text:span text:style-name="T4435">he default value of </text:span>1.0 x 1020 <text:s/><text:span text:style-name="T1865">means that this parameter has no effect in the selection of the time step size.</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents">T<text:span text:style-name="T4435">he default value of </text:span>1.0 x 10<text:span text:style-name="Super">20</text:span> <text:s/><text:span text:style-name="T1865">means that this parameter has no effect in the selection of the time step size.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2007.F3" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="P9277"/>
-       <text:p text:style-name="P8961">1.0 x 1020</text:p>
+       <text:p text:style-name="P8961">1.0 x 10<text:span text:style-name="Super">20</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table2007.3">
@@ -4702,12 +4705,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">A real positive value that stipulates the maximum branch error in a network balance calculation, at the end of the time step. </text:p>
        <text:p text:style-name="_40_Table_20_Contents">Again, NMAXERR is compared against the branch error (Error), where Error is the difference between the pressure drop along the branch from the previous network balance and the current calculation, at the end of the time step. </text:p>
        <text:p text:style-name="_40_Table_20_Contents">I<text:span text:style-name="T4435">f Error is greater than NMAXERR then the simulator will enforce a time step chop. Time step chops are </text:span><text:span text:style-name="T2295">computationally</text:span><text:span text:style-name="T4435"> expensive and should therefore be minimized. <text:s/>Hence, care should be used in setting this value, which should be </text:span><text:span text:style-name="T2295">significantly</text:span><text:span text:style-name="T4435"> greater than NTRGERR.</text:span></text:p>
-       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="T1867">The default value of </text:span>1.0 x 1020 <text:s/><text:span text:style-name="T1865">means that this parameter has no effect in the selection of the time step size.</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="T1867">The default value of </text:span>1.0 x 10<text:span text:style-name="Super">20</text:span> <text:s/><text:span text:style-name="T1865">means that this parameter has no effect in the selection of the time step size.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2007.F3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P8962">1.0 x 1020</text:p>
+       <text:p text:style-name="P8962">1.0 x 10<text:span text:style-name="Super">20</text:span></text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table2007.3">
