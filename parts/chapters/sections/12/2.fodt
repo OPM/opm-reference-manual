@@ -973,6 +973,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
+  <style:style style:name="Expression" style:family="text">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-family="&apos;Liberation Serif&apos;" fo:font-size="10pt" fo:letter-spacing="0.035cm" fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="ExpressionRegular" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionBold" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal" fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="ExpressionSub" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="-20% 58%" fo:letter-spacing="0.0cm"/>
+  </style:style>
+  <style:style style:name="ExpressionSuper" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="42% 58%" fo:letter-spacing="0.0cm"/>
+  </style:style>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -7288,7 +7303,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P167">The alternative keyword for implementing the same approach is the <text:a xlink:href="#__RefHeading___Toc134886_2055188184">WELCNTL</text:a> keyword, but unfortunately this is currently not implemented in OPM Flow.</text:p>
     <text:p text:style-name="P122"/>
     <text:h text:style-name="P176" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc423069_1189575515"/>Well Productivity<text:bookmark-end text:name="__RefHeading___Toc423069_1189575515"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">Throughout this section the equations are presented in terms of oil production or liquid flow (i.e., oil and water). Note that similar equations exists for gas flow in terms of p</text:span><text:span text:style-name="T14">2</text:span><text:span text:style-name="T17"> and pseudo pressure formulations (ψ(p)).</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Throughout this section the equations are presented in terms of oil production or liquid flow (i.e., oil and water). Note that similar equations exists for gas flow in terms of p<text:span text:style-name="T14">2</text:span> and pseudo pressure formulations (ψ(p)).</text:p>
     <text:p text:style-name="_40_TextBody">Under the assumption of (1) one-dimensional radial flow into the wellbore, (2) steady-state pressure behavior, and (3) single-phase flow, it can be shown that the flow rate of a well is given by:</text:p>
     <text:p text:style-name="P105"/>
     <table:table table:name="Table1170" table:style-name="Table1170">
@@ -7505,10 +7520,10 @@ LEFT( ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S RIGHT)} RIGHT]</annotation
     </table:table>
     <text:p text:style-name="P106">where <text:tab/></text:p>
     <text:p text:style-name="P107">q<text:tab/>= production rate (rb/day),</text:p>
-    <text:p text:style-name="P107"><text:span text:style-name="T17">p</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17"><text:tab/>= pressure at the drainage radius of the well (psia),</text:span></text:p>
-    <text:p text:style-name="P107"><text:span text:style-name="T17">p</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"><text:tab/>= bottom-hole well pressure (psia),</text:span></text:p>
-    <text:p text:style-name="P107"><text:span text:style-name="T17">r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17"><text:tab/>= drainage radius (feet),</text:span></text:p>
-    <text:p text:style-name="P107"><text:span text:style-name="T17">r</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"><text:tab/>= wellbore radius (feet),</text:span></text:p>
+    <text:p text:style-name="P107">p<text:span text:style-name="T15">e</text:span><text:tab/>= pressure at the drainage radius of the well (psia),</text:p>
+    <text:p text:style-name="P107">p<text:span text:style-name="T15">w</text:span><text:tab/>= bottom-hole well pressure (psia),</text:p>
+    <text:p text:style-name="P107">r<text:span text:style-name="T15">e</text:span><text:tab/>= drainage radius (feet),</text:p>
+    <text:p text:style-name="P107">r<text:span text:style-name="T15">w</text:span><text:tab/>= wellbore radius (feet),</text:p>
     <text:p text:style-name="P107">S<text:tab/>= skin factor (dimensionless), and</text:p>
     <text:p text:style-name="P107">kh<text:tab/>= effective permeability thickness (mD.ft).</text:p>
     <text:p text:style-name="P105"/>
@@ -7765,8 +7780,8 @@ LEFT( ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S RIGHT)} RIGHT]
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P98"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">If the modified radial flow equation is written for each perforated interval and summed over all intervals, the resulting equation is the one used to calculate oil production rates in the simulator. One way to specify the flow capacities of wells is to enter r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, r</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17">, S, and p</text:span><text:span text:style-name="T15">w</text:span><text:span text:style-name="T17"> values for the well, with the kh values for each perforated interval. The simulator then determines the other parameter values from the calculated pressure and saturation distributions.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">Because the pressure at the drainage radius is not readily determined in the simulator, it substitutes p</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17"> (a representative pressure of each perforation grid block) for p. That is readily accommodated by replacing the drainage radius by a probe radius as defined by Peaceman</text:span><text:span text:style-name="T17"><text:note text:id="ftn8" text:note-class="footnote"><text:note-citation>8</text:note-citation><text:note-body>
+    <text:p text:style-name="_40_TextBody">If the modified radial flow equation is written for each perforated interval and summed over all intervals, the resulting equation is the one used to calculate oil production rates in the simulator. One way to specify the flow capacities of wells is to enter r<text:span text:style-name="T15">e</text:span>, r<text:span text:style-name="T15">w</text:span>, S, and p<text:span text:style-name="T15">w</text:span> values for the well, with the kh values for each perforated interval. The simulator then determines the other parameter values from the calculated pressure and saturation distributions.</text:p>
+    <text:p text:style-name="_40_TextBody">Because the pressure at the drainage radius is not readily determined in the simulator, it substitutes p<text:span text:style-name="T15">b</text:span> (a representative pressure of each perforation grid block) for p. That is readily accommodated by replacing the drainage radius by a probe radius as defined by Peaceman<text:span text:style-name="T17"><text:note text:id="ftn8" text:note-class="footnote"><text:note-citation>8</text:note-citation><text:note-body>
         <text:p text:style-name="Footnote">Peaceman, D.W. &quot;Interpretation of Well-Block Pressures in Numerical Reservoir Simulation with Nonsquare Grid Blocks and Anisotropic Permeability.&quot; <text:s/>SPE 10528 presented at the Sixth SPE Symposium on Reservoir Simulation, New Orleans, (February 1982), pp. 553-569.</text:p></text:note-body></text:note></text:span> for a vertical well:</text:p>
     <table:table table:name="Table1773" table:style-name="Table1773">
      <table:table-column table:style-name="Table1773.A"/>
@@ -8054,7 +8069,7 @@ LEFT( ln`` LEFT({r SUB{e}} OVER{r SUB{w}} RIGHT )~+~S RIGHT)} RIGHT]
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P99">where<text:tab/></text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="T17">K</text:span><text:span text:style-name="T15">x</text:span><text:span text:style-name="T17"> and K</text:span><text:span text:style-name="T15">y</text:span><text:span text:style-name="T17"><text:tab/></text:span><text:tab/><text:span text:style-name="T17">= </text:span><text:tab/><text:span text:style-name="T17">x- and y- direction absolute permeabilities, and</text:span></text:p>
+    <text:p text:style-name="_40_EquationWhereList">K<text:span text:style-name="T15">x</text:span> and K<text:span text:style-name="T15">y</text:span><text:tab/><text:tab/>= <text:tab/>x- and y- direction absolute permeabilities, and</text:p>
     <text:p text:style-name="_40_EquationWhereList">Δx and Δy<text:tab/><text:tab/>= <text:tab/>grid block sizes (feet).</text:p>
     <text:p text:style-name="P105"/>
     <text:p text:style-name="_40_TextBody">The simulator then uses the modified radial flow equation, written for each connection:</text:p>
@@ -8965,7 +8980,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P98"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">It is significant that this equation for the Productivity Index is written in terms of the pressure at the well drainage radius, p</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, rather than grid block pressure, p</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17">. <text:s/>It must be written this way since PI is a property that is determined by field production tests. One can also relate the above equation to the multilayered extension of the steady-state radial flow equation </text:span><text:span text:style-name="T17"><text:sequence-ref text:reference-format="text" text:ref-name="refText6">(12.7)</text:sequence-ref></text:span><text:span text:style-name="T17">, </text:span>to give the grid block Productivity Index:</text:p>
+    <text:p text:style-name="_40_TextBody">It is significant that this equation for the Productivity Index is written in terms of the pressure at the well drainage radius, p<text:span text:style-name="T15">e</text:span>, rather than grid block pressure, p<text:span text:style-name="T15">b</text:span>. <text:s/>It must be written this way since PI is a property that is determined by field production tests. One can also relate the above equation to the multilayered extension of the steady-state radial flow equation <text:sequence-ref text:reference-format="text" text:ref-name="refText6">(12.7)</text:sequence-ref>, to give the grid block Productivity Index:</text:p>
     <table:table table:name="Table1778" table:style-name="Table1778">
      <table:table-column table:style-name="Table1778.A"/>
      <table:table-column table:style-name="Table1778.B"/>
@@ -9133,7 +9148,7 @@ LEFT ( {k k SUB{ro} h} OVER {B SUB{o}`` μ SUB{o}} ~~LEFT( ``p SUB{b}~-~p SUB{w}
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">One very important point to note is that the productivity index is, in general, not constant for a given well since both relative permeability and drainage radius can be time dependent. <text:s/>This makes PI an inappropriate quantity for computer prediction of production rates, but it is often the only type of data available on well performance. <text:span text:style-name="T17">To overcome this limitation, most simulators </text:span>accept well drainage area PI data as input, and then immediately convert this assuming steady state radial flow with a uniform mobility throughout the drainage area, resulting in the following equation.</text:p>
+    <text:p text:style-name="_40_TextBody">One very important point to note is that the productivity index is, in general, not constant for a given well since both relative permeability and drainage radius can be time dependent. <text:s/>This makes PI an inappropriate quantity for computer prediction of production rates, but it is often the only type of data available on well performance. To overcome this limitation, most simulators accept well drainage area PI data as input, and then immediately convert this assuming steady state radial flow with a uniform mobility throughout the drainage area, resulting in the following equation.</text:p>
     <table:table table:name="Table1780" table:style-name="Table1780">
      <table:table-column table:style-name="Table1780.A"/>
      <table:table-column table:style-name="Table1780.B"/>
@@ -9384,8 +9399,8 @@ OVER
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P104"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">Since the drainage radius, r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17">, is generally different from the grid block radius, r</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17">, the ratio of logarithms may be significant; hence, the use of the PI option normally requires specification of both r</text:span><text:span text:style-name="T15">e</text:span><text:span text:style-name="T17"> and r</text:span><text:span text:style-name="T15">b</text:span><text:span text:style-name="T17">.</text:span></text:p>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T17">Equation </text:span><text:span text:style-name="T17"><text:sequence-ref text:reference-format="text" text:ref-name="refText10">(12.11)</text:sequence-ref></text:span><text:span text:style-name="T17"><text:s/>is used to calculate the PI for the well and is used to print the PI on the WELLS production report requested via the <text:a xlink:href="#__RefHeading___Toc268459_1366622701">RPTSCHED</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. Note that for gas wells with non-zero D-factors, the non-Darcy skin factor is added to to the skin (S) term in equation </text:span><text:span text:style-name="T17"><text:sequence-ref text:reference-format="text" text:ref-name="refText10">(12.11)</text:sequence-ref></text:span><text:span text:style-name="T17"><text:s/>in both the numerator and the denominator. <text:s/>Secondly, r</text:span><text:span text:style-name="T15">e </text:span><text:span text:style-name="T16">is often undetermined or unknown and it is common to default the DRADIUS parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword, in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. If the well drainage radius (DRADIUS) is defaulted then equation </text:span><text:span text:style-name="T16"><text:sequence-ref text:reference-format="text" text:ref-name="refText10">(12.11)</text:sequence-ref></text:span><text:span text:style-name="T16"><text:s/>simplifies to:</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Since the drainage radius, r<text:span text:style-name="T15">e</text:span>, is generally different from the grid block radius, r<text:span text:style-name="T15">b</text:span>, the ratio of logarithms may be significant; hence, the use of the PI option normally requires specification of both r<text:span text:style-name="T15">e</text:span> and r<text:span text:style-name="T15">b</text:span>.</text:p>
+    <text:p text:style-name="_40_TextBody">Equation <text:sequence-ref text:reference-format="text" text:ref-name="refText10">(12.11)</text:sequence-ref><text:s/>is used to calculate the PI for the well and is used to print the PI on the WELLS production report requested via the <text:a xlink:href="#__RefHeading___Toc268459_1366622701">RPTSCHED</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. Note that for gas wells with non-zero D-factors, the non-Darcy skin factor is added to to the skin (S) term in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText10">(12.11)</text:sequence-ref><text:s/>in both the numerator and the denominator. <text:s/>Secondly, r<text:span text:style-name="T15">e </text:span><text:span text:style-name="T16">is often undetermined or unknown and it is common to default the DRADIUS parameter on the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword, in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. If the well drainage radius (DRADIUS) is defaulted then equation </text:span><text:span text:style-name="T16"><text:sequence-ref text:reference-format="text" text:ref-name="refText10">(12.11)</text:sequence-ref></text:span><text:span text:style-name="T16"><text:s/>simplifies to:</text:span></text:p>
     <table:table table:name="Table1779" table:style-name="Table1779">
      <table:table-column table:style-name="Table1779.A"/>
      <table:table-column table:style-name="Table1779.B"/>
