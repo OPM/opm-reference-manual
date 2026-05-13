@@ -973,6 +973,24 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
+  <style:style style:name="Expression" style:family="text">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-family="&apos;Liberation Serif&apos;" fo:font-size="10pt" fo:letter-spacing="0.035cm" fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="ExpressionRegular" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionBold" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal" fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="ExpressionSub" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="-20% 58%" fo:letter-spacing="0.0cm"/>
+  </style:style>
+  <style:style style:name="ExpressionSuper" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="42% 58%" fo:letter-spacing="0.0cm"/>
+  </style:style>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -4538,8 +4556,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">FOAMEXP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table974.A3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P52">A real positive value that defines an exponent that determines the gradient in the change of the reduction in gas mobility due to foam (es in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText0">(8.51)</text:sequence-ref>.</text:p>
-       <text:p text:style-name="P53">Note if e<text:span text:style-name="T43">s</text:span> is less than one then the slope of F<text:span text:style-name="T43">s</text:span> in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText0">(8.51)</text:sequence-ref><text:s/>will be infinite at C<text:span text:style-name="T43">s</text:span> equal to zero. <text:s/>In this case, small surfactant concentrations have a significant effect on the mobility, especially if the reference concentration Csr is also small. If this is the case use MINSURF on this keyword to set a minimum surfactant concentration to avoid small-scale numerical errors from affecting the simulation.</text:p>
+       <text:p text:style-name="P52">A real positive value that defines an exponent that determines the gradient in the change of the reduction in gas mobility due to foam (<text:span text:style-name="Expression">e</text:span><text:span text:style-name="ExpressionSub">s</text:span> in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText0">(8.51)</text:sequence-ref>).</text:p>
+       <text:p text:style-name="P53">Note if <text:span text:style-name="Expression">e</text:span><text:span text:style-name="ExpressionSub">s</text:span> is less than one then the slope of <text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub">s</text:span> in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText0">(8.51)</text:sequence-ref><text:s/>will be infinite at <text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span> equal to zero. <text:s/>In this case, small surfactant concentrations have a significant effect on the mobility, especially if the reference concentration Csr is also small. If this is the case use MINSURF on this keyword to set a minimum surfactant concentration to avoid small-scale numerical errors from affecting the simulation.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4572,7 +4590,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">MINSURF</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table974.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P59">MINSURF is a real positive value that defines the minimum surfactant concentration for which the reduction in gas mobility will be calculated. The default value of 1 x 10-20 implies that there is no minimum</text:p>
+       <text:p text:style-name="P59">MINSURF is a real positive value that defines the minimum surfactant concentration for which the reduction in gas mobility will be calculated. The default value of 1 x 10<text:span text:style-name="Super">-20</text:span> implies that there is no minimum</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4605,7 +4623,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">MINSWAT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table974.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P60">MINSWAT is a real positive value less than 1.0 that sets the minimum water saturation below which foam has no effect. <text:s/>The default value of 1 x 10-6 implies that there is no minimum.</text:p>
+       <text:p text:style-name="P60">MINSWAT is a real positive value less than 1.0 that sets the minimum water saturation below which foam has no effect. <text:s/>The default value of 1 x 10<text:span text:style-name="Super">-6</text:span> implies that there is no minimum.</text:p>
        <text:p text:style-name="P65">Note that t<text:span text:style-name="T30">his parameter is </text:span>only <text:span text:style-name="T30">used in the commercial simulator’s compositional </text:span>simulator<text:span text:style-name="T30"> and is therefore not used by OPM Flow or the commercial simulators black-oil simulator.</text:span></text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4759,15 +4777,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P32">Where:</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Fs<text:span text:style-name="T16"><text:tab/>=<text:tab/></text:span>the resulting gas mobility reduction factor as a function of surfactant</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:tab/>=<text:tab/>the resulting gas mobility reduction factor as a function of surfactant</text:p>
     <text:p text:style-name="_40_EquationWhereListSecondLine">concentration,</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Cs<text:span text:style-name="T16"> <text:tab/>=<text:tab/></text:span>surfactant concentration,</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Crs<text:span text:style-name="T16"><text:tab/>=<text:tab/></text:span>reference surfactant concentration, that is Cs &lt; Csr defines a weak foam and</text:p>
-    <text:p text:style-name="_40_EquationWhereListSecondLine">Cs &gt; Csr defines a strong foam (FOAMCON), and </text:p>
-    <text:p text:style-name="_40_EquationWhereList">es <text:tab/>=<text:tab/>exponent that determines the gradient in the change of the reduction in</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:tab/>=<text:tab/>surfactant concentration,</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:span text:style-name="ExpressionSuper">r</text:span><text:tab/>=<text:tab/>reference surfactant concentration, that is <text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span> &lt; <text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:span text:style-name="ExpressionSuper">r</text:span> defines a weak foam,</text:p>
+    <text:p text:style-name="_40_EquationWhereListSecondLine">and <text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span> &gt; <text:span text:style-name="Expression">C</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:span text:style-name="ExpressionSuper">r</text:span> defines a strong foam (FOAMCON), and </text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">e</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:tab/>=<text:tab/>exponent that determines the gradient in the change of the reduction in</text:p>
     <text:p text:style-name="_40_EquationWhereListSecondLine">gas mobility due to foam (FAOAMEXP). </text:p>
     <text:p text:style-name="P34"/>
-    <text:p text:style-name="P27">The functional form of the reduction in gas mobility factor (Mrf) is:</text:p>
+    <text:p text:style-name="P27">The functional form of the reduction in gas mobility factor (<text:span text:style-name="Expression">M</text:span><text:span text:style-name="ExpressionSub">rf</text:span>) is:</text:p>
     <table:table table:name="Table976" table:style-name="Table976">
      <table:table-column table:style-name="Table976.A"/>
      <table:table-column table:style-name="Table976.B"/>
@@ -4936,15 +4954,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="P33">Where:</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Mr<text:span text:style-name="T16"><text:tab/>=<text:tab/></text:span>the reference mobility reduction factor, see the <text:a xlink:href="#__RefHeading___Toc301321_803326780">FOAMFRM</text:a> keyword in the</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">M</text:span><text:span text:style-name="ExpressionSub">r</text:span><text:tab/>=<text:tab/>the reference mobility reduction factor, see the <text:a xlink:href="#__RefHeading___Toc301321_803326780">FOAMFRM</text:a> keyword in the</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/><text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section,</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Fs<text:span text:style-name="T16"> <text:tab/>=<text:tab/></text:span>gas mobility reduction factor as a function of surfactant concentration, see</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub">s</text:span><text:tab/>=<text:tab/>gas mobility reduction factor as a function of surfactant concentration, see</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>the <text:a xlink:href="#__RefHeading___Toc224976_3519154785">FOAMFSC</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section,</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Fw<text:span text:style-name="T16"><text:tab/>=<text:tab/></text:span>gas mobility reduction factor as a function of water saturation, see</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:tab/>=<text:tab/>gas mobility reduction factor as a function of water saturation, see</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>the <text:a xlink:href="#__RefHeading___Toc311829_803326780">FOAMFSW</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section,</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Fo <text:tab/>=<text:tab/>gas mobility reduction factor as a function of oil saturation, see</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub">o</text:span><text:tab/>=<text:tab/>gas mobility reduction factor as a function of oil saturation, see</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>the <text:a xlink:href="#__RefHeading___Toc311825_803326780">FOAMFSO</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, and</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Fc <text:tab/>=<text:tab/>gas mobility reduction factor as a function of capillary number, see</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub">c</text:span><text:tab/>=<text:tab/>gas mobility reduction factor as a function of capillary number, see</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:tab/><text:tab/>the <text:a xlink:href="#__RefHeading___Toc301319_803326780">FOAMFCN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
     <text:p text:style-name="P28"/>
     <text:p text:style-name="P28">See also the <text:a xlink:href="#__RefHeading___Toc171586_289573908">FOAM</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, the <text:a xlink:href="#__RefHeading___Toc224974_3519154785">FOAMADS</text:a>, <text:a xlink:href="#__RefHeading___Toc224978_3519154785">FOAMMOB</text:a>, <text:a xlink:href="#__RefHeading___Toc224982_3519154785">FOAMOPTS</text:a> and <text:a xlink:href="#__RefHeading___Toc224980_3519154785">FOAMROCK</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
