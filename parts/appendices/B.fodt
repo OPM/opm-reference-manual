@@ -13065,6 +13065,78 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:list>
        <text:list-item>
         <text:list>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added the option to solve the energy equations sequentially after the black-oil equations.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for pressure and temperature dependent water viscosity for runs with brine (BRINE) and energy (THERMAL).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Flow now supports runs with brine (BRINE) and energy (THERMAL).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for double precision WORK arrays for compressed property arrays (for example SOGCR).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">If necessary, the gas PVT tables PVTG and PVDG are modified internally to ensure that negative inverse formation volume factors will never be extrapolated.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Implemented endpoint scaling for gas-water systems.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Killough's hysteresis wetting phase modification (EHYSTR keyword item 13) is now supported.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for RSCONST keyword to define a constant solution gas-oil ratio for all dead oil PVT tables.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for EQUIL keyword item 9 (EQLOPT3) greater than zero.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for well energy injection/production rate and total summary vectors: WTPRHEA, WTPTHEA, WTIRHEA and WTITHEA.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for the gas lift injection total summary vectors: FGLIT, GGLIT, and WGLIT.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Extended summary (ESMRY) files are now output by default. The command line option --enable-esmry is now set to true by default. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for region oil recovery efficiency summary vector ROE.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Production and gas lift supply rates from satellite groups (GSATPROD) are now accumulated in summary output.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for inter-block flows of oil, water, and gas in the negative i, j, and k directions (BFLO[GOW][IJK]-). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for summary output of inter-block oil, water, and gas velocities in the positive/negative i, j, and k directions (BVEL[GOW][IJK][-]).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">All current well lists are now reported to the Print (PRT) file when the WELSPECS mnemonic is specified on the RPTSCHED keyword.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support for using the WDFAC and BRANPROP keywords in an ACTIONX block has been successfully tested.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The grid independent well keywords WELTRAJ and COMPTRAJ now partially support multi-segment wells.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for using well completion quantities in ACTIONX Boolean conditions.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added partial support for the TUNINGDP keyword.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for VFPPROD tables with only one data record (single-line lift curves).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The default value for the NUPCOL keyword has been reduced to from 12 to 3.</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Drift compensation is now applied to mass losses in the energy equations when using the temperature model (TEMP).</text:p>
+         </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
@@ -13114,284 +13186,496 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
-     <table:table-row table:style-name="Table14.3">
+     <table:table-row table:style-name="Table14.2">
       <table:table-cell table:style-name="Table14.A3">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--check-satfunc-consistency</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--conserve-inner-energy-thermal</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">Saturation function consistency checking is now activated by default. A boolean value. Whether or not to check saturation function consistency requirements. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Conserve inner energy and not enthalpy even if <text:a xlink:href="#__RefHeading___Toc137276_650382403">THERMAL</text:a> is used. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A3&gt;+1" office:value-type="float" office:value="2">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--enable-drift-compensation</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable partial compensation of systematic mass losses via the source term of the next time step. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A4&gt;+1" office:value-type="float" office:value="3">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--enable-esmry</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Write ESMRY file for fast loading of summary data. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">true</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A3&gt;+1" office:value-type="float" office:value="2">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--cpr-weights-thread-parallel</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable OpenMP thread parallelization of <text:span text:style-name="NotKeyword">CPR</text:span> weight calculation. This can improve performance for large models but is disabled by default. </text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A4&gt;+1" office:value-type="float" office:value="3">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--debug-verbosity-level</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer value. Set debug verbosity level globally. Default is 1, increasing values give additional output, and 0 disables most messages to the .DBG file. </text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A5&gt;+1" office:value-type="float" office:value="4">
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A22" table:formula="ooow:&lt;A5&gt;+1" office:value-type="float" office:value="4">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--edge-conformal</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Edge conformal cornerpoint processing. </text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A6&gt;+1" office:value-type="float" office:value="5">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--edge-weights-method</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">The edge-weighting method is now chosen by specifying a string rather than an integer. A character string. Choose edge-weighing strategy: &apos;uniform&apos;, &apos;transmissibility&apos;, or &apos;logtrans&apos; (logarithm of transmissibility). </text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;transmissibility&quot;</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A7&gt;+1" office:value-type="float" office:value="6">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--gpu-aware-mpi</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. MPI communication use GPU aware MPI in the sense that it will use GPU direct communication. Setting this to true will require that the MPI implementation supports GPU direct communication. If you are unsure, set this to false. </text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A8&gt;+1" office:value-type="float" office:value="7">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">7</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">--hy-ne-config-file</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A character string. Use config files for Hybrid Newton. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This option has been renamed --hybrid-newton-config-file. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;hybridNewtonConfig.json&quot;</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A9&gt;+1" office:value-type="float" office:value="8">
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A6&gt;+1" office:value-type="float" office:value="5">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--hybrid-newton-config-file</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A character string. JSON Config file path for Hybrid Newton. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;hybridNewtonConfig.json&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A7&gt;+1" office:value-type="float" office:value="6">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--max-newton-iterations-with-inner-well-iterations</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum newton iterations with inner well iterations. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">99</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A8&gt;+1" office:value-type="float" office:value="7">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">7</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--network-max-outer-iterations</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of outer iterations in the network solver before giving up. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A9&gt;+1" office:value-type="float" office:value="8">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">8</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--linear-solver-accelerator</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--network-max-sub-iterations</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string. Choose the backend for the linear solver, either cpu or gpu. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of sub-iterations to update network pressures (within a single well/group control update). </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;cpu&quot;</text:p>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">100</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A10&gt;+1" office:value-type="float" office:value="9">
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A10&gt;+1" office:value-type="float" office:value="9">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">9</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--max-well-status-switch-for-wells</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-cnv-energy</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of status switching (stop&lt;-&gt;open) for a well during a time-step. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real value. Local energy convergence tolerance (maximum of local energy errors). </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">99</text:p>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.4182</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A11&gt;+1" office:value-type="float" office:value="10">
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A11&gt;+1" office:value-type="float" office:value="10">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">10</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--max-well-status-switch-in-inner-iter-wells</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-cnv-energy-relaxed</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of status switching (stop&lt;-&gt;open) for a well during inner iterations. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real value. Relaxed local energy convergence tolerance that applies for iterations after the iterations with the strict tolerance. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">99</text:p>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">41.82</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A12&gt;+1" office:value-type="float" office:value="11">
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A12&gt;+1" office:value-type="float" office:value="11">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--milu-variant</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-energy-balance</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">The names of the possible variants have been converted to lower case. A character string. Specify which variant of the modified-ILU preconditioner ought to be used. Possible variants are: ilu (default, plain ILU), milu_1 (lump diagonal with dropped row entries), milu_2 (lump diagonal with the sum of the absolute values of the dropped row entries), milu_3 (if diagonal is positive add sum of dropped row entries, otherwise subtract them), milu_4 (if diagonal is positive add sum of dropped row entries, otherwise do nothing). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real value. Tolerated energy balance error relative to (scaled) total energy present. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;ilu&quot;</text:p>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4.182e-06</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A13&gt;+1" office:value-type="float" office:value="12">
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A2" table:formula="ooow:&lt;A13&gt;+1" office:value-type="float" office:value="12">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">12</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--nldd-relative-mobility-change-tol</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-energy-balance-relaxed</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A positive real value. Threshold for single cell relative mobility change in the NLDD solver. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real value. Relaxed tolerated energy balance error that applies for iterations after the iterations with the strict tolerance. </text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.1</text:p>
+      <table:table-cell table:style-name="Table14.D3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4.182e-05</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
+     <table:table-row table:style-name="Table14.2">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A14&gt;+1" office:value-type="float" office:value="13">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">13</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--partition-method</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-max-dp</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">The names of the partitioning methods have been converted to lower case. A character string. Choose partitioning method: &apos;simple&apos;, &apos;zoltan&apos;, &apos;metis&apos;, or &apos;zoltanwell&apos; (Zoltan with all cells perforated by a well represented by a single vertex). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Tolerance for max pressure change during a Newton iteration. A value greater than 0.0 allows for convergence regardless of residual tolerances. Use with care! </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;zoltanwell&quot;</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
+     <table:table-row table:style-name="Table14.2">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A15&gt;+1" office:value-type="float" office:value="14">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">14</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-max-reduction-time-step</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-max-drs</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A positive real value (only applicable for the general 3rd order controller, using &apos;control-error-filtering&apos; as time-step-control-tolerance-test-version). If the (proposed) relative change in time step size is larger than this parameter, the time step will be rejected. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Tolerance for max <text:a xlink:href="#__RefHeading___Toc137361_1317547213">RS</text:a> change during a Newton iteration. A value greater than 0.0 allows for convergence regardless of residual tolerances. Use with care! </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
+     <table:table-row table:style-name="Table14.2">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A16&gt;+1" office:value-type="float" office:value="15">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">15</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-parameters</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-max-drv</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string (only applicable for the general 3rd order controller). Parameters for the general 3rd order controller. Should be given as &apos;beta_1;beta_2;beta_3;alpha_2;alpha_3&apos;. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Tolerance for max <text:a xlink:href="#__RefHeading___Toc137365_1317547213">RV</text:a> change during a Newton iteration. A value greater than 0.0 allows for convergence regardless of residual tolerances. Use with care! </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;0.125;0.25;0.125;0.75;0.25&quot;</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
+     <table:table-row table:style-name="Table14.2">
       <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A17&gt;+1" office:value-type="float" office:value="16">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">16</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-reject-completed-step</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tolerance-max-ds</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value (only applicable for the general 3rd order controller). Include rejection of completed time steps if the relative change is larger than the time step control tolerance. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Tolerance for max saturation change during a Newton iteration. A value greater than 0.0 allows for convergence regardless of residual tolerances. Use with care! </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A18&gt;+1" office:value-type="float" office:value="17">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">17</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-ilu-fillin-level</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Fill-in level of TPSA linear solver ILU preconditioner. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A19&gt;+1" office:value-type="float" office:value="18">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">18</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-ilu-relaxation</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Relaxation factor for TPSA linear solver ILU preconditioner. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.9</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A20&gt;+1" office:value-type="float" office:value="19">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">19</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A character string. Configuration for linear solver. Valid preset options are: ilu0, dilu, amg or umfpack. Alternatively, you can request a configuration to be read from a JSON file by giving the filename here, ending with &apos;.json&apos;. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;ilu0&quot;</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A21&gt;+1" office:value-type="float" office:value="20">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">20</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver-ignore-convergence-failure</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Continue simulation even if TPSA linear solver did not converge. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A18&gt;+1" office:value-type="float" office:value="17">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">17</text:p>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A22&gt;+1" office:value-type="float" office:value="21">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">21</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--time-step-control-tolerance-test-version</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver-max-iter</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string (only applicable for the general 3rd order controller). Ways to decide if the time step should be rejected. Options: &apos;standard&apos; and &apos;control-error-filtering&apos;. The standard version compares relative change to tolerance directly to decide if the time step should be rejected, while the control-error-filtering version compares the relative change in time step size to the max-reduction-time-step parameter. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum TPSA linear iterations. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">&quot;standard&quot;</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">200</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A19&gt;+1" office:value-type="float" office:value="18">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">18</text:p>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A23&gt;+1" office:value-type="float" office:value="22">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">22</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver-print-json-definition</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Print JSON formatted configuration of the TPSA linear solver. Can be used to make a configuration JSON file for --tpsa-linear-solver. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A24&gt;+1" office:value-type="float" office:value="23">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">23</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver-reduction</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A real value. Minimum residual reduction in TPSA linear solver for convergence. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.001</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A25&gt;+1" office:value-type="float" office:value="24">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">24</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver-restart</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Number of iterations before restarting GMRES if --tpsa-use-gmres=true. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">40</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A26&gt;+1" office:value-type="float" office:value="25">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">25</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-linear-solver-verbosity</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Level of verbosity in TPSA linear solver: 0 = off, 2 = all. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A27&gt;+1" office:value-type="float" office:value="26">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">26</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-newton-max-error</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A real value. The maximum error tolerated by the TPSA Newton method which does not cause an abort. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1e+100</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A28&gt;+1" office:value-type="float" office:value="27">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">27</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-newton-max-iterations</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. The maximum number of TPSA Newton iterations. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">20</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A29&gt;+1" office:value-type="float" office:value="28">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">28</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-newton-min-iterations</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. The minimum number of TPSA Newton iterations. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A30&gt;+1" office:value-type="float" office:value="29">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">29</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-newton-target-iterations</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. The &apos;optimum&apos; number of TPSA Newton iterations. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">10</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A31&gt;+1" office:value-type="float" office:value="30">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">30</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-newton-tolerance</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A real value. The maximum absolute error tolerated by the TPSA Newton method for considering a solution to be converged. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.001</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A32&gt;+1" office:value-type="float" office:value="31">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">31</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-newton-verbosity</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">An integer value. Verbosity level of TPSA Newton solver: 0 (=none), 1 (=basic), 2 (=all). </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A33&gt;+1" office:value-type="float" office:value="32">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">32</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-relaxed-linear-solver-reduction</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A real value. A relaxed version of --tpsa-linear-solver-reduction (use with care!). </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.001</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A34&gt;+1" office:value-type="float" office:value="33">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">33</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">--tpsa-use-gmres</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Use GMRES linear solver. If false, BiCGStab is used. </text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A22" table:formula="ooow:&lt;A35&gt;+1" office:value-type="float" office:value="34">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">34</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">--use-hy-ne</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Wheter or not to use Hybrid Newton. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Whether or not to use Hybrid Newton. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This option has been replaced by --use-hybrid-newton. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
       </table:table-cell>
      </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A20&gt;+1" office:value-type="float" office:value="19">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">19</text:p>
+     <table:table-row table:style-name="Table14.2">
+      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A36&gt;+1" office:value-type="float" office:value="35">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">35</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--verify-gpu-aware-mpi</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--use-hybrid-newton</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Verify that the MPI implementation supports GPU aware MPI. If this is set to true *and* --gpu-aware-mpi=true, the simulation will fail if the MPI implementation does not support GPU aware MPI. Note that the verification is not exhaustive, and some configurations might not be verified, but will work in practice. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Whether or not to use Hybrid Newton. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
-      </table:table-cell>
-     </table:table-row>
-     <table:table-row table:style-name="Table14.3">
-      <table:table-cell table:style-name="Table14.A3" table:formula="ooow:&lt;A21&gt;+1" office:value-type="float" office:value="20">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">20</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--well-group-constraints-max-iterations</text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of iterations in the well/group switching algorithm. </text:p>
-      </table:table-cell>
-      <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.3">
@@ -13399,7 +13683,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P681">Notes:</text:p>
        <text:list xml:id="list1222433614" text:style-name="_40_NumberList">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P982">Cells colored in green in the “No.” column indicate a new command line option or a change to an existing option for this release. Cells colored green in the &quot;Default&quot; column indicate that the default value for an existing option has been changed.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">Cells colored in green in the “No.” column indicate a new command line option or a change to an existing option for this release. Cells colored green in the &quot;Default&quot; column indicate that the default value for an existing option has been changed.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="_40_Table_20_Contents">Cells colored red in the No. column indicate command line parameters that have either been decrepated or removed from this release.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -13429,6 +13716,33 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:list>
        <text:list-item>
         <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="_40_TextBody">Support has been added for pressure and temperature dependent water viscosity for runs with brine (BRINE) and energy (THERMAL) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4656" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4656</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Flow now supports runs with brine (BRINE) and energy (THERMAL) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6368" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6368</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for double precision WORK arrays for compressed property arrays (for example SOGCR) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4861" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4861</text:a>). Operating on "global" arrays, such as MULTZ, with WORK arrays is not currently supported. Item 8 of the REGDIMS keyword does not impose an upper limit on the number of distinct WORK arrays that can be used. Note that integer IWORK arrays are not currently supported. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for RSCONST keyword to define a constant solution gas-oil ratio for all dead oil PVT tables (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6971" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6971</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4993" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4993</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for EQUIL keyword item 9 (EQLOPT3) greater than zero (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6519" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6519</text:a>). In this case the tilt of the grid blocks is taken into account when calculating the initial fluids in place. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for inter-block flows of oil, water, and gas in the negative i, j, and k directions (BFLO[GOW][IJK]-), and improved the efficiency of the block flow summary output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6793" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6793</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4954" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4954</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/4906" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4906</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The grid independent well keywords WELTRAJ and COMPTRAJ now partially support multi-segment wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4524" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4524</text:a>). If a well entry is added to the WELSEGS keyword, without defining the segment structure (i.e. only the first record is defined), information provided by the WELTRAJ and COMPTRAJ keywords is used to generate segments for that well (i.e. the missing WELSEGS records, and the COMPSEGS information). The generated multi-segment wells currently consist of one segment for each cell along the well trajectory defined by the WELTRAJ. The tubing internal diameter is currently set equal to the wellbore diameter specified on the COMPDAT keyword and the tubing roughness is set to zero. Future developments are expected to support reading additional WELSEGS records to give more control over the segment structure and tubing properties. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Drift compensation is now applied to mass losses in the energy equations to avoid unphysical temperatures if OPM Flow's temperature model (TEMP keyword) has been activated (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6684" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6684</text:a>). See the command line option --enable-drift-compensation-temp (= true, by default). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The integer vector RUNTIMEI is now written to the SMSPEC file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5115" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5115</text:a>). This is needed by some external tools. </text:p>
+         </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
@@ -13453,6 +13767,105 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:list>
        <text:list-item>
         <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="_40_TextBody">Renamed Hybrid Newton command line options from --hy-ne-config-file and --use-hy-ne to --hybrid-newton-config-file and --use-hybrid-newton (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6588" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6588</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Updated the descriptions of the command line options (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6651" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6651</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added the option to solve the energy equations sequentially after the black-oil equations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5854" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5854</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4825" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4825</text:a>). This is activated by the TEMP keyword. Note that the fully implicit solution of the energy and black-oil equations can still be activated by using the THERMAL keyword. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for non-neighbor connections ("NNC"s) when the corner point grid contains local grid refinement ("LGR") (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6844" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6844</text:a>). Previously, the NNCs where not generated between coarse and refined grids. This is required for future support of LGRs in OPM Flow. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">If necessary, the gas PVT tables PVTG and PVDG are modified internally to ensure that negative inverse formation volume factors will never be extrapolated (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4828" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4828</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Killough's hysteresis wetting phase modification (EHYSTR keyword item 13) is now supported (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5032" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5032</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6912" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6912</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for well energy injection/production rate and total summary vectors: WTPRHEA, WTPTHEA, WTIRHEA and WTITHEA (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6547" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6547</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support has been added for the gas lift injection total summary vectors: FGLIT, GGLIT, and WGLIT (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4802" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4802</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Extended summary (ESMRY) files are now output by default (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6590" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6590</text:a>). The command line option --enable-esmry is now set to true by default. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for region oil recovery efficiency summary vector ROE (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4833" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4833</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Production and gas lift supply rates from satellite groups (GSATPROD) are now accumulated in summary output (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6725" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6725</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4892" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4892</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for summary output of inter-block oil, water, and gas velocities in the positive/negative i, j, and k directions (BVEL[GOW][IJK][-]) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6830" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6830</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4989" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4989</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The code now forces a final write to the SMSPEC files at the last report time to ensure all potential changes (such as WGNAMES and KEYWORDS) due to ACTIONX keywords triggered at intermediate timesteps are captured (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5062" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5062</text:a>). In addition, there may have been previous writes that missed information due to adaptive time stepping. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">All current well lists are now reported to the Print (PRT) file when the WELSPECS mnemonic is specified on the RPTSCHED keyword (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4788" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4788</text:a>). The well list report is generated whenever any of the well lists have been changed. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Restart file support has been added for the parameters defined by the VAPPARS keyword, and a flag to indicate if the VAPPARS keyword is active (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4819" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4819</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for restarting runs using the temperature model (TEMP) and/or gas phase tracers (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4811" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4811</text:a>). Note that UDAs are not yet supported for these features during restart. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Support for using the WDFAC and BRANPROP keywords in an ACTIONX block has been successfully tested (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4847" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4847</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The maximum number of Newton iterations with inner well iterations has been increased from 8 to 99 and is now applied to both standard and multi-segment wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6098" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6098</text:a>). See the command line option --max-newton-iterations-with-inner-well-iterations(=99). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for using well completion quantities (for example, WWCTL__3 'P1') in ACTIONX Boolean conditions (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4855" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4855</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4898" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4898</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A more detailed error message is now generated if the COMPSEGS keyword references an undefined segment (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4907" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4907</text:a>). The message now includes the segment and branch numbers, as well as the connection's IJK location.  Previously this would result in an exception being thrown giving the segment number only. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody"> Added support for the TUNINGDP keyword items 3 to 6, which set the maximum pressure, saturation, Rs, and Rv changes respectively during a Newton iteration (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6723" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6723</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4890" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4890</text:a>). Note that items 5 and 6 are OPM Flow specific items. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">If the WSEGAICD, WSEGSICD, or WSEGVALV keywords reference an undefined segment then a warning message will now be output, and the device will not be added to the well (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4908" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4908</text:a>). Previously an exception would be thrown. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added support for VFPPROD tables with only one data record (single-line lift curves) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4909" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4909</text:a>). The BHP values depend only on flow rate (FLO) and are replicated across all THP/WFR/GFR/ALQ combinations. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">A message is now output for Restart runs that do not include the SKIPREST keyword, but that contain explicitly defined DATES on or before the Restart time (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4963" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4963</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The default value for the maximum number of Newton iterations to update well targets specified using the NUPCOL keyword has been reduced from 12 to 3 (the same value as the commercial black-oil simulator) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4373" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4373</text:a>). Also, the default value for the minimum number of Newton iterations to update well targets specified by the OPM Flow specific MINNPCOL keyword has been reduced from 6 to 3.  The MINNPCOL keyword has been deprecated. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody"> Support has been added for GCONPROD item 10 equal to POTN, which sets a group's guide rate equal to its production potential, i.e. the sum of potentials of all subordinate open producers (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5098" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5098</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">When the convertECL utility is run with the -l option a list of the restart times in the specified unified restart file is generated (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4830" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4830</text:a>). The output has been extended to include the time of day and use month names rather than numbers for the date (dd-Mmm-yyyy HH:MM:SS). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The building blocks for Krylov subspace methods and a highly optimized mixed-precision implementation of ILU0 and DILU preconditioned BiCGSTAB have been added (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6521" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6521</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/blob/master/opm/simulators/linalg/mixed/README.md" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">README.md</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The Machine Learning code has been refactored to remove the TensorFlow dependency, now only NumPy is required (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4857" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4857</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The code now avoids recreating the linear solver for every temperature model solve (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6898" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6898</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">OPM Flow now reports and skips well connections in cells where the permeability in the directions perpendicular to the perforation interval is zero (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5079" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5079</text:a>). This is currently only supported for X, Y, or Z direction perforation intervals as defined on the COMPDAT keyword. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added file conversion support for INSPEC and RSSPEC files to the convertECL utility (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5116" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5116</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Updated the CMake file to allow opm-common to be used by other programs that do not use the OPM specific build system (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5121" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5121</text:a>). </text:p>
+         </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
@@ -13477,6 +13890,87 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <text:list>
        <text:list-item>
         <text:list>
+         <text:list-item text:start-value="1">
+          <text:p text:style-name="_40_TextBody">Correctly account for net-to-gross ratio when calculating the rock volume for use in the heat equation (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6542" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6542</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Implemented endpoint scaling for gas-water systems (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4923" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4923</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed summary output of well tracer rates for cases with multi-phase tracers (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6577" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6577</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Ensure that the internal logic for generating unique region vector keys always computes the same string value (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4858" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4858</text:a>). This also fixes a problem concerning inter-region flow vectors with a user defined region set, for example: ROFT_ABC, ROFT+ABC, and ROFT-ABC. Prior to this PR, these would be stored internally with duplicated region set names and would be incorrectly written as zero in the summary files. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Corrected the Summary output of iterations counts (for example NEWTON) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6720" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6720</text:a>). Previously these were out by one and incorrect following a timestep cut. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Ensure that all well segment connections defined during the report step using the COMPSEGS keyword are considered when updating the scaling factors for AICDs and SICDs defined using the WSEGAICD and WSEGSICD keywords (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4803" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4803</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-tests/pull/1413" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#1413</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Correctly account for permeability reduction due to salt precipitation when calculating the well connection factor (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6565" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6565</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6562" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6562</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the output units for DRSDT in the Restart file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4818" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4818</text:a>). This was only an issue if a Restart file generated by OPM Flow was used to restart a run in a different simulator. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Defer consistency checking of the SCHEDULE section for restart runs until the input data has been combined with information from the restart file (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4822" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4822</text:a>). This avoids false positives for the 'requires' clause when checking the input data where the required data may be stored in the restart file. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Well perforation cell indices are now compared when checking for changes rather than just comparing the total number of cells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6609" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6609</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">An issue has been resolved in parallel runs where after a group was closed for economic reasons, some ranks could later try to perform well testing on wells that did not exist on the rank (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6629" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6629</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The POLYMER output array is now correctly treated as "concentration" instead of saturation when converting to output units (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6640" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6640</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4749" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4749</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Restored output of the mole fraction arrays XMFCO2, XMFH2, and YMFWAT when using the CO2STORE and H2STORE models (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6637" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6637</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6580" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6580</text:a>). These arrays were not output by OPM Flow versions 2025-04 and 2025-10. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Mass balance of injected filtrate is now ensured in wells with cross-flow by assuming zero filtrate concentration in cross-flowing water, as well as complete mixing of the injected and cross-flowing water (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6672" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6672</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the units for artificial lift quantity (ALQ) when calculating pressure drops in branches of an extended network model (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6675" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6675</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4844" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4844</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the evaluation of accumulated efficiency factors during group constraint checks (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6681" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6681</text:a>). Previously, this could cause incorrect constraint violations when checking higher-level group constraints. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the application of group efficiency factors to group gas consumption and import rates (GCONSUMP) (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6737" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6737</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed an error in the calculation of injection rates when a voidage replacement target had been set (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6784" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6784</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the calculation of aggregated surface well rates when checking if an auto choke group is underperforming in parallel runs (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6833" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6833</text:a>). Previously, only the rates on the current rank were considered. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the calculation of the target rate for auto choke groups (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6835" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6835</text:a>). This prevents double-counting of reductions at intermediate groups with no group controlled wells, and corrects the common case where the control group is the immediate parent with no reductions. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The caller's Python interpreter is now used for file parsing (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6886" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6886</text:a>). This is required to properly handle the PYINPUT keyword, otherwise the internal support for PYINPUT will fail trying to initialize a second Python interpreter and generate a misleading error message. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Injection rates for all phases are now accounted for correctly for multi-phase injection groups under reservoir volume rate (RESV) control (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6915" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6915</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the evaluation of the residuals for the temperature (TEMP) model when running in parallel (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6663" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6663</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Two bugs have been fixed relating to salinity handling when initializing diffusion coefficients, and the region-dependent salinity used for diffusion coefficients in CO2STORE/H2STORE GASWAT simulations (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5097" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5097</text:a>). In addition, a one-iteration Batzle-Wang correction has been applied to the conversion from salt concentration to mass fraction. </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Fixed the "duneilu" preconditioner choice available through the JSON interface for the linear solver (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6977" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6977</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Added a guard against running simulations using the Two-Point Stress Approximation (TPSA) option if a flow binary does not exist for this particular setup (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6990" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6990</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Ensure that all output is written when the simulation run is ended early using the EXIT keyword in an ACTIONX block (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6991" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6991</text:a>). Previously this was only done if the last report step had been reached. </text:p>
+         </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
@@ -13560,9 +14054,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           <text:p text:style-name="_40_TextBody">If a standard well is fully declared in an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block which is then activated at a later date, and later the well is modified to be a multi-segment well using the <text:a xlink:href="#__RefHeading___Toc97661_3261743917">WELSEGS</text:a> and <text:a xlink:href="#__RefHeading___Toc316604_3519154785">COMPSEGS</text:a> keywords, then this will cause the simulator to abort with an assert failure. The solution to this issue is to not use this type of work flow in declaring wells (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2891" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2891</text:a> and <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/2895" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2895</text:a>). </text:p>
          </text:list-item>
          <text:list-item>
-          <text:p text:style-name="_40_TextBody">Although the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> <text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a> command works as expected, it does not write out the requested RSM file at the end of the run. However, the other <text:a xlink:href="#__RefHeading___Toc43949_784232322">SUMMARY</text:a> and <text:a xlink:href="#__RefHeading___Toc135629_1317547213">RESTART</text:a> files are written out (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/issues/2877" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#2877</text:a>). </text:p>
-         </text:list-item>
-         <text:list-item>
           <text:p text:style-name="_40_TextBody">There are small differences in the behavior of the <text:a xlink:href="#__RefHeading___Toc323446_1841740821">NEXTSTEP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section between OPM Flow and the commercial simulator that remain unresolved (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/issues/3745" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#3745</text:a>).</text:p>
          </text:list-item>
          <text:list-item>
@@ -13596,7 +14087,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:list-item>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P1339">Dispersion in the gas phase leads to convergence issues for the 11th SPE CSP (<text:a xlink:type="simple" xlink:href="https://spe.org/csp" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">https://spe.org/csp</text:a>) models Version 11B and Version 11C (and is not fully tested). Therefore dispersion in the gas phase has been removed and a warning added (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5101" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5101</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-models/pull/859" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#859</text:a>).</text:p>
+          <text:p text:style-name="_40_TextBody">Dispersion in the gas phase leads to convergence issues for the 11th SPE CSP (<text:a xlink:type="simple" xlink:href="https://spe.org/csp" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">https://spe.org/csp</text:a>) models Version 11B and Version 11C (and is not fully tested). Therefore dispersion in the gas phase has been removed and a warning added (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/5101" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5101</text:a>, <text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-models/pull/859" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#859</text:a>).</text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The build system currently picks the system-installed version of DUNE, not the one available in the git repositories. The workaround is to use dunecontrol to perform the build. (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/5126" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#5126</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">It is not currently possible to modify the DEPTH array in the EDIT section. (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6911" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6911</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Two phase VFP tables are only supported for oil-water systems. (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6817" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6817</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The saturation function end-point consistency checks generate an error for very small negative saturation end-points (for example SOGCR equal to -5.551115e-17). (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6606" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6606</text:a>). </text:p>
+         </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">Using lower case for FACE, e.g. 'x', on the FAULTS keyword causes the simulation to abort. The workaround is to aways use upper case, e.g. 'X' (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-common/pull/4983" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#4983</text:a>). </text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
