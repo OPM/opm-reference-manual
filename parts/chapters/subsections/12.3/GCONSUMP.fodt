@@ -4367,8 +4367,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc10367_370116838819151"/>Description<text:bookmark-end text:name="__RefHeading___Toc10367_370116838819151"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc188037_2026549522">GCONSUMP</text:a> defines the group gas consumption rate either as an actual rate or as a percentage of the group’s production. In both oil and gas fields produced gas is commonly used as fuel to support the processing and utility facilities needed to run the plant.</text:p>
-    <text:p text:style-name="_40_TextBody">In addition to defining gas consumption, the keyword can also be used to define the group’s gas import rate, if required. This is used to import gas into the model from other sources (fields, reservoirs etc.) that are not included in the current run. For example, if a several fields are supplying gas to a power plant (field A, B and C), but only one is being modeled in the current import deck (A), then production from the other two fields (B and C) can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from fields B and C are fixed, and therefore field A acts like a “swing” producer to match the gas demand target. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc188037_2026549522">GCONSUMP</text:a> keyword defines the group gas consumption rate either as an actual rate or as a fraction of the group’s production. In both oil and gas fields produced gas is commonly used as fuel to support the processing and utility facilities needed to run the plant.</text:p>
+    <text:p text:style-name="_40_TextBody">In addition to defining gas consumption, the keyword can also be used to define the group’s gas import rate, if required. This is used to import gas into the model from other sources (fields, reservoirs, etc.) that are not included in the current model. For example, if several fields are supplying gas to a power plant (fields A, B, and C), but only one is being modeled in the current import deck (A), then production from the other two fields (B and C) can be incorporated into model in order to meet the plant demand. Note in this case the import gas rates from fields B and C are fixed, and therefore field A acts like a “swing” producer to match the gas demand target. </text:p>
     <table:table table:name="Table1900" table:style-name="Table1900">
      <table:table-column table:style-name="Table1900.A"/>
      <table:table-column table:style-name="Table1900.B"/>
@@ -4505,7 +4505,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P9512">GASNODE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1900.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P9014">A character string of up to eight characters in length that defines the network node in the Extended Network Model, for which the fuel gas should be removed (GASFUEL) or the imported gas (GASIMP) assigned.</text:p>
+       <text:p text:style-name="P9014">A character string of up to eight characters in length that defines the network node in the Extended Network Model, for which the fuel gas (GASFUEL) should be removed or the imported gas (GASIMP) assigned.</text:p>
        <text:p text:style-name="P8737">This option is currently not supported by OPM Flow</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4655,14 +4655,14 @@ newline
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">If the group is acting under Group Gas Re-Injection control via the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then the group gas injection rate calculated by:</text:p>
+    <text:p text:style-name="_40_TextBody">If the group is acting under Group Gas Re-Injection control via the <text:a xlink:href="#__RefHeading___Toc134874_2055188184">GCONINJE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, then the group gas injection rate is calculated by:</text:p>
     <table:table table:name="Table1007" table:style-name="Table1007">
      <table:table-column table:style-name="Table1007.A"/>
      <table:table-column table:style-name="Table1007.B"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708743838944">
        <table:table-cell table:style-name="Table1007.A1" office:value-type="string">
-        <text:p text:style-name="P1367"><draw:frame draw:style-name="fr66" draw:name="Object78" text:anchor-type="as-char" svg:width="12.515cm" svg:height="1.201cm" draw:z-index="787"><draw:object>
+        <text:p text:style-name="P1367"><draw:frame draw:style-name="fr66" draw:name="Object78" text:anchor-type="as-char" svg:width="12.875cm" svg:height="1.219cm" draw:z-index="787"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mtable>
@@ -4675,13 +4675,13 @@ newline
                   <mo stretchy="false">=</mo>
                   <mspace width="2em"/>
                  </mrow>
-                 <mtext>Group Gas Injection Rate</mtext>
+                 <mtext>Group Re-Injection Fraction</mtext>
                  <mrow>
                   <mspace width="0.5em"/>
                   <mo stretchy="false">×</mo>
                   <mspace width="0.5em"/>
                  </mrow>
-                 <mtext>Group Re-Injection Fraction</mtext>
+                 <mtext>( Group Gas Production Rate</mtext>
                 </mrow>
                </mtd>
               </mtr>
@@ -4705,13 +4705,12 @@ newline
                   <mo stretchy="false">−</mo>
                   <mspace width="0.5em"/>
                  </mrow>
-                 <mtext>Total Group Gas Consumption</mtext>
+                 <mtext>Total Group Gas Consumption )</mtext>
                 </mrow>
                </mtd>
               </mtr>
              </mtable>
-             <annotation encoding="StarMath 5.0">
- { &quot;Group Gas Injection Rate&quot; ~ = ~ &quot;Group Gas Injection Rate&quot; ` times ` &quot;Group Re-Injection Fraction&quot; } newline {~~~~ + ` &quot;Total Group Gas Import Rate&quot; } newline { ~~~~~ - ` &quot;Total Group Gas Consumption&quot; } </annotation>
+             <annotation encoding="StarMath 5.0">{ &quot;Group Gas Injection Rate&quot; ~ = ~ &quot;Group Re-Injection Fraction&quot; ` times ` &quot;( Group Gas Production Rate&quot; } newline {~~~~ + ` &quot;Total Group Gas Import Rate&quot; } newline { ~~~~~ - ` &quot;Total Group Gas Consumption )&quot; } </annotation>
             </semantics>
            </math>
           </draw:object><draw:image>
@@ -4770,7 +4769,7 @@ newline
       <table:table-row table:style-name="TableLine94708743852752">
        <table:table-cell table:style-name="Table1901.A1" office:value-type="string">
         <text:p text:style-name="P10345">Note</text:p>
-        <text:p text:style-name="P10199">In oil fields with no gas compression typical values of fuel gas range from three to five percent.</text:p>
+        <text:p text:style-name="P10199">In oil fields with no gas compression typical fuel gas consumption ranges from three to five percent of the produced gas.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
