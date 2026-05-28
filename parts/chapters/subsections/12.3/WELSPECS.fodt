@@ -4968,7 +4968,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P98" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc716753_3964674244"/>Description<text:bookmark-end text:name="__RefHeading___Toc716753_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword defines the general well specification data for all well types, and must be used for all wells before any other well specification keywords are used in the input file. The keyword declares the well, the name of the well, the group the well initial belongs to, the wellhead location and other key parameters.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword defines the general well specification data for all well types, and must be used for all wells before any other well specification keywords are used in the input file. The keyword declares the well, the name of the well, the group the well initially belongs to, the wellhead location and other key parameters.</text:p>
     <text:p text:style-name="_40_TextBody">OPM Flow also supports the use of the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword to change the properties of one or more wells previously specified using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword. In particular, this supports changing the controlling group (GRPNAME) without affecting any other well properties such as the location of the well head (I, J) or the well reference depth (BHPREF), since defaulted properties are not changed in this case. However, the well reference depth can be re-defaulted by specifying a negative value for BHPREF. The wells to be changed can be specified using a well name, well name pattern or well list (WELNAME).</text:p>
     <table:table table:name="Table665" table:style-name="Table665">
      <table:table-column table:style-name="Table665.A"/>
@@ -5016,7 +5016,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P135">WELNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P135">A character string of up to eight characters in length that defines the well name for which the well specification data are being defined.</text:p>
+       <text:p text:style-name="P135">A character string of up to eight characters in length that defines the well name for which the well specification data are being defined. Can be set to '?' to apply to any well that matches the condition within an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5154,7 +5154,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table665.C2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="P135">A real value that defines the well drainage radius for the well used to calculate a well’s productivity or injectivity index. </text:p>
-       <text:p text:style-name="P135">A default of zero results in the pressure equivalent radius of the grid blocks containing the well connections are used.</text:p>
+       <text:p text:style-name="P135">A default of zero results in the pressure equivalent radius of the grid blocks containing the well connections being used.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5194,7 +5194,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P137">R-G: the Russell Goodrich<text:note text:id="ftn1" text:note-class="footnote"><text:note-citation>1</text:note-citation><text:note-body>
-            <text:p text:style-name="P65">Russell, D.G., Goodrich, J.H., Perry, G.E and Bruskotter, J.F &quot;Methods of Predicting Gas Well Performance&quot;, Transactions of the ASME, Journal of Petroleum Technology (1966) 99-108.</text:p></text:note-body></text:note> pressure square inflow equation will used. This option can be used for dry gas wells. </text:p>
+            <text:p text:style-name="P65">Russell, D.G., Goodrich, J.H., Perry, G.E and Bruskotter, J.F &quot;Methods of Predicting Gas Well Performance&quot;, Transactions of the ASME, Journal of Petroleum Technology (1966) 99-108.</text:p></text:note-body></text:note> pressure squared inflow equation will used. This option can be used for dry gas wells. </text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="P137">YES: an alias for R-G.</text:p>
@@ -5410,7 +5410,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="P138">The keyword is followed by any number records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P138">Note that the total number of individual wells declared by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> cannot exceed the valued entered via the MXWELS variable on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="P138">Note that the total number of individual wells declared by the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> cannot exceed the value entered via the MXWELS variable on the <text:a xlink:href="#__RefHeading___Toc82886_327352552">WELLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
