@@ -829,6 +829,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:background-color="#579d1c" style:writing-mode="lr-tb"/>
    <style:text-properties fo:color="#ffffff" loext:opacity="100%" fo:font-size="10pt" fo:font-weight="normal"/>
   </style:style>
+  <style:style style:name="_40_TextNoteCenter" style:display-name="@TextNoteCenter" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <loext:graphic-properties draw:fill="solid" draw:fill-color="#579d1c"/>
+   <style:paragraph-properties fo:background-color="#579d1c" style:writing-mode="lr-tb" fo:text-align="center"/>
+   <style:text-properties fo:color="#ffffff" loext:opacity="100%" fo:font-size="10pt" fo:font-weight="normal"/>
+  </style:style>
   <style:style style:name="_40_TextCompanyName" style:display-name="@TextCompanyName" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-variant="small-caps" fo:color="#ffffff" loext:opacity="100%" fo:font-size="36pt" style:font-size-asian="36pt" style:font-size-complex="36pt"/>
@@ -892,6 +897,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="_40_Table_20_Contents" style:display-name="@Table Contents" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
@@ -975,6 +984,42 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
+  <style:style style:name="Bold" style:family="text">
+   <style:text-properties fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="BoldItalic" style:family="text" style:parent-style-name="Bold">
+   <style:text-properties fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="BoldUnderline" style:family="text" style:parent-style-name="Bold">
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+  </style:style>
+  <style:style style:name="Italic" style:family="text">
+   <style:text-properties fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="Underline" style:family="text">
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+  </style:style>
+  <style:style style:name="Sub" style:family="text">
+   <style:text-properties style:text-position="sub 58%"/>
+  </style:style>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
+  <style:style style:name="Expression" style:family="text">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-family="&apos;Liberation Serif&apos;" fo:font-size="10pt" fo:letter-spacing="0.035cm" fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="ExpressionRegular" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionBold" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal" fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="ExpressionSub" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="-20% 58%" fo:letter-spacing="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionSuper" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="42% 58%" fo:letter-spacing="normal"/>
+  </style:style>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -2983,9 +3028,6 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:margin-top="0.076cm" fo:margin-bottom="0.076cm" style:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false" fo:orphans="0" fo:widows="0" fo:background-color="transparent" style:shadow="none" text:number-lines="false" text:line-number="0"/>
    <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="00531151" officeooo:paragraph-rsid="0233a130"/>
   </style:style>
-  <style:style style:name="T1" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US"/>
-  </style:style>
   <style:style style:name="T2" style:family="text">
    <style:text-properties fo:font-size="20pt" style:font-size-asian="20pt" style:font-size-complex="20pt"/>
   </style:style>
@@ -3013,23 +3055,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="T504" style:family="text">
    <style:text-properties officeooo:rsid="07070fd2"/>
   </style:style>
-  <style:style style:name="T506" style:family="text">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:rsid="13ac3201"/>
-  </style:style>
   <style:style style:name="T1470" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3"/>
   </style:style>
   <style:style style:name="T1471" style:family="text">
    <style:text-properties style:font-name="Gill Sans MT3" officeooo:rsid="06f4e628"/>
-  </style:style>
-  <style:style style:name="T2620" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T3628" style:family="text">
-   <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="T6560" style:family="text">
-   <style:text-properties fo:color="#ffffff" loext:opacity="100%" style:font-name="Gill Sans MT" fo:font-size="10pt" fo:font-weight="normal" fo:background-color="transparent" loext:char-shading-value="0" style:font-name-asian="Times New Roman1" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-name-complex="Times New Roman1" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="fr66" style:family="graphic" style:parent-style-name="Formula">
    <style:graphic-properties style:vertical-pos="middle" style:vertical-rel="text" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" draw:ole-draw-aspect="1"/>
@@ -4182,83 +4212,83 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P443"><text:span text:style-name="Internet_20_link">A</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1201"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">B</text:span></text:span></text:p>
+       <text:p text:style-name="P1201"><text:span text:style-name="Internet_20_link">B</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">C</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">C</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">D</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">D</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">E</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">F</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">F</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">G</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">G</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">H</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">H</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
        <text:p text:style-name="P1206"><text:span text:style-name="Internet_20_link">I</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">J</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">K</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">L</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1203"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T506">M</text:span></text:span></text:p>
+       <text:p text:style-name="P1203"><text:span text:style-name="Internet_20_link">M</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">N</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">N</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">O</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">O</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">P</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">P</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">Q</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">Q</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">R</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">R</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">S</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">S</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">T</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">T</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">U</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">U</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P2575"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">V</text:span></text:span></text:p>
+       <text:p text:style-name="P2575"><text:span text:style-name="Internet_20_link">V</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P2793"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">W</text:span></text:span></text:p>
+       <text:p text:style-name="P2793"><text:span text:style-name="Internet_20_link">W</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">X</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">X</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">Y</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">Y</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.Z1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">Z</text:span></text:span></text:p>
+       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link">Z</text:span></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P3"><text:span text:style-name="T1">Date: </text:span><text:span text:style-name="T1"><text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined></text:span><text:span text:style-name="T1"><text:tab/></text:span><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">Table of Contents</text:span></text:a><text:span text:style-name="T1"><text:tab/>Page </text:span><text:span text:style-name="T1"><text:page-number text:select-page="current">2575</text:page-number></text:span><text:span text:style-name="T1"><text:s/>of </text:span><text:span text:style-name="T1"><text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:span></text:p>
+    <text:p text:style-name="P3">Date: <text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined><text:tab/><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Table of Contents</text:a><text:tab/>Page <text:page-number text:select-page="current">2575</text:page-number><text:s/>of <text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:p>
    </style:footer>
   </style:master-page>
   <style:master-page style:name="_40_ChapterFirstPage" style:display-name="@ChapterFirstPage" style:page-layout-name="pm12" draw:style-name="dp4" style:next-style-name="Standard">
@@ -4298,7 +4328,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P1"/>
    </style:header>
    <style:footer>
-    <text:p text:style-name="P4"><text:span text:style-name="T1">Date: </text:span><text:span text:style-name="T1"><text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined></text:span><text:span text:style-name="T1"><text:tab/></text:span><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">Table of Contents</text:span></text:a><text:span text:style-name="T1"><text:tab/>Page </text:span><text:span text:style-name="T1"><text:page-number text:select-page="current">1829</text:page-number></text:span><text:span text:style-name="T1"><text:s/>of </text:span><text:span text:style-name="T1"><text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:span></text:p>
+    <text:p text:style-name="P4">Date: <text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined><text:tab/><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Table of Contents</text:a><text:tab/>Page <text:page-number text:select-page="current">1829</text:page-number><text:s/>of <text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:p>
    </style:footer>
   </style:master-page>
   <style:master-page style:name="_40_ChapterPageStyle" style:display-name="@ChapterPageStyle" style:page-layout-name="pm13" draw:style-name="dp3">
@@ -4338,7 +4368,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P1"/>
    </style:header>
    <style:footer>
-    <text:p text:style-name="P4"><text:span text:style-name="T1">Date: </text:span><text:span text:style-name="T1"><text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined></text:span><text:span text:style-name="T1"><text:tab/></text:span><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">Table of Contents</text:span></text:a><text:span text:style-name="T1"><text:tab/>Page </text:span><text:span text:style-name="T1"><text:page-number text:select-page="current">223</text:page-number></text:span><text:span text:style-name="T1"><text:s/>of </text:span><text:span text:style-name="T1"><text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:span></text:p>
+    <text:p text:style-name="P4">Date: <text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined><text:tab/><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Table of Contents</text:a><text:tab/>Page <text:page-number text:select-page="current">223</text:page-number><text:s/>of <text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:p>
    </style:footer>
   </style:master-page>
   <style:master-page style:name="_40_AppendixPageStyle" style:display-name="@AppendixPageStyle" style:page-layout-name="pm13" draw:style-name="dp3">
@@ -4378,7 +4408,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P1"/>
    </style:header>
    <style:footer>
-    <text:p text:style-name="P4"><text:span text:style-name="T1">Date: </text:span><text:span text:style-name="T1"><text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined></text:span><text:span text:style-name="T1"><text:tab/></text:span><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">Table of Contents</text:span></text:a><text:span text:style-name="T1"><text:tab/>Page </text:span><text:span text:style-name="T1"><text:page-number text:select-page="current">3060</text:page-number></text:span><text:span text:style-name="T1"><text:s/>of </text:span><text:span text:style-name="T1"><text:expression text:formula="ooow:Page-7" office:value-type="float" office:value="2719" style:data-style-name="N0">2719</text:expression></text:span></text:p>
+    <text:p text:style-name="P4">Date: <text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined><text:tab/><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Table of Contents</text:a><text:tab/>Page <text:page-number text:select-page="current">3060</text:page-number><text:s/>of <text:expression text:formula="ooow:Page-7" office:value-type="float" office:value="2719" style:data-style-name="N0">2719</text:expression></text:p>
    </style:footer>
   </style:master-page>
   <style:master-page style:name="_40_AppendixFirstPage" style:display-name="@AppendixFirstPage" style:page-layout-name="pm14" draw:style-name="dp4" style:next-style-name="_40_AppendixPageStyle">
@@ -4418,7 +4448,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P1"/>
    </style:header>
    <style:footer>
-    <text:p text:style-name="P4"><text:span text:style-name="T1">Date: </text:span><text:span text:style-name="T1"><text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined></text:span><text:span text:style-name="T1"><text:tab/></text:span><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">Table of Contents</text:span></text:a><text:span text:style-name="T1"><text:tab/>Page </text:span><text:span text:style-name="T1"><text:page-number text:select-page="current">2903</text:page-number></text:span><text:span text:style-name="T1"><text:s/>of </text:span><text:span text:style-name="T1"><text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:span></text:p>
+    <text:p text:style-name="P4">Date: <text:user-defined style:data-style-name="N0" text:name="DocumentDate">June 8, 2023</text:user-defined><text:tab/><text:a xlink:type="simple" xlink:href="#Table of Contents" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">Table of Contents</text:a><text:tab/>Page <text:page-number text:select-page="current">2903</text:page-number><text:s/>of <text:expression text:formula="ooow:Page-8" office:value-type="float" office:value="2718" style:data-style-name="N0">2718</text:expression></text:p>
    </style:footer>
   </style:master-page>
   <style:master-page style:name="Envelope" style:page-layout-name="pm15"/>
@@ -4441,8 +4471,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="JFUNC">
-
-<text:h text:style-name="P17800" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc86297_3218818441"/>JFUNC – Activate the Leverett J-function Option<text:bookmark-end text:name="__RefHeading___Toc86297_3218818441"/></text:h>
+    <text:h text:style-name="P17800" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc86297_3218818441"/>JFUNC – Activate the Leverett J-function Option<text:bookmark-end text:name="__RefHeading___Toc86297_3218818441"/></text:h>
     <table:table table:name="Table393" table:style-name="Table393">
      <table:table-column table:style-name="Table393.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table393.E"/>
@@ -4450,28 +4479,28 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table393.A" table:number-columns-repeated="2"/>
      <table:table-row table:style-name="TableLine94708675888512">
       <table:table-cell table:style-name="Table393.A1" office:value-type="string">
-       <text:p text:style-name="P5792"><text:a xlink:type="simple" xlink:href="#3.RUNSPEC SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">RUNSPEC</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#3.RUNSPEC SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">RUNSPEC</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.B1" office:value-type="string">
-       <text:p text:style-name="P6419"><text:a xlink:type="simple" xlink:href="#4.GRID SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">GRID</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#4.GRID SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">GRID</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.A1" office:value-type="string">
-       <text:p text:style-name="P6420"><text:a xlink:type="simple" xlink:href="#5.EDIT SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">EDIT</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#5.EDIT SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">EDIT</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.A1" office:value-type="string">
-       <text:p text:style-name="P6421"><text:a xlink:type="simple" xlink:href="#6.PROPS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">PROPS</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#6.PROPS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">PROPS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.A1" office:value-type="string">
-       <text:p text:style-name="P6422"><text:a xlink:type="simple" xlink:href="#7.REGIONS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">REGIONS</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#7.REGIONS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">REGIONS</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.A1" office:value-type="string">
-       <text:p text:style-name="P6423"><text:a xlink:type="simple" xlink:href="#8.SOLUTION SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">SOLUTION</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#8.SOLUTION SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SOLUTION</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.A1" office:value-type="string">
-       <text:p text:style-name="P6423"><text:a xlink:type="simple" xlink:href="#9.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">SUMMARY</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#9.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SUMMARY</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table393.H1" office:value-type="string">
-       <text:p text:style-name="P6424"><text:a xlink:type="simple" xlink:href="#10.SCHEDULE SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">SCHEDULE</text:span></text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:type="simple" xlink:href="#10.SCHEDULE SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SCHEDULE</text:a></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -4488,131 +4517,131 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table394.1">
        <table:table-cell table:style-name="Table394.A1" table:number-rows-spanned="2" office:value-type="string">
-        <text:p text:style-name="P10544">No.</text:p>
+        <text:p text:style-name="Table_20_Heading">No.</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table394.A1" table:number-rows-spanned="2" office:value-type="string">
-        <text:p text:style-name="P10544">Name</text:p>
+        <text:p text:style-name="Table_20_Heading">Name</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table394.A1" table:number-columns-spanned="3" office:value-type="string">
-        <text:p text:style-name="P10544">Description</text:p>
+        <text:p text:style-name="Table_20_Heading">Description</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
        <table:covered-table-cell/>
        <table:table-cell table:style-name="Table394.F1" table:number-rows-spanned="2" office:value-type="string">
-        <text:p text:style-name="P10544">Default</text:p>
+        <text:p text:style-name="Table_20_Heading">Default</text:p>
        </table:table-cell>
       </table:table-row>
       <table:table-row table:style-name="Table394.2">
        <table:covered-table-cell/>
        <table:covered-table-cell/>
        <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-        <text:p text:style-name="P10544">Field</text:p>
+        <text:p text:style-name="Table_20_Heading">Field</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-        <text:p text:style-name="P10544">Metric</text:p>
+        <text:p text:style-name="Table_20_Heading">Metric</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-        <text:p text:style-name="P10544">Laboratory</text:p>
+        <text:p text:style-name="Table_20_Heading">Laboratory</text:p>
        </table:table-cell>
        <table:covered-table-cell/>
       </table:table-row>
      </table:table-header-rows>
      <table:table-row table:style-name="Table394.3">
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P2901">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4172">JFOPT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">JFOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P3208">A character string that defines which capillary data sets the J-Function option should be applied to, based on the following options:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string that defines which capillary data sets the J-Function option should be applied to, based on the following options:</text:p>
        <text:list xml:id="list105911018730192" text:continue-list="list105911082427608" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19473"><text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a>: apply the J-Function option to the water-oil capillary pressure data only. </text:p>
+         <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a>: apply the J-Function option to the water-oil capillary pressure data only. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19473"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: apply the J-Function option to the gas-oil capillary pressure data only.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc38607_2267116897">GAS</text:a>: apply the J-Function option to the gas-oil capillary pressure data only.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19492"><text:span text:style-name="T3628">BOTH: <text:s/>apply the J-Function option to the water-oil and the gas-oil capillary </text:span>pressure data. </text:p>
+         <text:p text:style-name="_40_Table_20_Contents">BOTH: <text:s/>apply the J-Function option to the water-oil and the gas-oil capillary pressure data. </text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.F3" office:value-type="string">
-       <text:p text:style-name="P4173">BOTH</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">BOTH</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table394.4">
       <table:table-cell table:style-name="Table394.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P2901">2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4176">OWSTEN</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">OWSTEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4178">A positive real number that defines oil-water surface tension used to de-normalized J-Function data entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real number that defines oil-water surface tension used to de-normalized J-Function data entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4179">None</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table394.5">
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4179">dynes/cm</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dynes/cm</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4179">dynes/cm</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dynes/cm</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4179">dynes/cm</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dynes/cm</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table394.6">
       <table:table-cell table:style-name="Table394.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P3358">3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4176">OGSTEN</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">OGSTEN</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4176">A positive real number that defines oil-gas surface tension used to de-normalized J-Function data entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real number that defines oil-gas surface tension used to de-normalized J-Function data entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P4179">None</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table394.7">
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4179">dynes/cm</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dynes/cm</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4179">dynes/cm</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dynes/cm</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4179">dynes/cm</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">dynes/cm</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
      </table:table-row>
      <table:table-row table:style-name="Table394.8">
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P3358">4</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4185">ALPHA</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">ALPHA</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4184">A positive real value that defines an alternative power value for the porosity term in the J-Function equation, that is instead of <draw:frame draw:style-name="fr66" draw:name="Object136" text:anchor-type="as-char" svg:width="0.709cm" svg:height="0.766cm" draw:z-index="728"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real value that defines an alternative power value for the porosity term in the J-Function equation, that is instead of <draw:frame draw:style-name="fr66" draw:name="Object136" text:anchor-type="as-char" svg:width="0.709cm" svg:height="0.766cm" draw:z-index="728"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <msqrt>
@@ -4686,23 +4715,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            </office:binary-data>
           </draw:image>
          </draw:frame>instead in the transformation.</text:p>
-       <text:p text:style-name="P4181"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.F3" office:value-type="string">
-       <text:p text:style-name="P4179">0.5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.5</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table394.9">
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4186">5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4185">BETA</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">BETA</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4182">A positive real number that defines an alternative power value for the permeability term in the J-Function equation, that is instead of <draw:frame draw:style-name="fr66" draw:name="Object8" text:anchor-type="as-char" svg:width="0.709cm" svg:height="0.766cm" draw:z-index="731"><draw:object>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real number that defines an alternative power value for the permeability term in the J-Function equation, that is instead of <draw:frame draw:style-name="fr66" draw:name="Object8" text:anchor-type="as-char" svg:width="0.709cm" svg:height="0.766cm" draw:z-index="731"><draw:object>
           <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
            <semantics>
             <msqrt>
@@ -4777,55 +4805,53 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           </draw:image>
           <svg:desc>formula</svg:desc>
          </draw:frame>instead in the transformation.</text:p>
-       <text:p text:style-name="P4182"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.F3" office:value-type="string">
-       <text:p text:style-name="P2847">0.5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.5</text:p>
       </table:table-cell>
      </table:table-row>
      <text:soft-page-break/>
      <table:table-row table:style-name="Table394.10">
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4186">6</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" office:value-type="string">
-       <text:p text:style-name="P4185">PERM</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">PERM</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4185">PERM is a character string that sets the permeability array to be used in the transform, based on the following options:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">PERM is a character string that sets the permeability array to be used in the transform, based on the following options:</text:p>
        <text:list xml:id="list105910512946926" text:continue-list="list105911018730192" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19474">X: use the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> array.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">X: use the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19474">XY: use the average of the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> and <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> arrays.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">XY: use the average of the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> and <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> arrays.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19474">Y: <text:s/>use the <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> array.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">Y: <text:s/>use the <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19476">Z: use the <text:a xlink:href="#__RefHeading___Toc45795_719036256">PERMZ</text:a> array.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">Z: use the <text:a xlink:href="#__RefHeading___Toc45795_719036256">PERMZ</text:a> array.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19478">U: use the <text:a xlink:href="#__RefHeading___Toc757292_2928331029">PERMJFUN</text:a> array</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">U: use the <text:a xlink:href="#__RefHeading___Toc757292_2928331029">PERMJFUN</text:a> array</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P14559"/>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table394.F3" office:value-type="string">
-       <text:p text:style-name="P4189">XY</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">XY</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table394.11">
       <table:table-cell table:style-name="Table394.F3" table:number-columns-spanned="6" office:value-type="string">
-       <text:p text:style-name="P1383">Notes:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style="BoldUnderline">Notes:</text:span></text:p>
        <text:list xml:id="list866014435" text:style-name="L59">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19797">The keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4836,17 +4862,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable127" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.53</text:sequence>: JFUNC Keyword Description</text:p>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable127" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.53</text:sequence>: JFUNC Keyword Description</text:p>
     <text:p text:style-name="Text_20_body"/>
-    <text:p text:style-name="P10921"><text:span text:style-name="T93">Just like the relative permeability data capillary pressure data are measured on core plugs </text:span>with varying quality and perhaps from different reservoirs. I<text:span text:style-name="T93">t is therefore necessary to determine averaged data, before employing the data in engineering calculations. This is commonly done by using the Leverett J-function</text:span><text:note text:id="ftn118" text:note-class="footnote"><text:note-citation>118</text:note-citation><text:note-body>
-       <text:p text:style-name="P16636"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note><text:span text:style-name="T93">, which is defined as:</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Just like the relative permeability data capillary pressure data are measured on core plugs with varying quality and perhaps from different reservoirs. It is therefore necessary to determine averaged data, before employing the data in engineering calculations. This is commonly done by using the Leverett J-function<text:note text:id="ftn118" text:note-class="footnote"><text:note-citation>118</text:note-citation><text:note-body>
+       <text:p text:style-name="Footnote"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note>, which is defined as:</text:p>
     <table:table table:name="Table395" table:style-name="Table395">
      <table:table-column table:style-name="Table395.A"/>
      <table:table-column table:style-name="Table395.B"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708675955904">
        <table:table-cell table:style-name="Table395.A1" office:value-type="string">
-        <text:p text:style-name="P1344"><draw:frame draw:style-name="fr66" draw:name="Object81" text:anchor-type="as-char" svg:width="3.995cm" svg:height="1.341cm" draw:z-index="734"><draw:object>
+        <text:p text:style-name="_40_Table_20_Contents_20_Center"><draw:frame draw:style-name="fr66" draw:name="Object81" text:anchor-type="as-char" svg:width="3.995cm" svg:height="1.341cm" draw:z-index="734"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mrow>
@@ -4976,27 +5002,27 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:frame></text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table395.A1" office:value-type="string">
-        <text:p text:style-name="P16825">(<text:sequence text:ref-name="refText50" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.4</text:sequence>)</text:p>
+        <text:p text:style-name="_40_EquationNumber">(<text:sequence text:ref-name="refText50" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.4</text:sequence>)</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_EquationWhere_20_">Where:</text:p>
-    <text:p text:style-name="P16535"><text:span text:style-name="T93">J (S</text:span><text:span text:style-name="T141">w</text:span><text:span text:style-name="T93">)<text:tab/>=<text:tab/>dimensionless function of water saturation</text:span></text:p>
-    <text:p text:style-name="P16535"><text:span text:style-name="T93">P</text:span><text:span text:style-name="T141">c</text:span><text:span text:style-name="T93"> (S</text:span><text:span text:style-name="T141">w</text:span><text:span text:style-name="T93">) <text:tab/>=<text:tab/>capillary pressure (kPa)</text:span></text:p>
-    <text:p text:style-name="P16535"><text:span text:style-name="T93">k<text:tab/>=<text:tab/>permeability, (m</text:span><text:span text:style-name="T122">2</text:span><text:span text:style-name="T93">)</text:span></text:p>
-    <text:p text:style-name="P16535">φ <text:tab/>=<text:tab/>porosity (fraction)</text:p>
-    <text:p text:style-name="P16535">σ<text:tab/>=<text:tab/>interfacial tension (mN/m)</text:p>
-    <text:p text:style-name="P16535">Θ<text:tab/>=<text:tab/>contact angle</text:p>
-    <text:p text:style-name="P16526"/>
-    <text:p text:style-name="P11755">Sometimes the equation is stated with the cos θ term included, that is:</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">J</text:span><text:span text:style-name="ExpressionRegular">(</text:span><text:span text:style-name="Expression">S</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:span text:style-name="ExpressionRegular">)</text:span><text:tab/>=<text:tab/>dimensionless function of water saturation,</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">P</text:span><text:span text:style-name="ExpressionSub">c,res </text:span><text:span text:style-name="ExpressionRegular">(</text:span><text:span text:style-name="Expression">S</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:span text:style-name="ExpressionRegular">)</text:span><text:tab/>=<text:tab/>capillary pressure (kPa),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">k</text:span><text:tab/>=<text:tab/>permeability (m<text:span text:style-name="Super">2</text:span>),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">φ</text:span><text:tab/>=<text:tab/>porosity (fraction),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">σ</text:span><text:tab/>=<text:tab/>interfacial tension (mN/m), and</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">Θ</text:span><text:tab/>=<text:tab/>contact angle.</text:p>
+    <text:p text:style-name="_40_EquationWhereList"/>
+    <text:p text:style-name="_40_TextBody">Sometimes the equation is stated with the <text:span text:style-name="ExpressionRegular">cos </text:span><text:span text:style-name="Expression">Θ</text:span> term included, that is:</text:p>
     <table:table table:name="Table396" table:style-name="Table396">
      <table:table-column table:style-name="Table396.A"/>
      <table:table-column table:style-name="Table396.B"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708676096304">
        <table:table-cell table:style-name="Table396.A1" office:value-type="string">
-        <text:p text:style-name="P1344"><draw:frame draw:style-name="fr66" draw:name="Object82" text:anchor-type="as-char" svg:width="3.995cm" svg:height="1.342cm" draw:z-index="736"><draw:object>
+        <text:p text:style-name="_40_Table_20_Contents_20_Center"><draw:frame draw:style-name="fr66" draw:name="Object82" text:anchor-type="as-char" svg:width="3.995cm" svg:height="1.342cm" draw:z-index="736"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mrow>
@@ -5138,20 +5164,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:frame></text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table396.A1" office:value-type="string">
-        <text:p text:style-name="P16825">(<text:sequence text:ref-name="refText51" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.5</text:sequence>)</text:p>
+        <text:p text:style-name="_40_EquationNumber">(<text:sequence text:ref-name="refText51" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.5</text:sequence>)</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P15529"/>
-    <text:p text:style-name="_40_TextBody"><text:span text:style-name="T93">Since the above function is just a normalizing function, then units are not important, as long as when we de-normalize the </text:span><text:span text:style-name="T117">average</text:span><text:span text:style-name="T93"> curve we use the same unit set. Secondly, if all the capillary pressure data has been converted to reservoir conditions, we actually ignore the denominator as it is a constant, and we can therefore just use:</text:span></text:p>
+    <text:p text:style-name="_40_TextBody">Since the above function is just a normalizing function, then units are not important, as long as when we de-normalize the <text:span text:style-name="Italic">average</text:span> curve we use the same unit set. Secondly, if all the capillary pressure data has been converted to reservoir conditions, we actually ignore the denominator as it is a constant, and we can therefore just use:</text:p>
     <table:table table:name="Table397" table:style-name="Table397">
      <table:table-column table:style-name="Table397.A"/>
      <table:table-column table:style-name="Table397.B"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708676111312">
        <table:table-cell table:style-name="Table397.A1" office:value-type="string">
-        <text:p text:style-name="P1344"><draw:frame draw:style-name="fr66" draw:name="Object89" text:anchor-type="as-char" svg:width="3.925cm" svg:height="0.903cm" draw:z-index="737"><draw:object>
+        <text:p text:style-name="_40_Table_20_Contents_20_Center"><draw:frame draw:style-name="fr66" draw:name="Object89" text:anchor-type="as-char" svg:width="3.925cm" svg:height="0.903cm" draw:z-index="737"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mrow>
@@ -5270,12 +5295,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:frame></text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table397.A1" office:value-type="string">
-        <text:p text:style-name="P16825">(<text:sequence text:ref-name="refText52" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.6</text:sequence>)</text:p>
+        <text:p text:style-name="_40_EquationNumber">(<text:sequence text:ref-name="refText52" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.6</text:sequence>)</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P143"/>
     <text:p text:style-name="_40_TextBody"><text:soft-page-break/>However, in the simulator it is necessary to use the formal definition as outlined in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText50">(6.4)</text:sequence-ref>. In addition to the standard the equation the keyword allows for de-normalizing the curve to use alternative power functions instead of the standard 0.5 used in equation <text:sequence-ref text:reference-format="text" text:ref-name="refText50">(6.4)</text:sequence-ref>, that is:</text:p>
     <table:table table:name="Table398" table:style-name="Table398">
      <table:table-column table:style-name="Table398.A"/>
@@ -5283,7 +5307,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708676127088">
        <table:table-cell table:style-name="Table398.A1" office:value-type="string">
-        <text:p text:style-name="P1345"><draw:frame draw:style-name="fr66" draw:name="Object10" text:anchor-type="as-char" svg:width="4.221cm" svg:height="1.376cm" draw:z-index="738"><draw:object>
+        <text:p text:style-name="_40_Table_20_Contents_20_Center"><draw:frame draw:style-name="fr66" draw:name="Object10" text:anchor-type="as-char" svg:width="4.221cm" svg:height="1.376cm" draw:z-index="738"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mrow>
@@ -5428,48 +5452,46 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          </draw:frame></text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table398.A1" office:value-type="string">
-        <text:p text:style-name="P16835">(<text:sequence text:ref-name="refText53" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.7</text:sequence>)</text:p>
+        <text:p text:style-name="_40_EquationNumber">(<text:sequence text:ref-name="refText53" text:name="Text" text:formula="ooow:Text+1" style:num-format="1">6.7</text:sequence>)</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P16471">Where:</text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="T93">J (S</text:span><text:span text:style-name="T141">w</text:span><text:span text:style-name="T93">)<text:tab/>=<text:tab/>dimensionless function of water saturation</text:span></text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="T93">P</text:span><text:span text:style-name="T141">c</text:span><text:span text:style-name="T93"> (S</text:span><text:span text:style-name="T141">w</text:span><text:span text:style-name="T93">) <text:tab/>=<text:tab/>capillary pressure (kPa)</text:span></text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="T93">k<text:tab/>=<text:tab/>permeability, (m</text:span><text:span text:style-name="T122">2</text:span><text:span text:style-name="T93">)</text:span></text:p>
-    <text:p text:style-name="_40_EquationWhereList">φ <text:tab/>=<text:tab/>porosity (fraction)</text:p>
-    <text:p text:style-name="_40_EquationWhereList">σ<text:tab/>=<text:tab/>interfacial tension (mN/m)</text:p>
-    <text:p text:style-name="_40_EquationWhereList">Θ<text:tab/>=<text:tab/>contact angle</text:p>
-    <text:p text:style-name="_40_EquationWhereList">α<text:tab/>=<text:tab/>porosity power value</text:p>
-    <text:p text:style-name="_40_EquationWhereList">β<text:tab/>=<text:tab/>permeability value</text:p>
-    <text:p text:style-name="P10921"/>
-    <text:p text:style-name="P11155">The <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword allows the data entered as capillary pressure in the saturation tables, for example, by using the <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> and <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section to be treated as J-functions instead, and to de-normalize these curves for each active cell in the model using the options and values defined with the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword combined with a cells porosity and permeability values. </text:p>
-    <text:p text:style-name="P15254"/>
+    <text:p text:style-name="_40_EquationWhere_20_">Where:</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">J</text:span><text:span text:style-name="ExpressionRegular">(</text:span><text:span text:style-name="Expression">S</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:span text:style-name="ExpressionRegular">)</text:span><text:tab/>=<text:tab/>dimensionless function of water saturation,</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">P</text:span><text:span text:style-name="ExpressionSub">c,res </text:span><text:span text:style-name="ExpressionRegular">(</text:span><text:span text:style-name="Expression">S</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:span text:style-name="ExpressionRegular">)</text:span><text:tab/>=<text:tab/>capillary pressure (kPa),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">k</text:span><text:tab/>=<text:tab/>permeability (m<text:span text:style-name="Super">2</text:span>),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">φ</text:span><text:tab/>=<text:tab/>porosity (fraction),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">σ</text:span><text:tab/>=<text:tab/>interfacial tension (mN/m),</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">Θ</text:span><text:tab/>=<text:tab/>contact angle,</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">α</text:span><text:tab/>=<text:tab/>porosity power value, and</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">β</text:span><text:tab/>=<text:tab/>permeability power value.</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword allows the data entered as capillary pressure in the saturation tables, for example, by using the <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> and <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section to be treated as J-functions instead, and to de-normalize these curves for each active cell in the model using the options and values defined with the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword combined with a cells porosity and permeability values. </text:p>
+    <text:p text:style-name="_40_TextBody"/>
     <table:table table:name="Table1304" table:style-name="Table1304">
      <table:table-column table:style-name="Table1304.A"/>
      <table:table-header-rows>
       <table:table-row table:style-name="TableLine94708676142864">
        <table:table-cell table:style-name="Table1304.A1" office:value-type="string">
-        <text:p text:style-name="P10267">Note</text:p>
-        <text:p text:style-name="P10291">If either the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> or <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> keywords are used to activate J-Function scaling then the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section must also be present in the input deck, in order for the dimensionless J-function values entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> or the <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keywords to be re-scaled to capillary pressure data.</text:p>
-        <text:p text:style-name="P10290">N<text:span text:style-name="T3628">ote if the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword is </text:span><text:span text:style-name="T6560">absent</text:span><text:span text:style-name="T3628">, then like the commercial simulator, <text:s/>J-Function scaling is </text:span><text:span text:style-name="T2620">not performed</text:span><text:span text:style-name="T3628">, and the values </text:span><text:span text:style-name="T6560">entered</text:span><text:span text:style-name="T3628"> on the </text:span><text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> or the <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keywords <text:span text:style-name="T3628">are used as entered.</text:span></text:p>
+        <text:p text:style-name="_40_TextNoteCenter"><text:span text:style-name="BoldUnderline">Note</text:span></text:p>
+        <text:p text:style-name="_40_TextNote">If either the <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> or <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> keywords are used to activate J-Function scaling then the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section must also be present in the input deck, in order for the dimensionless J-function values entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> or the <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keywords to be re-scaled to capillary pressure data.</text:p>
+        <text:p text:style-name="_40_TextNote">Note if the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword is absent, then like the commercial simulator, <text:s/>J-Function scaling is <text:span text:style-name="Underline">not performed</text:span>, and the values entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a>, <text:a xlink:href="#__RefHeading___Toc106868_335817223">SGFN</text:a> or the <text:a xlink:href="#__RefHeading___Toc45811_7190362561">SWOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106870_335817223">SGOF</text:a>, <text:a xlink:href="#__RefHeading___Toc106874_335817223">SLGOF</text:a> keywords are used as entered.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="P11134"/>
-    <text:p text:style-name="P11660">See also the <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that performs similar calculations based on the J-Function parameters being declared by saturation table number.</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc257142_2369005893">JFUNCR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that performs similar calculations based on the J-Function parameters being declared by saturation table number.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838826"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838826"/></text:h>
-    <text:p text:style-name="P13885">--</text:p>
-    <text:p text:style-name="P13886">-- <text:s text:c="6"/>DEFINE LEVERETT J-FUNCTION PARAMETERS</text:p>
-    <text:p text:style-name="P13886">-- <text:s text:c="6"/>JFUN <text:s text:c="3"/>OILWAT <text:s/>GASOIL <text:s/>PORO <text:s text:c="3"/>PERM <text:s text:c="3"/>PERM <text:s text:c="37"/></text:p>
-    <text:p text:style-name="P13886">-- <text:s text:c="6"/>OPTN <text:s text:c="3"/>SDENS <text:s text:c="2"/>SDEN <text:s text:c="3"/>ALPHA <text:s text:c="2"/>BETA <text:s text:c="3"/>OPTN <text:s text:c="38"/></text:p>
-    <text:p text:style-name="P13886">JFUNC <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P13886"><text:s text:c="9"/>WATER <text:s text:c="2"/>22.5 <text:s text:c="3"/>1* <text:s text:c="5"/>0.5 <text:s text:c="4"/>0.5 <text:s text:c="4"/>XY <text:s text:c="27"/>/ <text:s text:c="79"/></text:p>
-    <text:p text:style-name="P15021"/>
-    <text:p text:style-name="P10921">The above example results in the oil-water capillary pressure data entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section being treated as J-Functions, and that the J-Function should be de-normalized using an oil-water surface density of 22.5 dynes/cm, using the default power values and the average of the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> and <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> values for each grid block.</text:p>
-    <text:p text:style-name="P10921"><text:soft-page-break/></text:p>
-    
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE LEVERETT J-FUNCTION PARAMETERS</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>JFUN <text:s text:c="3"/>OILWAT <text:s/>GASOIL <text:s/>PORO <text:s text:c="3"/>PERM <text:s text:c="3"/>PERM <text:s text:c="37"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>OPTN <text:s text:c="3"/>SDENS <text:s text:c="2"/>SDEN <text:s text:c="3"/>ALPHA <text:s text:c="2"/>BETA <text:s text:c="3"/>OPTN <text:s text:c="38"/></text:p>
+    <text:p text:style-name="_40_Example">JFUNC <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>WATER <text:s text:c="2"/>22.5 <text:s text:c="3"/>1* <text:s text:c="5"/>0.5 <text:s text:c="4"/>0.5 <text:s text:c="4"/>XY <text:s text:c="27"/>/ <text:s text:c="79"/></text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">The above example results in the oil-water capillary pressure data entered on the <text:a xlink:href="#__RefHeading___Toc106882_335817223">SWFN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section being treated as J-Functions, and that the J-Function should be de-normalized using an oil-water surface density of 22.5 dynes/cm, using the default power values and the average of the <text:a xlink:href="#__RefHeading___Toc45791_719036256">PERMX</text:a> and <text:a xlink:href="#__RefHeading___Toc45793_719036256">PERMY</text:a> values for each grid block.</text:p>
    </text:section>
   </office:text>
  </office:body>
