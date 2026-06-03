@@ -4530,7 +4530,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838827"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838827"/></text:h>
     <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc86297_3218818441">JFUNC</text:a> keyword activates the Leverett-J-Function<text:note text:id="ftn117" text:note-class="footnote"><text:note-citation>117</text:note-citation><text:note-body>
-        <text:p text:style-name="P16636"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note> option which is a commonly used technique to normalize capillary pressure based on laboratory measured core plugs porosity and permeability values and the resulting capillary pressure data. The keyword performs the calculation based on the parameters on the this keyword combined with a cells porosity and permeability to perform the scaling globally. <text:s/></text:p>
+        <text:p text:style-name="P16636"><text:user-field-get text:name="SEQ CHAPTER \h \r 1"/>Leverett, M. C.; “Capillary Behaviour in Porous Solids”, Trans. AIME (1941) 142, 152-168.</text:p></text:note-body></text:note> option, which scales the capillary pressure in each cell based on the cell's porosity and permeability, and the keyword parameters. The Leverett-J-Function is a commonly used technique for normalizing measured capillary pressure data based on the surface tension and the laboratory measured core plug porosity and permeability values. <text:s/></text:p>
     <text:p text:style-name="P12491">The keyword should only be used if end-point scaling is switched on using the <text:a xlink:href="#__RefHeading___Toc68146_2267116897">ENDSCALE</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
     <table:table table:name="Table394" table:style-name="Table394">
      <table:table-column table:style-name="Table394.A"/>
@@ -4578,7 +4578,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">JFOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table394.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A character string that defines which capillary data sets the J-Function option should be applied to, based on the following options:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies the capillary pressure datasets to which the J-Function option should be applied. JFOPT should be set one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
          <text:p text:style-name="_40_Table_20_Contents"><text:a xlink:href="#__RefHeading___Toc38611_2267116897">WATER</text:a>: apply the J-Function option to the water-oil capillary pressure data only. </text:p>
@@ -4700,7 +4700,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           </office:binary-data>
          </draw:image>
          <svg:desc>formula</svg:desc>
-        </draw:frame>use <draw:frame draw:style-name="fr1" draw:name="Object7" text:anchor-type="as-char" svg:width="0.549cm" svg:height="0.951cm" draw:z-index="1"><draw:object>
+        </draw:frame> use <draw:frame draw:style-name="fr1" draw:name="Object7" text:anchor-type="as-char" svg:width="0.549cm" svg:height="0.951cm" draw:z-index="1"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mfrac>
@@ -4738,7 +4738,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            AAAAAIwAAQAAAAAAjAABAAAAAAA=
            </office:binary-data>
           </draw:image>
-         </draw:frame>instead in the transformation.</text:p>
+         </draw:frame> in the transformation.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4789,7 +4789,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
           </office:binary-data>
          </draw:image>
          <svg:desc>formula</svg:desc>
-        </draw:frame>use <draw:frame draw:style-name="fr1" draw:name="Object9" text:anchor-type="as-char" svg:width="0.573cm" svg:height="0.951cm" draw:z-index="3"><draw:object>
+        </draw:frame> use <draw:frame draw:style-name="fr1" draw:name="Object9" text:anchor-type="as-char" svg:width="0.573cm" svg:height="0.951cm" draw:z-index="3"><draw:object>
            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
             <semantics>
              <mfrac>
@@ -4828,7 +4828,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
            </office:binary-data>
           </draw:image>
           <svg:desc>formula</svg:desc>
-         </draw:frame>instead in the transformation.</text:p>
+         </draw:frame> in the transformation.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -5194,7 +5194,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="_40_TextBody">Since the above function is just a normalizing function, then units are not important, as long as when we de-normalize the <text:span text:style-name="Italic">average</text:span> curve we use the same unit set. Secondly, if all the capillary pressure data has been converted to reservoir conditions, we actually ignore the denominator as it is a constant, and we can therefore just use:</text:p>
+    <text:p text:style-name="_40_TextBody">Since the above function is just a normalizing function, the units are not important, provided we use the same unit set when we de-normalize the <text:span text:style-name="Italic">average</text:span> curve. Secondly, if all the capillary pressure data has been converted to reservoir conditions, we actually ignore the denominator as it is a constant, and we can therefore just use:</text:p>
     <table:table table:name="Table397" table:style-name="Table397">
      <table:table-column table:style-name="Table397.A"/>
      <table:table-column table:style-name="Table397.B"/>
@@ -5494,7 +5494,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">U</text:span><text:span text:style-name="ExpressionSub">const</text:span><text:tab/>=<text:tab/>constant that depends on units system </text:p>
     <text:p text:style-name="_40_EquationWhereListSecondLine">(Field: 4.61678, Metric: 0.318316, Lab: 0.314153).</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression"/></text:p>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc86297_3218818441" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">JFUNC</text:a> keyword allows the data entered as capillary pressure in the saturation tables, for example, by using the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc106868_335817223" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SGFN</text:a> and <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc106882_335817223" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SWFN</text:a> keywords in the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc39329_784232322" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">PROPS</text:a> section to be treated as J-Functions instead, and to de-normalize these curves for each active cell in the model using the options and values defined with the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc86297_3218818441" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">JFUNC</text:a> keyword combined with a cells porosity and permeability values. <text:s/>In the simulator, the oil-water capillary pressure in cell <text:span text:style-name="Expression">i</text:span> is evaluated as follows (and similarly for gas-oil capillary pressure):</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc86297_3218818441" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">JFUNC</text:a> keyword allows the data entered as capillary pressure in the saturation tables, for example, by using the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc106868_335817223" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SGFN</text:a> and <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc106882_335817223" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SWFN</text:a> keywords in the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc39329_784232322" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">PROPS</text:a> section, to be treated as J-Functions instead, and to de-normalize these curves for each active cell in the model using the options and values defined with the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc86297_3218818441" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">JFUNC</text:a> keyword combined with each cell's porosity and permeability values. <text:s/>In the simulator, the oil-water capillary pressure in each cell is evaluated as follows (and similarly for gas-oil capillary pressure):</text:p>
     <table:table table:name="Table3" table:style-name="Table3">
      <table:table-column table:style-name="Table3.A"/>
      <table:table-column table:style-name="Table3.B"/>
@@ -5601,10 +5601,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-row>
      </table:table-header-rows>
     </table:table>
-    <text:p text:style-name="_40_EquationWhere_20_">Where:</text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">J</text:span><text:span text:style-name="ExpressionRegular">(</text:span><text:span text:style-name="Expression">S</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:span text:style-name="ExpressionRegular">)</text:span><text:tab/>=<text:tab/>dimensionless function of water saturation input using, for example, the </text:p>
-    <text:p text:style-name="_40_EquationWhereListSecondLine"><text:a xlink:type="simple" xlink:href="#__RefHeading___Toc106882_335817223" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SWFN</text:a> keyword, and</text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub"><text:span text:style-name="NotKeyword">PCW</text:span></text:span><text:tab/>=<text:tab/>oil-water capillary pressure scaling factor for cell <text:span text:style-name="Expression">i </text:span>defined as follows:</text:p>
+    <text:p text:style-name="_40_TextBody">and the oil-water capillary pressure scaling factor (<text:span text:style-name="Expression">F</text:span><text:span text:style-name="ExpressionSub"><text:span text:style-name="NotKeyword">PCW</text:span></text:span>) for each cell is defined as follows:</text:p>
     <table:table table:name="Table2" table:style-name="Table2">
      <table:table-column table:style-name="Table2.A"/>
      <table:table-column table:style-name="Table2.B"/>
@@ -5712,9 +5709,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_EquationWhere_20_">Where:</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">J</text:span><text:span text:style-name="ExpressionRegular">(</text:span><text:span text:style-name="Expression">S</text:span><text:span text:style-name="ExpressionSub">w</text:span><text:span text:style-name="ExpressionRegular">)</text:span><text:tab/>=<text:tab/>dimensionless function of water saturation input using, for example, the </text:p>
+    <text:p text:style-name="_40_EquationWhereListSecondLine"><text:a xlink:type="simple" xlink:href="#__RefHeading___Toc106882_335817223" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SWFN</text:a> keyword, and</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">σ</text:span><text:span text:style-name="ExpressionSub">ow</text:span><text:tab/>=<text:tab/>oil-water interfacial tension (dynes/cm) entered on the <text:a xlink:type="simple" xlink:href="#__RefHeading___Toc86297_3218818441" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">JFUNC</text:a> keyword,</text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">k</text:span><text:tab/>=<text:tab/>permeability of cell <text:span text:style-name="Expression">i</text:span> (mD), and</text:p>
-    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">φ</text:span><text:tab/>=<text:tab/>porosity of cell <text:span text:style-name="Expression">i</text:span> (fraction).</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">k</text:span><text:tab/>=<text:tab/>permeability of cell (mD), and</text:p>
+    <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression">φ</text:span><text:tab/>=<text:tab/>porosity of cell (fraction).</text:p>
     <text:p text:style-name="_40_EquationWhereList"><text:span text:style-name="Expression"/></text:p>
     <text:p text:style-name="_40_TextBody">The oil-water and gas-oil capillary pressure scaling factors are evaluated for each grid cell and output to the Restart file as the <text:a xlink:href="#__RefHeading___Toc84164_621662414">PCW</text:a> and <text:a xlink:href="#__RefHeading___Toc77040_621662414">PCG</text:a> arrays.</text:p>
     <table:table table:name="Table1304" table:style-name="Table1304">
