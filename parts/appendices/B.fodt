@@ -13205,13 +13205,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.B3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">--enable-drift-compensation</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">--enable-drift-compensation-temp</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable partial compensation of systematic mass losses via the source term of the next time step. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A boolean value. Enable compensation of systematic mass losses in the energy equation (only <text:a xlink:href="#__RefHeading___Toc146397_3544483072">TEMP</text:a> option). </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">false</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">true</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table14.2">
@@ -13223,6 +13223,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A boolean value. Write ESMRY file for fast loading of summary data. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been changed from false to true. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">true</text:p>
@@ -13266,6 +13267,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum newton iterations with inner well iterations. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been increased from 8 to 99. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">99</text:p>
@@ -13280,6 +13282,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of outer iterations in the network solver before giving up. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been reduced from 10 to 3. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
@@ -13294,6 +13297,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">An integer value. Maximum number of sub-iterations to update network pressures (within a single well/group control update). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been increased from 20 to 100. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">100</text:p>
@@ -13308,6 +13312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A positive real value. Local energy convergence tolerance (maximum of local energy errors). </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been increased from 0.01 to 0.4182. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">0.4182</text:p>
@@ -13322,6 +13327,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A positive real value. Relaxed local energy convergence tolerance that applies for iterations after the iterations with the strict tolerance. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been increased from 1 to 41.82. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">41.82</text:p>
@@ -13336,6 +13342,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A positive real value. Tolerated energy balance error relative to (scaled) total energy present. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been increased from 1e-07 to 4.182e-06. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">4.182e-06</text:p>
@@ -13350,6 +13357,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table14.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A positive real value. Relaxed tolerated energy balance error that applies for iterations after the iterations with the strict tolerance. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value has been increased from 1e-06 to 4.182e-05. </text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table14.D3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">4.182e-05</text:p>
