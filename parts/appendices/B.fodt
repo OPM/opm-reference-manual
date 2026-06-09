@@ -13971,6 +13971,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:list-item>
           <text:p text:style-name="_40_TextBody">Ensure that all output is written when the simulation run is ended early using the <text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a> keyword in an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> block (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6991" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6991</text:a>). Previously this was only done if the last report step had been reached. </text:p>
          </text:list-item>
+         <text:list-item>
+          <text:p text:style-name="_40_TextBody">The handling of explicit <text:a xlink:href="#__RefHeading___Toc63285_718313858">NNC</text:a> definitions overlapping with <text:a xlink:href="#__RefHeading___Toc89569_718313858">EDITNNC</text:a> or <text:a xlink:href="#__RefHeading___Toc140002_2545341761">EDITNNCR</text:a> modifications has been fixed (<text:a xlink:type="simple" xlink:href="https://github.com/OPM/opm-simulators/pull/6875" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">#6875</text:a>). Previously the simulator would apply modifications twice and duplicate the <text:span style-name="NotKeyword"><text:a xlink:href="#__RefHeading___Toc63285_718313858">NNC</text:a></text:span> transmissibility output in this case. </text:p>
+         </text:list-item>
         </text:list>
        </text:list-item>
       </text:list>
