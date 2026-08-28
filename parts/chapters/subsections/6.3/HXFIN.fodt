@@ -4223,7 +4223,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18408" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_37011683881111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_37011683881111"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a> defines the split ratio of grid blocks for the <text:a xlink:href="#__RefHeading___Toc55931_3701168388">DXV</text:a> keyword in the x-direction via a vector within a Local Grid Refinement (“LGR”) as opposed to defining the size for each cell for a Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> Grid. The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to indicate an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is being used, and the keyword <text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a> should be placed in between the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> and <text:a xlink:href="#__RefHeading___Toc111797_332691817">ENDFIN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. The <text:a xlink:href="#__RefHeading___Toc55931_3701168388">DXV</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section defines the grid size in terms of the length, that is feet for field units, this keyword defines the length as the ratio of the coarse cells.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a> keyword defines the ratios of the cell sizes in the x-direction for grid blocks within a Local Grid Refinement (“LGR”). The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to indicate an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is being used, and the <text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a> keyword should be placed in between the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> and <text:a xlink:href="#__RefHeading___Toc111797_332691817">ENDFIN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1246" table:style-name="Table1246">
      <table:table-column table:style-name="Table1246.A"/>
@@ -4269,7 +4269,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P4159"><text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1246.C2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4159"><text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a> is a vector of real numbers describing the ratio of cell size for the grid blocks in the x-direction in a Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid.</text:p>
+       <text:p text:style-name="P4159"><text:a xlink:href="#__RefHeading___Toc326256_373485663">HXFIN</text:a> is an array of positive real numbers describing the ratio of cell sizes in the x-direction for the grid blocks in a Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid.</text:p>
        <text:p text:style-name="P4009">Repeat counts may be used, for example 2*2.0. </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4313,7 +4313,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P14738">Table <text:sequence text:ref-name="refTable121" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.47</text:sequence>: HXFIN Keyword Description</text:p>
     <text:p text:style-name="P15562"/>
-    <text:p text:style-name="P15285">See also the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a>, <text:a xlink:href="#__RefHeading___Toc111797_332691817">ENDFIN</text:a>, <text:a xlink:href="#__RefHeading___Toc200810_2135714711">HYFIN</text:a>, and <text:a xlink:href="#__RefHeading___Toc227697_2135714711">HZFIN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section to fully define a Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid model. </text:p>
+    <text:p text:style-name="P15285">See also the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a>, <text:a xlink:href="#__RefHeading___Toc111797_332691817">ENDFIN</text:a>, <text:a xlink:href="#__RefHeading___Toc200810_2135714711">HYFIN</text:a>, and <text:a xlink:href="#__RefHeading___Toc227697_2135714711">HZFIN</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section to fully define the cell size ratios for a Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid model. </text:p>
     <text:h text:style-name="P18408" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715713_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715713_3964674244"/></text:h>
     <text:p text:style-name="P13878">--</text:p>
     <text:p text:style-name="P13878">-- <text:s text:c="6"/>CARFIN LGR GRID COMMANDS</text:p>
@@ -4321,7 +4321,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13878">-- <text:s text:c="6"/>LGR <text:s text:c="7"/>----- HOST GRID ------ <text:s text:c="2"/>-- CARFIN GRID -- <text:s/>MAX <text:s text:c="4"/>HOST <text:s text:c="12"/></text:p>
     <text:p text:style-name="P13878">-- <text:s text:c="6"/>NAME <text:s text:c="6"/>I1 <text:s/>I2 <text:s/>J1 <text:s/>J2 <text:s/>K1 <text:s/>K2 <text:s text:c="4"/>NX <text:s text:c="3"/>NY <text:s text:c="3"/>NZ <text:s text:c="2"/>WELLS <text:s text:c="2"/>NAME <text:s text:c="11"/></text:p>
     <text:p text:style-name="P13878">CARFIN <text:s text:c="64"/></text:p>
-    <text:p text:style-name="P13878"><text:s text:c="9"/>LGR-OP01 <text:s text:c="2"/>24 <text:s/>25 <text:s/>86 <text:s/>87 <text:s text:c="2"/>1 <text:s/>50 <text:s text:c="5"/>5 <text:s text:c="4"/>3 <text:s text:c="3"/>50 <text:s text:c="4"/>1 <text:s text:c="4"/>GLOBAL /</text:p>
+    <text:p text:style-name="P13878"><text:s text:c="9"/>LGR-OP01 <text:s text:c="2"/>24 <text:s/>25 <text:s/>86 <text:s/>86 <text:s text:c="2"/>1 <text:s/>50 <text:s text:c="5"/>5 <text:s text:c="4"/>1 <text:s text:c="3"/>50 <text:s text:c="4"/>1 <text:s text:c="4"/>GLOBAL /</text:p>
     <text:p text:style-name="P13878">--</text:p>
     <text:p text:style-name="P13799">-- <text:s text:c="6"/>DEFINE LGR GRID BLOCK IN THE X-DIRECTION <text:s text:c="24"/></text:p>
     <text:p text:style-name="P13288">NXFIN</text:p>
@@ -4333,8 +4333,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P13800"><text:s text:c="9"/>1.00 <text:s/>2.00 <text:s/>3.00 <text:s/>2.00 <text:s/>1.00 <text:s text:c="41"/>/ <text:s text:c="77"/></text:p>
     <text:p text:style-name="P13878">ENDFIN </text:p>
     <text:p text:style-name="P13799"/>
-    <text:p text:style-name="P15199">The above example defines the size of the cells in the x-direction based on NX equals <text:soft-page-break/>five on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. </text:p>
-    
+    <text:p text:style-name="P15199">The above example defines the size of the cells in the x-direction based on NX equals five on the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. The first global grid block in the x-direction is divided into 3 local grid blocks with size ratios of 1.0, 2.0, and 3.0.</text:p>
    </text:section>
   </office:text>
  </office:body>
