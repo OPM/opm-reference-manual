@@ -1,0 +1,50 @@
+# Dependabot configuration.
+#
+# Without this file GitHub only raises *security* alerts; it never opens
+# version-update pull requests. That is how both Poetry lock files were allowed
+# to drift years behind upstream (see PRs #767 and #768, which together had to
+# clear 29 open alerts, some of them dating back to 2024).
+#
+# Everything is grouped into a single pull request per ecosystem, because
+# ungrouped updates are unmanageable here: GitPython alone went through eight
+# patch releases in the three weeks from 2026-07-21 to 2026-08-07, each of which
+# would have arrived as its own pull request.
+#
+# Note that this file only affects scheduled version updates. Security updates
+# are still opened immediately and individually whenever an advisory is
+# published, independently of the schedule below.
+version: 2
+updates:
+    # The fodt package: chapter splitting, keyword linking and style fixes.
+    # Dependabot needs one entry per manifest directory, which is why the two
+    # Poetry projects are listed separately below.
+    - package-ecosystem: "pip"
+      directory: "/scripts/python"
+      schedule:
+          interval: "monthly"
+      groups:
+          python-dependencies:
+              patterns:
+                  - "*"
+
+    # The lodocker package: building and running the LibreOffice containers.
+    - package-ecosystem: "pip"
+      directory: "/docker"
+      schedule:
+          interval: "monthly"
+      groups:
+          python-dependencies:
+              patterns:
+                  - "*"
+
+    # Workflow action pins. Dependabot can only bump actions referenced by a
+    # version tag, which covers every action used by the two workflows:
+    # actions/checkout, actions/setup-python and abatilo/actions-poetry.
+    - package-ecosystem: "github-actions"
+      directory: "/"
+      schedule:
+          interval: "monthly"
+      groups:
+          github-actions:
+              patterns:
+                  - "*"
