@@ -4205,8 +4205,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="CARFIN">
-
-<text:h text:style-name="P17762" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc150726_63720426"/>CARFIN – Define a Cartesian Local Grid Refinement<text:bookmark-end text:name="__RefHeading___Toc150726_63720426"/></text:h>
+    <text:h text:style-name="P17762" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc150726_63720426"/>CARFIN – Define a Cartesian Local Grid Refinement<text:bookmark-end text:name="__RefHeading___Toc150726_63720426"/></text:h>
     <table:table table:name="Table754" table:style-name="Table754">
      <table:table-column table:style-name="Table754.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table754.E"/>
@@ -4240,7 +4239,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18379" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14509_3701168388161"/>Description<text:bookmark-end text:name="__RefHeading___Toc14509_3701168388161"/></text:h>
-    <text:p text:style-name="_40_TextBody"><text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> defines a Cartesian Local Grid Refinement (“LGR”) in a cell or a group of cells in the host grid, for when LGRs have been activated for the input deck using the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. The keyword marks the start of an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> description section and all subsequent keywords between the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> and <text:a xlink:href="#__RefHeading___Toc111797_332691817">ENDFIN</text:a> keywords are deemed to be associated with the current <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> and not the host grid.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> keyword defines a Cartesian Local Grid Refinement (“LGR”) in a defined range of cells (I1-I2, J1-J2, K1-K2) in the host grid. This keyword marks the start of an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> description section and all subsequent keywords between the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> and <text:a xlink:href="#__RefHeading___Toc111797_332691817">ENDFIN</text:a> keywords are deemed to be associated with the current <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> and not the host grid. The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section should be activated to indicate that an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is being used.</text:p>
     <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
     <table:table table:name="Table1254" table:style-name="Table1254">
      <table:table-column table:style-name="Table1254.A"/>
@@ -4285,7 +4284,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">I1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1949">A positive integer that defines the lower index of the global or host grid in the I-direction to be refined; must be greater than or equal 1 and less than or equal to I2 and NX on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P1949">A positive integer value that defines the lower index of the host grid in the I-direction to be refined; must be greater than or equal to 1 and less than or equal to I2.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4299,7 +4298,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">I2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1949">A positive integer that defines the upper index of the global or host grid in the I-direction to be refined; must be greater than or equal 1 and II, <text:s/>and less than or equal to NX on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P1949">A positive integer value that defines the upper index of the host grid in the I-direction to be refined; must be greater than or equal to I1 and less than or equal to the x-dimension of the host grid.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4313,7 +4312,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">J1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1949">A positive integer that defines the lower index of the global or host grid in the J-direction to be refined; must be greater than or equal 1 and less than or equal to J2 and NY on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P1949">A positive integer value that defines the lower index of the host grid in the J-direction to be refined; must be greater than or equal to 1 and less than or equal to J2.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4327,7 +4326,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">J2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1950">A positive integer that defines the upper index of the global or host grid in the J-direction to be refined; must be greater than or equal 1 and JI, <text:s/>and less than or equal to NY on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P1950">A positive integer value that defines the upper index of the host grid in the J-direction to be refined; must be greater than or equal to J1 and less than or equal to the y-dimension of the host grid.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4341,7 +4340,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">K1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C7" office:value-type="string">
-       <text:p text:style-name="P1949">A positive integer that defines the lower index of the global or host grid in the K-direction to be refined; must be greater than or equal 1 and less than or equal to K2 and NZ on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P1949">A positive integer value that defines the lower index of the host grid in the K-direction to be refined; must be greater than or equal to 1 and less than or equal to K2.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4355,7 +4354,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="Table_20_Contents">K2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1950">A positive integer that defines the upper index of the global or host grid in the K-direction to be refined; must be greater than or equal 1 and KI, <text:s/>and less than or equal to NZ on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="P1950">A positive integer value that defines the upper index of the host grid in the K-direction to be refined; must be greater than or equal to K1 and less than or equal to the z-dimension of the host grid.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4369,7 +4368,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">NX</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1335">A positive integer value that defines the number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid blocks in the x direction for Cartesian grids or the number of grid blocks in the r direction for radial grids</text:p>
+       <text:p text:style-name="P1335">A positive integer value that defines the number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid blocks in the x-direction.</text:p>
+       <text:p text:style-name="P1335">If the <text:a xlink:href="#__RefHeading___Toc228755_2928331029">NXFIN</text:a> keyword is not being used then NX should be an integer multiple of (I2 - I1 + 1).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4383,7 +4383,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">NY</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1335">A positive integer value that defines the number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid blocks in the y direction for Cartesian grids or the number of grid blocks in the theta direction for radial grids.</text:p>
+       <text:p text:style-name="P1335">A positive integer value that defines the number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid blocks in the y-direction.</text:p>
+       <text:p text:style-name="P1335">If the <text:a xlink:href="#__RefHeading___Toc228757_2928331029">NYFIN</text:a> keyword is not being used then NY should be an integer multiple of (J2 - J1 + 1).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4398,7 +4399,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">NZ</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P1335">A positive integer value that defines the number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid blocks in the z direction for both Cartesian and radial grids.</text:p>
+       <text:p text:style-name="P1335">A positive integer value that defines the number of <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid blocks in the z-direction.</text:p>
+       <text:p text:style-name="P1335">If the <text:a xlink:href="#__RefHeading___Toc228759_2928331029">NZFIN</text:a> keyword is not being used then NZ should be an integer multiple of (K2 - K1 + 1).</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P1969">None</text:p>
@@ -4412,7 +4414,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">MXWELS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P3565">A positive integer defining the maximum number of wells contained in this <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>.</text:p>
+       <text:p text:style-name="P3565">A positive integer value that defines the maximum number of wells contained in this <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>.</text:p>
        <text:p text:style-name="P3565"/>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
@@ -4427,8 +4429,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P3988">HOSTNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.C13" office:value-type="string">
-       <text:p text:style-name="P3988">A character string of up to eight characters in length that defines the host grid name for nested refinements. The default value of “GLOBAL” sets the host name to the global grid, that is for a conventional <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>.</text:p>
-       <text:p text:style-name="P3988">A nested refinement is when the HOSTNAME is a previously declared <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> for which the current <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is specifying a further <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> refinement.</text:p>
+       <text:p text:style-name="P3988">A character string of up to eight characters in length that defines the host grid name. This can take the default value of “GLOBAL” or the name of a previously declared <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>.</text:p>
+       <text:p text:style-name="P3988">The default value of “GLOBAL” sets the host grid to be the global grid, that is a conventional Local Grid Refinement of the global grid.</text:p>
+       <text:p text:style-name="P3988">If the host grid name is the name of a previously declared <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> then the current <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is a nested Local Grid Refinement of the previously declared <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1254.D13" office:value-type="string">
        <text:p text:style-name="P3987">GLOBAL</text:p>
@@ -4452,7 +4455,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">Note that if the Dual Porosity option has been activated by either the <text:a xlink:href="#__RefHeading___Toc241173_1772380413">DUALPORO</text:a> or <text:a xlink:href="#__RefHeading___Toc241171_1772380413">DUALPERM</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, then the host grid definition (I1-I2, J1-J2, K1-K2) applies only to the matrix cells; however, the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> NZ parameter in this case must include the fracture blocks, similar to the NZ parameter on the <text:a xlink:href="#__RefHeading___Toc20387_2267116897">DIMENS</text:a> keyword. This means that all property data should be entered for both the matrix and fracture cells in the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> description.</text:p>
     <text:h text:style-name="P18345" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715657_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715657_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below defines an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> in the global grid, named <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>-OP01 with a maximum of one well allowed in the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>. </text:p>
+    <text:p text:style-name="_40_TextBody">The example below defines an <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> in the global grid, named <text:span text:style-name="NotKeyword">LGR</text:span>-OP01 with a maximum of one well allowed in the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a>. </text:p>
     <text:p text:style-name="P12904">--</text:p>
     <text:p text:style-name="P12904">-- <text:s text:c="6"/>CARFIN LGR GRID COMMANDS</text:p>
     <text:p text:style-name="P12904">--</text:p>
@@ -4464,7 +4467,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P12904"/>
     <text:p text:style-name="P13789">ENDFIN </text:p>
     <text:p text:style-name="P13789"/>
-    <text:p text:style-name="P10921">Here the one global cell in the areal plane (24, 87) is divided into three <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> cells in the x-direction and three cells in the y-direction. <text:s text:c="2"/>Since no other property data is given, then the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> cells take their properties from the host grid, that is the global grid. <text:s text:c="42"/></text:p>
+    <text:p text:style-name="P10921">Here the one global cell in the areal plane (24, 87) is divided into three <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> cells in the x-direction and three cells in the y-direction. The global cells are not refined in the z-direction. Since no other property data is given, then the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> cells take their properties from the host grid, that is the global grid. <text:s text:c="42"/></text:p>
     
    </text:section>
   </office:text>
