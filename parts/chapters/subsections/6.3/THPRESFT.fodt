@@ -2801,18 +2801,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:style style:name="P14351" style:family="paragraph" style:parent-style-name="_40_Example">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="10dfa3ee"/>
   </style:style>
-  <style:style style:name="P14744" style:family="paragraph" style:parent-style-name="Table">
-   <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="0aee92df"/>
-  </style:style>
   <style:style style:name="P17663" style:family="paragraph" style:parent-style-name="Heading_20_3">
    <style:paragraph-properties fo:break-before="page"/>
    <style:text-properties fo:language="en" fo:country="US"/>
   </style:style>
   <style:style style:name="P18449" style:family="paragraph" style:parent-style-name="Heading_20_4">
    <style:text-properties fo:language="en" fo:country="US" officeooo:paragraph-rsid="0aee92df"/>
-  </style:style>
-  <style:style style:name="P18692" style:family="paragraph" style:parent-style-name="Heading_20_4">
-   <style:paragraph-properties fo:break-before="page"/>
   </style:style>
   <style:style style:name="P18776" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="First_20_Page">
    <style:paragraph-properties style:page-number="auto"/>
@@ -4262,8 +4256,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="THPRESFT">
-
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc185781_1371377330"/>THPRESFT – Define Fault Threshold Pressures<text:bookmark-end text:name="__RefHeading___Toc185781_1371377330"/></text:h>
+    <text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc185781_1371377330"/>THPRESFT – Define Fault Threshold Pressures<text:bookmark-end text:name="__RefHeading___Toc185781_1371377330"/></text:h>
     <table:table table:name="Table917" table:style-name="Table917">
      <table:table-column table:style-name="Table917.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table917.E"/>
@@ -4297,9 +4290,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="P18449" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14507_3701168388111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14507_3701168388111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc185781_1371377330">THPRESFT</text:a> keyword defines a fault threshold pressures that prevents fluid flow from occurring across the fault plane until the threshold pressure is exceeded, for when the threshold pressure option has been activated via the THRPRES variable on the <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc185781_1371377330">THPRESFT</text:a> keyword defines the threshold pressure for faults defined by the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. The threshold pressure defines the potential difference across the fault which must be exceeded before flow can occur across the fault. Once flow occurs the potential across the fault is reduced by the threshold pressure.<text:s/></text:p>
+    <text:p text:style-name="_40_TextBody">The <text:span text:style-name="NotKeyword">THPRES</text:span> option must be activated on the <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section in order to use this feature. <text:s/></text:p>
     <text:p text:style-name="_40_TextBody">Each row entry in the <text:a xlink:href="#__RefHeading___Toc185781_1371377330">THPRESFT</text:a> keyword defines a fault threshold pressure.</text:p>
-    <text:p text:style-name="_40_TextBody"/>
     <table:table table:name="Table918" table:style-name="Table918">
      <table:table-column table:style-name="Table918.A"/>
      <table:table-column table:style-name="Table918.B"/>
@@ -4343,11 +4336,11 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7570">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table918.B3" office:value-type="string">
-       <text:p text:style-name="P4097">FLTNAME</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">FLTNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table918.C3" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P4097">FLTNAME is a character string enclosed in quotes with a maximum length of eight characters, that defines the name of the fault.</text:p>
-       <text:p text:style-name="P3431">FLTNAME must have been previously defined using the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section, otherwise an error will occur.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">FLTNAME is a character string of up to eight characters in length that defines the fault name for which the threshold pressure is being defined.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">FLTNAME must have previously been defined using the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4360,16 +4353,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P7611">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table918.B5" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7231">PRESS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">PRESS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table918.C4" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P7231">PRESS is a single positive real value that defines the threshold pressure for the fault (FLTNAME). </text:p>
-       <text:p text:style-name="P7206">If PRESS is defaulted then the simulator will set the threshold pressure to zero, that is the fault is open to flow along the fault plane.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">PRESS is a real value greater than or equal to zero that defines the threshold pressure for the fault (FLTNAME). </text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table918.F4" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P7611">0</text:p>
+       <text:p text:style-name="P7611">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table918.1">
@@ -4405,38 +4397,36 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14744">Table <text:sequence text:ref-name="refTable202" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.128</text:sequence>: THPRESFT Keyword Description</text:p>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable202" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">6.128</text:sequence>: THPRESFT Keyword Description</text:p>
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#__RefHeading___Toc45779_719036256">FAULTS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section that is used to created named faults. Normally this fault data is automatically generated by pre-processing software that generates the static model.</text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    <text:h text:style-name="P18692" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715871_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715871_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below defines two fault traces, <text:s/>‘M_WEST’ <text:s/>and <text:s/>‘BC’ fault having threshold pressures of 1000.0 and 2000 psis respectively.</text:p>
-    <text:p text:style-name="P13001">-- <text:s text:c="80"/></text:p>
-    <text:p text:style-name="P13001">-- <text:s text:c="6"/>DEFINE FAULTS IN THE GRID GEOMETRY </text:p>
-    <text:p text:style-name="P13001">-- <text:s text:c="86"/></text:p>
-    <text:p text:style-name="P13001">-- <text:s text:c="6"/>FAULT <text:s text:c="6"/>------------ FAULT TRACE ------------- <text:s text:c="14"/></text:p>
-    <text:p text:style-name="P13001">-- <text:s text:c="6"/>NAME <text:s text:c="8"/>I1 <text:s text:c="2"/>I2 <text:s text:c="3"/>J1 <text:s text:c="2"/>J2 <text:s text:c="3"/>K1 <text:s text:c="2"/>K2 <text:s text:c="3"/>FACE <text:s text:c="8"/></text:p>
-    <text:p text:style-name="P13001">FAULTS <text:s text:c="40"/></text:p>
-    <text:p text:style-name="P12997"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="5"/>5 <text:s text:c="3"/>5 <text:s text:c="4"/>3 <text:s text:c="3"/>3 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P12997"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="5"/>5 <text:s text:c="3"/>5 <text:s text:c="4"/>4 <text:s text:c="3"/>4 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P12997"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="5"/>5 <text:s text:c="3"/>5 <text:s text:c="4"/>5 <text:s text:c="3"/>5 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P12997">……………………………………………..</text:p>
-    <text:p text:style-name="P12997"/>
-    <text:p text:style-name="P13874"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="8"/>43 <text:s text:c="2"/>43 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P13874"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="8"/>42 <text:s text:c="2"/>42 <text:s text:c="4"/>9 <text:s text:c="3"/>9 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/ </text:p>
-    <text:p text:style-name="P13874"><text:s/><text:s text:c="6"/><text:s text:c="2"/>&apos;BC&apos; <text:s text:c="8"/>44 <text:s text:c="2"/>44 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
-    <text:p text:style-name="P12997">……………………………………………..</text:p>
-    <text:p text:style-name="P53"><text:tab/><text:tab/>/</text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="80"/></text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="6"/>DEFINE FAULT THRESHOLD PRESSURES </text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="86"/></text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="6"/>FAULT <text:s text:c="7"/>THRESHOLD <text:s text:c="14"/></text:p>
-    <text:p text:style-name="P12904">-- <text:s text:c="6"/>NAME <text:s text:c="8"/>PRESSURE <text:s text:c="7"/></text:p>
-    <text:p text:style-name="P12904">THPRESFT <text:s text:c="40"/></text:p>
-    <text:p text:style-name="P14351"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="4"/>1000.0 <text:s text:c="31"/>/ <text:s text:c="8"/></text:p>
-    <text:p text:style-name="P14351"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="5"/><text:s text:c="3"/>1200.0 <text:s text:c="26"/><text:s text:c="4"/><text:s/>/ <text:s text:c="8"/></text:p>
-    <text:p text:style-name="P43"><text:tab/><text:tab/>/</text:p>
-    
+    <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc715871_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc715871_3964674244"/></text:h>
+    <text:p text:style-name="_40_TextBody">The example below defines two faults ‘M_WEST’<text:s/>and<text:s/>‘BC’ with threshold pressures of 1000.0 and 1200.0 psi respectively.</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="80"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE FAULTS IN THE GRID GEOMETRY </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="86"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>FAULT <text:s text:c="6"/>------------ FAULT TRACE ------------- <text:s text:c="14"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>NAME <text:s text:c="8"/>I1 <text:s text:c="2"/>I2 <text:s text:c="3"/>J1 <text:s text:c="2"/>J2 <text:s text:c="3"/>K1 <text:s text:c="2"/>K2 <text:s text:c="3"/>FACE <text:s text:c="8"/></text:p>
+    <text:p text:style-name="_40_Example">FAULTS <text:s text:c="40"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="5"/>5 <text:s text:c="3"/>5 <text:s text:c="4"/>3 <text:s text:c="3"/>3 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="5"/>5 <text:s text:c="3"/>5 <text:s text:c="4"/>4 <text:s text:c="3"/>4 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="5"/>5 <text:s text:c="3"/>5 <text:s text:c="4"/>5 <text:s text:c="3"/>5 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="_40_Example">...</text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="8"/>43 <text:s text:c="2"/>43 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="8"/>42 <text:s text:c="2"/>42 <text:s text:c="4"/>9 <text:s text:c="3"/>9 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;X&apos; <text:s text:c="2"/>/ </text:p>
+    <text:p text:style-name="_40_Example"><text:s/><text:s text:c="6"/><text:s text:c="2"/>&apos;BC&apos; <text:s text:c="8"/>44 <text:s text:c="2"/>44 <text:s text:c="4"/>8 <text:s text:c="3"/>8 <text:s text:c="3"/>1 <text:s text:c="3"/>22 <text:s text:c="2"/>&apos;Y&apos; <text:s text:c="2"/>/</text:p>
+    <text:p text:style-name="_40_Example">...</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="80"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE FAULT THRESHOLD PRESSURES </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="86"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>FAULT <text:s text:c="7"/>THRESHOLD <text:s text:c="14"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>NAME <text:s text:c="8"/>PRESSURE <text:s text:c="7"/></text:p>
+    <text:p text:style-name="_40_Example">THPRESFT <text:s text:c="40"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;M_WEST&apos; <text:s text:c="4"/>1000.0 <text:s text:c="31"/>/ <text:s text:c="8"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;BC&apos; <text:s text:c="5"/><text:s text:c="3"/>1200.0 <text:s text:c="26"/><text:s text:c="4"/><text:s/>/ <text:s text:c="8"/></text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
    </text:section>
   </office:text>
  </office:body>
