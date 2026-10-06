@@ -4354,7 +4354,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_37011683885"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_37011683885"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword defines the equilibration options by stating the character command to activate an option to be used for initializing the model. Multiple commands may be utilized to activate several <text:s/>equilibration options following the keyword. </text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc131554_398689501">EQLOPTS</text:a> keyword defines the equilibration options to be used when initializing the model. Multiple commands may be stated following the keyword to activate one or more equilibration options. </text:p>
     <table:table table:name="Table221" table:style-name="Table221">
      <table:table-column table:style-name="Table221.A"/>
      <table:table-column table:style-name="Table221.B"/>
@@ -4379,12 +4379,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P27">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B2" office:value-type="string">
-       <text:p text:style-name="P30">MOBILE</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">MOBILE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B2" office:value-type="string">
-       <text:p text:style-name="P29">A character string that activates the mobile fluid critical saturation end point correction.</text:p>
-       <text:p text:style-name="P29">If the MOBILE command is stated then this option is activated.</text:p>
-       <text:p text:style-name="P25">This option is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. Therefore this character string should be omitted.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that activates the mobile fluid critical saturation end point correction.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">If the MOBILE command is stated then this option is activated.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This option is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. Therefore this character string should be omitted.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.D2" office:value-type="string">
        <text:p text:style-name="P31">None</text:p>
@@ -4395,12 +4395,12 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P27">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B2" office:value-type="string">
-       <text:p text:style-name="P30">QUIESC</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">QUIESC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B2" office:value-type="string">
-       <text:p text:style-name="P32">A character string that activates the initial quiescence option that modifies the equilibrium calculated phase pressures to ensure that a steady state solution is obtained. This options ensures that there is no flow potential between the grid blocks in a given region, which is the normal case when block-centered equilibration is used by setting BOINIT on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword to zero in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section.</text:p>
-       <text:p text:style-name="P32">If the QUIESC command is stated then this option is activated.</text:p>
-       <text:p text:style-name="P25">This option is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. Therefore this character string should be omitted.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that activates the initial quiescence option that modifies the equilibrium calculated phase pressures to ensure that a steady state solution is obtained. This options ensures that there is no flow potential between the grid blocks in a given region, which is the normal case when block-centered equilibration is specified by setting Item 9 to zero on the <text:a xlink:href="#__RefHeading___Toc135617_1317547213">EQUIL</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43947_784232322">SOLUTION</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">If the QUIESC command is stated then this option is activated.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This option is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. Therefore this character string should be omitted.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.D2" office:value-type="string">
        <text:p text:style-name="P31">None</text:p>
@@ -4411,27 +4411,26 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="P28">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B4" office:value-type="string">
-       <text:p text:style-name="P30"><text:span text:style-name="NotKeyword">THPRES</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">THPRES</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.C4" office:value-type="string">
-       <text:p text:style-name="P32">A character string that activates the inter-region equilibration flow option. This option allows for a threshold pressure variable entered via the <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> keyword to define a pressure which prevents flow between regions until the <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> value between regions is exceeded. <text:s/></text:p>
-       <text:p text:style-name="P32">If the <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> command is stated then this option is activated.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that activates the inter-region equilibration flow option. This option allows for a threshold pressure entered via the <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> keyword to define the potential difference between two regions which must be exceeded before flow can occur between the two regions.<text:s/></text:p>
+       <text:p text:style-name="_40_Table_20_Contents">If the <text:span text:style-name="NotKeyword">THPRES</text:span> command is stated then this option is activated.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.D4" office:value-type="string">
        <text:p text:style-name="P31">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
-      <table:table-cell table:style-name="Table221.A2" office:value-type="string">
+      <table:table-cell table:style-name="Table221.A4" office:value-type="string">
        <text:p text:style-name="P28">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B2" office:value-type="string">
-       <text:p text:style-name="P30">IRREVERS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">IRREVERS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.B2" office:value-type="string">
-       <text:p text:style-name="P33">A character string that activates the irreversible inter-region equilibration flow option. This option can only be invoked if the <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> command has been stated. The option allows for different <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> values for different directions.</text:p>
-       <text:p text:style-name="P32">If the IRREVERS command is stated then this option is activated.</text:p>
-       <text:p text:style-name="P25">This option is not supported by OPM Flow but would change the results if supported so the simulation will be stopped. Therefore this character string should be omitted.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that activates the irreversible inter-region equilibration flow option. This option can only be invoked if the <text:span text:style-name="NotKeyword">THPRES</text:span> command has been stated. The option allows for different <text:a xlink:href="#__RefHeading___Toc210168_2884651453">THPRES</text:a> values for different directions.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">If the IRREVERS command is stated then this option is activated.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table221.D2" office:value-type="string">
        <text:p text:style-name="P31">None</text:p>
@@ -4453,13 +4452,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     </table:table>
     <text:p text:style-name="P38">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.3.37.1</text:sequence>: EQLOPTS Keyword Description</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_37011683885"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_37011683885"/></text:h>
-    <text:p text:style-name="P37">--</text:p>
-    <text:p text:style-name="P36">-- <text:s text:c="6"/>ACTIVATE EQUILIBRATION OPTIONS <text:s text:c="42"/></text:p>
-    <text:p text:style-name="P36">-- <text:s text:c="6"/>MOBILE END-POINT(MOBILE) STEADY STATE(QUIESC) THRESHOLD(THPRES) </text:p>
-    <text:p text:style-name="P36">-- <text:s text:c="6"/>IRREVERSIBLE THRESHOLD(IRREVERS) <text:s text:c="34"/></text:p>
-    <text:p text:style-name="P36">EQLOPTS <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P36"><text:s text:c="9"/>&apos;THPRES&apos; <text:s/>&apos;IRREVERS&apos; <text:s text:c="50"/>/</text:p>
-    <text:p text:style-name="P35">The above example activates the threshold pressure option with different threshold pressure for different directions. <text:s/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIVATE EQUILIBRATION OPTIONS <text:s text:c="42"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>MOBILE END-POINT(MOBILE) STEADY STATE(QUIESC) THRESHOLD(THPRES) </text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>IRREVERSIBLE THRESHOLD(IRREVERS) <text:s text:c="34"/></text:p>
+    <text:p text:style-name="_40_Example">EQLOPTS <text:s text:c="71"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;THPRES&apos; <text:s/>&apos;IRREVERS&apos; <text:s text:c="50"/>/</text:p>
+    <text:p text:style-name="_40_Example"></text:p>
+    <text:p text:style-name="_40_TextBody">The above example activates the threshold pressure option with different threshold pressures in each direction. <text:s/></text:p>
    </text:section>
   </office:text>
  </office:body>
