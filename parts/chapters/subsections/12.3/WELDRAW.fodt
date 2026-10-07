@@ -894,6 +894,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes_20_Title" style:display-name="@Table Notes Title" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes" style:display-name="@Table Notes" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="" style:list-style-name="L1">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
    <style:text-properties fo:color="#004586" loext:opacity="100%"/>
@@ -975,6 +987,21 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
+  <style:style style:name="Expression" style:family="text">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-family="&apos;Liberation Serif&apos;" fo:font-size="10pt" fo:letter-spacing="0.035cm" fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="ExpressionRegular" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionBold" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal" fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="ExpressionSub" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="-20% 58%" fo:letter-spacing="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionSuper" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="42% 58%" fo:letter-spacing="normal"/>
+  </style:style>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -1917,6 +1944,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -2482,32 +2510,84 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
-  <style:style style:name="Table1703" style:family="table">
+  <style:style style:name="Table990" style:family="table">
    <style:table-properties style:width="15.55cm" fo:margin-left="1.418cm" table:align="left" fo:background-color="transparent" fo:keep-with-next="always">
     <style:background-image/>
    </style:table-properties>
   </style:style>
-  <style:style style:name="Table1703.A" style:family="table-column">
+  <style:style style:name="Table990.A" style:family="table-column">
    <style:table-column-properties style:column-width="1.944cm"/>
   </style:style>
-  <style:style style:name="Table1703.E" style:family="table-column">
+  <style:style style:name="Table990.E" style:family="table-column">
    <style:table-column-properties style:column-width="1.898cm"/>
   </style:style>
-  <style:style style:name="Table1703.F" style:family="table-column">
+  <style:style style:name="Table990.F" style:family="table-column">
    <style:table-column-properties style:column-width="1.99cm"/>
   </style:style>
-  <style:style style:name="Table1703.1" style:family="table-row">
+  <style:style style:name="Table990.1" style:family="table-row">
    <style:table-row-properties fo:background-color="transparent">
     <style:background-image/>
    </style:table-row-properties>
   </style:style>
-  <style:style style:name="Table1703.A1" style:family="table-cell">
+  <style:style style:name="Table990.A1" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
+  <style:style style:name="Table990.H1" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="#579d1c" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
+<style:style style:name="Table990.A2" style:family="table-cell">
    <style:table-cell-properties fo:background-color="#eeeeee" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
-  <style:style style:name="Table1703.H1" style:family="table-cell">
-   <style:table-cell-properties fo:background-color="#ff950e" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
+  <style:style style:name="Table990.H2" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="#eeeeee" fo:padding-left="0.051cm" fo:padding-right="0.051cm" fo:padding-top="0.102cm" fo:padding-bottom="0.102cm" fo:border="0.05pt solid #000000">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
+  <style:style style:name="Table2084" style:family="table">
+   <style:table-properties style:width="15.556cm" fo:margin-left="1.468cm" table:align="left" fo:background-color="transparent" fo:keep-with-next="always">
+    <style:background-image/>
+   </style:table-properties>
+  </style:style>
+  <style:style style:name="Table2084.A" style:family="table-column">
+   <style:table-column-properties style:column-width="1.272cm"/>
+  </style:style>
+  <style:style style:name="Table2084.B" style:family="table-column">
+   <style:table-column-properties style:column-width="2.314cm"/>
+  </style:style>
+  <style:style style:name="Table2084.C" style:family="table-column">
+   <style:table-column-properties style:column-width="3.328cm"/>
+  </style:style>
+  <style:style style:name="Table2084.E" style:family="table-column">
+   <style:table-column-properties style:column-width="3.332cm"/>
+  </style:style>
+  <style:style style:name="Table2084.F" style:family="table-column">
+   <style:table-column-properties style:column-width="1.981cm"/>
+  </style:style>
+  <style:style style:name="Table2084.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table2084.F1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table2084.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table2084.F2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Table2084.3" style:family="table-row">
+   <style:table-row-properties fo:background-color="transparent">
+    <style:background-image/>
+   </style:table-row-properties>
+  </style:style>
+  <style:style style:name="Table2084.A3" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="transparent" fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000">
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
@@ -2695,6 +2775,58 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:notes-configuration text:note-class="endnote" text:start-value="1"/>
    </style:section-properties>
   </style:style>
+  <text:list-style style:name="L1">
+   <text:list-level-style-number text:level="1" loext:num-list-format="%1%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="2" loext:num-list-format="%2%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="3" loext:num-list-format="%3%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="4" loext:num-list-format="%4%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="5" loext:num-list-format="%5%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="6" loext:num-list-format="%6%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="7" loext:num-list-format="%7%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="8" loext:num-list-format="%8%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="9" loext:num-list-format="%9%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="10" loext:num-list-format="%10%)" style:num-suffix=")" style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+  </text:list-style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.006cm" fo:page-height="29.693cm" style:num-format="1" style:print-orientation="portrait" fo:margin-top="1.27cm" fo:margin-bottom="1.27cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0" style:layout-grid-lines="20" style:layout-grid-base-height="0.706cm" style:layout-grid-ruby-height="0.353cm" style:layout-grid-mode="none" style:layout-grid-ruby-below="false" style:layout-grid-print="false" style:layout-grid-display="false" style:layout-grid-base-width="0.706cm" style:layout-grid-snap-to="true" style:footnote-max-height="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -3668,7 +3800,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <number:number-style style:name="N0">
    <number:number number:min-integer-digits="1"/>
-  </number:number-style></office:automatic-styles><office:master-styles>
+  </number:number-style>
+  </office:automatic-styles><office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
   <style:master-page style:name="First_20_Page" style:display-name="First Page" style:page-layout-name="pm2" draw:style-name="dp1" style:next-style-name="Standard"/>
   <style:master-page style:name="Index" style:page-layout-name="pm3"/>
@@ -3782,82 +3915,82 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table109.Z"/>
      <table:table-row table:style-name="TableLine94708556406544">
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P443"><text:span text:style-name="Internet_20_link">A</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">A</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1201"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">B</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">B</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">C</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">C</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">D</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">D</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">E</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">E</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">F</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">F</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">G</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">G</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">H</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">H</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1206"><text:span text:style-name="Internet_20_link">I</text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">I</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">J</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">J</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">K</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">K</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">L</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">L</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1203"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T506">M</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">M</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">N</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">N</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">O</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">O</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">P</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">P</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">Q</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">Q</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">R</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">R</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">S</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">S</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">T</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">T</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">U</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">U</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P2575"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">V</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">V</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P2793"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">W</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">W</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">X</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">X</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.A1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">Y</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">Y</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table109.Z1" office:value-type="string">
-       <text:p text:style-name="P1202"><text:span text:style-name="Internet_20_link"><text:span text:style-name="T1">Z</text:span></text:span></text:p>
+       <text:p text:style-name="Table_20_Contents"><text:span text:style-name="Internet_20_link">Z</text:span></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -4045,45 +4178,233 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="WELDRAW">
 
-<text:h text:style-name="P18311" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc970391_487874538"/>WELDRAW – Define Maximum Draw Down for Production Wells<text:bookmark-end text:name="__RefHeading___Toc970391_487874538"/></text:h>
-    <table:table table:name="Table1703" table:style-name="Table1703">
-     <table:table-column table:style-name="Table1703.A" table:number-columns-repeated="4"/>
-     <table:table-column table:style-name="Table1703.E"/>
-     <table:table-column table:style-name="Table1703.F"/>
-     <table:table-column table:style-name="Table1703.A" table:number-columns-repeated="2"/>
-     <table:table-row table:style-name="Table1703.1">
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6314"><text:a xlink:type="simple" xlink:href="#3.RUNSPEC SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">RUNSPEC</text:span></text:a></text:p>
+<text:h text:style-name="P18311" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc970391_487874538"/>WELDRAW – Define Maximum Drawdown for Production Wells<text:bookmark-end text:name="__RefHeading___Toc970391_487874538"/></text:h>
+    <table:table table:name="Table990" table:style-name="Table990">
+     <table:table-column table:style-name="Table990.A" table:number-columns-repeated="4"/>
+     <table:table-column table:style-name="Table990.E"/>
+     <table:table-column table:style-name="Table990.F"/>
+     <table:table-column table:style-name="Table990.A" table:number-columns-repeated="2"/>
+     <table:table-row table:style-name="Table990.1">
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#3.RUNSPEC SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">RUNSPEC</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#4.GRID SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">GRID</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#4.GRID SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">GRID</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#5.EDIT SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">EDIT</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#5.EDIT SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">EDIT</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#6.PROPS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">PROPS</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#6.PROPS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">PROPS</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#7.REGIONS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">REGIONS</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#7.REGIONS SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">REGIONS</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#8.SOLUTION SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">SOLUTION</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#8.SOLUTION SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SOLUTION</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.A1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#9.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">SUMMARY</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#9.SUMMARY SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SUMMARY</text:a></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Table1703.H1" office:value-type="string">
-       <text:p text:style-name="P6948"><text:a xlink:type="simple" xlink:href="#10.SCHEDULE SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="T1">SCHEDULE</text:span></text:a></text:p>
+      <table:table-cell table:style-name="Table990.H1" office:value-type="string">
+       <text:p text:style-name="Table_20_Contents"><text:a xlink:type="simple" xlink:href="#10.SCHEDULE SECTION|outline" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">SCHEDULE</text:a></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:h text:style-name="P18606" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14503_370116838831"/>Description<text:bookmark-end text:name="__RefHeading___Toc14503_370116838831"/></text:h>
-    <text:p text:style-name="P12008">This keyword, <text:a xlink:href="#__RefHeading___Toc970391_487874538">WELDRAW</text:a>, defines the maximum draw down for production wells The keyword may be useful in wells that are subject to fines or sand production to limit the draw down between the sand face and the well in order to limit or avoid sand production.</text:p>
-    <text:p text:style-name="P12009">This keyword is not supported by OPM Flow but would change the results if supported so the simulation will be stopped.</text:p>
-    <text:p text:style-name="P12008"/>
-    <text:p text:style-name="P11573"/>
-    
+    <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc14503_370116838831"/>Description<text:bookmark-end text:name="__RefHeading___Toc14503_370116838831"/></text:h>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc970391_487874538">WELDRAW</text:a> keyword defines the maximum drawdown for production wells. This keyword may be useful in wells that are subject to fines or sand production to limit the drawdown between the sand face and the well in order to reduce sand production.</text:p>
+    <text:p text:style-name="_40_TextBody">Note that the drawdown limit is converted into a maximum production rate for the well's target phase at each time step. If a well is constrained by this maximum production rate, then the well will be marked as under drawdown control and the well mode of control indicator (WMCTL) summary vector will be set to 12.</text:p>
+    <table:table table:name="Table2084" table:style-name="Table2084">
+     <table:table-column table:style-name="Table2084.A"/>
+     <table:table-column table:style-name="Table2084.B"/>
+     <table:table-column table:style-name="Table2084.C" table:number-columns-repeated="2"/>
+     <table:table-column table:style-name="Table2084.E"/>
+     <table:table-column table:style-name="Table2084.F"/>
+     <table:table-row>
+      <table:table-cell table:style-name="Table2084.A1" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">No.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A1" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">Name</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A1" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">Description</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table2084.F1" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">Default</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row>
+      <table:covered-table-cell table:style-name="Table2084.A2"/>
+      <table:covered-table-cell table:style-name="Table2084.A2"/>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">Field</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">Metric</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="Table_20_Heading">Laboratory</text:p>
+      </table:table-cell>
+      <table:covered-table-cell table:style-name="Table2084.F2"/>
+     </table:table-row>
+     <table:table-row table:style-name="Table2084.3">
+      <table:table-cell table:style-name="Table2084.A3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">WELL</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A character string of up to eight characters in length that defines the well name for which the drawdown limit is being defined.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that the well name (WELL) must have been declared previously using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section, otherwise an error may occur.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table2084.F2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table2084.3">
+      <table:table-cell table:style-name="Table2084.A3" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">MAX_DRAW</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the maximum drawdown for the specified well.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A negative value specifies that there is no drawdown limit.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This value may be specified using a User Defined Argument (UDA). Although, UDA values are not currently supported in Restart runs.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table2084.F2" table:number-rows-spanned="2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table2084.3">
+      <table:covered-table-cell table:style-name="Table2084.A3"/>
+      <table:covered-table-cell table:style-name="Table2084.A2"/>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">psi</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">bars</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">atm</text:p>
+      </table:table-cell>
+      <table:covered-table-cell table:style-name="Table2084.F2"/>
+     </table:table-row>
+     <table:table-row table:style-name="Table2084.3">
+      <table:table-cell table:style-name="Table2084.A3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">PHASE</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies the phase to which the limit is applied:</text:p>
+       <text:list text:style-name="L1">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Notes"><text:span text:style-name="NotKeyword">GAS</text:span>: the limit is applied to the gas phase.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="_40_Table_20_Notes">LIQ: the limit is applied to the liquid phase.</text:p>
+        </text:list-item>
+       </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">The default value is based on the well&apos;s preferred phase as defined using the <text:a xlink:href="#__RefHeading___Toc268463_1366622701">WELSPECS</text:a> keyword: <text:span text:style-name="NotKeyword">GAS</text:span> for a gas well, LIQ otherwise.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table2084.F2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center"><text:span text:style-name="NotKeyword">GAS</text:span> or</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">LIQ</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table2084.3">
+      <table:table-cell table:style-name="Table2084.A3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">USE_LIMIT</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specified whether the drawdown limit is to be applied when calculating the well&apos;s production potential:</text:p>
+       <text:list text:style-name="L1">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Notes">YES: the well&apos;s potential depends on the drawdown limit.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="_40_Table_20_Notes">NO: the well&apos;s potential does not depend on the drawdown limit.</text:p>
+        </text:list-item>
+       </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">Only the default option (NO) is supported by OPM Flow.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table2084.F2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NO</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table2084.3">
+      <table:table-cell table:style-name="Table2084.A3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">GRID_BLOCKS</text:span></text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table2084.A2" table:number-columns-spanned="3" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies whether the drawdown limit is applied to the PI-weighted average drawdown across the well&apos;s connections, or the maximum drawdown in any of the well&apos;s connections:</text:p>
+       <text:list text:style-name="L1">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Notes">AVG: apply limit to PI-weighted average.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="_40_Table_20_Notes">NO: apply limit to maximum drawdown.</text:p>
+        </text:list-item>
+       </text:list>
+       <text:p text:style-name="_40_Table_20_Contents">Only the default option (AVG) is supported by OPM Flow.</text:p>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:table-cell table:style-name="Table2084.F2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">AVG</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row>
+      <table:table-cell table:style-name="Table2084.F2" table:number-columns-spanned="6" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Notes_20_Title">Notes:</text:p>
+       <text:list text:style-name="L1">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Notes">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
+        </text:list-item>
+       </text:list>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+    </table:table>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.340.1</text:sequence>: <text:span text:style-name="NotKeyword">WELDRAW</text:span> Keyword Description</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4">Examples</text:h>
+    <text:p text:style-name="_40_TextBody">The following example defines well drawdown limits on the liquid phase for oil wells OP01 and OP02, and on the gas phase for gas well GP01.</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- DEFINE MAXIMUM DRAWDOWN LIMITS</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- WELL<text:s text:c="5"/>DRAWDOWN PHASE USE<text:s text:c="3"/>GRID</text:p>
+    <text:p text:style-name="_40_Example">-- NAME<text:s text:c="5"/>LIMIT<text:s text:c="10"/>LIMIT BLOCK</text:p>
+    <text:p text:style-name="_40_Example">WELDRAW</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="3"/>OP01<text:s text:c="5"/>200.0<text:s text:c="22"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="3"/>OP02<text:s text:c="5"/>200.0<text:s text:c="4"/>LIQ<text:s text:c="3"/>YES<text:s text:c="3"/>MAX<text:s text:c="3"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="3"/>GP01<text:s text:c="5"/>200.0<text:s text:c="4"/>GAS<text:s text:c="3"/>YES<text:s text:c="9"/>/</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example"/>
    </text:section>
   </office:text>
  </office:body>
