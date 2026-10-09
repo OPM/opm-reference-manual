@@ -889,8 +889,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" style:contextual-spacing="false"/>
   </style:style>
   <style:style style:name="_40_Table_20_Contents" style:display-name="@Table Contents" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
-   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
-   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"></style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"></style:text-properties>
+  </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"></style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"></style:text-properties>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes_20_Title" style:display-name="@Table Notes Title" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"></style:paragraph-properties>
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes" style:display-name="@Table Notes" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="" style:list-style-name="L1">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"></style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"></style:text-properties>
   </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
@@ -1849,6 +1861,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles>
  <office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
@@ -4353,10 +4366,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:h text:style-name="P58" text:outline-level="4">Description</text:h>
-    <text:p text:style-name="P61">The <text:span text:style-name="T21"><text:a xlink:href="#REF_HEADING_KEYWORD_MW">MW</text:a></text:span> keyword defines the <text:span text:style-name="T21">molecular weights</text:span> for each of the compositional components active in the model and for each equation of state. The keyword should only be used if the compositional mode has been requested using the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
-    <text:p text:style-name="P57">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
-    <text:p text:style-name="P57">This keyword is not supported by OPM Flow but it will be parsed and its data ignored.</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4">Description</text:h>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#REF_HEADING_KEYWORD_MW">MW</text:a> keyword defines the molecular weights for each of the compositional components active in the model and for each equation of state. The keyword should only be used if the compositional mode has been requested using the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but it will be parsed and its data ignored.</text:p>
     <table:table table:name="Table2084" table:style-name="Table2084">
      <table:table-column table:style-name="Table2084.A"/>
      <table:table-column table:style-name="Table2084.B"/>
@@ -4365,76 +4378,76 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table2084.F"/>
      <table:table-row>
       <table:table-cell table:style-name="Table2084.A1" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P37">No.</text:p>
+       <text:p text:style-name="Table_20_Heading">No.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A1" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P37">Name</text:p>
+       <text:p text:style-name="Table_20_Heading">Name</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A1" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P37">Description</text:p>
+       <text:p text:style-name="Table_20_Heading">Description</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2084.F1" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P37">Default</text:p>
+       <text:p text:style-name="Table_20_Heading">Default</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
       <table:covered-table-cell table:style-name="Table2084.A2"/>
       <table:covered-table-cell table:style-name="Table2084.A2"/>
       <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
-       <text:p text:style-name="P72">Field</text:p>
+       <text:p text:style-name="Table_20_Heading">Field</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
-       <text:p text:style-name="P72">Metric</text:p>
+       <text:p text:style-name="Table_20_Heading">Metric</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
-       <text:p text:style-name="P72">Laboratory</text:p>
+       <text:p text:style-name="Table_20_Heading">Laboratory</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table2084.F2"/>
      </table:table-row>
      <table:table-row table:style-name="Table2084.3">
       <table:table-cell table:style-name="Table2084.A3" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P38">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P43"><text:a xlink:href="#REF_HEADING_KEYWORD_MW">MW</text:a></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">MW</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="P60">A series of <text:span text:style-name="T20">real numbers </text:span>that define the <text:span text:style-name="T21">molecular weights</text:span> <text:span text:style-name="T20">for each </text:span>of the compositional components active in the model.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A series of real numbers that define the molecular weights for each of the compositional components active in the model.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
       <table:table-cell table:style-name="Table2084.F2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="P40">None</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table2084.3">
       <table:covered-table-cell table:style-name="Table2084.A3"/>
       <table:covered-table-cell table:style-name="Table2084.A2"/>
       <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
-       <text:p text:style-name="P62">lb/lb-M</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">lb/lb-M</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
-       <text:p text:style-name="P62">kg/kg-M</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">kg/kg-M</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2084.A2" office:value-type="string">
-       <text:p text:style-name="P62">gm/gm-M</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">gm/gm-M</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table2084.F2"/>
      </table:table-row>
      <table:table-row>
       <table:table-cell table:style-name="Table2084.F2" table:number-columns-spanned="6" office:value-type="string">
-       <text:p text:style-name="P41">Notes:</text:p>
+       <text:p text:style-name="_40_Table_20_Notes_20_Title">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P66">The keyword is followed by NMEOSR records as specified by the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">The keyword is followed by NMEOSR records as specified by the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P66">Each record must contain <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> values as specified by the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">Each record must contain <text:span text:style-name="NotKeyword">COMPS</text:span> values as specified by the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P67"><text:span text:style-name="T20">Each record</text:span> is terminated by a “/” <text:span text:style-name="T20">and there is no “/” terminator for the keyword</text:span>.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4445,22 +4458,22 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P36">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.184.1</text:sequence>: <text:span text:style-name="T21"><text:a xlink:href="#REF_HEADING_KEYWORD_MW">MW</text:a></text:span> Keyword Description</text:p>
-    <text:h text:style-name="P58" text:outline-level="4">Example<text:span text:style-name="T20">s</text:span></text:h>
-    <text:p text:style-name="P61">The following example defines the <text:span text:style-name="T21">molecular weights</text:span> for each component in a single three-component equation of state model.</text:p>
-    <text:p text:style-name="P56">--</text:p>
-    <text:p text:style-name="P56">-- <text:span text:style-name="T21">Molecular Weights</text:span></text:p>
-    <text:p text:style-name="P56">--</text:p>
-    <text:p text:style-name="P59">MW</text:p>
-    <text:p text:style-name="P56"><text:s text:c="2"/><text:span text:style-name="T21">16.0425</text:span> <text:s/><text:span text:style-name="T21">44.009</text:span> <text:s text:c="2"/><text:span text:style-name="T21">18.01528</text:span> /</text:p>
-    <text:p text:style-name="P56"/>
-    <text:p text:style-name="P61">The following example defines the <text:span text:style-name="T21">molecular weights</text:span> for each component in two three-component equation of state models.</text:p>
-    <text:p text:style-name="P56">--</text:p>
-    <text:p text:style-name="P56">-- <text:span text:style-name="T21">Molecular Weights</text:span></text:p>
-    <text:p text:style-name="P56">--</text:p>
-    <text:p text:style-name="P59">MW</text:p>
-    <text:p text:style-name="P56"><text:s text:c="2"/><text:span text:style-name="T21">16.0425</text:span> <text:s/><text:span text:style-name="T21">44.009</text:span> <text:s text:c="2"/><text:span text:style-name="T21">18.01528</text:span> /</text:p>
-    <text:p text:style-name="P56"><text:s text:c="2"/><text:span text:style-name="T21">16.0425</text:span> <text:s/><text:span text:style-name="T21">44.009</text:span> <text:s text:c="2"/><text:span text:style-name="T21">18.01528</text:span> /</text:p>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.184.1</text:sequence>: <text:span text:style-name="NotKeyword">MW</text:span> Keyword Description</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4">Examples</text:h>
+    <text:p text:style-name="_40_TextBody">The following example defines the molecular weights for each component in a single three-component equation of state model.</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- Molecular Weights</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">MW</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="2"/>16.0425 <text:s/>44.009 <text:s text:c="2"/>18.01528 /</text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">The following example defines the molecular weights for each component in two three-component equation of state models.</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- Molecular Weights</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">MW</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="2"/>16.0425 <text:s/>44.009 <text:s text:c="2"/>18.01528 /</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="2"/>16.0425 <text:s/>44.009 <text:s text:c="2"/>18.01528 /</text:p>
    </text:section>
   </office:text>
  </office:body>

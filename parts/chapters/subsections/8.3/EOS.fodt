@@ -890,7 +890,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   </style:style>
   <style:style style:name="_40_Table_20_Contents" style:display-name="@Table Contents" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
-   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes_20_Title" style:display-name="@Table Notes Title" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes" style:display-name="@Table Notes" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="" style:list-style-name="L1">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
@@ -4360,10 +4372,10 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:h text:style-name="P52" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838837"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838837"/></text:h>
-    <text:p text:style-name="P50">The <text:span text:style-name="T21"><text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a></text:span> keyword <text:span text:style-name="T21">specifies the Equation Of State (<text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a>) to be used for each <text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a> region. The keyword should only be used if the compositional mode has been requested using the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:span></text:p>
-    <text:p text:style-name="P50">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
-    <text:p text:style-name="P50">This keyword is not supported by OPM Flow but it will be parsed and its data ignored.</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838837"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838837"/></text:h>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a> keyword specifies the Equation Of State (<text:span text:style-name="NotKeyword">EOS</text:span>) to be used for each <text:span text:style-name="NotKeyword">EOS</text:span> region. The keyword should only be used if the compositional mode has been requested using the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <text:p text:style-name="_40_TextBody">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
+    <text:p text:style-name="_40_TextBody">This keyword is not supported by OPM Flow but it will be parsed and its data ignored.</text:p>
     <table:table table:name="Table972" table:style-name="Table972">
      <table:table-column table:style-name="Table972.A"/>
      <table:table-column table:style-name="Table972.B"/>
@@ -4371,55 +4383,55 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-column table:style-name="Table972.D"/>
      <table:table-row>
       <table:table-cell table:style-name="Table972.A1" office:value-type="string">
-       <text:p text:style-name="P65">No.</text:p>
+       <text:p text:style-name="Table_20_Heading">No.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.A1" office:value-type="string">
-       <text:p text:style-name="P65">Name</text:p>
+       <text:p text:style-name="Table_20_Heading">Name</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.A1" office:value-type="string">
-       <text:p text:style-name="P65">Description</text:p>
+       <text:p text:style-name="Table_20_Heading">Description</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.D1" office:value-type="string">
-       <text:p text:style-name="P65">Default</text:p>
+       <text:p text:style-name="Table_20_Heading">Default</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table972.2">
       <table:table-cell table:style-name="Table972.A2" office:value-type="string">
-       <text:p text:style-name="P55">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.B2" office:value-type="string">
-       <text:p text:style-name="P62">EQUATION</text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">EOS</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.C2" office:value-type="string">
-       <text:p text:style-name="P56">A defined character string that specifies the <text:span text:style-name="T21">Equation of State to be used</text:span>, and should be set to one of the following:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies the Equation of State to be used, and should be set to one of the following:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P57"><text:span text:style-name="T21">PR</text:span>: Peng-Robinson, </text:p>
+         <text:p text:style-name="_40_Table_20_Contents">PR: Peng-Robinson,</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P58"><text:span text:style-name="T21">RK</text:span>: Redlich-Kwong, or</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">RK: Redlich-Kwong,</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P59"><text:span text:style-name="T21">SRK</text:span>: Soave-Redlich-Kwong, <text:span text:style-name="T21">or</text:span></text:p>
+         <text:p text:style-name="_40_Table_20_Contents">SRK: Soave-Redlich-Kwong, or</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P64">ZJ: Zudkevitch-Joffe-Redlich-Kwong.</text:p>
+         <text:p text:style-name="_40_Table_20_Contents">ZJ: Zudkevitch-Joffe-Redlich-Kwong.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
       <table:table-cell table:style-name="Table972.D2" office:value-type="string">
-       <text:p text:style-name="P63">PR</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">PR</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row>
       <table:table-cell table:style-name="Table972.A3" table:number-columns-spanned="4" office:value-type="string">
-       <text:p text:style-name="P60">Notes:</text:p>
+       <text:p text:style-name="_40_Table_20_Notes_20_Title">Notes:</text:p>
        <text:list text:style-name="L1">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P61">The keyword is followed by NMEOSR records as specified by the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">The keyword is followed by NMEOSR records as specified by the <text:a xlink:href="#__RefHeading___Toc89327_327352552">TABDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P61">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">Each record is terminated by a “/” and there is no “/” terminator for the keyword.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4428,23 +4440,24 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P54">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.51.1</text:sequence>: <text:span text:style-name="T21"><text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a></text:span> Keyword Description</text:p>
-    <text:p text:style-name="P49"/>
-    <text:h text:style-name="P52" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838835"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838835"/></text:h>
-    <text:p text:style-name="_40_TextBody">The following example defines <text:span text:style-name="T21">Peng-Robinson as the Equation of State</text:span> for <text:span text:style-name="T21">a model with</text:span> a single <text:span text:style-name="T21"><text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a></text:span> <text:span text:style-name="T21">region</text:span>.</text:p>
-    <text:p text:style-name="P48">--</text:p>
-    <text:p text:style-name="P48">-- <text:s text:c="6"/><text:span text:style-name="T21">SPECIFY EQUATION OF STATE</text:span> <text:s text:c="62"/></text:p>
-    <text:p text:style-name="P48">--</text:p>
-    <text:p text:style-name="P48"><text:span text:style-name="T21">EOS</text:span> <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P48"><text:s text:c="9"/><text:span text:style-name="T21">PR</text:span> <text:s text:c="36"/>/ <text:s text:c="10"/></text:p>
-    <text:p text:style-name="P48"/>
-    <text:p text:style-name="P50">The following example defines <text:span text:style-name="T21">Peng-Robinson as the Equation of State</text:span> for <text:span text:style-name="T21"><text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a></text:span> <text:span text:style-name="T21">region one, and </text:span><text:span text:style-name="T13">Soave-Redlich-Kwong</text:span><text:span text:style-name="T21"> as the Equation of State for <text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a> region two in a model with two <text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a> regions.</text:span></text:p>
-    <text:p text:style-name="P48">--</text:p>
-    <text:p text:style-name="P48">-- <text:s text:c="6"/><text:span text:style-name="T21">SPECIFY EQUATION OF STATE</text:span> <text:s text:c="62"/></text:p>
-    <text:p text:style-name="P48">--</text:p>
-    <text:p text:style-name="P48"><text:span text:style-name="T21">EOS</text:span> <text:s text:c="74"/></text:p>
-    <text:p text:style-name="P48"><text:s text:c="9"/><text:span text:style-name="T21">PR</text:span> <text:s text:c="36"/>/ <text:s text:c="10"/></text:p>
-    <text:p text:style-name="P48"><text:s text:c="9"/><text:span text:style-name="T21">RK</text:span> <text:s text:c="36"/>/ <text:s text:c="10"/></text:p>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable0" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">8.3.51.1</text:sequence>: <text:a xlink:href="#REF_HEADING_KEYWORD_EOS_5_3">EOS</text:a> Keyword Description</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">See also the <text:a xlink:href="#REF_HEADING_KEYWORD_PRCORR_8_3">PRCORR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section that can be used to select the modified Peng-Robinson equation of state.</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838835"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838835"/></text:h>
+    <text:p text:style-name="_40_TextBody">The following example defines Peng-Robinson as the Equation of State for a model with a single <text:span text:style-name="NotKeyword">EOS</text:span> region.</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>SPECIFY EQUATION OF STATE <text:s text:c="62"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">EOS <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>PR <text:s text:c="36"/>/ <text:s text:c="10"/></text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">The following example defines Peng-Robinson as the Equation of State for <text:span text:style-name="NotKeyword">EOS</text:span> region one, and Soave-Redlich-Kwong as the Equation of State for <text:span text:style-name="NotKeyword">EOS</text:span> region two in a model with two <text:span text:style-name="NotKeyword">EOS</text:span> regions.</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>SPECIFY EQUATION OF STATE <text:s text:c="62"/></text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">EOS <text:s text:c="74"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>PR <text:s text:c="36"/>/ <text:s text:c="10"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>RK <text:s text:c="36"/>/ <text:s text:c="10"/></text:p>
    </text:section>
   </office:text>
  </office:body>
