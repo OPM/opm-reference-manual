@@ -987,6 +987,42 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Default_20_Paragraph_20_Font" style:display-name="Default Paragraph Font" style:family="text"/>
+  <style:style style:name="Bold" style:family="text">
+   <style:text-properties fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="BoldItalic" style:family="text" style:parent-style-name="Bold">
+   <style:text-properties fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="BoldUnderline" style:family="text" style:parent-style-name="Bold">
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+  </style:style>
+  <style:style style:name="Italic" style:family="text">
+   <style:text-properties fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="Underline" style:family="text">
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+  </style:style>
+  <style:style style:name="Sub" style:family="text">
+   <style:text-properties style:text-position="sub 58%"/>
+  </style:style>
+  <style:style style:name="Super" style:family="text">
+   <style:text-properties style:text-position="super 58%"/>
+  </style:style>
+  <style:style style:name="Expression" style:family="text">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-family="&apos;Liberation Serif&apos;" fo:font-size="10pt" fo:letter-spacing="0.035cm" fo:font-style="italic"/>
+  </style:style>
+  <style:style style:name="ExpressionRegular" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionBold" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties fo:font-style="normal" fo:font-weight="bold"/>
+  </style:style>
+  <style:style style:name="ExpressionSub" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="-20% 58%" fo:letter-spacing="normal"/>
+  </style:style>
+  <style:style style:name="ExpressionSuper" style:family="text" style:parent-style-name="Expression">
+   <style:text-properties style:text-position="42% 58%" fo:letter-spacing="normal"/>
+  </style:style>
   <style:style style:name="Graphics" style:family="graphic">
    <style:graphic-properties svg:width="0.33cm" fo:min-height="0.33cm" text:anchor-type="paragraph" svg:x="0cm" svg:y="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" style:run-through="foreground" style:wrap="none" style:vertical-pos="from-top" style:vertical-rel="paragraph-content" style:horizontal-pos="from-left" style:horizontal-rel="paragraph-content" fo:background-color="transparent" draw:fill="none" draw:fill-color="#99ccff" fo:padding="0.051cm" fo:border="0.06pt solid #000000" style:shadow="#000000 0.178cm 0.178cm" draw:shadow-opacity="100%">
     <style:columns fo:column-count="1" fo:column-gap="0cm"/>
@@ -5443,7 +5479,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-header-rows>
     </table:table>
     <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="_40_TextBody">If the --enable-opm-rst-file=true command line option has been specified then the following OPM Flow specific data are also automatically output for visualization only as outlined in the table below:</text:p>
+    <text:p text:style-name="_40_TextBody">If the --enable-opm-rst-file=true command line option has been specified and the mnemonic NORST=0, then the following OPM Flow specific data are also automatically output for visualization only as outlined in the table below:</text:p>
     <table:table table:name="Table718" table:style-name="Table718">
      <table:table-column table:style-name="Table718.A"/>
      <table:table-column table:style-name="Table718.B"/>
@@ -5452,17 +5488,17 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table718.1">
        <table:table-cell table:style-name="Table718.A1" office:value-type="string">
-        <text:p text:style-name="P10544">No.</text:p>
+        <text:p text:style-name="Table_20_Heading">No.</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table718.A1" office:value-type="string">
-        <text:p text:style-name="P10544">Mnemonic</text:p>
+        <text:p text:style-name="Table_20_Heading">Mnemonic</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table718.A1" office:value-type="string">
-        <text:p text:style-name="P10544">Description</text:p>
+        <text:p text:style-name="Table_20_Heading">Description</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table718.D1" office:value-type="string">
-        <text:p text:style-name="P10544">Array</text:p>
-        <text:p text:style-name="P10544">Name</text:p>
+        <text:p text:style-name="Table_20_Heading">Array</text:p>
+        <text:p text:style-name="Table_20_Heading">Name</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -5471,13 +5507,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">XMFCO2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">SOLVMFG</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">CO2 liquid-phase mole fractions written when the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Solvent (CO<text:span text:style-name="Sub">2</text:span>) mass fraction in the gas phase, zero where the gas phase is absent. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that SOLVMFG = <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">s</text:span> × SS_Y / (<text:span text:style-name="NotKeyword">RV</text:span> × <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">o</text:span> + (1 - SS_Y) × <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">g</text:span> + SS_Y × <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">s</text:span>), where the densities are defined at surface conditions.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">XMFCO2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SOLVMFG</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
@@ -5485,10 +5522,124 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">SOLVMFO</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Solvent (CO<text:span text:style-name="Sub">2</text:span>) mass fraction in the oil phase, zero where the oil phase is absent. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that SOLVMFO = <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">s</text:span> × SS_X × <text:span text:style-name="NotKeyword">RS</text:span> / (<text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">o</text:span> + <text:span text:style-name="NotKeyword">RS</text:span> × ((1 - SS_X) × <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">g</text:span> + SS_X × <text:span text:style-name="Expression">ρ</text:span><text:span text:style-name="ExpressionSub">s</text:span>)), where the densities are defined at surface conditions.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SOLVMFO</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">SS_X</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Solvent (CO<text:span text:style-name="Sub">2</text:span>) volume fraction in the dissolved gas, at surface conditions. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, and is equivalent to the item 7 (XVOL).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SS_X</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">SS_Y</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Solvent (CO<text:span text:style-name="Sub">2</text:span>) volume fraction in the free gas, at surface conditions. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, and is equivalent to the item 8 (YVOL).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SS_Y</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">SS_Z</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Solvent (CO<text:span text:style-name="Sub">2</text:span>) fraction used to lookup values on the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword, it has no physical meaning in the simulation but may be, for example, the CO<text:span text:style-name="Sub">2</text:span> mole fraction obtained from simulations of a slim tube test used to generate the data for the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> table. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section, and is equivalent to the item 1 (CO2).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">SS_Z</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">6</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">STD_CO2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Solvent (CO<text:span text:style-name="Sub">2</text:span>) total mass fraction in the oil and gas phases. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Note that STD_CO2 = (SOLVMFO × <text:span text:style-name="NotKeyword">SOIL</text:span> × OIL_DEN + SOLVMFG × <text:span text:style-name="NotKeyword">SGAS</text:span> × GAS_DEN) / (<text:span text:style-name="NotKeyword">SOIL</text:span> × OIL_DEN + <text:span text:style-name="NotKeyword">SGAS</text:span> × GAS_DEN).</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">STD_CO2</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">7</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">STD_GAS</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Hydrocarbon gas total mass fraction in the oil and gas phases. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">STD_GAS</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">8</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">STD_OIL</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">Stock-tank oil total mass fraction in the oil and gas phases. This is written when the <text:a xlink:href="#__RefHeading___Toc414279_1093985484">PVTSOL</text:a> keyword has been entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">STD_OIL</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">9</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">XMFCO2</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents">CO<text:span text:style-name="Sub">2</text:span> liquid-phase mole fractions written when the <text:a xlink:href="#__RefHeading___Toc387968_1616145207">CO2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.D2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">XMFCO2</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table718.1">
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">10</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table718.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">XMFH2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">H2 liquid-phase mole fractions written when the <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">H<text:span text:style-name="Sub">2</text:span> liquid-phase mole fractions written when the <text:a xlink:href="#REF_HEADING_KEYWORD_H2STORE">H2STORE</text:a> option has been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.D2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents_20_Center">XMFH2</text:p>
@@ -5496,7 +5647,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">11</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table718.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">YMFWAT</text:p>
@@ -5511,9 +5662,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-row table:style-name="Table718.1">
       <table:table-cell table:style-name="Table718.A20" table:number-columns-spanned="4" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Notes_20_Title">Notes:</text:p>
-       <text:list text:style-name="L1">
+       <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Notes">The above OPM Flow specific data are only written to the restart file if the --enable-opm-rst-file=true command line option has been specified and the specified options have been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">The above OPM Flow specific data are only written to the restart file if the --enable-opm-rst-file=true command line option has been specified, the mnemonic NORST=0, and the specified options have been activated in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -5523,8 +5674,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable473" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">10.27</text:sequence>: Data Sets Automatically Written to the <text:span text:style-name="NotKeyword">RESTART</text:span> File for Visualization Only</text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716403_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716403_3964674244"/></text:h>
+<text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716403_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716403_3964674244"/></text:h>
     <text:p text:style-name="_40_TextBody">The first example request that the standard restart data be written out every month.</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>RESTART CONTROL BASIC = 4 (YEARLY) 5 (MONTHLY)</text:p>
