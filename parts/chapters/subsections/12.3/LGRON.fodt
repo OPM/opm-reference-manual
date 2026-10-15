@@ -894,6 +894,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes_20_Title" style:display-name="@Table Notes Title" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes" style:display-name="@Table Notes" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="" style:list-style-name="_40_NumberedListTable">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
    <style:text-properties fo:color="#004586" loext:opacity="100%"/>
@@ -1917,6 +1929,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
   <style:default-page-layout>
    <style:page-layout-properties style:writing-mode="lr-tb" style:layout-grid-standard-mode="true"/>
   </style:default-page-layout>
+  <style:style style:name="NotKeyword" style:family="text"/>
  </office:styles><office:automatic-styles>
   <style:style style:name="Table108" style:family="table">
    <style:table-properties style:width="16.976cm" fo:margin-left="-0.053cm" table:align="left" style:writing-mode="lr-tb" table:border-model="separating"/>
@@ -4226,8 +4239,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
      </table:table-row>
     </table:table>
-    <text:h text:style-name="P18345" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838831132111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838831132111"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc281550_2843394514">LGRON</text:a> keyword activates a stated Local Grid Refinement (“LGR”) and optionally sets the minimum number of wells above which the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> will remain active. LGRs must have declared by the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> (Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid) or RADIN/RADIN4 (radial <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid) keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. LGRs can subsequently be deactivated by the <text:a xlink:href="#__RefHeading___Toc281548_2843394514">LGROFF</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc14499_370116838831132111"/>Description<text:bookmark-end text:name="__RefHeading___Toc14499_370116838831132111"/></text:h>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc281550_2843394514">LGRON</text:a> keyword activates the specified Local Grid Refinement (“LGR”) and optionally sets the minimum number of active wells for which the <text:span text:style-name="NotKeyword">LGR</text:span> will be automatically activated, or below which it will be automatically deactivated. LGRs must have been declared by the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section, and defined by the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> (Cartesian <text:span text:style-name="NotKeyword">LGR</text:span>), or <text:a xlink:href="#__RefHeading___Toc76871_718313858">RADFIN</text:a> or <text:a xlink:href="#__RefHeading___Toc76873_718313858">RADFIN4</text:a> (radial <text:span text:style-name="NotKeyword">LGR</text:span>) keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section. LGRs can subsequently be deactivated using the <text:a xlink:href="#__RefHeading___Toc281548_2843394514">LGROFF</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:p text:style-name="_40_TextBody">Currently, OPM Flow does not support the local grid refinement feature and therefore this keyword is ignored by the simulator.</text:p>
     <table:table table:name="Table1322" table:style-name="Table1322">
      <table:table-column table:style-name="Table1322.A"/>
@@ -4237,55 +4250,58 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table1322.1">
        <table:table-cell table:style-name="Table1322.A1" office:value-type="string">
-        <text:p text:style-name="P10723">No.</text:p>
+        <text:p text:style-name="Table_20_Heading">No.</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table1322.A1" office:value-type="string">
-        <text:p text:style-name="P10723">Name</text:p>
+        <text:p text:style-name="Table_20_Heading">Name</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table1322.A1" office:value-type="string">
-        <text:p text:style-name="P10723">Description</text:p>
+        <text:p text:style-name="Table_20_Heading">Description</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table1322.D1" office:value-type="string">
-        <text:p text:style-name="P10723">Default</text:p>
+        <text:p text:style-name="Table_20_Heading">Default</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
      <table:table-row table:style-name="Table1322.2">
       <table:table-cell table:style-name="Table1322.A2" office:value-type="string">
-       <text:p text:style-name="P1936">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1322.B3" office:value-type="string">
-       <text:p text:style-name="P2090">LGRNAME</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">LGRNAME</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1322.C3" office:value-type="string">
-       <text:p text:style-name="P7782">A character string of up to eight characters in length that defines the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> name for which the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> is being activated. </text:p>
-       <text:p text:style-name="P7782">The <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> must have been previously defined by the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a> (Cartesian <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid) or RADIN/RADIN4 (radial <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> grid) keywords in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string of up to eight characters in length that defines the name of the <text:span text:style-name="NotKeyword">LGR</text:span> to activate. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The <text:span text:style-name="NotKeyword">LGR</text:span> must have been previously defined by the <text:a xlink:href="#__RefHeading___Toc150726_63720426">CARFIN</text:a>, <text:a xlink:href="#__RefHeading___Toc76871_718313858">RADFIN</text:a>, or <text:a xlink:href="#__RefHeading___Toc76873_718313858">RADFIN4</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc38674_784232322">GRID</text:a> section.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1322.D3" office:value-type="string">
-       <text:p text:style-name="P1978">None</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1322.2">
       <table:table-cell table:style-name="Table1322.A2" office:value-type="string">
-       <text:p text:style-name="P2132">2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1322.B3" office:value-type="string">
-       <text:p text:style-name="P2134">MNWELLS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">MNWELLS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1322.C3" office:value-type="string">
-       <text:p text:style-name="P7782">A positive integer greater than or equal to zero that defines the minimum number of active wells, below which the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> will be automatically deactivated. </text:p>
-       <text:p text:style-name="P9053">The default value of zero implies that there is no limit to the number of wells and results in the <text:a xlink:href="#__RefHeading___Toc55049_4106839650">LGR</text:a> being unconditionally being activated.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer greater than or equal to zero that defines the minimum number of active wells in the <text:span text:style-name="NotKeyword">LGR</text:span> for which the <text:span text:style-name="NotKeyword">LGR</text:span> will be automatically activated, and below which the <text:span text:style-name="NotKeyword">LGR</text:span> will be automatically deactivated. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The default value of zero implies that there is no limit to the number of active wells and results in the <text:span text:style-name="NotKeyword">LGR</text:span> being unconditionally activated.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table1322.D3" office:value-type="string">
-       <text:p text:style-name="P2135">0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table1322.1">
       <table:table-cell table:style-name="Table1322.A4" table:number-columns-spanned="4" office:value-type="string">
-       <text:p text:style-name="P1635">Notes:</text:p>
-       <text:list xml:id="list105920720395168" text:continue-list="list105920578341055" text:style-name="L19">
+       <text:p text:style-name="_40_Table_20_Notes_20_Title">Notes:</text:p>
+       <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19174">The keyword is followed by any number of records with e<text:span text:style-name="T1533">ach record terminated by a “/” and the </text:span>keyword should be terminated by a <text:span text:style-name="T1533">“/”.</text:span></text:p>
+         <text:p text:style-name="_40_Table_20_Notes">A well is defined as active if it is open or stopped, and inactive if it is shut.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="_40_Table_20_Notes">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4294,19 +4310,19 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14572">Table <text:sequence text:ref-name="refTable593" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.51</text:sequence>: LGRON Keyword Description</text:p>
-    <text:h text:style-name="P18591" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716643_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716643_3964674244"/></text:h>
-    <text:p text:style-name="_40_TextBody">The example below unconditionally activates LGR-OP01, and sets the minimum number of active wells for <text:s/>activating LGR-OP02 and LGR-OP03 to one. For all the gas well LGRs (LGR-GP*) the minimum number of wells for activating these LGRs is set to two. </text:p>
-    <text:p text:style-name="P12908">--</text:p>
-    <text:p text:style-name="P12908">-- <text:s text:c="6"/>ACTIVATE LOCAL GRID REFINEMENTS</text:p>
-    <text:p text:style-name="P12908">--</text:p>
-    <text:p text:style-name="P12908">-- <text:s text:c="6"/>LGRNAME <text:s text:c="2"/>MNWELLS <text:s text:c="28"/></text:p>
-    <text:p text:style-name="P14189">LGRON <text:s text:c="61"/></text:p>
-    <text:p text:style-name="P12908"><text:s text:c="9"/>LGR-OP01 <text:s text:c="61"/>/</text:p>
-    <text:p text:style-name="P14189"><text:s text:c="9"/>LGR-OP02 <text:s/>1 <text:s text:c="58"/>/</text:p>
-    <text:p text:style-name="P14189"><text:s text:c="9"/>LGR-OP03 <text:s/>1 <text:s text:c="58"/>/</text:p>
-    <text:p text:style-name="P12908"><text:s text:c="9"/>LGR-GP* <text:s text:c="2"/>2 <text:s text:c="58"/>/</text:p>
-    <text:p text:style-name="P12908">/</text:p>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable593" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">12.51</text:sequence>: LGRON Keyword Description</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716643_3964674244"/>Example<text:bookmark-end text:name="__RefHeading___Toc716643_3964674244"/></text:h>
+    <text:p text:style-name="_40_TextBody">The example below unconditionally activates LGR-OP01, and sets the minimum number of active wells for automatically activating or deactivating LGR-OP02 and LGR-OP03 to one. For all the gas well LGRs (LGR-GP*), the minimum number of wells for which these LGRs will be automatically activated or deactivate is set to two. </text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ACTIVATE LOCAL GRID REFINEMENTS</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>LGRNAME <text:s text:c="2"/>MNWELLS <text:s text:c="28"/></text:p>
+    <text:p text:style-name="_40_Example">LGRON <text:s text:c="61"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>LGR-OP01 <text:s text:c="61"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>LGR-OP02 <text:s/>1 <text:s text:c="58"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>LGR-OP03 <text:s/>1 <text:s text:c="58"/>/</text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>LGR-GP* <text:s text:c="2"/>2 <text:s text:c="58"/>/</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
     
    </text:section>
   </office:text>
