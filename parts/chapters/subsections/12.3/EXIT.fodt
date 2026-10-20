@@ -4262,7 +4262,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838839"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838839"/></text:h>
-    <text:p text:style-name="P12792">The <text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a> keyword is part of OPM Flow’s <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> facility that allows for terminating the simulation for when a condition within an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> definition is satisfied. <text:s/>Invoking the keyword within an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> definition will result in the simulation terminating with an exit status code. The <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> facility allows the user to enter computational logic to the simulation run based on the how the simulation run is proceeding – see the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
+    <text:p text:style-name="P12792">The <text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a> keyword is part of OPM Flow’s Action facility that allows for terminating the simulation for when a condition within an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> definition is satisfied. <text:s/>Invoking the keyword within an <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> definition will result in the simulation terminating with an exit status code. The Action facility allows the user to enter computational logic to the simulation run based on the how the simulation run is proceeding – see the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section. </text:p>
     <text:p text:style-name="P15818"/>
     <table:table table:name="Table1843" table:style-name="Table1843">
      <table:table-column table:style-name="Table1843.A"/>
@@ -4270,7 +4270,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:table-row table:style-name="Table1843.1">
        <table:table-cell table:style-name="Table1843.A1" office:value-type="string">
         <text:p text:style-name="P10211">Note</text:p>
-        <text:p text:style-name="P10372">This is an OPM Flow specific keyword for the simulator’s <text:a xlink:href="#__RefHeading___Toc148342_63720426">ACTION</text:a> facility and will therefore cause an error if used in the commercial simulator.</text:p>
+        <text:p text:style-name="P10372">This is an OPM Flow specific keyword for the simulator’s Action facility and will therefore cause an error if used in the commercial simulator.</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
@@ -4327,23 +4327,23 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_TextBody"/>
     <text:p text:style-name="_40_TextBody"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838837"/>T<text:span text:style-name="T1470">he </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1470"><text:a xlink:href="#__RefHeading___Toc627737_1466963378">EXIT</text:a></text:span></text:span><text:span text:style-name="T1470"> keyword should </text:span>only <text:span text:style-name="T1470">be used as part of an </text:span><text:span text:style-name="Source_20_Text"><text:span text:style-name="T1470"><text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a></text:span></text:span><text:span text:style-name="T1470"> block, if found elsewhere in the input deck it </text:span>will be<text:span text:style-name="T1470"> ignored. </text:span><text:bookmark-end text:name="__RefHeading___Toc32169_370116838837"/></text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4"><text:bookmark-start text:name="__RefHeading___Toc716575_3964674244"/>Examples<text:bookmark-end text:name="__RefHeading___Toc716575_3964674244"/></text:h>
-    <text:p text:style-name="P11827">The first example uses the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword to define a condition for when the Field Oil Production Rate (“FOPR) falls below 1,000 stb/d (or 1,000 m<text:span text:style-name="T3853">3</text:span><text:span text:style-name="T1533">) using the default value for the EXITCODE.</text:span></text:p>
-    <text:p text:style-name="P14457">--</text:p>
-    <text:p text:style-name="P14457">-- <text:s text:c="6"/>DEFINE START OF ACTIONX SECTION</text:p>
-    <text:p text:style-name="P14457">-- </text:p>
-    <text:p text:style-name="P14456">ACTIONX</text:p>
+    <text:p text:style-name="_40_TextBody">The first example uses the <text:a xlink:href="#__RefHeading___Toc152227_2992482751">ACTIONX</text:a> keyword to define a condition for when the Field Oil Production Rate (“FOPR) falls below 1,000 stb/d (or 1,000 m<text:span text:style-name="T3853">3</text:span>/d) using the default value for the EXITCODE.</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE START OF ACTIONX SECTION</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">ACTIONX</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;CHECK_FOPR&apos; 100000 <text:s text:c="11"/>/</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>FOPR &lt; 1000 <text:s text:c="19"/>/</text:p>
     <text:p text:style-name="_40_Example">/</text:p>
-    <text:p text:style-name="P14458">--</text:p>
-    <text:p text:style-name="P14458">-- <text:s text:c="6"/>TERMINATE AND EXIT SIMULATION</text:p>
-    <text:p text:style-name="P14458">-- </text:p>
-    <text:p text:style-name="P14428">EXIT</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>TERMINATE AND EXIT SIMULATION</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">EXIT</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="4"/><text:s text:c="36"/>/</text:p>
-    <text:p text:style-name="P14456"/>
-    <text:p text:style-name="P14344">ENDACTIO</text:p>
-    <text:p text:style-name="P14456"/>
-    <text:p text:style-name="P16073">The next example terminates the simulation with EXITCODE one when the Field Pressure (“FPR”) falls below 200 psia (or 200 barsa). <text:s/></text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_Example">ENDACTIO</text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">The next example terminates the simulation with EXITCODE one when the Field Pressure (“FPR”) falls below 200 psia (or 200 barsa). <text:s/></text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>DEFINE START OF ACTIONX SECTION</text:p>
     <text:p text:style-name="_40_Example">-- </text:p>
@@ -4351,17 +4351,15 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>&apos;CHECK_FPR&apos; <text:s/>100000 <text:s text:c="12"/>/</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="10"/>FPR &lt; 200 <text:s text:c="3"/><text:s text:c="18"/>/</text:p>
     <text:p text:style-name="_40_Example">/</text:p>
-    <text:p text:style-name="P14458">--</text:p>
-    <text:p text:style-name="P14458">-- <text:s text:c="6"/>TERMINATE AND EXIT SIMULATION</text:p>
-    <text:p text:style-name="P14458">-- </text:p>
-    <text:p text:style-name="P14428">EXIT</text:p>
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>TERMINATE AND EXIT SIMULATION</text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">EXIT</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="9"/>1 <text:s/><text:s text:c="29"/>/</text:p>
     <text:p text:style-name="_40_Example"/>
     <text:p text:style-name="_40_Example">ENDACTIO</text:p>
-    <text:p text:style-name="_40_TextBody"/>
-    <text:p text:style-name="P12161">Note is is probably good practice to always set the EXITCODE to be able to identify the reason for the simulation stopping.</text:p>
-    <text:p text:style-name="_40_Example"><text:span text:style-name="Source_20_Text"/></text:p>
-    
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">Note it is probably good practice to always set the EXITCODE to be able to identify the reason for the simulation stopping.</text:p>
    </text:section>
   </office:text>
  </office:body>
