@@ -4410,7 +4410,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">CHECK_STOPPED</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies whether to continuing checking the economic criteria if the well is stopped. CHECK_STOPPED should be set to one of the following character strings:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies whether to continue checking the economic criteria if the well is stopped. CHECK_STOPPED should be set to one of the following character strings:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item>
          <text:p text:style-name="_40_Table_20_Notes">YES: continue checking the economic criteria for stopped wells.</text:p>
@@ -4435,7 +4435,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">MIN_OIL</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the minimum economic surface oil production rate, below which the connection will be shut. If the WORKOVER_PROCEDURE is +CON then all connections below will also be shut.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the minimum economic surface oil production rate, below which the connection will be shut. If the WORKOVER_PROCEDURE is +CON then all connections below will also be shut.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4465,7 +4465,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">MIN_GAS</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real positive value that defines the minimum economic surface gas production rate, below which the connection will be shut. If the WORKOVER_PROCEDURE is +CON then all connections below will also be shut.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the minimum economic surface gas production rate, below which the connection will be shut. If the WORKOVER_PROCEDURE is +CON then all connections below will also be shut.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4512,6 +4512,9 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="_40_Table_20_Notes">The economic criteria are applied to all connections in the box (I, J, K1 - K2). If the connections are lumped into completions using the <text:a xlink:href="#__RefHeading___Toc97655_3261743917">COMPLUMP</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc43945_784232322">SCHEDULE</text:a> section then the economic criteria are applied to each completion.</text:p>
         </text:list-item>
         <text:list-item>
+         <text:p text:style-name="_40_Table_20_Notes">The defaults for the minimum oil and gas rates are large negative values to prevent the connections being closed due to crossflow in the well.</text:p>
+        </text:list-item>
+        <text:list-item>
          <text:p text:style-name="_40_Table_20_Notes">The keyword is followed by any number of records with each record terminated by a “/” and the keyword should be terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
@@ -4530,7 +4533,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>WELL ECONOMIC CRITERIA FOR PRODUCTION WELL CONNECTIONS</text:p>
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">-- WELL <text:s/>-- LOCATION -- <text:s/>MAX <text:s text:c="3"/>MAX <text:s text:c="3"/>MAX <text:s text:c="3"/>WORK CHCK MIN <text:s text:c="3"/>MIN <text:s text:c="3"/>FLLW</text:p>
-    <text:p text:style-name="_40_Example">-- NAME <text:s/>II<text:s text:c="2"/>JJ<text:s text:c="2"/>K1<text:s text:c="2"/>K2 <text:s/>WCUT <text:s text:c="2"/>GOR <text:s text:c="3"/>WGR <text:s text:c="3"/>OVER STOP ORAT <text:s text:c="2"/>GRAT <text:s text:c="2"/>ON </text:p>
+    <text:p text:style-name="_40_Example">-- NAME <text:s text:c="2"/>I<text:s text:c="3"/>J<text:s text:c="2"/>K1<text:s text:c="2"/>K2 <text:s/>WCUT <text:s text:c="2"/>GOR <text:s text:c="3"/>WGR <text:s text:c="3"/>OVER STOP OIL<text:s text:c="4"/>GAS<text:s text:c="4"/>ON </text:p>
     <text:p text:style-name="_40_Example">CECON</text:p>
     <text:p text:style-name="_40_Example">OP01<text:s text:c="5"/>2*<text:s text:c="6"/>20<text:s text:c="2"/>56 <text:s/>0.80 <text:s text:c="2"/>1* <text:s text:c="4"/>1* <text:s text:c="4"/>CON<text:s text:c="2"/>NO<text:s text:c="3"/>1*<text:s text:c="5"/>1* /</text:p>
     <text:p text:style-name="_40_Example">OP02<text:s text:c="5"/>4*<text:s text:c="14"/>1* <text:s text:c="4"/>0.8 <text:s text:c="3"/>1* <text:s text:c="4"/>WELL NO<text:s text:c="3"/>1*<text:s text:c="5"/>1* /</text:p>
