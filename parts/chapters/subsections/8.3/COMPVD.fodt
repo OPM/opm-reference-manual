@@ -4219,7 +4219,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">DEPTH</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A real value that defines the depth. The values should be monotonically increasing down the table.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real valued columnar vector that defines the depths. The values should be monotonically increasing down the table.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4243,13 +4243,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>     
      <table:table-row>
       <table:table-cell table:style-name="Table2000.A2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">2, ... N+1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">Z1, ... ZN</text:span></text:p>
+       <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">ZCOMP</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A series of positive real values (<text:span text:style-name="Expression">z</text:span><text:span text:style-name="ExpressionSub">1</text:span>, ... <text:span text:style-name="Expression">z</text:span><text:span text:style-name="ExpressionSub">N</text:span>) that should sum to one and define the initial total composition at this depth.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A series of N positive real valued columnar vectors that should sum to one and define the initial total composition (<text:span text:style-name="Expression">z</text:span><text:span text:style-name="ExpressionSub">1</text:span>, ... <text:span text:style-name="Expression">z</text:span><text:span text:style-name="ExpressionSub">N</text:span>) at each depth.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4261,25 +4261,25 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell table:style-name="Table2000.A2"/>
       <table:covered-table-cell table:style-name="Table2000.A2"/>
       <table:table-cell table:style-name="Table2000.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">dimensionless</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">mole fraction</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">dimensionless</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">mole fraction</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">dimensionless</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">mole fraction</text:p>
       </table:table-cell>
       <table:covered-table-cell table:style-name="Table2000.F2"/>
      </table:table-row>     
      <table:table-row>
       <table:table-cell table:style-name="Table2000.A2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">N+2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">PHASE</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer equal to zero (vapor) or one (liquid) that specifies if the fluid at this depth is above or below the gas-oil contact.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer valued columnar vector equal to zero (vapor) or one (liquid) that specifies if the fluid at each depth is above or below the gas-oil contact.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4289,13 +4289,13 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
      <table:table-row>
       <table:table-cell table:style-name="Table2000.A2" table:number-rows-spanned="2" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents_20_Center">N+3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-rows-spanned="2" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents"><text:span text:style-name="NotKeyword">PSAT</text:span></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">A positive real value that defines the observed saturation pressure at this depth. This is for comparison with the calculated values only and may be set to zero if not required.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive real valued columnar vector that defines the observed saturation pressure at each depth. This is for comparison with the calculated values only and may be set to zero if not required.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
       <table:covered-table-cell/>
@@ -4325,7 +4325,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="_40_Table_20_Notes">Constant value extrapolation is used for depths outside the range of the table.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="_40_Table_20_Notes">If the model includes a gas-oil contact then compositions above the contact are assumed to be vapor compositions and compositions below the contact are assumed to be liquid compositions. This is compared with the fluid type (PHASE) defined in column N+2.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">If the model includes a gas-oil contact then compositions above the contact are assumed to be vapor compositions and compositions below the contact are assumed to be liquid compositions. This is compared with the fluid type as defined in item 3 (PHASE).</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="_40_Table_20_Notes">The keyword is followed by NTEQUL records as defined on the <text:a xlink:href="#__RefHeading___Toc60335_327352552">EQLDIMS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
