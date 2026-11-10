@@ -894,6 +894,18 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
+  <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes_20_Title" style:display-name="@Table Notes Title" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
+  <style:style style:name="_40_Table_20_Notes" style:display-name="@Table Notes" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="" style:list-style-name="_40_NumberedListTable">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
+  </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
    <style:text-properties fo:color="#004586" loext:opacity="100%"/>
@@ -2510,7 +2522,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </style:table-cell-properties>
   </style:style>
   <style:style style:name="Table346" style:family="table">
-   <style:table-properties style:width="15.556cm" fo:margin-left="1.468cm" table:align="left" fo:keep-with-next="auto"/>
+   <style:table-properties style:width="15.556cm" fo:margin-left="1.468cm" table:align="left" fo:keep-with-next="auto" fo:keep-together="auto" style:may-break-between-rows="true"/>
   </style:style>
   <style:style style:name="Table346.A" style:family="table-column">
    <style:table-column-properties style:column-width="1.272cm"/>
@@ -2525,7 +2537,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:table-column-properties style:column-width="1.981cm"/>
   </style:style>
   <style:style style:name="Table346.1" style:family="table-row">
-   <style:table-row-properties fo:keep-together="always"/>
+   <style:table-row-properties fo:keep-with-next="auto" fo:keep-together="always" fo:page-break-before="auto" fo:page-break-after="auto"/>
   </style:style>
   <style:style style:name="Table346.A1" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
@@ -4328,8 +4340,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    </text:user-field-decls>
    <text:p text:style-name="P18776"/>
    <text:section text:style-name="Sect1" text:name="ROCKCOMP">
-
-<text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc55593_1778172979"/>ROCKCOMP – Activate Rock Compaction <text:bookmark-end text:name="__RefHeading___Toc55593_1778172979"/></text:h>
+    <text:h text:style-name="P17663" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc55593_1778172979"/>ROCKCOMP – Activate Rock Compaction <text:bookmark-end text:name="__RefHeading___Toc55593_1778172979"/></text:h>
     <table:table table:name="Table345" table:style-name="Table345">
      <table:table-column table:style-name="Table345.A" table:number-columns-repeated="4"/>
      <table:table-column table:style-name="Table345.E"/>
@@ -4363,7 +4374,8 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      </table:table-row>
     </table:table>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32167_370116838826"/>Description<text:bookmark-end text:name="__RefHeading___Toc32167_370116838826"/></text:h>
-    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword activates rock compaction and defines various rock compaction options for the run. <text:s/>By default OPM Flow models rock compaction via pore volume compressibility as entered on the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. This keyword enables pressure dependent pore volume and transmissibility multipliers for rock compaction that are entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section using the <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keyword. Currently OPM Flow only supports the default options for rock compaction.</text:p>
+    <text:p text:style-name="_40_TextBody">The <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword activates rock compaction and defines various rock compaction options for the run. <text:s/>This keyword enables pressure dependent pore volume and transmissibility multipliers for rock compaction that are entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section using the <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a>, <text:a xlink:href="#__RefHeading___Toc266641_516898843">ROCKTABH</text:a>, or <text:a xlink:href="#__RefHeading___Toc174483_4194303431">ROCK2D</text:a> keywords. </text:p>
+    <text:p text:style-name="_40_TextBody">By default OPM Flow models rock compaction via pore volume compressibility as entered on the <text:a xlink:href="#__RefHeading___Toc45809_719036256">ROCK</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
     <table:table table:name="Table346" table:style-name="Table346">
      <table:table-column table:style-name="Table346.A"/>
      <table:table-column table:style-name="Table346.B"/>
@@ -4372,136 +4384,143 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
      <table:table-header-rows>
       <table:table-row table:style-name="Table346.1">
        <table:table-cell table:style-name="Table346.A1" office:value-type="string">
-        <text:p text:style-name="P10544">No.</text:p>
+        <text:p text:style-name="Table_20_Heading">No.</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table346.A1" office:value-type="string">
-        <text:p text:style-name="P10544">Name</text:p>
+        <text:p text:style-name="Table_20_Heading">Name</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table346.A1" office:value-type="string">
-        <text:p text:style-name="P10544">Description</text:p>
+        <text:p text:style-name="Table_20_Heading">Description</text:p>
        </table:table-cell>
        <table:table-cell table:style-name="Table346.D1" office:value-type="string">
-        <text:p text:style-name="P10544">Default</text:p>
+        <text:p text:style-name="Table_20_Heading">Default</text:p>
        </table:table-cell>
       </table:table-row>
      </table:table-header-rows>
      <table:table-row table:style-name="Table346.1">
       <table:table-cell table:style-name="Table346.A2" office:value-type="string">
-       <text:p text:style-name="P2901">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.B4" office:value-type="string">
-       <text:p text:style-name="P3523">ROCKOPT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">ROCKOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.C4" office:value-type="string">
-       <text:p text:style-name="P3188">A character string that defines the rock compaction option based on one of the following character strings:</text:p>
-       <text:list xml:id="list105910023382911" text:continue-list="list105909335686453" text:style-name="_40_NumberedListTable">
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies the rock compaction option that should be set to one of the following:</text:p>
+       <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19469">REVERS: <text:s/>Rock compaction is reversible with increasing pressure. <text:s text:c="2"/>The rock compaction multipliers should be entered via the <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. <text:s/>This is the default value.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">REVERS: <text:s/>Rock compaction is reversible with increasing pressure. <text:s text:c="2"/>The rock compaction multipliers should be entered via the <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19469">IRREVERS: Rock compaction is irreversible, that is the rock expansion does not occur when the pressure subsequently increases.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">IRREVERS: Rock compaction is irreversible, that is the rock expansion does not occur when the pressure subsequently increases. The rock compaction multipliers should be entered via the <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19469">HYSTER: Invokes the hysteresis rock compaction option.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">HYSTER: Invokes the hysteresis rock compaction option. The rock compaction multipliers should be entered via the <text:a xlink:href="#__RefHeading___Toc266641_516898843">ROCKTABH</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19469">BOBERG: Rock compaction hysteresis is modeled using the Boberg formulation<text:note text:id="ftn93" text:note-class="footnote"><text:note-citation>93</text:note-citation><text:note-body>
-             <text:p text:style-name="P16652">Beattie, C.I., Boberg, T.C., and McNab, G.S. “Reservoir Simulation of Cyclic Steam Stimulation in the Cold Lake Oil Sands,” paper SPE 18752, Society of Petroleum Engineers Journal, (1991) 6, No. 2, 200-206.</text:p></text:note-body></text:note>.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">BOBERG: Rock compaction hysteresis is modeled using the Boberg formulation<text:note text:id="ftn93" text:note-class="footnote"><text:note-citation>93</text:note-citation><text:note-body>
+          <text:p text:style-name="P16652">Beattie, C.I., Boberg, T.C., and McNab, G.S. “Reservoir Simulation of Cyclic Steam Stimulation in the Cold Lake Oil Sands”, paper SPE 18752, Society of Petroleum Engineers Journal, (1991) 6, No. 2, 200-206. https://doi.org/10.2118/18752-PA</text:p></text:note-body></text:note>.  The rock compaction multipliers should be entered via the <text:a xlink:href="#__RefHeading___Toc266641_516898843">ROCKTABH</text:a> keyword.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19470">REVLIMIT: Activates the reversible hysteresis rock compaction option that limits the pore volume subject to reversibility based on the minimum pressure in a grid block and the initial water saturation. This option is only intended to be used with the water induced compaction model, neither of which are currently supported by OPM Flow..</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">REVLIMIT: Activates the reversible hysteresis rock compaction option that limits the pore volume subject to reversibility based on the minimum pressure in a grid block and the initial water saturation. This option is only intended to be used with the water induced compaction model.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19471">PALM-MAN: Rock compaction hysteresis is modeled using the Palmer-Mansoori<text:note text:id="ftn94" text:note-class="footnote"><text:note-citation>94</text:note-citation><text:note-body>
-             <text:p text:style-name="Footnote">Palmer, I. and Mansoori, J. “How Permeability Depends on Stress and Pore Pressure in Coalbeds: A New Model,” paper SPE 52607, SPE Reservoir Evaluation &amp; Engineering (1998) 1, No. 6, 539-544.</text:p></text:note-body></text:note> and <text:note text:id="ftn95" text:note-class="footnote"><text:note-citation>95</text:note-citation><text:note-body>
-             <text:p text:style-name="P16639">Clarkson, C.R., Pan, Z., Palmer, I. and Harpalani, S. &quot;Predicting Sorption-Induced Strain and Permeability Increase With Depletion for Coalbed-Methane Reservoirs&quot;, SPE 114778-PA, SPE Journal (2010) 15, No. 1, 152–159.</text:p></text:note-body></text:note><text:s/>formulation for coal bed methane reservoirs, neither of which are supported by OPM Flow.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">PALM-MAN: Rock compaction hysteresis is modeled using the Palmer-Mansoori<text:note text:id="ftn94" text:note-class="footnote"><text:note-citation>94</text:note-citation><text:note-body>
+             <text:p text:style-name="Footnote">Palmer, I. and Mansoori, J. “How Permeability Depends on Stress and Pore Pressure in Coalbeds: A New Model”, paper SPE 52607, SPE Reservoir Evaluation &amp; Engineering (1998) 1, No. 6, 539-544. https://doi.org/10.2118/52607-PA</text:p></text:note-body></text:note><text:s/><text:note text:id="ftn95" text:note-class="footnote"><text:note-citation>95</text:note-citation><text:note-body>
+             <text:p text:style-name="P16639">Clarkson, C.R., Pan, Z., Palmer, I. and Harpalani, S. &quot;Predicting Sorption-Induced Strain and Permeability Increase With Depletion for Coalbed-Methane Reservoirs&quot;, SPE 114778-PA, SPE Journal (2010) 15, No. 1, 152–159. https://doi.org/10.2118/114778-PA</text:p></text:note-body></text:note><text:s/>formulation for coal bed methane reservoirs.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19479"><text:span text:style-name="T3628">NONE: </text:span>Deactivates rock compaction, unless the water induced compaction model has been invoked.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">NONE: Deactivates rock compaction, unless the water induced compaction model has been invoked.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P16161">Only the REVERS and IRREVERS options are supported by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">Only the REVERS, IRREVERS, and HYSTER options are supported by OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.D4" office:value-type="string">
-       <text:p text:style-name="P3524">REVERS</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">REVERS</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table346.1">
       <table:table-cell table:style-name="Table346.A2" office:value-type="string">
-       <text:p text:style-name="P2901">2</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">2</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.B4" office:value-type="string">
-       <text:p text:style-name="P3525">NTROCC</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">NTROCC</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.C4" office:value-type="string">
-       <text:p text:style-name="P3170">A positive integer that defines the number of rock compaction tables, that is the number of <text:a xlink:href="#__RefHeading___Toc107256_3812137098">ROCKTAB</text:a> tables to be used by OPM Flow. </text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A positive integer that defines the number of rock compaction tables.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.D4" office:value-type="string">
-       <text:p text:style-name="P3526">1</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">1</text:p>
       </table:table-cell>
      </table:table-row>
-     <text:soft-page-break/>
      <table:table-row table:style-name="Table346.1">
       <table:table-cell table:style-name="Table346.A2" office:value-type="string">
-       <text:p text:style-name="P3358">3</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">3</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.B4" office:value-type="string">
-       <text:p text:style-name="P3525">WATINOPT</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">WATINOPT</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.C4" office:value-type="string">
-       <text:p text:style-name="P3527">A character string that states if the water induced rock compaction option should be used (YES) or not (NO). <text:s/>If set to YES then either the <text:a xlink:href="#__RefHeading___Toc266648_516898843">ROCKTABW</text:a> or the <text:a xlink:href="#__RefHeading___Toc174483_4194303431">ROCK2D</text:a> and <text:a xlink:href="#__RefHeading___Toc189921_4194303431">ROCKWNOD</text:a> keywords should be entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A defined character string that specifies if the water induced rock compaction option should be used and should be set to one of the following:</text:p>
+       <text:list text:style-name="_40_NumberedListTable">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="_40_Table_20_Notes">YES: The water induced rock compaction option will be used, and either the <text:a xlink:href="#__RefHeading___Toc266648_516898843">ROCKTABW</text:a> keyword, or the <text:a xlink:href="#__RefHeading___Toc174483_4194303431">ROCK2D</text:a> and <text:a xlink:href="#__RefHeading___Toc189921_4194303431">ROCKWNOD</text:a> keywords should be entered in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. </text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="_40_Table_20_Notes">NO: The water induced rock compaction option will not be used.</text:p>
+        </text:list-item>
+       </text:list>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.D4" office:value-type="string">
-       <text:p text:style-name="P3528">NO</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">NO</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table346.1">
       <table:table-cell table:style-name="Table346.A5" office:value-type="string">
-       <text:p text:style-name="P3358">4</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.B6" office:value-type="string">
-       <text:p text:style-name="P3529">PORTXROP</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">PORTXROP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.C6" office:value-type="string">
-       <text:p text:style-name="P3529">A character string that specifies the model to be used for when transmissibility is dependent on porosity, <text:s/>and should be set to either:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A character string that specifies the model to be used when transmissibility is dependent on porosity, <text:s/>and should be set to one of the following:</text:p>
        <text:list xml:id="list105910198272942" text:continue-list="list105910023382911" text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19472">EXP: An exponential porosity-transmissibility relationship should be used. </text:p>
+         <text:p text:style-name="_40_Table_20_Notes">EXP:<text:s/>An exponential porosity-transmissibility relationship should be used. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="P19480"><text:span text:style-name="T3628">CZ: The C</text:span>armen-Kozeny<text:note text:id="ftn96" text:note-class="footnote"><text:note-citation>96</text:note-citation><text:note-body>
-            <text:p text:style-name="P16653">J. Kozeny, &quot;Ueber kapillare Leitung des Wassers im Boden.&quot; Sitzungsber Akad. Wiss., Wien, 136(2a): 271-306, 1927.</text:p></text:note-body></text:note><text:span text:style-name="T3853">,</text:span> <text:note text:id="ftn97" text:note-class="footnote"><text:note-citation>97</text:note-citation><text:note-body>
-            <text:p text:style-name="P16653">P.C. Carman, &quot;Fluid flow through granular beds.&quot; Transactions, Institution of Chemical Engineers, London, 15: 150-166, 1937.</text:p></text:note-body></text:note><text:s/>and <text:note text:id="ftn98" text:note-class="footnote"><text:note-citation>98</text:note-citation><text:note-body>
+         <text:p text:style-name="_40_Table_20_Notes">CZ:<text:s/>The Carman-Kozeny<text:note text:id="ftn96" text:note-class="footnote"><text:note-citation>96</text:note-citation><text:note-body>
+            <text:p text:style-name="P16653">J. Kozeny, &quot;Ueber kapillare Leitung des Wassers im Boden.&quot; Sitzungsber Akad. Wiss., Wien, 136(2a): 271-306, 1927.</text:p></text:note-body></text:note><text:span text:style-name="T3853"> </text:span><text:note text:id="ftn97" text:note-class="footnote"><text:note-citation>97</text:note-citation><text:note-body>
+            <text:p text:style-name="P16653">P.C. Carman, &quot;Fluid flow through granular beds.&quot; Transactions, Institution of Chemical Engineers, London, 15: 150-166, 1937.</text:p></text:note-body></text:note> <text:note text:id="ftn98" text:note-class="footnote"><text:note-citation>98</text:note-citation><text:note-body>
              <text:p text:style-name="P16653">P.C. Carman, &quot;Flow of gases through porous media.&quot; Butterworths, London, 1956</text:p></text:note-body></text:note><text:s/>porosity-transmissibility relationship should be used.</text:p>
         </text:list-item>
        </text:list>
-       <text:p text:style-name="P3531">This option is used in the commercial compositional simulator and is therefore ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This option is used in the commercial compositional simulator and is therefore ignored by OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.D6" office:value-type="string">
-       <text:p text:style-name="P3530">1*</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">None</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table346.1">
       <table:table-cell table:style-name="Table346.A5" office:value-type="string">
-       <text:p text:style-name="P5346">5</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.B6" office:value-type="string">
-       <text:p text:style-name="P5347">CARKZEXP</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">CARKZEXP</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.C6" office:value-type="string">
-       <text:p text:style-name="P5347">The <text:span text:style-name="T2110">exponent</text:span> constant in the Carmen-Kozeny porosity-transmissibility equation for when PORTXROP has been set to CZ.</text:p>
-       <text:p text:style-name="P5348">This option is used in the commercial compositional simulator and is therefore ignored by OPM Flow.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">A real number greater than or equal to zero and less than or equal to ten that defines the exponent constant in the Carman-Kozeny porosity-transmissibility equation for when PORTXROP has been set to CZ.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">This option is used in the commercial compositional simulator and is therefore ignored by OPM Flow.</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table346.D6" office:value-type="string">
-       <text:p text:style-name="P5346">0.0</text:p>
+       <text:p text:style-name="_40_Table_20_Contents_20_Center">0.0</text:p>
       </table:table-cell>
      </table:table-row>
      <table:table-row table:style-name="Table346.1">
       <table:table-cell table:style-name="Table346.A7" table:number-columns-spanned="4" office:value-type="string">
-       <text:p text:style-name="P1383">Notes:</text:p>
-       <text:list xml:id="list1629947826" text:style-name="L42">
+       <text:p text:style-name="_40_Table_20_Notes_20_Title">Notes:</text:p>
+       <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="P19782">The keyword is terminated by a “/”.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">The keyword is terminated by a “/”.</text:p>
         </text:list-item>
        </text:list>
       </table:table-cell>
@@ -4510,18 +4529,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       <table:covered-table-cell/>
      </table:table-row>
     </table:table>
-    <text:p text:style-name="P14560">Table <text:sequence text:ref-name="refTable53" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.38</text:sequence>: ROCKCOMP Keyword Description</text:p>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable53" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">5.38</text:sequence>: ROCKCOMP Keyword Description</text:p>
     <text:h text:style-name="Heading_20_4" text:outline-level="4" text:is-list-header="true"><text:bookmark-start text:name="__RefHeading___Toc32169_370116838825"/>Example<text:bookmark-end text:name="__RefHeading___Toc32169_370116838825"/></text:h>
-    <text:p text:style-name="P13697">--</text:p>
-    <text:p text:style-name="P13697">-- <text:s text:c="6"/>ROCK <text:s text:c="2"/>NUMBER <text:s text:c="2"/>WAT <text:s text:c="4"/>POR-TRAN <text:s text:c="38"/></text:p>
-    <text:p text:style-name="P13697">-- <text:s text:c="6"/>OPTN <text:s text:c="2"/>TABLES <text:s text:c="2"/>INDUCE <text:s/>OPTION <text:s text:c="40"/></text:p>
-    <text:p text:style-name="P13697">ROCKCOMP <text:s text:c="71"/></text:p>
-    <text:p text:style-name="P13697"><text:s text:c="9"/>REVERS 5 <text:s text:c="7"/>NO <text:s text:c="5"/>1* <text:s text:c="43"/>/ <text:s text:c="79"/></text:p>
-    <text:p text:style-name="P15021"/>
-    <text:p text:style-name="P11279">The above example defines the default values for the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword with five rock compaction tables. <text:s/></text:p>
-    <text:p text:style-name="P11554"/>
-    <text:p text:style-name="P11554"/>
-    
+    <text:p text:style-name="_40_Example">--</text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>ROCK <text:s text:c="2"/>NUMBER <text:s text:c="2"/>WAT <text:s text:c="4"/>POR-TRAN <text:s text:c="38"/></text:p>
+    <text:p text:style-name="_40_Example">-- <text:s text:c="6"/>OPTN <text:s text:c="2"/>TABLES <text:s text:c="2"/>INDUCE <text:s/>OPTION <text:s text:c="40"/></text:p>
+    <text:p text:style-name="_40_Example">ROCKCOMP <text:s text:c="71"/></text:p>
+    <text:p text:style-name="_40_Example"><text:s text:c="9"/>REVERS 5 <text:s text:c="7"/>NO <text:s text:c="5"/>1* <text:s text:c="43"/>/ <text:s text:c="79"/></text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_TextBody">The above example defines the default values for the <text:a xlink:href="#__RefHeading___Toc55593_1778172979">ROCKCOMP</text:a> keyword with five rock compaction tables. <text:s/></text:p>
+    <text:p text:style-name="_40_TextBody"/>
    </text:section>
   </office:text>
  </office:body>
