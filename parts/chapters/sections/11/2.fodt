@@ -921,16 +921,16 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
    <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false" loext:hyphenation-no-last-word="false" loext:hyphenation-word-char-count="5" loext:hyphenation-zone="no-limit"/>
   </style:style>
   <style:style style:name="_40_Table_20_Contents_20_Center" style:display-name="@Table Contents Center" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
-   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"></style:paragraph-properties>
-   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"></style:text-properties>
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto" fo:text-align="center"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
   <style:style style:name="_40_Table_20_Notes_20_Title" style:display-name="@Table Notes Title" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"></style:paragraph-properties>
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
   <style:style style:name="_40_Table_20_Notes" style:display-name="@Table Notes" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:master-page-name="" style:list-style-name="L1">
-   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"></style:paragraph-properties>
-   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"></style:text-properties>
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:page-number="auto"/>
+   <style:text-properties fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2" loext:hyphenation-no-caps="false"/>
   </style:style>
   <style:style style:name="_40_Code" style:display-name="@Code" style:family="paragraph" style:parent-style-name="_40_Example" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto"/>
@@ -24860,7 +24860,414 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="P337">The Coal Bed Methane model is not supported by OPM Flow.</text:p>
     <text:h text:style-name="P353" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311684_2754225602"/>Option Specific Variables – Conductive Faults Model<text:bookmark-end text:name="__RefHeading___Toc311684_2754225602"/></text:h>
     <text:p text:style-name="P351">Conductive faults have not been implemented in OPM Flow.</text:p>
-    <text:h text:style-name="P341" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311686_2754225602"/>Option Specific Variables – Environmental Tracers<text:bookmark-end text:name="__RefHeading___Toc311686_2754225602"/></text:h>
+    <text:h text:style-name="P396" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc614364_2141070512"/>Option Specific Variables - Compositional Model<text:bookmark-end text:name="__RefHeading___Toc614364_2141070512"/></text:h>
+    <text:p text:style-name="_40_TextBody">The summary variables in this section are for compositional models. The compositional model is activated by the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1">COMPS</text:a> keyword in the <text:a xlink:href="#__RefHeading___Toc55591_1778172979">RUNSPEC</text:a> section.</text:p>
+    <table:table table:name="Table20" table:style-name="Table20">
+    <text:p text:style-name="_40_TextBody">OPM Flow does not currently support the general compositional modeling formulation.</text:p>
+     <table:table-column table:style-name="Table20.A"/>
+     <table:table-column table:style-name="Table20.B"/>
+     <table:table-column table:style-name="Table20.C"/>
+     <table:table-column table:style-name="Table20.D"/>
+     <table:table-column table:style-name="Table20.E"/>
+     <table:table-column table:style-name="Table20.F"/>
+     <table:table-column table:style-name="Table20.G"/>
+     <table:table-column table:style-name="Table20.H"/>
+     <table:table-row table:style-name="Table20.1">
+      <table:table-cell table:style-name="Table20.A3" table:number-columns-spanned="8" office:value-type="string">
+       <text:p text:style-name="P106">Compositional Model Field, Group and Well Summary Variables</text:p>
+       <text:p text:style-name="P106"/>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.2">
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P106">Type</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P204">Variable</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P204">Root</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P209">Field</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P209">Group</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P209">Well</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P209">Well<text:s text:c="1"/>Connection</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A2" office:value-type="string">
+       <text:p text:style-name="P209">Well Completion</text:p>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Aqueous Component Mole Fraction (Producing Completions)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">AMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">WAMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Hydrocarbon Component Molar Rate in Gas Phase</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">CGMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">WCGMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Hydrocarbon Component Molar Flow Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">CHMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FCHMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">GCHMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Hydrocarbon Component Molar Flow Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">CHMT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FCHMT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">GCHMT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Hydrocarbon Component Molar Injection Rate</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">CMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FCMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">GCMIR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Hydrocarbon Component Molar Injection Total</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">CMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FCMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">GCMIT</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Oil Density at Surface Conditions</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">ODN</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FODN</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Gas Density at Surface Conditions</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">GDN</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FGDN</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Hydrocarbon Component Molar Rate in Oil Phase</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">COMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">WCOMR</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Liquid Component Mole Fraction (Production Wells)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">XMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FXMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">WXMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Vapor Component Mole Fraction (Production Wells)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">YMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FYMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">WYMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.3">
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Flow</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">Total Component Mole Fraction (Production Wells)</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">ZMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">FZMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82">WZMF</text:p>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+      <table:table-cell table:style-name="Table20.A3" office:value-type="string">
+       <text:p text:style-name="P82"/>
+      </table:table-cell>
+     </table:table-row>
+     <table:table-row table:style-name="Table20.4">
+      <table:table-cell table:style-name="Table20.A2" table:number-columns-spanned="8" office:value-type="string">
+       <text:p text:style-name="P171">Notes:</text:p>
+       <text:list xml:id="list134817643892094" text:continue-numbering="true" text:style-name="_40_NumberList">
+        <text:list-item text:start-value="1">
+         <text:p text:style-name="P407">Cells colored in gray with a mnemonic indicate that the summary variable is not available in OPM Flow.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P407">Cells colored in gray with no mnemonic indicate that the summary variable is not available for this combination.</text:p>
+        </text:list-item>
+        <text:list-item>
+         <text:p text:style-name="P407">Cells colored orange show combinations that are not available in OPM Flow because the underlying feature is not available.</text:p>
+        </text:list-item>
+       </text:list>
+      </table:table-cell>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+      <table:covered-table-cell/>
+     </table:table-row>
+    </table:table>
+    <text:p text:style-name="Table">Table <text:sequence text:ref-name="refTable20" text:name="Table" text:formula="ooow:Table+1" style:num-format="1">11.2.13</text:sequence>: Compositional Model Field, Group and Well Summary Variables</text:p>
+    <text:p text:style-name="_40_TextBody"/>
+    <text:p text:style-name="_40_TextBody">Component summary variables are identified by appending the component number after any other identifiers, for example the well name followed by the component number for well variables. If the component number is not specified then the summary variable is output for all components.</text:p>
+    <text:h text:style-name="Heading_20_4" text:outline-level="4">Examples</text:h>
+    <text:p text:style-name="_40_TextBody">For example, to get the molar rate in the gas phase for all hydrocarbon components for well OP01, and the molar rate in the oil phase for hydrocarbon components one and two for well OP02 one would use:</text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example"><text:soft-page-break/>-- </text:p>
+    <text:p text:style-name="_40_Example">-- SUMMARY SECTION </text:p>
+    <text:p text:style-name="_40_Example">-- </text:p>
+    <text:p text:style-name="_40_Example">-- ==============================================================================</text:p>
+    <text:p text:style-name="_40_Example">SUMMARY <text:s text:c="78"/></text:p>
+    <text:p text:style-name="_40_Example"/>
+    <text:p text:style-name="_40_Example">WCGMR</text:p>
+    <text:p text:style-name="_40_Example">‘OP01’ /</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:p text:style-name="_40_Example">WCOMR</text:p>
+    <text:p text:style-name="_40_Example">‘OP02’ 1 /</text:p>
+    <text:p text:style-name="_40_Example">‘OP02’ 2 /</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
+    <text:h text:style-name="P342" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311686_2754225602"/>Option Specific Variables – Environmental Tracers<text:bookmark-end text:name="__RefHeading___Toc311686_2754225602"/></text:h>
     <text:p text:style-name="_40_TextBody">Environmental tracers are not supported by OPM Flow.</text:p>
     <text:p text:style-name="P337"/>
     <text:h text:style-name="P433" text:outline-level="3"><text:bookmark-start text:name="__RefHeading___Toc311688_2754225602 Copy 1"/>Option Specific Variables – Formation Damage Model<text:bookmark-end text:name="__RefHeading___Toc311688_2754225602 Copy 1"/></text:h>
