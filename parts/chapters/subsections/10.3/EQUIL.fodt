@@ -4884,20 +4884,20 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">EQLOPT4</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table495.C25" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer that specifies the initialization option for compositional models, which should be set to one of the following values:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer that specifies the initialization option for compositional models:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Notes">1: There is no distinct initial gas-oil contact in the model. The hydrocarbon phase is continuous, this includes super critical fluids that can transition smoothly between phases.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">EQLOPT4 = 1: There is no distinct initial gas-oil contact in the model. The hydrocarbon phase is continuous, this includes super critical fluids that can transition smoothly between phases.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">If a gas-oil contact has been specified in the model there must be a compositional gradient at the contact, which can be specified using the <text:a xlink:href="#REF_HEADING_KEYWORD_COMPVD_8_3">COMPVD</text:a> or <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 1">ZMFVD</text:a> keywords in the <text:a xlink:href="#__RefHeading___Toc39329_784232322">PROPS</text:a> section. The <text:a xlink:href="#REF_HEADING_KEYWORD_FACTLI_8_3">FACTLI</text:a> value will be adjusted by the simulator to ensure that the phase labeling is consistent with the contact depth.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">Setting the gas-oil contact depth equal to the oil-water contact depth indicates to the simulator that the reservoir fluid is a condensate.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="_40_Table_20_Notes">2: Gas-oil contact and vapor composition at contact are specified.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">EQLOPT4 = 2: Gas-oil contact and vapor composition at contact are specified.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">If the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 1">ZMFVD</text:a> keyword is used then this defines the vapor composition. The pressure at the datum depth will be set to the retrograde dew point pressure evaluated by the simulator. Below the contact the liquid is assumed to be in equilibrium with the saturated vapor.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">If the <text:a xlink:href="#REF_HEADING_KEYWORD_COMPVD_8_3">COMPVD</text:a> keyword is used then this defines the vapor composition at and above the contact and the liquid composition below the contact. </text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="_40_Table_20_Notes">3: Gas-oil contact and liquid composition at contact are specified.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">EQLOPT4 = 3: Gas-oil contact and liquid composition at contact are specified.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">If the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 1">ZMFVD</text:a> keyword is used then this defines the liquid composition. The pressure at the datum depth will be set to the bubble point pressure evaluated by the simulator. Above the contact the vapor is assumed to be in equilibrium with the saturated liquid.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">If the <text:a xlink:href="#REF_HEADING_KEYWORD_COMPVD_8_3">COMPVD</text:a> keyword is used then this defines the vapor composition above the contact and the liquid composition at and below the contact. </text:p>
         </text:list-item>
@@ -4919,14 +4919,14 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">EQLOPT5</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table495.C25" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer that specifies whether the pressure should be set to the saturation pressure at the gas-oil contact in compositional models if EQLOPT4 is set to either 2 or 3. EQLOPT5 should be set to one of the following values:</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer that specifies whether the pressure should be set to the saturation pressure at the gas-oil contact in compositional models if EQLOPT4 is set to either 2 or 3:</text:p>
        <text:list text:style-name="_40_NumberedListTable">
         <text:list-item text:start-value="1">
-         <text:p text:style-name="_40_Table_20_Notes">0: The datum pressure is set to the saturation pressure at the gas-oil contact.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">EQLOPT5 = 0: The datum pressure is set to the saturation pressure at the gas-oil contact.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">If the difference between the evaluated saturation pressure and the datum pressure is greater than one atmosphere then the datum pressure will be set to the saturation pressure.</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="_40_Table_20_Notes">1: The datum pressure is not set to the saturation pressure at the gas-oil contact.</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">EQLOPT5 = 1: The datum pressure is not set to the saturation pressure at the gas-oil contact.</text:p>
          <text:p text:style-name="_40_Table_20_Notes">The user defined datum pressure is used regardless of the value of the saturation pressure.</text:p>
         </text:list-item>
        </text:list>
