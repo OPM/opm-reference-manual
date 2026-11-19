@@ -4251,7 +4251,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
          <text:p text:style-name="_40_Table_20_Notes">STREA: The injected gas composition is defined by the <text:a xlink:href="#__RefHeading___Toc27871_3671211675 Copy 1 Copy 1 Copy 1 Copy 2">WELLSTRE</text:a> keyword. The name of the stream must be specified in item 3 (STREAM).</text:p>
         </text:list-item>
         <text:list-item>
-         <text:p text:style-name="_40_Table_20_Notes">MIX: The injected has composition is defined as a mixture using either the WINJMIX or WINJORD keyword. The name of the mixture must be specified in item 3 (STREAM).</text:p>
+         <text:p text:style-name="_40_Table_20_Notes">MIX: The injected gas composition is defined as a mixture using either the WINJMIX or WINJORD keyword. The name of the mixture must be specified in item 3 (STREAM).</text:p>
         </text:list-item>
         <text:list-item>
          <text:p text:style-name="_40_Table_20_Notes">GV: The injection fluid is taken from the vapor production of a specified group. The group name must be specified in item 3 (STREAM).</text:p>
@@ -4281,7 +4281,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
        <text:p text:style-name="_40_Table_20_Contents">A character string that defines the stream, mixture, group, or well name that supplies the injection stream if FLUID is set equal to STREAM, MIX, GV, or WV respectively.</text:p>
-       <text:p text:style-name="_40_Table_20_Contents">The gas available from a source group or well can be supplimented by an advance gas supply defined respectively by the GADVANCE or WADVANCE keywords.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">The gas available from a source group or well can be supplemented by an advance gas supply defined respectively by the GADVANCE or WADVANCE keywords.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">By default the fuel gas defined by the GRUPFUEL keyword and the sales gas defined by the GRUPSALE keyword are taken from the source group before reinjection. However, the priorities for reinjection, fuel and sales gas can be modified using the WTAKEGAS keyword.</text:p>
       </table:table-cell>
       <table:covered-table-cell/>
@@ -4315,7 +4315,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
        <text:p text:style-name="_40_Table_20_Contents">STAGE</text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Table2000.A2" table:number-columns-spanned="3" office:value-type="string">
-       <text:p text:style-name="_40_Table_20_Contents">An integer that defines the separator stage used to deined the injection fluid composition.</text:p>
+       <text:p text:style-name="_40_Table_20_Contents">An integer that specifies the separator stage used to define the injection fluid composition.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">The default value (0) means that the vapor from whole separator is used.</text:p>
        <text:p text:style-name="_40_Table_20_Contents">This item is not supported by OPM Flow and should be defaulted (1*).</text:p>
       </table:table-cell>
@@ -4349,6 +4349,7 @@ Updated with AFR/TSA Rev-D comments and new keywords.</dc:description><meta:init
     <text:p text:style-name="_40_Example">--</text:p>
     <text:p text:style-name="_40_Example">GINJGAS</text:p>
     <text:p text:style-name="_40_Example"><text:s text:c="2"/>&apos;GI*&apos; &apos;STREAM&apos; &apos;GAS1&apos; /</text:p>
+    <text:p text:style-name="_40_Example">/</text:p>
    </text:section>
   </office:text>
  </office:body>
